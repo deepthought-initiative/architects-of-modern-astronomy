@@ -1,0 +1,770 @@
+digraph {
+	"annotated-types" 
+	"antlr4-python3-runtime" 
+	"astropy-healpix" -> astropy 
+	"astropy-healpix" -> numpy 
+	"astropy-healpix" 
+	"backports.functools-lru-cache" 
+	"batman-package" -> numpy 
+	"batman-package" 
+	"cached-property" 
+	"charset-normalizer" 
+	"conda-content-trust" -> cryptography 
+	"conda-content-trust" -> six 
+	"conda-content-trust" 
+	"conda-package-handling" -> "conda-package-streaming" 
+	"conda-package-handling" 
+	"conda-package-streaming" -> requests 
+	"conda-package-streaming" -> zstandard 
+	"conda-package-streaming" 
+	"conda-tree" -> colorama 
+	"conda-tree" -> networkx 
+	"conda-tree" 
+	"fast-histogram" -> numpy 
+	"fast-histogram" 
+	"igwn-auth-utils" -> "safe-netrc" 
+	"igwn-auth-utils" -> cryptography 
+	"igwn-auth-utils" -> requests 
+	"igwn-auth-utils" -> scitokens 
+	"igwn-auth-utils" 
+	"importlib-metadata" -> zipp 
+	"importlib-metadata" 
+	"importlib-resources" -> zipp 
+	"importlib-resources" 
+	"jaraco.classes" -> "more-itertools" 
+	"jaraco.classes" 
+	"jsonschema-specifications" -> referencing 
+	"jsonschema-specifications" 
+	"jupyter-client" -> "importlib-metadata" 
+	"jupyter-client" -> "jupyter-core" 
+	"jupyter-client" -> "python-dateutil" 
+	"jupyter-client" -> pyzmq 
+	"jupyter-client" -> tornado 
+	"jupyter-client" -> traitlets 
+	"jupyter-client" 
+	"jupyter-core" -> platformdirs 
+	"jupyter-core" -> traitlets 
+	"jupyter-core" 
+	"jupyterlab-pygments" 
+	"jupyterlab-widgets" 
+	"ligo-segments" -> six 
+	"ligo-segments" 
+	"line-profiler" 
+	"lscsoft-glue" -> "ligo-segments" 
+	"lscsoft-glue" -> numpy 
+	"lscsoft-glue" -> pyopenssl 
+	"lscsoft-glue" -> pyrxp 
+	"lscsoft-glue" -> six 
+	"lscsoft-glue" 
+	"markdown-it-py" -> mdurl 
+	"markdown-it-py" 
+	"matplotlib-inline" -> traitlets 
+	"matplotlib-inline" 
+	"more-itertools" 
+	"nest-asyncio" 
+	"pegasus-wms.api" -> "pegasus-wms.common" 
+	"pegasus-wms.api" 
+	"pegasus-wms.common" -> pyyaml 
+	"pegasus-wms.common" 
+	"pkgutil-resolve-name" 
+	"prompt-toolkit" -> wcwidth 
+	"prompt-toolkit" 
+	"pure-eval" 
+	"py-bobyqa" -> numpy 
+	"py-bobyqa" -> pandas 
+	"py-bobyqa" -> scipy 
+	"py-bobyqa" 
+	"py-cpuinfo" 
+	"pydantic-core" -> "typing-extensions" 
+	"pydantic-core" 
+	"pyqt5-sip" 
+	"pytest-runner" 
+	"python-dateutil" -> six 
+	"python-dateutil" 
+	"python-ligo-lw" -> "ligo-segments" 
+	"python-ligo-lw" -> "lscsoft-glue" 
+	"python-ligo-lw" -> "python-dateutil" 
+	"python-ligo-lw" -> numpy 
+	"python-ligo-lw" -> pyyaml 
+	"python-ligo-lw" -> six 
+	"python-ligo-lw" -> tqdm 
+	"python-ligo-lw" 
+	"rpds-py" 
+	"ruamel-yaml" 
+	"ruamel.yaml" -> "ruamel.yaml.clib" 
+	"ruamel.yaml" 
+	"ruamel.yaml.clib" 
+	"safe-netrc" 
+	"scikit-learn" -> joblib 
+	"scikit-learn" -> numpy 
+	"scikit-learn" -> scipy 
+	"scikit-learn" -> threadpoolctl 
+	"scikit-learn" 
+	"sphinxcontrib-applehelp" 
+	"sphinxcontrib-devhelp" 
+	"sphinxcontrib-htmlhelp" 
+	"sphinxcontrib-jsmath" 
+	"sphinxcontrib-qthelp" 
+	"sphinxcontrib-serializinghtml" 
+	"stack-data" -> "pure-eval" 
+	"stack-data" -> asttokens 
+	"stack-data" -> executing 
+	"stack-data" 
+	"typing-extensions" 
+	"xarray-einstats" -> numpy 
+	"xarray-einstats" -> scipy 
+	"xarray-einstats" -> xarray 
+	"xarray-einstats" 
+	ads -> mock 
+	ads -> requests 
+	ads -> six 
+	ads -> werkzeug 
+	ads 
+	alabaster 
+	arviz -> "typing-extensions" 
+	arviz -> "xarray-einstats" 
+	arviz -> h5netcdf 
+	arviz -> matplotlib 
+	arviz -> numpy 
+	arviz -> packaging 
+	arviz -> pandas 
+	arviz -> scipy 
+	arviz -> setuptools 
+	arviz -> xarray 
+	arviz 
+	asciitree 
+	astrocats -> ads 
+	astrocats -> astropy 
+	astrocats -> beautifulsoup4 
+	astrocats -> bokeh 
+	astrocats -> future 
+	astrocats -> gitpython 
+	astrocats -> inflect 
+	astrocats -> palettable 
+	astrocats -> psutil 
+	astrocats -> seaborn 
+	astrocats -> tqdm 
+	astrocats 
+	astromodels -> astropy 
+	astromodels -> colorama 
+	astromodels -> dill 
+	astromodels -> future 
+	astromodels -> h5py 
+	astromodels -> interpolation 
+	astromodels -> numba 
+	astromodels -> numpy 
+	astromodels -> omegaconf 
+	astromodels -> pandas 
+	astromodels -> pyyaml 
+	astromodels -> rich 
+	astromodels -> scipy 
+	astromodels -> tables 
+	astromodels 
+	astropy -> numpy 
+	astropy -> packaging 
+	astropy -> pyerfa 
+	astropy -> pyyaml 
+	astropy 
+	astroquery -> astropy 
+	astroquery -> beautifulsoup4 
+	astroquery -> html5lib 
+	astroquery -> keyring 
+	astroquery -> numpy 
+	astroquery -> pyvo 
+	astroquery -> requests 
+	astroquery 
+	asttokens -> six 
+	asttokens 
+	attrs 
+	babel 
+	backcall 
+	beautifulsoup4 -> soupsieve 
+	beautifulsoup4 
+	bleach -> six 
+	bleach -> webencodings 
+	bleach 
+	bokeh -> contourpy 
+	bokeh -> jinja2 
+	bokeh -> numpy 
+	bokeh -> packaging 
+	bokeh -> pandas 
+	bokeh -> pillow 
+	bokeh -> pyyaml 
+	bokeh -> tornado 
+	bokeh -> xyzservices 
+	bokeh 
+	boltons 
+	brotli 
+	celerite -> numpy 
+	celerite 
+	certifi 
+	cffi -> pycparser 
+	cffi 
+	classy 
+	click 
+	cobaya -> "py-bobyqa" 
+	cobaya -> dill 
+	cobaya -> fuzzywuzzy 
+	cobaya -> getdist 
+	cobaya -> numpy 
+	cobaya -> packaging 
+	cobaya -> pandas 
+	cobaya -> portalocker 
+	cobaya -> pyyaml 
+	cobaya -> requests 
+	cobaya -> scipy 
+	cobaya -> tqdm 
+	cobaya 
+	colorama 
+	comm -> traitlets 
+	comm 
+	conda -> "conda-package-handling" 
+	conda -> "ruamel-yaml" 
+	conda -> boltons 
+	conda -> jsonpatch 
+	conda -> packaging 
+	conda -> pluggy 
+	conda -> pycosat 
+	conda -> pyopenssl 
+	conda -> requests 
+	conda -> setuptools 
+	conda -> toolz 
+	conda -> tqdm 
+	conda 
+	contourpy -> numpy 
+	contourpy 
+	corner -> matplotlib 
+	corner 
+	cryptography -> cffi 
+	cryptography 
+	cycler 
+	cython 
+	debugpy 
+	decorator 
+	defusedxml 
+	dill 
+	docutils 
+	dynesty 
+	emcee -> numpy 
+	emcee 
+	entrypoints 
+	exceptiongroup 
+	executing 
+	extinction -> numpy 
+	extinction 
+	fastjsonschema 
+	fermipy -> "astropy-healpix" 
+	fermipy -> astropy 
+	fermipy -> gammapy 
+	fermipy -> healpy 
+	fermipy -> matplotlib 
+	fermipy -> numpy 
+	fermipy -> pyyaml 
+	fermipy -> scipy 
+	fermipy 
+	fonttools 
+	future 
+	fuzzywuzzy 
+	gammapy -> astropy 
+	gammapy -> click 
+	gammapy -> iminuit 
+	gammapy -> matplotlib 
+	gammapy -> numpy 
+	gammapy -> pydantic 
+	gammapy -> pyyaml 
+	gammapy -> regions 
+	gammapy -> scipy 
+	gammapy 
+	george -> numpy 
+	george -> scipy 
+	george 
+	getdist -> matplotlib 
+	getdist -> numpy 
+	getdist -> packaging 
+	getdist -> pyyaml 
+	getdist -> scipy 
+	getdist 
+	gitdb -> smmap 
+	gitdb 
+	gitpython -> gitdb 
+	gitpython 
+	gmpy2 
+	graphviz 
+	gwdatafind -> "igwn-auth-utils" 
+	gwdatafind -> "ligo-segments" 
+	gwdatafind 
+	h5netcdf -> h5py 
+	h5netcdf -> packaging 
+	h5netcdf 
+	h5py -> numpy 
+	h5py 
+	healpy -> astropy 
+	healpy -> matplotlib 
+	healpy -> numpy 
+	healpy -> scipy 
+	healpy 
+	html5lib -> six 
+	html5lib -> webencodings 
+	html5lib 
+	idna 
+	imagesize 
+	iminuit -> numpy 
+	iminuit 
+	inflect -> "typing-extensions" 
+	inflect -> pydantic 
+	inflect 
+	iniconfig 
+	interpolation -> numba 
+	interpolation -> numpy 
+	interpolation -> packaging 
+	interpolation -> scipy 
+	interpolation -> tempita 
+	interpolation 
+	ipykernel -> "jupyter-client" 
+	ipykernel -> "jupyter-core" 
+	ipykernel -> "matplotlib-inline" 
+	ipykernel -> "nest-asyncio" 
+	ipykernel -> comm 
+	ipykernel -> debugpy 
+	ipykernel -> ipython 
+	ipykernel -> packaging 
+	ipykernel -> psutil 
+	ipykernel -> pyzmq 
+	ipykernel -> tornado 
+	ipykernel -> traitlets 
+	ipykernel 
+	ipyparallel -> "jupyter-client" 
+	ipyparallel -> "python-dateutil" 
+	ipyparallel -> decorator 
+	ipyparallel -> entrypoints 
+	ipyparallel -> ipykernel 
+	ipyparallel -> ipython 
+	ipyparallel -> psutil 
+	ipyparallel -> pyzmq 
+	ipyparallel -> tornado 
+	ipyparallel -> tqdm 
+	ipyparallel -> traitlets 
+	ipyparallel 
+	ipython -> "matplotlib-inline" 
+	ipython -> "prompt-toolkit" 
+	ipython -> "stack-data" 
+	ipython -> "typing-extensions" 
+	ipython -> backcall 
+	ipython -> decorator 
+	ipython -> jedi 
+	ipython -> pexpect 
+	ipython -> pickleshare 
+	ipython -> pygments 
+	ipython -> traitlets 
+	ipython 
+	ipywidgets -> "jupyterlab-widgets" 
+	ipywidgets -> ipykernel 
+	ipywidgets -> ipython 
+	ipywidgets -> traitlets 
+	ipywidgets -> widgetsnbextension 
+	ipywidgets 
+	jedi -> parso 
+	jedi 
+	jeepney 
+	jinja2 -> markupsafe 
+	jinja2 
+	joblib 
+	jsonpatch -> jsonpointer 
+	jsonpatch 
+	jsonpointer 
+	jsonschema -> "jsonschema-specifications" 
+	jsonschema -> "rpds-py" 
+	jsonschema -> attrs 
+	jsonschema -> referencing 
+	jsonschema 
+	juliet -> "batman-package" 
+	juliet -> astropy 
+	juliet -> celerite 
+	juliet -> dynesty 
+	juliet -> emcee 
+	juliet -> george 
+	juliet -> numpy 
+	juliet -> radvel 
+	juliet -> scipy 
+	juliet -> ultranest 
+	juliet 
+	kde -> numexpr 
+	kde -> numpy 
+	kde -> scipy 
+	kde 
+	keyring -> "importlib-metadata" 
+	keyring -> "jaraco.classes" 
+	keyring -> jeepney 
+	keyring -> secretstorage 
+	keyring 
+	kiwisolver 
+	lalsuite -> "ligo-segments" 
+	lalsuite -> "lscsoft-glue" 
+	lalsuite -> "python-dateutil" 
+	lalsuite -> astropy 
+	lalsuite -> matplotlib 
+	lalsuite -> numpy 
+	lalsuite -> scipy 
+	lalsuite 
+	libmambapy 
+	llvmlite 
+	mako -> markupsafe 
+	mako 
+	mamba -> conda 
+	mamba -> libmambapy 
+	mamba 
+	markupsafe 
+	matplotlib -> "importlib-resources" 
+	matplotlib -> "python-dateutil" 
+	matplotlib -> contourpy 
+	matplotlib -> cycler 
+	matplotlib -> fonttools 
+	matplotlib -> kiwisolver 
+	matplotlib -> numpy 
+	matplotlib -> packaging 
+	matplotlib -> pillow 
+	matplotlib -> pyparsing 
+	matplotlib 
+	mdurl 
+	mistune 
+	mock 
+	mosfit -> astrocats 
+	mosfit -> astropy 
+	mosfit -> cython 
+	mosfit -> dynesty 
+	mosfit -> emcee 
+	mosfit -> extinction 
+	mosfit -> inflect 
+	mosfit -> matplotlib 
+	mosfit -> mpi4py 
+	mosfit -> nbstripout 
+	mosfit -> numexpr 
+	mosfit -> numpy 
+	mosfit -> palettable 
+	mosfit -> schwimmbad 
+	mosfit -> scipy 
+	mosfit -> seaborn 
+	mosfit -> six 
+	mosfit 
+	mpi4py 
+	mpld3 -> jinja2 
+	mpld3 -> matplotlib 
+	mpld3 
+	mpmath 
+	munkres 
+	nbclient -> "jupyter-client" 
+	nbclient -> "jupyter-core" 
+	nbclient -> nbformat 
+	nbclient -> traitlets 
+	nbclient 
+	nbconvert -> "importlib-metadata" 
+	nbconvert -> "jupyter-core" 
+	nbconvert -> "jupyterlab-pygments" 
+	nbconvert -> beautifulsoup4 
+	nbconvert -> bleach 
+	nbconvert -> defusedxml 
+	nbconvert -> jinja2 
+	nbconvert -> markupsafe 
+	nbconvert -> mistune 
+	nbconvert -> nbclient 
+	nbconvert -> nbformat 
+	nbconvert -> packaging 
+	nbconvert -> pandocfilters 
+	nbconvert -> pygments 
+	nbconvert -> tinycss2 
+	nbconvert -> traitlets 
+	nbconvert 
+	nbformat -> "jupyter-core" 
+	nbformat -> fastjsonschema 
+	nbformat -> jsonschema 
+	nbformat -> traitlets 
+	nbformat 
+	nbsphinx -> docutils 
+	nbsphinx -> jinja2 
+	nbsphinx -> nbconvert 
+	nbsphinx -> nbformat 
+	nbsphinx -> sphinx 
+	nbsphinx -> traitlets 
+	nbsphinx 
+	nbstripout -> nbformat 
+	nbstripout 
+	networkx 
+	nlopt 
+	numba -> llvmlite 
+	numba -> numpy 
+	numba 
+	numdifftools -> numpy 
+	numdifftools -> scipy 
+	numdifftools 
+	numexpr -> numpy 
+	numexpr 
+	numpy 
+	omegaconf -> "antlr4-python3-runtime" 
+	omegaconf -> pyyaml 
+	omegaconf 
+	packaging 
+	palettable 
+	pandas -> "python-dateutil" 
+	pandas -> numpy 
+	pandas -> pytz 
+	pandas -> tzdata 
+	pandas 
+	pandocfilters 
+	parso 
+	patsy -> numpy 
+	patsy -> six 
+	patsy 
+	pexpect -> ptyprocess 
+	pexpect 
+	pickleshare 
+	pillow 
+	pint 
+	pip 
+	pipdeptree 
+	pisa -> "fast-histogram" 
+	pisa -> "line-profiler" 
+	pisa -> "py-cpuinfo" 
+	pisa -> "scikit-learn" 
+	pisa -> cython 
+	pisa -> decorator 
+	pisa -> h5py 
+	pisa -> iminuit 
+	pisa -> kde 
+	pisa -> llvmlite 
+	pisa -> matplotlib 
+	pisa -> nlopt 
+	pisa -> numba 
+	pisa -> numpy 
+	pisa -> pandas 
+	pisa -> pint 
+	pisa -> pyarrow 
+	pisa -> scipy 
+	pisa -> simplejson 
+	pisa -> sympy 
+	pisa -> tables 
+	pisa -> tabulate 
+	pisa -> uncertainties 
+	pisa 
+	platformdirs 
+	pluggy 
+	ply 
+	pmw 
+	pooch -> packaging 
+	pooch -> platformdirs 
+	pooch -> requests 
+	pooch 
+	portalocker 
+	psutil 
+	ptyprocess 
+	pyarrow -> numpy 
+	pyarrow 
+	pycbc -> "ligo-segments" 
+	pycbc -> "lscsoft-glue" 
+	pycbc -> "pegasus-wms.api" 
+	pycbc -> "python-ligo-lw" 
+	pycbc -> astropy 
+	pycbc -> beautifulsoup4 
+	pycbc -> cython 
+	pycbc -> gwdatafind 
+	pycbc -> h5py 
+	pycbc -> jinja2 
+	pycbc -> lalsuite 
+	pycbc -> mako 
+	pycbc -> matplotlib 
+	pycbc -> mpld3 
+	pycbc -> numpy 
+	pycbc -> numpy 
+	pycbc -> pillow 
+	pycbc -> scipy 
+	pycbc -> setuptools 
+	pycbc -> tqdm 
+	pycbc 
+	pycosat 
+	pycparser 
+	pydantic -> "annotated-types" 
+	pydantic -> "pydantic-core" 
+	pydantic -> "typing-extensions" 
+	pydantic 
+	pyerfa -> numpy 
+	pyerfa 
+	pygments 
+	pyjwt 
+	pymultinest 
+	pyopenssl -> cryptography 
+	pyopenssl 
+	pyparsing 
+	pypmc -> numpy 
+	pypmc -> scipy 
+	pypmc 
+	pyqt5 -> "pyqt5-sip" 
+	pyqt5 
+	pyrxp 
+	pysocks 
+	pytest -> exceptiongroup 
+	pytest -> iniconfig 
+	pytest -> packaging 
+	pytest -> pluggy 
+	pytest -> tomli 
+	pytest 
+	pytz 
+	pyvo -> astropy 
+	pyvo -> requests 
+	pyvo 
+	pyyaml 
+	pyzmq 
+	radvel -> "jupyter-client" 
+	radvel -> "python-dateutil" 
+	radvel -> astropy 
+	radvel -> corner 
+	radvel -> cython 
+	radvel -> dill 
+	radvel -> emcee 
+	radvel -> ipykernel 
+	radvel -> jinja2 
+	radvel -> matplotlib 
+	radvel -> nbsphinx 
+	radvel -> numpy 
+	radvel -> pandas 
+	radvel -> scipy 
+	radvel 
+	referencing -> "rpds-py" 
+	referencing -> attrs 
+	referencing 
+	regions -> astropy 
+	regions -> numpy 
+	regions 
+	requests -> "charset-normalizer" 
+	requests -> certifi 
+	requests -> idna 
+	requests -> urllib3 
+	requests 
+	rich -> "markdown-it-py" 
+	rich -> pygments 
+	rich 
+	schwimmbad 
+	scipy -> numpy 
+	scipy 
+	scitokens -> cryptography 
+	scitokens -> pyjwt 
+	scitokens -> setuptools 
+	scitokens 
+	seaborn -> matplotlib 
+	seaborn -> numpy 
+	seaborn -> pandas 
+	seaborn 
+	secretstorage -> cryptography 
+	secretstorage -> jeepney 
+	secretstorage 
+	setuptools 
+	simplejson 
+	sip -> packaging 
+	sip -> ply 
+	sip -> setuptools 
+	sip -> tomli 
+	sip 
+	six 
+	smmap 
+	snowballstemmer 
+	snowline -> iminuit 
+	snowline -> numpy 
+	snowline -> pypmc 
+	snowline -> scipy 
+	snowline 
+	soupsieve 
+	speclite -> astropy 
+	speclite -> pyyaml 
+	speclite -> scipy 
+	speclite 
+	sphinx -> "importlib-metadata" 
+	sphinx -> "sphinxcontrib-applehelp" 
+	sphinx -> "sphinxcontrib-devhelp" 
+	sphinx -> "sphinxcontrib-htmlhelp" 
+	sphinx -> "sphinxcontrib-jsmath" 
+	sphinx -> "sphinxcontrib-qthelp" 
+	sphinx -> "sphinxcontrib-serializinghtml" 
+	sphinx -> alabaster 
+	sphinx -> babel 
+	sphinx -> docutils 
+	sphinx -> imagesize 
+	sphinx -> jinja2 
+	sphinx -> packaging 
+	sphinx -> pygments 
+	sphinx -> requests 
+	sphinx -> snowballstemmer 
+	sphinx 
+	statsmodels -> numpy 
+	statsmodels -> packaging 
+	statsmodels -> pandas 
+	statsmodels -> patsy 
+	statsmodels -> scipy 
+	statsmodels 
+	sympy -> mpmath 
+	sympy 
+	tables -> "py-cpuinfo" 
+	tables -> numexpr 
+	tables -> numpy 
+	tables -> packaging 
+	tables 
+	tabulate 
+	tempita 
+	threadpoolctl 
+	threeml -> astromodels 
+	threeml -> astropy 
+	threeml -> astroquery 
+	threeml -> colorama 
+	threeml -> corner 
+	threeml -> dill 
+	threeml -> dynesty 
+	threeml -> emcee 
+	threeml -> iminuit 
+	threeml -> ipyparallel 
+	threeml -> ipython 
+	threeml -> ipywidgets 
+	threeml -> matplotlib 
+	threeml -> numba 
+	threeml -> numdifftools 
+	threeml -> numexpr 
+	threeml -> numpy 
+	threeml -> omegaconf 
+	threeml -> pandas 
+	threeml -> pyyaml 
+	threeml -> requests 
+	threeml -> rich 
+	threeml -> scipy 
+	threeml -> speclite 
+	threeml -> tqdm 
+	threeml -> uncertainties 
+	threeml 
+	tinycss2 -> webencodings 
+	tinycss2 
+	toml 
+	tomli 
+	toolz 
+	tornado 
+	tqdm 
+	traitlets 
+	tzdata 
+	ultranest -> corner 
+	ultranest -> cython 
+	ultranest -> matplotlib 
+	ultranest -> numpy 
+	ultranest 
+	uncertainties -> future 
+	uncertainties 
+	unicodedata2 
+	urllib3 
+	wcwidth 
+	webencodings 
+	werkzeug -> markupsafe 
+	werkzeug 
+	wheel 
+	widgetsnbextension 
+	xarray -> numpy 
+	xarray -> packaging 
+	xarray -> pandas 
+	xarray 
+	xyzservices 
+	zipp 
+	zstandard 
+}
+
