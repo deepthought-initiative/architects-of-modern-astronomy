@@ -1,0 +1,3492 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" width="1200" height="118" onload="init(evt)" viewBox="0 0 1200 118" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<!-- Flame graph stack visualization. See https://github.com/brendangregg/FlameGraph for latest version, and http://www.brendangregg.com/flamegraphs.html for examples. -->
+<!-- NOTES:  -->
+<defs>
+	<linearGradient id="background" y1="0" y2="1" x1="0" x2="0" >
+		<stop stop-color="#eeeeee" offset="5%" />
+		<stop stop-color="#eeeeb0" offset="95%" />
+	</linearGradient>
+</defs>
+<style type="text/css">
+	text { font-family:Verdana; font-size:12px; fill:rgb(0,0,0); }
+	#search, #ignorecase { opacity:0.1; cursor:pointer; }
+	#search:hover, #search.show, #ignorecase:hover, #ignorecase.show { opacity:1; }
+	#subtitle { text-anchor:middle; font-color:rgb(160,160,160); }
+	#title { text-anchor:middle; font-size:17px}
+	#unzoom { cursor:pointer; }
+	#frames > *:hover { stroke:black; stroke-width:0.5; cursor:pointer; }
+	.hide { display:none; }
+	.parent { opacity:0.5; }
+</style>
+<script type="text/ecmascript">
+<![CDATA[
+	"use strict";
+	var details, searchbtn, unzoombtn, matchedtxt, svg, searching, currentSearchTerm, ignorecase, ignorecaseBtn;
+	function init(evt) {
+		details = document.getElementById("details").firstChild;
+		searchbtn = document.getElementById("search");
+		ignorecaseBtn = document.getElementById("ignorecase");
+		unzoombtn = document.getElementById("unzoom");
+		matchedtxt = document.getElementById("matched");
+		svg = document.getElementsByTagName("svg")[0];
+		searching = 0;
+		currentSearchTerm = null;
+	}
+
+	window.addEventListener("click", function(e) {
+		var target = find_group(e.target);
+		if (target) {
+			if (target.nodeName == "a") {
+				if (e.ctrlKey === false) return;
+				e.preventDefault();
+			}
+			if (target.classList.contains("parent")) unzoom();
+			zoom(target);
+		}
+		else if (e.target.id == "unzoom") unzoom();
+		else if (e.target.id == "search") search_prompt();
+		else if (e.target.id == "ignorecase") toggle_ignorecase();
+	}, false)
+
+	// mouse-over for info
+	// show
+	window.addEventListener("mouseover", function(e) {
+		var target = find_group(e.target);
+		if (target) details.nodeValue = "Function: " + g_to_text(target);
+	}, false)
+
+	// clear
+	window.addEventListener("mouseout", function(e) {
+		var target = find_group(e.target);
+		if (target) details.nodeValue = ' ';
+	}, false)
+
+	// ctrl-F for search
+	window.addEventListener("keydown",function (e) {
+		if (e.keyCode === 114 || (e.ctrlKey && e.keyCode === 70)) {
+			e.preventDefault();
+			search_prompt();
+		}
+	}, false)
+
+	// ctrl-I to toggle case-sensitive search
+	window.addEventListener("keydown",function (e) {
+		if (e.ctrlKey && e.keyCode === 73) {
+			e.preventDefault();
+			toggle_ignorecase();
+		}
+	}, false)
+
+	// functions
+	function find_child(node, selector) {
+		var children = node.querySelectorAll(selector);
+		if (children.length) return children[0];
+		return;
+	}
+	function find_group(node) {
+		var parent = node.parentElement;
+		if (!parent) return;
+		if (parent.id == "frames") return node;
+		return find_group(parent);
+	}
+	function orig_save(e, attr, val) {
+		if (e.attributes["_orig_" + attr] != undefined) return;
+		if (e.attributes[attr] == undefined) return;
+		if (val == undefined) val = e.attributes[attr].value;
+		e.setAttribute("_orig_" + attr, val);
+	}
+	function orig_load(e, attr) {
+		if (e.attributes["_orig_"+attr] == undefined) return;
+		e.attributes[attr].value = e.attributes["_orig_" + attr].value;
+		e.removeAttribute("_orig_"+attr);
+	}
+	function g_to_text(e) {
+		var text = find_child(e, "title").firstChild.nodeValue;
+		return (text)
+	}
+	function g_to_func(e) {
+		var func = g_to_text(e);
+		// if there's any manipulation we want to do to the function
+		// name before it's searched, do it here before returning.
+		return (func);
+	}
+	function update_text(e) {
+		var r = find_child(e, "rect");
+		var t = find_child(e, "text");
+		var w = parseFloat(r.attributes.width.value) -3;
+		var txt = find_child(e, "title").textContent.replace(/\([^(]*\)$/,"");
+		t.attributes.x.value = parseFloat(r.attributes.x.value) + 3;
+
+		// Smaller than this size won't fit anything
+		if (w < 2 * 12 * 0.59) {
+			t.textContent = "";
+			return;
+		}
+
+		t.textContent = txt;
+		// Fit in full text width
+		if (/^ *$/.test(txt) || t.getSubStringLength(0, txt.length) < w)
+			return;
+
+		for (var x = txt.length - 2; x > 0; x--) {
+			if (t.getSubStringLength(0, x + 2) <= w) {
+				t.textContent = txt.substring(0, x) + "..";
+				return;
+			}
+		}
+		t.textContent = "";
+	}
+
+	// zoom
+	function zoom_reset(e) {
+		if (e.attributes != undefined) {
+			orig_load(e, "x");
+			orig_load(e, "width");
+		}
+		if (e.childNodes == undefined) return;
+		for (var i = 0, c = e.childNodes; i < c.length; i++) {
+			zoom_reset(c[i]);
+		}
+	}
+	function zoom_child(e, x, ratio) {
+		if (e.attributes != undefined) {
+			if (e.attributes.x != undefined) {
+				orig_save(e, "x");
+				e.attributes.x.value = (parseFloat(e.attributes.x.value) - x - 10) * ratio + 10;
+				if (e.tagName == "text")
+					e.attributes.x.value = find_child(e.parentNode, "rect[x]").attributes.x.value + 3;
+			}
+			if (e.attributes.width != undefined) {
+				orig_save(e, "width");
+				e.attributes.width.value = parseFloat(e.attributes.width.value) * ratio;
+			}
+		}
+
+		if (e.childNodes == undefined) return;
+		for (var i = 0, c = e.childNodes; i < c.length; i++) {
+			zoom_child(c[i], x - 10, ratio);
+		}
+	}
+	function zoom_parent(e) {
+		if (e.attributes) {
+			if (e.attributes.x != undefined) {
+				orig_save(e, "x");
+				e.attributes.x.value = 10;
+			}
+			if (e.attributes.width != undefined) {
+				orig_save(e, "width");
+				e.attributes.width.value = parseInt(svg.width.baseVal.value) - (10 * 2);
+			}
+		}
+		if (e.childNodes == undefined) return;
+		for (var i = 0, c = e.childNodes; i < c.length; i++) {
+			zoom_parent(c[i]);
+		}
+	}
+	function zoom(node) {
+		var attr = find_child(node, "rect").attributes;
+		var width = parseFloat(attr.width.value);
+		var xmin = parseFloat(attr.x.value);
+		var xmax = parseFloat(xmin + width);
+		var ymin = parseFloat(attr.y.value);
+		var ratio = (svg.width.baseVal.value - 2 * 10) / width;
+
+		// XXX: Workaround for JavaScript float issues (fix me)
+		var fudge = 0.0001;
+
+		unzoombtn.classList.remove("hide");
+
+		var el = document.getElementById("frames").children;
+		for (var i = 0; i < el.length; i++) {
+			var e = el[i];
+			var a = find_child(e, "rect").attributes;
+			var ex = parseFloat(a.x.value);
+			var ew = parseFloat(a.width.value);
+			var upstack;
+			// Is it an ancestor
+			if (0 == 0) {
+				upstack = parseFloat(a.y.value) > ymin;
+			} else {
+				upstack = parseFloat(a.y.value) < ymin;
+			}
+			if (upstack) {
+				// Direct ancestor
+				if (ex <= xmin && (ex+ew+fudge) >= xmax) {
+					e.classList.add("parent");
+					zoom_parent(e);
+					update_text(e);
+				}
+				// not in current path
+				else
+					e.classList.add("hide");
+			}
+			// Children maybe
+			else {
+				// no common path
+				if (ex < xmin || ex + fudge >= xmax) {
+					e.classList.add("hide");
+				}
+				else {
+					zoom_child(e, xmin, ratio);
+					update_text(e);
+				}
+			}
+		}
+		search();
+	}
+	function unzoom() {
+		unzoombtn.classList.add("hide");
+		var el = document.getElementById("frames").children;
+		for(var i = 0; i < el.length; i++) {
+			el[i].classList.remove("parent");
+			el[i].classList.remove("hide");
+			zoom_reset(el[i]);
+			update_text(el[i]);
+		}
+		search();
+	}
+
+	// search
+	function toggle_ignorecase() {
+		ignorecase = !ignorecase;
+		if (ignorecase) {
+			ignorecaseBtn.classList.add("show");
+		} else {
+			ignorecaseBtn.classList.remove("show");
+		}
+		reset_search();
+		search();
+	}
+	function reset_search() {
+		var el = document.querySelectorAll("#frames rect");
+		for (var i = 0; i < el.length; i++) {
+			orig_load(el[i], "fill")
+		}
+	}
+	function search_prompt() {
+		if (!searching) {
+			var term = prompt("Enter a search term (regexp " +
+			    "allowed, eg: ^ext4_)"
+			    + (ignorecase ? ", ignoring case" : "")
+			    + "\nPress Ctrl-i to toggle case sensitivity", "");
+			if (term != null) {
+				currentSearchTerm = term;
+				search();
+			}
+		} else {
+			reset_search();
+			searching = 0;
+			currentSearchTerm = null;
+			searchbtn.classList.remove("show");
+			searchbtn.firstChild.nodeValue = "Search"
+			matchedtxt.classList.add("hide");
+			matchedtxt.firstChild.nodeValue = ""
+		}
+	}
+	function search(term) {
+		if (currentSearchTerm === null) return;
+		var term = currentSearchTerm;
+
+		var re = new RegExp(term, ignorecase ? 'i' : '');
+		var el = document.getElementById("frames").children;
+		var matches = new Object();
+		var maxwidth = 0;
+		for (var i = 0; i < el.length; i++) {
+			var e = el[i];
+			var func = g_to_func(e);
+			var rect = find_child(e, "rect");
+			if (func == null || rect == null)
+				continue;
+
+			// Save max width. Only works as we have a root frame
+			var w = parseFloat(rect.attributes.width.value);
+			if (w > maxwidth)
+				maxwidth = w;
+
+			if (func.match(re)) {
+				// highlight
+				var x = parseFloat(rect.attributes.x.value);
+				orig_save(rect, "fill");
+				rect.attributes.fill.value = "rgb(230,0,230)";
+
+				// remember matches
+				if (matches[x] == undefined) {
+					matches[x] = w;
+				} else {
+					if (w > matches[x]) {
+						// overwrite with parent
+						matches[x] = w;
+					}
+				}
+				searching = 1;
+			}
+		}
+		if (!searching)
+			return;
+
+		searchbtn.classList.add("show");
+		searchbtn.firstChild.nodeValue = "Reset Search";
+
+		// calculate percent matched, excluding vertical overlap
+		var count = 0;
+		var lastx = -1;
+		var lastw = 0;
+		var keys = Array();
+		for (k in matches) {
+			if (matches.hasOwnProperty(k))
+				keys.push(k);
+		}
+		// sort the matched frames by their x location
+		// ascending, then width descending
+		keys.sort(function(a, b){
+			return a - b;
+		});
+		// Step through frames saving only the biggest bottom-up frames
+		// thanks to the sort order. This relies on the tree property
+		// where children are always smaller than their parents.
+		var fudge = 0.0001;	// JavaScript floating point
+		for (var k in keys) {
+			var x = parseFloat(keys[k]);
+			var w = matches[keys[k]];
+			if (x >= lastx + lastw - fudge) {
+				count += w;
+				lastx = x;
+				lastw = w;
+			}
+		}
+		// display matched percent
+		matchedtxt.classList.remove("hide");
+		var pct = 100 * count / maxwidth;
+		if (pct != 100) pct = pct.toFixed(1)
+		matchedtxt.firstChild.nodeValue = "Matched: " + pct + "%";
+	}
+]]>
+</script>
+<rect x="0.0" y="0" width="1200.0" height="118.0" fill="url(#background)"  />
+<text id="title" x="600.00" y="24" >Flame Graph</text>
+<text id="details" x="10.00" y="101" > </text>
+<text id="unzoom" x="10.00" y="24" class="hide">Reset Zoom</text>
+<text id="search" x="1090.00" y="24" >Search</text>
+<text id="ignorecase" x="1174.00" y="24" >ic</text>
+<text id="matched" x="1090.00" y="101" > </text>
+<g id="frames">
+<g >
+<title>Brian Clapper (64 samples, 0.04%)</title><rect x="144.7" y="53" width="0.5" height="15.0" fill="rgb(206,54,8)" rx="2" ry="2" />
+<text  x="147.74" y="63.5" ></text>
+</g>
+<g >
+<title>Lindon Roberts (76 samples, 0.05%)</title><rect x="705.8" y="53" width="0.6" height="15.0" fill="rgb(215,165,15)" rx="2" ry="2" />
+<text  x="708.82" y="63.5" ></text>
+</g>
+<g >
+<title>setuptools (590 samples, 0.39%)</title><rect x="804.0" y="37" width="4.7" height="15.0" fill="rgb(209,177,42)" rx="2" ry="2" />
+<text  x="807.05" y="47.5" ></text>
+</g>
+<g >
+<title>conda-package-handling (14 samples, 0.01%)</title><rect x="828.2" y="37" width="0.1" height="15.0" fill="rgb(208,43,23)" rx="2" ry="2" />
+<text  x="831.21" y="47.5" ></text>
+</g>
+<g >
+<title>platformdirs (28 samples, 0.02%)</title><rect x="940.0" y="37" width="0.2" height="15.0" fill="rgb(245,195,53)" rx="2" ry="2" />
+<text  x="942.96" y="47.5" ></text>
+</g>
+<g >
+<title>Ewald de Wit (55 samples, 0.04%)</title><rect x="300.6" y="53" width="0.4" height="15.0" fill="rgb(251,214,19)" rx="2" ry="2" />
+<text  x="303.56" y="63.5" ></text>
+</g>
+<g >
+<title>pipdeptree (129 samples, 0.09%)</title><rect x="945.1" y="37" width="1.0" height="15.0" fill="rgb(226,173,27)" rx="2" ry="2" />
+<text  x="948.11" y="47.5" ></text>
+</g>
+<g >
+<title>Hugo van Kemenade (18 samples, 0.01%)</title><rect x="404.9" y="53" width="0.1" height="15.0" fill="rgb(217,34,7)" rx="2" ry="2" />
+<text  x="407.91" y="63.5" ></text>
+</g>
+<g >
+<title>Sascha Brawer (465 samples, 0.31%)</title><rect x="857.3" y="53" width="3.6" height="15.0" fill="rgb(218,139,24)" rx="2" ry="2" />
+<text  x="860.29" y="63.5" ></text>
+</g>
+<g >
+<title>Chris Colbert (50 samples, 0.03%)</title><rect x="152.7" y="53" width="0.4" height="15.0" fill="rgb(224,49,49)" rx="2" ry="2" />
+<text  x="155.68" y="63.5" ></text>
+</g>
+<g >
+<title>Hasan Ramezani (120 samples, 0.08%)</title><rect x="392.5" y="53" width="0.9" height="15.0" fill="rgb(215,75,15)" rx="2" ry="2" />
+<text  x="395.50" y="63.5" ></text>
+</g>
+<g >
+<title>Antti Jokipii (34 samples, 0.02%)</title><rect x="103.2" y="53" width="0.3" height="15.0" fill="rgb(239,38,31)" rx="2" ry="2" />
+<text  x="106.25" y="63.5" ></text>
+</g>
+<g >
+<title>Martin Fleischmann (146 samples, 0.10%)</title><rect x="719.3" y="53" width="1.1" height="15.0" fill="rgb(212,78,5)" rx="2" ry="2" />
+<text  x="722.26" y="63.5" ></text>
+</g>
+<g >
+<title>pyarrow (1,082 samples, 0.72%)</title><rect x="78.3" y="37" width="8.4" height="15.0" fill="rgb(245,71,37)" rx="2" ry="2" />
+<text  x="81.29" y="47.5" ></text>
+</g>
+<g >
+<title>stack-data (31 samples, 0.02%)</title><rect x="72.5" y="37" width="0.2" height="15.0" fill="rgb(209,179,20)" rx="2" ry="2" />
+<text  x="75.46" y="47.5" ></text>
+</g>
+<g >
+<title>Terrence Dorsey (70 samples, 0.05%)</title><rect x="925.7" y="53" width="0.5" height="15.0" fill="rgb(251,93,25)" rx="2" ry="2" />
+<text  x="928.65" y="63.5" ></text>
+</g>
+<g >
+<title>charset-normalizer (89 samples, 0.06%)</title><rect x="52.7" y="37" width="0.7" height="15.0" fill="rgb(222,42,12)" rx="2" ry="2" />
+<text  x="55.72" y="47.5" ></text>
+</g>
+<g >
+<title>astromodels (77 samples, 0.05%)</title><rect x="1127.5" y="37" width="0.6" height="15.0" fill="rgb(208,102,52)" rx="2" ry="2" />
+<text  x="1130.48" y="47.5" ></text>
+</g>
+<g >
+<title>joblib (216 samples, 0.14%)</title><rect x="322.4" y="37" width="1.7" height="15.0" fill="rgb(211,71,18)" rx="2" ry="2" />
+<text  x="325.37" y="47.5" ></text>
+</g>
+<g >
+<title>fermipy (453 samples, 0.30%)</title><rect x="738.3" y="37" width="3.6" height="15.0" fill="rgb(244,93,22)" rx="2" ry="2" />
+<text  x="741.34" y="47.5" ></text>
+</g>
+<g >
+<title>andycasey (83 samples, 0.05%)</title><rect x="990.3" y="53" width="0.7" height="15.0" fill="rgb(235,191,44)" rx="2" ry="2" />
+<text  x="993.34" y="63.5" ></text>
+</g>
+<g >
+<title>pyarrow (146 samples, 0.10%)</title><rect x="677.0" y="37" width="1.1" height="15.0" fill="rgb(216,116,3)" rx="2" ry="2" />
+<text  x="679.97" y="47.5" ></text>
+</g>
+<g >
+<title>arviz (147 samples, 0.10%)</title><rect x="827.1" y="37" width="1.1" height="15.0" fill="rgb(205,0,35)" rx="2" ry="2" />
+<text  x="830.06" y="47.5" ></text>
+</g>
+<g >
+<title>Matthias BUSSONNIER (46 samples, 0.03%)</title><rect x="741.9" y="53" width="0.3" height="15.0" fill="rgb(253,25,37)" rx="2" ry="2" />
+<text  x="744.88" y="63.5" ></text>
+</g>
+<g >
+<title>Nic Crane (192 samples, 0.13%)</title><rect x="790.9" y="53" width="1.5" height="15.0" fill="rgb(205,118,43)" rx="2" ry="2" />
+<text  x="793.93" y="63.5" ></text>
+</g>
+<g >
+<title>Fabio Zadrozny (336 samples, 0.22%)</title><rect x="301.0" y="53" width="2.6" height="15.0" fill="rgb(239,16,29)" rx="2" ry="2" />
+<text  x="304.01" y="63.5" ></text>
+</g>
+<g >
+<title>py-bobyqa (76 samples, 0.05%)</title><rect x="705.8" y="37" width="0.6" height="15.0" fill="rgb(248,227,3)" rx="2" ry="2" />
+<text  x="708.82" y="47.5" ></text>
+</g>
+<g >
+<title>pandocfilters (25 samples, 0.02%)</title><rect x="676.7" y="37" width="0.2" height="15.0" fill="rgb(231,22,24)" rx="2" ry="2" />
+<text  x="679.74" y="47.5" ></text>
+</g>
+<g >
+<title>pyopenssl (108 samples, 0.07%)</title><rect x="815.0" y="37" width="0.9" height="15.0" fill="rgb(239,221,13)" rx="2" ry="2" />
+<text  x="818.04" y="47.5" ></text>
+</g>
+<g >
+<title>Krisztián Szűcs (609 samples, 0.40%)</title><rect x="681.7" y="53" width="4.7" height="15.0" fill="rgb(254,74,8)" rx="2" ry="2" />
+<text  x="684.67" y="63.5" ></text>
+</g>
+<g >
+<title>pint (60 samples, 0.04%)</title><rect x="606.0" y="37" width="0.4" height="15.0" fill="rgb(221,92,53)" rx="2" ry="2" />
+<text  x="608.96" y="47.5" ></text>
+</g>
+<g >
+<title>matplotlib-inline (22 samples, 0.01%)</title><rect x="303.6" y="37" width="0.2" height="15.0" fill="rgb(240,220,36)" rx="2" ry="2" />
+<text  x="306.63" y="47.5" ></text>
+</g>
+<g >
+<title>Adrian Garcia Badaracco (272 samples, 0.18%)</title><rect x="48.0" y="53" width="2.1" height="15.0" fill="rgb(226,190,30)" rx="2" ry="2" />
+<text  x="50.95" y="63.5" ></text>
+</g>
+<g >
+<title>html5lib (83 samples, 0.05%)</title><rect x="1067.5" y="37" width="0.6" height="15.0" fill="rgb(239,4,27)" rx="2" ry="2" />
+<text  x="1070.46" y="47.5" ></text>
+</g>
+<g >
+<title>pydantic (113 samples, 0.07%)</title><rect x="1011.9" y="37" width="0.8" height="15.0" fill="rgb(252,94,15)" rx="2" ry="2" />
+<text  x="1014.86" y="47.5" ></text>
+</g>
+<g >
+<title>Bernát Gábor (102 samples, 0.07%)</title><rect x="134.5" y="53" width="0.8" height="15.0" fill="rgb(226,173,34)" rx="2" ry="2" />
+<text  x="137.54" y="63.5" ></text>
+</g>
+<g >
+<title>html5lib (295 samples, 0.20%)</title><rect x="75.2" y="37" width="2.3" height="15.0" fill="rgb(241,195,40)" rx="2" ry="2" />
+<text  x="78.15" y="47.5" ></text>
+</g>
+<g >
+<title>Omry Yadan (545 samples, 0.36%)</title><rect x="796.1" y="53" width="4.2" height="15.0" fill="rgb(213,190,21)" rx="2" ry="2" />
+<text  x="799.07" y="63.5" ></text>
+</g>
+<g >
+<title>brotli (24 samples, 0.02%)</title><rect x="545.3" y="37" width="0.2" height="15.0" fill="rgb(241,182,0)" rx="2" ry="2" />
+<text  x="548.33" y="47.5" ></text>
+</g>
+<g >
+<title>cached-property (19 samples, 0.01%)</title><rect x="1143.0" y="37" width="0.1" height="15.0" fill="rgb(221,200,54)" rx="2" ry="2" />
+<text  x="1145.98" y="47.5" ></text>
+</g>
+<g >
+<title>ligo-segments (20 samples, 0.01%)</title><rect x="695.2" y="37" width="0.1" height="15.0" fill="rgb(254,219,39)" rx="2" ry="2" />
+<text  x="698.19" y="47.5" ></text>
+</g>
+<g >
+<title>threadpoolctl (46 samples, 0.03%)</title><rect x="795.7" y="37" width="0.4" height="15.0" fill="rgb(242,81,35)" rx="2" ry="2" />
+<text  x="798.71" y="47.5" ></text>
+</g>
+<g >
+<title>fonttools (2,863 samples, 1.89%)</title><rect x="165.6" y="37" width="22.3" height="15.0" fill="rgb(248,138,44)" rx="2" ry="2" />
+<text  x="168.56" y="47.5" >f..</text>
+</g>
+<g >
+<title>Jérôme Leclercq (14 samples, 0.01%)</title><rect x="623.5" y="53" width="0.1" height="15.0" fill="rgb(213,200,36)" rx="2" ry="2" />
+<text  x="626.45" y="63.5" ></text>
+</g>
+<g >
+<title>Tarek Ziadé (512 samples, 0.34%)</title><rect x="921.7" y="53" width="4.0" height="15.0" fill="rgb(227,55,14)" rx="2" ry="2" />
+<text  x="924.66" y="63.5" ></text>
+</g>
+<g >
+<title>Sebastian Thiel (1,449 samples, 0.96%)</title><rect x="860.9" y="53" width="11.3" height="15.0" fill="rgb(237,125,39)" rx="2" ry="2" />
+<text  x="863.91" y="63.5" ></text>
+</g>
+<g >
+<title>TAHRI Ahmed R (267 samples, 0.18%)</title><rect x="914.6" y="53" width="2.1" height="15.0" fill="rgb(253,69,41)" rx="2" ry="2" />
+<text  x="917.63" y="63.5" ></text>
+</g>
+<g >
+<title>ptyprocess (58 samples, 0.04%)</title><rect x="931.3" y="37" width="0.5" height="15.0" fill="rgb(233,138,26)" rx="2" ry="2" />
+<text  x="934.34" y="47.5" ></text>
+</g>
+<g >
+<title>John Wiggins (18 samples, 0.01%)</title><rect x="561.1" y="53" width="0.2" height="15.0" fill="rgb(241,37,29)" rx="2" ry="2" />
+<text  x="564.14" y="63.5" ></text>
+</g>
+<g >
+<title>bema (1,085 samples, 0.72%)</title><rect x="997.8" y="53" width="8.5" height="15.0" fill="rgb(225,228,25)" rx="2" ry="2" />
+<text  x="1000.80" y="63.5" ></text>
+</g>
+<g >
+<title>html5lib (106 samples, 0.07%)</title><rect x="848.0" y="37" width="0.8" height="15.0" fill="rgb(233,192,30)" rx="2" ry="2" />
+<text  x="850.99" y="47.5" ></text>
+</g>
+<g >
+<title>mistune (560 samples, 0.37%)</title><rect x="400.5" y="37" width="4.4" height="15.0" fill="rgb(214,215,40)" rx="2" ry="2" />
+<text  x="403.54" y="47.5" ></text>
+</g>
+<g >
+<title>interpolation (121 samples, 0.08%)</title><rect x="808.7" y="37" width="0.9" height="15.0" fill="rgb(231,37,14)" rx="2" ry="2" />
+<text  x="811.65" y="47.5" ></text>
+</g>
+<g >
+<title>Stephan Hoyer (1,310 samples, 0.87%)</title><rect x="885.5" y="53" width="10.2" height="15.0" fill="rgb(237,108,47)" rx="2" ry="2" />
+<text  x="888.47" y="63.5" ></text>
+</g>
+<g >
+<title>colorama (13 samples, 0.01%)</title><rect x="561.5" y="37" width="0.1" height="15.0" fill="rgb(209,178,24)" rx="2" ry="2" />
+<text  x="564.52" y="47.5" ></text>
+</g>
+<g >
+<title>contourpy (237 samples, 0.16%)</title><rect x="411.4" y="37" width="1.8" height="15.0" fill="rgb(238,105,29)" rx="2" ry="2" />
+<text  x="414.37" y="47.5" ></text>
+</g>
+<g >
+<title>Jon Ribbens (24 samples, 0.02%)</title><rect x="562.3" y="53" width="0.2" height="15.0" fill="rgb(217,128,52)" rx="2" ry="2" />
+<text  x="565.27" y="63.5" ></text>
+</g>
+<g >
+<title>Oriol Abril (111 samples, 0.07%)</title><rect x="801.6" y="53" width="0.9" height="15.0" fill="rgb(230,200,53)" rx="2" ry="2" />
+<text  x="804.64" y="63.5" ></text>
+</g>
+<g >
+<title>J. Michael Burgess (910 samples, 0.60%)</title><rect x="417.9" y="53" width="7.1" height="15.0" fill="rgb(227,15,3)" rx="2" ry="2" />
+<text  x="420.94" y="63.5" ></text>
+</g>
+<g >
+<title>smmap (34 samples, 0.02%)</title><rect x="392.2" y="37" width="0.2" height="15.0" fill="rgb(205,43,43)" rx="2" ry="2" />
+<text  x="395.18" y="47.5" ></text>
+</g>
+<g >
+<title>ligo-segments (120 samples, 0.08%)</title><rect x="647.1" y="37" width="1.0" height="15.0" fill="rgb(222,155,47)" rx="2" ry="2" />
+<text  x="650.13" y="47.5" ></text>
+</g>
+<g >
+<title>numexpr (304 samples, 0.20%)</title><rect x="305.8" y="37" width="2.3" height="15.0" fill="rgb(253,117,41)" rx="2" ry="2" />
+<text  x="308.77" y="47.5" ></text>
+</g>
+<g >
+<title>cobaya (176 samples, 0.12%)</title><rect x="542.4" y="37" width="1.4" height="15.0" fill="rgb(221,161,28)" rx="2" ry="2" />
+<text  x="545.42" y="47.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (1,026 samples, 0.68%)</title><rect x="696.2" y="37" width="8.1" height="15.0" fill="rgb(210,27,17)" rx="2" ry="2" />
+<text  x="699.25" y="47.5" ></text>
+</g>
+<g >
+<title>Tyler Goodlet (90 samples, 0.06%)</title><rect x="940.2" y="53" width="0.7" height="15.0" fill="rgb(231,113,3)" rx="2" ry="2" />
+<text  x="943.24" y="63.5" ></text>
+</g>
+<g >
+<title>holger krekel (54 samples, 0.04%)</title><rect x="1066.7" y="53" width="0.4" height="15.0" fill="rgb(229,102,23)" rx="2" ry="2" />
+<text  x="1069.69" y="63.5" ></text>
+</g>
+<g >
+<title>Piyush Gautam (28 samples, 0.02%)</title><rect x="825.3" y="53" width="0.2" height="15.0" fill="rgb(205,56,44)" rx="2" ry="2" />
+<text  x="828.26" y="63.5" ></text>
+</g>
+<g >
+<title>Alenka Frim (168 samples, 0.11%)</title><rect x="53.6" y="53" width="1.3" height="15.0" fill="rgb(212,196,46)" rx="2" ry="2" />
+<text  x="56.62" y="63.5" ></text>
+</g>
+<g >
+<title>Theelx (34 samples, 0.02%)</title><rect x="926.2" y="53" width="0.3" height="15.0" fill="rgb(254,135,40)" rx="2" ry="2" />
+<text  x="929.20" y="63.5" ></text>
+</g>
+<g >
+<title>platformdirs (14 samples, 0.01%)</title><rect x="283.7" y="37" width="0.1" height="15.0" fill="rgb(244,187,0)" rx="2" ry="2" />
+<text  x="286.73" y="47.5" ></text>
+</g>
+<g >
+<title>ads (74 samples, 0.05%)</title><rect x="72.7" y="37" width="0.6" height="15.0" fill="rgb(248,103,8)" rx="2" ry="2" />
+<text  x="75.70" y="47.5" ></text>
+</g>
+<g >
+<title>joblib (210 samples, 0.14%)</title><rect x="706.5" y="37" width="1.7" height="15.0" fill="rgb(215,23,27)" rx="2" ry="2" />
+<text  x="709.54" y="47.5" ></text>
+</g>
+<g >
+<title>badri (871 samples, 0.58%)</title><rect x="991.0" y="53" width="6.8" height="15.0" fill="rgb(248,101,27)" rx="2" ry="2" />
+<text  x="994.01" y="63.5" ></text>
+</g>
+<g >
+<title>Clark Fitzgerald (149 samples, 0.10%)</title><rect x="158.7" y="53" width="1.2" height="15.0" fill="rgb(212,22,16)" rx="2" ry="2" />
+<text  x="161.71" y="63.5" ></text>
+</g>
+<g >
+<title>Barry Warsaw (93 samples, 0.06%)</title><rect x="105.9" y="53" width="0.7" height="15.0" fill="rgb(227,209,47)" rx="2" ry="2" />
+<text  x="108.89" y="63.5" ></text>
+</g>
+<g >
+<title>xarray (1,223 samples, 0.81%)</title><rect x="886.1" y="37" width="9.6" height="15.0" fill="rgb(212,100,2)" rx="2" ry="2" />
+<text  x="889.15" y="47.5" ></text>
+</g>
+<g >
+<title>cobaya (521 samples, 0.34%)</title><rect x="96.8" y="37" width="4.1" height="15.0" fill="rgb(212,1,43)" rx="2" ry="2" />
+<text  x="99.81" y="47.5" ></text>
+</g>
+<g >
+<title>omegaconf (64 samples, 0.04%)</title><rect x="792.6" y="37" width="0.5" height="15.0" fill="rgb(252,61,13)" rx="2" ry="2" />
+<text  x="795.60" y="47.5" ></text>
+</g>
+<g >
+<title>Maximilian Roos (274 samples, 0.18%)</title><rect x="744.4" y="53" width="2.1" height="15.0" fill="rgb(244,77,16)" rx="2" ry="2" />
+<text  x="747.39" y="63.5" ></text>
+</g>
+<g >
+<title>Antoine Pitrou (1,082 samples, 0.72%)</title><rect x="78.3" y="53" width="8.4" height="15.0" fill="rgb(207,24,45)" rx="2" ry="2" />
+<text  x="81.29" y="63.5" ></text>
+</g>
+<g >
+<title>packaging (115 samples, 0.08%)</title><rect x="825.5" y="37" width="0.9" height="15.0" fill="rgb(224,3,46)" rx="2" ry="2" />
+<text  x="828.47" y="47.5" ></text>
+</g>
+<g >
+<title>webencodings (26 samples, 0.02%)</title><rect x="882.6" y="37" width="0.2" height="15.0" fill="rgb(209,48,0)" rx="2" ry="2" />
+<text  x="885.63" y="47.5" ></text>
+</g>
+<g >
+<title>Bo Bayles (606 samples, 0.40%)</title><rect x="135.3" y="53" width="4.8" height="15.0" fill="rgb(231,218,52)" rx="2" ry="2" />
+<text  x="138.33" y="63.5" ></text>
+</g>
+<g >
+<title>Cosimo Lupo (2,938 samples, 1.94%)</title><rect x="165.1" y="53" width="22.9" height="15.0" fill="rgb(220,148,32)" rx="2" ry="2" />
+<text  x="168.06" y="63.5" >C..</text>
+</g>
+<g >
+<title>thomas (806 samples, 0.53%)</title><rect x="1178.1" y="53" width="6.3" height="15.0" fill="rgb(229,63,49)" rx="2" ry="2" />
+<text  x="1181.08" y="63.5" ></text>
+</g>
+<g >
+<title>pluggy (81 samples, 0.05%)</title><rect x="826.4" y="37" width="0.7" height="15.0" fill="rgb(231,102,5)" rx="2" ry="2" />
+<text  x="829.43" y="47.5" ></text>
+</g>
+<g >
+<title>Henrike Fleischhack (80 samples, 0.05%)</title><rect x="393.4" y="53" width="0.7" height="15.0" fill="rgb(242,47,13)" rx="2" ry="2" />
+<text  x="396.44" y="63.5" ></text>
+</g>
+<g >
+<title>Brian E. Granger (48 samples, 0.03%)</title><rect x="145.2" y="53" width="0.4" height="15.0" fill="rgb(223,164,42)" rx="2" ry="2" />
+<text  x="148.24" y="63.5" ></text>
+</g>
+<g >
+<title>Kyle Barbary (115 samples, 0.08%)</title><rect x="686.4" y="53" width="0.9" height="15.0" fill="rgb(249,79,54)" rx="2" ry="2" />
+<text  x="689.42" y="63.5" ></text>
+</g>
+<g >
+<title>pyarrow (380 samples, 0.25%)</title><rect x="599.7" y="37" width="3.0" height="15.0" fill="rgb(236,163,15)" rx="2" ry="2" />
+<text  x="602.70" y="47.5" ></text>
+</g>
+<g >
+<title>setuptools (512 samples, 0.34%)</title><rect x="921.7" y="37" width="4.0" height="15.0" fill="rgb(214,5,25)" rx="2" ry="2" />
+<text  x="924.66" y="47.5" ></text>
+</g>
+<g >
+<title>wcwidth (195 samples, 0.13%)</title><rect x="540.7" y="37" width="1.6" height="15.0" fill="rgb(226,38,42)" rx="2" ry="2" />
+<text  x="543.75" y="47.5" ></text>
+</g>
+<g >
+<title>matplotlib-inline (19 samples, 0.01%)</title><rect x="773.7" y="37" width="0.2" height="15.0" fill="rgb(233,88,7)" rx="2" ry="2" />
+<text  x="776.71" y="47.5" ></text>
+</g>
+<g >
+<title>Aleksandar Jelenak (27 samples, 0.02%)</title><rect x="53.4" y="53" width="0.2" height="15.0" fill="rgb(229,86,8)" rx="2" ry="2" />
+<text  x="56.41" y="63.5" ></text>
+</g>
+<g >
+<title>arviz (227 samples, 0.15%)</title><rect x="103.5" y="37" width="1.8" height="15.0" fill="rgb(234,215,51)" rx="2" ry="2" />
+<text  x="106.52" y="47.5" ></text>
+</g>
+<g >
+<title>Jason R. Coombs (9,085 samples, 6.01%)</title><rect x="462.5" y="53" width="70.8" height="15.0" fill="rgb(213,101,13)" rx="2" ry="2" />
+<text  x="465.46" y="63.5" >Jason R...</text>
+</g>
+<g >
+<title>Trent Mick (28 samples, 0.02%)</title><rect x="940.0" y="53" width="0.2" height="15.0" fill="rgb(232,128,9)" rx="2" ry="2" />
+<text  x="942.96" y="63.5" ></text>
+</g>
+<g >
+<title>Kevin Bates (83 samples, 0.05%)</title><rect x="645.3" y="53" width="0.7" height="15.0" fill="rgb(233,76,11)" rx="2" ry="2" />
+<text  x="648.31" y="63.5" ></text>
+</g>
+<g >
+<title>corner (111 samples, 0.07%)</title><rect x="193.6" y="37" width="0.8" height="15.0" fill="rgb(219,137,33)" rx="2" ry="2" />
+<text  x="196.56" y="47.5" ></text>
+</g>
+<g >
+<title>inflect (140 samples, 0.09%)</title><rect x="813.9" y="37" width="1.1" height="15.0" fill="rgb(233,10,33)" rx="2" ry="2" />
+<text  x="816.95" y="47.5" ></text>
+</g>
+<g >
+<title>jeremie du boisberranger (33 samples, 0.02%)</title><rect x="1067.1" y="53" width="0.3" height="15.0" fill="rgb(214,225,33)" rx="2" ry="2" />
+<text  x="1070.12" y="63.5" ></text>
+</g>
+<g >
+<title>aloctavodia (40 samples, 0.03%)</title><rect x="990.0" y="53" width="0.3" height="15.0" fill="rgb(252,152,22)" rx="2" ry="2" />
+<text  x="993.02" y="63.5" ></text>
+</g>
+<g >
+<title>pyarrow (192 samples, 0.13%)</title><rect x="790.9" y="37" width="1.5" height="15.0" fill="rgb(216,53,11)" rx="2" ry="2" />
+<text  x="793.93" y="47.5" ></text>
+</g>
+<g >
+<title>Gregory Szorc (1,271 samples, 0.84%)</title><rect x="374.5" y="53" width="9.9" height="15.0" fill="rgb(247,200,28)" rx="2" ry="2" />
+<text  x="377.49" y="63.5" ></text>
+</g>
+<g >
+<title>jupyter-client (42 samples, 0.03%)</title><rect x="1141.4" y="37" width="0.4" height="15.0" fill="rgb(253,39,5)" rx="2" ry="2" />
+<text  x="1144.44" y="47.5" ></text>
+</g>
+<g >
+<title>Daniel Feldroy (26 samples, 0.02%)</title><rect x="198.4" y="53" width="0.2" height="15.0" fill="rgb(252,196,22)" rx="2" ry="2" />
+<text  x="201.40" y="63.5" ></text>
+</g>
+<g >
+<title>zstandard (1,271 samples, 0.84%)</title><rect x="374.5" y="37" width="9.9" height="15.0" fill="rgb(227,23,37)" rx="2" ry="2" />
+<text  x="377.49" y="47.5" ></text>
+</g>
+<g >
+<title>Jeff Paine (33 samples, 0.02%)</title><rect x="540.3" y="53" width="0.2" height="15.0" fill="rgb(219,194,44)" rx="2" ry="2" />
+<text  x="543.29" y="63.5" ></text>
+</g>
+<g >
+<title>xarray (198 samples, 0.13%)</title><rect x="543.8" y="37" width="1.5" height="15.0" fill="rgb(235,24,36)" rx="2" ry="2" />
+<text  x="546.79" y="47.5" ></text>
+</g>
+<g >
+<title>Larry Bradley (629 samples, 0.42%)</title><rect x="688.2" y="53" width="5.0" height="15.0" fill="rgb(242,155,25)" rx="2" ry="2" />
+<text  x="691.25" y="63.5" ></text>
+</g>
+<g >
+<title>jsonpointer (119 samples, 0.08%)</title><rect x="884.5" y="37" width="1.0" height="15.0" fill="rgb(227,210,27)" rx="2" ry="2" />
+<text  x="887.54" y="47.5" ></text>
+</g>
+<g >
+<title>Darren Burns (241 samples, 0.16%)</title><rect x="201.9" y="53" width="1.9" height="15.0" fill="rgb(223,217,43)" rx="2" ry="2" />
+<text  x="204.90" y="63.5" ></text>
+</g>
+<g >
+<title>Jon Crall (30 samples, 0.02%)</title><rect x="561.3" y="53" width="0.2" height="15.0" fill="rgb(236,44,46)" rx="2" ry="2" />
+<text  x="564.28" y="63.5" ></text>
+</g>
+<g >
+<title>David Montague (192 samples, 0.13%)</title><rect x="267.5" y="53" width="1.5" height="15.0" fill="rgb(229,92,42)" rx="2" ry="2" />
+<text  x="270.49" y="63.5" ></text>
+</g>
+<g >
+<title>JesusTorrado (176 samples, 0.12%)</title><rect x="542.4" y="53" width="1.4" height="15.0" fill="rgb(219,13,8)" rx="2" ry="2" />
+<text  x="545.42" y="63.5" ></text>
+</g>
+<g >
+<title>fonttools (465 samples, 0.31%)</title><rect x="857.3" y="37" width="3.6" height="15.0" fill="rgb(236,1,50)" rx="2" ry="2" />
+<text  x="860.29" y="47.5" ></text>
+</g>
+<g >
+<title>safe-netrc (41 samples, 0.03%)</title><rect x="704.3" y="37" width="0.3" height="15.0" fill="rgb(250,67,40)" rx="2" ry="2" />
+<text  x="707.25" y="47.5" ></text>
+</g>
+<g >
+<title>smmap (93 samples, 0.06%)</title><rect x="871.5" y="37" width="0.7" height="15.0" fill="rgb(232,3,52)" rx="2" ry="2" />
+<text  x="874.49" y="47.5" ></text>
+</g>
+<g >
+<title>mamba (93 samples, 0.06%)</title><rect x="605.2" y="37" width="0.8" height="15.0" fill="rgb(225,165,33)" rx="2" ry="2" />
+<text  x="608.24" y="47.5" ></text>
+</g>
+<g >
+<title>Tal Leming (292 samples, 0.19%)</title><rect x="916.7" y="53" width="2.3" height="15.0" fill="rgb(244,191,5)" rx="2" ry="2" />
+<text  x="919.73" y="63.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (646 samples, 0.43%)</title><rect x="946.5" y="37" width="5.0" height="15.0" fill="rgb(251,31,54)" rx="2" ry="2" />
+<text  x="949.48" y="47.5" ></text>
+</g>
+<g >
+<title>toml (193 samples, 0.13%)</title><rect x="941.0" y="37" width="1.5" height="15.0" fill="rgb(245,7,18)" rx="2" ry="2" />
+<text  x="943.95" y="47.5" ></text>
+</g>
+<g >
+<title>Oriol Abril-Pla (133 samples, 0.09%)</title><rect x="800.6" y="53" width="1.0" height="15.0" fill="rgb(253,133,15)" rx="2" ry="2" />
+<text  x="803.61" y="63.5" ></text>
+</g>
+<g >
+<title>Guido Imperiale (139 samples, 0.09%)</title><rect x="384.4" y="53" width="1.1" height="15.0" fill="rgb(233,197,35)" rx="2" ry="2" />
+<text  x="387.41" y="63.5" ></text>
+</g>
+<g >
+<title>Duncan Macleod (888 samples, 0.59%)</title><rect x="276.4" y="53" width="6.9" height="15.0" fill="rgb(242,8,31)" rx="2" ry="2" />
+<text  x="279.41" y="63.5" ></text>
+</g>
+<g >
+<title>jaraco.classes (380 samples, 0.25%)</title><rect x="475.1" y="37" width="3.0" height="15.0" fill="rgb(223,178,19)" rx="2" ry="2" />
+<text  x="478.10" y="47.5" ></text>
+</g>
+<g >
+<title>Kipp Cannon (3,795 samples, 2.51%)</title><rect x="647.1" y="53" width="29.6" height="15.0" fill="rgb(220,77,6)" rx="2" ry="2" />
+<text  x="650.13" y="63.5" >Ki..</text>
+</g>
+<g >
+<title>brotli (37 samples, 0.02%)</title><rect x="300.3" y="37" width="0.3" height="15.0" fill="rgb(214,206,35)" rx="2" ry="2" />
+<text  x="303.27" y="47.5" ></text>
+</g>
+<g >
+<title>Stefan Kögl (296 samples, 0.20%)</title><rect x="883.2" y="53" width="2.3" height="15.0" fill="rgb(247,145,36)" rx="2" ry="2" />
+<text  x="886.16" y="63.5" ></text>
+</g>
+<g >
+<title>annotated-types (34 samples, 0.02%)</title><rect x="48.0" y="37" width="0.2" height="15.0" fill="rgb(244,181,29)" rx="2" ry="2" />
+<text  x="50.95" y="47.5" ></text>
+</g>
+<g >
+<title>fast-histogram (16 samples, 0.01%)</title><rect x="63.8" y="37" width="0.1" height="15.0" fill="rgb(209,209,49)" rx="2" ry="2" />
+<text  x="66.81" y="47.5" ></text>
+</g>
+<g >
+<title>astromodels (510 samples, 0.34%)</title><rect x="1043.2" y="37" width="4.0" height="15.0" fill="rgb(230,160,14)" rx="2" ry="2" />
+<text  x="1046.22" y="47.5" ></text>
+</g>
+<g >
+<title>Anthony Sottile (16 samples, 0.01%)</title><rect x="78.2" y="53" width="0.1" height="15.0" fill="rgb(213,140,30)" rx="2" ry="2" />
+<text  x="81.16" y="63.5" ></text>
+</g>
+<g >
+<title>Benjamin Kietzman (221 samples, 0.15%)</title><rect x="127.7" y="53" width="1.7" height="15.0" fill="rgb(215,172,4)" rx="2" ry="2" />
+<text  x="130.70" y="63.5" ></text>
+</g>
+<g >
+<title>gitdb (227 samples, 0.15%)</title><rect x="860.9" y="37" width="1.8" height="15.0" fill="rgb(206,59,49)" rx="2" ry="2" />
+<text  x="863.91" y="47.5" ></text>
+</g>
+<g >
+<title>pure-eval (61 samples, 0.04%)</title><rect x="61.8" y="37" width="0.5" height="15.0" fill="rgb(208,57,30)" rx="2" ry="2" />
+<text  x="64.83" y="47.5" ></text>
+</g>
+<g >
+<title>Thomas Kluyver (524 samples, 0.35%)</title><rect x="927.7" y="53" width="4.1" height="15.0" fill="rgb(210,44,18)" rx="2" ry="2" />
+<text  x="930.70" y="63.5" ></text>
+</g>
+<g >
+<title>pyarrow (240 samples, 0.16%)</title><rect x="73.3" y="37" width="1.9" height="15.0" fill="rgb(228,177,53)" rx="2" ry="2" />
+<text  x="76.28" y="47.5" ></text>
+</g>
+<g >
+<title>Jorge C. Leitao (182 samples, 0.12%)</title><rect x="598.3" y="53" width="1.4" height="15.0" fill="rgb(228,27,9)" rx="2" ry="2" />
+<text  x="601.28" y="63.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (806 samples, 0.53%)</title><rect x="1178.1" y="37" width="6.3" height="15.0" fill="rgb(242,21,25)" rx="2" ry="2" />
+<text  x="1181.08" y="47.5" ></text>
+</g>
+<g >
+<title>jupyter-client (52 samples, 0.03%)</title><rect x="251.7" y="37" width="0.4" height="15.0" fill="rgb(252,20,0)" rx="2" ry="2" />
+<text  x="254.68" y="47.5" ></text>
+</g>
+<g >
+<title>pipdeptree (13 samples, 0.01%)</title><rect x="717.0" y="37" width="0.1" height="15.0" fill="rgb(254,77,21)" rx="2" ry="2" />
+<text  x="719.95" y="47.5" ></text>
+</g>
+<g >
+<title>pyarrow (331 samples, 0.22%)</title><rect x="942.5" y="37" width="2.5" height="15.0" fill="rgb(253,155,53)" rx="2" ry="2" />
+<text  x="945.46" y="47.5" ></text>
+</g>
+<g >
+<title>martinRenou (32 samples, 0.02%)</title><rect x="1127.2" y="53" width="0.3" height="15.0" fill="rgb(206,42,22)" rx="2" ry="2" />
+<text  x="1130.23" y="63.5" ></text>
+</g>
+<g >
+<title>wheel (304 samples, 0.20%)</title><rect x="56.7" y="37" width="2.4" height="15.0" fill="rgb(245,132,51)" rx="2" ry="2" />
+<text  x="59.68" y="47.5" ></text>
+</g>
+<g >
+<title>ipywidgets (279 samples, 0.18%)</title><rect x="809.6" y="37" width="2.2" height="15.0" fill="rgb(247,2,40)" rx="2" ry="2" />
+<text  x="812.60" y="47.5" ></text>
+</g>
+<g >
+<title>Bob Ippolito (430 samples, 0.28%)</title><rect x="140.1" y="53" width="3.3" height="15.0" fill="rgb(243,67,17)" rx="2" ry="2" />
+<text  x="143.06" y="63.5" ></text>
+</g>
+<g >
+<title>Christian Heimes (171 samples, 0.11%)</title><rect x="154.7" y="53" width="1.3" height="15.0" fill="rgb(209,55,27)" rx="2" ry="2" />
+<text  x="157.69" y="63.5" ></text>
+</g>
+<g >
+<title>mosfit (1,417 samples, 0.94%)</title><rect x="1055.6" y="37" width="11.1" height="15.0" fill="rgb(235,173,15)" rx="2" ry="2" />
+<text  x="1058.63" y="47.5" ></text>
+</g>
+<g >
+<title>Uwe L. Korn (331 samples, 0.22%)</title><rect x="942.5" y="53" width="2.5" height="15.0" fill="rgb(221,133,45)" rx="2" ry="2" />
+<text  x="945.46" y="63.5" ></text>
+</g>
+<g >
+<title>Jonathan Slenders (2,225 samples, 1.47%)</title><rect x="580.8" y="53" width="17.4" height="15.0" fill="rgb(241,77,18)" rx="2" ry="2" />
+<text  x="583.83" y="63.5" ></text>
+</g>
+<g >
+<title>Johannes Maria Frank (15 samples, 0.01%)</title><rect x="547.2" y="53" width="0.1" height="15.0" fill="rgb(208,118,12)" rx="2" ry="2" />
+<text  x="550.18" y="63.5" ></text>
+</g>
+<g >
+<title>threeml (520 samples, 0.34%)</title><rect x="1039.2" y="37" width="4.0" height="15.0" fill="rgb(215,101,25)" rx="2" ry="2" />
+<text  x="1042.17" y="47.5" ></text>
+</g>
+<g >
+<title>Olivier Grisel (381 samples, 0.25%)</title><rect x="793.1" y="53" width="3.0" height="15.0" fill="rgb(241,69,2)" rx="2" ry="2" />
+<text  x="796.10" y="63.5" ></text>
+</g>
+<g >
+<title>Dan F-M (1,307 samples, 0.86%)</title><rect x="188.0" y="53" width="10.2" height="15.0" fill="rgb(243,7,27)" rx="2" ry="2" />
+<text  x="190.99" y="63.5" ></text>
+</g>
+<g >
+<title>bleach (163 samples, 0.11%)</title><rect x="427.7" y="37" width="1.3" height="15.0" fill="rgb(226,121,8)" rx="2" ry="2" />
+<text  x="430.73" y="47.5" ></text>
+</g>
+<g >
+<title>Ian Harry (650 samples, 0.43%)</title><rect x="406.3" y="53" width="5.1" height="15.0" fill="rgb(252,84,52)" rx="2" ry="2" />
+<text  x="409.30" y="63.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (507 samples, 0.34%)</title><rect x="1130.2" y="37" width="3.9" height="15.0" fill="rgb(207,160,44)" rx="2" ry="2" />
+<text  x="1133.19" y="47.5" ></text>
+</g>
+<g >
+<title>Andy Grove (240 samples, 0.16%)</title><rect x="73.3" y="53" width="1.9" height="15.0" fill="rgb(229,217,42)" rx="2" ry="2" />
+<text  x="76.28" y="63.5" ></text>
+</g>
+<g >
+<title>pyarrow (135 samples, 0.09%)</title><rect x="746.5" y="37" width="1.1" height="15.0" fill="rgb(227,37,3)" rx="2" ry="2" />
+<text  x="749.53" y="47.5" ></text>
+</g>
+<g >
+<title>pyarrow (176 samples, 0.12%)</title><rect x="828.3" y="37" width="1.4" height="15.0" fill="rgb(249,108,49)" rx="2" ry="2" />
+<text  x="831.31" y="47.5" ></text>
+</g>
+<g >
+<title>threeml (186 samples, 0.12%)</title><rect x="1128.1" y="37" width="1.4" height="15.0" fill="rgb(211,160,33)" rx="2" ry="2" />
+<text  x="1131.08" y="47.5" ></text>
+</g>
+<g >
+<title>pint (249 samples, 0.16%)</title><rect x="398.6" y="37" width="1.9" height="15.0" fill="rgb(250,10,31)" rx="2" ry="2" />
+<text  x="401.60" y="47.5" ></text>
+</g>
+<g >
+<title>conda-content-trust (37 samples, 0.02%)</title><rect x="872.2" y="37" width="0.3" height="15.0" fill="rgb(226,205,15)" rx="2" ry="2" />
+<text  x="875.22" y="47.5" ></text>
+</g>
+<g >
+<title>Robert McLeod (141 samples, 0.09%)</title><rect x="845.5" y="53" width="1.1" height="15.0" fill="rgb(251,145,20)" rx="2" ry="2" />
+<text  x="848.53" y="63.5" ></text>
+</g>
+<g >
+<title>tinycss2 (128 samples, 0.08%)</title><rect x="385.5" y="37" width="1.0" height="15.0" fill="rgb(219,63,27)" rx="2" ry="2" />
+<text  x="388.50" y="47.5" ></text>
+</g>
+<g >
+<title>astropy-healpix (62 samples, 0.04%)</title><rect x="156.0" y="37" width="0.5" height="15.0" fill="rgb(236,73,0)" rx="2" ry="2" />
+<text  x="159.02" y="47.5" ></text>
+</g>
+<g >
+<title>Matthias Bussonnier (68 samples, 0.04%)</title><rect x="742.2" y="53" width="0.6" height="15.0" fill="rgb(247,223,14)" rx="2" ry="2" />
+<text  x="745.24" y="63.5" ></text>
+</g>
+<g >
+<title>kiwisolver (14 samples, 0.01%)</title><rect x="623.5" y="37" width="0.1" height="15.0" fill="rgb(206,149,26)" rx="2" ry="2" />
+<text  x="626.45" y="47.5" ></text>
+</g>
+<g >
+<title>pyarrow (137 samples, 0.09%)</title><rect x="720.5" y="37" width="1.1" height="15.0" fill="rgb(254,223,14)" rx="2" ry="2" />
+<text  x="723.54" y="47.5" ></text>
+</g>
+<g >
+<title>extinction (39 samples, 0.03%)</title><rect x="687.0" y="37" width="0.3" height="15.0" fill="rgb(231,50,48)" rx="2" ry="2" />
+<text  x="690.02" y="47.5" ></text>
+</g>
+<g >
+<title>brotli (190 samples, 0.13%)</title><rect x="988.5" y="37" width="1.5" height="15.0" fill="rgb(254,152,2)" rx="2" ry="2" />
+<text  x="991.54" y="47.5" ></text>
+</g>
+<g >
+<title>Thomas A Caswell (81 samples, 0.05%)</title><rect x="926.5" y="53" width="0.6" height="15.0" fill="rgb(242,201,34)" rx="2" ry="2" />
+<text  x="929.46" y="63.5" ></text>
+</g>
+<g >
+<title>Michael Sarahan (46 samples, 0.03%)</title><rect x="747.6" y="53" width="0.3" height="15.0" fill="rgb(254,86,4)" rx="2" ry="2" />
+<text  x="750.58" y="63.5" ></text>
+</g>
+<g >
+<title>jsonpatch (30 samples, 0.02%)</title><rect x="63.6" y="37" width="0.2" height="15.0" fill="rgb(246,23,48)" rx="2" ry="2" />
+<text  x="66.57" y="47.5" ></text>
+</g>
+<g >
+<title>pyjwt (46 samples, 0.03%)</title><rect x="1142.4" y="37" width="0.3" height="15.0" fill="rgb(250,127,44)" rx="2" ry="2" />
+<text  x="1145.37" y="47.5" ></text>
+</g>
+<g >
+<title>Eugene Kliuchnikov (229 samples, 0.15%)</title><rect x="294.2" y="53" width="1.8" height="15.0" fill="rgb(215,87,41)" rx="2" ry="2" />
+<text  x="297.20" y="63.5" ></text>
+</g>
+<g >
+<title>platformdirs (42 samples, 0.03%)</title><rect x="882.8" y="37" width="0.4" height="15.0" fill="rgb(206,203,9)" rx="2" ry="2" />
+<text  x="885.83" y="47.5" ></text>
+</g>
+<g >
+<title>fermipy (80 samples, 0.05%)</title><rect x="393.4" y="37" width="0.7" height="15.0" fill="rgb(243,88,35)" rx="2" ry="2" />
+<text  x="396.44" y="47.5" ></text>
+</g>
+<g >
+<title>celerite (111 samples, 0.07%)</title><rect x="286.1" y="37" width="0.9" height="15.0" fill="rgb(219,106,3)" rx="2" ry="2" />
+<text  x="289.14" y="47.5" ></text>
+</g>
+<g >
+<title>boltons (1,104 samples, 0.73%)</title><rect x="708.3" y="37" width="8.7" height="15.0" fill="rgb(217,59,0)" rx="2" ry="2" />
+<text  x="711.34" y="47.5" ></text>
+</g>
+<g >
+<title>Brigitta Sipocz (70 samples, 0.05%)</title><rect x="146.2" y="53" width="0.5" height="15.0" fill="rgb(231,199,33)" rx="2" ry="2" />
+<text  x="149.18" y="63.5" ></text>
+</g>
+<g >
+<title>secretstorage (292 samples, 0.19%)</title><rect x="271.2" y="37" width="2.3" height="15.0" fill="rgb(242,79,40)" rx="2" ry="2" />
+<text  x="274.23" y="47.5" ></text>
+</g>
+<g >
+<title>astromodels (177 samples, 0.12%)</title><rect x="417.9" y="37" width="1.4" height="15.0" fill="rgb(205,93,36)" rx="2" ry="2" />
+<text  x="420.94" y="47.5" ></text>
+</g>
+<g >
+<title>threeml (733 samples, 0.48%)</title><rect x="419.3" y="37" width="5.7" height="15.0" fill="rgb(211,37,36)" rx="2" ry="2" />
+<text  x="422.32" y="47.5" ></text>
+</g>
+<g >
+<title>defusedxml (171 samples, 0.11%)</title><rect x="154.7" y="37" width="1.3" height="15.0" fill="rgb(238,40,14)" rx="2" ry="2" />
+<text  x="157.69" y="47.5" ></text>
+</g>
+<g >
+<title>pydantic (192 samples, 0.13%)</title><rect x="267.5" y="37" width="1.5" height="15.0" fill="rgb(227,105,23)" rx="2" ry="2" />
+<text  x="270.49" y="47.5" ></text>
+</g>
+<g >
+<title>pipdeptree (46 samples, 0.03%)</title><rect x="946.1" y="37" width="0.4" height="15.0" fill="rgb(232,175,49)" rx="2" ry="2" />
+<text  x="949.12" y="47.5" ></text>
+</g>
+<g >
+<title>jupyter-client (68 samples, 0.04%)</title><rect x="145.6" y="37" width="0.5" height="15.0" fill="rgb(238,202,25)" rx="2" ry="2" />
+<text  x="148.62" y="47.5" ></text>
+</g>
+<g >
+<title>decorator (255 samples, 0.17%)</title><rect x="748.9" y="37" width="2.0" height="15.0" fill="rgb(221,111,21)" rx="2" ry="2" />
+<text  x="751.91" y="47.5" ></text>
+</g>
+<g >
+<title>Raúl Cumplido (176 samples, 0.12%)</title><rect x="828.3" y="53" width="1.4" height="15.0" fill="rgb(207,210,45)" rx="2" ry="2" />
+<text  x="831.31" y="63.5" ></text>
+</g>
+<g >
+<title>importlib-resources (445 samples, 0.29%)</title><rect x="467.7" y="37" width="3.5" height="15.0" fill="rgb(244,225,22)" rx="2" ry="2" />
+<text  x="470.70" y="47.5" ></text>
+</g>
+<g >
+<title>asttokens (63 samples, 0.04%)</title><rect x="270.7" y="37" width="0.5" height="15.0" fill="rgb(208,186,0)" rx="2" ry="2" />
+<text  x="273.72" y="47.5" ></text>
+</g>
+<g >
+<title>astropy-healpix (57 samples, 0.04%)</title><rect x="694.7" y="37" width="0.5" height="15.0" fill="rgb(205,142,39)" rx="2" ry="2" />
+<text  x="697.75" y="47.5" ></text>
+</g>
+<g >
+<title>pycparser (280 samples, 0.19%)</title><rect x="283.8" y="37" width="2.2" height="15.0" fill="rgb(248,134,45)" rx="2" ry="2" />
+<text  x="286.84" y="47.5" ></text>
+</g>
+<g >
+<title>jupyter-core (16 samples, 0.01%)</title><rect x="645.8" y="37" width="0.2" height="15.0" fill="rgb(245,41,48)" rx="2" ry="2" />
+<text  x="648.83" y="47.5" ></text>
+</g>
+<g >
+<title>Tom Parker-Shemilt (86 samples, 0.06%)</title><rect x="936.0" y="53" width="0.6" height="15.0" fill="rgb(220,12,41)" rx="2" ry="2" />
+<text  x="938.97" y="63.5" ></text>
+</g>
+<g >
+<title>joblib (62 samples, 0.04%)</title><rect x="325.0" y="37" width="0.5" height="15.0" fill="rgb(239,116,54)" rx="2" ry="2" />
+<text  x="327.99" y="47.5" ></text>
+</g>
+<g >
+<title>pycosat (155 samples, 0.10%)</title><rect x="413.2" y="37" width="1.2" height="15.0" fill="rgb(232,229,19)" rx="2" ry="2" />
+<text  x="416.22" y="47.5" ></text>
+</g>
+<g >
+<title>Ronny Pfannschmidt (74 samples, 0.05%)</title><rect x="846.6" y="53" width="0.6" height="15.0" fill="rgb(239,128,27)" rx="2" ry="2" />
+<text  x="849.63" y="63.5" ></text>
+</g>
+<g >
+<title>cached-property (26 samples, 0.02%)</title><rect x="198.4" y="37" width="0.2" height="15.0" fill="rgb(230,177,13)" rx="2" ry="2" />
+<text  x="201.40" y="47.5" ></text>
+</g>
+<g >
+<title>mdurl (26 samples, 0.02%)</title><rect x="919.6" y="37" width="0.2" height="15.0" fill="rgb(237,222,48)" rx="2" ry="2" />
+<text  x="922.61" y="47.5" ></text>
+</g>
+<g >
+<title>Ari Hartikainen (227 samples, 0.15%)</title><rect x="103.5" y="53" width="1.8" height="15.0" fill="rgb(247,29,11)" rx="2" ry="2" />
+<text  x="106.52" y="63.5" ></text>
+</g>
+<g >
+<title>Lucie Anglade (17 samples, 0.01%)</title><rect x="708.2" y="53" width="0.1" height="15.0" fill="rgb(253,44,24)" rx="2" ry="2" />
+<text  x="711.18" y="63.5" ></text>
+</g>
+<g >
+<title>Daniel Greenfeld (47 samples, 0.03%)</title><rect x="198.6" y="53" width="0.4" height="15.0" fill="rgb(227,74,6)" rx="2" ry="2" />
+<text  x="201.60" y="63.5" ></text>
+</g>
+<g >
+<title>Kai Mühlbauer (64 samples, 0.04%)</title><rect x="623.6" y="53" width="0.5" height="15.0" fill="rgb(207,28,0)" rx="2" ry="2" />
+<text  x="626.56" y="63.5" ></text>
+</g>
+<g >
+<title>Eric Jolibois (96 samples, 0.06%)</title><rect x="290.7" y="53" width="0.7" height="15.0" fill="rgb(252,154,51)" rx="2" ry="2" />
+<text  x="293.68" y="63.5" ></text>
+</g>
+<g >
+<title>dynesty (116 samples, 0.08%)</title><rect x="603.1" y="37" width="0.9" height="15.0" fill="rgb(252,211,41)" rx="2" ry="2" />
+<text  x="606.11" y="47.5" ></text>
+</g>
+<g >
+<title>Leonardo Uieda (160 samples, 0.11%)</title><rect x="704.6" y="53" width="1.2" height="15.0" fill="rgb(227,186,11)" rx="2" ry="2" />
+<text  x="707.57" y="63.5" ></text>
+</g>
+<g >
+<title>arviz (58 samples, 0.04%)</title><rect x="159.9" y="37" width="0.4" height="15.0" fill="rgb(254,32,22)" rx="2" ry="2" />
+<text  x="162.87" y="47.5" ></text>
+</g>
+<g >
+<title>astromodels (241 samples, 0.16%)</title><rect x="1037.3" y="37" width="1.9" height="15.0" fill="rgb(234,77,28)" rx="2" ry="2" />
+<text  x="1040.29" y="47.5" ></text>
+</g>
+<g >
+<title>Joris Van den Bossche (380 samples, 0.25%)</title><rect x="599.7" y="53" width="3.0" height="15.0" fill="rgb(221,88,25)" rx="2" ry="2" />
+<text  x="602.70" y="63.5" ></text>
+</g>
+<g >
+<title>packaging (119 samples, 0.08%)</title><rect x="274.1" y="37" width="0.9" height="15.0" fill="rgb(210,64,3)" rx="2" ry="2" />
+<text  x="277.12" y="47.5" ></text>
+</g>
+<g >
+<title>line-profiler (60 samples, 0.04%)</title><rect x="845.1" y="37" width="0.4" height="15.0" fill="rgb(233,68,3)" rx="2" ry="2" />
+<text  x="848.06" y="47.5" ></text>
+</g>
+<g >
+<title>tomli (237 samples, 0.16%)</title><rect x="919.8" y="37" width="1.9" height="15.0" fill="rgb(251,164,28)" rx="2" ry="2" />
+<text  x="922.81" y="47.5" ></text>
+</g>
+<g >
+<title>Jose Diaz-Gonzalez (57 samples, 0.04%)</title><rect x="602.7" y="53" width="0.4" height="15.0" fill="rgb(210,128,29)" rx="2" ry="2" />
+<text  x="605.66" y="63.5" ></text>
+</g>
+<g >
+<title>Chris Sewell (207 samples, 0.14%)</title><rect x="153.1" y="53" width="1.6" height="15.0" fill="rgb(245,76,36)" rx="2" ry="2" />
+<text  x="156.07" y="63.5" ></text>
+</g>
+<g >
+<title>Matthew Brennan Jones (581 samples, 0.38%)</title><rect x="721.6" y="53" width="4.5" height="15.0" fill="rgb(235,147,15)" rx="2" ry="2" />
+<text  x="724.61" y="63.5" ></text>
+</g>
+<g >
+<title>Alexander Shorin (30 samples, 0.02%)</title><rect x="63.6" y="53" width="0.2" height="15.0" fill="rgb(230,161,13)" rx="2" ry="2" />
+<text  x="66.57" y="63.5" ></text>
+</g>
+<g >
+<title>prompt-toolkit (2,225 samples, 1.47%)</title><rect x="580.8" y="37" width="17.4" height="15.0" fill="rgb(222,78,28)" rx="2" ry="2" />
+<text  x="583.83" y="47.5" ></text>
+</g>
+<g >
+<title>mamba (104 samples, 0.07%)</title><rect x="86.7" y="37" width="0.8" height="15.0" fill="rgb(245,204,18)" rx="2" ry="2" />
+<text  x="89.73" y="47.5" ></text>
+</g>
+<g >
+<title>colorama (15 samples, 0.01%)</title><rect x="781.6" y="37" width="0.1" height="15.0" fill="rgb(223,59,5)" rx="2" ry="2" />
+<text  x="784.60" y="47.5" ></text>
+</g>
+<g >
+<title>idna (24 samples, 0.02%)</title><rect x="562.3" y="37" width="0.2" height="15.0" fill="rgb(247,90,18)" rx="2" ry="2" />
+<text  x="565.27" y="47.5" ></text>
+</g>
+<g >
+<title>line-profiler (30 samples, 0.02%)</title><rect x="561.3" y="37" width="0.2" height="15.0" fill="rgb(236,41,51)" rx="2" ry="2" />
+<text  x="564.28" y="47.5" ></text>
+</g>
+<g >
+<title>Florian Rathgeber (252 samples, 0.17%)</title><rect x="303.8" y="53" width="2.0" height="15.0" fill="rgb(235,154,11)" rx="2" ry="2" />
+<text  x="306.80" y="63.5" ></text>
+</g>
+<g >
+<title>corner (24 samples, 0.02%)</title><rect x="198.2" y="37" width="0.2" height="15.0" fill="rgb(235,7,11)" rx="2" ry="2" />
+<text  x="201.19" y="47.5" ></text>
+</g>
+<g >
+<title>dependabot-preview[bot] (75 samples, 0.05%)</title><rect x="1010.5" y="53" width="0.6" height="15.0" fill="rgb(228,181,17)" rx="2" ry="2" />
+<text  x="1013.52" y="63.5" ></text>
+</g>
+<g >
+<title>Nathaniel J. Smith (448 samples, 0.30%)</title><rect x="781.6" y="53" width="3.5" height="15.0" fill="rgb(253,145,39)" rx="2" ry="2" />
+<text  x="784.60" y="63.5" ></text>
+</g>
+<g >
+<title>Thomas Robitaille (485 samples, 0.32%)</title><rect x="932.2" y="53" width="3.8" height="15.0" fill="rgb(243,221,36)" rx="2" ry="2" />
+<text  x="935.18" y="63.5" ></text>
+</g>
+<g >
+<title>Ahmed TAHRI (89 samples, 0.06%)</title><rect x="52.7" y="53" width="0.7" height="15.0" fill="rgb(252,139,18)" rx="2" ry="2" />
+<text  x="55.72" y="63.5" ></text>
+</g>
+<g >
+<title>Adam Mercer (4,676 samples, 3.09%)</title><rect x="11.5" y="53" width="36.5" height="15.0" fill="rgb(219,61,8)" rx="2" ry="2" />
+<text  x="14.47" y="63.5" >Ada..</text>
+</g>
+<g >
+<title>Osvaldo Martin (197 samples, 0.13%)</title><rect x="802.5" y="53" width="1.5" height="15.0" fill="rgb(250,117,51)" rx="2" ry="2" />
+<text  x="805.51" y="63.5" ></text>
+</g>
+<g >
+<title>xarray (274 samples, 0.18%)</title><rect x="744.4" y="37" width="2.1" height="15.0" fill="rgb(228,56,26)" rx="2" ry="2" />
+<text  x="747.39" y="47.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (2,218 samples, 1.47%)</title><rect x="624.1" y="37" width="17.3" height="15.0" fill="rgb(215,214,18)" rx="2" ry="2" />
+<text  x="627.06" y="47.5" ></text>
+</g>
+<g >
+<title>brotli (229 samples, 0.15%)</title><rect x="294.2" y="37" width="1.8" height="15.0" fill="rgb(243,148,27)" rx="2" ry="2" />
+<text  x="297.20" y="47.5" ></text>
+</g>
+<g >
+<title>patsy (433 samples, 0.29%)</title><rect x="781.7" y="37" width="3.4" height="15.0" fill="rgb(213,208,26)" rx="2" ry="2" />
+<text  x="784.72" y="47.5" ></text>
+</g>
+<g >
+<title>parso (932 samples, 0.62%)</title><rect x="244.4" y="37" width="7.3" height="15.0" fill="rgb(248,139,23)" rx="2" ry="2" />
+<text  x="247.41" y="47.5" ></text>
+</g>
+<g >
+<title>arviz (28 samples, 0.02%)</title><rect x="52.5" y="37" width="0.2" height="15.0" fill="rgb(253,155,4)" rx="2" ry="2" />
+<text  x="55.50" y="47.5" ></text>
+</g>
+<g >
+<title>fastjsonschema (22 samples, 0.01%)</title><rect x="64.5" y="37" width="0.2" height="15.0" fill="rgb(221,95,26)" rx="2" ry="2" />
+<text  x="67.53" y="47.5" ></text>
+</g>
+<g >
+<title>Santiago Soler (19 samples, 0.01%)</title><rect x="857.1" y="53" width="0.2" height="15.0" fill="rgb(248,50,48)" rx="2" ry="2" />
+<text  x="860.14" y="63.5" ></text>
+</g>
+<g >
+<title>Olivier Delalleau (64 samples, 0.04%)</title><rect x="792.6" y="53" width="0.5" height="15.0" fill="rgb(206,215,30)" rx="2" ry="2" />
+<text  x="795.60" y="63.5" ></text>
+</g>
+<g >
+<title>Dmitry S (63 samples, 0.04%)</title><rect x="270.7" y="53" width="0.5" height="15.0" fill="rgb(210,44,40)" rx="2" ry="2" />
+<text  x="273.72" y="63.5" ></text>
+</g>
+<g >
+<title>Elliott Sales de Andrade (16 samples, 0.01%)</title><rect x="286.0" y="53" width="0.1" height="15.0" fill="rgb(232,107,54)" rx="2" ry="2" />
+<text  x="289.02" y="63.5" ></text>
+</g>
+<g >
+<title>tables (450 samples, 0.30%)</title><rect x="414.4" y="37" width="3.5" height="15.0" fill="rgb(205,36,29)" rx="2" ry="2" />
+<text  x="417.43" y="47.5" ></text>
+</g>
+<g >
+<title>xarray-einstats (36 samples, 0.02%)</title><rect x="800.3" y="37" width="0.3" height="15.0" fill="rgb(245,159,26)" rx="2" ry="2" />
+<text  x="803.33" y="47.5" ></text>
+</g>
+<g >
+<title>grburgess (1,590 samples, 1.05%)</title><rect x="1043.2" y="53" width="12.4" height="15.0" fill="rgb(236,152,34)" rx="2" ry="2" />
+<text  x="1046.22" y="63.5" ></text>
+</g>
+<g >
+<title>schwimmbad (19 samples, 0.01%)</title><rect x="78.0" y="37" width="0.2" height="15.0" fill="rgb(228,179,6)" rx="2" ry="2" />
+<text  x="81.02" y="47.5" ></text>
+</g>
+<g >
+<title>Marcelo Trylesinski (85 samples, 0.06%)</title><rect x="717.5" y="53" width="0.6" height="15.0" fill="rgb(212,158,10)" rx="2" ry="2" />
+<text  x="720.47" y="63.5" ></text>
+</g>
+<g >
+<title>matplotlib-inline (16 samples, 0.01%)</title><rect x="1127.4" y="37" width="0.1" height="15.0" fill="rgb(207,228,52)" rx="2" ry="2" />
+<text  x="1130.35" y="47.5" ></text>
+</g>
+<g >
+<title>lscsoft-glue (115 samples, 0.08%)</title><rect x="695.3" y="37" width="0.9" height="15.0" fill="rgb(225,159,6)" rx="2" ry="2" />
+<text  x="698.35" y="47.5" ></text>
+</g>
+<g >
+<title>kipp (5,638 samples, 3.73%)</title><rect x="1082.0" y="53" width="44.0" height="15.0" fill="rgb(246,112,0)" rx="2" ry="2" />
+<text  x="1084.97" y="63.5" >kipp</text>
+</g>
+<g >
+<title>python-ligo-lw (678 samples, 0.45%)</title><rect x="147.3" y="37" width="5.3" height="15.0" fill="rgb(219,128,30)" rx="2" ry="2" />
+<text  x="150.33" y="47.5" ></text>
+</g>
+<g >
+<title>conda-tree (17 samples, 0.01%)</title><rect x="1164.1" y="37" width="0.1" height="15.0" fill="rgb(222,24,36)" rx="2" ry="2" />
+<text  x="1167.10" y="47.5" ></text>
+</g>
+<g >
+<title>tinycss2 (114 samples, 0.08%)</title><rect x="881.7" y="37" width="0.9" height="15.0" fill="rgb(210,1,9)" rx="2" ry="2" />
+<text  x="884.74" y="47.5" ></text>
+</g>
+<g >
+<title>numdifftools (387 samples, 0.26%)</title><rect x="820.5" y="37" width="3.0" height="15.0" fill="rgb(236,134,1)" rx="2" ry="2" />
+<text  x="823.51" y="47.5" ></text>
+</g>
+<g >
+<title>Wes McKinney (1,320 samples, 0.87%)</title><rect x="952.1" y="53" width="10.3" height="15.0" fill="rgb(238,199,32)" rx="2" ry="2" />
+<text  x="955.12" y="63.5" ></text>
+</g>
+<g >
+<title>Tom-Olav Bøyum (173 samples, 0.11%)</title><rect x="936.6" y="53" width="1.4" height="15.0" fill="rgb(225,160,45)" rx="2" ry="2" />
+<text  x="939.64" y="63.5" ></text>
+</g>
+<g >
+<title>Leo Singer (1,259 samples, 0.83%)</title><rect x="694.7" y="53" width="9.9" height="15.0" fill="rgb(226,113,9)" rx="2" ry="2" />
+<text  x="697.75" y="63.5" ></text>
+</g>
+<g >
+<title>platformdirs (59 samples, 0.04%)</title><rect x="134.9" y="37" width="0.4" height="15.0" fill="rgb(239,131,5)" rx="2" ry="2" />
+<text  x="137.87" y="47.5" ></text>
+</g>
+<g >
+<title>brotli (63 samples, 0.04%)</title><rect x="1036.8" y="37" width="0.5" height="15.0" fill="rgb(249,186,40)" rx="2" ry="2" />
+<text  x="1039.76" y="47.5" ></text>
+</g>
+<g >
+<title>Hynek Schlawack (150 samples, 0.10%)</title><rect x="405.1" y="53" width="1.2" height="15.0" fill="rgb(206,41,50)" rx="2" ry="2" />
+<text  x="408.13" y="63.5" ></text>
+</g>
+<g >
+<title>pyarrow (221 samples, 0.15%)</title><rect x="127.7" y="37" width="1.7" height="15.0" fill="rgb(246,118,38)" rx="2" ry="2" />
+<text  x="130.70" y="47.5" ></text>
+</g>
+<g >
+<title>jsonpatch (177 samples, 0.12%)</title><rect x="883.2" y="37" width="1.3" height="15.0" fill="rgb(205,30,38)" rx="2" ry="2" />
+<text  x="886.16" y="47.5" ></text>
+</g>
+<g >
+<title>conda-content-trust (17 samples, 0.01%)</title><rect x="1010.1" y="37" width="0.1" height="15.0" fill="rgb(244,0,13)" rx="2" ry="2" />
+<text  x="1013.06" y="47.5" ></text>
+</g>
+<g >
+<title>Matthieu Darbois (24 samples, 0.02%)</title><rect x="742.8" y="53" width="0.2" height="15.0" fill="rgb(236,105,45)" rx="2" ry="2" />
+<text  x="745.77" y="63.5" ></text>
+</g>
+<g >
+<title>jsonschema-specifications (30 samples, 0.02%)</title><rect x="620.0" y="37" width="0.2" height="15.0" fill="rgb(242,30,7)" rx="2" ry="2" />
+<text  x="622.97" y="47.5" ></text>
+</g>
+<g >
+<title>fonttools (401 samples, 0.27%)</title><rect x="1077.4" y="37" width="3.1" height="15.0" fill="rgb(205,52,23)" rx="2" ry="2" />
+<text  x="1080.35" y="47.5" ></text>
+</g>
+<g >
+<title>setuptools (4,829 samples, 3.19%)</title><rect x="491.6" y="37" width="37.6" height="15.0" fill="rgb(210,51,15)" rx="2" ry="2" />
+<text  x="494.57" y="47.5" >set..</text>
+</g>
+<g >
+<title>Andy Casey (74 samples, 0.05%)</title><rect x="72.7" y="53" width="0.6" height="15.0" fill="rgb(211,205,5)" rx="2" ry="2" />
+<text  x="75.70" y="63.5" ></text>
+</g>
+<g >
+<title>xarray-einstats (40 samples, 0.03%)</title><rect x="801.3" y="37" width="0.3" height="15.0" fill="rgb(206,209,41)" rx="2" ry="2" />
+<text  x="804.33" y="47.5" ></text>
+</g>
+<g >
+<title>html5lib (315 samples, 0.21%)</title><rect x="425.3" y="37" width="2.4" height="15.0" fill="rgb(224,78,45)" rx="2" ry="2" />
+<text  x="428.27" y="47.5" ></text>
+</g>
+<g >
+<title>tomMoral (22 samples, 0.01%)</title><rect x="1184.4" y="53" width="0.1" height="15.0" fill="rgb(221,67,9)" rx="2" ry="2" />
+<text  x="1187.37" y="63.5" ></text>
+</g>
+<g >
+<title>Thomas Moreau (41 samples, 0.03%)</title><rect x="931.9" y="53" width="0.3" height="15.0" fill="rgb(215,69,42)" rx="2" ry="2" />
+<text  x="934.86" y="63.5" ></text>
+</g>
+<g >
+<title>jedi (1,522 samples, 1.01%)</title><rect x="252.1" y="37" width="11.9" height="15.0" fill="rgb(221,94,48)" rx="2" ry="2" />
+<text  x="255.09" y="47.5" ></text>
+</g>
+<g >
+<title>kiwisolver (108 samples, 0.07%)</title><rect x="743.0" y="37" width="0.8" height="15.0" fill="rgb(244,62,40)" rx="2" ry="2" />
+<text  x="745.95" y="47.5" ></text>
+</g>
+<g >
+<title>pbrod (244 samples, 0.16%)</title><rect x="1139.2" y="53" width="1.9" height="15.0" fill="rgb(237,184,3)" rx="2" ry="2" />
+<text  x="1142.17" y="63.5" ></text>
+</g>
+<g >
+<title>threeml (362 samples, 0.24%)</title><rect x="329.3" y="37" width="2.8" height="15.0" fill="rgb(238,96,35)" rx="2" ry="2" />
+<text  x="332.32" y="47.5" ></text>
+</g>
+<g >
+<title>giacomov (761 samples, 0.50%)</title><rect x="1037.3" y="53" width="5.9" height="15.0" fill="rgb(223,135,11)" rx="2" ry="2" />
+<text  x="1040.29" y="63.5" ></text>
+</g>
+<g >
+<title>jupyter-client (44 samples, 0.03%)</title><rect x="742.2" y="37" width="0.4" height="15.0" fill="rgb(226,162,0)" rx="2" ry="2" />
+<text  x="745.24" y="47.5" ></text>
+</g>
+<g >
+<title>Agustina Arroyuelo (28 samples, 0.02%)</title><rect x="52.5" y="53" width="0.2" height="15.0" fill="rgb(240,166,35)" rx="2" ry="2" />
+<text  x="55.50" y="63.5" ></text>
+</g>
+<g >
+<title>Neal Richardson (446 samples, 0.29%)</title><rect x="785.1" y="53" width="3.5" height="15.0" fill="rgb(243,149,35)" rx="2" ry="2" />
+<text  x="788.10" y="63.5" ></text>
+</g>
+<g >
+<title>platformdirs (18 samples, 0.01%)</title><rect x="1142.1" y="37" width="0.1" height="15.0" fill="rgb(210,225,15)" rx="2" ry="2" />
+<text  x="1145.08" y="47.5" ></text>
+</g>
+<g >
+<title>Jean-Paul Calderone (873 samples, 0.58%)</title><rect x="533.3" y="53" width="6.9" height="15.0" fill="rgb(225,77,37)" rx="2" ry="2" />
+<text  x="536.35" y="63.5" ></text>
+</g>
+<g >
+<title>Brett Cannon (161 samples, 0.11%)</title><rect x="143.4" y="53" width="1.3" height="15.0" fill="rgb(205,122,12)" rx="2" ry="2" />
+<text  x="146.42" y="63.5" ></text>
+</g>
+<g >
+<title>numexpr (141 samples, 0.09%)</title><rect x="845.5" y="37" width="1.1" height="15.0" fill="rgb(239,64,23)" rx="2" ry="2" />
+<text  x="848.53" y="47.5" ></text>
+</g>
+<g >
+<title>platformdirs (16 samples, 0.01%)</title><rect x="1011.7" y="37" width="0.2" height="15.0" fill="rgb(254,207,2)" rx="2" ry="2" />
+<text  x="1014.73" y="47.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (2,164 samples, 1.43%)</title><rect x="1018.5" y="37" width="16.9" height="15.0" fill="rgb(244,104,1)" rx="2" ry="2" />
+<text  x="1021.47" y="47.5" ></text>
+</g>
+<g >
+<title>Adam Ginsburg (keflavich) (161 samples, 0.11%)</title><rect x="10.2" y="53" width="1.3" height="15.0" fill="rgb(207,62,27)" rx="2" ry="2" />
+<text  x="13.20" y="63.5" ></text>
+</g>
+<g >
+<title>pyzmq (992 samples, 0.66%)</title><rect x="773.9" y="37" width="7.7" height="15.0" fill="rgb(209,216,35)" rx="2" ry="2" />
+<text  x="776.86" y="47.5" ></text>
+</g>
+<g >
+<title>h5netcdf (16 samples, 0.01%)</title><rect x="706.4" y="37" width="0.1" height="15.0" fill="rgb(225,32,33)" rx="2" ry="2" />
+<text  x="709.41" y="47.5" ></text>
+</g>
+<g >
+<title>jupyter-client (230 samples, 0.15%)</title><rect x="757.5" y="37" width="1.8" height="15.0" fill="rgb(224,25,10)" rx="2" ry="2" />
+<text  x="760.48" y="47.5" ></text>
+</g>
+<g >
+<title>pint (179 samples, 0.12%)</title><rect x="643.8" y="37" width="1.4" height="15.0" fill="rgb(231,6,7)" rx="2" ry="2" />
+<text  x="646.80" y="47.5" ></text>
+</g>
+<g >
+<title>pydantic (75 samples, 0.05%)</title><rect x="1010.5" y="37" width="0.6" height="15.0" fill="rgb(244,191,50)" rx="2" ry="2" />
+<text  x="1013.52" y="47.5" ></text>
+</g>
+<g >
+<title>pluggy (14 samples, 0.01%)</title><rect x="919.0" y="37" width="0.1" height="15.0" fill="rgb(247,97,11)" rx="2" ry="2" />
+<text  x="922.00" y="47.5" ></text>
+</g>
+<g >
+<title>fonttools (2,686 samples, 1.78%)</title><rect x="106.7" y="37" width="20.9" height="15.0" fill="rgb(254,183,29)" rx="2" ry="2" />
+<text  x="109.69" y="47.5" ></text>
+</g>
+<g >
+<title>Travis CI (252 samples, 0.17%)</title><rect x="938.0" y="53" width="2.0" height="15.0" fill="rgb(245,146,53)" rx="2" ry="2" />
+<text  x="940.99" y="63.5" ></text>
+</g>
+<g >
+<title>Hernan (249 samples, 0.16%)</title><rect x="398.6" y="53" width="1.9" height="15.0" fill="rgb(236,16,1)" rx="2" ry="2" />
+<text  x="401.60" y="63.5" ></text>
+</g>
+<g >
+<title>Greg Ward (632 samples, 0.42%)</title><rect x="369.2" y="53" width="5.0" height="15.0" fill="rgb(219,41,1)" rx="2" ry="2" />
+<text  x="372.22" y="63.5" ></text>
+</g>
+<g >
+<title>Jonathan Hartley (79 samples, 0.05%)</title><rect x="579.1" y="53" width="0.6" height="15.0" fill="rgb(252,6,9)" rx="2" ry="2" />
+<text  x="582.13" y="63.5" ></text>
+</g>
+<g >
+<title>Giacomo Vianello (475 samples, 0.31%)</title><rect x="328.4" y="53" width="3.7" height="15.0" fill="rgb(233,30,25)" rx="2" ry="2" />
+<text  x="331.44" y="63.5" ></text>
+</g>
+<g >
+<title>pydantic (599 samples, 0.40%)</title><rect x="849.0" y="37" width="4.6" height="15.0" fill="rgb(247,189,45)" rx="2" ry="2" />
+<text  x="851.97" y="47.5" ></text>
+</g>
+<g >
+<title>James Gerity (23 samples, 0.02%)</title><rect x="425.1" y="53" width="0.2" height="15.0" fill="rgb(235,104,38)" rx="2" ry="2" />
+<text  x="428.10" y="63.5" ></text>
+</g>
+<g >
+<title>line-profiler (49 samples, 0.03%)</title><rect x="1076.7" y="37" width="0.4" height="15.0" fill="rgb(205,60,47)" rx="2" ry="2" />
+<text  x="1079.71" y="47.5" ></text>
+</g>
+<g >
+<title>Sergey Astanin (336 samples, 0.22%)</title><rect x="872.5" y="53" width="2.6" height="15.0" fill="rgb(221,25,8)" rx="2" ry="2" />
+<text  x="875.51" y="63.5" ></text>
+</g>
+<g >
+<title>arviz (111 samples, 0.07%)</title><rect x="801.6" y="37" width="0.9" height="15.0" fill="rgb(210,182,7)" rx="2" ry="2" />
+<text  x="804.64" y="47.5" ></text>
+</g>
+<g >
+<title>Hans Dembinski (728 samples, 0.48%)</title><rect x="386.5" y="53" width="5.7" height="15.0" fill="rgb(253,197,28)" rx="2" ry="2" />
+<text  x="389.50" y="63.5" ></text>
+</g>
+<g >
+<title>liyafan82 (150 samples, 0.10%)</title><rect x="1126.1" y="53" width="1.1" height="15.0" fill="rgb(206,137,20)" rx="2" ry="2" />
+<text  x="1129.06" y="63.5" ></text>
+</g>
+<g >
+<title>jquast (34 samples, 0.02%)</title><rect x="1077.1" y="53" width="0.3" height="15.0" fill="rgb(215,159,22)" rx="2" ry="2" />
+<text  x="1080.09" y="63.5" ></text>
+</g>
+<g >
+<title>jupyter-client (34 samples, 0.02%)</title><rect x="738.1" y="37" width="0.2" height="15.0" fill="rgb(241,182,27)" rx="2" ry="2" />
+<text  x="741.08" y="47.5" ></text>
+</g>
+<g >
+<title>Winant Pablo (58 samples, 0.04%)</title><rect x="979.9" y="53" width="0.4" height="15.0" fill="rgb(247,83,29)" rx="2" ry="2" />
+<text  x="982.85" y="63.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (1,668 samples, 1.10%)</title><rect x="1151.1" y="37" width="13.0" height="15.0" fill="rgb(208,49,12)" rx="2" ry="2" />
+<text  x="1154.08" y="47.5" ></text>
+</g>
+<g >
+<title>ipyparallel (173 samples, 0.11%)</title><rect x="936.6" y="37" width="1.4" height="15.0" fill="rgb(206,24,46)" rx="2" ry="2" />
+<text  x="939.64" y="47.5" ></text>
+</g>
+<g >
+<title>Mike Sarahan (97 samples, 0.06%)</title><rect x="751.1" y="53" width="0.7" height="15.0" fill="rgb(219,201,14)" rx="2" ry="2" />
+<text  x="754.07" y="63.5" ></text>
+</g>
+<g >
+<title>David Li (452 samples, 0.30%)</title><rect x="264.0" y="53" width="3.5" height="15.0" fill="rgb(226,224,30)" rx="2" ry="2" />
+<text  x="266.96" y="63.5" ></text>
+</g>
+<g >
+<title>André Roberge (31 samples, 0.02%)</title><rect x="72.5" y="53" width="0.2" height="15.0" fill="rgb(208,134,52)" rx="2" ry="2" />
+<text  x="75.46" y="63.5" ></text>
+</g>
+<g >
+<title>pre-commit-ci[bot] (237 samples, 0.16%)</title><rect x="1141.1" y="53" width="1.9" height="15.0" fill="rgb(212,226,43)" rx="2" ry="2" />
+<text  x="1144.13" y="63.5" ></text>
+</g>
+<g >
+<title>Ray Donnelly (14 samples, 0.01%)</title><rect x="828.2" y="53" width="0.1" height="15.0" fill="rgb(226,92,53)" rx="2" ry="2" />
+<text  x="831.21" y="63.5" ></text>
+</g>
+<g >
+<title>conda-package-handling (21 samples, 0.01%)</title><rect x="199.1" y="37" width="0.2" height="15.0" fill="rgb(212,66,38)" rx="2" ry="2" />
+<text  x="202.11" y="47.5" ></text>
+</g>
+<g >
+<title>regions (77 samples, 0.05%)</title><rect x="546.6" y="37" width="0.6" height="15.0" fill="rgb(218,129,28)" rx="2" ry="2" />
+<text  x="549.58" y="47.5" ></text>
+</g>
+<g >
+<title>nespinoza (78 samples, 0.05%)</title><rect x="1129.5" y="53" width="0.6" height="15.0" fill="rgb(215,172,40)" rx="2" ry="2" />
+<text  x="1132.53" y="63.5" ></text>
+</g>
+<g >
+<title>joblib (41 samples, 0.03%)</title><rect x="931.9" y="37" width="0.3" height="15.0" fill="rgb(243,149,46)" rx="2" ry="2" />
+<text  x="934.86" y="47.5" ></text>
+</g>
+<g >
+<title>Ian Thomas (237 samples, 0.16%)</title><rect x="411.4" y="53" width="1.8" height="15.0" fill="rgb(241,30,7)" rx="2" ry="2" />
+<text  x="414.37" y="63.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (2,979 samples, 1.97%)</title><rect x="653.5" y="37" width="23.2" height="15.0" fill="rgb(220,117,53)" rx="2" ry="2" />
+<text  x="656.50" y="47.5" >p..</text>
+</g>
+<g >
+<title>Jules Chéron (60 samples, 0.04%)</title><rect x="606.0" y="53" width="0.4" height="15.0" fill="rgb(215,114,32)" rx="2" ry="2" />
+<text  x="608.96" y="63.5" ></text>
+</g>
+<g >
+<title>Anowar Jaman Shajib (19 samples, 0.01%)</title><rect x="78.0" y="53" width="0.2" height="15.0" fill="rgb(214,81,27)" rx="2" ry="2" />
+<text  x="81.02" y="63.5" ></text>
+</g>
+<g >
+<title>importlib-metadata (45 samples, 0.03%)</title><rect x="105.9" y="37" width="0.3" height="15.0" fill="rgb(253,63,45)" rx="2" ry="2" />
+<text  x="108.89" y="47.5" ></text>
+</g>
+<g >
+<title>platformdirs (19 samples, 0.01%)</title><rect x="542.3" y="37" width="0.1" height="15.0" fill="rgb(248,189,48)" rx="2" ry="2" />
+<text  x="545.27" y="47.5" ></text>
+</g>
+<g >
+<title>rpds-py (79 samples, 0.05%)</title><rect x="622.5" y="37" width="0.6" height="15.0" fill="rgb(240,162,39)" rx="2" ry="2" />
+<text  x="625.48" y="47.5" ></text>
+</g>
+<g >
+<title>pyarrow (609 samples, 0.40%)</title><rect x="681.7" y="37" width="4.7" height="15.0" fill="rgb(221,114,24)" rx="2" ry="2" />
+<text  x="684.67" y="47.5" ></text>
+</g>
+<g >
+<title>pint (139 samples, 0.09%)</title><rect x="384.4" y="37" width="1.1" height="15.0" fill="rgb(218,113,1)" rx="2" ry="2" />
+<text  x="387.41" y="47.5" ></text>
+</g>
+<g >
+<title>pysocks (72 samples, 0.05%)</title><rect x="77.5" y="37" width="0.5" height="15.0" fill="rgb(226,196,51)" rx="2" ry="2" />
+<text  x="80.45" y="47.5" ></text>
+</g>
+<g >
+<title>dependabot[bot] (209 samples, 0.14%)</title><rect x="1011.1" y="53" width="1.6" height="15.0" fill="rgb(219,173,23)" rx="2" ry="2" />
+<text  x="1014.11" y="63.5" ></text>
+</g>
+<g >
+<title>pickleshare (24 samples, 0.02%)</title><rect x="931.2" y="37" width="0.1" height="15.0" fill="rgb(245,69,46)" rx="2" ry="2" />
+<text  x="934.15" y="47.5" ></text>
+</g>
+<g >
+<title>guillochon (1,417 samples, 0.94%)</title><rect x="1055.6" y="53" width="11.1" height="15.0" fill="rgb(222,15,35)" rx="2" ry="2" />
+<text  x="1058.63" y="63.5" ></text>
+</g>
+<g >
+<title>nvf (507 samples, 0.34%)</title><rect x="1130.2" y="53" width="3.9" height="15.0" fill="rgb(213,127,3)" rx="2" ry="2" />
+<text  x="1133.19" y="63.5" ></text>
+</g>
+<g >
+<title>arviz (49 samples, 0.03%)</title><rect x="847.2" y="37" width="0.4" height="15.0" fill="rgb(205,214,9)" rx="2" ry="2" />
+<text  x="850.20" y="47.5" ></text>
+</g>
+<g >
+<title>Gregory Petukhov (44 samples, 0.03%)</title><rect x="374.2" y="53" width="0.3" height="15.0" fill="rgb(209,50,2)" rx="2" ry="2" />
+<text  x="377.15" y="63.5" ></text>
+</g>
+<g >
+<title>iminuit (181 samples, 0.12%)</title><rect x="823.8" y="37" width="1.5" height="15.0" fill="rgb(228,170,15)" rx="2" ry="2" />
+<text  x="826.84" y="47.5" ></text>
+</g>
+<g >
+<title>Karl Wette (2,218 samples, 1.47%)</title><rect x="624.1" y="53" width="17.3" height="15.0" fill="rgb(236,155,20)" rx="2" ry="2" />
+<text  x="627.06" y="63.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (1,085 samples, 0.72%)</title><rect x="997.8" y="37" width="8.5" height="15.0" fill="rgb(220,163,14)" rx="2" ry="2" />
+<text  x="1000.80" y="47.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (488 samples, 0.32%)</title><rect x="1135.4" y="37" width="3.8" height="15.0" fill="rgb(229,21,37)" rx="2" ry="2" />
+<text  x="1138.36" y="47.5" ></text>
+</g>
+<g >
+<title>Bernd Machenschalk (644 samples, 0.43%)</title><rect x="129.5" y="53" width="5.0" height="15.0" fill="rgb(211,122,16)" rx="2" ry="2" />
+<text  x="132.51" y="63.5" ></text>
+</g>
+<g >
+<title>Dustin Ingram (49 samples, 0.03%)</title><rect x="283.3" y="53" width="0.4" height="15.0" fill="rgb(215,19,49)" rx="2" ry="2" />
+<text  x="286.34" y="63.5" ></text>
+</g>
+<g >
+<title>Alexandre Abadie (76 samples, 0.05%)</title><rect x="63.9" y="53" width="0.6" height="15.0" fill="rgb(206,97,39)" rx="2" ry="2" />
+<text  x="66.93" y="63.5" ></text>
+</g>
+<g >
+<title>omegaconf (78 samples, 0.05%)</title><rect x="429.7" y="37" width="0.6" height="15.0" fill="rgb(205,115,8)" rx="2" ry="2" />
+<text  x="432.74" y="47.5" ></text>
+</g>
+<g >
+<title>html5lib (40 samples, 0.03%)</title><rect x="823.5" y="37" width="0.3" height="15.0" fill="rgb(231,34,52)" rx="2" ry="2" />
+<text  x="826.53" y="47.5" ></text>
+</g>
+<g >
+<title>August Hörandl (13 samples, 0.01%)</title><rect x="105.8" y="53" width="0.1" height="15.0" fill="rgb(217,46,44)" rx="2" ry="2" />
+<text  x="108.79" y="63.5" ></text>
+</g>
+<g >
+<title>James Socol (163 samples, 0.11%)</title><rect x="427.7" y="53" width="1.3" height="15.0" fill="rgb(220,226,46)" rx="2" ry="2" />
+<text  x="430.73" y="63.5" ></text>
+</g>
+<g >
+<title>stack-data (159 samples, 0.11%)</title><rect x="62.3" y="37" width="1.2" height="15.0" fill="rgb(242,215,37)" rx="2" ry="2" />
+<text  x="65.30" y="47.5" ></text>
+</g>
+<g >
+<title>Sutou Kouhei (890 samples, 0.59%)</title><rect x="898.1" y="53" width="7.0" height="15.0" fill="rgb(239,195,50)" rx="2" ry="2" />
+<text  x="901.14" y="63.5" ></text>
+</g>
+<g >
+<title>Pedro Rodrigues (29 samples, 0.02%)</title><rect x="820.3" y="53" width="0.2" height="15.0" fill="rgb(217,125,27)" rx="2" ry="2" />
+<text  x="823.29" y="63.5" ></text>
+</g>
+<g >
+<title>Loïc Estève (210 samples, 0.14%)</title><rect x="706.5" y="53" width="1.7" height="15.0" fill="rgb(213,103,5)" rx="2" ry="2" />
+<text  x="709.54" y="63.5" ></text>
+</g>
+<g >
+<title>Paul Dyson (140 samples, 0.09%)</title><rect x="813.9" y="53" width="1.1" height="15.0" fill="rgb(215,124,13)" rx="2" ry="2" />
+<text  x="816.95" y="63.5" ></text>
+</g>
+<g >
+<title>jupyter-client (256 samples, 0.17%)</title><rect x="895.7" y="37" width="2.0" height="15.0" fill="rgb(207,86,13)" rx="2" ry="2" />
+<text  x="898.72" y="47.5" ></text>
+</g>
+<g >
+<title>Giampaolo Rodola (2,960 samples, 1.96%)</title><rect x="345.1" y="53" width="23.1" height="15.0" fill="rgb(206,11,1)" rx="2" ry="2" />
+<text  x="348.13" y="63.5" >G..</text>
+</g>
+<g >
+<title>Adrien DELSALLE (175 samples, 0.12%)</title><rect x="51.1" y="53" width="1.4" height="15.0" fill="rgb(224,181,20)" rx="2" ry="2" />
+<text  x="54.14" y="63.5" ></text>
+</g>
+<g >
+<title>pyopenssl (873 samples, 0.58%)</title><rect x="533.3" y="37" width="6.9" height="15.0" fill="rgb(234,96,0)" rx="2" ry="2" />
+<text  x="536.35" y="47.5" ></text>
+</g>
+<g >
+<title>wheel (32 samples, 0.02%)</title><rect x="1142.7" y="37" width="0.3" height="15.0" fill="rgb(235,199,50)" rx="2" ry="2" />
+<text  x="1145.73" y="47.5" ></text>
+</g>
+<g >
+<title>html5lib (71 samples, 0.05%)</title><rect x="927.1" y="37" width="0.6" height="15.0" fill="rgb(239,194,29)" rx="2" ry="2" />
+<text  x="930.10" y="47.5" ></text>
+</g>
+<g >
+<title>Geoffrey Sneddon (369 samples, 0.24%)</title><rect x="325.5" y="53" width="2.9" height="15.0" fill="rgb(228,125,19)" rx="2" ry="2" />
+<text  x="328.48" y="63.5" ></text>
+</g>
+<g >
+<title>xarray (149 samples, 0.10%)</title><rect x="158.7" y="37" width="1.2" height="15.0" fill="rgb(243,162,52)" rx="2" ry="2" />
+<text  x="161.71" y="47.5" ></text>
+</g>
+<g >
+<title>Alex Gaynor (224 samples, 0.15%)</title><rect x="54.9" y="53" width="1.8" height="15.0" fill="rgb(208,125,27)" rx="2" ry="2" />
+<text  x="57.94" y="63.5" ></text>
+</g>
+<g >
+<title>lscsoft-glue (1,124 samples, 0.74%)</title><rect x="1083.4" y="37" width="8.8" height="15.0" fill="rgb(229,146,15)" rx="2" ry="2" />
+<text  x="1086.44" y="47.5" ></text>
+</g>
+<g >
+<title>jupyter-client (59 samples, 0.04%)</title><rect x="1036.0" y="37" width="0.4" height="15.0" fill="rgb(236,149,38)" rx="2" ry="2" />
+<text  x="1038.95" y="47.5" ></text>
+</g>
+<g >
+<title>jupyterlab-widgets (608 samples, 0.40%)</title><rect x="909.9" y="37" width="4.7" height="15.0" fill="rgb(240,13,27)" rx="2" ry="2" />
+<text  x="912.88" y="47.5" ></text>
+</g>
+<g >
+<title>Jonathan Keane (139 samples, 0.09%)</title><rect x="579.7" y="53" width="1.1" height="15.0" fill="rgb(208,1,47)" rx="2" ry="2" />
+<text  x="582.74" y="63.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (871 samples, 0.58%)</title><rect x="991.0" y="37" width="6.8" height="15.0" fill="rgb(220,54,20)" rx="2" ry="2" />
+<text  x="994.01" y="47.5" ></text>
+</g>
+<g >
+<title>Sebastien Awwad (37 samples, 0.02%)</title><rect x="872.2" y="53" width="0.3" height="15.0" fill="rgb(236,194,35)" rx="2" ry="2" />
+<text  x="875.22" y="63.5" ></text>
+</g>
+<g >
+<title>Eric Snow (356 samples, 0.24%)</title><rect x="291.4" y="53" width="2.8" height="15.0" fill="rgb(227,38,51)" rx="2" ry="2" />
+<text  x="294.43" y="63.5" ></text>
+</g>
+<g >
+<title>html5lib (359 samples, 0.24%)</title><rect x="325.5" y="37" width="2.8" height="15.0" fill="rgb(240,207,54)" rx="2" ry="2" />
+<text  x="328.48" y="47.5" ></text>
+</g>
+<g >
+<title>pyarrow (182 samples, 0.12%)</title><rect x="598.3" y="37" width="1.4" height="15.0" fill="rgb(230,111,14)" rx="2" ry="2" />
+<text  x="601.28" y="47.5" ></text>
+</g>
+<g >
+<title>Colin Carroll (58 samples, 0.04%)</title><rect x="159.9" y="53" width="0.4" height="15.0" fill="rgb(219,100,5)" rx="2" ry="2" />
+<text  x="162.87" y="63.5" ></text>
+</g>
+<g >
+<title>packaging (49 samples, 0.03%)</title><rect x="283.3" y="37" width="0.4" height="15.0" fill="rgb(229,168,34)" rx="2" ry="2" />
+<text  x="286.34" y="47.5" ></text>
+</g>
+<g >
+<title>Pavel Minaev (533 samples, 0.35%)</title><rect x="816.1" y="53" width="4.2" height="15.0" fill="rgb(218,193,4)" rx="2" ry="2" />
+<text  x="819.13" y="63.5" ></text>
+</g>
+<g >
+<title>GitHub Action (41 samples, 0.03%)</title><rect x="368.2" y="53" width="0.3" height="15.0" fill="rgb(233,211,6)" rx="2" ry="2" />
+<text  x="371.22" y="63.5" ></text>
+</g>
+<g >
+<title>Matt Topol (137 samples, 0.09%)</title><rect x="720.5" y="53" width="1.1" height="15.0" fill="rgb(227,182,9)" rx="2" ry="2" />
+<text  x="723.54" y="63.5" ></text>
+</g>
+<g >
+<title>Jason Grout (4,116 samples, 2.72%)</title><rect x="430.3" y="53" width="32.2" height="15.0" fill="rgb(206,215,28)" rx="2" ry="2" />
+<text  x="433.35" y="63.5" >Ja..</text>
+</g>
+<g >
+<title>PJ Eby (590 samples, 0.39%)</title><rect x="804.0" y="53" width="4.7" height="15.0" fill="rgb(236,145,51)" rx="2" ry="2" />
+<text  x="807.05" y="63.5" ></text>
+</g>
+<g >
+<title>Laura Kreidberg (204 samples, 0.13%)</title><rect x="693.2" y="53" width="1.5" height="15.0" fill="rgb(235,174,51)" rx="2" ry="2" />
+<text  x="696.16" y="63.5" ></text>
+</g>
+<g >
+<title>regions (70 samples, 0.05%)</title><rect x="146.2" y="37" width="0.5" height="15.0" fill="rgb(233,44,18)" rx="2" ry="2" />
+<text  x="149.18" y="47.5" ></text>
+</g>
+<g >
+<title>Jeff Quast (221 samples, 0.15%)</title><rect x="540.5" y="53" width="1.8" height="15.0" fill="rgb(233,140,47)" rx="2" ry="2" />
+<text  x="543.54" y="63.5" ></text>
+</g>
+<g >
+<title>pandocfilters (50 samples, 0.03%)</title><rect x="547.3" y="37" width="0.4" height="15.0" fill="rgb(236,116,39)" rx="2" ry="2" />
+<text  x="550.29" y="47.5" ></text>
+</g>
+<g >
+<title>Korn, Uwe (146 samples, 0.10%)</title><rect x="677.0" y="53" width="1.1" height="15.0" fill="rgb(240,178,19)" rx="2" ry="2" />
+<text  x="679.97" y="63.5" ></text>
+</g>
+<g >
+<title>Yobmod (266 samples, 0.18%)</title><rect x="986.3" y="53" width="2.1" height="15.0" fill="rgb(229,28,21)" rx="2" ry="2" />
+<text  x="989.33" y="63.5" ></text>
+</g>
+<g >
+<title>pyarrow (452 samples, 0.30%)</title><rect x="264.0" y="37" width="3.5" height="15.0" fill="rgb(236,20,15)" rx="2" ry="2" />
+<text  x="266.96" y="47.5" ></text>
+</g>
+<g >
+<title>sfairhur (916 samples, 0.61%)</title><rect x="1164.2" y="53" width="7.2" height="15.0" fill="rgb(215,53,11)" rx="2" ry="2" />
+<text  x="1167.23" y="63.5" ></text>
+</g>
+<g >
+<title>Ilan Schnell (155 samples, 0.10%)</title><rect x="413.2" y="53" width="1.2" height="15.0" fill="rgb(244,117,48)" rx="2" ry="2" />
+<text  x="416.22" y="63.5" ></text>
+</g>
+<g >
+<title>astromodels (113 samples, 0.07%)</title><rect x="328.4" y="37" width="0.9" height="15.0" fill="rgb(231,41,54)" rx="2" ry="2" />
+<text  x="331.44" y="47.5" ></text>
+</g>
+<g >
+<title>jupyter-core (15 samples, 0.01%)</title><rect x="742.6" y="37" width="0.1" height="15.0" fill="rgb(244,66,28)" rx="2" ry="2" />
+<text  x="745.58" y="47.5" ></text>
+</g>
+<g >
+<title>fuzzywuzzy (26 samples, 0.02%)</title><rect x="10.0" y="37" width="0.2" height="15.0" fill="rgb(241,0,1)" rx="2" ry="2" />
+<text  x="13.00" y="47.5" ></text>
+</g>
+<g >
+<title>psutil (2,960 samples, 1.96%)</title><rect x="345.1" y="37" width="23.1" height="15.0" fill="rgb(244,59,3)" rx="2" ry="2" />
+<text  x="348.13" y="47.5" >p..</text>
+</g>
+<g >
+<title>python-ligo-lw (658 samples, 0.44%)</title><rect x="1171.4" y="37" width="5.1" height="15.0" fill="rgb(226,75,18)" rx="2" ry="2" />
+<text  x="1174.37" y="47.5" ></text>
+</g>
+<g >
+<title>pydantic (120 samples, 0.08%)</title><rect x="392.5" y="37" width="0.9" height="15.0" fill="rgb(220,209,8)" rx="2" ry="2" />
+<text  x="395.50" y="47.5" ></text>
+</g>
+<g >
+<title>pyarrow (446 samples, 0.29%)</title><rect x="785.1" y="37" width="3.5" height="15.0" fill="rgb(214,77,3)" rx="2" ry="2" />
+<text  x="788.10" y="47.5" ></text>
+</g>
+<g >
+<title>Hsiaoming Yang (560 samples, 0.37%)</title><rect x="400.5" y="53" width="4.4" height="15.0" fill="rgb(242,188,41)" rx="2" ry="2" />
+<text  x="403.54" y="63.5" ></text>
+</g>
+<g >
+<title>tables (1,559 samples, 1.03%)</title><rect x="308.1" y="37" width="12.2" height="15.0" fill="rgb(226,76,12)" rx="2" ry="2" />
+<text  x="311.14" y="47.5" ></text>
+</g>
+<g >
+<title>fonttools (292 samples, 0.19%)</title><rect x="916.7" y="37" width="2.3" height="15.0" fill="rgb(234,125,41)" rx="2" ry="2" />
+<text  x="919.73" y="47.5" ></text>
+</g>
+<g >
+<title>Ravin Kumar (147 samples, 0.10%)</title><rect x="827.1" y="53" width="1.1" height="15.0" fill="rgb(253,178,37)" rx="2" ry="2" />
+<text  x="830.06" y="63.5" ></text>
+</g>
+<g >
+<title>debugpy (336 samples, 0.22%)</title><rect x="301.0" y="37" width="2.6" height="15.0" fill="rgb(228,4,47)" rx="2" ry="2" />
+<text  x="304.01" y="47.5" ></text>
+</g>
+<g >
+<title>threadpoolctl (22 samples, 0.01%)</title><rect x="1184.4" y="37" width="0.1" height="15.0" fill="rgb(210,60,9)" rx="2" ry="2" />
+<text  x="1187.37" y="47.5" ></text>
+</g>
+<g >
+<title>Nestor Espinoza (302 samples, 0.20%)</title><rect x="788.6" y="53" width="2.3" height="15.0" fill="rgb(220,128,41)" rx="2" ry="2" />
+<text  x="791.58" y="63.5" ></text>
+</g>
+<g >
+<title>simplejson (430 samples, 0.28%)</title><rect x="140.1" y="37" width="3.3" height="15.0" fill="rgb(226,229,10)" rx="2" ry="2" />
+<text  x="143.06" y="47.5" ></text>
+</g>
+<g >
+<title>jupyter-client (41 samples, 0.03%)</title><rect x="368.2" y="37" width="0.3" height="15.0" fill="rgb(231,212,23)" rx="2" ry="2" />
+<text  x="371.22" y="47.5" ></text>
+</g>
+<g >
+<title>xarray (222 samples, 0.15%)</title><rect x="269.0" y="37" width="1.7" height="15.0" fill="rgb(209,223,39)" rx="2" ry="2" />
+<text  x="271.99" y="47.5" ></text>
+</g>
+<g >
+<title>Kouhei Sutou (433 samples, 0.29%)</title><rect x="678.1" y="53" width="3.4" height="15.0" fill="rgb(223,149,27)" rx="2" ry="2" />
+<text  x="681.11" y="63.5" ></text>
+</g>
+<g >
+<title>jupyterlab-widgets (1,037 samples, 0.69%)</title><rect x="571.0" y="37" width="8.1" height="15.0" fill="rgb(243,228,1)" rx="2" ry="2" />
+<text  x="574.04" y="47.5" ></text>
+</g>
+<g >
+<title>numexpr (32 samples, 0.02%)</title><rect x="88.3" y="37" width="0.3" height="15.0" fill="rgb(216,155,35)" rx="2" ry="2" />
+<text  x="91.31" y="47.5" ></text>
+</g>
+<g >
+<title>Arnon Yaari (64 samples, 0.04%)</title><rect x="105.3" y="53" width="0.5" height="15.0" fill="rgb(219,126,45)" rx="2" ry="2" />
+<text  x="108.29" y="63.5" ></text>
+</g>
+<g >
+<title>Martin Panter (19 samples, 0.01%)</title><rect x="720.4" y="53" width="0.1" height="15.0" fill="rgb(210,23,54)" rx="2" ry="2" />
+<text  x="723.40" y="63.5" ></text>
+</g>
+<g >
+<title>Eric Charles (470 samples, 0.31%)</title><rect x="287.0" y="53" width="3.7" height="15.0" fill="rgb(216,208,42)" rx="2" ry="2" />
+<text  x="290.01" y="63.5" ></text>
+</g>
+<g >
+<title>fuzzywuzzy (26 samples, 0.02%)</title><rect x="1010.3" y="37" width="0.2" height="15.0" fill="rgb(245,23,2)" rx="2" ry="2" />
+<text  x="1013.32" y="47.5" ></text>
+</g>
+<g >
+<title>pyjwt (55 samples, 0.04%)</title><rect x="561.8" y="37" width="0.5" height="15.0" fill="rgb(219,6,14)" rx="2" ry="2" />
+<text  x="564.82" y="47.5" ></text>
+</g>
+<g >
+<title>Chad Hanna (678 samples, 0.45%)</title><rect x="147.3" y="53" width="5.3" height="15.0" fill="rgb(253,63,5)" rx="2" ry="2" />
+<text  x="150.33" y="63.5" ></text>
+</g>
+<g >
+<title>annotated-types (19 samples, 0.01%)</title><rect x="848.8" y="37" width="0.2" height="15.0" fill="rgb(251,105,49)" rx="2" ry="2" />
+<text  x="851.82" y="47.5" ></text>
+</g>
+<g >
+<title>pyarrow (433 samples, 0.29%)</title><rect x="678.1" y="37" width="3.4" height="15.0" fill="rgb(209,137,39)" rx="2" ry="2" />
+<text  x="681.11" y="47.5" ></text>
+</g>
+<g >
+<title>Don Jayamanne (78 samples, 0.05%)</title><rect x="273.5" y="53" width="0.6" height="15.0" fill="rgb(240,149,36)" rx="2" ry="2" />
+<text  x="276.51" y="63.5" ></text>
+</g>
+<g >
+<title>regions (131 samples, 0.09%)</title><rect x="934.9" y="37" width="1.1" height="15.0" fill="rgb(247,57,6)" rx="2" ry="2" />
+<text  x="937.95" y="47.5" ></text>
+</g>
+<g >
+<title>pyjwt (20 samples, 0.01%)</title><rect x="986.2" y="37" width="0.1" height="15.0" fill="rgb(237,119,14)" rx="2" ry="2" />
+<text  x="989.17" y="47.5" ></text>
+</g>
+<g >
+<title>Kim Davies (150 samples, 0.10%)</title><rect x="646.0" y="53" width="1.1" height="15.0" fill="rgb(215,24,23)" rx="2" ry="2" />
+<text  x="648.96" y="63.5" ></text>
+</g>
+<g >
+<title>ligo-segments (56 samples, 0.04%)</title><rect x="276.4" y="37" width="0.5" height="15.0" fill="rgb(227,70,30)" rx="2" ry="2" />
+<text  x="279.41" y="47.5" ></text>
+</g>
+<g >
+<title>Sam Ruby (106 samples, 0.07%)</title><rect x="848.0" y="53" width="0.8" height="15.0" fill="rgb(244,20,9)" rx="2" ry="2" />
+<text  x="850.99" y="63.5" ></text>
+</g>
+<g >
+<title>ndilalla (263 samples, 0.17%)</title><rect x="1127.5" y="53" width="2.0" height="15.0" fill="rgb(223,48,31)" rx="2" ry="2" />
+<text  x="1130.48" y="63.5" ></text>
+</g>
+<g >
+<title>Wolf Vollprecht (752 samples, 0.50%)</title><rect x="980.3" y="53" width="5.9" height="15.0" fill="rgb(220,109,30)" rx="2" ry="2" />
+<text  x="983.30" y="63.5" ></text>
+</g>
+<g >
+<title>h5netcdf (64 samples, 0.04%)</title><rect x="623.6" y="37" width="0.5" height="15.0" fill="rgb(205,0,50)" rx="2" ry="2" />
+<text  x="626.56" y="47.5" ></text>
+</g>
+<g >
+<title>jupyter-client (317 samples, 0.21%)</title><rect x="771.2" y="37" width="2.5" height="15.0" fill="rgb(216,144,0)" rx="2" ry="2" />
+<text  x="774.24" y="47.5" ></text>
+</g>
+<g >
+<title>debugpy (311 samples, 0.21%)</title><rect x="641.4" y="37" width="2.4" height="15.0" fill="rgb(239,152,27)" rx="2" ry="2" />
+<text  x="644.37" y="47.5" ></text>
+</g>
+<g >
+<title>jedi (5,207 samples, 3.44%)</title><rect x="203.8" y="37" width="40.6" height="15.0" fill="rgb(228,52,21)" rx="2" ry="2" />
+<text  x="206.78" y="47.5" >jedi</text>
+</g>
+<g >
+<title>eustas (63 samples, 0.04%)</title><rect x="1036.8" y="53" width="0.5" height="15.0" fill="rgb(249,121,37)" rx="2" ry="2" />
+<text  x="1039.76" y="63.5" ></text>
+</g>
+<g >
+<title>all (151,230 samples, 100%)</title><rect x="10.0" y="69" width="1180.0" height="15.0" fill="rgb(216,140,43)" rx="2" ry="2" />
+<text  x="13.00" y="79.5" ></text>
+</g>
+<g >
+<title>jupyter-client (46 samples, 0.03%)</title><rect x="741.9" y="37" width="0.3" height="15.0" fill="rgb(248,199,38)" rx="2" ry="2" />
+<text  x="744.88" y="47.5" ></text>
+</g>
+<g >
+<title>celerite (714 samples, 0.47%)</title><rect x="188.0" y="37" width="5.6" height="15.0" fill="rgb(243,162,9)" rx="2" ry="2" />
+<text  x="190.99" y="47.5" ></text>
+</g>
+<g >
+<title>pysocks (44 samples, 0.03%)</title><rect x="374.2" y="37" width="0.3" height="15.0" fill="rgb(230,175,35)" rx="2" ry="2" />
+<text  x="377.15" y="47.5" ></text>
+</g>
+<g >
+<title>S. Chris Colbert (52 samples, 0.03%)</title><rect x="847.6" y="53" width="0.4" height="15.0" fill="rgb(247,104,7)" rx="2" ry="2" />
+<text  x="850.59" y="63.5" ></text>
+</g>
+<g >
+<title>jupyterlab-widgets (2,015 samples, 1.33%)</title><rect x="446.7" y="37" width="15.8" height="15.0" fill="rgb(209,181,49)" rx="2" ry="2" />
+<text  x="449.74" y="47.5" ></text>
+</g>
+<g >
+<title>importlib-resources (78 samples, 0.05%)</title><rect x="143.4" y="37" width="0.6" height="15.0" fill="rgb(232,76,4)" rx="2" ry="2" />
+<text  x="146.42" y="47.5" ></text>
+</g>
+<g >
+<title>siemens (658 samples, 0.44%)</title><rect x="1171.4" y="53" width="5.1" height="15.0" fill="rgb(231,196,26)" rx="2" ry="2" />
+<text  x="1174.37" y="63.5" ></text>
+</g>
+<g >
+<title>Marc Brinkmann (38 samples, 0.03%)</title><rect x="717.2" y="53" width="0.3" height="15.0" fill="rgb(245,80,6)" rx="2" ry="2" />
+<text  x="720.17" y="63.5" ></text>
+</g>
+<g >
+<title>Dave Halter (6,139 samples, 4.06%)</title><rect x="203.8" y="53" width="47.9" height="15.0" fill="rgb(230,164,4)" rx="2" ry="2" />
+<text  x="206.78" y="63.5" >Dave..</text>
+</g>
+<g >
+<title>python-ligo-lw (4,326 samples, 2.86%)</title><rect x="1092.2" y="37" width="33.8" height="15.0" fill="rgb(211,110,4)" rx="2" ry="2" />
+<text  x="1095.21" y="47.5" >py..</text>
+</g>
+<g >
+<title>Yoshiki Shibukawa (18 samples, 0.01%)</title><rect x="988.4" y="53" width="0.1" height="15.0" fill="rgb(224,161,33)" rx="2" ry="2" />
+<text  x="991.40" y="63.5" ></text>
+</g>
+<g >
+<title>importlib-resources (48 samples, 0.03%)</title><rect x="106.2" y="37" width="0.4" height="15.0" fill="rgb(231,106,43)" rx="2" ry="2" />
+<text  x="109.24" y="47.5" ></text>
+</g>
+<g >
+<title>batman-package (204 samples, 0.13%)</title><rect x="693.2" y="37" width="1.5" height="15.0" fill="rgb(207,225,53)" rx="2" ry="2" />
+<text  x="696.16" y="47.5" ></text>
+</g>
+<g >
+<title>lscsoft-glue (119 samples, 0.08%)</title><rect x="687.3" y="37" width="0.9" height="15.0" fill="rgb(211,68,46)" rx="2" ry="2" />
+<text  x="690.32" y="47.5" ></text>
+</g>
+<g >
+<title>pluggy (16 samples, 0.01%)</title><rect x="792.5" y="37" width="0.1" height="15.0" fill="rgb(223,82,13)" rx="2" ry="2" />
+<text  x="795.48" y="47.5" ></text>
+</g>
+<g >
+<title>Rosheen Naeem (49 samples, 0.03%)</title><rect x="847.2" y="53" width="0.4" height="15.0" fill="rgb(229,66,36)" rx="2" ry="2" />
+<text  x="850.20" y="63.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (486 samples, 0.32%)</title><rect x="1006.3" y="37" width="3.8" height="15.0" fill="rgb(208,216,43)" rx="2" ry="2" />
+<text  x="1009.27" y="47.5" ></text>
+</g>
+<g >
+<title>juliet (78 samples, 0.05%)</title><rect x="1129.5" y="37" width="0.6" height="15.0" fill="rgb(240,181,1)" rx="2" ry="2" />
+<text  x="1132.53" y="47.5" ></text>
+</g>
+<g >
+<title>pooch (19 samples, 0.01%)</title><rect x="857.1" y="37" width="0.2" height="15.0" fill="rgb(226,145,42)" rx="2" ry="2" />
+<text  x="860.14" y="47.5" ></text>
+</g>
+<g >
+<title>mamba (98 samples, 0.06%)</title><rect x="87.5" y="37" width="0.8" height="15.0" fill="rgb(214,49,35)" rx="2" ry="2" />
+<text  x="90.54" y="47.5" ></text>
+</g>
+<g >
+<title>joblib (76 samples, 0.05%)</title><rect x="63.9" y="37" width="0.6" height="15.0" fill="rgb(211,105,45)" rx="2" ry="2" />
+<text  x="66.93" y="47.5" ></text>
+</g>
+<g >
+<title>pysocks (19 samples, 0.01%)</title><rect x="720.4" y="37" width="0.1" height="15.0" fill="rgb(240,108,48)" rx="2" ry="2" />
+<text  x="723.40" y="47.5" ></text>
+</g>
+<g >
+<title>bleach (87 samples, 0.06%)</title><rect x="368.5" y="37" width="0.7" height="15.0" fill="rgb(237,160,37)" rx="2" ry="2" />
+<text  x="371.54" y="47.5" ></text>
+</g>
+<g >
+<title>Larne Pekowsky (119 samples, 0.08%)</title><rect x="687.3" y="53" width="0.9" height="15.0" fill="rgb(253,122,38)" rx="2" ry="2" />
+<text  x="690.32" y="63.5" ></text>
+</g>
+<g >
+<title>joblib (120 samples, 0.08%)</title><rect x="324.1" y="37" width="0.9" height="15.0" fill="rgb(210,125,28)" rx="2" ry="2" />
+<text  x="327.06" y="47.5" ></text>
+</g>
+<g >
+<title>conda-package-handling (97 samples, 0.06%)</title><rect x="751.1" y="37" width="0.7" height="15.0" fill="rgb(250,42,21)" rx="2" ry="2" />
+<text  x="754.07" y="47.5" ></text>
+</g>
+<g >
+<title>threeml (252 samples, 0.17%)</title><rect x="938.0" y="37" width="2.0" height="15.0" fill="rgb(244,157,45)" rx="2" ry="2" />
+<text  x="940.99" y="47.5" ></text>
+</g>
+<g >
+<title>threeml (1,080 samples, 0.71%)</title><rect x="1047.2" y="37" width="8.4" height="15.0" fill="rgb(248,129,37)" rx="2" ry="2" />
+<text  x="1050.20" y="47.5" ></text>
+</g>
+<g >
+<title>cached-property (47 samples, 0.03%)</title><rect x="198.6" y="37" width="0.4" height="15.0" fill="rgb(212,133,27)" rx="2" ry="2" />
+<text  x="201.60" y="47.5" ></text>
+</g>
+<g >
+<title>pyjwt (128 samples, 0.08%)</title><rect x="718.2" y="37" width="1.0" height="15.0" fill="rgb(228,200,24)" rx="2" ry="2" />
+<text  x="721.19" y="47.5" ></text>
+</g>
+<g >
+<title>schwimmbad (136 samples, 0.09%)</title><rect x="50.1" y="37" width="1.0" height="15.0" fill="rgb(243,145,50)" rx="2" ry="2" />
+<text  x="53.07" y="47.5" ></text>
+</g>
+<g >
+<title>joblib (335 samples, 0.22%)</title><rect x="793.1" y="37" width="2.6" height="15.0" fill="rgb(213,112,31)" rx="2" ry="2" />
+<text  x="796.10" y="47.5" ></text>
+</g>
+<g >
+<title>jupyter-core (86 samples, 0.06%)</title><rect x="446.1" y="37" width="0.6" height="15.0" fill="rgb(233,214,0)" rx="2" ry="2" />
+<text  x="449.07" y="47.5" ></text>
+</g>
+<g >
+<title>Jon Thielen (62 samples, 0.04%)</title><rect x="562.5" y="53" width="0.4" height="15.0" fill="rgb(211,113,29)" rx="2" ry="2" />
+<text  x="565.46" y="63.5" ></text>
+</g>
+<g >
+<title>Alexander Trettin (16 samples, 0.01%)</title><rect x="63.8" y="53" width="0.1" height="15.0" fill="rgb(219,212,22)" rx="2" ry="2" />
+<text  x="66.81" y="63.5" ></text>
+</g>
+<g >
+<title>patrick (488 samples, 0.32%)</title><rect x="1135.4" y="53" width="3.8" height="15.0" fill="rgb(243,142,20)" rx="2" ry="2" />
+<text  x="1138.36" y="63.5" ></text>
+</g>
+<g >
+<title>Dmitry Shachnev (295 samples, 0.20%)</title><rect x="271.2" y="53" width="2.3" height="15.0" fill="rgb(244,13,50)" rx="2" ry="2" />
+<text  x="274.21" y="63.5" ></text>
+</g>
+<g >
+<title>ipywidgets (2,015 samples, 1.33%)</title><rect x="430.3" y="37" width="15.8" height="15.0" fill="rgb(207,196,6)" rx="2" ry="2" />
+<text  x="433.35" y="47.5" ></text>
+</g>
+<g >
+<title>Gael Varoquaux (216 samples, 0.14%)</title><rect x="322.4" y="53" width="1.7" height="15.0" fill="rgb(209,126,33)" rx="2" ry="2" />
+<text  x="325.37" y="63.5" ></text>
+</g>
+<g >
+<title>fermipy (470 samples, 0.31%)</title><rect x="287.0" y="37" width="3.7" height="15.0" fill="rgb(210,33,39)" rx="2" ry="2" />
+<text  x="290.01" y="47.5" ></text>
+</g>
+<g >
+<title>george (482 samples, 0.32%)</title><rect x="194.4" y="37" width="3.8" height="15.0" fill="rgb(215,145,14)" rx="2" ry="2" />
+<text  x="197.42" y="47.5" ></text>
+</g>
+<g >
+<title>pyarrow (1,320 samples, 0.87%)</title><rect x="952.1" y="37" width="10.3" height="15.0" fill="rgb(234,46,46)" rx="2" ry="2" />
+<text  x="955.12" y="47.5" ></text>
+</g>
+<g >
+<title>Wouter Bolsterlee (20 samples, 0.01%)</title><rect x="986.2" y="53" width="0.1" height="15.0" fill="rgb(209,155,11)" rx="2" ry="2" />
+<text  x="989.17" y="63.5" ></text>
+</g>
+<g >
+<title>Greg Guthe (87 samples, 0.06%)</title><rect x="368.5" y="53" width="0.7" height="15.0" fill="rgb(224,155,34)" rx="2" ry="2" />
+<text  x="371.54" y="63.5" ></text>
+</g>
+<g >
+<title>Vivien Raymond (646 samples, 0.43%)</title><rect x="946.5" y="53" width="5.0" height="15.0" fill="rgb(228,129,4)" rx="2" ry="2" />
+<text  x="949.48" y="63.5" ></text>
+</g>
+<g >
+<title>asttokens (123 samples, 0.08%)</title><rect x="59.1" y="37" width="0.9" height="15.0" fill="rgb(213,43,52)" rx="2" ry="2" />
+<text  x="62.06" y="47.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (1,102 samples, 0.73%)</title><rect x="1068.1" y="37" width="8.6" height="15.0" fill="rgb(241,30,50)" rx="2" ry="2" />
+<text  x="1071.11" y="47.5" ></text>
+</g>
+<g >
+<title>cycler (81 samples, 0.05%)</title><rect x="926.5" y="37" width="0.6" height="15.0" fill="rgb(243,220,27)" rx="2" ry="2" />
+<text  x="929.46" y="47.5" ></text>
+</g>
+<g >
+<title>markdown-it-py (207 samples, 0.14%)</title><rect x="153.1" y="37" width="1.6" height="15.0" fill="rgb(242,46,48)" rx="2" ry="2" />
+<text  x="156.07" y="47.5" ></text>
+</g>
+<g >
+<title>Kolen Cheung (25 samples, 0.02%)</title><rect x="676.7" y="53" width="0.2" height="15.0" fill="rgb(215,135,18)" rx="2" ry="2" />
+<text  x="679.74" y="63.5" ></text>
+</g>
+<g >
+<title>Matthew Dunseth Wood (732 samples, 0.48%)</title><rect x="726.1" y="53" width="5.8" height="15.0" fill="rgb(250,171,5)" rx="2" ry="2" />
+<text  x="729.15" y="63.5" ></text>
+</g>
+<g >
+<title>Mike Kaplinskiy (21 samples, 0.01%)</title><rect x="750.9" y="53" width="0.2" height="15.0" fill="rgb(236,148,24)" rx="2" ry="2" />
+<text  x="753.90" y="63.5" ></text>
+</g>
+<g >
+<title>Pascal Bugnion (558 samples, 0.37%)</title><rect x="809.6" y="53" width="4.3" height="15.0" fill="rgb(222,216,34)" rx="2" ry="2" />
+<text  x="812.60" y="63.5" ></text>
+</g>
+<g >
+<title>Evan Goetz (548 samples, 0.36%)</title><rect x="296.0" y="53" width="4.3" height="15.0" fill="rgb(206,55,32)" rx="2" ry="2" />
+<text  x="298.99" y="63.5" ></text>
+</g>
+<g >
+<title>Alex Hall (575 samples, 0.38%)</title><rect x="59.1" y="53" width="4.4" height="15.0" fill="rgb(214,146,7)" rx="2" ry="2" />
+<text  x="62.06" y="63.5" ></text>
+</g>
+<g >
+<title>colorama (79 samples, 0.05%)</title><rect x="579.1" y="37" width="0.6" height="15.0" fill="rgb(238,119,7)" rx="2" ry="2" />
+<text  x="582.13" y="47.5" ></text>
+</g>
+<g >
+<title>Eric Agol (111 samples, 0.07%)</title><rect x="286.1" y="53" width="0.9" height="15.0" fill="rgb(205,212,54)" rx="2" ry="2" />
+<text  x="289.14" y="63.5" ></text>
+</g>
+<g >
+<title>pydantic (151 samples, 0.10%)</title><rect x="48.2" y="37" width="1.2" height="15.0" fill="rgb(242,22,48)" rx="2" ry="2" />
+<text  x="51.22" y="47.5" ></text>
+</g>
+<g >
+<title>arviz (197 samples, 0.13%)</title><rect x="802.5" y="37" width="1.5" height="15.0" fill="rgb(210,25,33)" rx="2" ry="2" />
+<text  x="805.51" y="47.5" ></text>
+</g>
+<g >
+<title>Anderson Bravalheri (1,017 samples, 0.67%)</title><rect x="64.5" y="53" width="8.0" height="15.0" fill="rgb(246,209,54)" rx="2" ry="2" />
+<text  x="67.53" y="63.5" ></text>
+</g>
+<g >
+<title>backcall (20 samples, 0.01%)</title><rect x="927.7" y="37" width="0.2" height="15.0" fill="rgb(251,155,26)" rx="2" ry="2" />
+<text  x="930.70" y="47.5" ></text>
+</g>
+<g >
+<title>Daniel Holth (319 samples, 0.21%)</title><rect x="199.1" y="53" width="2.5" height="15.0" fill="rgb(240,48,1)" rx="2" ry="2" />
+<text  x="202.11" y="63.5" ></text>
+</g>
+<g >
+<title>Zoltan Szabadka (190 samples, 0.13%)</title><rect x="988.5" y="53" width="1.5" height="15.0" fill="rgb(228,208,13)" rx="2" ry="2" />
+<text  x="991.54" y="63.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (797 samples, 0.53%)</title><rect x="731.9" y="37" width="6.2" height="15.0" fill="rgb(247,133,31)" rx="2" ry="2" />
+<text  x="734.86" y="47.5" ></text>
+</g>
+<g >
+<title>Johannes King (77 samples, 0.05%)</title><rect x="546.6" y="53" width="0.6" height="15.0" fill="rgb(218,198,7)" rx="2" ry="2" />
+<text  x="549.58" y="63.5" ></text>
+</g>
+<g >
+<title>Antony Lewis (825 samples, 0.55%)</title><rect x="96.8" y="53" width="6.4" height="15.0" fill="rgb(253,155,42)" rx="2" ry="2" />
+<text  x="99.81" y="63.5" ></text>
+</g>
+<g >
+<title>Sridhar Ratnakumar (42 samples, 0.03%)</title><rect x="882.8" y="53" width="0.4" height="15.0" fill="rgb(229,108,11)" rx="2" ry="2" />
+<text  x="885.83" y="63.5" ></text>
+</g>
+<g >
+<title>David Brochart (52 samples, 0.03%)</title><rect x="251.7" y="53" width="0.4" height="15.0" fill="rgb(254,66,6)" rx="2" ry="2" />
+<text  x="254.68" y="63.5" ></text>
+</g>
+<g >
+<title>Josh Speagle (116 samples, 0.08%)</title><rect x="603.1" y="53" width="0.9" height="15.0" fill="rgb(242,148,4)" rx="2" ry="2" />
+<text  x="606.11" y="63.5" ></text>
+</g>
+<g >
+<title>Daniel Roy Greenfeld (27 samples, 0.02%)</title><rect x="201.6" y="53" width="0.2" height="15.0" fill="rgb(228,24,47)" rx="2" ry="2" />
+<text  x="204.60" y="63.5" ></text>
+</g>
+<g >
+<title>pyarrow (150 samples, 0.10%)</title><rect x="1126.1" y="37" width="1.1" height="15.0" fill="rgb(211,16,10)" rx="2" ry="2" />
+<text  x="1129.06" y="47.5" ></text>
+</g>
+<g >
+<title>Brian Granger (72 samples, 0.05%)</title><rect x="145.6" y="53" width="0.6" height="15.0" fill="rgb(231,15,36)" rx="2" ry="2" />
+<text  x="148.62" y="63.5" ></text>
+</g>
+<g >
+<title>more-itertools (606 samples, 0.40%)</title><rect x="135.3" y="37" width="4.8" height="15.0" fill="rgb(219,109,20)" rx="2" ry="2" />
+<text  x="138.33" y="47.5" ></text>
+</g>
+<g >
+<title>jupyter-client (185 samples, 0.12%)</title><rect x="929.4" y="37" width="1.4" height="15.0" fill="rgb(254,68,30)" rx="2" ry="2" />
+<text  x="932.38" y="47.5" ></text>
+</g>
+<g >
+<title>GaelVaroquaux (62 samples, 0.04%)</title><rect x="325.0" y="53" width="0.5" height="15.0" fill="rgb(225,202,12)" rx="2" ry="2" />
+<text  x="327.99" y="63.5" ></text>
+</g>
+<g >
+<title>Micah Kornfield (135 samples, 0.09%)</title><rect x="746.5" y="53" width="1.1" height="15.0" fill="rgb(243,87,54)" rx="2" ry="2" />
+<text  x="749.53" y="63.5" ></text>
+</g>
+<g >
+<title>Julian Berman (2,136 samples, 1.41%)</title><rect x="606.4" y="53" width="16.7" height="15.0" fill="rgb(246,179,27)" rx="2" ry="2" />
+<text  x="609.43" y="63.5" ></text>
+</g>
+<g >
+<title>Frank Hoffmann (126 samples, 0.08%)</title><rect x="320.3" y="53" width="1.0" height="15.0" fill="rgb(228,57,32)" rx="2" ry="2" />
+<text  x="323.30" y="63.5" ></text>
+</g>
+<g >
+<title>Christoph Deil (345 samples, 0.23%)</title><rect x="156.0" y="53" width="2.7" height="15.0" fill="rgb(224,113,45)" rx="2" ry="2" />
+<text  x="159.02" y="63.5" ></text>
+</g>
+<g >
+<title>joncrall (49 samples, 0.03%)</title><rect x="1076.7" y="53" width="0.4" height="15.0" fill="rgb(206,127,7)" rx="2" ry="2" />
+<text  x="1079.71" y="63.5" ></text>
+</g>
+<g >
+<title>omegaconf (87 samples, 0.06%)</title><rect x="429.1" y="37" width="0.6" height="15.0" fill="rgb(218,22,47)" rx="2" ry="2" />
+<text  x="432.06" y="47.5" ></text>
+</g>
+<g >
+<title>pandocfilters (13 samples, 0.01%)</title><rect x="105.8" y="37" width="0.1" height="15.0" fill="rgb(248,216,52)" rx="2" ry="2" />
+<text  x="108.79" y="47.5" ></text>
+</g>
+<g >
+<title>davidcellis (26 samples, 0.02%)</title><rect x="1010.3" y="53" width="0.2" height="15.0" fill="rgb(219,39,30)" rx="2" ry="2" />
+<text  x="1013.32" y="63.5" ></text>
+</g>
+<g >
+<title>zipp (526 samples, 0.35%)</title><rect x="529.2" y="37" width="4.1" height="15.0" fill="rgb(240,201,41)" rx="2" ry="2" />
+<text  x="532.25" y="47.5" ></text>
+</g>
+<g >
+<title>duncan (2,899 samples, 1.92%)</title><rect x="1012.7" y="53" width="22.7" height="15.0" fill="rgb(232,165,4)" rx="2" ry="2" />
+<text  x="1015.74" y="63.5" >d..</text>
+</g>
+<g >
+<title>kiwisolver (18 samples, 0.01%)</title><rect x="561.1" y="37" width="0.2" height="15.0" fill="rgb(225,165,28)" rx="2" ry="2" />
+<text  x="564.14" y="47.5" ></text>
+</g>
+<g >
+<title>charset-normalizer (60 samples, 0.04%)</title><rect x="1011.1" y="37" width="0.5" height="15.0" fill="rgb(233,205,4)" rx="2" ry="2" />
+<text  x="1014.11" y="47.5" ></text>
+</g>
+<g >
+<title>idna (150 samples, 0.10%)</title><rect x="646.0" y="37" width="1.1" height="15.0" fill="rgb(222,49,37)" rx="2" ry="2" />
+<text  x="648.96" y="47.5" ></text>
+</g>
+<g >
+<title>Francesc Alted (1,863 samples, 1.23%)</title><rect x="305.8" y="53" width="14.5" height="15.0" fill="rgb(235,128,0)" rx="2" ry="2" />
+<text  x="308.77" y="63.5" ></text>
+</g>
+<g >
+<title>fermipy (732 samples, 0.48%)</title><rect x="726.1" y="37" width="5.8" height="15.0" fill="rgb(242,174,45)" rx="2" ry="2" />
+<text  x="729.15" y="47.5" ></text>
+</g>
+<g >
+<title>Robert Kern (60 samples, 0.04%)</title><rect x="845.1" y="53" width="0.4" height="15.0" fill="rgb(206,148,19)" rx="2" ry="2" />
+<text  x="848.06" y="63.5" ></text>
+</g>
+<g >
+<title>pipdeptree (43 samples, 0.03%)</title><rect x="134.5" y="37" width="0.4" height="15.0" fill="rgb(254,109,43)" rx="2" ry="2" />
+<text  x="137.54" y="47.5" ></text>
+</g>
+<g >
+<title>arviz (40 samples, 0.03%)</title><rect x="990.0" y="37" width="0.3" height="15.0" fill="rgb(252,128,2)" rx="2" ry="2" />
+<text  x="993.02" y="47.5" ></text>
+</g>
+<g >
+<title>debugpy (78 samples, 0.05%)</title><rect x="273.5" y="37" width="0.6" height="15.0" fill="rgb(235,94,53)" rx="2" ry="2" />
+<text  x="276.51" y="47.5" ></text>
+</g>
+<g >
+<title>Vineet (46 samples, 0.03%)</title><rect x="946.1" y="53" width="0.4" height="15.0" fill="rgb(230,202,50)" rx="2" ry="2" />
+<text  x="949.12" y="63.5" ></text>
+</g>
+<g >
+<title>mamba (175 samples, 0.12%)</title><rect x="51.1" y="37" width="1.4" height="15.0" fill="rgb(217,122,21)" rx="2" ry="2" />
+<text  x="54.14" y="47.5" ></text>
+</g>
+<g >
+<title>regions (161 samples, 0.11%)</title><rect x="10.2" y="37" width="1.3" height="15.0" fill="rgb(210,84,2)" rx="2" ry="2" />
+<text  x="13.20" y="47.5" ></text>
+</g>
+<g >
+<title>pluggy (19 samples, 0.01%)</title><rect x="199.0" y="37" width="0.1" height="15.0" fill="rgb(220,56,47)" rx="2" ry="2" />
+<text  x="201.97" y="47.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (1,019 samples, 0.67%)</title><rect x="1143.1" y="37" width="8.0" height="15.0" fill="rgb(226,101,14)" rx="2" ry="2" />
+<text  x="1146.13" y="47.5" ></text>
+</g>
+<g >
+<title>unicodedata2 (23 samples, 0.02%)</title><rect x="425.1" y="37" width="0.2" height="15.0" fill="rgb(241,165,37)" rx="2" ry="2" />
+<text  x="428.10" y="47.5" ></text>
+</g>
+<g >
+<title>eli.bendersky (76 samples, 0.05%)</title><rect x="1035.4" y="53" width="0.6" height="15.0" fill="rgb(245,34,7)" rx="2" ry="2" />
+<text  x="1038.36" y="63.5" ></text>
+</g>
+<g >
+<title>Ivan Vilata i Balaguer (450 samples, 0.30%)</title><rect x="414.4" y="53" width="3.5" height="15.0" fill="rgb(206,162,42)" rx="2" ry="2" />
+<text  x="417.43" y="63.5" ></text>
+</g>
+<g >
+<title>ipyparallel (721 samples, 0.48%)</title><rect x="751.9" y="37" width="5.6" height="15.0" fill="rgb(249,40,20)" rx="2" ry="2" />
+<text  x="754.86" y="47.5" ></text>
+</g>
+<g >
+<title>pluggy (90 samples, 0.06%)</title><rect x="940.2" y="37" width="0.7" height="15.0" fill="rgb(214,211,4)" rx="2" ry="2" />
+<text  x="943.24" y="47.5" ></text>
+</g>
+<g >
+<title>Joe Tsai (24 samples, 0.02%)</title><rect x="545.3" y="53" width="0.2" height="15.0" fill="rgb(216,21,37)" rx="2" ry="2" />
+<text  x="548.33" y="63.5" ></text>
+</g>
+<g >
+<title>jupyter-core (105 samples, 0.07%)</title><rect x="759.3" y="37" width="0.8" height="15.0" fill="rgb(214,99,16)" rx="2" ry="2" />
+<text  x="762.28" y="47.5" ></text>
+</g>
+<g >
+<title>wcwidth (34 samples, 0.02%)</title><rect x="1077.1" y="37" width="0.3" height="15.0" fill="rgb(251,114,26)" rx="2" ry="2" />
+<text  x="1080.09" y="47.5" ></text>
+</g>
+<g >
+<title>fuzzywuzzy (33 samples, 0.02%)</title><rect x="540.3" y="37" width="0.2" height="15.0" fill="rgb(219,129,8)" rx="2" ry="2" />
+<text  x="543.29" y="47.5" ></text>
+</g>
+<g >
+<title>Taneli Hukkinen (326 samples, 0.22%)</title><rect x="919.1" y="53" width="2.6" height="15.0" fill="rgb(218,192,29)" rx="2" ry="2" />
+<text  x="922.11" y="63.5" ></text>
+</g>
+<g >
+<title>Joël Lamotte (Klaim) (93 samples, 0.06%)</title><rect x="605.2" y="53" width="0.8" height="15.0" fill="rgb(219,14,4)" rx="2" ry="2" />
+<text  x="608.24" y="63.5" ></text>
+</g>
+<g >
+<title>Adrian Price-Whelan (136 samples, 0.09%)</title><rect x="50.1" y="53" width="1.0" height="15.0" fill="rgb(241,200,24)" rx="2" ry="2" />
+<text  x="53.07" y="63.5" ></text>
+</g>
+<g >
+<title>executing (232 samples, 0.15%)</title><rect x="60.0" y="37" width="1.8" height="15.0" fill="rgb(246,77,14)" rx="2" ry="2" />
+<text  x="63.02" y="47.5" ></text>
+</g>
+<g >
+<title>iminuit (138 samples, 0.09%)</title><rect x="156.5" y="37" width="1.1" height="15.0" fill="rgb(244,219,28)" rx="2" ry="2" />
+<text  x="159.50" y="47.5" ></text>
+</g>
+<g >
+<title>reinhard (1,668 samples, 1.10%)</title><rect x="1151.1" y="53" width="13.0" height="15.0" fill="rgb(250,73,9)" rx="2" ry="2" />
+<text  x="1154.08" y="63.5" ></text>
+</g>
+<g >
+<title>wheel (255 samples, 0.17%)</title><rect x="199.6" y="37" width="2.0" height="15.0" fill="rgb(217,173,37)" rx="2" ry="2" />
+<text  x="202.61" y="47.5" ></text>
+</g>
+<g >
+<title>jupyter-core (39 samples, 0.03%)</title><rect x="930.8" y="37" width="0.3" height="15.0" fill="rgb(247,146,27)" rx="2" ry="2" />
+<text  x="933.83" y="47.5" ></text>
+</g>
+<g >
+<title>jupyterlab-widgets (279 samples, 0.18%)</title><rect x="811.8" y="37" width="2.1" height="15.0" fill="rgb(218,222,30)" rx="2" ry="2" />
+<text  x="814.77" y="47.5" ></text>
+</g>
+<g >
+<title>fuzzywuzzy (29 samples, 0.02%)</title><rect x="820.3" y="37" width="0.2" height="15.0" fill="rgb(244,25,12)" rx="2" ry="2" />
+<text  x="823.29" y="47.5" ></text>
+</g>
+<g >
+<title>portalocker (196 samples, 0.13%)</title><rect x="843.5" y="37" width="1.6" height="15.0" fill="rgb(254,176,1)" rx="2" ry="2" />
+<text  x="846.53" y="47.5" ></text>
+</g>
+<g >
+<title>Harmon (42 samples, 0.03%)</title><rect x="392.2" y="53" width="0.3" height="15.0" fill="rgb(209,8,34)" rx="2" ry="2" />
+<text  x="395.18" y="63.5" ></text>
+</g>
+<g >
+<title>conda-bot (33 samples, 0.02%)</title><rect x="1010.1" y="53" width="0.2" height="15.0" fill="rgb(221,215,1)" rx="2" ry="2" />
+<text  x="1013.06" y="63.5" ></text>
+</g>
+<g >
+<title>gitpython (266 samples, 0.18%)</title><rect x="986.3" y="37" width="2.1" height="15.0" fill="rgb(219,197,43)" rx="2" ry="2" />
+<text  x="989.33" y="47.5" ></text>
+</g>
+<g >
+<title>pint (581 samples, 0.38%)</title><rect x="394.1" y="37" width="4.5" height="15.0" fill="rgb(243,68,16)" rx="2" ry="2" />
+<text  x="397.06" y="47.5" ></text>
+</g>
+<g >
+<title>Matthew Pitkin (797 samples, 0.53%)</title><rect x="731.9" y="53" width="6.2" height="15.0" fill="rgb(230,40,11)" rx="2" ry="2" />
+<text  x="734.86" y="63.5" ></text>
+</g>
+<g >
+<title>Sergey E. Koposov (602 samples, 0.40%)</title><rect x="875.1" y="53" width="4.7" height="15.0" fill="rgb(244,28,43)" rx="2" ry="2" />
+<text  x="878.13" y="63.5" ></text>
+</g>
+<g >
+<title>regions (145 samples, 0.10%)</title><rect x="157.6" y="37" width="1.1" height="15.0" fill="rgb(216,0,33)" rx="2" ry="2" />
+<text  x="160.58" y="47.5" ></text>
+</g>
+<g >
+<title>xyzservices (146 samples, 0.10%)</title><rect x="719.3" y="37" width="1.1" height="15.0" fill="rgb(245,114,25)" rx="2" ry="2" />
+<text  x="722.26" y="47.5" ></text>
+</g>
+<g >
+<title>Vineet Naik (129 samples, 0.09%)</title><rect x="945.1" y="53" width="1.0" height="15.0" fill="rgb(240,29,29)" rx="2" ry="2" />
+<text  x="948.11" y="63.5" ></text>
+</g>
+<g >
+<title>h5netcdf (87 samples, 0.06%)</title><rect x="885.5" y="37" width="0.6" height="15.0" fill="rgb(247,99,41)" rx="2" ry="2" />
+<text  x="888.47" y="47.5" ></text>
+</g>
+<g >
+<title>conda-package-handling (46 samples, 0.03%)</title><rect x="747.6" y="37" width="0.3" height="15.0" fill="rgb(248,198,24)" rx="2" ry="2" />
+<text  x="750.58" y="47.5" ></text>
+</g>
+<g >
+<title>unicodedata2 (21 samples, 0.01%)</title><rect x="750.9" y="37" width="0.2" height="15.0" fill="rgb(236,148,4)" rx="2" ry="2" />
+<text  x="753.90" y="47.5" ></text>
+</g>
+<g >
+<title>torradocacho (700 samples, 0.46%)</title><rect x="1184.5" y="53" width="5.5" height="15.0" fill="rgb(241,212,13)" rx="2" ry="2" />
+<text  x="1187.54" y="63.5" ></text>
+</g>
+<g >
+<title>ipywidgets (608 samples, 0.40%)</title><rect x="905.1" y="37" width="4.7" height="15.0" fill="rgb(229,162,37)" rx="2" ry="2" />
+<text  x="908.08" y="47.5" ></text>
+</g>
+<g >
+<title>omegaconf (155 samples, 0.10%)</title><rect x="1134.1" y="37" width="1.3" height="15.0" fill="rgb(219,24,13)" rx="2" ry="2" />
+<text  x="1137.15" y="47.5" ></text>
+</g>
+<g >
+<title>importlib-metadata (320 samples, 0.21%)</title><rect x="465.2" y="37" width="2.5" height="15.0" fill="rgb(229,152,5)" rx="2" ry="2" />
+<text  x="468.20" y="47.5" ></text>
+</g>
+<g >
+<title>h5netcdf (27 samples, 0.02%)</title><rect x="53.4" y="37" width="0.2" height="15.0" fill="rgb(252,17,17)" rx="2" ry="2" />
+<text  x="56.41" y="47.5" ></text>
+</g>
+<g >
+<title>pyarrow (890 samples, 0.59%)</title><rect x="898.1" y="37" width="7.0" height="15.0" fill="rgb(225,183,8)" rx="2" ry="2" />
+<text  x="901.14" y="47.5" ></text>
+</g>
+<g >
+<title>imagesize (18 samples, 0.01%)</title><rect x="988.4" y="37" width="0.1" height="15.0" fill="rgb(233,80,12)" rx="2" ry="2" />
+<text  x="991.40" y="47.5" ></text>
+</g>
+<g >
+<title>regions (201 samples, 0.13%)</title><rect x="1176.5" y="37" width="1.6" height="15.0" fill="rgb(224,21,36)" rx="2" ry="2" />
+<text  x="1179.51" y="47.5" ></text>
+</g>
+<g >
+<title>ads (77 samples, 0.05%)</title><rect x="951.5" y="37" width="0.6" height="15.0" fill="rgb(231,9,45)" rx="2" ry="2" />
+<text  x="954.52" y="47.5" ></text>
+</g>
+<g >
+<title>epatters (59 samples, 0.04%)</title><rect x="1036.0" y="53" width="0.4" height="15.0" fill="rgb(221,53,35)" rx="2" ry="2" />
+<text  x="1038.95" y="63.5" ></text>
+</g>
+<g >
+<title>David Halter (1,522 samples, 1.01%)</title><rect x="252.1" y="53" width="11.9" height="15.0" fill="rgb(253,21,8)" rx="2" ry="2" />
+<text  x="255.09" y="63.5" ></text>
+</g>
+<g >
+<title>Ran Benita (81 samples, 0.05%)</title><rect x="826.4" y="53" width="0.7" height="15.0" fill="rgb(218,125,39)" rx="2" ry="2" />
+<text  x="829.43" y="63.5" ></text>
+</g>
+<g >
+<title>sushobhana (201 samples, 0.13%)</title><rect x="1176.5" y="53" width="1.6" height="15.0" fill="rgb(239,38,13)" rx="2" ry="2" />
+<text  x="1179.51" y="63.5" ></text>
+</g>
+<g >
+<title>Colin (78 samples, 0.05%)</title><rect x="160.3" y="53" width="0.6" height="15.0" fill="rgb(231,17,49)" rx="2" ry="2" />
+<text  x="163.33" y="63.5" ></text>
+</g>
+<g >
+<title>pooch (160 samples, 0.11%)</title><rect x="704.6" y="37" width="1.2" height="15.0" fill="rgb(238,173,2)" rx="2" ry="2" />
+<text  x="707.57" y="47.5" ></text>
+</g>
+<g >
+<title>Alex Grönholm (304 samples, 0.20%)</title><rect x="56.7" y="53" width="2.4" height="15.0" fill="rgb(225,59,4)" rx="2" ry="2" />
+<text  x="59.68" y="63.5" ></text>
+</g>
+<g >
+<title>Jérémie du Boisberranger (46 samples, 0.03%)</title><rect x="623.1" y="53" width="0.4" height="15.0" fill="rgb(213,171,2)" rx="2" ry="2" />
+<text  x="626.10" y="63.5" ></text>
+</g>
+<g >
+<title>bleach (264 samples, 0.17%)</title><rect x="964.3" y="37" width="2.1" height="15.0" fill="rgb(210,159,40)" rx="2" ry="2" />
+<text  x="967.32" y="47.5" ></text>
+</g>
+<g >
+<title>Rick van Hattem (196 samples, 0.13%)</title><rect x="843.5" y="53" width="1.6" height="15.0" fill="rgb(241,197,48)" rx="2" ry="2" />
+<text  x="846.53" y="63.5" ></text>
+</g>
+<g >
+<title>omegaconf (545 samples, 0.36%)</title><rect x="796.1" y="37" width="4.2" height="15.0" fill="rgb(247,3,13)" rx="2" ry="2" />
+<text  x="799.07" y="47.5" ></text>
+</g>
+<g >
+<title>pyup-bot (19 samples, 0.01%)</title><rect x="1143.0" y="53" width="0.1" height="15.0" fill="rgb(236,9,34)" rx="2" ry="2" />
+<text  x="1145.98" y="63.5" ></text>
+</g>
+<g >
+<title>pyarrow (139 samples, 0.09%)</title><rect x="579.7" y="37" width="1.1" height="15.0" fill="rgb(244,202,39)" rx="2" ry="2" />
+<text  x="582.74" y="47.5" ></text>
+</g>
+<g >
+<title>Jon Dufresne (97 samples, 0.06%)</title><rect x="561.5" y="53" width="0.8" height="15.0" fill="rgb(206,130,26)" rx="2" ry="2" />
+<text  x="564.52" y="63.5" ></text>
+</g>
+<g >
+<title>ram (1,019 samples, 0.67%)</title><rect x="1143.1" y="53" width="8.0" height="15.0" fill="rgb(231,64,38)" rx="2" ry="2" />
+<text  x="1146.13" y="63.5" ></text>
+</g>
+<g >
+<title>cobaya (700 samples, 0.46%)</title><rect x="1184.5" y="37" width="5.5" height="15.0" fill="rgb(234,94,41)" rx="2" ry="2" />
+<text  x="1187.54" y="47.5" ></text>
+</g>
+<g >
+<title>executing (30 samples, 0.02%)</title><rect x="936.4" y="37" width="0.2" height="15.0" fill="rgb(219,15,35)" rx="2" ry="2" />
+<text  x="939.40" y="47.5" ></text>
+</g>
+<g >
+<title>Dan Foreman-Mackey (24 samples, 0.02%)</title><rect x="198.2" y="53" width="0.2" height="15.0" fill="rgb(249,124,42)" rx="2" ry="2" />
+<text  x="201.19" y="63.5" ></text>
+</g>
+<g >
+<title>tinycss2 (17 samples, 0.01%)</title><rect x="708.2" y="37" width="0.1" height="15.0" fill="rgb(233,108,13)" rx="2" ry="2" />
+<text  x="711.18" y="47.5" ></text>
+</g>
+<g >
+<title>lscsoft-glue (175 samples, 0.12%)</title><rect x="275.0" y="37" width="1.4" height="15.0" fill="rgb(218,111,3)" rx="2" ry="2" />
+<text  x="278.05" y="47.5" ></text>
+</g>
+<g >
+<title>iminuit (728 samples, 0.48%)</title><rect x="386.5" y="37" width="5.7" height="15.0" fill="rgb(233,63,3)" rx="2" ry="2" />
+<text  x="389.50" y="47.5" ></text>
+</g>
+<g >
+<title>Paul Moore (31 samples, 0.02%)</title><rect x="815.9" y="53" width="0.2" height="15.0" fill="rgb(222,177,49)" rx="2" ry="2" />
+<text  x="818.88" y="63.5" ></text>
+</g>
+<g >
+<title>pyjwt (16 samples, 0.01%)</title><rect x="540.2" y="37" width="0.1" height="15.0" fill="rgb(216,32,30)" rx="2" ry="2" />
+<text  x="543.16" y="47.5" ></text>
+</g>
+<g >
+<title>astropy-healpix (233 samples, 0.15%)</title><rect x="932.2" y="37" width="1.8" height="15.0" fill="rgb(245,43,31)" rx="2" ry="2" />
+<text  x="935.18" y="47.5" ></text>
+</g>
+<g >
+<title>fuzzywuzzy (57 samples, 0.04%)</title><rect x="602.7" y="37" width="0.4" height="15.0" fill="rgb(207,100,35)" rx="2" ry="2" />
+<text  x="605.66" y="47.5" ></text>
+</g>
+<g >
+<title>Collin Capano (529 samples, 0.35%)</title><rect x="160.9" y="53" width="4.2" height="15.0" fill="rgb(211,63,53)" rx="2" ry="2" />
+<text  x="163.94" y="63.5" ></text>
+</g>
+<g >
+<title>cycler (16 samples, 0.01%)</title><rect x="286.0" y="37" width="0.1" height="15.0" fill="rgb(207,66,54)" rx="2" ry="2" />
+<text  x="289.02" y="47.5" ></text>
+</g>
+<g >
+<title>jolien (1,102 samples, 0.73%)</title><rect x="1068.1" y="53" width="8.6" height="15.0" fill="rgb(235,87,27)" rx="2" ry="2" />
+<text  x="1071.11" y="63.5" ></text>
+</g>
+<g >
+<title>Deepak Cherian (222 samples, 0.15%)</title><rect x="269.0" y="53" width="1.7" height="15.0" fill="rgb(226,113,35)" rx="2" ry="2" />
+<text  x="271.99" y="63.5" ></text>
+</g>
+<g >
+<title>Matthew Wood (453 samples, 0.30%)</title><rect x="738.3" y="53" width="3.6" height="15.0" fill="rgb(224,125,9)" rx="2" ry="2" />
+<text  x="741.34" y="63.5" ></text>
+</g>
+<g >
+<title>iniconfig (63 samples, 0.04%)</title><rect x="846.6" y="37" width="0.5" height="15.0" fill="rgb(207,121,20)" rx="2" ry="2" />
+<text  x="849.63" y="47.5" ></text>
+</g>
+<g >
+<title>colorama (64 samples, 0.04%)</title><rect x="105.3" y="37" width="0.5" height="15.0" fill="rgb(252,139,15)" rx="2" ry="2" />
+<text  x="108.29" y="47.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (1,725 samples, 1.14%)</title><rect x="547.7" y="37" width="13.4" height="15.0" fill="rgb(252,221,46)" rx="2" ry="2" />
+<text  x="550.68" y="47.5" ></text>
+</g>
+<g >
+<title>James Graham (315 samples, 0.21%)</title><rect x="425.3" y="53" width="2.4" height="15.0" fill="rgb(250,19,8)" rx="2" ry="2" />
+<text  x="428.27" y="63.5" ></text>
+</g>
+<g >
+<title>jupyter-client (44 samples, 0.03%)</title><rect x="145.2" y="37" width="0.4" height="15.0" fill="rgb(241,37,24)" rx="2" ry="2" />
+<text  x="148.24" y="47.5" ></text>
+</g>
+<g >
+<title>pytest-runner (402 samples, 0.27%)</title><rect x="488.4" y="37" width="3.2" height="15.0" fill="rgb(207,37,9)" rx="2" ry="2" />
+<text  x="491.43" y="47.5" ></text>
+</g>
+<g >
+<title>Donald Stufft (119 samples, 0.08%)</title><rect x="274.1" y="53" width="0.9" height="15.0" fill="rgb(236,107,29)" rx="2" ry="2" />
+<text  x="277.12" y="63.5" ></text>
+</g>
+<g >
+<title>nbstripout (252 samples, 0.17%)</title><rect x="303.8" y="37" width="2.0" height="15.0" fill="rgb(239,105,2)" rx="2" ry="2" />
+<text  x="306.80" y="47.5" ></text>
+</g>
+<g >
+<title>pyjwt (157 samples, 0.10%)</title><rect x="604.0" y="37" width="1.2" height="15.0" fill="rgb(211,75,51)" rx="2" ry="2" />
+<text  x="607.01" y="47.5" ></text>
+</g>
+<g >
+<title>Marc Abramowitz (28 samples, 0.02%)</title><rect x="717.0" y="53" width="0.2" height="15.0" fill="rgb(247,64,11)" rx="2" ry="2" />
+<text  x="719.95" y="63.5" ></text>
+</g>
+<g >
+<title>nest-asyncio (55 samples, 0.04%)</title><rect x="300.6" y="37" width="0.4" height="15.0" fill="rgb(229,129,7)" rx="2" ry="2" />
+<text  x="303.56" y="47.5" ></text>
+</g>
+<g >
+<title>pyopenssl (150 samples, 0.10%)</title><rect x="405.1" y="37" width="1.2" height="15.0" fill="rgb(220,125,35)" rx="2" ry="2" />
+<text  x="408.13" y="47.5" ></text>
+</g>
+<g >
+<title>asciitree (38 samples, 0.03%)</title><rect x="717.2" y="37" width="0.3" height="15.0" fill="rgb(231,23,7)" rx="2" ry="2" />
+<text  x="720.17" y="47.5" ></text>
+</g>
+<g >
+<title>iniconfig (18 samples, 0.01%)</title><rect x="404.9" y="37" width="0.1" height="15.0" fill="rgb(245,63,50)" rx="2" ry="2" />
+<text  x="407.91" y="47.5" ></text>
+</g>
+<g >
+<title>ipywidgets (1,037 samples, 0.69%)</title><rect x="562.9" y="37" width="8.1" height="15.0" fill="rgb(241,40,22)" rx="2" ry="2" />
+<text  x="565.95" y="47.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (1,768 samples, 1.17%)</title><rect x="829.7" y="37" width="13.8" height="15.0" fill="rgb(214,86,44)" rx="2" ry="2" />
+<text  x="832.69" y="47.5" ></text>
+</g>
+<g >
+<title>Matthew Seal (34 samples, 0.02%)</title><rect x="738.1" y="53" width="0.2" height="15.0" fill="rgb(254,139,33)" rx="2" ry="2" />
+<text  x="741.08" y="63.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (644 samples, 0.43%)</title><rect x="129.5" y="37" width="5.0" height="15.0" fill="rgb(217,179,8)" rx="2" ry="2" />
+<text  x="132.51" y="47.5" ></text>
+</g>
+<g >
+<title>Philip Taylor (40 samples, 0.03%)</title><rect x="823.5" y="53" width="0.3" height="15.0" fill="rgb(226,33,19)" rx="2" ry="2" />
+<text  x="826.53" y="63.5" ></text>
+</g>
+<g >
+<title>iniconfig (20 samples, 0.01%)</title><rect x="1066.7" y="37" width="0.1" height="15.0" fill="rgb(250,161,37)" rx="2" ry="2" />
+<text  x="1069.69" y="47.5" ></text>
+</g>
+<g >
+<title>José Padilla (157 samples, 0.10%)</title><rect x="604.0" y="53" width="1.2" height="15.0" fill="rgb(240,83,43)" rx="2" ry="2" />
+<text  x="607.01" y="63.5" ></text>
+</g>
+<g >
+<title>Giampaolo Rodola' (1,664 samples, 1.10%)</title><rect x="332.1" y="53" width="13.0" height="15.0" fill="rgb(209,4,30)" rx="2" ry="2" />
+<text  x="335.14" y="63.5" ></text>
+</g>
+<g >
+<title>conda-package-handling (16 samples, 0.01%)</title><rect x="1010.2" y="37" width="0.1" height="15.0" fill="rgb(227,45,50)" rx="2" ry="2" />
+<text  x="1013.19" y="47.5" ></text>
+</g>
+<g >
+<title>juliet (302 samples, 0.20%)</title><rect x="788.6" y="37" width="2.3" height="15.0" fill="rgb(213,10,15)" rx="2" ry="2" />
+<text  x="791.58" y="47.5" ></text>
+</g>
+<g >
+<title>brotli (64 samples, 0.04%)</title><rect x="165.1" y="37" width="0.5" height="15.0" fill="rgb(224,11,34)" rx="2" ry="2" />
+<text  x="168.06" y="47.5" ></text>
+</g>
+<g >
+<title>ptyprocess (26 samples, 0.02%)</title><rect x="540.5" y="37" width="0.2" height="15.0" fill="rgb(237,186,39)" rx="2" ry="2" />
+<text  x="543.54" y="47.5" ></text>
+</g>
+<g >
+<title>keewis (191 samples, 0.13%)</title><rect x="1080.5" y="53" width="1.5" height="15.0" fill="rgb(208,3,40)" rx="2" ry="2" />
+<text  x="1083.48" y="63.5" ></text>
+</g>
+<g >
+<title>Matthieu Dartiailh (108 samples, 0.07%)</title><rect x="743.0" y="53" width="0.8" height="15.0" fill="rgb(237,167,43)" rx="2" ry="2" />
+<text  x="745.95" y="63.5" ></text>
+</g>
+<g >
+<title>dynesty (76 samples, 0.05%)</title><rect x="686.4" y="37" width="0.6" height="15.0" fill="rgb(242,168,3)" rx="2" ry="2" />
+<text  x="689.42" y="47.5" ></text>
+</g>
+<g >
+<title>ipyparallel (562 samples, 0.37%)</title><rect x="766.9" y="37" width="4.3" height="15.0" fill="rgb(218,177,42)" rx="2" ry="2" />
+<text  x="769.85" y="47.5" ></text>
+</g>
+<g >
+<title>mamba (135 samples, 0.09%)</title><rect x="545.5" y="37" width="1.1" height="15.0" fill="rgb(247,37,29)" rx="2" ry="2" />
+<text  x="548.52" y="47.5" ></text>
+</g>
+<g >
+<title>pycparser (76 samples, 0.05%)</title><rect x="1035.4" y="37" width="0.6" height="15.0" fill="rgb(250,39,24)" rx="2" ry="2" />
+<text  x="1038.36" y="47.5" ></text>
+</g>
+<g >
+<title>Adam Cohen (26 samples, 0.02%)</title><rect x="10.0" y="53" width="0.2" height="15.0" fill="rgb(229,139,24)" rx="2" ry="2" />
+<text  x="13.00" y="63.5" ></text>
+</g>
+<g >
+<title>Thomas Broyer (71 samples, 0.05%)</title><rect x="927.1" y="53" width="0.6" height="15.0" fill="rgb(232,47,7)" rx="2" ry="2" />
+<text  x="930.10" y="63.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (665 samples, 0.44%)</title><rect x="278.2" y="37" width="5.1" height="15.0" fill="rgb(234,48,12)" rx="2" ry="2" />
+<text  x="281.15" y="47.5" ></text>
+</g>
+<g >
+<title>pluggy (34 samples, 0.02%)</title><rect x="1066.8" y="37" width="0.3" height="15.0" fill="rgb(245,164,48)" rx="2" ry="2" />
+<text  x="1069.84" y="47.5" ></text>
+</g>
+<g >
+<title>Will Kahn-Greene (264 samples, 0.17%)</title><rect x="964.3" y="53" width="2.1" height="15.0" fill="rgb(232,172,24)" rx="2" ry="2" />
+<text  x="967.32" y="63.5" ></text>
+</g>
+<g >
+<title>pluggy (77 samples, 0.05%)</title><rect x="146.7" y="37" width="0.6" height="15.0" fill="rgb(211,201,4)" rx="2" ry="2" />
+<text  x="149.73" y="47.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (650 samples, 0.43%)</title><rect x="406.3" y="37" width="5.1" height="15.0" fill="rgb(207,52,44)" rx="2" ry="2" />
+<text  x="409.30" y="47.5" ></text>
+</g>
+<g >
+<title>arviz (93 samples, 0.06%)</title><rect x="800.6" y="37" width="0.7" height="15.0" fill="rgb(245,139,41)" rx="2" ry="2" />
+<text  x="803.61" y="47.5" ></text>
+</g>
+<g >
+<title>rich (241 samples, 0.16%)</title><rect x="201.9" y="37" width="1.9" height="15.0" fill="rgb(210,140,43)" rx="2" ry="2" />
+<text  x="204.90" y="47.5" ></text>
+</g>
+<g >
+<title>Lion Krischer (16 samples, 0.01%)</title><rect x="706.4" y="53" width="0.1" height="15.0" fill="rgb(209,173,0)" rx="2" ry="2" />
+<text  x="709.41" y="63.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (529 samples, 0.35%)</title><rect x="160.9" y="37" width="4.2" height="15.0" fill="rgb(226,133,25)" rx="2" ry="2" />
+<text  x="163.94" y="47.5" ></text>
+</g>
+<g >
+<title>rvalieris (17 samples, 0.01%)</title><rect x="1164.1" y="53" width="0.1" height="15.0" fill="rgb(247,202,53)" rx="2" ry="2" />
+<text  x="1167.10" y="63.5" ></text>
+</g>
+<g >
+<title>rich (1,727 samples, 1.14%)</title><rect x="966.4" y="37" width="13.5" height="15.0" fill="rgb(219,71,48)" rx="2" ry="2" />
+<text  x="969.38" y="47.5" ></text>
+</g>
+<g >
+<title>Eli Bendersky (280 samples, 0.19%)</title><rect x="283.8" y="53" width="2.2" height="15.0" fill="rgb(227,120,51)" rx="2" ry="2" />
+<text  x="286.84" y="63.5" ></text>
+</g>
+<g >
+<title>jupyter-client (67 samples, 0.04%)</title><rect x="645.3" y="37" width="0.5" height="15.0" fill="rgb(247,52,46)" rx="2" ry="2" />
+<text  x="648.31" y="47.5" ></text>
+</g>
+<g >
+<title>AntoinePrv (98 samples, 0.06%)</title><rect x="87.5" y="53" width="0.8" height="15.0" fill="rgb(253,224,54)" rx="2" ry="2" />
+<text  x="90.54" y="63.5" ></text>
+</g>
+<g >
+<title>Min RK (1,922 samples, 1.27%)</title><rect x="751.9" y="53" width="15.0" height="15.0" fill="rgb(246,50,48)" rx="2" ry="2" />
+<text  x="754.86" y="63.5" ></text>
+</g>
+<g >
+<title>dynesty (602 samples, 0.40%)</title><rect x="875.1" y="37" width="4.7" height="15.0" fill="rgb(254,156,13)" rx="2" ry="2" />
+<text  x="878.13" y="47.5" ></text>
+</g>
+<g >
+<title>pydantic-core (448 samples, 0.30%)</title><rect x="853.6" y="37" width="3.5" height="15.0" fill="rgb(242,158,44)" rx="2" ry="2" />
+<text  x="856.64" y="47.5" ></text>
+</g>
+<g >
+<title>jgraham (83 samples, 0.05%)</title><rect x="1067.5" y="53" width="0.6" height="15.0" fill="rgb(246,74,5)" rx="2" ry="2" />
+<text  x="1070.46" y="63.5" ></text>
+</g>
+<g >
+<title>packaging (24 samples, 0.02%)</title><rect x="742.8" y="37" width="0.2" height="15.0" fill="rgb(252,205,20)" rx="2" ry="2" />
+<text  x="745.77" y="47.5" ></text>
+</g>
+<g >
+<title>pint (62 samples, 0.04%)</title><rect x="562.5" y="37" width="0.4" height="15.0" fill="rgb(228,171,39)" rx="2" ry="2" />
+<text  x="565.46" y="47.5" ></text>
+</g>
+<g >
+<title>Sylvain Corlay (1,223 samples, 0.81%)</title><rect x="905.1" y="53" width="9.5" height="15.0" fill="rgb(247,207,48)" rx="2" ry="2" />
+<text  x="908.08" y="63.5" ></text>
+</g>
+<g >
+<title>pluggy (16 samples, 0.01%)</title><rect x="78.2" y="37" width="0.1" height="15.0" fill="rgb(247,179,53)" rx="2" ry="2" />
+<text  x="81.16" y="47.5" ></text>
+</g>
+<g >
+<title>Jeff Rouse (19 samples, 0.01%)</title><rect x="542.3" y="53" width="0.1" height="15.0" fill="rgb(223,73,18)" rx="2" ry="2" />
+<text  x="545.27" y="63.5" ></text>
+</g>
+<g >
+<title>Piti Ongmongkolkul (181 samples, 0.12%)</title><rect x="823.8" y="53" width="1.5" height="15.0" fill="rgb(206,131,7)" rx="2" ry="2" />
+<text  x="826.84" y="63.5" ></text>
+</g>
+<g >
+<title>lscsoft-glue (735 samples, 0.49%)</title><rect x="1012.7" y="37" width="5.8" height="15.0" fill="rgb(210,194,30)" rx="2" ry="2" />
+<text  x="1015.74" y="47.5" ></text>
+</g>
+<g >
+<title>getdist (304 samples, 0.20%)</title><rect x="100.9" y="37" width="2.3" height="15.0" fill="rgb(223,78,48)" rx="2" ry="2" />
+<text  x="103.88" y="47.5" ></text>
+</g>
+<g >
+<title>Karthik Nadig (311 samples, 0.21%)</title><rect x="641.4" y="53" width="2.4" height="15.0" fill="rgb(243,49,17)" rx="2" ry="2" />
+<text  x="644.37" y="63.5" ></text>
+</g>
+<g >
+<title>Sergey Koposov (245 samples, 0.16%)</title><rect x="879.8" y="53" width="1.9" height="15.0" fill="rgb(254,15,31)" rx="2" ry="2" />
+<text  x="882.83" y="63.5" ></text>
+</g>
+<g >
+<title>kiwisolver (50 samples, 0.03%)</title><rect x="152.7" y="37" width="0.4" height="15.0" fill="rgb(232,31,23)" rx="2" ry="2" />
+<text  x="155.68" y="47.5" ></text>
+</g>
+<g >
+<title>Oliver Bestwalter (16 samples, 0.01%)</title><rect x="792.5" y="53" width="0.1" height="15.0" fill="rgb(207,172,36)" rx="2" ry="2" />
+<text  x="795.48" y="63.5" ></text>
+</g>
+<g >
+<title>imagesize (14 samples, 0.01%)</title><rect x="561.6" y="37" width="0.1" height="15.0" fill="rgb(230,13,29)" rx="2" ry="2" />
+<text  x="564.62" y="47.5" ></text>
+</g>
+<g >
+<title>corner (32 samples, 0.02%)</title><rect x="1141.1" y="37" width="0.3" height="15.0" fill="rgb(207,184,43)" rx="2" ry="2" />
+<text  x="1144.13" y="47.5" ></text>
+</g>
+<g >
+<title>referencing (271 samples, 0.18%)</title><rect x="620.4" y="37" width="2.1" height="15.0" fill="rgb(228,16,43)" rx="2" ry="2" />
+<text  x="623.37" y="47.5" ></text>
+</g>
+<g >
+<title>py-cpuinfo (581 samples, 0.38%)</title><rect x="721.6" y="37" width="4.5" height="15.0" fill="rgb(236,218,26)" rx="2" ry="2" />
+<text  x="724.61" y="47.5" ></text>
+</g>
+<g >
+<title>tables (1,058 samples, 0.70%)</title><rect x="88.6" y="37" width="8.2" height="15.0" fill="rgb(240,159,29)" rx="2" ry="2" />
+<text  x="91.56" y="47.5" ></text>
+</g>
+<g >
+<title>Paul Kehrer (108 samples, 0.07%)</title><rect x="815.0" y="53" width="0.9" height="15.0" fill="rgb(250,129,27)" rx="2" ry="2" />
+<text  x="818.04" y="63.5" ></text>
+</g>
+<g >
+<title>Steven Silvester (314 samples, 0.21%)</title><rect x="895.7" y="53" width="2.4" height="15.0" fill="rgb(218,33,19)" rx="2" ry="2" />
+<text  x="898.69" y="63.5" ></text>
+</g>
+<g >
+<title>Jonathan Frederic (2,074 samples, 1.37%)</title><rect x="562.9" y="53" width="16.2" height="15.0" fill="rgb(208,183,41)" rx="2" ry="2" />
+<text  x="565.95" y="63.5" ></text>
+</g>
+<g >
+<title>Mahmoud Hashemi (1,104 samples, 0.73%)</title><rect x="708.3" y="53" width="8.7" height="15.0" fill="rgb(213,111,30)" rx="2" ry="2" />
+<text  x="711.34" y="63.5" ></text>
+</g>
+<g >
+<title>Joe Hamman (198 samples, 0.13%)</title><rect x="543.8" y="53" width="1.5" height="15.0" fill="rgb(226,179,35)" rx="2" ry="2" />
+<text  x="546.79" y="63.5" ></text>
+</g>
+<g >
+<title>Pradyun Gedam (115 samples, 0.08%)</title><rect x="825.5" y="53" width="0.9" height="15.0" fill="rgb(226,40,15)" rx="2" ry="2" />
+<text  x="828.47" y="63.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (548 samples, 0.36%)</title><rect x="296.0" y="37" width="4.3" height="15.0" fill="rgb(226,63,20)" rx="2" ry="2" />
+<text  x="298.99" y="47.5" ></text>
+</g>
+<g >
+<title>Keewis (179 samples, 0.12%)</title><rect x="643.8" y="53" width="1.4" height="15.0" fill="rgb(236,45,3)" rx="2" ry="2" />
+<text  x="646.80" y="63.5" ></text>
+</g>
+<g >
+<title>Eddy Petrișor (14 samples, 0.01%)</title><rect x="283.7" y="53" width="0.1" height="15.0" fill="rgb(245,0,45)" rx="2" ry="2" />
+<text  x="286.73" y="63.5" ></text>
+</g>
+<g >
+<title>psutil (1,664 samples, 1.10%)</title><rect x="332.1" y="37" width="13.0" height="15.0" fill="rgb(207,81,35)" rx="2" ry="2" />
+<text  x="335.14" y="47.5" ></text>
+</g>
+<g >
+<title>Vladimir Sudilovsky (77 samples, 0.05%)</title><rect x="951.5" y="53" width="0.6" height="15.0" fill="rgb(228,148,19)" rx="2" ry="2" />
+<text  x="954.52" y="63.5" ></text>
+</g>
+<g >
+<title>fast-histogram (121 samples, 0.08%)</title><rect x="934.0" y="37" width="0.9" height="15.0" fill="rgb(210,40,6)" rx="2" ry="2" />
+<text  x="937.00" y="47.5" ></text>
+</g>
+<g >
+<title>interpolation (58 samples, 0.04%)</title><rect x="979.9" y="37" width="0.4" height="15.0" fill="rgb(217,58,24)" rx="2" ry="2" />
+<text  x="982.85" y="47.5" ></text>
+</g>
+<g >
+<title>Pablo Winant (121 samples, 0.08%)</title><rect x="808.7" y="53" width="0.9" height="15.0" fill="rgb(210,204,20)" rx="2" ry="2" />
+<text  x="811.65" y="63.5" ></text>
+</g>
+<g >
+<title>munkres (64 samples, 0.04%)</title><rect x="144.7" y="37" width="0.5" height="15.0" fill="rgb(225,219,20)" rx="2" ry="2" />
+<text  x="147.74" y="47.5" ></text>
+</g>
+<g >
+<title>wheel (31 samples, 0.02%)</title><rect x="815.9" y="37" width="0.2" height="15.0" fill="rgb(235,219,23)" rx="2" ry="2" />
+<text  x="818.88" y="47.5" ></text>
+</g>
+<g >
+<title>Samuel Colvin (1,066 samples, 0.70%)</title><rect x="848.8" y="53" width="8.3" height="15.0" fill="rgb(253,84,24)" rx="2" ry="2" />
+<text  x="851.82" y="63.5" ></text>
+</g>
+<g >
+<title>Uiri (193 samples, 0.13%)</title><rect x="941.0" y="53" width="1.5" height="15.0" fill="rgb(214,175,10)" rx="2" ry="2" />
+<text  x="943.95" y="63.5" ></text>
+</g>
+<g >
+<title>regions (629 samples, 0.42%)</title><rect x="688.2" y="37" width="5.0" height="15.0" fill="rgb(214,150,8)" rx="2" ry="2" />
+<text  x="691.25" y="47.5" ></text>
+</g>
+<g >
+<title>executing (126 samples, 0.08%)</title><rect x="320.3" y="37" width="1.0" height="15.0" fill="rgb(239,198,17)" rx="2" ry="2" />
+<text  x="323.30" y="47.5" ></text>
+</g>
+<g >
+<title>threadpoolctl (33 samples, 0.02%)</title><rect x="1067.1" y="37" width="0.3" height="15.0" fill="rgb(251,107,48)" rx="2" ry="2" />
+<text  x="1070.12" y="47.5" ></text>
+</g>
+<g >
+<title>xarray (191 samples, 0.13%)</title><rect x="1080.5" y="37" width="1.5" height="15.0" fill="rgb(250,90,40)" rx="2" ry="2" />
+<text  x="1083.48" y="47.5" ></text>
+</g>
+<g >
+<title>omry (155 samples, 0.10%)</title><rect x="1134.1" y="53" width="1.3" height="15.0" fill="rgb(217,126,25)" rx="2" ry="2" />
+<text  x="1137.15" y="63.5" ></text>
+</g>
+<g >
+<title>cached-property (27 samples, 0.02%)</title><rect x="201.6" y="37" width="0.2" height="15.0" fill="rgb(234,43,5)" rx="2" ry="2" />
+<text  x="204.60" y="47.5" ></text>
+</g>
+<g >
+<title>dynesty (245 samples, 0.16%)</title><rect x="879.8" y="37" width="1.9" height="15.0" fill="rgb(228,96,44)" rx="2" ry="2" />
+<text  x="882.83" y="47.5" ></text>
+</g>
+<g >
+<title>platformdirs (21 samples, 0.01%)</title><rect x="620.2" y="37" width="0.2" height="15.0" fill="rgb(217,160,15)" rx="2" ry="2" />
+<text  x="623.20" y="47.5" ></text>
+</g>
+<g >
+<title>inflect (504 samples, 0.33%)</title><rect x="471.2" y="37" width="3.9" height="15.0" fill="rgb(222,26,48)" rx="2" ry="2" />
+<text  x="474.17" y="47.5" ></text>
+</g>
+<g >
+<title>Jeff Lindsay (16 samples, 0.01%)</title><rect x="540.2" y="53" width="0.1" height="15.0" fill="rgb(217,64,18)" rx="2" ry="2" />
+<text  x="543.16" y="63.5" ></text>
+</g>
+<g >
+<title>tabulate (336 samples, 0.22%)</title><rect x="872.5" y="37" width="2.6" height="15.0" fill="rgb(252,71,16)" rx="2" ry="2" />
+<text  x="875.51" y="47.5" ></text>
+</g>
+<g >
+<title>pydantic (70 samples, 0.05%)</title><rect x="925.7" y="37" width="0.5" height="15.0" fill="rgb(253,171,16)" rx="2" ry="2" />
+<text  x="928.65" y="47.5" ></text>
+</g>
+<g >
+<title>nest-asyncio (45 samples, 0.03%)</title><rect x="1036.4" y="37" width="0.4" height="15.0" fill="rgb(246,135,52)" rx="2" ry="2" />
+<text  x="1039.41" y="47.5" ></text>
+</g>
+<g >
+<title>line-profiler (34 samples, 0.02%)</title><rect x="926.2" y="37" width="0.3" height="15.0" fill="rgb(206,43,4)" rx="2" ry="2" />
+<text  x="929.20" y="47.5" ></text>
+</g>
+<g >
+<title>fastjsonschema (23 samples, 0.02%)</title><rect x="681.5" y="37" width="0.2" height="15.0" fill="rgb(217,226,12)" rx="2" ry="2" />
+<text  x="684.49" y="47.5" ></text>
+</g>
+<g >
+<title>Weston Pace (243 samples, 0.16%)</title><rect x="962.4" y="53" width="1.9" height="15.0" fill="rgb(237,0,37)" rx="2" ry="2" />
+<text  x="965.42" y="63.5" ></text>
+</g>
+<g >
+<title>Hernan Grecco (581 samples, 0.38%)</title><rect x="394.1" y="53" width="4.5" height="15.0" fill="rgb(239,139,8)" rx="2" ry="2" />
+<text  x="397.06" y="63.5" ></text>
+</g>
+<g >
+<title>ligo-segments (188 samples, 0.12%)</title><rect x="1082.0" y="37" width="1.4" height="15.0" fill="rgb(206,6,40)" rx="2" ry="2" />
+<text  x="1084.97" y="47.5" ></text>
+</g>
+<g >
+<title>setuptools (632 samples, 0.42%)</title><rect x="369.2" y="37" width="5.0" height="15.0" fill="rgb(242,165,4)" rx="2" ry="2" />
+<text  x="372.22" y="47.5" ></text>
+</g>
+<g >
+<title>Will McGugan (1,727 samples, 1.14%)</title><rect x="966.4" y="53" width="13.5" height="15.0" fill="rgb(223,31,22)" rx="2" ry="2" />
+<text  x="969.38" y="63.5" ></text>
+</g>
+<g >
+<title>Kris (23 samples, 0.02%)</title><rect x="681.5" y="53" width="0.2" height="15.0" fill="rgb(225,117,9)" rx="2" ry="2" />
+<text  x="684.49" y="63.5" ></text>
+</g>
+<g >
+<title>Evgenii Kliuchnikov (37 samples, 0.02%)</title><rect x="300.3" y="53" width="0.3" height="15.0" fill="rgb(239,207,38)" rx="2" ry="2" />
+<text  x="303.27" y="63.5" ></text>
+</g>
+<g >
+<title>Simon Sapin (140 samples, 0.09%)</title><rect x="881.7" y="53" width="1.1" height="15.0" fill="rgb(223,108,20)" rx="2" ry="2" />
+<text  x="884.74" y="63.5" ></text>
+</g>
+<g >
+<title>Michele Simionato (255 samples, 0.17%)</title><rect x="748.9" y="53" width="2.0" height="15.0" fill="rgb(242,16,1)" rx="2" ry="2" />
+<text  x="751.91" y="63.5" ></text>
+</g>
+<g >
+<title>pyarrow (243 samples, 0.16%)</title><rect x="962.4" y="37" width="1.9" height="15.0" fill="rgb(239,151,13)" rx="2" ry="2" />
+<text  x="965.42" y="47.5" ></text>
+</g>
+<g >
+<title>pydantic (96 samples, 0.06%)</title><rect x="290.7" y="37" width="0.7" height="15.0" fill="rgb(245,72,49)" rx="2" ry="2" />
+<text  x="293.68" y="47.5" ></text>
+</g>
+<g >
+<title>Oriol (ZBook) (36 samples, 0.02%)</title><rect x="800.3" y="53" width="0.3" height="15.0" fill="rgb(246,48,20)" rx="2" ry="2" />
+<text  x="803.33" y="63.5" ></text>
+</g>
+<g >
+<title>John MacFarlane (50 samples, 0.03%)</title><rect x="547.3" y="53" width="0.4" height="15.0" fill="rgb(252,72,54)" rx="2" ry="2" />
+<text  x="550.29" y="63.5" ></text>
+</g>
+<g >
+<title>Behdad Esfahbod (2,686 samples, 1.78%)</title><rect x="106.7" y="53" width="20.9" height="15.0" fill="rgb(227,65,36)" rx="2" ry="2" />
+<text  x="109.69" y="63.5" ></text>
+</g>
+<g >
+<title>Daniel Hahler (19 samples, 0.01%)</title><rect x="199.0" y="53" width="0.1" height="15.0" fill="rgb(250,201,7)" rx="2" ry="2" />
+<text  x="201.97" y="63.5" ></text>
+</g>
+<g >
+<title>fastjsonschema (125 samples, 0.08%)</title><rect x="747.9" y="37" width="1.0" height="15.0" fill="rgb(207,152,31)" rx="2" ry="2" />
+<text  x="750.94" y="47.5" ></text>
+</g>
+<g >
+<title>jsonschema (1,735 samples, 1.15%)</title><rect x="606.4" y="37" width="13.6" height="15.0" fill="rgb(214,114,52)" rx="2" ry="2" />
+<text  x="609.43" y="47.5" ></text>
+</g>
+<g >
+<title>Mark Adams (128 samples, 0.08%)</title><rect x="718.2" y="53" width="1.0" height="15.0" fill="rgb(207,90,48)" rx="2" ry="2" />
+<text  x="721.19" y="63.5" ></text>
+</g>
+<g >
+<title>pydantic-core (87 samples, 0.06%)</title><rect x="49.4" y="37" width="0.7" height="15.0" fill="rgb(242,149,46)" rx="2" ry="2" />
+<text  x="52.40" y="47.5" ></text>
+</g>
+<g >
+<title>Jasha10 (87 samples, 0.06%)</title><rect x="429.1" y="53" width="0.6" height="15.0" fill="rgb(225,30,5)" rx="2" ry="2" />
+<text  x="432.06" y="63.5" ></text>
+</g>
+<g >
+<title>Jasha (78 samples, 0.05%)</title><rect x="429.7" y="53" width="0.6" height="15.0" fill="rgb(234,32,30)" rx="2" ry="2" />
+<text  x="432.74" y="63.5" ></text>
+</g>
+<g >
+<title>pickleshare (15 samples, 0.01%)</title><rect x="547.2" y="37" width="0.1" height="15.0" fill="rgb(216,77,50)" rx="2" ry="2" />
+<text  x="550.18" y="47.5" ></text>
+</g>
+<g >
+<title>John Veitch (1,725 samples, 1.14%)</title><rect x="547.7" y="53" width="13.4" height="15.0" fill="rgb(243,141,39)" rx="2" ry="2" />
+<text  x="550.68" y="63.5" ></text>
+</g>
+<g >
+<title>Antoine Prouvost (104 samples, 0.07%)</title><rect x="86.7" y="53" width="0.8" height="15.0" fill="rgb(211,219,54)" rx="2" ry="2" />
+<text  x="89.73" y="63.5" ></text>
+</g>
+<g >
+<title>Per A Brodtkorb (387 samples, 0.26%)</title><rect x="820.5" y="53" width="3.0" height="15.0" fill="rgb(253,113,32)" rx="2" ry="2" />
+<text  x="823.51" y="63.5" ></text>
+</g>
+<g >
+<title>kiwisolver (75 samples, 0.05%)</title><rect x="743.8" y="37" width="0.6" height="15.0" fill="rgb(248,38,35)" rx="2" ry="2" />
+<text  x="746.80" y="47.5" ></text>
+</g>
+<g >
+<title>conda-package-streaming (43 samples, 0.03%)</title><rect x="199.3" y="37" width="0.3" height="15.0" fill="rgb(228,81,35)" rx="2" ry="2" />
+<text  x="202.28" y="47.5" ></text>
+</g>
+<g >
+<title>Guillaume Ayoub (128 samples, 0.08%)</title><rect x="385.5" y="53" width="1.0" height="15.0" fill="rgb(250,36,5)" rx="2" ry="2" />
+<text  x="388.50" y="63.5" ></text>
+</g>
+<g >
+<title>kiwisolver (52 samples, 0.03%)</title><rect x="847.6" y="37" width="0.4" height="15.0" fill="rgb(219,178,25)" rx="2" ry="2" />
+<text  x="850.59" y="47.5" ></text>
+</g>
+<g >
+<title>charset-normalizer (267 samples, 0.18%)</title><rect x="914.6" y="37" width="2.1" height="15.0" fill="rgb(217,123,34)" rx="2" ry="2" />
+<text  x="917.63" y="47.5" ></text>
+</g>
+<g >
+<title>Johan Mabille (135 samples, 0.09%)</title><rect x="545.5" y="53" width="1.1" height="15.0" fill="rgb(238,153,37)" rx="2" ry="2" />
+<text  x="548.52" y="63.5" ></text>
+</g>
+<g >
+<title>Anne van Kesteren (295 samples, 0.20%)</title><rect x="75.2" y="53" width="2.3" height="15.0" fill="rgb(206,54,27)" rx="2" ry="2" />
+<text  x="78.15" y="63.5" ></text>
+</g>
+<g >
+<title>pyarrow (134 samples, 0.09%)</title><rect x="321.3" y="37" width="1.0" height="15.0" fill="rgb(206,7,45)" rx="2" ry="2" />
+<text  x="324.29" y="47.5" ></text>
+</g>
+<g >
+<title>jupyter-core (54 samples, 0.04%)</title><rect x="897.7" y="37" width="0.4" height="15.0" fill="rgb(246,187,27)" rx="2" ry="2" />
+<text  x="900.72" y="47.5" ></text>
+</g>
+<g >
+<title>Gael varoquaux (120 samples, 0.08%)</title><rect x="324.1" y="53" width="0.9" height="15.0" fill="rgb(222,132,40)" rx="2" ry="2" />
+<text  x="327.06" y="63.5" ></text>
+</g>
+<g >
+<title>Anorov (72 samples, 0.05%)</title><rect x="77.5" y="53" width="0.5" height="15.0" fill="rgb(237,185,2)" rx="2" ry="2" />
+<text  x="80.45" y="63.5" ></text>
+</g>
+<g >
+<title>Talley Lambert (14 samples, 0.01%)</title><rect x="919.0" y="53" width="0.1" height="15.0" fill="rgb(223,214,43)" rx="2" ry="2" />
+<text  x="922.00" y="63.5" ></text>
+</g>
+<g >
+<title>asttokens (56 samples, 0.04%)</title><rect x="936.0" y="37" width="0.4" height="15.0" fill="rgb(240,215,35)" rx="2" ry="2" />
+<text  x="938.97" y="47.5" ></text>
+</g>
+<g >
+<title>line-profiler (13 samples, 0.01%)</title><rect x="1011.6" y="37" width="0.1" height="15.0" fill="rgb(210,179,4)" rx="2" ry="2" />
+<text  x="1014.63" y="47.5" ></text>
+</g>
+<g >
+<title>Reinhard Prix (1,768 samples, 1.17%)</title><rect x="829.7" y="53" width="13.8" height="15.0" fill="rgb(210,60,47)" rx="2" ry="2" />
+<text  x="832.69" y="63.5" ></text>
+</g>
+<g >
+<title>pydantic (85 samples, 0.06%)</title><rect x="717.5" y="37" width="0.6" height="15.0" fill="rgb(235,1,13)" rx="2" ry="2" />
+<text  x="720.47" y="47.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (4,676 samples, 3.09%)</title><rect x="11.5" y="37" width="36.5" height="15.0" fill="rgb(206,52,30)" rx="2" ry="2" />
+<text  x="14.47" y="47.5" >pyt..</text>
+</g>
+<g >
+<title>Bruno Oliveira (77 samples, 0.05%)</title><rect x="146.7" y="53" width="0.6" height="15.0" fill="rgb(206,5,44)" rx="2" ry="2" />
+<text  x="149.73" y="63.5" ></text>
+</g>
+<g >
+<title>channa (486 samples, 0.32%)</title><rect x="1006.3" y="53" width="3.8" height="15.0" fill="rgb(219,1,54)" rx="2" ry="2" />
+<text  x="1009.27" y="63.5" ></text>
+</g>
+<g >
+<title>pyopenssl (224 samples, 0.15%)</title><rect x="54.9" y="37" width="1.8" height="15.0" fill="rgb(242,44,22)" rx="2" ry="2" />
+<text  x="57.94" y="47.5" ></text>
+</g>
+<g >
+<title>Antonio Valentino (1,090 samples, 0.72%)</title><rect x="88.3" y="53" width="8.5" height="15.0" fill="rgb(219,24,8)" rx="2" ry="2" />
+<text  x="91.31" y="63.5" ></text>
+</g>
+<g >
+<title>fastjsonschema (34 samples, 0.02%)</title><rect x="103.2" y="37" width="0.3" height="15.0" fill="rgb(208,86,51)" rx="2" ry="2" />
+<text  x="106.25" y="47.5" ></text>
+</g>
+<g >
+<title>mamba (752 samples, 0.50%)</title><rect x="980.3" y="37" width="5.9" height="15.0" fill="rgb(248,156,49)" rx="2" ry="2" />
+<text  x="983.30" y="47.5" ></text>
+</g>
+<g >
+<title>jupyter-core (36 samples, 0.02%)</title><rect x="1141.8" y="37" width="0.3" height="15.0" fill="rgb(253,185,52)" rx="2" ry="2" />
+<text  x="1144.77" y="47.5" ></text>
+</g>
+<g >
+<title>debugpy (533 samples, 0.35%)</title><rect x="816.1" y="37" width="4.2" height="15.0" fill="rgb(243,142,7)" rx="2" ry="2" />
+<text  x="819.13" y="47.5" ></text>
+</g>
+<g >
+<title>backports.functools-lru-cache (351 samples, 0.23%)</title><rect x="462.5" y="37" width="2.7" height="15.0" fill="rgb(231,42,11)" rx="2" ry="2" />
+<text  x="465.46" y="47.5" ></text>
+</g>
+<g >
+<title>setuptools (995 samples, 0.66%)</title><rect x="64.7" y="37" width="7.8" height="15.0" fill="rgb(221,129,36)" rx="2" ry="2" />
+<text  x="67.70" y="47.5" ></text>
+</g>
+<g >
+<title>Duncan Brown (175 samples, 0.12%)</title><rect x="275.0" y="53" width="1.4" height="15.0" fill="rgb(223,147,37)" rx="2" ry="2" />
+<text  x="278.05" y="63.5" ></text>
+</g>
+<g >
+<title>Fernando Perez (22 samples, 0.01%)</title><rect x="303.6" y="53" width="0.2" height="15.0" fill="rgb(224,135,18)" rx="2" ry="2" />
+<text  x="306.63" y="63.5" ></text>
+</g>
+<g >
+<title>jeepney (195 samples, 0.13%)</title><rect x="927.9" y="37" width="1.5" height="15.0" fill="rgb(220,79,26)" rx="2" ry="2" />
+<text  x="930.86" y="47.5" ></text>
+</g>
+<g >
+<title>debugpy (356 samples, 0.24%)</title><rect x="291.4" y="37" width="2.8" height="15.0" fill="rgb(216,20,4)" rx="2" ry="2" />
+<text  x="294.43" y="47.5" ></text>
+</g>
+<g >
+<title>erdewit (45 samples, 0.03%)</title><rect x="1036.4" y="53" width="0.4" height="15.0" fill="rgb(227,61,49)" rx="2" ry="2" />
+<text  x="1039.41" y="63.5" ></text>
+</g>
+<g >
+<title>keyring (1,328 samples, 0.88%)</title><rect x="478.1" y="37" width="10.3" height="15.0" fill="rgb(219,196,21)" rx="2" ry="2" />
+<text  x="481.07" y="47.5" ></text>
+</g>
+<g >
+<title>lscsoft-glue (167 samples, 0.11%)</title><rect x="276.9" y="37" width="1.3" height="15.0" fill="rgb(209,204,13)" rx="2" ry="2" />
+<text  x="279.85" y="47.5" ></text>
+</g>
+<g >
+<title>François Saint-Jacques (134 samples, 0.09%)</title><rect x="321.3" y="53" width="1.0" height="15.0" fill="rgb(208,223,2)" rx="2" ry="2" />
+<text  x="324.29" y="63.5" ></text>
+</g>
+<g >
+<title>Michal Horejsek (125 samples, 0.08%)</title><rect x="747.9" y="53" width="1.0" height="15.0" fill="rgb(209,173,5)" rx="2" ry="2" />
+<text  x="750.94" y="63.5" ></text>
+</g>
+<g >
+<title>gitpython (1,129 samples, 0.75%)</title><rect x="862.7" y="37" width="8.8" height="15.0" fill="rgb(227,58,14)" rx="2" ry="2" />
+<text  x="865.69" y="47.5" ></text>
+</g>
+<g >
+<title>pyzmq (862 samples, 0.57%)</title><rect x="760.1" y="37" width="6.8" height="15.0" fill="rgb(219,154,8)" rx="2" ry="2" />
+<text  x="763.13" y="47.5" ></text>
+</g>
+<g >
+<title>numdifftools (244 samples, 0.16%)</title><rect x="1139.2" y="37" width="1.9" height="15.0" fill="rgb(220,44,12)" rx="2" ry="2" />
+<text  x="1142.17" y="47.5" ></text>
+</g>
+<g >
+<title>MatthieuDartiailh (75 samples, 0.05%)</title><rect x="743.8" y="53" width="0.6" height="15.0" fill="rgb(237,22,11)" rx="2" ry="2" />
+<text  x="746.80" y="63.5" ></text>
+</g>
+<g >
+<title>packaging (83 samples, 0.05%)</title><rect x="144.0" y="37" width="0.7" height="15.0" fill="rgb(222,178,22)" rx="2" ry="2" />
+<text  x="147.03" y="47.5" ></text>
+</g>
+<g >
+<title>arviz (28 samples, 0.02%)</title><rect x="825.3" y="37" width="0.2" height="15.0" fill="rgb(230,111,32)" rx="2" ry="2" />
+<text  x="828.26" y="47.5" ></text>
+</g>
+<g >
+<title>smmap (15 samples, 0.01%)</title><rect x="717.1" y="37" width="0.1" height="15.0" fill="rgb(228,64,32)" rx="2" ry="2" />
+<text  x="720.06" y="47.5" ></text>
+</g>
+<g >
+<title>python-ligo-lw (916 samples, 0.61%)</title><rect x="1164.2" y="37" width="7.2" height="15.0" fill="rgb(246,214,50)" rx="2" ry="2" />
+<text  x="1167.23" y="47.5" ></text>
+</g>
+<g >
+<title>pyarrow (168 samples, 0.11%)</title><rect x="53.6" y="37" width="1.3" height="15.0" fill="rgb(252,191,7)" rx="2" ry="2" />
+<text  x="56.62" y="47.5" ></text>
+</g>
+<g >
+<title>jvr (401 samples, 0.27%)</title><rect x="1077.4" y="53" width="3.1" height="15.0" fill="rgb(253,210,3)" rx="2" ry="2" />
+<text  x="1080.35" y="63.5" ></text>
+</g>
+<g >
+<title>MinRK (1,890 samples, 1.25%)</title><rect x="766.9" y="53" width="14.7" height="15.0" fill="rgb(219,172,17)" rx="2" ry="2" />
+<text  x="769.85" y="63.5" ></text>
+</g>
+<g >
+<title>markdown-it-py (63 samples, 0.04%)</title><rect x="919.1" y="37" width="0.5" height="15.0" fill="rgb(219,190,16)" rx="2" ry="2" />
+<text  x="922.11" y="47.5" ></text>
+</g>
+<g >
+<title>ads (83 samples, 0.05%)</title><rect x="990.3" y="37" width="0.7" height="15.0" fill="rgb(251,100,21)" rx="2" ry="2" />
+<text  x="993.34" y="47.5" ></text>
+</g>
+<g >
+<title>arviz (78 samples, 0.05%)</title><rect x="160.3" y="37" width="0.6" height="15.0" fill="rgb(220,115,47)" rx="2" ry="2" />
+<text  x="163.33" y="47.5" ></text>
+</g>
+<g >
+<title>pluggy (20 samples, 0.01%)</title><rect x="1142.2" y="37" width="0.2" height="15.0" fill="rgb(254,203,52)" rx="2" ry="2" />
+<text  x="1145.22" y="47.5" ></text>
+</g>
+<g >
+<title>threadpoolctl (46 samples, 0.03%)</title><rect x="623.1" y="37" width="0.4" height="15.0" fill="rgb(212,219,10)" rx="2" ry="2" />
+<text  x="626.10" y="47.5" ></text>
+</g>
+<g >
+<title>lscsoft-glue (696 samples, 0.46%)</title><rect x="648.1" y="37" width="5.4" height="15.0" fill="rgb(254,41,23)" rx="2" ry="2" />
+<text  x="651.06" y="47.5" ></text>
+</g>
+</g>
+</svg>

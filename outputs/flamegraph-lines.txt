@@ -1,0 +1,104 @@
+Adrian Garcia Badaracco;annotated-types 1351
+Samuel Colvin;annotated-types 1503
+Leo Singer;astropy-healpix 2780
+Thomas Robitaille;astropy-healpix 17124
+Christoph Deil;astropy-healpix 4942
+Jason R. Coombs;backports.functools-lru-cache 4584
+Laura Kreidberg;batman-package 19009
+Daniel Feldroy;cached-property 802
+Bartek Sokorski;cached-property 953
+Daniel Roy Greenfeld;cached-property 747
+Daniel;cached-property 113
+pyup-bot;cached-property 38
+Daniel Greenfeld;cached-property 3206
+George Sakkis;cached-property 1060
+dependabot[bot];charset-normalizer 240
+TAHRI Ahmed R;charset-normalizer 194120
+Ahmed TAHRI;charset-normalizer 3238
+conda-bot;conda-content-trust 999
+Jannis Leidel;conda-content-trust 205
+Ken Odegard;conda-content-trust 4321
+Sebastien Awwad;conda-content-trust 12266
+conda-bot;conda-package-handling 1237
+Daniel Holth;conda-package-handling 7581
+Ray Donnelly;conda-package-handling 373
+leej3;conda-package-handling 100
+Mike Sarahan;conda-package-handling 3032
+Michael Sarahan;conda-package-handling 5627
+Daniel Holth;conda-package-streaming 3838
+rvalieris;conda-tree 597
+Renan Valieris;conda-tree 141
+Alexander Schlarb;conda-tree 60
+Thomas Robitaille;fast-histogram 4259
+Alexander Trettin;fast-histogram 1179
+Jason R. Coombs;importlib-metadata 6772
+Barry Warsaw;importlib-metadata 2375
+Jason R. Coombs;importlib-resources 9709
+Brett Cannon;importlib-resources 2180
+Barry Warsaw;importlib-resources 4377
+Jason R. Coombs;jaraco.classes 5074
+pre-commit-ci[bot];jsonschema-specifications 22
+Julian Berman;jsonschema-specifications 2416
+pre-commit-ci[bot];jupyter-client 366
+Steven Silvester;jupyter-client 10380
+Min RK;jupyter-client 6760
+Matthias Bussonnier;jupyter-client 931
+David Brochart;jupyter-client 10680
+Kevin Bates;jupyter-client 8606
+GitHub Action;jupyter-client 584
+Thomas Kluyver;jupyter-client 14767
+Matthew Seal;jupyter-client 939
+MinRK;jupyter-client 14517
+Matthias BUSSONNIER;jupyter-client 2070
+Brian E. Granger;jupyter-client 1918
+Brian Granger;jupyter-client 5597
+epatters;jupyter-client 2335
+pre-commit-ci[bot];jupyter-core 209
+Steven Silvester;jupyter-core 6384
+Matthias Bussonnier;jupyter-core 209
+Min RK;jupyter-core 7278
+Jason Grout;jupyter-core 1141
+Kevin Bates;jupyter-core 173
+Thomas Kluyver;jupyter-core 1061
+dependabot[bot];jupyterlab-pygments 103
+martinRenou;jupyterlab-pygments 7399
+Frédéric Collonval;jupyterlab-pygments 26
+Sylvain Corlay;jupyterlab-pygments 462
+Max Klein;jupyterlab-pygments 1
+Bartosz Telenczuk;jupyterlab-pygments 2
+Maarten Breddels;jupyterlab-pygments 2
+Jason Grout;jupyterlab-widgets 493545
+Sylvain Corlay;jupyterlab-widgets 213510
+Pascal Bugnion;jupyterlab-widgets 18230
+Jonathan Frederic;jupyterlab-widgets 417271
+Kipp Cannon;ligo-segments 3138
+Duncan Macleod;ligo-segments 1270
+Leo Singer;ligo-segments 506
+kipp;ligo-segments 8102
+Theelx;line-profiler 7646
+joncrall;line-profiler 31896
+Jon Crall;line-profiler 33108
+dependabot[bot];line-profiler 46
+Brett Olsen;line-profiler 311
+Robert Kern;line-profiler 4131
+Duncan Macleod;lscsoft-glue 57676
+Kipp Cannon;lscsoft-glue 26315
+Leo Singer;lscsoft-glue 5101
+Duncan Brown;lscsoft-glue 37210
+Larne Pekowsky;lscsoft-glue 6898
+kipp;lscsoft-glue 106529
+duncan;lscsoft-glue 68629
+Chris Sewell;markdown-it-py 91754
+Taneli Hukkinen;markdown-it-py 18924
+Fernando Perez;matplotlib-inline 250
+Matthias Bussonnier;matplotlib-inline 18
+martinRenou;matplotlib-inline 435
+Min RK;matplotlib-inline 48
+Thomas Kluyver;matplotlib-inline 8
+MinRK;matplotlib-inline 508
+Brian E. Granger;matplotlib-inline 30
+Daniel B. Vasquez;matplotlib-inline 77
+Brian Granger;matplotlib-inline 109
+Bo Bayles;more-itertools 17816
+Ewald de Wit;nest-asyncio 635
+erdewit;nest-asyncio 1174

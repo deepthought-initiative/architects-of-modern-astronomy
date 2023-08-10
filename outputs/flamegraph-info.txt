@@ -1,0 +1,505 @@
+Adrian Garcia Badaracco;annotated-types 1351
+Samuel Colvin;annotated-types 1503
+Leo Singer;astropy-healpix 2780
+Thomas Robitaille;astropy-healpix 17124
+Christoph Deil;astropy-healpix 4942
+Jason R. Coombs;backports.functools-lru-cache 4584
+Laura Kreidberg;batman-package 19009
+Daniel Feldroy;cached-property 802
+Bartek Sokorski;cached-property 953
+Daniel Roy Greenfeld;cached-property 747
+Daniel;cached-property 113
+pyup-bot;cached-property 38
+Daniel Greenfeld;cached-property 3206
+George Sakkis;cached-property 1060
+dependabot[bot];charset-normalizer 240
+TAHRI Ahmed R;charset-normalizer 194120
+Ahmed TAHRI;charset-normalizer 3238
+conda-bot;conda-content-trust 999
+Jannis Leidel;conda-content-trust 205
+Ken Odegard;conda-content-trust 4321
+Sebastien Awwad;conda-content-trust 12266
+conda-bot;conda-package-handling 1237
+Daniel Holth;conda-package-handling 7581
+Ray Donnelly;conda-package-handling 373
+leej3;conda-package-handling 100
+Mike Sarahan;conda-package-handling 3032
+Michael Sarahan;conda-package-handling 5627
+Daniel Holth;conda-package-streaming 3838
+rvalieris;conda-tree 597
+Renan Valieris;conda-tree 141
+Alexander Schlarb;conda-tree 60
+Thomas Robitaille;fast-histogram 4259
+Alexander Trettin;fast-histogram 1179
+Jason R. Coombs;importlib-metadata 6772
+Barry Warsaw;importlib-metadata 2375
+Jason R. Coombs;importlib-resources 9709
+Brett Cannon;importlib-resources 2180
+Barry Warsaw;importlib-resources 4377
+Jason R. Coombs;jaraco.classes 5074
+pre-commit-ci[bot];jsonschema-specifications 22
+Julian Berman;jsonschema-specifications 2416
+pre-commit-ci[bot];jupyter-client 366
+Steven Silvester;jupyter-client 10380
+Min RK;jupyter-client 6760
+Matthias Bussonnier;jupyter-client 931
+David Brochart;jupyter-client 10680
+Kevin Bates;jupyter-client 8606
+GitHub Action;jupyter-client 584
+Thomas Kluyver;jupyter-client 14767
+Matthew Seal;jupyter-client 939
+MinRK;jupyter-client 14517
+Matthias BUSSONNIER;jupyter-client 2070
+Brian E. Granger;jupyter-client 1918
+Brian Granger;jupyter-client 5597
+epatters;jupyter-client 2335
+pre-commit-ci[bot];jupyter-core 209
+Steven Silvester;jupyter-core 6384
+Matthias Bussonnier;jupyter-core 209
+Min RK;jupyter-core 7278
+Jason Grout;jupyter-core 1141
+Kevin Bates;jupyter-core 173
+Thomas Kluyver;jupyter-core 1061
+dependabot[bot];jupyterlab-pygments 103
+martinRenou;jupyterlab-pygments 7399
+Frédéric Collonval;jupyterlab-pygments 26
+Sylvain Corlay;jupyterlab-pygments 462
+Max Klein;jupyterlab-pygments 1
+Bartosz Telenczuk;jupyterlab-pygments 2
+Maarten Breddels;jupyterlab-pygments 2
+Jason Grout;jupyterlab-widgets 493545
+Sylvain Corlay;jupyterlab-widgets 213510
+Pascal Bugnion;jupyterlab-widgets 18230
+Jonathan Frederic;jupyterlab-widgets 417271
+Kipp Cannon;ligo-segments 3138
+Duncan Macleod;ligo-segments 1270
+Leo Singer;ligo-segments 506
+kipp;ligo-segments 8102
+Theelx;line-profiler 7646
+joncrall;line-profiler 31896
+Jon Crall;line-profiler 33108
+dependabot[bot];line-profiler 46
+Brett Olsen;line-profiler 311
+Robert Kern;line-profiler 4131
+Duncan Macleod;lscsoft-glue 57676
+Kipp Cannon;lscsoft-glue 26315
+Leo Singer;lscsoft-glue 5101
+Duncan Brown;lscsoft-glue 37210
+Larne Pekowsky;lscsoft-glue 6898
+kipp;lscsoft-glue 106529
+duncan;lscsoft-glue 68629
+Chris Sewell;markdown-it-py 91754
+Taneli Hukkinen;markdown-it-py 18924
+Fernando Perez;matplotlib-inline 250
+Matthias Bussonnier;matplotlib-inline 18
+martinRenou;matplotlib-inline 435
+Min RK;matplotlib-inline 48
+Thomas Kluyver;matplotlib-inline 8
+MinRK;matplotlib-inline 508
+Brian E. Granger;matplotlib-inline 30
+Daniel B. Vasquez;matplotlib-inline 77
+Brian Granger;matplotlib-inline 109
+Bo Bayles;more-itertools 17816
+Ewald de Wit;nest-asyncio 635
+erdewit;nest-asyncio 1174
+Thomas Grainger;pkgutil-resolve-name 402
+Adam Johnson;pkgutil-resolve-name 6
+Jonathan Slenders;prompt-toolkit 215233
+Alex Hall;pure-eval 3190
+Lindon Roberts;py-bobyqa 51238
+Matthew Brennan Jones;py-cpuinfo 31701
+Adrian Garcia Badaracco;pydantic-core 12823
+Samuel Colvin;pydantic-core 99000
+Jason R. Coombs;pytest-runner 5186
+Kipp Cannon;python-ligo-lw 3980239
+Duncan Macleod;python-ligo-lw 130038
+Leo Singer;python-ligo-lw 64229
+Adam Mercer;python-ligo-lw 6341423
+Reinhard Prix;python-ligo-lw 994305
+Karl Wette;python-ligo-lw 627520
+Vivien Raymond;python-ligo-lw 94609
+John Veitch;python-ligo-lw 257509
+Ian Harry;python-ligo-lw 88366
+Matthew Pitkin;python-ligo-lw 442618
+Bernd Machenschalk;python-ligo-lw 60303
+Chad Hanna;python-ligo-lw 51360
+Evan Goetz;python-ligo-lw 129037
+Collin Capano;python-ligo-lw 65048
+bema;python-ligo-lw 96110
+siemens;python-ligo-lw 265339
+ram;python-ligo-lw 394871
+kipp;python-ligo-lw 348776
+nvf;python-ligo-lw 32183
+channa;python-ligo-lw 8746448
+reinhard;python-ligo-lw 658484
+duncan;python-ligo-lw 353876
+patrick;python-ligo-lw 102378
+sfairhur;python-ligo-lw 113790
+jolien;python-ligo-lw 2879648
+badri;python-ligo-lw 89995
+thomas;python-ligo-lw 215852
+Julian Berman;rpds-py 2971
+Leo Singer;safe-netrc 5762
+Alex Hall;stack-data 8379
+André Roberge;stack-data 802
+Oriol Abril-Pla;xarray-einstats 15399
+Oriol (ZBook);xarray-einstats 19470
+Andy Casey;ads 1472
+Vladimir Sudilovsky;ads 8940
+Jonny Elliott;ads 793
+andycasey;ads 4121
+Oriol Abril-Pla;arviz 82160
+Ari Hartikainen;arviz 83898
+Ravin Kumar;arviz 11279
+Agustina Arroyuelo;arviz 3098
+Colin Carroll;arviz 4686
+Osvaldo Martin;arviz 21670
+Piyush Gautam;arviz 66818
+Rosheen Naeem;arviz 3174
+Colin;arviz 10269
+Oriol Abril;arviz 35157
+aloctavodia;arviz 8243
+Marc Brinkmann;asciitree 1820
+James Guillochon;astrocats 8169862
+lzkelley;astrocats 56528
+guillochon;astrocats 36980997
+J. Michael Burgess;astromodels 20425
+grburgess;astromodels 43131
+ndilalla;astromodels 4512
+Giacomo Vianello;astromodels 7997
+giacomov;astromodels 60874
+Alex Hall;asttokens 2790
+Tom Parker-Shemilt;asttokens 693
+Dmitry S;asttokens 8844
+Thomas Kluyver;backcall 1962
+Will Kahn-Greene;bleach 32571
+Greg Guthe;bleach 8988
+James Socol;bleach 6363
+Mahmoud Hashemi;boltons 47670
+Evgenii Kliuchnikov;brotli 13164
+Eugene Kliuchnikov;brotli 199609
+Cosimo Lupo;brotli 2411
+Zoltan Szabadka;brotli 222698
+eustas;brotli 303
+Joe Tsai;brotli 2100
+Dan F-M;celerite 5292093
+Eric Agol;celerite 287682
+Antony Lewis;cobaya 53407
+torradocacho;cobaya 39219
+JesusTorrado;cobaya 34489
+Jonathan Hartley;colorama 3383
+Nathaniel J. Smith;colorama 400
+Arnon Yaari;colorama 892
+Jon Dufresne;colorama 96
+Hugo;colorama 104
+Charles Merriam;colorama 32
+martinRenou;comm 757
+Maarten Breddels;comm 17
+Steven Silvester;comm 415
+dependabot[bot];comm 2
+Ian Thomas;contourpy 175568
+pre-commit-ci[bot];corner 93
+Dan Foreman-Mackey;corner 4383
+Dan F-M;corner 6780
+Elliott Sales de Andrade;cycler 540
+Thomas A Caswell;cycler 4327
+Benjamin Root;cycler 612
+Pavel Minaev;debugpy 232196
+Fabio Zadrozny;debugpy 551956
+Karthik Nadig;debugpy 78393
+Don Jayamanne;debugpy 10813
+Eric Snow;debugpy 45930
+Michele Simionato;decorator 124992
+Christian Heimes;defusedxml 12819
+Sergey E. Koposov;dynesty 27814
+Sergey Koposov;dynesty 11795
+Josh Speagle;dynesty 57598
+Kyle Barbary;dynesty 19197
+Frank Hoffmann;executing 1107592
+Alex Hall;executing 386509
+Tom Parker-Shemilt;executing 855
+Kyle Barbary;extinction 7700
+Miles Lucas;extinction 70
+Michal Horejsek;fastjsonschema 8249
+Anderson Bravalheri;fastjsonschema 94323
+Antti Jokipii;fastjsonschema 1461
+Kris;fastjsonschema 403
+Henrike Fleischhack;fermipy 38013
+Eric Charles;fermipy 76562
+Matthew Wood;fermipy 180365
+Matthew Dunseth Wood;fermipy 78816
+Behdad Esfahbod;fonttools 195096
+Cosimo Lupo;fonttools 166485
+Sascha Brawer;fonttools 49627
+Tal Leming;fonttools 61669
+jvr;fonttools 36327
+Jose Diaz-Gonzalez;fuzzywuzzy 1736
+Ralf Ramsauer;fuzzywuzzy 46
+davidcellis;fuzzywuzzy 466
+nolan;fuzzywuzzy 175
+Pedro Rodrigues;fuzzywuzzy 3298
+Jeff Paine;fuzzywuzzy 3386
+Adam Cohen;fuzzywuzzy 3791
+Tristan Launay;fuzzywuzzy 494
+Dan F-M;george 667406
+Antony Lewis;getdist 214673
+Sebastian Thiel;gitdb 31441
+Sebastian Thiel;gitpython 263670
+Yobmod;gitpython 50296
+Kai Mühlbauer;h5netcdf 7265
+Mark Harfouche;h5netcdf 396
+Aleksandar Jelenak;h5netcdf 906
+Stephan Hoyer;h5netcdf 3455
+Lion Krischer;h5netcdf 675
+Geoffrey Sneddon;html5lib 49200
+James Graham;html5lib 34841
+jgraham;html5lib 4539
+Sam Ruby;html5lib 85333
+Philip Taylor;html5lib 1051
+Thomas Broyer;html5lib 6103
+Anne van Kesteren;html5lib 12933
+Kim Davies;idna 53003
+Jon Ribbens;idna 24664
+Yoshiki Shibukawa;imagesize 829
+ExtReMLapin;imagesize 30
+Marco Ribeiro;imagesize 240
+Jon Dufresne;imagesize 277
+Thomas Köstler;imagesize 84
+ffreemt;imagesize 79
+Tyler Young;imagesize 10
+Takeshi KOMIYA;imagesize 48
+Dmitry Shachnev;imagesize 19
+hugovk;imagesize 29
+avylove;imagesize 4
+Hans Dembinski;iminuit 319419
+Christoph Deil;iminuit 99967
+Piti Ongmongkolkul;iminuit 404647
+Jason R. Coombs;inflect 18041
+Paul Dyson;inflect 26808
+Ronny Pfannschmidt;iniconfig 2173
+Hugo van Kemenade;iniconfig 260
+holger krekel;iniconfig 1138
+Pablo Winant;interpolation 39025
+Winant Pablo;interpolation 27487
+Min RK;ipyparallel 161155
+Tom-Olav Bøyum;ipyparallel 90074
+MinRK;ipyparallel 76679
+Jason Grout;ipywidgets 493545
+Sylvain Corlay;ipywidgets 213510
+Pascal Bugnion;ipywidgets 18230
+Jonathan Frederic;ipywidgets 417271
+Dave Halter;jedi 216187
+David Halter;jedi 61543
+Thomas Kluyver;jeepney 11250
+Loïc Estève;joblib 14103
+Thomas Moreau;joblib 13842
+Gael Varoquaux;joblib 14209
+Olivier Grisel;joblib 21747
+Alexandre Abadie;joblib 9744
+GaelVaroquaux;joblib 1625
+Gael varoquaux;joblib 4178
+Stefan Kögl;jsonpatch 3847
+Alexander Shorin;jsonpatch 1313
+Stefan Kögl;jsonpointer 2346
+Julian Berman;jsonschema 201245
+nespinoza;juliet 39616
+Nestor Espinoza;juliet 28947
+plwk;kde 206
+Jason R. Coombs;keyring 27633
+Matthieu Dartiailh;kiwisolver 4111
+S. Chris Colbert;kiwisolver 7644
+MatthieuDartiailh;kiwisolver 17411
+Jérôme Leclercq;kiwisolver 2659
+John Wiggins;kiwisolver 904
+Chris Colbert;kiwisolver 5796
+Johan Mabille;mamba 52802
+Antoine Prouvost;mamba 51871
+Wolf Vollprecht;mamba 192884
+AntoinePrv;mamba 6767
+Joël Lamotte (Klaim);mamba 12780
+Adrien DELSALLE;mamba 41659
+pre-commit-ci[bot];mdurl 35
+Taneli Hukkinen;mdurl 5167
+Hsiaoming Yang;mistune 75605
+guillochon;mosfit 614334
+Brian Clapper;munkres 3685
+Florian Rathgeber;nbstripout 3294
+Per A Brodtkorb;numdifftools 25315
+pbrod;numdifftools 56118
+Robert McLeod;numexpr 11008
+Antonio Valentino;numexpr 815
+Francesc Alted;numexpr 13469
+Jasha;omegaconf 10150
+Jasha10;omegaconf 5754
+Olivier Delalleau;omegaconf 10439
+Omry Yadan;omegaconf 53133
+omry;omegaconf 14496
+Matthieu Darbois;packaging 895
+Pradyun Gedam;packaging 5616
+Dustin Ingram;packaging 2665
+Brett Cannon;packaging 5612
+Donald Stufft;packaging 10930
+Kolen Cheung;pandocfilters 188
+John MacFarlane;pandocfilters 1053
+KolenCheung;pandocfilters 1596
+Jacques Peron;pandocfilters 627
+August Hörandl;pandocfilters 912
+Thomas Levine;pandocfilters 64
+Dave Halter;parso 43631
+Nathaniel J. Smith;patsy 37004
+Thomas Kluyver;pickleshare 232
+Johannes Maria Frank;pickleshare 188
+Matthias Bussonnier;pickleshare 94
+Ville M. Vainio;pickleshare 1714
+Hernan Grecco;pint 41528
+Jules Chéron;pint 4003
+Hernan;pint 38259
+Keewis;pint 3773
+Jon Thielen;pint 5977
+Guido Imperiale;pint 17947
+Bernát Gábor;pipdeptree 11221
+Vineet Naik;pipdeptree 6771
+Marc Abramowitz;pipdeptree 465
+Vineet;pipdeptree 4475
+pre-commit-ci[bot];platformdirs 162
+Kemal Zebari;platformdirs 472
+dependabot[bot];platformdirs 52
+Bernát Gábor;platformdirs 4973
+Ofek Lev;platformdirs 845
+Julian Berman;platformdirs 302
+Jon Dufresne;platformdirs 199
+Jeff Rouse;platformdirs 64
+Sridhar Ratnakumar;platformdirs 1162
+Benjamin Drung;platformdirs 159
+Eddy Petrișor;platformdirs 223
+Trent Mick;platformdirs 2036
+pre-commit-ci[bot];pluggy 68
+Ran Benita;pluggy 4821
+Bruno Oliveira;pluggy 2259
+Ronny Pfannschmidt;pluggy 3521
+Tyler Goodlet;pluggy 5115
+Daniel Hahler;pluggy 204
+Talley Lambert;pluggy 205
+Anthony Sottile;pluggy 463
+Oliver Bestwalter;pluggy 799
+holger krekel;pluggy 2933
+Santiago Soler;pooch 450
+Leonardo Uieda;pooch 33321
+Rick van Hattem;portalocker 5688
+Giampaolo Rodola;psutil 166500
+Giampaolo Rodola';psutil 106895
+Thomas Kluyver;ptyprocess 4049
+Jeff Quast;ptyprocess 507
+Joris Van den Bossche;pyarrow 25838
+Nic Crane;pyarrow 19120
+Sutou Kouhei;pyarrow 258361
+Weston Pace;pyarrow 83387
+David Li;pyarrow 147880
+Raúl Cumplido;pyarrow 17221
+Alenka Frim;pyarrow 27045
+Benjamin Kietzman;pyarrow 131176
+Antoine Pitrou;pyarrow 367659
+Matt Topol;pyarrow 766235
+Neal Richardson;pyarrow 119354
+Jonathan Keane;pyarrow 17446
+Wes McKinney;pyarrow 547241
+Krisztián Szűcs;pyarrow 160403
+Micah Kornfield;pyarrow 38523
+Jorge C. Leitao;pyarrow 280605
+liyafan82;pyarrow 38367
+Uwe L. Korn;pyarrow 52265
+Andy Grove;pyarrow 67187
+François Saint-Jacques;pyarrow 45610
+Kouhei Sutou;pyarrow 113292
+Korn, Uwe;pyarrow 14416
+Ilan Schnell;pycosat 15608
+Eli Bendersky;pycparser 60296
+eli.bendersky;pycparser 16876
+Adrian Garcia Badaracco;pydantic 35656
+Samuel Colvin;pydantic 105470
+David Montague;pydantic 48908
+Hasan Ramezani;pydantic 23591
+Terrence Dorsey;pydantic 12554
+Marcelo Trylesinski;pydantic 8179
+dependabot[bot];pydantic 613
+Eric Jolibois;pydantic 7909
+dependabot-preview[bot];pydantic 261
+pre-commit-ci[bot];pyjwt 144
+José Padilla;pyjwt 10925
+Jon Dufresne;pyjwt 2776
+Mark Adams;pyjwt 11642
+Wouter Bolsterlee;pyjwt 320
+Jeff Lindsay;pyjwt 402
+Alex Gaynor;pyopenssl 10607
+Paul Kehrer;pyopenssl 3762
+Hynek Schlawack;pyopenssl 4794
+Jean-Paul Calderone;pyopenssl 130634
+Anorov;pysocks 5200
+Gregory Petukhov;pysocks 3153
+Martin Panter;pysocks 689
+Min RK;pyzmq 65176
+MinRK;pyzmq 238369
+Julian Berman;referencing 10870
+Larry Bradley;regions 32045
+Adam Ginsburg (keflavich);regions 3134
+Thomas Robitaille;regions 12583
+Christoph Deil;regions 8278
+Brigitta Sipocz;regions 1946
+sushobhana;regions 12329
+Johannes King;regions 6939
+Will McGugan;rich 126056
+Darren Burns;rich 13335
+Adrian Price-Whelan;schwimmbad 4640
+Anowar Jaman Shajib;schwimmbad 407
+Dmitry Shachnev;secretstorage 7181
+Anderson Bravalheri;setuptools 100941
+Jason R. Coombs;setuptools 198646
+Tarek Ziadé;setuptools 37534
+PJ Eby;setuptools 46925
+Greg Ward;setuptools 36177
+Bob Ippolito;simplejson 68283
+Sebastian Thiel;smmap 9013
+Harmon;smmap 233
+Marc Abramowitz;smmap 118
+Antonio Valentino;tables 649529
+Francesc Alted;tables 1524298
+Ivan Vilata i Balaguer;tables 214036
+Sergey Astanin;tabulate 9038
+Jérémie du Boisberranger;threadpoolctl 3825
+Olivier Grisel;threadpoolctl 2364
+jeremie du boisberranger;threadpoolctl 1822
+jeremiedbb;threadpoolctl 386
+tomMoral;threadpoolctl 2465
+J. Michael Burgess;threeml 709464
+ndilalla;threeml 25777
+grburgess;threeml 5545190
+Giacomo Vianello;threeml 86987
+Travis CI;threeml 7258
+giacomov;threeml 85415
+Guillaume Ayoub;tinycss2 15993
+Lucie Anglade;tinycss2 181
+Simon Sapin;tinycss2 15403
+Uiri;toml 4996
+Taneli Hukkinen;tomli 22426
+James Gerity;unicodedata2 59246
+Cosimo Lupo;unicodedata2 119372
+Harmon;unicodedata2 329141
+Mike Kaplinskiy;unicodedata2 130567
+Jeff Quast;wcwidth 44871
+jquast;wcwidth 3449
+Jon Dufresne;webencodings 49
+Geoffrey Sneddon;webencodings 82
+Simon Sapin;webencodings 2633
+pre-commit-ci[bot];wheel 120
+Alex Grönholm;wheel 16591
+Paul Moore;wheel 6937
+Daniel Holth;wheel 17804
+Stephan Hoyer;xarray 116395
+Deepak Cherian;xarray 32477
+Joe Hamman;xarray 22154
+Maximilian Roos;xarray 63581
+keewis;xarray 28691
+Clark Fitzgerald;xarray 9337
+Martin Fleischmann;xyzservices 64354
+Jason R. Coombs;zipp 7702
+Gregory Szorc;zstandard 469863

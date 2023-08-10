@@ -1,0 +1,214 @@
+Nicola Ferralis;ddscat-tools 5307
+Feranick;ddscat-tools 14152
+feranick;ddscat-tools 3538
+Comodo;cmbeasy 73209
+George Gatling;GFITSIO 3891
+gatling-nrl;GFITSIO 3891
+Pietrobon, Davide;Needlets 1210
+Zu, Ying;javelin 1416019
+Easther, Richard;pspectre 6711
+Oguri, Masamune;glafic2 217184
+kimcg;Athena-Cversion 502432
+Stone, James M.;Athena-Cversion 6657224
+xbai;Athena-Cversion 1601502
+askinner;Athena-Cversion 408226
+lemaster;Athena-Cversion 753648
+Gardiner, Thomas A.;Athena-Cversion 565236
+Offringa, A. R.;aoflagger 4355775
+Mastrobuono-Battisti, A.;NBSymple 304
+O'Connor, Evan;GR1D 448736
+Mario G. Santos;Simfast21 24388
+Sultan Hassan;Simfast21 36582
+Santos, M. G.;Simfast21 42679
+mariogrs;Simfast21 146328
+Kessler, Richard;SNANA 13283196
+Brewer, Brendon J.;DNest4 1976610
+Bovy, Jo;extreme-deconvolution 616860
+Gao Wang;extreme-deconvolution 51405
+High, F. William;stellar-locus-regression 239166
+Good, John;Montage 24601
+Zingale, M.;MAESTRO 2714400
+Nonaka, A.;MAESTRO 2433912
+Malone, C. M.;MAESTRO 458432
+Cardiel, N.;indexf 1835592
+Teuben, P.;nemo 23227677
+Walter Dehnen;nemo 2639736
+Brammer, Gabriel B.;eazy-photoz 5608882
+cschreib;eazy-photoz 410406
+Fred Dauphin;WFC3Library 22406
+annierose3;WFC3Library 19770
+kyhuynh108;WFC3Library 3954
+FDauphin;WFC3Library 15816
+Ky Huynh;WFC3Library 2636
+Catherine A. Martlin;WFC3Library 2636
+catherine-martlin;WFC3Library 2636
+Anne O'Connor;WFC3Library 3954
+st-apidgeon;WFC3Library 3954
+Mariarosa Marinelli;WFC3Library 3954
+Marmo, C.;weightwatcher 3312
+Bertin, E.;weightwatcher 16560
+ernest;Starlab 7686
+steve;Starlab 61488
+spz;Starlab 19215
+Hut, P.;Starlab 6588
+starlab;Starlab 13908
+Barrand, G.;geant4 3447684
+Evan Bauer;mesa 1853962
+evbauer;mesa 7078764
+Rob Farmer;mesa 6573138
+Robert Farmer;mesa 9354081
+Warrick Ball;mesa 6825951
+Rich Townsend;mesa 1179794
+Matthias Fabry;mesa 1601149
+Earl Patrick Bellinger;mesa 1095523
+Timmes, Frank;mesa 3455111
+Adam Jermyn;mesa 5224802
+Josiah Schwab;mesa 7163035
+Paxton, Bill;mesa 1938233
+Agol, Eric;TTVFaster 12180
+Dan F-M;TTVFaster 870
+Ethan Kruse;TTVFaster 870
+Dan Foreman-Mackey;TTVFaster 870
+Hanno Rein;TTVFaster 870
+Liesenborgs, J.;GRALE2 1474521
+Clément Robert;yt 23494451
+Kacper Kowalik;yt 18052017
+John ZuHone;yt 27787075
+Turk, Matthew J.;yt 75389209
+Corentin Cadiou;yt 9581750
+Cameron Hummels;yt 10808214
+Smith, Britton D.;yt 25027531
+Andrew Myers;yt 12494602
+Nathan Goldbaum;yt 38403654
+Skillman, Samuel W.;yt 10156655
+Skory, Stephen;yt 9811712
+Easther, Richard;interp-mc 134
+Taylor, M. B.;tctuto 371970
+Andrea Negri;AHF 196080
+T Ar Creator;AHF 849680
+McLeod, A.;seren 6026
+Hubber, D. A.;seren 33143
+Rosolowsky, Erik;cprops 195568
+cfaesi;cprops 23008
+low-sky;cprops 23008
+Roland Haas;carpet.git 1521
+Erik Schnetter;carpet.git 5526
+Thomas Radke;carpet.git 1026
+schnetter;carpet.git 1890
+Haas, Roland;tickets 33346
+Pound, Marc W.;pdrtpy 419679
+Mesinger, Andrei;21cmFAST 414687
+jaehongpark00;21cmFAST 118482
+Jaehong Park;21cmFAST 473928
+Adam Beardsley;21cmFAST 98735
+jcarron;lenspyx 446964
+carronj;lenspyx 96404
+Brian O'Shea;ZEUS-MP_2 12737
+Tom Marsh;s2plot-python 6411
+Clément Robert;yt 1724982
+Kacper Kowalik;yt 1325394
+John ZuHone;yt 2040150
+Turk, Matthew J.;yt 5535138
+Corentin Cadiou;yt 703500
+Cameron Hummels;yt 793548
+Britton Smith;yt 1837542
+Andrew Myers;yt 917364
+Nathan Goldbaum;yt 2819628
+Sam Skillman;yt 745710
+Skory, Stephen;yt 720384
+Altay, Gabriel;sphray 160643
+Barbey, N.;TomograPy 19832
+Taylor, M. B.;starjava 18079908
+Peter W. Draper;starjava 3934854
+Quinn, Thomas;changa 3001779
+Ben Keller;changa 239199
+Jetley, Pritish;changa 367221
+Filippo Gioachin;changa 286365
+Singer, M.;Castro 16632315
+Zhang, W.;Castro 1675737
+Teuben, P. J.;miriad 79059771
+pkwill;miriad 8032101
+Wright, M. C. H.;miriad 10620960
+tyu;miriad 17790108
+jzhao;miriad 10753722
+Gazak, J. Zachary;TAP 4188
+Lesgourgues, Julien;class_public 32639280
+Tram, Thomas;class_public 5185680
+Deanna Hooper;class_public 3736740
+Maria Archidiacono;class_public 5948280
+SamuelBrieden;class_public 2897880
+Benjamin Audren;class_public 10523880
+Foreman, Simon;StringFast 2442
+Marc Williamson;SESNtemple 57984
+mmoJazz;SESNtemple 270592
+federica;SESNtemple 96640
+Yuqian Liu;SESNtemple 347904
+fedhere;SESNtemple 57984
+Yuqian;SESNtemple 193280
+wmclaugh;sherpa 4775300
+Nguyen, D.;sherpa 15064720
+Nowak, M.;sherpa 1153280
+Omar Laurino;sherpa 4631140
+Steven Rieder;amuse 840336
+Pelupessy, F. I.;amuse 2583000
+McMillan, S. L. W.;amuse 275520
+spz;amuse 492492
+van Elteren, A.;amuse 2682876
+stoonen;amuse 306516
+steve;amuse 244524
+de Vries, N.;amuse 1839096
+marosvolgyi;amuse 378840
+ims;lime 988655
+allegroLeiden;lime 395462
+Miguel de Val-Borro;lime 111761
+tlunttil;lime 146149
+Sebastien Maret;lime 283701
+Ian Stewart;lime 180537
+Brinch, C.;lime 283701
+Küpper, Andreas H. W.;mcluster 48986
+Long Wang;mcluster 31491
+lwang-astro;mcluster 13996
+Peter Teuben;mcluster 6998
+Marco Gómez-Muñoz;ShellSpec_GUI 1506
+mgomezAstro;ShellSpec_GUI 502
+Ginsburg, Adam;pyspeckit 12798
+Asensio Ramos, A.;hazel 169260
+Giloo;gdl 1045374
+GillesDuvert;gdl 2772836
+Alain;gdl 622776
+Jeongbin Park;gdl 719158
+Sylwester Arabas;gdl 2557830
+Coulais Alain;gdl 392942
+Alain Coulais;gdl 3477166
+Gilles Duvert;gdl 2409550
+Mark Schellens;gdl 3788554
+Joel Gales;gdl 993476
+Feroz, F.;MultiNest 533550
+Gregory David Martinez;MultiNest 88925
+grburgess;MultiNest 88925
+Bridges, M.;MultiNest 177850
+Will Handley;MultiNest 88925
+Copi, Craig J.;cmb-multipole_vectors 506175
+Fred Dauphin;WFC3Library 118320
+Pasquali, A.;WFC3Library 125280
+kyhuynh108;WFC3Library 20880
+FDauphin;WFC3Library 83520
+Ky Huynh;WFC3Library 13920
+Catherine A. Martlin;WFC3Library 13920
+catherine-martlin;WFC3Library 13920
+st-apidgeon;WFC3Library 20880
+Kümmel, M.;WFC3Library 20880
+De Vries, Christopher H.;analytic_infall 23959
+Wieczorek, Mark A.;SHTOOLS 252168
+Rein, H.;rebound 5881712
+Daniel Tamayo;rebound 894658
+Parkinson, David;CosmoNest 109780
+Médéric Boquien;cigale 20708
+Leistedt, B.;3DEX 3240
+fr.eiffel;3DEX 648
+ixkael;3DEX 3240
+Mandel, E.;funtools 5950
+Ole Streicher;funtools 714
+Forbes, John;gidget 1147842
+Rehnberg, Morgan;phast 1280
+Crawford, Robert;phast 256
