@@ -9,6 +9,7 @@ from collections import Counter
 import ads
 from urllib.parse import unquote
 from namematch import same_author
+import kvstore
 
 #import fetchgit
 #fetchgit.requests = requests.Session(timeout=5, )
@@ -193,14 +194,16 @@ if __name__ == '__main__':
             elif code_site.startswith('https://doi.org'):
                 pass
             elif code_site.startswith('http') and code_site.split('.')[-1] not in ('.zip', '.tar.gz', '.tar.bz2'):
-                try:
-                    repo_url = get_git_url2(code_site)
-                except requests.exceptions.ConnectTimeout:
-                    pass
-                except requests.exceptions.ConnectionError:
-                    pass
-                except AssertionError:
-                    pass
+                domain = code_site.split('://')[1].split('/')[0]
+                if not kvstore.is_stored('badurls', domain):
+                    try:
+                        repo_url = get_git_url2(code_site)
+                    except requests.exceptions.ConnectTimeout:
+                        kvstore.store('badurls', domain)
+                    except requests.exceptions.ConnectionError:
+                        kvstore.store('badurls', domain)
+                    except AssertionError:
+                        kvstore.store('badurls', domain)
             # print(url, "repo", repo_url, len(bib_urls))
             if repo_url is None:
                 print("no repo found for", code_sites)
