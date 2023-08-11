@@ -61,24 +61,26 @@ Dependency tree analysis
 ------------------------
 
 * (currently from https://github.com/JohannesBuchner/space-of-inference-spaces/) from some conda tree with a few astronomy packages.
+
   * from there, obtain github URL, and make a treemap by contributions
 
---> output/fig2.png
+`--> dependency tree as PDF <https://github.com/deepthought-initiative/architects-of-modern-astronomy/blob/main/outputs/tree.pdf?raw=true>`_
 
 A future work would be to use the ASCL above and  
+
 * identify pip dependencies
 
- * how? trying to pip install, somehow finding pypi name
+  * how? trying to pip install, somehow finding pypi name
 
-   * in git repo README find "pip install" or "-m pip install" command or pypi link (badge)
-   * guess pypi name from git repository name
+    * in git repo README find "pip install" or "-m pip install" command or pypi link (badge)
+    * guess pypi name from git repository name
 
 * or identify conda dependencies
 
- * how? trying to conda install, somehow finding conda-forge name
+  * how? trying to conda install, somehow finding conda-forge name
 
-   * in git repo README find "conda install" or "mamba install" command or conda-forge link (badge)
-   * guess pypi name from git repository name
+    * in git repo README find "conda install" or "mamba install" command or conda-forge link (badge)
+    * guess pypi name from git repository name
 
 From these dependencies, using pypi or conda feedstock, identify github link to project repository.
 
