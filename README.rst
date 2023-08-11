@@ -21,6 +21,7 @@ Method
 **Parent sample**:
 
 * ASCL.net projects
+
   * with papers listed and linked to ADS
   * with code repository listed, which is either a git repository or a website containing a link to a git repository
 
@@ -39,9 +40,22 @@ one accounting for the importance and impact of the software project,
 and one accounting for the time invested on the development.
 
 * Git contribution = number of days where commits where made.
+
   * This is better than number of commits
   * This is better than lines added or lines changed, because the latter
+
 * Impact = number of citations to paper
+
+Results
+-------
+
+.. image:: https://github.com/deepthought-initiative/architects-of-modern-astronomy/blob/main/outputs/weighted-flamegraph-days_active.txt_withouttiny.png?raw=true
+
+Dropping the top 10 largest projects to see the smaller ones better...
+
+.. image:: https://github.com/deepthought-initiative/architects-of-modern-astronomy/blob/main/outputs/weighted-flamegraph-days_active.txt_withouttiny_withoutmajor.png?raw=true
+
+`open as PDF <https://github.com/deepthought-initiative/architects-of-modern-astronomy/blob/main/outputs/weighted-flamegraph-days_active.txt_withouttiny_withoutmajor.pdf?raw=true>`_
 
 Dependency tree analysis
 ------------------------
@@ -53,17 +67,23 @@ Dependency tree analysis
 
 A future work would be to use the ASCL above and  
 * identify pip dependencies
+
  * how? trying to pip install, somehow finding pypi name
+
    * in git repo README find "pip install" or "-m pip install" command or pypi link (badge)
    * guess pypi name from git repository name
+
 * or identify conda dependencies
+
  * how? trying to conda install, somehow finding conda-forge name
+
    * in git repo README find "conda install" or "mamba install" command or conda-forge link (badge)
    * guess pypi name from git repository name
 
 From these dependencies, using pypi or conda feedstock, identify github link to project repository.
 
-For each github repo, identify paper.
+For each github repo, identify paper:
+
 * ideally from github repo citation standard CITATION.cff
 * if already identified on ASCL, link to that
 * paper linked in the start page (arxiv or ads)
