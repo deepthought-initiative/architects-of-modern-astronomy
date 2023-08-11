@@ -9,7 +9,7 @@ weights = []
 
 for line in open(sys.argv[1]):
     name, part = line.split(';')
-    if '[bot]' in name or name.endswith('-bot') or name.lower() in ('GitHub Actions', 'conda bot'):
+    if '[bot]' in name or name.endswith('-bot') or name.lower() in ('github actions', 'conda bot', 'google code exporter'):
         continue
     project, weightstr = part.split()
     weights.append(int(weightstr))
@@ -27,7 +27,7 @@ if '--cut-tiny' in sys.argv:
     print("%d entries after cut" % len(df))
     suffix += '_withouttiny'
 if '--cut-major' in sys.argv:
-    for project in 'starlink', 'astropy', 'yt', 'pycbc', 'q-e', 'nemo', 'class_public', 'matplotlib', 'minad', 'mesa':
+    for project in 'starlink', 'astropy', 'yt', 'pycbc', 'q-e', 'nemo', 'class_public', 'matplotlib', 'miriad', 'mesa':
         df = df[df.projects != project]
     print("%d entries after cut" % len(df))
     suffix += '_withoutmajor'
