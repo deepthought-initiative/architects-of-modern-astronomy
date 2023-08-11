@@ -1,27 +1,21 @@
 Adrian Garcia Badaracco;annotated-types 11
 Zac Hatfield-Dodds;annotated-types 3
 Samuel Colvin;annotated-types 5
-P. L. Lim;astropy-healpix 4
-Leo Singer;astropy-healpix 23
-Pey Lian Lim;astropy-healpix 3
-Thomas Robitaille;astropy-healpix 25
-Christoph Deil;astropy-healpix 15
-Brigitta Sipocz;astropy-healpix 3
+Leo Singer;astropy-healpix 30
+P. L. Lim;astropy-healpix 9
+Thomas Robitaille;astropy-healpix 33
+Christoph Deil;astropy-healpix 21
 Dustin Lang;astropy-healpix 4
-Jason R. Coombs;backports.functools-lru-cache 217
-Laura Kreidberg;batman-package 39
-Michael Zhang;batman-package 6
-Daniel Feldroy;cached-property 3
-Daniel Roy Greenfeld;cached-property 13
+Jason R. Coombs;backports.functools-lru-cache 228
+Laura Kreidberg;batman-package 51
+Michael Zhang;batman-package 7
+Daniel Feldroy;cached-property 4
+Daniel Roy Greenfeld;cached-property 23
 Daniel;cached-property 4
-Robert Schütz;cached-property 2
 pyup-bot;cached-property 15
-Audrey Roy Greenfeld;cached-property 2
-Daniel Greenfeld;cached-property 9
-George Sakkis;cached-property 2
-Tin Tvrtkovic;cached-property 2
-dependabot[bot];charset-normalizer 43
-TAHRI Ahmed R;charset-normalizer 88
+Daniel Greenfeld;cached-property 10
+dependabot[bot];charset-normalizer 46
+TAHRI Ahmed R;charset-normalizer 90
 Ahmed TAHRI;charset-normalizer 21
 conda-bot;conda-content-trust 16
 Jannis Leidel;conda-content-trust 3
@@ -29,109 +23,96 @@ Ken Odegard;conda-content-trust 6
 dependabot[bot];conda-content-trust 2
 Sebastien Awwad;conda-content-trust 14
 conda bot;conda-content-trust 2
-pre-commit-ci[bot];conda-package-handling 6
-conda-bot;conda-package-handling 13
-Daniel Holth;conda-package-handling 14
-Daniel Bast;conda-package-handling 2
-Conda Bot;conda-package-handling 3
+pre-commit-ci[bot];conda-package-handling 8
+Conda Bot;conda-package-handling 22
+Daniel Holth;conda-package-handling 15
 Ken Odegard;conda-package-handling 5
-conda bot;conda-package-handling 3
-Jannis Leidel;conda-package-handling 4
-Ray Donnelly;conda-package-handling 7
-leej3;conda-package-handling 2
-Nehal J Wani;conda-package-handling 2
-Mike Sarahan;conda-package-handling 17
-Jonathan Helmus;conda-package-handling 5
-Michael Sarahan;conda-package-handling 14
-Daniel Holth;conda-package-streaming 29
-pre-commit-ci[bot];conda-package-streaming 3
+Jannis Leidel;conda-package-handling 5
+Ray Donnelly;conda-package-handling 10
+Michael Sarahan;conda-package-handling 31
+Jonathan J. Helmus;conda-package-handling 6
+Daniel Holth;conda-package-streaming 31
+Daniel Bast;conda-package-streaming 4
 rvalieris;conda-tree 8
-Renan Valieris;conda-tree 6
+Renan Valieris;conda-tree 8
 Alexander Schlarb;conda-tree 1
 Léopold Mebazaa;conda-tree 1
 pareyesv;conda-tree 1
 Xylar Asay-Davis;conda-tree 1
 Michael McNeil Forbes;conda-tree 1
-Thomas Robitaille;fast-histogram 19
+Thomas Robitaille;fast-histogram 23
 Alexander Trettin;fast-histogram 5
-Jason R. Coombs;importlib-metadata 72
-Anthony Sottile;importlib-metadata 8
-Barry Warsaw;importlib-metadata 22
-Jason R. Coombs;importlib-resources 139
-Brett Cannon;importlib-resources 15
-Barry Warsaw;importlib-resources 25
-Jason R. Coombs;jaraco.classes 231
-Julian Berman;jsonschema-specifications 14
-pre-commit-ci[bot];jsonschema-specifications 8
-pre-commit-ci[bot];jupyter-client 42
-blink1073;jupyter-client 16
-Steven Silvester;jupyter-client 71
-Min RK;jupyter-client 116
-Matthias Bussonnier;jupyter-client 25
-David Brochart;jupyter-client 25
-Kevin Bates;jupyter-client 50
-GitHub Action;jupyter-client 19
-Thomas Kluyver;jupyter-client 98
-Matthew Seal;jupyter-client 16
-MinRK;jupyter-client 159
-Matthias BUSSONNIER;jupyter-client 22
-Fernando Perez;jupyter-client 17
-Brian E. Granger;jupyter-client 18
-Brian Granger;jupyter-client 34
-epatters;jupyter-client 34
-pre-commit-ci[bot];jupyter-core 36
+Jason R. Coombs;importlib-metadata 81
+Barry Warsaw;importlib-metadata 25
+Jason R. Coombs;importlib-resources 150
+Brett Cannon;importlib-resources 16
+Barry Warsaw;importlib-resources 27
+Jason R. Coombs;jaraco.classes 238
+Julian Berman;jsonschema-specifications 24
+pre-commit-ci[bot];jsonschema-specifications 11
+pre-commit-ci[bot];jupyter-client 43
+Steven Silvester;jupyter-client 113
+Benjamin Ragan-Kelley;jupyter-client 363
+Matthias Bussonnier;jupyter-client 102
+David Brochart;jupyter-client 44
+Kevin Bates;jupyter-client 58
+Thomas Kluyver;jupyter-client 161
+Fernando Perez;jupyter-client 54
+Brian E. Granger;jupyter-client 71
+Evan Patterson;jupyter-client 39
+pre-commit-ci[bot];jupyter-core 37
 blink1073;jupyter-core 9
-Steven Silvester;jupyter-core 26
-Matthias Bussonnier;jupyter-core 12
-Min RK;jupyter-core 50
-Jason Grout;jupyter-core 18
-Kevin Bates;jupyter-core 11
-Matthew Seal;jupyter-core 5
-Thomas Kluyver;jupyter-core 18
+Steven Silvester;jupyter-core 33
+Matthias Bussonnier;jupyter-core 28
+Min RK;jupyter-core 70
+Jason Grout;jupyter-core 20
+Matthew Seal;jupyter-core 8
+Kevin Bates;jupyter-core 14
+Thomas Kluyver;jupyter-core 38
+Jeremy Tuloup;jupyterlab-pygments 5
 dependabot[bot];jupyterlab-pygments 6
-martinRenou;jupyterlab-pygments 4
+martinRenou;jupyterlab-pygments 5
 Frédéric Collonval;jupyterlab-pygments 1
-Sylvain Corlay;jupyterlab-pygments 5
+Sylvain Corlay;jupyterlab-pygments 6
 Max Klein;jupyterlab-pygments 1
 Bartosz Telenczuk;jupyterlab-pygments 1
 Maarten Breddels;jupyterlab-pygments 1
-Jason Grout;jupyterlab-widgets 399
-Jeremy Tuloup;jupyterlab-widgets 55
-Vidar Tonaas Fauske;jupyterlab-widgets 75
-Sylvain Corlay;jupyterlab-widgets 232
-Min RK;jupyterlab-widgets 65
-Pascal Bugnion;jupyterlab-widgets 52
-Jonathan Frederic;jupyterlab-widgets 253
-MinRK;jupyterlab-widgets 62
-Kipp Cannon;ligo-segments 67
-Duncan Macleod;ligo-segments 16
+Jeremy Tuloup;jupyterlab-widgets 65
+Sylvain Corlay;jupyterlab-widgets 312
+Jason Grout;jupyterlab-widgets 478
+Vidar Tonaas Fauske;jupyterlab-widgets 103
+Benjamin Ragan-Kelley;jupyterlab-widgets 221
+Pascal Bugnion;jupyterlab-widgets 56
+Brian E. Granger;jupyterlab-widgets 62
+Jonathan Frederic;jupyterlab-widgets 334
+Matthias Bussonnier;jupyterlab-widgets 67
+Thomas Kluyver;jupyterlab-widgets 68
+Kipp Cannon;ligo-segments 76
+Duncan Macleod;ligo-segments 17
 Leo Singer;ligo-segments 11
 kipp;ligo-segments 74
-Theelx;line-profiler 15
-joncrall;line-profiler 24
-Jon Crall;line-profiler 17
+Jon Crall;line-profiler 42
+joncrall;line-profiler 29
+Theelx;line-profiler 17
 dependabot[bot];line-profiler 8
-Joseph Martinot-Lagarde;line-profiler 3
-Mathis Chenuet;line-profiler 3
-Hanaasagi;line-profiler 3
-Brett Olsen;line-profiler 4
-Pau Freixes;line-profiler 3
-Robert Kern;line-profiler 23
-Duncan Macleod;lscsoft-glue 83
-Ryan Fisher;lscsoft-glue 65
-Kipp Cannon;lscsoft-glue 285
+Brett Olsen;line-profiler 7
+Robert Kern;line-profiler 24
+Duncan Macleod;lscsoft-glue 88
+Ryan Fisher;lscsoft-glue 69
+Kipp Cannon;lscsoft-glue 292
 Leo Singer;lscsoft-glue 34
-Duncan Brown;lscsoft-glue 57
-Larne Pekowsky;lscsoft-glue 54
+Duncan Brown;lscsoft-glue 60
+Larne Pekowsky;lscsoft-glue 55
 Ping Wei;lscsoft-glue 36
 kipp;lscsoft-glue 318
 duncan;lscsoft-glue 122
 Chris Sewell;markdown-it-py 49
 tsutsu3;markdown-it-py 6
 Taneli Hukkinen;markdown-it-py 35
-Fernando Perez;matplotlib-inline 10
+Fernando Perez;matplotlib-inline 13
+martinRenou;matplotlib-inline 7
 Matthias Bussonnier;matplotlib-inline 5
-martinRenou;matplotlib-inline 6
+Sylvain Corlay;matplotlib-inline 2
 Min RK;matplotlib-inline 4
 Jason Grout;matplotlib-inline 2
 Thomas Kluyver;matplotlib-inline 3
@@ -140,55 +121,55 @@ Matthias BUSSONNIER;matplotlib-inline 2
 Brian E. Granger;matplotlib-inline 3
 Daniel B. Vasquez;matplotlib-inline 2
 Brian Granger;matplotlib-inline 3
-Bo Bayles;more-itertools 249
-Ewald de Wit;nest-asyncio 21
+Bo Bayles;more-itertools 368
+Ewald de Wit;nest-asyncio 28
 erdewit;nest-asyncio 18
 Thomas Grainger;pkgutil-resolve-name 3
 Adam Johnson;pkgutil-resolve-name 1
 Jonathan Slenders;prompt-toolkit 615
-Alex Hall;pure-eval 16
+Alex Hall;pure-eval 17
 Lindon Roberts;py-bobyqa 33
-Matthew Brennan Jones;py-cpuinfo 132
-David Hewitt;pydantic-core 13
-Adrian Garcia Badaracco;pydantic-core 36
-David Montague;pydantic-core 27
-Samuel Colvin;pydantic-core 124
-messense;pydantic-core 13
-Jason R. Coombs;pytest-runner 211
-Kipp Cannon;python-ligo-lw 739
+Matthew Brennan Jones;py-cpuinfo 138
+Adrian Garcia Badaracco;pydantic-core 38
+David Hewitt;pydantic-core 19
+Samuel Colvin;pydantic-core 126
+messense;pydantic-core 14
+David Montague;pydantic-core 28
+Jason R. Coombs;pytest-runner 212
+Kipp Cannon;python-ligo-lw 748
 Duncan Macleod;python-ligo-lw 235
 Leo Singer;python-ligo-lw 315
-Adam Mercer;python-ligo-lw 653
-Stephen Privitera;python-ligo-lw 176
-Reinhard Prix;python-ligo-lw 512
-Karl Wette;python-ligo-lw 642
-Riccardo Sturani;python-ligo-lw 107
-Vivien Raymond;python-ligo-lw 313
+Adam Mercer;python-ligo-lw 658
+Stephen Privitera;python-ligo-lw 180
+Reinhard Prix;python-ligo-lw 515
+Karl Wette;python-ligo-lw 644
+Riccardo Sturani;python-ligo-lw 121
+Vivien Raymond;python-ligo-lw 322
 Chris Pankow;python-ligo-lw 153
 Reed Essick;python-ligo-lw 82
 David Keitel;python-ligo-lw 106
-John Veitch;python-ligo-lw 627
-Ian Harry;python-ligo-lw 302
-Matthew Pitkin;python-ligo-lw 348
-Bernd Machenschalk;python-ligo-lw 234
-Vladimir Dergachev;python-ligo-lw 129
-Ben Farr;python-ligo-lw 95
+John Veitch;python-ligo-lw 640
+Ian Harry;python-ligo-lw 305
+Matthew Pitkin;python-ligo-lw 350
+Bernd Machenschalk;python-ligo-lw 241
+Vladimir Dergachev;python-ligo-lw 133
+Ben Farr;python-ligo-lw 96
 Jolien Creighton;python-ligo-lw 111
-Duncan Brown;python-ligo-lw 88
-Salvatore Vitale;python-ligo-lw 93
-Chad Hanna;python-ligo-lw 169
-Evan Goetz;python-ligo-lw 292
-Evan Ochsner;python-ligo-lw 83
-Collin Capano;python-ligo-lw 154
-Sarah Caudill;python-ligo-lw 75
-Thomas Dent;python-ligo-lw 174
-Benjamin Farr;python-ligo-lw 193
-Larne Pekowsky;python-ligo-lw 95
-Will M. Farr;python-ligo-lw 91
-Cristina Valeria Torres;python-ligo-lw 124
-Drew Keppel;python-ligo-lw 87
-Nickolas Fotopoulos;python-ligo-lw 176
-Romain Gouaty;python-ligo-lw 107
+Duncan Brown;python-ligo-lw 91
+Salvatore Vitale;python-ligo-lw 95
+Chad Hanna;python-ligo-lw 171
+Evan Goetz;python-ligo-lw 293
+Evan Ochsner;python-ligo-lw 84
+Collin Capano;python-ligo-lw 160
+Sarah Caudill;python-ligo-lw 76
+Thomas Dent;python-ligo-lw 177
+Benjamin Farr;python-ligo-lw 199
+Larne Pekowsky;python-ligo-lw 97
+Will M. Farr;python-ligo-lw 92
+Cristina Valeria Torres;python-ligo-lw 139
+Drew Keppel;python-ligo-lw 88
+Nickolas Fotopoulos;python-ligo-lw 178
+Romain Gouaty;python-ligo-lw 109
 bema;python-ligo-lw 335
 siemens;python-ligo-lw 192
 ram;python-ligo-lw 281
@@ -216,487 +197,274 @@ teviet;python-ligo-lw 92
 gareth;python-ligo-lw 79
 saikat;python-ligo-lw 112
 dwchin;python-ligo-lw 91
-Julian Berman;rpds-py 13
-dependabot[bot];rpds-py 4
+Julian Berman;rpds-py 17
+dependabot[bot];rpds-py 5
 Leo Singer;safe-netrc 10
 duncan.macleod;safe-netrc 1
-Alex Hall;stack-data 40
+Alex Hall;stack-data 47
 André Roberge;stack-data 11
 Oriol Abril-Pla;xarray-einstats 20
 Oriol (ZBook);xarray-einstats 7
-Steven Murray;ads 3
-Andy Casey;ads 27
+Andy Casey;ads 33
 Miguel de Val-Borro;ads 4
-Vladimir Sudilovsky;ads 24
-Jonny Elliott;ads 8
-Michael Maier;ads 3
+Jonny Elliott;ads 13
+Vladimir Sudilovsky;ads 26
 andycasey;ads 10
 Oriol Abril-Pla;arviz 79
 Ari Hartikainen;arviz 148
-Ravin Kumar;arviz 97
+Ravin Kumar;arviz 98
 Agustina Arroyuelo;arviz 25
 Colin Carroll;arviz 15
-Osvaldo Martin;arviz 141
+Osvaldo Martin;arviz 143
 Piyush Gautam;arviz 23
 Rosheen Naeem;arviz 17
-Colin;arviz 53
+Colin;arviz 73
 Oriol Abril;arviz 77
 aloctavodia;arviz 19
+Marc Brinkmann;asciitree 10
 woodjosh256;asciitree 1
-Marc Brinkmann;asciitree 7
 Max Linke;asciitree 1
 Andrew Walker;asciitree 1
 David Dotson;asciitree 1
 Emil Stenström;asciitree 1
-James Guillochon;astrocats 61
+James Guillochon;astrocats 67
 lzkelley;astrocats 39
-guillochon;astrocats 216
-J. Michael Burgess;astromodels 38
-omodei;astromodels 15
-grburgess;astromodels 97
-Henrike Fleischhack;astromodels 10
-ndilalla;astromodels 32
-Giacomo Vianello;astromodels 37
+guillochon;astrocats 217
+J. Michael Burgess;astromodels 65
+omodei;astromodels 16
+grburgess;astromodels 103
+Henrike Fleischhack;astromodels 11
+Henrike F;astromodels 11
+ndilalla;astromodels 35
+Giacomo Vianello;astromodels 55
 giacomov;astromodels 62
-Alex Hall;asttokens 27
-Peter Law;asttokens 4
+Dmitry;asttokens 11
+Alex Hall;asttokens 31
+Peter Law;asttokens 5
 Tom Parker-Shemilt;asttokens 13
-Dmitry;asttokens 6
-Devin Jeanpierre;asttokens 3
 Dmitry S;asttokens 26
 Thomas Kluyver;backcall 6
 Jonathan Frederic;backcall 1
-Will Kahn-Greene;bleach 89
-Greg Guthe;bleach 33
-James Socol;bleach 56
-Mahmoud Hashemi;boltons 276
-Evgenii Kliuchnikov;brotli 22
-Eugene Kliuchnikov;brotli 135
+Will Kahn-Greene;bleach 108
+Greg Guthe;bleach 49
+James Socol;bleach 62
+Mahmoud Hashemi;boltons 309
+Evgenii Kliuchnikov;brotli 31
+Eugene Kliuchnikov;brotli 141
 Cosimo Lupo;brotli 22
+szabadka;brotli 64
 Zoltan Szabadka;brotli 71
-eustas;brotli 20
+eustas;brotli 42
 dependabot[bot];celerite 36
-Dan Foreman-Mackey;celerite 21
-Dan F-M;celerite 127
-Eric Agol;celerite 45
-Antony Lewis;cobaya 172
-torradocacho;cobaya 136
+Dan Foreman-Mackey;celerite 33
+Dan F-M;celerite 128
+Eric Agol;celerite 47
+ericagol;celerite 18
+Antony Lewis;cobaya 179
+torradocacho;cobaya 137
+Pablo Lemos;cobaya 19
 JesusTorrado;cobaya 36
-Jonathan Hartley;colorama 23
-Nathaniel J. Smith;colorama 4
-Arnon Yaari;colorama 35
-Jon Dufresne;colorama 4
+Jonathan Hartley;colorama 29
+Nathaniel J. Smith;colorama 5
+Arnon Yaari;colorama 47
 Hugo;colorama 5
-martinRenou;comm 5
+wiggin15;colorama 23
+martinRenou;comm 6
+vincent-grosbois;comm 1
 Maarten Breddels;comm 3
 Steven Silvester;comm 3
 dependabot[bot];comm 1
-Ian Thomas;contourpy 160
+Ian Thomas;contourpy 162
 pre-commit-ci[bot];corner 31
-Dan Foreman-Mackey;corner 19
-Dan F-M;corner 39
+Dan Foreman-Mackey;corner 37
+Dan F-M;corner 40
 Will Vousden;corner 4
-Elliott Sales de Andrade;cycler 6
+Elliott Sales de Andrade;cycler 12
+Thomas A Caswell;cycler 39
 Kyle Sunden;cycler 4
-Thomas A Caswell;cycler 30
-Antony Lee;cycler 3
-Benjamin Root;cycler 5
-Pavel Minaev;debugpy 224
+Benjamin Root;cycler 12
+Pavel Minaev;debugpy 228
 Fabio Zadrozny;debugpy 244
-Karthik Nadig;debugpy 187
+Karthik Nadig;debugpy 196
 Don Jayamanne;debugpy 33
-Eric Snow;debugpy 56
-Michele Simionato;decorator 78
-michele.simionato;decorator 15
+Eric Snow;debugpy 57
 Christian Heimes;defusedxml 30
 Jon Dufresne;defusedxml 3
-Sergey E. Koposov;dynesty 112
-Sergey Koposov;dynesty 37
-Josh Speagle;dynesty 48
-joshspeagle;dynesty 14
-Kyle Barbary;dynesty 23
-Frank Hoffmann;executing 36
-Alex Hall;executing 66
-Kyle Barbary;extinction 19
-Miles Lucas;extinction 2
-Michal Horejsek;fastjsonschema 51
-Anderson Bravalheri;fastjsonschema 7
-Antti Jokipii;fastjsonschema 8
-Eric Charles;fermipy 113
-Matthew Wood;fermipy 155
-Matthew Dunseth Wood;fermipy 229
-Behdad Esfahbod;fonttools 476
-Cosimo Lupo;fonttools 625
-Khaled Hosny;fonttools 82
-Nikolaus Waxweiler;fonttools 64
-Sascha Brawer;fonttools 133
-Erik van Blokland;fonttools 71
-jvr;fonttools 100
-Jose Diaz-Gonzalez;fuzzywuzzy 30
-davidcellis;fuzzywuzzy 3
-nolan;fuzzywuzzy 4
-Pedro Rodrigues;fuzzywuzzy 10
-Jeff Paine;fuzzywuzzy 5
-Adam Cohen;fuzzywuzzy 7
-Tristan Launay;fuzzywuzzy 5
-Dan Foreman-Mackey;george 13
-Dan F-M;george 113
-Antony Lewis;getdist 136
-Sebastian Thiel;gitdb 70
-Sebastian Thiel;gitpython 295
-Kai Mühlbauer;h5netcdf 38
-Mark Harfouche;h5netcdf 5
-Kai Muehlbauer;h5netcdf 5
-Aleksandar Jelenak;h5netcdf 11
-Stephan Hoyer;h5netcdf 31
-Sam Sneddon;html5lib 13
+Kyle Barbary;extinction 21
 Jon Dufresne;html5lib 18
-Geoffrey Sneddon;html5lib 101
-James Graham;html5lib 130
-jgraham;html5lib 28
+Geoffrey Sneddon;html5lib 108
+jgraham;html5lib 34
+James Graham;html5lib 131
 Sam Ruby;html5lib 44
 Philip Taylor;html5lib 17
 Thomas Broyer;html5lib 27
 Anne van Kesteren;html5lib 38
-Kim Davies;idna 49
-Jon Ribbens;idna 5
-Jon Dufresne;idna 5
-Yoshiki Shibukawa;imagesize 10
+Kim Davies;idna 59
+Yoshiki Shibukawa;imagesize 16
 ExtReMLapin;imagesize 2
 Marco Ribeiro;imagesize 2
 Jon Dufresne;imagesize 5
-Thomas Köstler;imagesize 1
-Nick Schaub;imagesize 1
 ffreemt;imagesize 2
-ossdev07;imagesize 1
-Tyler Young;imagesize 1
-Takeshi KOMIYA;imagesize 1
 Dmitry Shachnev;imagesize 3
-Hugo;imagesize 1
-hugovk;imagesize 1
-Geoff Lankow;imagesize 1
-avylove;imagesize 1
-Michel Zou;imagesize 1
-Hans Dembinski;iminuit 195
-Henry Schreiner;iminuit 24
-Christoph Deil;iminuit 23
-Piti Ongmongkolkul;iminuit 49
-Jason R. Coombs;inflect 230
-Paul Dyson;inflect 28
-Ronny Pfannschmidt;iniconfig 16
+Hans Dembinski;iminuit 198
+Henry Schreiner;iminuit 25
+Christoph Deil;iminuit 35
+Piti Ongmongkolkul;iminuit 54
+Jason R. Coombs;inflect 240
+Paul Dyson;inflect 29
+Ronny Pfannschmidt;iniconfig 27
 Hugo van Kemenade;iniconfig 6
-pre-commit-ci[bot];iniconfig 2
 holger krekel;iniconfig 7
-Pablo Winant;interpolation 52
-Winant Pablo;interpolation 23
-Min RK;ipyparallel 227
-pre-commit-ci[bot];ipyparallel 57
-Tom-Olav Bøyum;ipyparallel 49
-Thomas Kluyver;ipyparallel 40
-MinRK;ipyparallel 259
-Brian Granger;ipyparallel 33
-Jason Grout;ipywidgets 399
-Jeremy Tuloup;ipywidgets 55
-Vidar Tonaas Fauske;ipywidgets 75
-Sylvain Corlay;ipywidgets 232
-Min RK;ipywidgets 65
-Pascal Bugnion;ipywidgets 52
-Jonathan Frederic;ipywidgets 253
-MinRK;ipywidgets 62
-Dave Halter;jedi 966
-David Halter;jedi 248
-Thomas Kluyver;jeepney 44
+Winant Pablo;interpolation 24
+Pablo Winant;interpolation 64
+Benjamin Ragan-Kelley;ipyparallel 653
+Thomas Kluyver;ipyparallel 81
+Brian E. Granger;ipyparallel 77
+Jeremy Tuloup;ipywidgets 65
+Sylvain Corlay;ipywidgets 312
+Jason Grout;ipywidgets 478
+Vidar Tonaas Fauske;ipywidgets 103
+Benjamin Ragan-Kelley;ipywidgets 221
+Pascal Bugnion;ipywidgets 56
+Brian E. Granger;ipywidgets 62
+Jonathan Frederic;ipywidgets 334
+Matthias Bussonnier;ipywidgets 67
+Thomas Kluyver;ipywidgets 68
+Dave Halter;jedi 1032
+David Halter;jedi 271
+Thomas Kluyver;jeepney 49
 Jane Soko;jeepney 5
-Loïc Estève;joblib 105
-Thomas Moreau;joblib 33
-Gael Varoquaux;joblib 70
-Olivier Grisel;joblib 153
+Thomas Moreau;joblib 34
+Loïc Estève;joblib 114
+Gael Varoquaux;joblib 149
+Olivier Grisel;joblib 167
 Pierre Glaser;joblib 21
-Alexandre Abadie;joblib 48
-GaelVaroquaux;joblib 30
-Gael varoquaux;joblib 34
-Stefan Kögl;jsonpatch 62
+Alexandre Abadie;joblib 52
+Stefan Kögl;jsonpatch 82
 Alexander Shorin;jsonpatch 9
-Stefan Kögl;jsonpointer 49
-Julian Berman;jsonschema 456
+Stefan Kögl;jsonpointer 56
+Julian Berman;jsonschema 517
 nespinoza;juliet 18
-Nestor Espinoza;juliet 73
+Nestor Espinoza;juliet 74
 Diana Kossakowski;juliet 11
 plwk;kde 4
-Jason R. Coombs;keyring 392
-Dmitry Shachnev;keyring 41
-Matthieu Dartiailh;kiwisolver 41
-S. Chris Colbert;kiwisolver 16
+Jason R. Coombs;keyring 424
+Matthieu Dartiailh;kiwisolver 55
+S. Chris Colbert;kiwisolver 21
 MatthieuDartiailh;kiwisolver 37
 John Wiggins;kiwisolver 6
 Chris Colbert;kiwisolver 11
-Antoine Prouvost;mamba 60
-Johan Mabille;mamba 75
-Jonas Haag;mamba 49
-Wolf Vollprecht;mamba 255
-AntoinePrv;mamba 30
-Joël Lamotte (Klaim);mamba 33
+Antoine Prouvost;mamba 66
+Jonas Haag;mamba 52
+Johan Mabille;mamba 86
+Wolf Vollprecht;mamba 342
 Adrien DELSALLE;mamba 66
 Adrien Delsalle;mamba 35
 pre-commit-ci[bot];mdurl 3
 Taneli Hukkinen;mdurl 8
 Michael;mdurl 1
-Hsiaoming Yang;mistune 178
-Matt Nicholl;mosfit 31
-mnicholl;mosfit 24
-guillochon;mosfit 219
-James Guillochon;mosfit 47
-Brenna Mockler;mosfit 60
-Brian Clapper;munkres 22
-Brian M. Clapper;munkres 3
-Florian Rathgeber;nbstripout 64
+Hsiaoming Yang;mistune 192
+mnicholl;mosfit 35
+Matt Nicholl;mosfit 37
+guillochon;mosfit 223
+James Guillochon;mosfit 90
+Brenna Mockler;mosfit 67
+Brian Clapper;munkres 25
+Brian M. Clapper;munkres 5
+Florian Rathgeber;nbstripout 72
 Per A Brodtkorb;numdifftools 94
-pbrod;numdifftools 58
+Per A. Brodtkorb;numdifftools 17
+pbrod;numdifftools 59
 per.andreas.brodtkorb;numdifftools 18
-Robert McLeod;numexpr 59
+Robert McLeod;numexpr 74
 Antonio Valentino;numexpr 15
-Francesc Alted;numexpr 84
+Francesc Alted;numexpr 90
+FrancescAlted;numexpr 23
 david.m.cooke;numexpr 9
+Olivier Delalleau;omegaconf 37
 Jasha;omegaconf 39
 Jasha10;omegaconf 67
-Olivier Delalleau;omegaconf 36
-Omry Yadan;omegaconf 179
+Omry Yadan;omegaconf 186
 Pere Diaz Bou;omegaconf 20
 omry;omegaconf 36
 Matthieu Darbois;packaging 19
 Shantanu;packaging 5
 Tzu-ping Chung;packaging 7
-Pradyun Gedam;packaging 32
-Dustin Ingram;packaging 22
-Brett Cannon;packaging 41
+Pradyun Gedam;packaging 36
+Dustin Ingram;packaging 24
+Brett Cannon;packaging 46
 Henry Schreiner;packaging 8
 Jon Dufresne;packaging 5
-Xavier Fernandez;packaging 6
-Donald Stufft;packaging 39
-Kolen Cheung;pandocfilters 2
-Gerhard Hellmann;pandocfilters 2
-John MacFarlane;pandocfilters 17
-Christophe Demko;pandocfilters 4
-KolenCheung;pandocfilters 2
-Jacques Peron;pandocfilters 3
-August Hörandl;pandocfilters 4
-Aaron O'Leary;pandocfilters 2
-Dave Halter;parso 182
-Nathaniel J. Smith;patsy 106
-Thomas Kluyver;pickleshare 8
+Xavier Fernandez;packaging 7
+Donald Stufft;packaging 43
+John MacFarlane;pandocfilters 47
+Dave Halter;parso 207
+Nathaniel J. Smith;patsy 115
+Thomas Kluyver;pickleshare 9
 Johannes Maria Frank;pickleshare 1
+Min RK;pickleshare 3
 Andrea Zonca;pickleshare 1
+Ville Vainio;pickleshare 3
 Robert Cohn;pickleshare 1
-Matthias Bussonnier;pickleshare 3
+Matthias Bussonnier;pickleshare 8
 wiggin15;pickleshare 1
-Min RK;pickleshare 2
 Miguel Sánchez de León Peque;pickleshare 1
 Lorena;pickleshare 1
 MinRK;pickleshare 1
 Joseph Martinot-Lagarde;pickleshare 1
-Ville Vainio;pickleshare 1
 Ville M. Vainio;pickleshare 1
-Hernan Grecco;pint 172
-Jules Chéron;pint 38
+Hernan Grecco;pint 224
+Jules Chéron;pint 69
 Hernan;pint 61
-github-actions[bot];pint 18
-Keewis;pint 40
-Jon Thielen;pint 20
-Guido Imperiale;pint 21
-Bernát Gábor;pipdeptree 21
+bors[bot];pint 119
+Keewis;pint 41
+Kemal Zebari;pipdeptree 7
+Bernát Gábor;pipdeptree 22
 dependabot[bot];pipdeptree 8
-Kevin Deldycke;pipdeptree 6
-Vineet Naik;pipdeptree 45
-Marc Abramowitz;pipdeptree 6
-Tom Terrace;pipdeptree 5
-Vineet;pipdeptree 14
-pre-commit-ci[bot];platformdirs 18
-Kemal Zebari;platformdirs 5
+Vineet Naik;pipdeptree 69
+Vineet;pipdeptree 15
+pre-commit-ci[bot];platformdirs 20
+Kemal Zebari;platformdirs 6
 dependabot[bot];platformdirs 11
 Bernát Gábor;platformdirs 38
+Julian Berman;platformdirs 4
+Jeff Rouse;platformdirs 23
 Jon Dufresne;platformdirs 7
-Jeff Rouse;platformdirs 8
-Sridhar Ratnakumar;platformdirs 16
-Eddy Petrișor;platformdirs 5
+Sridhar Ratnakumar;platformdirs 21
+Eddy Petrișor;platformdirs 6
 Trent Mick;platformdirs 4
-pre-commit-ci[bot];pluggy 20
-Ran Benita;pluggy 23
-Bruno Oliveira;pluggy 38
-Ronny Pfannschmidt;pluggy 7
+Ran Benita;pluggy 28
+Ronny Pfannschmidt;pluggy 26
+pre-commit-ci[bot];pluggy 21
+Bruno Oliveira;pluggy 63
+goodboy;pluggy 37
 Tyler Goodlet;pluggy 33
-Daniel Hahler;pluggy 7
+Daniel Hahler;pluggy 8
 Anthony Sottile;pluggy 7
-Miro Hrončok;pluggy 4
 Oliver Bestwalter;pluggy 7
-holger krekel;pluggy 13
+holger krekel;pluggy 17
 Santiago Soler;pooch 17
 Leonardo Uieda;pooch 82
-Fatiando a Terra Bot;pooch 9
-Rick van Hattem;portalocker 55
-Giampaolo Rodola;psutil 598
-Giampaolo Rodola';psutil 389
-Jay Loden;psutil 83
-Thomas Kluyver;ptyprocess 22
-anwilli5;ptyprocess 3
-Antoine Pitrou;pyarrow 510
-Sutou Kouhei;pyarrow 464
-Raúl Cumplido;pyarrow 101
-Joris Van den Bossche;pyarrow 243
-Nic Crane;pyarrow 128
-Weston Pace;pyarrow 173
-Dewey Dunnington;pyarrow 63
-David Li;pyarrow 281
-Alenka Frim;pyarrow 103
-Benjamin Kietzman;pyarrow 161
-Matt Topol;pyarrow 82
-Jacob Wujciak-Jens;pyarrow 68
-Neal Richardson;pyarrow 271
-Dominik Moritz;pyarrow 55
-Bryan Cutler;pyarrow 86
-Will Jones;pyarrow 78
-Yibo Cai;pyarrow 111
-Jonathan Keane;pyarrow 88
-Philipp Moritz;pyarrow 90
-Wes McKinney;pyarrow 538
-Krisztián Szűcs;pyarrow 301
-Phillip Cloud;pyarrow 61
-Matthew Topol;pyarrow 57
-Micah Kornfield;pyarrow 106
-Jorge C. Leitao;pyarrow 95
-liyafan82;pyarrow 102
-Uwe L. Korn;pyarrow 219
-Romain Francois;pyarrow 71
-Andy Grove;pyarrow 144
-Heres, Daniel;pyarrow 55
-Neville Dipale;pyarrow 81
-François Saint-Jacques;pyarrow 97
-tianchen;pyarrow 59
-Pindikura Ravindra;pyarrow 73
-Deepak Majeti;pyarrow 56
-Kouhei Sutou;pyarrow 204
-Korn, Uwe;pyarrow 96
-conda-bot;pycosat 13
-Conda Bot;pycosat 3
-Daniel Holth;pycosat 3
-Ilan Schnell;pycosat 25
-Eli Bendersky;pycparser 112
-eli.bendersky;pycparser 34
-Adrian Garcia Badaracco;pydantic 66
-Samuel Colvin;pydantic 256
-David Montague;pydantic 66
-Hasan Ramezani;pydantic 60
-Terrence Dorsey;pydantic 41
-Marcelo Trylesinski;pydantic 39
-dependabot[bot];pydantic 35
-Eric Jolibois;pydantic 41
-dependabot-preview[bot];pydantic 44
-pyup.io bot;pydantic 33
-José Padilla;pyjwt 75
-pre-commit-ci[bot];pyjwt 46
-Jon Dufresne;pyjwt 12
-Ajitomi, Daisuke;pyjwt 8
-Mark Adams;pyjwt 36
-Jeff Lindsay;pyjwt 8
-Alex Gaynor;pyopenssl 98
-Paul Kehrer;pyopenssl 55
-Hynek Schlawack;pyopenssl 52
-Cory Benfield;pyopenssl 21
-Jean-Paul Calderone;pyopenssl 173
-Anorov;pysocks 28
-Lucas Zanella;pysocks 3
-Gregory Petukhov;pysocks 5
-Martin Panter;pysocks 8
-Min RK;pyzmq 290
-pre-commit-ci[bot];pyzmq 49
-MinRK;pyzmq 271
-Julian Berman;referencing 63
-pre-commit-ci[bot];referencing 20
-dependabot[bot];referencing 12
-Larry Bradley;regions 108
-Adam Ginsburg (keflavich);regions 41
-Thomas Robitaille;regions 30
-Christoph Deil;regions 34
-Brigitta Sipocz;regions 33
-sushobhana;regions 62
-Johannes King;regions 21
-Will McGugan;rich 350
-Darren Burns;rich 40
+Fatiando a Terra Bot;pooch 10
+Rick van Hattem;portalocker 64
+Julian Berman;referencing 79
+dependabot[bot];referencing 14
+pre-commit-ci[bot];referencing 23
+Will McGugan;rich 457
 dependabot[bot];rich 86
-Adrian Price-Whelan;schwimmbad 23
+Adrian Price-Whelan;schwimmbad 27
 Dan F-M;schwimmbad 3
 Dmitry Shachnev;secretstorage 108
-Anderson Bravalheri;setuptools 158
-Jason R. Coombs;setuptools 774
-Georg Brandl;setuptools 108
+Anderson Bravalheri;setuptools 191
+Jason R. Coombs;setuptools 850
+Georg Brandl;setuptools 113
 Tarek Ziadé;setuptools 102
 PJ Eby;setuptools 172
 Greg Ward;setuptools 127
-Bob Ippolito;simplejson 179
-Sebastian Thiel;smmap 34
-Harmon;smmap 4
-Antonio Valentino;tables 302
-Francesc Alted;tables 551
-Tom Kooij;tables 56
-Ivan Vilata i Balaguer;tables 145
-Sergey Astanin;tabulate 64
-Jérémie du Boisberranger;threadpoolctl 27
-Olivier Grisel;threadpoolctl 15
-jeremie du boisberranger;threadpoolctl 11
-jeremiedbb;threadpoolctl 7
-J. Michael Burgess;threeml 143
-ndilalla;threeml 79
-omodei;threeml 26
-Henrike Fleischhack;threeml 26
-grburgess;threeml 200
-Giacomo Vianello;threeml 81
-Travis CI;threeml 69
-giacomov;threeml 79
-Guillaume Ayoub;tinycss2 42
-Lucie Anglade;tinycss2 7
-Simon Sapin;tinycss2 29
-Uiri;toml 91
-pre-commit-ci[bot];tomli 9
-Taneli Hukkinen;tomli 69
-James Gerity;unicodedata2 5
-Parag Nemade;unicodedata2 1
-Khaled Hosny;unicodedata2 1
-Cosimo Lupo;unicodedata2 9
-Kirill A. Korinsky;unicodedata2 1
-Harmon;unicodedata2 5
-Nikolaus Waxweiler;unicodedata2 1
-Mike Kaplinskiy;unicodedata2 9
-Shaun Walbridge;unicodedata2 1
-Denis Jacquerye;unicodedata2 1
-John Vandenberg;unicodedata2 2
-Jeff Quast;wcwidth 31
-GalaxySnail;wcwidth 4
-jquast;wcwidth 7
-Jon Dufresne;webencodings 3
-Geoffrey Sneddon;webencodings 5
-Adam Johnson;webencodings 1
-Dustin Ingram;webencodings 1
-Felix Krull;webencodings 1
-Simon Sapin;webencodings 7
-pre-commit-ci[bot];wheel 33
-Henry Schreiner;wheel 9
-Alex Grönholm;wheel 89
-Jon Dufresne;wheel 10
-Paul Moore;wheel 19
-Daniel Holth;wheel 87
-Nate Coraor;wheel 9
-Tom Nicholas;xarray 56
-pre-commit-ci[bot];xarray 58
-Illviljan;xarray 85
-Stephan Hoyer;xarray 445
-Deepak Cherian;xarray 177
-Joe Hamman;xarray 120
-crusaderky;xarray 56
-Spencer Clark;xarray 70
-Mathias Hauser;xarray 78
-Maximilian Roos;xarray 166
-keewis;xarray 133
-Fabien Maussion;xarray 51
-Keisuke Fujii;xarray 60
-Martin Fleischmann;xyzservices 79
-Jason R. Coombs;zipp 250
-Gregory Szorc;zstandard 118
+Bob Ippolito;simplejson 204
+Sebastian Thiel;smmap 41
+Antonio Valentino;tables 353
+Francesc Alted;tables 564
+Tom Kooij;tables 66
+Ivan Vilata i Balaguer;tables 146
+Sergey Astanin;tabulate 80

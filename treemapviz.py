@@ -20,6 +20,17 @@ for line in open(sys.argv[1]):
 
 
 df = pd.DataFrame(dict(weights=weights, projects=projects, names=names))
+print("%d entries" % len(df))
+suffix = ''
+if '--cut-tiny' in sys.argv:
+    df = df[df.weights > 0.001 * df.weights.max()]
+    print("%d entries after cut" % len(df))
+    suffix += '_withouttiny'
+if '--cut-major' in sys.argv:
+    for project in 'starlink', 'astropy', 'yt', 'pycbc', 'q-e', 'nemo', 'class_public', 'matplotlib', 'minad', 'mesa':
+        df = df[df.projects != project]
+    print("%d entries after cut" % len(df))
+    suffix += '_withoutmajor'
 
 fig, ax = plt.subplots(figsize=(20,10), dpi=100, subplot_kw=dict(aspect=0.5))
 trc = tr.treemap(
@@ -41,5 +52,6 @@ ax.axis('off')
 #cb.outline.set_edgecolor('w')
 
 #plt.title('by person-days')
-fig.savefig('fig2.png', dpi='figure')  #, bbox_inches='tight')
+fig.savefig(sys.argv[1] + suffix + '.png', dpi='figure')  #, bbox_inches='tight')
+fig.savefig(sys.argv[1] + suffix + '.pdf', dpi='figure')  #, bbox_inches='tight')
 plt.close()

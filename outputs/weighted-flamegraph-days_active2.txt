@@ -15,7 +15,7 @@ askinner;Athena-Cversion 408226
 lemaster;Athena-Cversion 753648
 Gardiner, Thomas A.;Athena-Cversion 565236
 Offringa, A. R.;aoflagger 4355775
-alessandramb;NBSymple 304
+Mastrobuono-Battisti, A.;NBSymple 304
 O'Connor, Evan;GR1D 448736
 Mario G. Santos;Simfast21 24388
 Sultan Hassan;Simfast21 36582
@@ -28,8 +28,7 @@ Gao Wang;extreme-deconvolution 51405
 High, F. William;stellar-locus-regression 239166
 Good, John;Montage 24601
 Zingale, M.;MAESTRO 2714400
-Nonaka, A.;MAESTRO 1788488
-Almgren, A. S.;MAESTRO 645424
+Nonaka, A.;MAESTRO 2433912
 Malone, C. M.;MAESTRO 458432
 Cardiel, N.;indexf 1835592
 Teuben, P.;nemo 23227677
@@ -51,38 +50,15 @@ Bertin, E.;weightwatcher 16560
 ernest;Starlab 7686
 steve;Starlab 61488
 spz;Starlab 19215
-Peter Teuben;Starlab 6588
+Hut, P.;Starlab 6588
 starlab;Starlab 13908
-Cosmo, G.;geant4 3447684
-Evan Bauer;mesa 1853962
-evbauer;mesa 7078764
-Rob Farmer;mesa 6573138
-Robert Farmer;mesa 9354081
-Warrick Ball;mesa 6825951
-Rich Townsend;mesa 1179794
-Matthias Fabry;mesa 1601149
-Earl Patrick Bellinger;mesa 1095523
-Timmes, Frank;mesa 3455111
-Adam Jermyn;mesa 5224802
-Josiah Schwab;mesa 7163035
-Paxton, Bill;mesa 1938233
+Barrand, G.;geant4 3447684
 Agol, Eric;TTVFaster 12180
 Dan F-M;TTVFaster 870
 Ethan Kruse;TTVFaster 870
 Dan Foreman-Mackey;TTVFaster 870
 Hanno Rein;TTVFaster 870
 Liesenborgs, J.;GRALE2 1474521
-Clément Robert;yt 23494451
-Kacper Kowalik;yt 18052017
-John ZuHone;yt 27787075
-Turk, Matthew J.;yt 75389209
-Corentin Cadiou;yt 9581750
-Cameron Hummels;yt 10808214
-Smith, Britton D.;yt 25027531
-Andrew Myers;yt 12494602
-Nathan Goldbaum;yt 38403654
-Skillman, Samuel W.;yt 10156655
-Skory, Stephen;yt 9811712
 Easther, Richard;interp-mc 134
 Taylor, M. B.;tctuto 371970
 Andrea Negri;AHF 196080
@@ -106,17 +82,6 @@ jcarron;lenspyx 446964
 carronj;lenspyx 96404
 Brian O'Shea;ZEUS-MP_2 12737
 Tom Marsh;s2plot-python 6411
-Clément Robert;yt 1724982
-Kacper Kowalik;yt 1325394
-John ZuHone;yt 2040150
-Turk, Matthew J.;yt 5535138
-Corentin Cadiou;yt 703500
-Cameron Hummels;yt 793548
-Britton Smith;yt 1837542
-Andrew Myers;yt 917364
-Nathan Goldbaum;yt 2819628
-Sam Skillman;yt 745710
-Skory, Stephen;yt 720384
 Altay, Gabriel;sphray 160643
 Barbey, N.;TomograPy 19832
 Taylor, M. B.;starjava 18079908
@@ -125,21 +90,9 @@ Quinn, Thomas;changa 3001779
 Ben Keller;changa 239199
 Jetley, Pritish;changa 367221
 Filippo Gioachin;changa 286365
-Max Katz;Castro 6294435
-Zingale, M.;Castro 10337880
+Singer, M.;Castro 16632315
 Zhang, W.;Castro 1675737
-Teuben, P. J.;miriad 79059771
-pkwill;miriad 8032101
-Wright, M. C. H.;miriad 10620960
-tyu;miriad 17790108
-jzhao;miriad 10753722
 Gazak, J. Zachary;TAP 4188
-Lesgourgues, Julien;class_public 32639280
-Tram, Thomas;class_public 5185680
-Deanna Hooper;class_public 3736740
-Maria Archidiacono;class_public 5948280
-SamuelBrieden;class_public 2897880
-Benjamin Audren;class_public 10523880
 Foreman, Simon;StringFast 2442
 Marc Williamson;SESNtemple 57984
 mmoJazz;SESNtemple 270592
@@ -148,9 +101,8 @@ Yuqian Liu;SESNtemple 347904
 fedhere;SESNtemple 57984
 Yuqian;SESNtemple 193280
 wmclaugh;sherpa 4775300
-Burke, D.;sherpa 13064500
-Marie-Terrell;sherpa 1153280
-Nguyen, D.;sherpa 2000220
+Nguyen, D.;sherpa 15064720
+Nowak, M.;sherpa 1153280
 Omar Laurino;sherpa 4631140
 Steven Rieder;amuse 840336
 Pelupessy, F. I.;amuse 2583000
@@ -159,8 +111,7 @@ spz;amuse 492492
 van Elteren, A.;amuse 2682876
 stoonen;amuse 306516
 steve;amuse 244524
-niels;amuse 523488
-de Vries, N.;amuse 1315608
+de Vries, N.;amuse 1839096
 marosvolgyi;amuse 378840
 ims;lime 988655
 allegroLeiden;lime 395462
@@ -190,19 +141,18 @@ Joel Gales;gdl 993476
 Feroz, F.;MultiNest 533550
 Gregory David Martinez;MultiNest 88925
 grburgess;MultiNest 88925
-Matthew Pitkin;MultiNest 177850
+Bridges, M.;MultiNest 177850
 Will Handley;MultiNest 88925
 Copi, Craig J.;cmb-multipole_vectors 506175
 Fred Dauphin;WFC3Library 118320
-annierose3;WFC3Library 104400
+Pasquali, A.;WFC3Library 125280
 kyhuynh108;WFC3Library 20880
 FDauphin;WFC3Library 83520
 Ky Huynh;WFC3Library 13920
 Catherine A. Martlin;WFC3Library 13920
 catherine-martlin;WFC3Library 13920
-Anne O'Connor;WFC3Library 20880
 st-apidgeon;WFC3Library 20880
-Mariarosa Marinelli;WFC3Library 20880
+Kümmel, M.;WFC3Library 20880
 De Vries, Christopher H.;analytic_infall 23959
 Wieczorek, Mark A.;SHTOOLS 252168
 Rein, H.;rebound 5881712
@@ -223,20 +173,18 @@ Paumard, T.;Gyoto 933585
 Frederic;Gyoto 202705
 Will Barnes;EBTEL 84238
 Monnerville, M.;Youpi 6888
-Gregory Semah;Youpi 1407
+Sémah, G.;Youpi 1407
 Illenseer, Tobias F.;fosite 8500
 Jannes Klee;fosite 7625
 LBoesch;fosite 2125
 Jubin Lirawi;fosite 1000
 Jonathan Sick;starfish 79800
 Melchior, P.;epsnoise 39268
-Słonina, Mariusz;Mechanic 43095
-Słonina, M.;Mechanic 90831
+Słonina, M.;Mechanic 133926
 Laurino, O.;iris 2520
-Jamie Budynkiewicz;iris 1460
+Evans, J.;iris 1940
 Erik H;iris 1600
 Erik;iris 260
-jbudynk;iris 480
 Busko, I.;iris 900
 Ramachandran, Prabhu;mayavi 3442551
 Eric Larson;mayavi 260361
@@ -306,7 +254,7 @@ Meschiari, Stefano;systemic2 557555
 MarkDurre;DPUserFunctions 1971
 Mayeul d'Avezac;s2let 4104
 McEwen, J. D.;s2let 2508
-paddyroddy;s2let 3420
+Vandergheynst, P.;s2let 3420
 Leistedt, B.;s2let 11628
 Martin Büttner;s2let 5472
 Kelly;CosmicEmu 2106
@@ -316,10 +264,8 @@ Tom McClintock;CosmicEmu 2106
 earlcl;CosmicEmu 2106
 Laura L Watkins;cjam 763236
 Tadeja;cjam 84804
-Bédorf, J.;Bonsai 10788
-Jeroen Bedorf;Bonsai 37584
-Evghenii;Bonsai 12180
-Gaburov, E.;Bonsai 9048
+Bédorf, J.;Bonsai 48372
+Gaburov, E.;Bonsai 21228
 Mark Harris;Bonsai 4524
 Groen, Derek;MPWide 2496
 Joris Borgdorff;MPWide 1456
@@ -373,51 +319,32 @@ Akeret, Joel;CosmoHammer 2696
 Akeret, Joël;CosmoHammer 16176
 Simon Birrer;CosmoHammer 2696
 cosmo-ethz;CosmoHammer 10784
-Holdship, J.;UCLCHEM 72318
-jrh@star.ucl.ac.uk;UCLCHEM 21979
+Holdship, J.;UCLCHEM 94297
 Friedel, D. N.;CADRE 12
 Jeschke, E.;ginga 17730
 P. L. Lim;ginga 1494
 Pey Lian Lim;ginga 3852
 Brandt, Timothy D.;acorns-adi 20776
 Carlos Bengaly;GaPP 7699
-van Kerkwijk, M. H.;astropy 46011136
-P. L. Lim;astropy 43370752
-Robitaille, Thomas P.;astropy 48602624
-Nathaniel Starkman;astropy 11686144
-Conseil, Simon;astropy 22100992
-William Jamieson;astropy 6698752
-Bradley, L. D.;astropy 13153024
-Aldcroft, Tom;astropy 42979584
-Davis, Matt;astropy 6454272
-Dencheva, Nadia;astropy 17749248
-Mumford, S. J.;astropy 9632512
-Sipőcz, B. M.;astropy 26843904
-Unther, Hans M.;astropy 5965312
-Adrian Price-Whelan;astropy 12321792
-Tollerud, Erik J.;astropy 36085248
-Ginsburg, Adam;astropy 6405376
-E. Madison Bray;astropy 27186176
-Droettboom, Michael;astropy 35107328
 Carrasco Kind, Matias;MLZ 114480
 Switzer, Eric;mcmc_tools 28908
 Carlson, Jordan;Copter 96117
 Monaco, P.;Pinocchio 49084
 yanling-song455;Pinocchio 3506
 Luca Tornatore;Pinocchio 3506
-Stuart Mumford;SAC 19652
+Shelyag, S.;SAC 19652
 Kashyap, Vinay L.;BEHR 9812
 farhanferoz;BAMBI 2617
 Farhan Feroz;BAMBI 2617
 marius;pypico 214448
 chris;fieldinf 113912
-julian;astrotaverna 7705
-Stian Soiland-Reyes;astrotaverna 2760
+Garrido, J.;astrotaverna 7705
+Sánchez-Expósito, S.;astrotaverna 2760
 Kipping, David M.;MAH 1880
 Reid, Beth A.;cosmoxi2d 19262
 Peterson, J. R.;phosim_release.git 2456031
 Glenn Sembroski;phosim_release.git 380464
-Colin Burke;phosim_release.git 302333
+Chang, C.;phosim_release.git 302333
 Peng, E.;phosim_release.git 373670
 peters11;phosim_release.git 1029291
 Groves, Brent A.;itera 935
@@ -438,9 +365,8 @@ Pontoppidan, Klaus M.;radlite 179025
 Jamila Pegues;radlite 30690
 Alex Lockwood;radlite 23870
 Oliver Cordes;home-reverse-proxy 52344
-Nicula, B.;JHelioviewer-SWHV 1642600
+Nicula, B.;JHelioviewer-SWHV 1932920
 Verstringe, F.;JHelioviewer-SWHV 395752
-Bourgoignie, B.;JHelioviewer-SWHV 290320
 Dere, K. P.;ChiantiPy 2774076
 Will Barnes;ChiantiPy 572907
 Deen, Casey P.;MoogStokes 28854
@@ -449,8 +375,7 @@ sethspjohnso;satmc 2149
 Google Code Exporter;satmc 2149
 Graham Bell;ORAC-DR 956232
 Malcolm J. Currie;ORAC-DR 3398112
-Jenness, T.;ORAC-DR 2306448
-Tim Lister;ORAC-DR 348840
+Jenness, T.;ORAC-DR 2655288
 Jim Lewis;ORAC-DR 348840
 Andy Gibb;ORAC-DR 2725056
 Cavanagh, B.;ORAC-DR 2720952
@@ -500,27 +425,19 @@ dkhaz;bingo 5228
 Watkins, Laura L.;cjam 43776
 Tadeja;cjam 4864
 Hardy, Stephen J.;SL1M 312
-Jon Niehof;spacepy 25950
+Koller, J.;spacepy 63750
 Welling, D. T.;spacepy 15150
 Steve Morley;spacepy 32700
 Brian Larsen;spacepy 24750
 smorley;spacepy 8250
-Jonathan Niehof;spacepy 27900
 balarsen;spacepy 5550
-Koller, J.;spacepy 5100
-jniehof;spacepy 4800
 Jarvis, M.;GalSim 13510926
 Mandelbaum, R.;GalSim 5337189
-Meyers, J. E.;GalSim 3483480
-jmeyers314;GalSim 1617330
+Bosch, J.;GalSim 5100810
 Rowe, B. T. P.;GalSim 3570567
-Grassi, T.;krome 977014
+Grassi, T.;krome 1248632
 Bovino, S.;krome 770260
-Jon Ramsey;krome 141890
-Jels Boulangier;krome 125674
-JelsB;krome 190538
-troels;krome 166214
-Troels Haugboelle;krome 105404
+Prieto, J.;krome 458102
 zlaptoppeo;krome 802692
 Brinch, Christian;limepackage 465
 Jurek, R.;busy-function-fitting 7392
@@ -611,7 +528,7 @@ Andy Gibb;starlink 969760
 Asterix Developer;starlink 2215136
 Brad Cavanagh;starlink 806432
 Rick Pernak;LBLRTM 1565640
-kcadyper;LBLRTM 1826580
+Cady-Pereira, K.;LBLRTM 1826580
 rpernak;LBLRTM 1043760
 malvarad;LBLRTM 1409076
 jdelamer;LBLRTM 1148136
@@ -620,7 +537,7 @@ Brown, P. D.;LBLRTM 9080712
 Gullikson, Kevin;Telluric-Fitter 10476
 kgullikson88;Telluric-Fitter 83808
 James Davenport;TheHammer 73920
-adleorocks;TheHammer 18480
+Seth, A.;TheHammer 18480
 Graham Bell;starlink 385024
 Peter W. Draper;starlink 1946176
 Malcolm J. Currie;starlink 1300960
@@ -730,16 +647,13 @@ Steven Bamford;galapagos-c 89
 Sandro Dias Pinto Vitenti;NumCosmo 107778
 Penna-Lima, M.;NumCosmo 25560
 Chris Hales;pieflag 13785
-Rafael;CosmoPhotoz 2952
+COIN Collaboration;CosmoPhotoz 3936
 Elliott, J.;CosmoPhotoz 984
-Miguel de Val-Borro;CosmoPhotoz 328
-algolkm;CosmoPhotoz 1968
-Rafael S. de Souza;CosmoPhotoz 328
-Making GitHub Delicious.;CosmoPhotoz 328
+Krone-Martins, A.;CosmoPhotoz 1968
 Offringa, A. R.;wsclean 4433127
-Maik Nijhuis;wsclean 510288
-Jakob Maljaars;wsclean 914266
-Blanco-Cuaresma, Sergi;iSpec 539349
+Johnston-Hollitt, M.;wsclean 510288
+Rhee, J.;wsclean 914266
+Blanco-Cuaresma, S.;iSpec 539349
 Zuntz, J.;cosmosis 7268070
 Paterno, M.;cosmosis 1045582
 Corsaro, E.;DIAMONDS 336720
@@ -757,9 +671,8 @@ Doris Lee;rc3-pipeline 2068
 dorislee0309;rc3-pipeline 2860
 Bovy, Jo;galpy 29867886
 Mateu, C.;PyMGC3 28710
-Wesson, R.;NEAT 198543
+Wesson, R.;NEAT 235824
 Scicluna, P.;NEAT 18207
-Roger;NEAT 37281
 Béky, Bence;spotrod 13897
 Kipping, D. M.;flicker 857
 Kipping, David M.;ECCSAMPLES 2981
@@ -795,7 +708,7 @@ Tomas Stolker;PynPoint 2184901
 majobodo;PynPoint 604017
 Rossi, L. J.;NIGO 6174
 Zonca, A.;python-qucs 56
-BasedOnTechnology;python-qucs 14
+Roucaries, B.;python-qucs 14
 latrop;DECA 285
 Bates, S. D.;PsrPopPy 157320
 Peter Teuben;nemo 868802
@@ -814,10 +727,8 @@ Brewer, Brendon J.;Exoplanet 25897
 Pereira, Tiago M. D.;rh 1007811
 Tiago M. D. Pereira;rh 110097
 Lauri Siltala;oorb 212100
-Granvik, M.;oorb 494900
+Granvik, M.;oorb 565600
 oorb;oorb 60095
-Mario Juric;oorb 35350
-Michael Mommert;oorb 35350
 matvii;ADAM 23355
 Perkins, S. J.;montblanc 120840
 Graham Bell;hds-v5 2964
@@ -825,7 +736,7 @@ David Berry;hds-v5 11856
 Jenness, T.;hds-v5 9576
 Renaud, Florent;nbody6tt 17976
 Handley, W. J.;PolyChordLite 4065078
-Gabriel;rabacus 11
+Altay, G.;rabacus 11
 Linc;camelus 2196
 Chieh An Lin;camelus 4392
 Linc-tw;camelus 4392
@@ -859,10 +770,10 @@ Gabriel;ASteCA 197788
 Gabriel-p;ASteCA 435736
 Miles Lucas;Starfish 170118
 Czekala, Ian;Starfish 521259
-Jose Enrique Ruiz;LSSGALPY 81
+Sabater, J.;LSSGALPY 81
 Argudo-Fernández, M.;LSSGALPY 297
 Ishida, E. E. O.;CosmoABC 159808
-emille;CosmoABC 14982
+Cameron, E.;CosmoABC 14982
 Alonso, David;CUTE 7005
 Edmond;CUTE 1401
 damonge;CUTE 9807
@@ -878,12 +789,10 @@ Modjaz, M.;pyMCZ 10809
 smanoh;pyMCZ 20417
 Tessore, Nicolas;lensed 63360
 Bellagamba, Fabio;lensed 11220
-Junklewitz, H.;resolve 24794
-henrikju;resolve 23667
+Junklewitz, H.;resolve 48461
 What3ver;resolve 10143
 Price, D. C.;fits2hdf 1550
-Mérand, A.;CANDID 8981
-amerand;CANDID 56452
+Gallenne, A.;CANDID 65433
 Blecic, Jasmina;TEA 42432
 dzesmin;TEA 6528
 pcubillos;TEA 8160
@@ -907,14 +816,12 @@ anand.prabhakar.patil;pymc 86846
 david.huard;pymc 47056
 Bell, M. R.;fsclean 4312
 Di Teodoro, E. M.;Bbarolo 702634
-Howlett, C.;l-picola 31212
-Cullan Howlet;l-picola 10404
+Howlett, C.;l-picola 41616
 Tsang, David;slimplectic 3032
 Stein, Leo C.;slimplectic 1516
 Ian Hawke;slimplectic 379
 Galley, Chad R.;slimplectic 758
-Moolekamp, F.;toyz 1980
-fred3m;toyz 8910
+Moolekamp, F.;toyz 10890
 Barklem, P. S.;abo-cross 62865
 Kamphuis, P.;FAT 145297
 Sellentin, Elena;DALI 1507
@@ -925,21 +832,18 @@ Fraine, Jonathan;least_asymmetry 592
 Zingale, M.;pyro2 2783
 Alice Harpole;pyro2 363
 Mead, A. J.;HMcode 726044
-Socas-Navarro, H.;NICOLE 148932
-hsocas.iac@gmail.com;NICOLE 87468
+Socas-Navarro, H.;NICOLE 236400
 Smitka, Michael T.;truvot 387
-martin-millon;PyCS 123882
+Tewes, M.;PyCS 326598
 vbonvin;PyCS 382908
-Tewes, M.;PyCS 202716
 Hoffman, John;ggadt 28220
 Kreidberg, Laura;batman 802995
 Michael Zhang;batman 110215
 Parviainen, H.;ldtk 272738
 Starlink Software Librarian;aspic 58
 Tim Jenness;aspic 58
-aholinch;JSPAM 68
+Harvey, A.;JSPAM 170
 private;JSPAM 34
-Anthony;JSPAM 102
 John F Wallin;JSPAM 34
 Wallin, J. F.;JSPAM 34
 Marshall, Philip J.;Pangloss 187285
@@ -947,13 +851,12 @@ Charlotte Mason;Pangloss 74914
 Charlotte A. Mason;Pangloss 160530
 Collett, Thomas E.;Pangloss 374570
 Carrasco Kind, Matias;SparsePz 2639
-sarah;milkywayproject_triggering 9393
+Kendrew, S.;milkywayproject_triggering 12524
 Chris Beaumont;milkywayproject_triggering 6262
-Kendrew, S.;milkywayproject_triggering 3131
 Dan Foreman-Mackey;george 178524
 Dan F-M;george 1120734
 Melchior, P.;des-exp-checker 21318
-Alex Drlica-Wagner;des-exp-checker 4488
+Drlica-Wagner, A.;des-exp-checker 4488
 Kipping, David M.;LDC3 744
 Dan Foreman-Mackey;LDC3 248
 Marulli, F.;CosmoBolognaLib 41781
@@ -989,10 +892,9 @@ Pu, Hung-Yi;Odyssey 13299
 hungyipu;Odyssey 7161
 Croton, Darren J.;sage 474763
 Hodkinson, Luke;sage 101179
-Siemiginowska, A.;LIRA 125
+Connors, A.;LIRA 350
 infinitron;LIRA 125
 Kashyap, V.;LIRA 450
-Connors, A.;LIRA 225
 regonzar;paravt 32
 Roberto Gonzalez;paravt 8
 Riedel, Adric R.;lacewing 73457
@@ -1070,9 +972,8 @@ Graham Bell;pal 91616
 Jenness, T.;pal 850720
 Berry, D. S.;pal 117792
 Winkel, B.;cygrid 35412
-Lenz, D.;cygrid 6356
-Daniel;cygrid 4540
-jtlz2;hibayes 25998
+Lenz, D.;cygrid 10896
+Dowell, J.;hibayes 25998
 Price, D.;hibayes 8666
 Oleg Smirnov;hibayes 4333
 Buchner, J.;PyMultiNest 1886896
@@ -1101,7 +1002,7 @@ Andres Jordan;zaspe 1491
 nespinoza;zaspe 1491
 Duffell, Paul C.;RT1D 55182
 Akeret, J.;seek 1510
-cosmo-ethz;seek 604
+Chang, C.;seek 604
 Huppenkothen, Daniela;stingray 224692
 Bachetti, Matteo;stingray 465972
 Mishra, Himanshu;stingray 63336
@@ -1118,18 +1019,16 @@ Schirmer, Mischa;nebular 2691
 Adam McMaster;starpy 9952
 Becky Smethurst;starpy 12440
 Smethurst, R. J.;starpy 37320
-Hinder, Ian;Kranc 498883
+Hinder, Ian;Kranc 596409
 Erik Schnetter;Kranc 300080
 Barry Wardell;Kranc 108779
-ianhin;Kranc 97526
 Husa, Sascha;Kranc 180048
 lord_elon;SCIMES 41646
 Ginsburg, A.;SCIMES 11358
 Bailey, Stephen;empca 12660
 Pober, Jonathan C.;21cmSense 187166
 McQuinn, Matthew;21cmSense 40107
-Eric Koch;spectral-cube 5400
-e-koch;spectral-cube 12015
+Rosolowsky, E.;spectral-cube 17415
 Ginsburg, A.;spectral-cube 75870
 Robitaille, T.;spectral-cube 12555
 Angus, Ruth;SIPK2 10800
@@ -1139,17 +1038,16 @@ Brahm, Rafael;ceres 56608
 Andres Jordan;ceres 11712
 Sanders, J. S.;dsdeproj 11951
 Elliott Sales de Andrade;matplotlib 8850643
-Thomas A Caswell;matplotlib 13316730
-Antony Lee;matplotlib 11341868
-Tim Hoffmann;matplotlib 8415811
+Urrutia, T.;matplotlib 21732541
+Pécontal-Rousset, A.;matplotlib 11341868
 hannah;matplotlib 1829918
-Oscar Gustafsson;matplotlib 1974862
+Streicher, O.;matplotlib 1974862
 Jody Klymak;matplotlib 6848604
 Ben Root;matplotlib 2898880
 Eric Firing;matplotlib 7718268
 David Stansby;matplotlib 5172689
 Jae-Joon Lee;matplotlib 1866154
-Ryan May;matplotlib 2581815
+Bacon, R.;matplotlib 2581815
 Jouni K. Seppänen;matplotlib 1748387
 Nelle Varoquaux;matplotlib 2183219
 Phil Elson;matplotlib 1911449
@@ -1182,7 +1080,7 @@ John Salvatier;pymc 5520
 Anand Patil;pymc 3480
 anand.prabhakar.patil;pymc 10040
 david.huard;pymc 5440
-Akeret, Joel;tf_unet 2075
+Lucchi, A.;tf_unet 2075
 Akeret, J.;tf_unet 20750
 Bacon, R.;mpdaf 41563
 Piqueras, L.;mpdaf 178861
@@ -1199,16 +1097,14 @@ Melchior, P.;pyGMMis 37036
 Rendle, Ben M.;AIMS 33348
 Scott, Pat;pippi 60975
 Breton, R. P.;Icarus 150880
-Punzo, D.;SlicerAstro 49374
-Davide;SlicerAstro 9360
+Punzo, D.;SlicerAstro 58734
 Tobar, R.;libprofit 292877
 Robotham, A. S. G.;ProFit 331003
 Tobar, R.;ProFit 181965
 Taranu, D. S.;ProFit 103980
 Tobar, R.;pyprofit 103980
 Andrews, Brett H.;flexCE 39396
-Malavolta, L.;PyORBIT 890016
-Luca on Goblin;PyORBIT 79424
+Malavolta, L.;PyORBIT 969440
 Calderone, G.;qsfit 61560
 Fowlie, Andrew;superplot 21359
 Bardsley, Michael Hugh;superplot 29627
@@ -1264,9 +1160,7 @@ FACom Developers;exorings 648
 Espinoza, Néstor;mc-spam 14001
 Vohl, D.;shwirl 1296
 macrocosme;shwirl 2160
-Alvaro Sanchez-Monge;statcont 2385
-Ginsburg, A.;statcont 7155
-Alvaro Sanchez;statcont 15105
+Ginsburg, A.;statcont 24645
 Sokolovsky, K. V.;vast 34692
 Thorne, B.;PySM_public 132432
 Andrea Zonca;PySM_public 60698
@@ -1293,8 +1187,7 @@ CBogdanC;PROFILER 581
 Mishra-Sharma, Siddharth;NPTFit 21420
 Rodd, Nicholas L.;NPTFit 20655
 Baron, Dalya;WeirdestGalaxies 2966
-Jennings, E.;astroABC 15968
-elise;astroABC 1996
+Jennings, E.;astroABC 17964
 Moss, Adam;supernovae 7044
 Charnock, Tom;supernovae 3522
 Emken, Timon;DaMaSCUS 51504
@@ -1305,7 +1198,7 @@ Vohl, Dany;encube 6
 Barnes, David G.;encube 6
 Morrison, C. B.;The-wiZZ 237600
 Christopher Morrrison;The-wiZZ 29040
-morriscb;The-wiZZ 79200
+Bilicki, M.;The-wiZZ 79200
 Casey, Andrew R.;sick 32592
 Savransky, Dmitry;EXOSIMS 1572
 Corey Spohn;EXOSIMS 312
@@ -1317,19 +1210,16 @@ wdula;EXOSIMS 1074
 Gabriel Soto;EXOSIMS 174
 dgarrett622;EXOSIMS 402
 Delacroix, Christian;EXOSIMS 462
-Oscar Barragan;pyaneti 286740
-Malavolta, L.;CCFpams 2315
-Luca on Goblin;CCFpams 1389
+Barragán, O.;pyaneti 286740
+Malavolta, L.;CCFpams 3704
 Bell, G.;starlink 114688
-Peter W. Draper;starlink 579712
-Malcolm J. Currie;starlink 387520
-Berry, D.;starlink 624960
+Draper, P.;starlink 579712
+Currie, M.;starlink 547904
+Berry, D.;starlink 1111488
 Jenness, T.;starlink 674688
 Ed Chapin;starlink 186816
-David S. Berry;starlink 486528
 Starlink Software Librarian;starlink 213696
 Norman Gray;starlink 220864
-Mark Taylor;starlink 160384
 Andy Gibb;starlink 85120
 Asterix Developer;starlink 194432
 Brad Cavanagh;starlink 70784
@@ -1337,7 +1227,7 @@ Sipőcz, Brigitta M.;astroquery 1773948
 Ginsburg, Adam;astroquery 1866964
 Brasseur, C. E.;astroquery 385352
 Woillez, Julien;astroquery 215930
-Juan Carlos Segovia;astroquery 199320
+Astroquery Collaboration;astroquery 199320
 Birnstiel, T.;two-pop-py 839990
 Zabalza, V.;naima 133705
 Mede, Kyle;ExoSOFT 30450
@@ -1378,8 +1268,7 @@ Agol, Eric;celerite 596700
 Sharma, Sanjib;bmcmc 26418
 Lenain, J. -P.;flaapluc 1053
 Law, C. J.;rfpipe 897219
-amerand;SPIPS 8010
-Antoine Merand;SPIPS 801
+Mérand, A.;SPIPS 8811
 Nicholl, Matt;MOSFiT 320400
 Guillochon, James;MOSFiT 1392850
 Mockler, Brenna;MOSFiT 298150
@@ -1392,7 +1281,7 @@ Dias, Mafalda;mTransport 2412
 Bird, Simeon;fake_spectra 810264
 Keller, Benjamin W.;gasoline 9655230
 Wadsley, J. W.;gasoline 5539053
-Quinn, Thomas R.;gasoline 12602616
+Quinn, T.;gasoline 12602616
 Stadel, J.;gasoline 2235948
 Do, Tuan;OsirisDRP 9024
 jlyke-keck;OsirisDRP 1269
@@ -1416,16 +1305,14 @@ Jerry Zhang;megaman 75
 VanderPlas, Jacob;megaman 375
 Jerry;megaman 75
 mmp2;megaman 90
-Sinha, A.;gammapy 1389920
-Terrier, R.;gammapy 3406545
+Djannati-Ataï, A.;gammapy 6794475
+Zanin, R.;gammapy 3406545
 Quentin Remy;gammapy 1756015
-Bruno Khélifi;gammapy 583270
-Donath, A.;gammapy 5404555
-Fabio Pintore;gammapy 732190
-José Enrique Ruiz;gammapy 1340280
-Jouvin, L.;gammapy 775625
+Khelifi, B.;gammapy 583270
+Acero, F.;gammapy 732190
+Lefaucheur, J.;gammapy 3152140
+Mohrmann, L.;gammapy 775625
 Deil, C.;gammapy 4293860
-King, J.;gammapy 1811860
 Du, Fujun;rac-2d 280033
 Nun, Isadora;FATS 8937
 jmartine;FATS 993
@@ -1472,7 +1359,7 @@ Petigura, Erik A.;radvel 191798
 bjfultn;radvel 177764
 Ming Feng Gu;fac 2671302
 M. F. Gu;fac 470841
-Gu, M. F.;fac 2901918
+mfgu;fac 2901918
 Coupon, Jean;venice 80891
 Vandenbroucke, B.;CMacIonize 146304
 Loomis, Ryan A.;VISIBLE 19010
@@ -1484,11 +1371,10 @@ Adrian Price-Whelan;astroplan 92955
 kvyh;astroplan 216895
 Deil, Christoph;astroplan 111546
 Berlanga Medina, Jazmin;astroplan 179713
-Lanusse, F.;Glimpse 4376
+Lanusse, F.;Glimpse 7111
 EiffL;Glimpse 1641
-Austin;Glimpse 547
+Leonard, A.;Glimpse 547
 Mosè Giordano;Glimpse 1094
-Francois;Glimpse 2735
 Kavanagh, Bradley J.;runDM 18380
 bradkav;runDM 40436
 Hippke, Michael;PyOSE 1926
@@ -1498,8 +1384,7 @@ Murray, S. G.;mrpy 858
 A.K. Hutter;grid-model 11760
 Hutter, Anne;grid-model 47040
 Melchior, P.;scarlet 240402
-Moolekamp, F.;scarlet 37344
-fred3m;scarlet 173883
+Moolekamp, F.;scarlet 211227
 herjy;scarlet 68853
 Poleski, R.;MulensModel 236390
 jenniferyee;MulensModel 53515
@@ -1508,11 +1393,9 @@ Aird, J.;FAST 328302
 Hosek, Matthew W., Jr.;extlaw_H18 2952
 Yurchenko, Sergei N.;exocross 142065
 Trovemaster;exocross 133045
-Davelaar, J.;raptor 10863
-Bronzwaer, T.;raptor 25347
-Thomas;raptor 10863
-Jordy;raptor 14484
-moscibrodzka;ipole 127400
+Davelaar, J.;raptor 25347
+Bronzwaer, T.;raptor 36210
+Mościbrodzka, M.;ipole 127400
 Gammie, C. F.;ipole 15288
 Charles F. Gammie;ipole 15288
 Roberto Gonzalez;astroCV 1584
@@ -1523,15 +1406,14 @@ Roberto Munoz;astroCV 594
 regonzar;astroCV 594
 Robotham, A. S. G.;ProFound 357162
 jmeyers314;chroma 547863
-Schreiber, C.;egg 17493
-cschreib;egg 50421
+Schreiber, C.;egg 67914
 =;egg 16464
 Mackereth, J. Ted;orbit-estimation 25407
 Bovy, Jo;orbit-estimation 5646
 Creasey, Peter E.;smerfs 162
 Mao, Yao-Yuan;descqa 61932
 Kovacs, Eve;descqa 31760
-fjaviersanchez;descqa 8337
+LSST Dark Energy Science Collaboration;descqa 8337
 Zhou, Rongpu;descqa 6352
 Birrer, Simon;lenstronomy 4231536
 Daniel Gilman;lenstronomy 296112
@@ -1539,8 +1421,7 @@ Aymeric Galan;lenstronomy 429840
 Liu, Jiajia;cat-puma 4527
 ColdThunder;NR-code 1515
 Gerosa, Davide;surrkick 66858
-Feng, F.;agatha 20196
-fabo;agatha 2244
+Feng, F.;agatha 22440
 minzastro;unidam 8151
 Mints, Alexey;unidam 53922
 Paul, Debdutta;luminosity_function_of_sGRBs 1915
@@ -1549,9 +1430,8 @@ Kitzmann, Daniel;FastChem 38817
 Brett Morris;FastChem 6129
 BuildTools;FastChem 4086
 Obreschkow, D.;dftools 8000
-cmoestl;3DCORE 1254
-ajefweiss;3DCORE 3135
-Andreas J. Weiss;3DCORE 1254
+Möstl, C.;3DCORE 1254
+Isavnin, A.;3DCORE 4389
 ragraat;steps 268
 Rácz, Gábor;steps 1608
 Farr, Will M.;exocartographer 7938
@@ -1569,7 +1449,7 @@ Yu, Hao-Ran;CUBE 1059
 Casagrande, L.;bolometric-corrections 63900
 casaluca;bolometric-corrections 12780
 Carrasco, D.;GLACiAR 1395
-Spreeuw, H.;pyse 5940
+Garsden, H.;pyse 5940
 Molenaar, G.;pyse 540
 Brinckmann, Thejs;montepython_public 1185342
 Lesgourgues, Julien;montepython_public 1080753
@@ -1592,18 +1472,15 @@ Benjamin Hugo;CubiCal 17232
 Smirnov, O. M.;CubiCal 118470
 ulricharmel;CubiCal 12206
 Ulrich Armel Mbou Sob;CubiCal 22258
-Juan B Cabral;feets 41175
-Juan BC;feets 7137
-juanbc;feets 7137
+Vanderplas, J.;feets 55449
 bradkav;BlackHolesDarkDress 27864
 Kavanagh, Bradley J.;BlackHolesDarkDress 4644
 Gaggero, Daniele;BlackHolesDarkDress 9288
 Cieślar, Marek;Indri 678
 Giannozzi, Paolo;q-e 72454808
-Delugas, P.;q-e 6047744
-fabrizio22;q-e 6520224
-Pietro Bonfa;q-e 6260360
-degironc;q-e 6331232
+Giannozzi, P.;q-e 12308104
+Giustino, F.;q-e 6520224
+Ceresoli, D.;q-e 6331232
 Dal Corso, Andrea;q-e 14741376
 Cavazzoni, Carlo;q-e 8197528
 Sbraccia, Carlo;q-e 6874584
@@ -1624,7 +1501,7 @@ adampaul;NuPyCEE 9150
 Kipping, David;exoinformatics 1076
 Ahlers, John P.;LASR 152
 mdavis36;spheral 146280
-jmpearl;spheral 100488
+Michael Owen, J.;spheral 100488
 Mike Owen;spheral 1002336
 Paul H. Tsuji;spheral 109392
 Cody Raskin;spheral 108756
@@ -1638,8 +1515,7 @@ Hardwick, Robert J.;foxi 287
 chris;aspic 4821345
 Perrefort, Daniel;pwv_kpno 980
 mlietzow;POLARIS 68757
-Robert Brunngraeber;POLARIS 63960
-Brauer, R.;POLARIS 241449
+Brauer, R.;POLARIS 305409
 Nightingale, J. W.;PyAutoLens 498312
 Jammy2211;PyAutoLens 359892
 Massey, Richard J.;PyAutoLens 87666
@@ -1661,7 +1537,7 @@ nabajour;THOR 51912
 Schroffenegger, Urs;THOR 118656
 Hardwick, Robert J.;nfield 1228
 umbralcalc;nfield 3377
-dipangwvu;SPEGID 1748
+Pang, Di;SPEGID 1748
 Riggi, S.;caesar 13920
 Eastman, J. D.;EXOFASTv2 309140
 René Tronsgaard;barycorr 7995
@@ -1674,7 +1550,7 @@ Line, J. L. B.;PUMA 40360
 rwesson;damocles 11190
 Bevan, Antonia;damocles 36927
 damocles-code;damocles 6714
-nivha;three_body_integration 2968
+Haim, Niv;three_body_integration 2968
 Leonardo Werneck;nrpytutorial 17119
 Steven R. Brandt;nrpytutorial 24225
 Etienne, Zachariah B.;nrpytutorial 177004
@@ -1693,13 +1569,13 @@ Johnston, K. B.;SSMM 52
 Juan BC;corral 5588
 Beroiz, M.;corral 4064
 Juan B Cabral;corral 36068
-brunosanchez;corral 7620
+Sánchez, B.;corral 7620
 Sivaramakrishnan, Anand;ImPlaneIA 2637
 Greenbaum, Alexandra Z.;ImPlaneIA 13478
 Rob De Rosa;ImPlaneIA 1172
 Johannes Sahlmann;ImPlaneIA 1465
 Creasey, P.;hfof 4619
-Matwey V. Kornilov;fips3 285
+Kornilov, M.;fips3 285
 Malanchev, K.;fips3 192
 Rossi, Loïc;pymiedap 3763
 Dougal J. Sutherland;py-sdm 12780
@@ -1711,7 +1587,7 @@ Lesgourgues, Julien;hi_class_public 2346219
 Benjamin Audren;hi_class_public 955098
 Hancock, P. J.;Robbie 4070
 cjproud;Robbie 888
-Nick Swainston;Robbie 370
+Hurley-Walker, N.;Robbie 370
 Bachelet, Etienne;VBBinaryLensing 9387
 Bozza, Valerio;VBBinaryLensing 9834
 Bartolić, Fran;VBBinaryLensing 7599
@@ -1747,7 +1623,7 @@ Soumagnac, Maayane T.;catsHTM 50427
 de la Cruz Rodríguez, J.;stic 152079
 sarrvesh;cuFFS 4066
 Sarrvesh Seethapuram Sridhar;cuFFS 642
-Julian;SOPHISM 305
+Blanco Rodríguez, J.;SOPHISM 305
 Daniel Berke;DRAGONS 2835
 Simpson, Chris;DRAGONS 20952
 Turner, James;DRAGONS 2619
@@ -1786,8 +1662,7 @@ Trevisan, J.;PFANT 35482
 Lomax, O.;spamcart-dev 3476
 Charles, E.;fermipy 131080
 Magill, J.;fermipy 31640
-Wood, M.;fermipy 214700
-Matthew Dunseth Wood;fermipy 259900
+Wood, M.;fermipy 474600
 Zingales, Tiziano;ExoGAN_public 2364
 Kind, Matias;easyaccess 94400
 Drlica-Wagner, Alex;easyaccess 27376
@@ -1807,7 +1682,7 @@ Gajdoš, P.;OCFit 2604
 Alonso, David;CCL 477850
 Tröster, Tilman;CCL 115690
 Chisari, Nora Elisa;CCL 699170
-Nick Koukoufilippas;CCL 93055
+LSST Dark Energy Science Collaboration;CCL 266590
 Kirby, Matthew;CCL 85510
 Leonard, C. Danielle;CCL 387310
 Ishak, Mustapha;CCL 60360
@@ -1818,8 +1693,6 @@ Mead, Alexander;CCL 75450
 Neveu, Jérémy;CCL 47785
 Villarreal, Antonia Sierra;CCL 100600
 Krause, Elisabeth;CCL 77965
-Jeremy;CCL 47785
-damonge;CCL 125750
 Vrastil, Michal;CCL 50300
 Mahlke, M.;ssos 984
 Safdi, Benjamin R.;stellarWakes 6790
@@ -1835,7 +1708,7 @@ rhero12;Radynversion 570
 Goobley;Radynversion 950
 Cecconi, B.;ExPRES 6678
 Louis, C. K.;ExPRES 2142
-SERPE User;ExPRES 3906
+Aicardi, S.;ExPRES 3906
 MASER SERPE User;ExPRES 1386
 Higson, Edward;dyPolyChord 201312
 Dauser, Thomas;sixte 65640
@@ -1879,10 +1752,8 @@ Feinstein, Adina D.;eleanor 301785
 Dan Foreman-Mackey;eleanor 31152
 afeinstein20;eleanor 40887
 Penoyre, Zephyr;OoT 1128
-Bruno SANCHEZ;ProperImage 3840
-Sánchez, B.;ProperImage 896
-Beroiz, M.;ProperImage 768
-brunosanchez;ProperImage 5312
+Sánchez, B.;ProperImage 10048
+Lares, M.;ProperImage 768
 Hand, Nick;pyRSD 723330
 Feng, Yu;nbodykit 835472
 Hand, Nick;nbodykit 471064
@@ -1890,16 +1761,14 @@ Li, Yin;covdisc 2050
 Escudero, Miguel;nudec_BSM 18858
 mmirs;mmirs-pipeline.git 9555
 Chilingarian, Igor;mmirs-pipeline.git 27391
-Sergey E. Koposov;q3c 102600
-Koposov, S.;q3c 335160
+Koposov, S.;q3c 437760
 Adrian Bayer;fastpm 166212
 Feng, Yu;fastpm 1046520
 Batalha, Natasha E.;picaso 75579
 Sagnick Mukherjee;picaso 6832
 caoimherooney11;picaso 40992
 Amato, Davide;NAPLES 559
-Brian;ClusterPyXT 280
-Alden, B.;ClusterPyXT 875
+Alden, B.;ClusterPyXT 1155
 Van Oort, Colin M.;casi-2d 1507
 Asensio Ramos, A.;sicon 1080
 tarrla;sicon 216
@@ -1918,10 +1787,8 @@ Tommaso Ronconi;TRECS 11220
 Kenyon, J. S.;PyMORESANE 46414
 Travis CI;morpheus 2260
 Hausen, Ryan;morpheus 16724
-Cárcamo, M.;gpuvmem 65780
-Miguel Carcamo;gpuvmem 27456
+Cárcamo, M.;gpuvmem 105248
 Nicolás Zarricueta;gpuvmem 6864
-miguelcarcamov;gpuvmem 12012
 Birdi, Jasleen;Optical-Interferometry-Trilinear 28
 Public BASP Github repos;Optical-Interferometry-Trilinear 28
 Batalha, Natasha E.;PandExo 573981
@@ -2006,9 +1873,9 @@ tkoskela;vlasiator 144256
 von Alfthan, Sebastian;vlasiator 594688
 Sandroos, Arto;vlasiator 232576
 ohannuks;vlasiator 89792
-iljah;vlasiator 107456
+Honkonen, I.;vlasiator 107456
 jcibanezm;DustCharge 500
-Andrej Prsa;ebai 5210
+Prša, A.;ebai 5210
 Zingale, Michael;MAESTROeX 11342
 Nonaka, Andrew;MAESTROeX 17808
 Fan, Duoming;MAESTROeX 26394
@@ -2040,8 +1907,7 @@ Donnert, Julius;WVTICs 408
 Steinwandel, Ulrich;WVTICs 510
 YominCarr;WVTICs 1632
 Halbesma, Timo;WVTICs 408
-Healy, J.;HISS 408
-Julia H;HISS 2856
+Healy, J.;HISS 3264
 Mulders, Gijs D.;epos 321146
 Handley, Will;fgivenx 208100
 ejhigson;fgivenx 33296
@@ -2074,9 +1940,9 @@ Reeves, A. P.;aotools 1980
 Farley, O. J. D.;aotools 684
 Townson, M. J.;aotools 2556
 Orban de Xivry, G.;aotools 432
-Leo C. Stein;qnm 76494
+Stein, Leo;qnm 76494
 Li, Rixin;PLAN 40868
-pavel;sph 24750
+Ševeček, P.;sph 24750
 Hanke, Michael;athos 1970
 Luger, Rodrigo;planetplanet 111496
 Lustig-Yaeger, Jacob;planetplanet 22806
@@ -2091,18 +1957,15 @@ Elahi, Pascal J.;TreeFrog 42845
 Poulton, Rhys J. J.;TreeFrog 7667
 xfangcosmo;FFTLog-and-beyond 25368
 Fang, Xiao;FFTLog-and-beyond 14496
-Christoph Burger;miluphcuda 34286
-Christoph Schaefer;miluphcuda 3472
-Schäfer, C.;miluphcuda 18662
+Schäfer, C.;miluphcuda 56420
 Wicenec, A.;daliuge 15850
 james-strauss-uwa;daliuge 5300
 Nicholas Pritchard;daliuge 3000
 Tobar, R.;daliuge 14900
 pritchardn;daliuge 6450
-Callan Gray;daliuge 2100
-Wu, C.;daliuge 9550
+Wu, C.;daliuge 11650
 pereirasantaella;HSIM 7476
-Miguel Pereira Santaella;HSIM 5162
+Tecza, M.;HSIM 5162
 routledge;HSIM 1602
 Laurence Routledge;HSIM 1780
 Zieleniewski, S.;HSIM 1958
@@ -2115,19 +1978,16 @@ samrose30;PopSyCLE 1840
 Lu, Jessica R.;PopSyCLE 2300
 Sam Rose;PopSyCLE 1840
 Vasiliev, Eugene;Agama 22275
-Adámek, K.;astro-accelerate 16330
-Adamek, Karel;astro-accelerate 18170
-Jan Novotny;astro-accelerate 7360
+Adámek, K.;astro-accelerate 34500
+Novotný, J.;astro-accelerate 24380
 Carels, C.;astro-accelerate 24840
-jan2nov;astro-accelerate 17020
 Armour, W.;astro-accelerate 8510
 NassimOuannoughi;astro-accelerate 6210
 Nassim Ouannoughi;astro-accelerate 2300
-Stefano Fogarollo;game 3480
-sirfoga;game 2175
+Gallerani, S.;game 5655
 Martin Masevski;game 435
 Ucci, G.;game 1740
-Pallottini, A.;game 1305
+Ferrara, A.;game 1305
 Chalela, Martin;GriSPy 276
 JuanBC;GriSPy 18
 Cabral, Juan B.;GriSPy 72
@@ -2148,28 +2008,21 @@ Christian Brinch;sf3dmodels 17985
 Clarke, S. D.;FragMent 3553
 Clarke, S. D.;BTS 13200
 Ren, Bin;DebrisDiskFM 17760
-Martin, T.;orcs 26386
-Thomas;orcs 8350
-thomas;orcs 7682
+Martin, T.;orcs 42418
 Prince, Heather;cosmoped 1820
 Morello, G.;ExoTETHyS 38692
 Bonfanti, A.;MCMCI 666
 Qian, Lei;RPPPS 201
 Wang, Long;SDAR 32412
 Romain Teyssier;ramses 179694
-Tine Colman;ramses 45828
+Garel, T.;ramses 110952
 Eric Moseley;ramses 36783
 rteyssie;ramses 34371
-Mladen Ivkovic;ramses 30150
-Joakim Rosdahl;ramses 50049
-Michael Kretschmer;ramses 90450
+Trebitsch, M.;ramses 168237
+Blaizot, J.;ramses 50049
 Pawel Biernacki;ramses 106128
-mivkov;ramses 18090
-Michael Rieder;ramses 29547
 Valentin Perret;ramses 75375
-Andreas Bleuler;ramses 44622
-teyssier;ramses 65124
-ableuler;ramses 27738
+Verhamme, A.;ramses 72360
 Conseil, Simon;origin 23144
 Bacon, Roland;origin 9468
 Yannick Roehlly;origin 6312
@@ -2189,7 +2042,7 @@ Kavanagh, Bradley J.;DMRadon 1296
 bradkav;DMRadon 432
 Susobhanan, Abhimanyu;GWecc 8555
 Lentati, L.;Cobra 116
-Bursa, M.;disk-models 9952
+Abramowicz, M.;disk-models 9952
 Soler, J. D.;magnetar 173280
 Henshaw, J. D.;acorns 14440
 Sokolov, V.;acorns 1520
@@ -2202,9 +2055,9 @@ Lazarus, P.;coast_guard 370020
 Lazarus, P.;TOASTER 394688
 Alexander Samoilov;TOASTER 42288
 Soler, J. D.;astroHOG 18096
-Juan Diego Soler;astroHOG 2639
+Kainulainen, J.;astroHOG 2639
 Creaner, Oisín;locus 144
-orkunozdarcan;pywd2015-qt5 300
+Güzel, O.;pywd2015-qt5 300
 varnani;pywd2015-qt5 72
 Hutter, Anne;astraeus 11312
 Manodeep Sinha;astraeus 1414
@@ -2223,7 +2076,7 @@ Rosheen Naeem;arviz 17510
 Oriol Abril;arviz 79310
 aloctavodia;arviz 19570
 van Holstein, R. G.;IRDAP 77686
-Milli, J.;IRDAP 12530
+de Boer, J.;IRDAP 12530
 Scicluna, P.;precision 95
 Leahy, Denis A.;roche-radius-calculator 342
 Cameron, A. D.;ffancy 2108
@@ -2250,8 +2103,7 @@ xfangcosmo;2DFFTLog 5484
 Fang, Xiao;2DFFTLog 8226
 JCGoran;2DFFTLog 1371
 Defferrard, M.;deepsphere-cosmo-tf1 40392
-Perraudin, N.;deepsphere-cosmo-tf1 57222
-nperraud;deepsphere-cosmo-tf1 15708
+Perraudin, N.;deepsphere-cosmo-tf1 72930
 Chianese, Marco;AxionNS_RayTracing 1215
 Leroy, Mikaël;AxionNS_RayTracing 1215
 Zechmeister, M.;serval 759155
@@ -2289,29 +2141,23 @@ Jolly, Jean-Baptiste;LineStacker 280
 Lipatov, Mikhail;paint_atmospheres 1122
 Yurchenko, Sergei N.;TROVE 538300
 Trovemaster;TROVE 527534
-AvrahamBinn;SPARTA 220
-saharsh1;SPARTA 308
-Shahaf, S.;SPARTA 528
+Binnenfeld, A.;SPARTA 264
+Shahaf, S.;SPARTA 836
 dependabot[bot];SPARTA 88
-AvrahamBinni;SPARTA 44
 Fowlie, Andrew;PhaseTracer 2576
 Athron, Peter;PhaseTracer 1840
 Zhang, Yang;PhaseTracer 6992
 Farahi, Arya;kllr 11168
 Anbajagane, Dhayaa;kllr 16054
-Farrens, S.;pysap 2128
+Farrens, S.;pysap 2698
 Ramzi, Z.;pysap 266
 Grigis, A.;pysap 1976
-Starck, S.;pysap 570
-lelguedd;pysap 342
-El Gueddari, L.;pysap 266
+El Gueddari, L.;pysap 608
 Sarthou, B.;pysap 570
 Cherkaoui, H.;pysap 304
 Howlett, Cullan;Barry 65124
 Hinton, Samuel R.;Barry 42768
-Möller, A.;SuperNNova 19696
-anaismoller;SuperNNova 110790
-Anais Moller;SuperNNova 23389
+Möller, A.;SuperNNova 153875
 Karamanis, Minas;zeus 11312
 Shahmoradi, Amir;paramonte 9752
 Bevins, H. T. J.;maxsmooth 12440
@@ -2339,7 +2185,7 @@ Hutson, Jeremy M.;molscat 1288
 Forgan, Duncan;tache 630
 Forgan, Duncan;grapus 92304
 Feinstein, Adina D.;stella 52002
-Carron, J.;plancklens 4926714
+Planck Collaboration;plancklens 4926714
 martin;ROGER 440
 de los Rios, Martín;ROGER 198
 Dauser, T.;relxill 2171925
@@ -2357,8 +2203,7 @@ Filippazzo, Joseph C.;SEDkit 1207431
 Campos Estrada, Beatriz;EvapMass 8056
 Owen, James E.;EvapMass 9063
 Teague, Richard;gofish 69864
-Karako-Argaman, C.;RRATtrap 3088
-Chen Karako-Argaman;RRATtrap 3088
+Karako-Argaman, C.;RRATtrap 6176
 Tamayo, Daniel;reboundx 178318
 Tiger Lu;reboundx 18424
 Rein, Hanno;reboundx 17108
@@ -2369,13 +2214,12 @@ dbosul;CWITools 6969
 Chen, Yuguang;CWITools 1919
 O'Sullivan, Donal;CWITools 7171
 Tomas Gonzalo;gambit_1.5 801950
-Patrick Stöcker;gambit_1.5 596800
-Scott, Pat;gambit_1.5 2845990
+Scott, Pat;gambit_1.5 3442790
 Andy Buckley;gambit_1.5 566960
 Kvellestad, Anders;gambit_1.5 1051860
 Ankit Beniwal;gambit_1.5 350620
 Cornell, Jonathan M.;gambit_1.5 600530
-janinarenk;gambit_1.5 320780
+Conrad, Jan;gambit_1.5 320780
 Farmer, Ben;gambit_1.5 1402480
 Peter Athron;gambit_1.5 492360
 Weniger, Christoph;gambit_1.5 1014560
@@ -2401,15 +2245,14 @@ Alex Henrie;pomegranate 2691
 jmschrei;pomegranate 3276
 herjy;SLIT 1860
 Joseph, R.;SLIT 372
-Kieran;SimCADO 2898
+Leschinski, K.;SimCADO 12397
 Czoske, O.;SimCADO 15456
-miguelverdugo;SimCADO 5474
-Leschinski, K.;SimCADO 9499
+Mach, M.;SimCADO 5474
 astronomyk;SimCADO 1771
-gastronomyk;SimCADO 5957
+Verdoes Kleijn, G.;SimCADO 5957
 Ogrean, Georgiana;PyXel 2695
 Wette, Karl;SOFTX_2020_119 61152
-Andre-Nicolas Chene;DRAGRACES 546
+Gemini Collaboration;DRAGRACES 546
 github-actions[bot];Magritte 4794
 Thomas Ceulemans;Magritte 8648
 De Ceuster, Frederik;Magritte 9588
@@ -2418,7 +2261,7 @@ Shivottam, Jyotirmaya;einsteinpy 6006
 Bapat, Shreyas;einsteinpy 16940
 Saha, Ritwik;einsteinpy 11396
 Singh, Varun;einsteinpy 2002
-sofia_ov;einsteinpy 2618
+Saurabh;einsteinpy 2618
 Boone, Kyle;avocado 36358
 Vousden, W. D.;ptemcee 85766
 Farias, H.;mask_galaxy 84
@@ -2430,7 +2273,7 @@ van der Velden, Ellert;CMasher 54096
 Barnes, Rory;EqTide 25904
 Suissa, Gabrielle;hardCORE 242
 cool worlds;hardCORE 121
-Conseil, S.;muse-psfr 9345
+Kamann, S.;muse-psfr 9345
 Bacon, R.;muse-psfr 2136
 Buchner, J.;nway 252822
 Andreas Noack;ForwardDiff.jl 23382
@@ -2453,7 +2296,7 @@ Pagano, G.;lensinggw 23220
 Cretignier, M.;Rassine_public 3020
 Bellomo, Nicola;Multi_CLASS 1074
 Jarvis, M.;Piff 271023
-PFLeget;Piff 87379
+Doel, P.;Piff 87379
 Meyers, J.;Piff 31101
 Davis, C.;Piff 51835
 Boone, K.;binaryoffset 1168
@@ -2520,7 +2363,7 @@ Baron, Dalya;Sequencer 385
 MacBride, Conor;mcalf 405
 jah1994;PyTorchDIA 117
 Brandon C. Kelly;CUDAHM 336
-Tamas Budavari;CUDAHM 40
+Budavári, T.;CUDAHM 40
 Wu, Chen;rgz_rcnn 28938
 Bull, Philip;random-quintessence 9756
 Leroy, Adam K.;phangs_imaging_scripts 204060
@@ -2528,14 +2371,13 @@ leroy.42;phangs_imaging_scripts 42960
 1054;phangs_imaging_scripts 34368
 Williams, Thomas G.;phangs_imaging_scripts 33294
 Rosolowsky, Erik;phangs_imaging_scripts 45108
-andrew-saydjari;crowdsource 142494
+Lee, A.;crowdsource 180213
 Schlafly, E. F.;crowdsource 205359
-Andrew Saydjari;crowdsource 37719
 Cherinka, Brian;marvin 1018410
 Sánchez-Gallego, José;marvin 438240
 Andrews, Brett H.;marvin 498000
 bac29;marvin 276390
-chrysante87;pyterpol 6327
+Farrington, C.;pyterpol 6327
 gperezs;StarcNet 138
 guspe98;StarcNet 1242
 Pérez, Gustavo;StarcNet 138
@@ -2557,33 +2399,29 @@ Nicolas Busca;picca 640181
 Cyeche;picca 239320
 ngbusca;picca 544453
 Iomsn;glemur 793
-Simon Candeleresi;glemur 305
+Candelaresi, S.;glemur 305
 iomsn;glemur 671
-Alejandro Aguayo-Ortiz;aztekas-main 7540
-aztekas-code;aztekas-main 1430
+Aguayo-Ortiz, A.;aztekas-main 8970
 Chang, Seok-Jun;STaRS 64
 Dobbs, Matt;so_noise_models 144832
-Toshiya Namikawa;so_noise_models 36208
+Simons Observatory Collaboration;so_noise_models 54312
 Dicker, Simon;so_noise_models 18104
 Madhavacheril, Mathew;so_noise_models 18104
 Hill, Charles A.;so_noise_models 18104
-Andrea Zonca;so_noise_models 18104
 Jiménez Fernández, Bruno;katu 1071
 Price, Layne C.;MultiModeCode 1436
 Anik Halder;bihalofit_cpp 1264
 Malanchev, K. L.;zwad 7220
-Matwey V. Kornilov;zwad 3230
+(The SNAD Team);zwad 5700
 Korolev, V. S.;zwad 1710
-Patrick D. Aleo;zwad 2470
 Malanchev, K. L.;ztf-viewer 29830
-pre-commit-ci[bot];ztf-viewer 3040
-dependabot[bot];ztf-viewer 4560
+(The SNAD Team);ztf-viewer 7600
 Marra, Valerio;CalPriorSNIa 85464
 Angel de Vicente;PORTA 7290
 Mondal, R.;N-body 9819
-Abinash Kumar Shaw;N-body 6546
+Bera, A.;N-body 6546
 Mondal, R.;FoF-Halo-finder 5164
-Abinash Kumar Shaw;FoF-Halo-finder 1291
+Bera, A.;FoF-Halo-finder 1291
 Mondal, Rajesh;ReionYuga 3780
 Abinash Kumar Shaw;ReionYuga 756
 Hayes, Wayne B.;SpArcFiRe 21025
@@ -2664,13 +2502,11 @@ Edilbert;ExoPlaSim 812
 Breivik, Katelyn;COSMIC 823250
 Zevin, Michael;COSMIC 217338
 Coughlin, Scott;COSMIC 642135
-Meyer, M.;gammaALPs 2384
-me-manu;gammaALPs 5066
+Meyer, M.;gammaALPs 7450
 Davies, J.;gammaALPs 1639
 specktakel;gammaALPs 1043
 lyf222;alpconv 504
-SoFiA;SoFiA-2 3725
-SoFiA-Admin;SoFiA-2 28757
+Kitaeff, S.;SoFiA-2 32482
 Jennings, Jeff;frank 67914
 Booth, Richard A.;frank 56133
 Tazzari, Marco;frank 6237
@@ -2680,8 +2516,7 @@ Campbell-White, Justyn;STAR_MELT 1675
 Kirkby, David P.;WeakLensingDeblending 6175
 Mendoza, Ismael;WeakLensingDeblending 2730
 Sanchez, Javier;WeakLensingDeblending 1170
-Laplace, E.;tulips 9828
-Eva;tulips 1008
+Laplace, E.;tulips 10836
 ilsedelangen;tulips 3024
 Safa, Ibrahim;TauRunner 69616
 jlazar17;TauRunner 41220
@@ -2690,7 +2525,7 @@ arguelles;TauRunner 4580
 Konstantin Malanchev;parsnip 558
 Boone, Kyle;parsnip 2976
 Wibking, Benjamin D.;quokka 2934
-Jakob Lysgaard Rørsted;BASTA 261716
+Christensen-Dalsgaard, J.;BASTA 261716
 Mark Lykke Winther;BASTA 50330
 Edwards, Thomas D. P.;swordfish 662
 Weniger, Christoph;swordfish 2317
@@ -2727,8 +2562,7 @@ Emken, Timon;DarkARC 34637
 Emken, Timon;Dirac_vs_Majorana 435
 Quera-Bofarull, Arnau;qwind 3776
 Quera-Bofarull, Arnau;Qwind.jl 6016
-Ridden-Harper, R.;tessreduce 112
-Ryan Ridden-Harper;tessreduce 336
+Ridden-Harper, R.;tessreduce 448
 CheerfulUser;tessreduce 504
 Nord, Brian;deeplenstronomy 702
 Morgan, Robert;deeplenstronomy 5460
@@ -2760,9 +2594,8 @@ Sabti, Nashwan;gallumi_public 2043
 Hedges, Christina;contaminante 12
 Ellsworth-Bowers, Timothy P.;distance-omnibus 37515
 Timothy Ellsworth-Bowers;distance-omnibus 87535
-J. Michael Burgess;popsynth 760
+Burgess, J.;popsynth 1510
 Capel, Francesca;popsynth 170
-Burgess, J.;popsynth 750
 cylammarco;ASPIRED 573
 Rehemtulla, Nabeel;NIMBLE 2025
 Luger, Rodrigo;starry_process 4000
@@ -2783,8 +2616,7 @@ Bell, Keaton J.;TESS-Localize 44
 unknown;mayo_hci 184
 Pairet, Benoît;mayo_hci 920
 Childs, Anna C.;rebound_fragmentation 121
-Khorshid, N.;simab 348
-Niloo;simab 957
+Khorshid, N.;simab 1305
 Deppe, Nils;spectre 1917762
 Kyle Nelli;spectre 265664
 William Throwe;spectre 574024
@@ -2806,23 +2638,19 @@ bradkav;EarthScatterLikelihood 3066
 Kavanagh, Bradley J.;EarthScatterLikelihood 2190
 Herpich, J.;pyICs 3601
 Espinoza, Néstor;ld-exosim 10570
-Byrne, R.;FHD 1073292
+Goeke, R.;FHD 1073292
 Hazelton, B. J.;FHD 843744
-Barry, N.;FHD 1594428
+Udaya Shankar, N.;FHD 1594428
 Sullivan, I. S.;FHD 4460676
-aelanman;FHD 384648
-Adam Beardley;FHD 701052
-valles;asohf 240033
+Deshpande, A.;FHD 1085700
+Quilis, V.;asohf 240033
 valles;vortex 396
 Kawahara, Hajime;exojax 13653
 Tako;exojax 2553
 Zhu, Guangtun;NonnegMFPy 675
 Benjamin;NonnegMFPy 900
 Espinosa-Ponce, C.;pyHIIexplorerV2 7074
-danielrd6;ifscube 4982
-Ruschel-Dutra, D.;ifscube 19504
-druscheld;ifscube 8374
-Daniel;ifscube 4558
+Ruschel-Dutra, D.;ifscube 37418
 Holcomb, Rae J.;SpinSpotter 260
 PeriPapaya;SpinSpotter 52
 Postma, Joseph E.;CCDLAB 7602
@@ -2858,9 +2686,7 @@ David Collom;banzai 36861
 Turner, Monica L.;banzai 77073
 Thomas Robitaille;banzai 74839
 Brigitta Sipocz;banzai 35744
-Abdurrouf;piXedfit 1330
-Abdurro'uf;piXedfit 6460
-ABDURROUF;piXedfit 8170
+Abdurro'uf;piXedfit 15960
 Mayeul d'Avezac;ssht 33440
 Martin Reinecke;ssht 6688
 McEwen, Jason D.;ssht 44992
@@ -2931,21 +2757,17 @@ Kilbinger, Martin;pmclib 32166
 test user;pmclib 3574
 Wagner-Carena, Sebastian;ovejero 14689
 Grasso, Michele;bigonlight 154
-Cook, N.;apero-drs 547092
-njcuk9999;apero-drs 144288
+Striebig, N.;apero-drs 691380
 Iacovelli, Francesco;gwfast 3312
 Mancarella, Michele;gwfast 1080
 Maier, G.;Eventdisplay 36108
 Elbers, Willem;fastdf 312
 wullm;fastdf 48
-javicarron;mtneedlet 11
-Javier Carron;mtneedlet 11
-Carrón Duque, J.;mtneedlet 77
+Carrón Duque, J.;mtneedlet 99
 Torrado, Jesús;GPry 546
 El Gammal, Jonas;GPry 793
 schoeneberg;GPry 208
-Kéruzoré, F.;panco2 57
-Florian Keruzore;panco2 123
+Kéruzoré, F.;panco2 180
 Morrison, Logan;Hazma 67592
 Coogan, Adam;Hazma 43792
 Farrens, S.;sf_deconvolve 1176
@@ -2956,19 +2778,16 @@ McCully, Curtis;banzai-nres 1000
 Brandt, G. Mirek;banzai-nres 1344
 Johnson, Marshall C.;banzai-nres 144
 captain-exoplanet;banzai-nres 232
-Krissansen-Totton, Joshua;Oxygen-False-Positives 127
+Krissansen-Totton, J.;Oxygen-False-Positives 127
 Savel, Arjun B.;SImMER 42
 dependabot[bot];SImMER 6
-Schefer, M.;sourcextractorplusplus 58680
-Martin Kuemmel;sourcextractorplusplus 9180
-Alejandro Alvarez Ayllon;sourcextractorplusplus 33660
-Álvarez-Ayllón, A.;sourcextractorplusplus 38520
+Schefer, M.;sourcextractorplusplus 67860
+Álvarez-Ayllón, A.;sourcextractorplusplus 72180
 “Martin;sourcextractorplusplus 8460
 Apostolakos, N.;sourcextractorplusplus 7380
 Sreejith, A. G.;CONTROL 144
 Iacovelli, Francesco;WF4Py 720
-Xavier Garrido;lollipop 685760
-Tristram, M.;lollipop 822912
+Planck Collaboration;lollipop 1508672
 Peel, Mike W.;fastcc 138
 DavidT3;XGA 3621
 David;XGA 1530
@@ -3005,10 +2824,9 @@ Weniger, Christoph;swyft 7701
 Miller, Benjamin;swyft 1020
 bkmi;swyft 4284
 Nattino, Francesco;swyft 1224
-Soulain, A.;AMICAL 3588
+Soulain, A.;AMICAL 4278
 Clément Robert;AMICAL 2668
-pre-commit-ci[bot];AMICAL 920
-Anthony;AMICAL 690
+Tuthill, P.;AMICAL 920
 Thomas Vandal;AMICAL 736
 Hearin, Andrew P.;diffmah 8272
 Rodd, Nicholas L.;HDMSpectra 5210
@@ -3017,9 +2835,8 @@ mvar0005;Blobby3D 5088
 Hippke, Michael;communication 455
 Hippke, Michael;pandora 80
 Selvaggi, M.;delphes 12635075
-Demin, P.;delphes 7117575
+Demin, P.;delphes 10097025
 Ulrike Schnoor;delphes 1324200
-pavel;delphes 2979450
 Green, Sheridan B.;SatGen 5832
 folsomde;SatGen 648
 Syrtis Major;SatGen 648
@@ -3056,18 +2873,15 @@ SpheMakh;Stimela 1600
 Hugo, B.;DDFacet 733122
 Smirnov, O.;DDFacet 632866
 Tasse, C.;DDFacet 1362855
-Hardcastle, M. J.;DDFacet 140985
+Mirmont, M.;DDFacet 140985
 Bester, L.;DDFacet 382226
 Leistedt, Boris;flaglet-archive 2288
 McEwen, Jason D.;flaglet-archive 704
-CosmoMatt;DarkMappy 1475
+LSST Dark Energy Science Collaboration;DarkMappy 1475
 Price, M. A.;DarkMappy 590
 McEwen, J. D.;DarkMappy 295
-Makhathini, S.;eidos 4500
-sphemakh;eidos 3000
-Asad, K. M. B.;eidos 7500
-Khan M. B. Asad;eidos 9000
-SpheMakh;eidos 2250
+Makhathini, S.;eidos 9750
+Iheanetu, K.;eidos 16500
 Taylor, Stephen R.;gw_pta_emulator 21276
 Bovy, Jo;simple-m2m 6882
 Kawata, Daisuke;simple-m2m 2664
@@ -3078,10 +2892,8 @@ Subhonmesh Bose;sterile-dm 4936
 ntveem;sterile-dm 4936
 Mason, James Paul;James-s-EVE-Dimming-Index-JEDI 3549
 saberyoung;haffet 8
-janfb;sbi 30464
+Boelts, Jan;sbi 45696
 Deistler, Michael;sbi 27328
-Boelts, Jan;sbi 3360
-Lueckmann, Jan-Matthis;sbi 11872
 Tejero-Cantero, Alvaro;sbi 6048
 Leistedt, Boris;Delight 97335
 Gondhalekar, Yash;beta-sgp 49
@@ -3107,8 +2919,7 @@ Miller, Jonah M.;parthenon 678
 Grete, Philipp;parthenon 546
 Glines, Forrest;parthenon 90
 par-hermes;parthenon 117
-Ryan, Ben;parthenon 93
-Ben R. Ryan;parthenon 303
+Ryan, Ben;parthenon 396
 Dolence, Joshua C.;parthenon 510
 Lippuner, Jonas;parthenon 75
 Brown, Joshua;parthenon 168
@@ -3128,8 +2939,7 @@ Radia, Miren;GRChombo 274720
 TaigoFr;GRChombo 57120
 Kunesch, Markus;GRChombo 46240
 Jelic-Cizmek, Goran;coffe 43928
-Reustle, A.;nuSpaceSim 4902
-Andrew Ludwig;nuSpaceSim 602
+Romero-Wolf, A.;nuSpaceSim 5504
 Reustle, Alexander;nupyprop 30
 Patel, Sameer;nupyprop 102
 Tsuna, Daichi;CHIPS 2322
@@ -3183,21 +2993,17 @@ Taylor, Aster G.;SAMUS 132
 Esquivel, A.;guacho 4832
 vsieyra;guacho 755
 ~/.gitconfig;guacho 1510
-Hendriks, D.;binary_c-python 466
+Hendriks, D.;binary_c-python 540
 Izzard, R.;binary_c-python 104
-dh00601;binary_c-python 74
 Grote, D. P.;WarpX 14840
-Huebl, A.;WarpX 23850
-Fedeli, L.;WarpX 10653
-Roelof Groenewald;WarpX 3551
+Almgren, A.;WarpX 37153
+Ge, L.;WarpX 10653
+Jambunathan, R.;WarpX 34397
 Zoni, E.;WarpX 9752
-Jambunathan, R.;WarpX 8056
 Zhang, W.;WarpX 13939
-Lehe, R.;WarpX 22790
-Neïl Zaim;WarpX 3180
-Myers, A.;WarpX 13303
+Zaïm, N.;WarpX 3180
 Zhao, Y.;WarpX 3392
-Maxence Thevenet;WarpX 15370
+Hogan, M.;WarpX 15370
 Stücker, Jens;adiabatic-tides 714
 jstuecker;adiabatic-tides 153
 Rodrigues, Davi C.;NAVanalysis 1032
@@ -3222,8 +3028,7 @@ Ole Streicher;iraf 18006828
 Alei, E.;exo-mercat-gui 492
 Buddelmeijer, H.;ScopeSim 304
 Czoske, O.;ScopeSim 848
-Leschinski, K.;ScopeSim 456
-Kieran;ScopeSim 1376
+Leschinski, K.;ScopeSim 1832
 Hugo Buddelmeijer;AnisoCADO 21
 Leschinski, Kieran;AnisoCADO 57
 Kosenkov, Ilia A.;DIPOL-UF 22264

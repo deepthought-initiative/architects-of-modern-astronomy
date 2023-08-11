@@ -1,4 +1,5 @@
 
+
 def same_author(author, author2, verbose=False):
     """Check if a ADS author is the same as a github name"""
     # author: git log email name
@@ -9,20 +10,12 @@ def same_author(author, author2, verbose=False):
     else:
         lastnames, firstnames = name_parts
     author2L = author.lower().replace('  ', ' ').replace('.', ' ').split('@')[0]
-    initials = ''.join([p[0] for p in firstnames.split() + lastnames.replace('-', ' ').split() if len(p) > 0])
-    if verbose: print('initials', initials)
-    if author2L == initials:
-        return True
-    initials2 = ''.join([p[0] for p in lastnames.replace('-', ' ').split() + firstnames.split() if len(p) > 0])
-    if verbose: print('initials2', initials)
-    if author2L == initials2:
-        return True
     if verbose: print('parts:', lastnames, '|', firstnames, '>', author2L)
-    if author2L.startswith(lastnames + ' ' + firstnames):
+    if author2L.startswith(lastnames + ' ' + firstnames) and len(author2L) >= 4:
         return True
-    if author2L.startswith(firstnames):
+    if author2L.startswith(firstnames) and len(firstnames) >= 4:
         return True
-    if (lastnames + ' ' + firstnames).startswith(author2L):
+    if (lastnames + ' ' + firstnames).startswith(author2L) and len(author2L) >= 4:
         return True
     for lastname in (lastnames.split('-') if '-' in lastnames else lastnames.split(' ')):
         if author2L == lastname:
@@ -65,6 +58,24 @@ def same_author(author, author2, verbose=False):
                     return True
                 if author2L.endswith(firstname) and len(firstname) >= 5:
                     return True
+
+    lastname_initials = ''.join([p[0] for p in lastnames.replace('-', ' ').split() if len(p) > 0])
+    firstname_initials = ''.join([p[0] for p in firstnames.split() if len(p) > 0])
+    # firstnamelnin
+    for sep in '', ' ':
+        if verbose: print('initials', author2L, '|', firstname_initials + sep + lastname_initials)
+        if author2L.replace('-', '') == firstnames + sep + lastname_initials:
+            return True
+        if author2L.replace('-', '') == firstname_initials + sep + lastnames:
+            return True
+
+    if verbose: print('initials', firstname_initials + lastname_initials)
+    if author2L == firstname_initials + lastname_initials:
+        return True
+    initials2 = ''.join([p[0] for p in lastnames.replace('-', ' ').split() + firstnames.split() if len(p) > 0])
+    if verbose: print('initials2', initials2)
+    if author2L == initials2:
+        return True
     return False
 
 if __name__ == '__main__':
@@ -81,8 +92,14 @@ if __name__ == '__main__':
     assert same_author("Dave Grote", "Grote, D. P.")
     assert same_author("Dave Grote", "Grote, D. P.")
     assert same_author("dfm", "Foreman-Mackey, Dan")
-    assert same_author("dfm", "Foreman Mackey, Dan")
+    assert same_author("Dan F-M", "Foreman Mackey, Dan", verbose=True)
     
+    for line in open('bad_name_matches'):
+        if line.startswith('### END'): break
+        left, right = line.split(' || ')
+        is_same = same_author(left[5:], right[:-2], verbose=True)
+        assert not is_same, (left[5:], right[:-2])
+
     count = 0
     count_same = 0
     for line in open('good_name_matches'):
