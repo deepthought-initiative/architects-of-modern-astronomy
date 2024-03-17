@@ -13,6 +13,8 @@ def same_author(author, author2, verbose=False):
     if verbose: print('parts:', lastnames, '|', firstnames, '>', author2L)
     if author2L.startswith(lastnames + ' ' + firstnames) and len(author2L) >= 4:
         return True
+    if author2L.startswith(firstnames + ' ' + lastnames) and len(author2L) >= 4:
+        return True
     if author2L.startswith(firstnames) and len(firstnames) >= 4:
         return True
     if (lastnames + ' ' + firstnames).startswith(author2L) and len(author2L) >= 4:
@@ -92,8 +94,10 @@ if __name__ == '__main__':
     assert same_author("Dave Grote", "Grote, D. P.")
     assert same_author("Dave Grote", "Grote, D. P.")
     assert same_author("dfm", "Foreman-Mackey, Dan")
-    assert same_author("Dan F-M", "Foreman Mackey, Dan", verbose=True)
-    
+    assert same_author("Dan F-M", "Foreman Mackey, Dan")
+    assert same_author("dfm", "Foreman-Mackey, Dan", verbose=True)
+    assert same_author("Dan Foreman-Mackey", "Foreman-Mackey, Dan", verbose=True)
+
     for line in open('bad_name_matches'):
         if line.startswith('### END'): break
         left, right = line.split(' || ')

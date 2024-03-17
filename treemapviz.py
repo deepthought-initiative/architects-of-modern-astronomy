@@ -32,7 +32,7 @@ if '--cut-major' in sys.argv:
     print("%d entries after cut" % len(df))
     suffix += '_withoutmajor'
 
-fig, ax = plt.subplots(figsize=(20,10), dpi=100, subplot_kw=dict(aspect=0.5))
+fig, ax = plt.subplots(figsize=(20,20), dpi=100, subplot_kw=dict(aspect=2.0))
 trc = tr.treemap(
     ax, df, area='weights', fill='projects', labels='names',
     levels=['projects', 'names'],

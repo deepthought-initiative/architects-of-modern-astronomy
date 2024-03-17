@@ -69,6 +69,8 @@ def get_git_url2(code_site):
             if link.text == 'theme': # footer text
                 continue
             link_url = link["href"]
+            if 'just-the-docs' in link_url: # theme link
+                continue
             if not link_url or '?' in link_url or link_url.count('/') < 3:
                 continue
             link_url = '/'.join(link_url.split('/')[:5])
