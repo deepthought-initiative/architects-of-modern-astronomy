@@ -55,7 +55,7 @@ def get_git_commit_log(repo_url, logargs, full=False):
     # Clone the repository locally
     subprocess.check_call(["rm", "-rf", "temp-git-repo"])
     subprocess.check_call(["git", "clone", "--bare"] + ([] if full else ["--filter=blob:none"]) + [repo_url, "temp-git-repo"])
-  
+
     # Get the commit authors and their statistics
     git_log_command = ["git", "--git-dir=temp-git-repo/", "log"] + list(logargs)
     result = subprocess.run(git_log_command, stdout=subprocess.PIPE, text=True, errors='ignore')
@@ -84,9 +84,9 @@ def count_active_days(commit_dates):
 def get_git_commit_authors(repo_url, full):
     """Get statistics of contributing authors to git repositories"""
     log_output = get_git_commit_log(repo_url, ["--format=%aN | %ad", "--date=iso8601-strict"], full=full)
-  
+
     commit_authors = defaultdict(lambda : dict(commits=0, lines_changed=0, days_active=set()))
-  
+
     # Process the log output to extract commit authors and statistics
     current_author = None
     current_date = None
@@ -99,12 +99,15 @@ def get_git_commit_authors(repo_url, full):
                 commit_authors[current_author]["lines_changed"] += int(part.split()[0])
             commit_authors[current_author]["days_active"].add(current_date)
         elif line.strip() != '':
-            current_author, current_date_string = line.strip().split(' | ')
+            parts = line.strip().split(' | ')
+            current_author, current_date_string = parts[0], parts[-1]
             current_date = datetime.fromisoformat(current_date_string)
             commit_authors[current_author]["commits"] = 0
             commit_authors[current_author]["days_active"].add(current_date)
 
     for author_stats in commit_authors.values():
+        author_stats["first_contribution_date"] = min(author_stats["days_active"])
+        author_stats["last_contribution_date"] = max(author_stats["days_active"])
         author_stats["days_active"] = count_active_days(author_stats["days_active"])
     return dict(commit_authors)
 
@@ -115,7 +118,7 @@ def get_significant_contributors(repository_url, parameter):
     commit_authors = get_git_commit_authors(repository_url, full=parameter == 'lines_changed')
     # print('  ', commit_authors)
     top_contributor_commits = max((v[parameter] for v in commit_authors.values()))
-    
+
     significant_contributors = []
 
     for contributor, contributions in commit_authors.items():
@@ -123,7 +126,7 @@ def get_significant_contributors(repository_url, parameter):
         commits_percentage = commits / top_contributor_commits * 100
 
         if commits_percentage >= 10:
-            significant_contributors.append((contributor, contributions[parameter]))
+            significant_contributors.append((contributor, contributions[parameter], contributions["first_contribution_date"], contributions["last_contribution_date"]))
 
     print('  ', significant_contributors, top_contributor_commits)
     return significant_contributors, top_contributor_commits
@@ -144,7 +147,7 @@ def extract_github_url_from_pypi(pypi_url):
     project_description = soup.find("div", class_="project-description")
     if project_description:
         links += project_description.find_all("a", href=True)
-    
+
     for link in links:
         link_url = link["href"]
         if not link_url or '?' in link_url or link_url.count('/') > 5 or link_url.count('/') < 3:
