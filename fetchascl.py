@@ -32,7 +32,7 @@ def get_code_info(url):
     """Get code website and list of papers"""
     response = requests.get(url)
     soup = BeautifulSoup(response.content, "html.parser")
-    
+
     # Extract Code site
     code_site_element = soup.find('dt', text='Code site:')
     code_sites = [a.get('href') for a in code_site_element.find_next('dd').find_all('a', href=True)] if code_site_element else []
@@ -63,7 +63,7 @@ def iterate_joss_list():
     results = list(ads.SearchQuery(q=query, fl=fields, sort="date", max_pages=100))
     for p in tqdm.tqdm(results, desc='fetching JOSS repository URLs'):
         repo_urls = get_joss_repo_urls(url='https://ui.adsabs.harvard.edu/link_gateway/%s/PUB_HTML' % p.bibcode)
-        print(p.bibcode, p.author, repo_urls, p.id)
+        # print(p.bibcode, p.author, repo_urls, p.id)
         yield repo_urls, ['https://ui.adsabs.harvard.edu/abs/%s' % p.bibcode]
 
 
@@ -117,7 +117,7 @@ def get_git_url2(code_site):
             #    deep_link_url = get_git_url(link_url)
             #    if deep_link_url is not None:
             #        return deep_link_url
-            
+
     except requests.exceptions.SSLError:
         pass
 
@@ -144,7 +144,7 @@ def get_best_orcid(p):
             orcid = orcid_pub
         if orcid_other != '-':
             orcid = orcid_other
-        
+
         yield orcid
 
 @mem.cache
@@ -208,13 +208,13 @@ def translate_to_institutional_contributors(contributors, authors):
         if orcid == '-':
             continue
         contributors_with_orcid.append((contributor, orcid, ncontributions, startdate, enddate))
-    
+
     full_affil_set = set()
     for contributor, orcid, ncontributions, startdate, enddate in contributors_with_orcid:
         years = get_person_affil_history(orcid, contributor)
         for year in range(startdate.year - 1, enddate.year + 1):
             full_affil_set = full_affil_set.union(years[year])
-    
+
     # deduplicate affiliations, keep longest name
     dedup_affil_set = list()
     for affil_i in sorted(full_affil_set, key=lambda s: len(s), reverse=True):
@@ -246,10 +246,11 @@ def get_impact(bib_urls):
     """Get project impact (citations of papers using it)"""
     fields = ['bibcode', 'author', 'year', 'citation_count', 'doi', 'title', 'eid', 'identifier']
     query = ' OR '.join(['citations(%s)' % bibcode_query(bib_url) for bib_url in bib_urls if 'adsabs.harvard.edu' in bib_url])
-    print(query)
+    print('    ', query)
     if query == '':
         return 0
-    papers = [p for p in ads.SearchQuery(q=query, fl=fields, sort="date", max_pages=100)]
+    papers = [p for p in ads.SearchQuery(q=query + ' collection:astronomy', fl=fields, sort="date", max_pages=100)]
+    # print('      ', len(papers))
     total_citations = sum((p.citation_count for p in papers if p.citation_count))
     return total_citations
 
@@ -260,7 +261,7 @@ def deduplicate_authors(authors, contributors):
     values = {}
     startdates = {}
     enddates = {}
-    
+
     # find contributor in paper author list, store in author_map
     for author, value, startdate, enddate in contributors:
         for author2 in authors:
@@ -285,7 +286,7 @@ def deduplicate_authors(authors, contributors):
         if newauthor not in authors_done:
             authors_done[newauthor] = True
             deduplicated_contributors.append((newauthor, values[newauthor], startdates[newauthor], enddates[newauthor]))
-    
+
     return deduplicated_contributors
 
 if __name__ == '__main__':
@@ -295,7 +296,7 @@ if __name__ == '__main__':
     #    time.sleep(0.1)
     #print(get_person_affil_history('0000-0003-0426-6634', 'Buchner'))
     #import sys; sys.exit()
-    
+
     #c = Counter([get_code_info(url)[0].split('://')[1].strip('/').split('/')[0] for url in get_ascl_list()])
     #print(c.most_common(20))
     os.environ['GIT_TERMINAL_PROMPT'] = '0'
@@ -308,8 +309,9 @@ if __name__ == '__main__':
     #    code_sites, bib_urls = get_code_info(url)
     #    del url
     repo_urls_done = set()
-    for code_sites, bib_urls in list(iterate_joss_list()) + list(iterate_ascl()):
-        print("*** ", code_sites, bib_urls)
+    parent_sample = list(iterate_joss_list()) + list(iterate_ascl())
+    for i, (code_sites, bib_urls) in enumerate(parent_sample):
+        print("[%d/%d] ***" % (i+1, len(parent_sample)), code_sites, bib_urls)
         if len(bib_urls) == 0:
             print("  no papers found for", code_sites)
             continue
@@ -352,7 +354,8 @@ if __name__ == '__main__':
             # query citations of paper(s) (impact)
             try:
                 project_impact = get_impact(bib_urls)
-            except IndexError:
+            except IndexError as e:
+                print("    IndexError:", e)
                 project_impact = 0
             if project_impact == 0:
                 print("    no impact found for", code_sites)
@@ -382,4 +385,4 @@ if __name__ == '__main__':
                     fout.flush()
                 break
             except subprocess.CalledProcessError as e:
-                print("failure:", repo_url, e)
+                print("    failure:", repo_url, e)
