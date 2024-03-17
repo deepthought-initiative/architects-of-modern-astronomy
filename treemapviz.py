@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import mpl_extra.treemap as tr
 import sys
+from collections import Counter
 
 names = []
 projects = []
@@ -15,8 +16,6 @@ for line in open(sys.argv[1]):
     weights.append(int(weightstr))
     projects.append(project)
     names.append(name)
-    #if len(names) > 100:
-    #   break
 
 
 df = pd.DataFrame(dict(weights=weights, projects=projects, names=names))
@@ -27,7 +26,12 @@ if '--cut-tiny' in sys.argv:
     print("%d entries after cut" % len(df))
     suffix += '_withouttiny'
 if '--cut-major' in sys.argv:
-    for project in 'starlink', 'astropy', 'yt', 'pycbc', 'q-e', 'nemo', 'class_public', 'matplotlib', 'miriad', 'mesa':
+    #top_projects = 'PypeIt', 'pencil-code', 'seaborn', 'moose', 'starlink', 'astropy', 'yt', 'pycbc', 'q-e', 'nemo', 'class_public', 'matplotlib', 'miriad', 'mesa'
+    top_projects = Counter()
+    for k, v in zip(projects, weights):
+        top_projects[k] += v
+    
+    for project, _ in top_projects.most_common(20):
         df = df[df.projects != project]
     print("%d entries after cut" % len(df))
     suffix += '_withoutmajor'

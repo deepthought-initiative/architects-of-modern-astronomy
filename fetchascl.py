@@ -9,7 +9,7 @@ from collections import defaultdict
 import ads
 from urllib.parse import unquote
 from namematch import same_author
-from affilmatch import is_affil_same
+from affilmatch import is_affil_same, split_affil_string, shorten_affil
 import kvstore
 
 #import fetchgit
@@ -162,7 +162,7 @@ def get_authors(bib_urls):
                         authors[author] = orcid
     return authors
 
-@mem.cache
+#@mem.cache
 def get_person_affil_history(orcid, author, verbose=False):
     """Get affiliation of a person over time"""
     fields = ['author', 'aff', 'year', 'orcid_user', 'orcid_pub', 'orcid_other']
@@ -172,12 +172,12 @@ def get_person_affil_history(orcid, author, verbose=False):
     years = defaultdict(list)
     for p in (tqdm.tqdm(results, desc='fetching affil history') if verbose else results):
         for author_i, affils_i, orcid_i in zip(p.author, p.aff, get_best_orcid(p)):
-            for affil_i in affils_i.split('; '):
+            for affil_i in split_affil_string(affils_i):
                 if ',' not in affil_i:
                     continue
                 affil_i = affil_i.split('<ORCID>')[0]
                 if orcid == orcid_i and affil_i != '-':
-                    # print(p.year, author_i, affil_i)
+                    # print('::', p.year, author_i, affil_i)
                     # print(p.year, list(zip(p.aff, p.author)), p.orcid)
                     if not any(is_affil_same(affil, affil_i, verbose=False) for affil in years[p.year]):
                         for affil_j in known_affils:
@@ -205,32 +205,37 @@ def translate_to_institutional_contributors(contributors, authors):
     contributors_with_orcid = []
     for contributor, ncontributions, startdate, enddate in contributors:
         orcid = authors.get(contributor, '-')
-        if orcid == '-':
-            continue
-        contributors_with_orcid.append((contributor, orcid, ncontributions, startdate, enddate))
+        if orcid != '-':
+            contributors_with_orcid.append((contributor, orcid, ncontributions, startdate, enddate))
 
     full_affil_set = set()
     for contributor, orcid, ncontributions, startdate, enddate in contributors_with_orcid:
+        # print("history of ", contributor, orcid, "::", startdate, enddate)
         years = get_person_affil_history(orcid, contributor)
-        for year in range(startdate.year - 1, enddate.year + 1):
-            full_affil_set = full_affil_set.union(years[year])
+        # print(years)
+        for year in range(startdate - 1, enddate + 1):
+            full_affil_set = full_affil_set.union(years[str(year)])
+            # print('  ', year, years.get(str(year), []), full_affil_set)
+    print("    all relevant affils:", full_affil_set)
 
     # deduplicate affiliations, keep longest name
-    dedup_affil_set = list()
+    dedup_affil_set = []
     for affil_i in sorted(full_affil_set, key=lambda s: len(s), reverse=True):
         if not any(is_affil_same(affil_j, affil_i, verbose=False) for affil_j in dedup_affil_set):
             dedup_affil_set.append(affil_i)
+    #print("    affils: ", dedup_affil_set)
 
     # get all affiliations falling between years of startdate and enddate+1 years
     for affil_k in dedup_affil_set:
+        print("affil", affil_k)
         ncontributions_k = 0
         startdates = []
         enddates = []
         for contributor, orcid, ncontributions, startdate, enddate in contributors_with_orcid:
             is_relevant_affiliation = False
             years = get_person_affil_history(orcid, contributor)
-            for year in range(startdate.year - 1, enddate.year + 1):
-                for affil_i in years[year]:
+            for year in range(startdate - 1, enddate + 1):
+                for affil_i in years[str(year)]:
                     if is_affil_same(affil_k, affil_i, verbose=False):
                         is_relevant_affiliation = True
             if not is_relevant_affiliation:
@@ -238,7 +243,7 @@ def translate_to_institutional_contributors(contributors, authors):
             ncontributions_k += ncontributions
             startdates.append(startdate)
             enddates.append(enddate)
-        yield affil_k.split(',')[0], ncontributions_k, min(startdates) if startdates else None, max(enddates) if enddates else None
+        yield shorten_affil(affil_k), ncontributions_k, min(startdates) if startdates else None, max(enddates) if enddates else None
 
 
 @mem.cache
@@ -249,7 +254,7 @@ def get_impact(bib_urls):
     print('    ', query)
     if query == '':
         return 0
-    papers = [p for p in ads.SearchQuery(q=query + ' collection:astronomy', fl=fields, sort="date", max_pages=100)]
+    papers = [p for p in ads.SearchQuery(q=query, fl=fields, sort="date", max_pages=100)]
     # print('      ', len(papers))
     total_citations = sum((p.citation_count for p in papers if p.citation_count))
     return total_citations
@@ -265,8 +270,10 @@ def deduplicate_authors(authors, contributors):
     # find contributor in paper author list, store in author_map
     for author, value, startdate, enddate in contributors:
         for author2 in authors:
+            # see if we know this contributor as a paper co-author
             # print("CMP(", author, "||", author2,")")
             if same_author(author, author2):
+                # map of (code editor) -> (co-author)
                 author_map[author] = author2
                 # print("==", author, author2)
                 break
@@ -275,7 +282,7 @@ def deduplicate_authors(authors, contributors):
         # sum up contribution values
         values[newauthor] = values.get(newauthor, 0) + value
         startdates[newauthor] = min(startdate, startdates[newauthor]) if newauthor in startdates else startdate
-        enddates[newauthor] = min(enddate, enddates[newauthor]) if newauthor in enddates else enddate
+        enddates[newauthor] = max(enddate, enddates[newauthor]) if newauthor in enddates else enddate
         del author, value, startdate, enddate
 
     # build deduplicated list of all contributors
@@ -289,29 +296,10 @@ def deduplicate_authors(authors, contributors):
 
     return deduplicated_contributors
 
-if __name__ == '__main__':
-    #for url in sorted(get_ascl_list()):
-    #    print(url)
-    #    code_site, bib_urls = get_code_info(url)
-    #    time.sleep(0.1)
-    #print(get_person_affil_history('0000-0003-0426-6634', 'Buchner'))
-    #import sys; sys.exit()
-
-    #c = Counter([get_code_info(url)[0].split('://')[1].strip('/').split('/')[0] for url in get_ascl_list()])
-    #print(c.most_common(20))
-    os.environ['GIT_TERMINAL_PROMPT'] = '0'
-
-    parameter = os.environ['QUANTIFIER']  # "commits", "lines_changed" or "days_active"
-    use_institutes = os.environ.get('INSTITUTES', '') != ''
-    fout = open('outputs/weighted-flamegraph-%s%s.txt' % (parameter, '-institutes' if use_institutes else ''), 'w')
-    #for url in tqdm.tqdm(sorted(get_ascl_list())[::int(os.environ.get('DIR', '1'))]):
-    #    # print(url)
-    #    code_sites, bib_urls = get_code_info(url)
-    #    del url
-    repo_urls_done = set()
-    parent_sample = list(iterate_joss_list()) + list(iterate_ascl())
+def get_software_list(parent_sample):
+    repos = dict()
     for i, (code_sites, bib_urls) in enumerate(parent_sample):
-        print("[%d/%d] ***" % (i+1, len(parent_sample)), code_sites, bib_urls)
+        print("[%d/%d] ###" % (i+1, len(parent_sample)), code_sites, bib_urls)
         if len(bib_urls) == 0:
             print("  no papers found for", code_sites)
             continue
@@ -345,44 +333,56 @@ if __name__ == '__main__':
             if repo_url is None:
                 print("    no repo found for", code_sites)
                 continue
-            if repo_url in repo_urls_done:
-                print("    repo already done", repo_url)
-                continue
-            repo_urls_done.add(repo_url)
+            other_code_sites, other_bib_urls = repos.get(repo_url, ([], []))
+            repos[repo_url] = sorted(set(code_sites).union(other_code_sites)), sorted(set(bib_urls).union(other_bib_urls))
 
-            print("  getting impact for ", repo_url)
-            # query citations of paper(s) (impact)
-            try:
-                project_impact = get_impact(bib_urls)
-            except IndexError as e:
-                print("    IndexError:", e)
-                project_impact = 0
-            if project_impact == 0:
-                print("    no impact found for", code_sites)
-                continue
-            if project_impact < 10:
-                print("    low impact, skipping")
-                continue
-            # get people's names & ORCID
-            print("  getting authors for ", bib_urls)
-            authors = get_authors(bib_urls)
-            print("    ", repo_url, "impact", project_impact, "by", authors.keys())
-            # print(url, "authors", authors)
+    return repos
 
-            project_name = repo_url.strip('/').split('/')[-1]
-            significant_contributors, top_contributor_contributions = [], None
-            try:
-                significant_contributors, top_contributor_contributions = get_significant_contributors(repo_url, parameter)
-                if top_contributor_contributions is not None:
-                    significant_contributors_deduplicated = deduplicate_authors(authors, significant_contributors)
-                    #significant_contributors_deduplicated = significant_contributors
-                    # write out person's contribution proportional to impact of the software and days invested
-                    if use_institutes:
-                        significant_contributors_deduplicated = translate_to_institutional_contributors(
-                            significant_contributors_deduplicated, authors)
-                    for contributor, ncontributions, _, _ in significant_contributors_deduplicated:
-                        fout.write('%s;%s %d\n' % (contributor, project_name, ncontributions * project_impact))
-                    fout.flush()
-                break
-            except subprocess.CalledProcessError as e:
-                print("    failure:", repo_url, e)
+if __name__ == '__main__':
+    os.environ['GIT_TERMINAL_PROMPT'] = '0'
+
+    parameter = os.environ['QUANTIFIER']  # "commits", "lines_changed" or "days_active"
+    use_institutes = os.environ.get('INSTITUTES', '') != ''
+    fout = open('outputs/weighted-flamegraph-%s%s.txt' % (parameter, '-institutes' if use_institutes else ''), 'w')
+    parent_sample = list(iterate_joss_list()) + list(iterate_ascl())
+    repos = get_software_list(parent_sample)
+    print()
+    print("checking impact...")
+    for i, (repo_url, (code_sites, bib_urls)) in enumerate(repos.items()):
+        print("[%d/%d] ***" % (i+1, len(repos)), repo_url, bib_urls)
+        try:
+            project_impact = get_impact(bib_urls)
+        except IndexError as e:
+            print("    IndexError:", e)
+            continue
+        except ads.exceptions.APIResponseError as e:
+            print("    APIResponseError:", e)
+            break
+        if project_impact == 0:
+            print("    no impact found for", bib_urls)
+            continue
+        if project_impact < 10:
+            print("    low impact, skipping")
+            continue
+        # get people's names & ORCID
+        print("  getting authors for ", bib_urls)
+        authors = get_authors(bib_urls)
+        print("    ", repo_url, "impact", project_impact, "by", authors.keys())
+        # print(url, "authors", authors)
+
+        project_name = repo_url.strip('/').split('/')[-1]
+        significant_contributors, top_contributor_contributions = [], None
+        try:
+            significant_contributors, top_contributor_contributions = get_significant_contributors(repo_url, parameter)
+            if top_contributor_contributions is not None:
+                significant_contributors_deduplicated = deduplicate_authors(authors, significant_contributors)
+                #significant_contributors_deduplicated = significant_contributors
+                # write out person's contribution proportional to impact of the software and days invested
+                if use_institutes:
+                    significant_contributors_deduplicated = translate_to_institutional_contributors(
+                        significant_contributors_deduplicated, authors)
+                for contributor, ncontributions, _, _ in significant_contributors_deduplicated:
+                    fout.write('%s;%s %d\n' % (contributor, project_name, ncontributions * project_impact))
+                fout.flush()
+        except subprocess.CalledProcessError as e:
+            print("    failure:", repo_url, e)

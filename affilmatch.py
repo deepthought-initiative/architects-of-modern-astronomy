@@ -1,14 +1,51 @@
 from fuzzywuzzy import fuzz
 from unidecode import unidecode
-#import unicodedata
-#import string
+import pycountry
 import locale
 
-#def NFD(s):
-#    return unicodedata.normalize('NFD', s)
+countries = [c.name for c in pycountry.countries] + ['USA', 'UK']
+countries_abbr = {c.name:c.alpha_2 for c in pycountry.countries}
 
-#def compare_caseless(s1, s2):
-#    return NFD(NFD(s1).casefold()) == NFD(NFD(s2).casefold())
+def has_numbers(inputString):
+    return any(char.isdigit() for char in inputString)
+
+def shorten_affil(s):
+    s = s.replace('Max Planck Institute', 'MPE')
+    s = s.replace('Technical University', 'TU')
+    s = s.replace('University', '')
+    s = s.replace('Department', '')
+    s = s.replace('Faculty', '')
+    s = s.replace('Institute', '')
+    s = s.replace(' of ', '')
+    s = s.replace(' and ', '&')
+    s = s.replace('Sciences', 'Sci')
+    s = s.replace('Science', 'Sci')
+    s = s.replace('Mathematics', 'Math')
+    s = s.replace('Medical', 'Med')
+    s = s.replace('Physics', 'Phys')
+    s = s.replace('Astronomy', 'Astro')
+    s = s.replace('Biology', 'Bio')
+    s = s.replace('  ', ' ').replace(' , ', ', ')
+    parts = s.split(', ')
+    interesting_parts = []
+    for p in parts:
+        if p not in interesting_parts and not has_numbers(p):
+            interesting_parts.append(p)
+    return ', '.join(interesting_parts[:2]) + ', ' + countries_abbr.get(interesting_parts[-1], interesting_parts[-1])
+
+def split_by_countries(s):
+    for c in countries:
+        if ', ' + c + ', ' in s:
+            parts = s.split(', ' + c + ', ', 1)
+            if len(parts[1]) > 15:
+                return [parts[0] + ', ' + c, parts[1]]
+    return [s]
+
+def split_affil_string(s):
+    affils = []
+    for part in s.split('; '):
+        affils += split_by_countries(part)
+    return affils
 
 def replace_umlaute(s):
     umlaute = {'ü':'ue', 'Ü':'Ue', 'ä':'ae', 'Ä':'ae', 'ö':'oe', 'Ö':'Oe', 'ß':'ss'}
@@ -68,7 +105,11 @@ def is_affil_same(a, b, verbose=True):
     bnorm2 = b.lower().replace('-', ' ').split('(')[0].replace(',', ' ').strip()
     if verbose:
         print("comparing full affil::", anorm2, bnorm2)
-    return compare(anorm2, bnorm2, verbose=verbose)
+    if compare(anorm2, bnorm2, verbose=verbose):
+        return True
+    if ', ' in a and ', ' in b:
+        return compare(shorten_affil(a), shorten_affil(b), verbose=verbose)
+    return False
 
 
 if __name__ == '__main__':
@@ -99,3 +140,13 @@ if __name__ == '__main__':
     assert not is_affil_same('Max-Planck-Institut fur Extraterrestrische Physik, Gieβenbachstraβe, 85748, Garching, Germany', 'Instituto de Astrofísica and Centro de Astroingeniería, Facultad de Física, Pontificia Universidad Católica de Chile, Casilla 306, Santiago 22, Chile')
     assert not is_affil_same('AUT University', 'Instituto de Astrofísica and Centro de Astroingeniería, Facultad de Física, Pontificia Universidad Católica de Chile, Casilla 306, Santiago 22, Chile')
     assert not is_affil_same('Pontificia Universidad Católica de Chile, Instituto de Astrofísica, Casilla 306, Santiago 22, Chile', 'Instituto de Astrofísica and Centro de Astroingeniería, Facultad de Física, Pontificia Universidad Católica de Chile, Casilla 306, Santiago 22, Chile')
+    
+    parts = set(split_affil_string('University of Cambridge, Cambridge, United Kingdom, Max Planck Institute for Intelligent Systems, Tübingen, Germany'))
+    assert parts == set(['University of Cambridge, Cambridge, United Kingdom', 'Max Planck Institute for Intelligent Systems, Tübingen, Germany']), parts
+
+    parts = set(split_affil_string('University of Cambridge, Cambridge, United Kingdom; Max Planck Institute for Intelligent Systems, Tübingen, Germany'))
+    print(parts)
+    assert parts == set(['University of Cambridge, Cambridge, United Kingdom', 'Max Planck Institute for Intelligent Systems, Tübingen, Germany']), parts
+    parts = set(split_affil_string('University of Cambridge, Cambridge, United Kingdom'))
+    print(parts)
+    assert parts == set(['University of Cambridge, Cambridge, United Kingdom']), parts

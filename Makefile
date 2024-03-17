@@ -2,8 +2,8 @@ all: outputs/weighted-flamegraph-days_active.txt.png
 all: outputs/weighted-flamegraph-days_active-institutes.txt.png
 all: outputs/weighted-flamegraph-days_active.txt_withouttiny.png
 all: outputs/weighted-flamegraph-days_active-institutes.txt_withouttiny.png
-all: outputs/weighted-flamegraph-days_active.txt_withouttiny_withoutmajor.png
-all: outputs/weighted-flamegraph-days_active-institutes.txt_withouttiny_withoutmajor.png
+all: outputs/weighted-flamegraph-days_active.txt_withoutmajor.png
+all: outputs/weighted-flamegraph-days_active-institutes.txt_withoutmajor.png
 
 #all: outputs/flamegraph-days_active.txt.png 
 

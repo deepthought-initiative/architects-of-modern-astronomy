@@ -80,7 +80,7 @@ def count_active_days(commit_dates):
 
     return active_days
 
-@mem.cache
+#@mem.cache
 def get_git_commit_authors(repo_url, full):
     """Get statistics of contributing authors to git repositories"""
     log_output = get_git_commit_log(repo_url, ["--format=%aN | %ad", "--date=iso8601-strict"], full=full)
@@ -106,13 +106,13 @@ def get_git_commit_authors(repo_url, full):
             commit_authors[current_author]["days_active"].add(current_date)
 
     for author_stats in commit_authors.values():
-        author_stats["first_contribution_date"] = min(author_stats["days_active"])
-        author_stats["last_contribution_date"] = max(author_stats["days_active"])
+        author_stats["first_contribution_date"] = min(author_stats["days_active"]).year
+        author_stats["last_contribution_date"] = max(author_stats["days_active"]).year
         author_stats["days_active"] = count_active_days(author_stats["days_active"])
     return dict(commit_authors)
 
 
-@mem.cache
+#@mem.cache
 def get_significant_contributors(repository_url, parameter):
     """Get author statistics for a git repository"""
     commit_authors = get_git_commit_authors(repository_url, full=parameter == 'lines_changed')
@@ -128,7 +128,7 @@ def get_significant_contributors(repository_url, parameter):
         if commits_percentage >= 10:
             significant_contributors.append((contributor, contributions[parameter], contributions["first_contribution_date"], contributions["last_contribution_date"]))
 
-    print('  ', significant_contributors, top_contributor_commits)
+    print('  significant_contributors: ', significant_contributors, top_contributor_commits)
     return significant_contributors, top_contributor_commits
 
 
