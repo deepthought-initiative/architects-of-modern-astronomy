@@ -1,0 +1,3596 @@
+tbmiller-astro;pysersic;49;154
+Pasha, Imad;pysersic;14;154
+prappleizer;pysersic;14;154
+Izzard, R.;binary_c-python;53;21
+Hendriks, D.;binary_c-python;233;21
+dh00601;binary_c-python;37;21
+Wong, Kaze W. K.;flowMC;148;25
+Gabrié, Marylou;flowMC;27;25
+Salmi, Tuomo;xpsi;47;26
+Watts, Anna L.;xpsi;21;26
+Choudhury, Devarshi;xpsi;30;26
+Guillot, Sebastien;xpsi;15;26
+Vinciguerra, Serena;xpsi;7;26
+Huppenkothen, Daniela;xpsi;18;26
+Dorsman, Bas;xpsi;7;26
+Riley, Thomas E.;xpsi;74;26
+Townsend, Rich;msg;126;69
+Nightingale, James.;PyAutoGalaxy;351;60
+Hayes, Richard;PyAutoGalaxy;37;60
+Jammy2211;PyAutoGalaxy;49;60
+jammy2211;PyAutoGalaxy;114;60
+MacDonald, Ryan J.;POSEIDON;94;135
+Pizzuti, L.;MG-MAMPOSSt;48;16
+Christiaens, Valentin;VIP;246;1734
+Hammond, Iain;VIP;53;1734
+Thomas Bédrine;VIP;31;1734
+Farkas, Ralf;VIP;54;1734
+Gomez Gonzalez, Carlos Alberto;VIP;270;1734
+carlgogo;VIP;54;1734
+Karamanis, Minas;pocomc;45;77
+Nabergoj, David;pocomc;13;77
+Chontos, Ashley;pySYD;107;114
+Sayeed, Maryum;pySYD;12;114
+Bell, Taylor;Eureka;361;422
+Stevenson, Kevin;Eureka;176;422
+Yoni Brande;Eureka;40;422
+Mansfield, Megan;Eureka;35;422
+evamariaa;Eureka;25;422
+Pitkin, Matthew;cwinpy;528;14
+QuiteAFoxtrot;VAST;19;15
+BenZvi, Segev;VAST;27;15
+kadglass;VAST;19;15
+Douglass, Kelly;VAST;70;15
+Veyrat, Dahlia;VAST;37;15
+O'Neill, Stephen;VAST;43;15
+Guzzetti, Michaela;VAST;14;15
+Tiede, Paul;Comrade.jl;216;69
+CompatHelper Julia;Comrade.jl;35;69
+Weniger, Christoph;swyft;152;179
+Miller, Benjamin;swyft;20;179
+bkmi;swyft;84;179
+Nattino, Francesco;swyft;24;179
+Hartwig, Tilman;asloth;43;268
+Chen, Li-Hsin;asloth;7;268
+Gully-Santiago, Michael;muler;71;11
+Milan Roberson;DBSP_DRP;100;150
+Harris, Kitty;nrCascadeSim;86;10
+Kitt;nrCascadeSim;21;10
+nuclearGoblin;nrCascadeSim;10;10
+Villano, A. n.;nrCascadeSim;58;10
+Wagg, T.;LEGWORK;77;135
+Breivik, K.;LEGWORK;43;135
+Stammler, Sebastian;simframe;64;23
+Riley, Jeff;COMPAS;239;15475
+Mandel, Ilya;COMPAS;192;15475
+Willcox, Reinhold;COMPAS;174;15475
+Lau, Mike;COMPAS;49;15475
+Avi Vajpeyi;COMPAS;22;15475
+van Son, Lieke;COMPAS;31;15475
+Line, Jack;WODEN;191;16
+Pilgrim, Charlie;piecewise-regression;7;18
+chasmani;piecewise-regression;29;18
+Chasmani;piecewise-regression;3;18
+Emken, Timon;obscura;102;26
+Clough, Katy;GRChombo;71;519
+te307;GRChombo;11;519
+Radia, Miren;GRChombo;106;519
+TaigoFr;GRChombo;36;519
+Kunesch, Markus;GRChombo;17;519
+Mike Grudic;pytreegrav;23;41
+Grudić, Michael;pytreegrav;16;41
+Gurvich, Alexander;pytreegrav;4;41
+Girija, Athul;AMAT;97;88
+Sheshukov, Andrey;snewpy;66;160
+Migenda, Jost;snewpy;98;160
+BenZvi, Segev;snewpy;47;160
+Molla, Marta;snewpy;12;160
+Griswold, Spencer;snewpy;18;160
+O'Connor, Evan;snewpy;12;160
+Kneller, James;snewpy;22;160
+Uberoi, Navya;snewpy;10;160
+Teague, Richard;disksurf;34;180
+Zonca, Andrea;pysm;172;345
+Prather, Ben;iharm3d;150;683
+Medasani, Bharat;simsopt;277;41
+Landreman, Matt;simsopt;262;41
+Elizabeth;simsopt;77;41
+Jorge, Rogerio;simsopt;56;41
+Wechsung, Florian;simsopt;127;41
+Alan Kaptanoglu;simsopt;93;41
+Antoine Baillod;simsopt;29;41
+Giuliani, Andrew;simsopt;55;41
+Rollins, Richard;skypy;83;26
+Harrison, Ian;skypy;14;26
+de la Bella, Lucia;skypy;26;26
+Tessore, Nicolas;skypy;57;26
+Sudek, Philipp;skypy;11;26
+Shoshany, Barak;OGRe;9;24
+Sexton, Jean;Nyx;321;4715
+Zhang, Weiqun;Nyx;40;4715
+Myers, Andrew;Nyx;43;4715
+Almgren, Ann S.;Nyx;144;4715
+Lukić, Zarija;Nyx;35;4715
+vince;Nyx;27;4715
+Friesen, Brian;Nyx;31;4715
+J. Michael Burgess;popsynth;76;13
+Capel, Francesca;popsynth;17;13
+Burgess, J.;popsynth;75;13
+Luger, Rodrigo;starry_process;125;45
+Foreman-Mackey, Daniel;exoplanet;252;2445
+pre-commit-ci[bot];exoplanet;42;2445
+Ilin, Ekaterina;AltaiPony;143;333
+Birrer, Simon;lenstronomy;933;6899
+Gilman, Daniel;lenstronomy;81;6899
+Galan, Aymeric;lenstronomy;95;6899
+Shajib, Anowar;lenstronomy;64;6899
+Tang, Shih-Yun;igrins_rv;175;45
+astahl7;igrins_rv;94;45
+sytang-astro;igrins_rv;20;45
+Buchner, J.;BXA;103;31206
+Shahmoradi, Amir;paramonte;185;61
+Taboada, Ignacio;FIRESONG;47;183
+Tung, Chun;FIRESONG;68;183
+Pizzuto, Alex;FIRESONG;13;183
+Reimann, Rene;FIRESONG;11;183
+MacBride, Conor;mcalf;45;25
+Fabbian, Giulio;s4cmb;13;14
+Peloton, Julien;s4cmb;77;14
+Waskom, Michael;seaborn;804;4096
+Buchner, Johannes;UltraNest;173;1193
+Keitel, David;PyFstat;230;471
+Tenorio, Rodrigo;PyFstat;139;471
+Ashton, Gregory;PyFstat;201;471
+Bozzola, Gabriele;kuibit;196;221
+Migenda, Jost;sntools;131;86
+Schwenk, Jon;RivGraph;87;16
+J. Hariharan;RivGraph;11;16
+jayh;RivGraph;11;16
+jsta;RivGraph;9;16
+JayH;RivGraph;18;16
+jay;RivGraph;25;16
+van Zeist, Wouter;riroriro;76;34
+Nightingale, James.;PyAutoFit;360;212
+Hayes, Richard;PyAutoFit;403;212
+Griffiths, Matthew;PyAutoFit;70;212
+Jammy2211;PyAutoFit;46;212
+jammy2211;PyAutoFit;131;212
+Feickert, Matthew;pyhf;409;12
+Heinrich, Lukas;pyhf;92;12
+pre-commit-ci[bot];pyhf;47;12
+Stark, Giordon;pyhf;137;12
+Brandenburg, Axel;pencil-code;2117;691
+Rheinhardt, Matthias;pencil-code;1142;691
+Lyra, Wladimir;pencil-code;730;691
+Yang, Chao-Chin;pencil-code;543;691
+Johansen, Anders;pencil-code;957;691
+Bourdin, Philippe;pencil-code;728;691
+Käpylä, Petri;pencil-code;272;691
+Haugen, Nils;pencil-code;400;691
+Gent, Frederick;pencil-code;260;691
+Dobler, Wolfgang;pencil-code;830;691
+Dintrans, Boris;pencil-code;313;691
+Heinemann, Tobias;pencil-code;298;691
+Bingert, Sven;pencil-code;555;691
+Mitra, Dhrubaditya;pencil-code;247;691
+Babkovskaia, Natalia;pencil-code;374;691
+Mee, Antony;pencil-code;230;691
+Nightingale, J. W.;PyAutoLens;376;1882
+Massey, Richard J.;PyAutoLens;61;1882
+Hayes, Richard;PyAutoLens;121;1882
+Jammy2211;PyAutoLens;234;1882
+jammy2211;PyAutoLens;260;1882
+Nord, Brian;deeplenstronomy;9;120
+Morgan, Robert;deeplenstronomy;70;120
+Kelley, Luke;kalepy;96;482
+Agocs, Fruzsina;oscode;63;134
+Steve Bronder;oscode;5;134
+Westfall, Kyle;PypeIt;479;2826
+Cooke, Ryan;PypeIt;348;2826
+J. Xavier Prochaska;PypeIt;433;2826
+profxj;PypeIt;649;2826
+Pelliccia, Debora;PypeIt;350;2826
+Dusty Reichwein;PypeIt;138;2826
+Hennawi, Joseph;PypeIt;72;2826
+joe;PypeIt;486;2826
+Timothy P. Ellsworth Bowers;PypeIt;140;2826
+rcooke-ast;PypeIt;458;2826
+Wang, Feige;PypeIt;113;2826
+Chokshi, A.;EMBERS;175;18
+Ketcheson, David;nodepy;155;16
+Ranocha, Hendrik;nodepy;26;16
+Nabil Freij;aiapy;25;71
+Barnes, Will;aiapy;78;71
+Cheung, Mark;aiapy;16;71
+Agarwal, Devansh;your;100;203
+Kania, Joseph;your;19;203
+Aggarwal, Kshitij;your;75;203
+Jones, Kathryn;catwoman;55;26
+Laura Kreidberg;catwoman;44;26
+Michael Zhang;catwoman;7;26
+Goldman, Steven;Dusty-Evolved-Star-Kit;138;29
+Kapfer, Sebastian;papaya2;37;12
+Schaller, Fabian;papaya2;10;12
+Ketcheson, David;RK-Opt;64;16
+Ranocha, Hendrik;RK-Opt;12;16
+Parsani, Matteo;RK-Opt;21;16
+Zingale, Michael;Castro;1300;203
+Zhang, Weiqun;Castro;202;203
+Katz, Max;Castro;768;203
+Stansby, David;pfsspy;124;458
+Badman, Samuel;pfsspy;14;458
+Murray, Steven;21cmFAST;271;739
+Greig, Bradley;21cmFAST;110;739
+Qin, Yuxiang;21cmFAST;58;739
+Bevins, H. T. J.;maxsmooth;40;484
+Hutton, Eric;landlab;533;41
+Tucker, Gregory;landlab;458;41
+Barnhart, Katherine;landlab;278;41
+Dan Hobley;landlab;295;41
+Sai Nudurupati;landlab;128;41
+Jordan Adams;landlab;99;41
+Biscani, Francesco;pagmo2-paper;8;16
+Eloisa Bentivegna;pagmo2-paper;2;16
+Izzo, Dario;pagmo2-paper;3;16
+Navid C. Constantinou;Oceananigans.jl;354;31
+Simone Silvestri;Oceananigans.jl;195;31
+Wagner, Gregory;Oceananigans.jl;627;31
+Tomas Chor;Oceananigans.jl;109;31
+Francis J. Poulin;Oceananigans.jl;37;31
+tomchor;Oceananigans.jl;123;31
+simone-silvestri;Oceananigans.jl;57;31
+Ramadhan, Ali;Oceananigans.jl;517;31
+Navid Constantinou;Oceananigans.jl;77;31
+francispoulin;Oceananigans.jl;57;31
+ali.hh.ramadhan@gmail.com;Oceananigans.jl;45;31
+Kaiser, Hartmut;hpx;2573;14
+Simberg, Mikael;hpx;679;14
+Biddiscombe, John;hpx;401;14
+Heller, Thomas;hpx;680;14
+Lelbach, Bryce;hpx;354;14
+Matthew Anderson;hpx;301;14
+Millon, Martin;PyCS3;60;45
+Deistler, Michael;sbi;132;343
+Boelts, Jan;sbi;17;343
+janfb;sbi;137;343
+Lueckmann, Jan-Matthis;sbi;54;343
+Tejero-Cantero, Alvaro;sbi;27;343
+Giri, Sambit;tools21cm;193;207
+Mellema, Garrelt;tools21cm;15;207
+Michele Bianco;tools21cm;17;207
+Feinstein, Adina D.;stella;81;969
+Borrow, Josh;swiftsimio;124;423
+Kyle Oman;swiftsimio;21;423
+Bert Vandenbroucke;swiftsimio;15;423
+Borrisov, Alexei;swiftsimio;32;423
+Gerum, Richard;pylustrator;164;25
+Wakeford, Hannah;ExoTiC-ISM;31;517
+Laginja, Iva;ExoTiC-ISM;94;517
+danhey;maelstrom;2;43
+Hey, Daniel;maelstrom;13;43
+Unknown;maelstrom;14;43
+McCluskey, Andrew;uravu;52;18
+Tsantaki, M.;FASMA-synthesis;72;520
+Eisner, Nora;LATTE;43;191
+Patrick Armstrong;Pippin;76;1222
+Helen Qu;Pippin;28;1222
+Hinton, Samuel;Pippin;245;1222
+Morris, Brett;fleck;32;74
+Liu, Shuheng;neurodiffeq;143;19
+Shivas Jayaram;neurodiffeq;19;19
+Joy Parikh;neurodiffeq;15;19
+Chen, Feiyu;neurodiffeq;107;19
+Annex, A.;SpiceyPy;287;231
+Clément Robert;CMasher;11;1743
+van der Velden, Ellert;CMasher;48;1743
+1313e;CMasher;63;1743
+Freij, Nabil;sunpy;764;385
+Shih, Albert;sunpy;370;385
+Mumford, Stuart;sunpy;1002;385
+Pérez-Suárez, David;sunpy;644;385
+Christe, Steven;sunpy;312;385
+Ryan, Daniel;sunpy;109;385
+Ireland, Jack;sunpy;296;385
+Mayer, Florian;sunpy;102;385
+Keith Hughitt;sunpy;140;385
+Morello, G.;ExoTETHyS;69;875
+Stevance, Heloise;hoki;138;437
+Max Briel;hoki;25;437
+Kemmer, Jonas;AliasFinder;22;130
+Stock, Stephan;AliasFinder;5;130
+Smith, Britton;ytree;275;278
+Krishnarao, Dhanesh;whampy;29;17
+Mentiplay, Daniel;plonk;154;88
+Zingale, Michael;MAESTROeX;114;203
+Nonaka, Andrew;MAESTROeX;169;203
+Fan, Duoming;MAESTROeX;249;203
+Harpole, Alice;MAESTROeX;198;203
+Wickham, Hadley;tidyverse;58;35
+Bryan, Jennifer;tidyverse;10;35
+Averick, Mara;tidyverse;26;35
+pre-commit-ci[bot];emcee;29;78274
+Foreman-Mackey, Daniel;emcee;221;78274
+Farr, Will;emcee;18;78274
+Richard Elkins;blimpy;89;185
+Price, Danny;blimpy;98;185
+Chen, Yuhong;blimpy;35;185
+Emilio Enriquez;blimpy;70;185
+Siebert, Mark;blimpy;15;185
+Hazboun, Jeffrey;hasasia;57;1979
+Naidoo, Krishna;mistree;33;131
+Leo C. Stein;qnm;61;1880
+OShea, Brian;enzo-dev;66;666
+Forbes, John;enzo-dev;422;666
+Bryan, Greg;enzo-dev;83;666
+Turk, Matthew;enzo-dev;172;666
+Smith, Britton;enzo-dev;187;666
+Kim, Ji-hoon;enzo-dev;106;666
+Hummels, Cameron;enzo-dev;69;666
+dcollins4096;enzo-dev;93;666
+Goldbaum, Nathan;enzo-dev;60;666
+Simpson, Christine;enzo-dev;44;666
+Reynolds, Daniel;enzo-dev;55;666
+Salem, Munier;enzo-dev;43;666
+Skillman, Samuel;enzo-dev;92;666
+yl2501@haddock.cc.columbia.edu;enzo-dev;46;666
+Abel, Tom;enzo-dev;77;666
+Harper-Clark, Elizabeth;enzo-dev;87;666
+Niemeyer, Kyle;pyMARS;50;11
+Mestas, Phillip;pyMARS;50;11
+Clayton, Parker;pyMARS;97;11
+Teague, Richard;gofish;72;1411
+Angus, Ruth;stardate;131;1456
+Zhang, Keming;deepCR;34;41
+Kyubin James Kwon;deepCR;6;41
+Bloom, Joshua;deepCR;13;41
+Davidson-Pilon, Cameron;lifelines;593;235
+Nicholas Tierney;greta;80;13
+Golding, Nick;greta;177;13
+Lustig-Yaeger, Jacob;coronagraph;73;58
+Mommert, Michael;sbpy;355;1358
+Li, Jian-Yang;sbpy;52;1358
+de Val-Borro, Miguel;sbpy;37;1358
+Guzman, Giannina;sbpy;31;1358
+Miguel Jimenez;oceanspy;40;10
+dependabot[bot];oceanspy;21;10
+pre-commit-ci[bot];oceanspy;52;10
+Almansi, Mattia;oceanspy;99;10
+Ali Hasan Siddiqui;oceanspy;12;10
+malmans2;oceanspy;83;10
+Miguel Jimenez-Urias;oceanspy;44;10
+Md. Manjurul Hussain;pyMannKendall;13;55
+Md. Manjurul Hussain Shourov;pyMannKendall;12;55
+Mahmud, Ishtiak;pyMannKendall;2;55
+Olive, Xavier;traffic;435;28
+pre-commit-ci[bot];drms;36;318
+Nabil Freij;drms;29;318
+Mumford, Stuart;drms;6;318
+Glogowski, Kolja;drms;30;318
+van der Velden, Ellert;PRISM;180;216
+1313e;PRISM;107;216
+Bachetti, Matteo;stingray;383;1339
+Huppenkothen, Daniela;stingray;150;1339
+Mishra, Himanshu;stingray;42;1339
+Tetsuo Koyama;pyvista;254;210
+MatthewFlamm;pyvista;101;210
+dependabot[bot];pyvista;234;210
+github-actions[bot];pyvista;62;210
+Bane Sullivan;pyvista;332;210
+Kaszynski, Alexander;pyvista;331;210
+Andras Deak;pyvista;84;210
+Guillaume Favelier;pyvista;52;210
+Axel Huebl;amrex;178;596
+Zhang, Weiqun;amrex;1736;596
+Almgren, Ann;amrex;832;596
+Myers, Andrew;amrex;620;596
+Zingale, Michael;amrex;455;596
+Katz, Max;amrex;224;596
+Gott, Kevin;amrex;262;596
+Nonaka, Andrew;amrex;271;596
+Day, Marcus;amrex;275;596
+Rosso, Michele;amrex;229;596
+Beckner, Vince;amrex;428;596
+Mike Lijewski;amrex;1118;596
+car;amrex;505;596
+Theophile du Laz;skyportal;148;570
+Michael Coughlin;skyportal;294;570
+dependabot[bot];skyportal;57;570
+Bloom, Joshua;skyportal;76;570
+Guy Nir;skyportal;81;570
+Jada Lilleboe;skyportal;33;570
+van der Walt, Stéfan;skyportal;171;570
+Ari Crellin-Quick;skyportal;266;570
+Dmitry Duev;skyportal;43;570
+Kyung Min Shin;skyportal;87;570
+Danny Goldstein;skyportal;72;570
+Brett Naul;skyportal;32;570
+Adam Ormondroyd;anesthetic;26;2530
+Handley, Will;anesthetic;88;2530
+Lukas Hergt;anesthetic;43;2530
+Neal, J. j.;eniric;144;70
+pyup.io bot;eniric;21;70
+da Costa-Luis, Casper;tqdm;376;538
+Stephen Larroque;tqdm;55;538
+Batten, Adam;fruitbat;63;289
+Peacock, Jared;mtpy;350;56
+Kirkby, Alison;mtpy;270;56
+Hassan, Rakib;mtpy;52;56
+Zhang, Fei;mtpy;247;56
+Bren Moushall;mtpy;37;56
+Yingzhi Gou;mtpy;73;56
+LK;mtpy;147;56
+Gommers, Ralf;pywt;154;226
+Lee, Gregory;pywt;191;226
+Wohlfahrt, Kai;pywt;59;226
+Holger Nahrstaedt;pywt;27;226
+Waselewski, Filip;pywt;44;226
+Danehkar, Ashkbiz;AtomNeb-idl;38;17
+Singer, Leo;healpy;117;9750
+Zonca, Andrea;healpy;356;9750
+Rosset, Cyrille;healpy;53;9750
+astrom-tom;dfitspy;3;23
+Thomas, Romain;dfitspy;12;23
+R. THOMAS;dfitspy;2;23
+alien;dfitspy;5;23
+Zingale, M.;pyro2;257;17
+Harpole, Alice;pyro2;33;17
+Teague, Richard;eddy;140;1302
+annoviko;pyclustering;549;380
+Oriol Abril-Pla;arviz;87;1456
+Carroll, Colin;arviz;89;1456
+Hartikainen, Ari;arviz;151;1456
+Kumar, Ravin;arviz;98;1456
+Agustina Arroyuelo;arviz;25;1456
+Martin, Osvaldo;arviz;143;1456
+Piyush Gautam;arviz;23;1456
+Rosheen Naeem;arviz;17;1456
+Oriol Abril;arviz;77;1456
+aloctavodia;arviz;19;1456
+Zhao, Zijie;m_mhw1.0;17;36
+Kind, Matias;easyaccess;100;1125
+Drlica-Wagner, Alex;easyaccess;29;1125
+Koziol, Audrey;easyaccess;15;1125
+LeNail, Alexander;NN-SVG;29;60
+Danehkar, Ashkbiz;proEQUIB;83;17
+Peeters, Kasper;cadabra2;729;82
+Dominic Price;cadabra2;102;82
+Stefan Binder;altair;65;22
+Joel Ostblom;altair;41;22
+Mattijn van Hoek;altair;52;22
+Jon Mease;altair;37;22
+VanderPlas, Jacob;altair;627;22
+Lees, Eitan;altair;41;22
+Granger, Brian;altair;60;22
+Price, Danny;hickle;82;100
+hernot;hickle;12;100
+1313e;hickle;14;100
+van der Velden, Ellert;hickle;13;100
+Gomes da Silva, João;ACTIN;17;510
+Vallat, Raphael;pingouin;244;110
+Malmaud, Jonathan;TensorFlow.jl;188;12
+White, Lyndon;TensorFlow.jl;90;12
+Higson, Edward;perfectns;81;3936
+Kevin Anderson;pvlib-python;109;17
+Adam R. Jensen;pvlib-python;39;17
+Hansen, Clifford W.;pvlib-python;83;17
+Mikofski, Mark A.;pvlib-python;50;17
+Holmgren, William F.;pvlib-python;236;17
+Higson, Edward;nestcheck;79;4423
+Fleming, David P.;approxposterior;103;85
+Murray, Steven G.;powerbox;65;350
+pre-commit-ci[bot];powerbox;27;350
+ZuHone, John A.;unyt;136;335
+Clément Robert;unyt;125;335
+pre-commit-ci[bot];unyt;30;335
+Goldbaum, Nathan J.;unyt;260;335
+Turk, Matthew J.;unyt;35;335
+Handley, Will;fgivenx;50;4892
+ejhigson;fgivenx;8;4892
+Morris, Brett M.;aesop;27;74
+Dorn-Wallenstein, Trevor;aesop;2;74
+tzdwi;aesop;2;74
+M Ganose, Alex;sumo;120;18
+J Jackson, Adam;sumo;79;18
+W. Schlegel, Robert;heatwaveR;134;17
+J. Smit, Albertus;heatwaveR;59;17
+Green, Gregory M.;dustmaps;76;5152
+Gordian Edenhofer;dustmaps;10;5152
+Gray, Johnnie;opt_einsum;49;19
+G. A. Smith, Daniel;opt_einsum;90;19
+Fritz Obermeyer;opt_einsum;8;19
+Faria, J. P.;kima;184;464
+Bourbeau, James;pyunfold;35;30
+Hampel-Arias, Zigfried;pyunfold;11;30
+Wette, Karl;octapps;401;271
+Prix, Reinhard;octapps;161;271
+Keitel, David;octapps;46;271
+Innes, Michael;Flux.jl;86;22
+Brian Chen;Flux.jl;86;22
+Carlo Lucibello;Flux.jl;120;22
+Kyle Daruwalla;Flux.jl;63;22
+Saransh;Flux.jl;38;22
+bors[bot];Flux.jl;171;22
+Gandhi, Dhairya;Flux.jl;181;22
+Innes, Mike;Flux.jl;297;22
+Pal, Avik;Flux.jl;36;22
+E. J. Rose, Brian;climlab;233;26
+rasbt;mlxtend;269;26
+Raschka, Sebastian;mlxtend;299;26
+K Mogensen, Patrick;Optim.jl;210;115
+N Riseth, Asbjørn;Optim.jl;52;115
+John Myles White;Optim.jl;74;115
+Datseris, George;DynamicalSystems.jl;278;23
+Zingale, Michael;pynucastro;204;41
+Eric T. Johnson;pynucastro;54;41
+Alexander Smith Clark;pynucastro;22;41
+E. Willcox, Donald;pynucastro;87;41
+Ronayne, John W.;PyTransport;15;1425
+Pitkin, Matthew;psrqpy;166;545
+dependabot[bot];idesolver;27;10
+pre-commit-ci[bot];idesolver;64;10
+T Karpel, Joshua;idesolver;45;10
+James V. Miranda, Lester;pyswarms;53;101
+allcontributors[bot];pyswarms;21;101
+Aaron;pyswarms;16;101
+Daniel Correia;pyswarms;5;101
+ljvmiranda921;pyswarms;46;101
+pyup-bot;pyswarms;18;101
+Albers, Sam;tidyhydat;159;47
+Adrian Price-Whelan;gala;508;11542
+Sanderson, Conrad;armadillo-gmm;1;157
+Adrian Price-Whelan;schwimmbad;30;2279
+Foreman-Mackey, Daniel;schwimmbad;3;2279
+Si Liu;launcher;9;15
+A. Wilson, Lucas;launcher;39;15
+Lerner, Marshall;launcher;11;15
+Hermes, Danny;bezier;282;21
+L. Weisenburger, Kolby;acronym;20;22
+Gerosa, Davide;filltex;31;264
+David Radice;filltex;6;264
+McInnes, Leland;hdbscan;249;1360
+W D Grieve, Stuart;spatial_efd;25;32
+Hazelton, Bryna J.;pyuvdata;609;626
+Garrett 'Karto' Keating;pyuvdata;106;626
+Matthew Kolopanis;pyuvdata;124;626
+pyxieloustar;pyuvdata;76;626
+Paul La Plante;pyuvdata;156;626
+Beardsley, Adam P.;pyuvdata;89;626
+Takuya Iwanaga;SALib;100;29
+Pamphile Roy;SALib;20;29
+Abdullah Sahin;SALib;22;29
+Usher, Will;SALib;116;29
+ConnectedSystems;SALib;94;29
+Lucas Teixeira;SALib;12;29
+Herman, Jon;SALib;85;29
+Barbary, Kyle;sep;110;4001
+Vitolo, Claudia;r_rdefra;54;15
+Hinton, Samuel R.;ChainConsumer;93;9433
+samreay;ChainConsumer;15;9433
+Sanderson, Conrad;armadillo;1;299
+pre-commit-ci[bot];corner.py;41;34372
+Foreman-Mackey, Daniel;corner.py;78;34372
+VanderPlas, Jake;mst_clustering;7;26
+Carter, Faustin W.;pygtc;40;1451
+Bocquet, Sebastian;pygtc;33;1451
+Nicola Ferralis;ddscat-tools;3;205
+Feranick;ddscat-tools;8;205
+feranick;ddscat-tools;2;205
+Comodo;cmbeasy;3;25563
+George Gatling;GFITSIO;1;4177
+gatling-nrl;GFITSIO;1;4177
+Pietrobon, Davide;Needlets;5;256
+Zu, Ying;javelin;109;14431
+Easther, Richard;pspectre;3;2508
+Oguri, Masamune;glafic2;24;11374
+kimcg;Athena-Cversion;16;33902
+Stone, James M.;Athena-Cversion;212;33902
+xbai;Athena-Cversion;51;33902
+askinner;Athena-Cversion;13;33902
+lemaster;Athena-Cversion;24;33902
+Gardiner, Thomas A.;Athena-Cversion;18;33902
+Offringa, A. R.;aoflagger;412;12117
+alessandramb;NBSymple;1;332
+O'Connor, Evan;GR1D;34;15330
+Luca Boccioli;GR1D;3;15330
+Mario G. Santos;Simfast21;4;6632
+Sultan Hassan;Simfast21;6;6632
+Santos, M. G.;Simfast21;7;6632
+mariogrs;Simfast21;24;6632
+Kessler, Richard;SNANA;1098;15156
+Brewer, Brendon J.;DNest4;205;11011
+Bovy, Jo;extreme-deconvolution;61;11147
+Gao Wang;extreme-deconvolution;5;11147
+High, F. William;stellar-locus-regression;27;9463
+Good, John;Montage;73;397
+Zingale, M.;MAESTRO;900;3131
+Nonaka, A.;MAESTRO;593;3131
+Almgren, A. S.;MAESTRO;214;3131
+Malone, C. M.;MAESTRO;152;3131
+Cardiel, N.;indexf;36;60863
+Teuben, P.;nemo;2415;27916
+Dehnen, Walter;nemo;264;27916
+Brammer, Gabriel B.;eazy-photoz;83;77705
+cschreib;eazy-photoz;6;77705
+Fred Dauphin;WFC3Library;19;12056
+annierose3;WFC3Library;16;12056
+kyhuynh108;WFC3Library;4;12056
+Mariarosa Marinelli;WFC3Library;5;12056
+FDauphin;WFC3Library;12;12056
+Ky Huynh;WFC3Library;2;12056
+Catherine A. Martlin;WFC3Library;2;12056
+catherine-martlin;WFC3Library;2;12056
+Anne O'Connor;WFC3Library;3;12056
+st-apidgeon;WFC3Library;3;12056
+Bertin, Emmanuel;swarp;48;49918
+rhenders;swarp;4;49918
+Marmo, C.;weightwatcher;2;1754
+Bertin, E.;weightwatcher;10;1754
+Teuben, Peter;Starlab;37;188
+ernest;Starlab;42;188
+steve;Starlab;336;188
+spz;Starlab;105;188
+starlab;Starlab;76;188
+Cosmo, G.;geant4;38;22087
+Evan Bauer;mesa;140;96732
+Earl Patrick Bellinger;mesa;20;96732
+EbF;mesa;16;96732
+Matthias Fabry;mesa;21;96732
+Warrick Ball;mesa;87;96732
+Rich Townsend;mesa;23;96732
+Robert Farmer;mesa;189;96732
+Timmes, Frank;mesa;41;96732
+Adam Jermyn;mesa;62;96732
+Josiah Schwab;mesa;85;96732
+Paxton, Bill;mesa;23;96732
+Marra, Valerio;turboGL;3;1887
+Agol, Eric;TTVFaster;14;3312
+Dan F-M;TTVFaster;1;3312
+Ethan Kruse;TTVFaster;1;3312
+Dan Foreman-Mackey;TTVFaster;1;3312
+Hanno Rein;TTVFaster;1;3312
+Liesenborgs, J.;GRALE2;331;5246
+Kacper Kowalik;yt;478;45521
+Clément Robert;yt;675;45521
+Turk, Matthew J.;yt;1989;45521
+Corentin Cadiou;yt;261;45521
+John ZuHone;yt;745;45521
+Cameron Hummels;yt;282;45521
+Smith, Britton D.;yt;653;45521
+Andrew Myers;yt;326;45521
+Nathan Goldbaum;yt;1002;45521
+Skillman, Samuel W.;yt;265;45521
+Skory, Stephen;yt;256;45521
+Easther, Richard;interp-mc;2;71
+Taylor, M. B.;tctuto;6;70572
+Andrea Negri;AHF;7;35836
+T Ar Creator;AHF;26;35836
+McLeod, A.;seren;2;3829
+Hubber, D. A.;seren;11;3829
+Rosolowsky, Erik;cprops;17;12552
+cfaesi;cprops;2;12552
+low-sky;cprops;2;12552
+Haas, Roland;tickets;2;19056
+Pound, M. W.;pdrtpy;213;2292
+Mesinger, Andrei;21cmFAST;21;22128
+jaehongpark00;21cmFAST;6;22128
+Jaehong Park;21cmFAST;24;22128
+Adam Beardsley;21cmFAST;5;22128
+jcarron;lenspyx;54;9257
+carronj;lenspyx;12;9257
+Brian O'Shea;ZEUS-MP_2;1;13326
+Tom Marsh;s2plot-python;3;2193
+Altay, Gabriel;sphray;53;3148
+Taylor, M. B.;starjava;2387;8878
+Peter W. Draper;starjava;501;8878
+Quinn, Thomas;changa;900;3998
+Ben Keller;changa;73;3998
+Jetley, Pritish;changa;109;3998
+Filippo Gioachin;changa;85;3998
+Zingale, M.;Castro;1300;8364
+Zhang, W.;Castro;202;8364
+Max Katz;Castro;768;8364
+Teuben, P. J.;miriad;1194;69613
+pkwill;miriad;121;69613
+Wright, M. C. H.;miriad;160;69613
+tyu;miriad;268;69613
+jzhao;miriad;162;69613
+Gazak, J. Zachary;TAP;1;4519
+Lesgourgues, Julien;class_public;433;85937
+schoeneberg;class_public;35;85937
+Tram, Thomas;class_public;70;85937
+Deanna Hooper;class_public;49;85937
+Maria Archidiacono;class_public;78;85937
+SamuelBrieden;class_public;38;85937
+Benjamin Audren;class_public;138;85937
+Foreman, Simon;StringFast;1;2574
+Marc Williamson;SESNtemple;3;20735
+mmoJazz;SESNtemple;14;20735
+federica;SESNtemple;5;20735
+Yuqian Liu;SESNtemple;18;20735
+fedhere;SESNtemple;3;20735
+Yuqian;SESNtemple;10;20735
+wmclaugh;sherpa;291;21103
+Burke, D.;sherpa;799;21103
+Marie-Terrell;sherpa;69;21103
+Nguyen, D.;sherpa;111;21103
+Omar Laurino;sherpa;257;21103
+Steven Rieder;amuse;255;6610
+Pelupessy, Federico I.;amuse;750;6610
+McMillan, S. L. W.;amuse;80;6610
+Portegies Zwart, Simon;amuse;143;6610
+van Elteren, A.;amuse;779;6610
+stoonen;amuse;89;6610
+steve;amuse;71;6610
+niels;amuse;152;6610
+de Vries, N.;amuse;382;6610
+marosvolgyi;amuse;110;6610
+ims;lime;115;9263
+allegroLeiden;lime;46;9263
+Miguel de Val-Borro;lime;13;9263
+tlunttil;lime;17;9263
+Sebastien Maret;lime;33;9263
+Ian Stewart;lime;21;9263
+Brinch, C.;lime;33;9263
+Küpper, Andreas H. W.;mcluster;14;3886
+Long Wang;mcluster;9;3886
+lwang-astro;mcluster;4;3886
+Teuben, Peter;mcluster;2;3886
+Marco Gómez-Muñoz;ShellSpec_GUI;3;526
+mgomezAstro;ShellSpec_GUI;1;526
+Ginsburg, Adam;pyspeckit;720;63
+Asensio Ramos, A.;hazel;62;2935
+Giloo;gdl;179;7633
+Sylwester Arabas;gdl;354;7633
+Jeongbin Park;gdl;99;7633
+GillesDuvert;gdl;438;7633
+Alain;gdl;93;7633
+Coulais Alain;gdl;53;7633
+Alain Coulais;gdl;469;7633
+Gilles Duvert;gdl;325;7633
+Mark Schellens;gdl;511;7633
+Joel Gales;gdl;134;7633
+Feroz, F.;MultiNest;6;93745
+Gregory David Martinez;MultiNest;1;93745
+grburgess;MultiNest;1;93745
+Matthew Pitkin;MultiNest;2;93745
+Will Handley;MultiNest;1;93745
+Copi, Craig J.;cmb-multipole_vectors;17;30595
+De Vries, Christopher H.;analytic_infall;13;1929
+Bringmann, Torsten;DS_releases;12;39741
+Wieczorek, Mark A.;SHTOOLS;454;511
+Rein, H.;rebound;703;10482
+Daniel Tamayo;rebound;101;10482
+Parkinson, David;CosmoNest;4;28275
+Médéric Boquien;cigale;1;24260
+Leistedt, B.;3DEX;5;695
+fr.eiffel;3DEX;1;695
+ixkael;3DEX;5;695
+Mandel, E.;funtools;25;245
+Ole Streicher;funtools;3;245
+Forbes, John;gidget;129;9626
+Forbes, John;gidget;151;9626
+Rehnberg, Morgan;phast;40;38
+Crawford, Robert;phast;8;38
+Jiaxin Wang;hamx;122;5223
+naimar-pro;Gyoto;59;3311
+Paumard, T.;Gyoto;329;3311
+Vincent, F. H.;Gyoto;108;3311
+Frederic;Gyoto;71;3311
+Evolve Me A Cluster of Stars;emacss;11;1673
+Will Barnes;EBTEL;14;6514
+Monnerville, M.;Youpi;328;21
+Gregory Semah;Youpi;67;21
+Illenseer, Tobias F.;fosite;68;75
+Jannes Klee;fosite;61;75
+LBoesch;fosite;17;75
+Jubin Lirawi;fosite;8;75
+Jonathan Sick;starfish;8;10462
+Melchior, P.;epsnoise;4;10703
+Słonina, Mariusz;Mechanic;65;693
+Słonina, M.;Mechanic;137;693
+Laurino, O.;iris;126;20
+Jamie Budynkiewicz;iris;73;20
+Erik H;iris;80;20
+Erik;iris;13;20
+jbudynk;iris;24;20
+Busko, I.;iris;45;20
+Ramachandran, Prabhu;mayavi;360;9064
+Eric Larson;mayavi;33;9064
+Tetsuo Koyama;mayavi;27;9064
+Kit Yan Choi;mayavi;29;9064
+Deepak Surti;mayavi;78;9064
+Varoquaux, Gael;mayavi;203;9064
+ischnell;mayavi;30;9064
+dpeterson;mayavi;43;9064
+Sousa, S. G.;ARES;32;13592
+Joseph Hunkeler;stsdas_stripped;2;635
+Eastman, Jason;EXOFASTv2;116;40389
+Erik M. Bray;PyFITS;47;230
+Erik Bray;PyFITS;258;230
+Michael Droettboom;PyFITS;34;230
+stsci_jtaylor2;PyFITS;27;230
+Christopher Hanley;PyFITS;59;230
+jtaylor2;PyFITS;87;230
+hsu;PyFITS;35;230
+Lang, Dustin;astrometry.net;1020;17227
+Bellis, M.;ccogs;32;160
+Bard, D.;ccogs;6;160
+patkel;big-macs-calibrate;2;7379
+big.macs.calibrate@gmail.com;big-macs-calibrate;2;7379
+Hales, C. A.;blobcat;5;2536
+Dindar, Saleh;swarm;132;444
+Ford, Eric B.;swarm;52;444
+tuanthienbk;swarm;17;444
+Ying Zhang;swarm;30;444
+Juric, Mario;swarm;26;444
+Chun Xia;amrvac;334;5755
+Keppens, R.;amrvac;89;5755
+Niels Claes;amrvac;36;5755
+wzruanKUL;amrvac;49;5755
+Jannis Teunissen;amrvac;176;5755
+Chun;amrvac;82;5755
+99xc41@gmail.com;amrvac;34;5755
+Keith Bennett;Lare3d;35;6970
+Arber, T. D.;Lare3d;75;6970
+phsgi;Lare3d;8;6970
+Hartman, J. D.;vartools;20;2393
+Kirill Sokolovsky;vartools;1;2393
+Harnois-Déraps, Joachim;cubep3m;31;4766
+ColdThunder;cubep3m;4;4766
+jharno;cubep3m;20;4766
+Juric, Mario;lsd;95;306
+Kipping, David M.;MACULA;1;2131
+Sousa, S. G.;TMCALC;10;351
+Daniel T. Andreasen;TMCALC;1;351
+Gijs Molenaar;meqtrees;7;3760
+Cooper Harasyn;DiskFit;5;846
+Watkins, Laura L.;cjam;18;144881
+Tadeja;cjam;2;144881
+Becker, Matthew R.;calclens;32;4694
+Busko, Ivo;specview;13;39
+Jonathan Eisenhamer;specview;16;39
+J.D.Eisenhamer;specview;23;39
+Nicholas Earl;specview;6;39
+nmearl;specview;9;39
+Thomas Robitaille;specview;43;39
+Larry Bradley;specview;7;39
+Christoph Deil;specview;5;39
+Erik Tollerud;specview;9;39
+Michael Droettboom;specview;14;39
+Erik M. Bray;specview;5;39
+Haakonsen, Christian Bernt;McPHAC;1;1358
+Meschiari, Stefano;systemic2;95;6265
+MarkDurre;DPUserFunctions;27;78
+Mayeul d'Avezac;s2let;19;213
+McEwen, J. D.;s2let;11;213
+paddyroddy;s2let;15;213
+Leistedt, B.;s2let;51;213
+Martin Büttner;s2let;24;213
+Kelly R. Moran;CosmicEmu;2;2338
+Kelly;CosmicEmu;1;2338
+Earl Lawrence;CosmicEmu;4;2338
+Tom McClintock;CosmicEmu;1;2338
+earlcl;CosmicEmu;1;2338
+Bédorf, J.;Bonsai;31;387
+Jeroen Bedorf;Bonsai;108;387
+Evghenii;Bonsai;35;387
+Gaburov, E.;Bonsai;26;387
+Mark Harris;Bonsai;13;387
+Groen, Derek;MPWide;24;98
+Joris Borgdorff;MPWide;14;98
+Mosè Giordano;PolynomialRoots.jl;32;474
+Kilbinger, Martin;CosmoPMC;26;3159
+mkilbing;CosmoPMC;5;3159
+Ruiz Cobo, B.;SIR-code;7;14661
+Hancock, Paul J.;Aegean;422;1969
+Hahn, Joseph M.;ddisk;1;358
+Georgy Evtushenko;thrust;94;432
+Allison Vacanti;thrust;183;432
+Bryce Adelstein Lelbach aka wash;thrust;125;432
+Jared Hoberock;thrust;579;432
+Nathan Bell;thrust;235;432
+javarias;ACS;212;25
+tstaig;ACS;86;25
+eallaert;ACS;103;25
+acaproni;ACS;724;25
+pcolomer;ACS;88;25
+bjeram;ACS;503;25
+hsommer;ACS;751;25
+mschilli;ACS;85;25
+msekoran;ACS;313;25
+rtobar;ACS;135;25
+Chiozzi, Gianluca;ACS;185;25
+jschwarz;ACS;106;25
+rcirami;ACS;76;25
+agrimstrup;ACS;193;25
+cparedes;ACS;155;25
+Pau Amaro Seoane;MESSY;1;5363
+Selig, M.;nifty;72;1176
+Sousbie, T.;DisPerSE;7;14301
+Didier Vibert;DisPerSE;5;14301
+Bovy, Jo;xdqso;18;26741
+Mike DiPompeo;xdqso;2;26741
+mdipompe;xdqso;4;26741
+Akeret, Joel;CosmoHammer;1;2941
+Akeret, Joël;CosmoHammer;6;2941
+Simon Birrer;CosmoHammer;1;2941
+cosmo-ethz;CosmoHammer;4;2941
+Gijs Vermariën;UCLCHEM;10;907
+Holdship, J.;UCLCHEM;102;907
+jrh@star.ucl.ac.uk;UCLCHEM;31;907
+Jeschke, E.;ginga;1030;21
+P. L. Lim;ginga;89;21
+Pey Lian Lim;ginga;215;21
+Brandt, Timothy D.;acorns-adi;8;2727
+Carlos Bengaly;GaPP;1;8909
+van Kerkwijk, M. H.;astropy;1017;45201
+P. L. Lim;astropy;981;45201
+Eero Vaher;astropy;159;45201
+Aldcroft, Tom;astropy;893;45201
+Bradley, L. D.;astropy;277;45201
+Nathaniel Starkman;astropy;280;45201
+Conseil, Simon;astropy;477;45201
+Unther, Hans M.;astropy;128;45201
+Ginsburg, Adam;astropy;132;45201
+Robitaille, Thomas P.;astropy;1005;45201
+William Jamieson;astropy;146;45201
+Sipőcz, B. M.;astropy;555;45201
+Tollerud, Erik J.;astropy;740;45201
+Davis, Matt;astropy;132;45201
+Dencheva, Nadia;astropy;363;45201
+Mumford, S. J.;astropy;197;45201
+Adrian Price-Whelan;astropy;252;45201
+E. Madison Bray;astropy;556;45201
+Droettboom, Michael;astropy;718;45201
+Carrasco Kind, Matias;MLZ;16;8478
+Switzer, Eric;mcmc_tools;11;3080
+Carlson, Jordan;Copter;7;14500
+mlepinzan;Pinocchio;1;3839
+Monaco, P.;Pinocchio;14;3839
+yanling-song455;Pinocchio;1;3839
+Luca Tornatore;Pinocchio;1;3839
+Stuart Mumford;SAC;17;1105
+Kashyap, Vinay L.;BEHR;1;10701
+Feroz, Farhan;BAMBI;2;6562
+marius;pypico;26;8738
+chris;fieldinf;59;2046
+julian;astrotaverna;67;116
+Stian Soiland-Reyes;astrotaverna;24;116
+Kipping, David M.;MAH;1;2050
+Reid, Beth A.;cosmoxi2d;1;20388
+Peterson, J. R.;phosim_release;723;3882
+Glenn Sembroski;phosim_release;112;3882
+Colin Burke;phosim_release;89;3882
+Peng, E.;phosim_release;110;3882
+peters11;phosim_release;303;3882
+Peterson, J. R.;phosim_release.git;723;3882
+Glenn Sembroski;phosim_release.git;112;3882
+Colin Burke;phosim_release.git;89;3882
+Peng, E.;phosim_release.git;110;3882
+peters11;phosim_release.git;303;3882
+Groves, Brent A.;itera;1;1028
+Oliver Cordes;arctic;85;9714
+Mayeul d'Avezac;purify;101;1472
+luke;purify;16;1472
+Luke Pratley;purify;92;1472
+Mayeul d'Avezac;sopt;85;344
+McEwen, Jason D.;sopt;12;344
+R. C. Thomas;es;28;6794
+Theodore Kisner;es;10;6794
+Thomas, R. C.;es;11;6794
+R. C. Thomas;es;28;6794
+Theodore Kisner;es;10;6794
+Thomas, R. C.;es;11;6794
+Townsend, R. H. D.;gyre;584;13492
+Pontoppidan, Klaus M.;radlite;105;1861
+Jamila Pegues;radlite;18;1861
+Alex Lockwood;radlite;14;1861
+Oliver Cordes;home-reverse-proxy;12;4764
+Nicula, B.;JHelioviewer-SWHV;1096;1983
+Verstringe, F.;JHelioviewer-SWHV;259;1983
+Bourgoignie, B.;JHelioviewer-SWHV;190;1983
+Dere, K. P.;ChiantiPy;287;10944
+Will Barnes;ChiantiPy;57;10944
+Deen, Casey P.;MoogStokes;63;507
+Johnson, S. P.;satmc;8;2363
+sethspjohnso;satmc;1;2363
+Google Code Exporter;satmc;1;2363
+Graham Bell;ORAC-DR;238;4425
+Malcolm J. Currie;ORAC-DR;828;4425
+Jenness, T.;ORAC-DR;562;4425
+Tim Lister;ORAC-DR;85;4425
+Jim Lewis;ORAC-DR;85;4425
+Andy Gibb;ORAC-DR;664;4425
+Cavanagh, B.;ORAC-DR;663;4425
+Economou, F.;ORAC-DR;101;4425
+Paul Hirst;ORAC-DR;129;4425
+Erik F. Y. Hom;aida;3;606
+Harsh Nagarkar;aida;1;606
+Harsh K. Nagarkar;aida;1;606
+jalong2;aida;1;606
+Hom, Erik F. Y.;aida;1;606
+Bell, G.;starlink;272;46332
+Peter W. Draper;starlink;1295;46332
+Malcolm J. Currie;starlink;865;46332
+Berry, D. S.;starlink;1395;46332
+Jenness, T.;starlink;1506;46332
+Chapin, Edward L.;starlink;417;46332
+Berry, David S.;starlink;1086;46332
+Starlink Software Librarian;starlink;477;46332
+Norman Gray;starlink;493;46332
+Mark Taylor;starlink;358;46332
+Gibb, Andrew G.;starlink;190;46332
+Asterix Developer;starlink;434;46332
+Cavanagh, B.;starlink;158;46332
+Sainio, J.;PyCOOL;24;1092
+Hahn, Oliver;music;157;30887
+Fenech, Danielle M.;SERPent;7;634
+Rowe, Barnaby;imcom;45;3257
+Feroz, Farhan;SkyNet;2;3218
+Kristen Surrao;aphot;1;1334
+ndaniyar;aphot;3;1334
+Nurgaliev, D.;aphot;2;1334
+Hazra, Dhiraj Kumar;bingo;2;2921
+dkhaz;bingo;2;2921
+Hardy, Stephen J.;SL1M;3;110
+Jon Niehof;spacepy;194;135
+Steve Morley;spacepy;227;135
+smorley;spacepy;57;135
+Welling, D. T.;spacepy;101;135
+Brian Larsen;spacepy;165;135
+Jonathan Niehof;spacepy;186;135
+balarsen;spacepy;37;135
+Koller, J.;spacepy;34;135
+jniehof;spacepy;32;135
+Jarvis, M.;GalSim;1121;14286
+Meyers, J. E.;GalSim;292;14286
+Mandelbaum, R.;GalSim;429;14286
+jmeyers314;GalSim;130;14286
+Rowe, B. T. P.;GalSim;287;14286
+Grassi, T.;krome;243;4696
+Bovino, S.;krome;190;4696
+Jon Ramsey;krome;35;4696
+Jels Boulangier;krome;31;4696
+JelsB;krome;47;4696
+troels;krome;41;4696
+Troels Haugboelle;krome;26;4696
+zlaptoppeo;krome;198;4696
+Brinch, Christian;limepackage;5;95
+Jurek, R.;busy-function-fitting;7;1179
+Michael Olberg;UVMultiFit;20;5257
+tardis-bot;tardis;47;3612
+Kerzendorf, Wolfgang E.;tardis;469;3612
+Andrew Fullard;tardis;49;3612
+Christian Vogl;tardis;58;3612
+Ezequiel Pássaro;tardis;110;3612
+Isaac Smith;tardis;58;3612
+Vytautas Jančauskas;tardis;53;3612
+Ulrich Nöbauer;tardis;53;3612
+Stefan Lietzau;tardis;54;3612
+Fotis Tsamis;tardis;65;3612
+Sim, Stuart A.;tardis;52;3612
+Karan Desai;tardis;52;3612
+Aoife Boyle;tardis;54;3612
+Reinecke, M.;libsharp;55;1728
+Dag Sverre Seljebotn;libsharp;16;1728
+Chan, Chi-kwan;gray;16;5994
+Gabriele Bozzola;gray;5;5994
+Kipping, D. M.;inversebeta;1;10863
+Brendon J. Brewer;RMHB;18;585
+Larsen, S. S.;baolab;11;13621
+Swinbank, J.;Comet;118;349
+Kelly, Brandon C.;carma_pack;100;6508
+Becker, Andrew C.;carma_pack;21;6508
+Agol, Eric;TTVFast;6;4412
+Simon Walker;TTVFast;4;4412
+Deck, Katherine M.;TTVFast;4;4412
+Berry, David S.;ast;939;6181
+Jenness, Tim;ast;52;6181
+Rodney Warren-Smith;ast;75;6181
+Rick Pernak;LBLRTM;31;13172
+kcadyper;LBLRTM;36;13172
+rpernak;LBLRTM;20;13172
+malvarad;LBLRTM;27;13172
+jdelamer;LBLRTM;22;13172
+mshep;LBLRTM;64;13172
+Brown, P. D.;LBLRTM;174;13172
+Gullikson, Kevin;Telluric-Fitter;9;1409
+kgullikson88;Telluric-Fitter;72;1409
+James Davenport;TheHammer;4;19710
+adleorocks;TheHammer;1;19710
+Foreman-Mackey, Daniel;exopop;52;16753
+Hogg, David W.;exopop;7;16753
+Lenz, Patrik;period04-public;1;21844
+Benn, D.;VStar;835;55
+Maksym Pyatnytskyy;VStar;98;55
+Beaumont, Christopher N.;brut;19;384
+Brigitta Sipőcz;astroML;85;979
+VanderPlas, J.;astroML;74;979
+Zemp, Marcel;halogen;28;2412
+Erwin, Peter;pyimfit;65;6629
+Erwin, Peter;imfit;328;6629
+Penev, Kaloyan;poet;309;1099
+Vortebo;poet;36;1099
+Steven Bamford;galapagos-c;1;117
+Sandro Dias Pinto Vitenti;NumCosmo;537;229
+Penna-Lima, M.;NumCosmo;120;229
+Chris Hales;pieflag;15;1119
+Rafael;CosmoPhotoz;9;377
+Elliott, J.;CosmoPhotoz;3;377
+Miguel de Val-Borro;CosmoPhotoz;1;377
+algolkm;CosmoPhotoz;6;377
+Rafael S. de Souza;CosmoPhotoz;1;377
+Making GitHub Delicious.;CosmoPhotoz;1;377
+Offringa, A. R.;wsclean;439;12752
+Maik Nijhuis;wsclean;68;12752
+Jakob Maljaars;wsclean;86;12752
+Offringa, A. R.;wsclean;439;12752
+Maik Nijhuis;wsclean;68;12752
+Jakob Maljaars;wsclean;86;12752
+Blanco-Cuaresma, Sergi;iSpec;130;5017
+Zuntz, J.;cosmosis;590;15237
+Paterno, M.;cosmosis;82;15237
+Zuntz, J.;cosmosis.git;382;15237
+Paterno, M.;cosmosis.git;77;15237
+Corsaro, E.;DIAMONDS;122;3137
+De Ridder, J.;DIAMONDS;33;3137
+Hopkins, Philip F.;gizmo-public;25;29118
+Paul Kuin;uvotpy;112;879
+Yalinewich, Almog;huji-rich;189;679
+Steinberg, Elad;huji-rich;439;679
+Akeret, J.;hope;28;301
+cosmo-ethz;hope;15;301
+Gamper, L.;hope;3;301
+Ian Kronquist;hope;6;301
+xantares;hope;3;301
+Doris Lee;rc3-pipeline;47;49
+dorislee0309;rc3-pipeline;65;49
+Bovy, Jo;galpy;1051;35397
+Mateu, C.;PyMGC3;87;356
+Wesson, R.;NEAT;231;954
+Scicluna, P.;NEAT;21;954
+Roger;NEAT;43;954
+Béky, Bence;spotrod;13;1251
+Kipping, D. M.;flicker;1;897
+Ruth Angus;flicker;31;897
+RuthAngus;flicker;22;897
+Kipping, David M.;ECCSAMPLES;1;3196
+Titterington, D. J.;anmap;1;314
+Paul Alexander;anmap;1;314
+Titterington, D. J.;postmortem;1;314
+Mullard Radio Astronomy Observatory;postmortem;1;314
+physicsranger;make4FGLxml;19;468
+SoFiA (inactive);SoFiA;1;2476
+SoFiA;SoFiA;1;2476
+m-a-thomas;Cheetah;10;1969
+Michael A. Thomas;Cheetah;1;1969
+Walkowicz, Lucianne M.;Cheetah;3;1969
+Adam Finkelstein;Cheetah;1;1969
+Michael;Cheetah;3;1969
+Deeg, Hans;utm_ufit;4;348
+Murray, S. G.;hmf;237;9998
+pre-commit-ci[bot];hmf;28;9998
+Cui, Weiguang;PIAO;8;7805
+ilaudy;PIAO;10;7805
+Altay, Gabriel;urchin;1;812
+Swinbank, John D.;tkp;192;1361
+Molenaar, Gijs J.;tkp;211;1361
+Staley, Tim D.;tkp;181;1361
+Scheers, Bart;tkp;133;1361
+Rol, Evert;tkp;61;1361
+DavidWalz;CRPropa2;1;1957
+avvliet;CRPropa2;2;1957
+schiffer;CRPropa2;3;1957
+PeterSchiffer;CRPropa2;2;1957
+Stolker, T.;PynPoint;294;8269
+majobodo;PynPoint;81;8269
+Rossi, L. J.;NIGO;7;992
+Zonca, A.;python-qucs;4;14
+BasedOnTechnology;python-qucs;1;14
+latrop;DECA;3;105
+Bates, S. D.;PsrPopPy;90;1989
+Sanchez, D. A.;enrico;141;526
+Mireia Nievas-Rosillo;enrico;7;526
+Mireia Nievas Rosillo;enrico;28;526
+david;enrico;10;526
+Mireia Nievas;enrico;39;526
+Mathieu de Bony;enrico;7;526
+Miguel Nievas;enrico;40;526
+Deil, C.;enrico;16;526
+McEwen, J. D.;bianchi;3;3632
+Kenworthy, M. A.;exorings;10;1689
+Paul Stewart;exorings;1;1689
+Brewer, Brendon J.;Exoplanet;47;654
+Pereira, Tiago M. D.;rh;119;9365
+Tiago M. D. Pereira;rh;13;9365
+Lauri Siltala;oorb;62;4026
+Spencer Nelson;oorb;10;4026
+Granvik, M.;oorb;140;4026
+oorb;oorb;17;4026
+Mario Juric;oorb;10;4026
+Michael Mommert;oorb;10;4026
+matvii;ADAM;27;998
+Perkins, S. J.;montblanc;285;470
+Graham Bell;hds-v5;13;244
+David Berry;hds-v5;52;244
+Jenness, T.;hds-v5;42;244
+Renaud, Florent;nbody6tt;6;3356
+Handley, W. J.;PolyChordLite;221;22462
+Gabriel;rabacus;1;11
+Linc;camelus;1;2394
+Chieh An Lin;camelus;2;2394
+Linc-tw;camelus;2;2394
+Lin, Chieh-An;camelus;4;2394
+Staley, T. D.;amisurvey;18;262
+Staley, T. D.;drive-ami;40;262
+Andre Oliva;ujti;1;18
+Foreman-Mackey, Daniel;ketu;90;5319
+Grimm, Simon L.;HELIOS-K;105;5200
+Rafael;AMADA;10;1151
+Rafael S. de Souza;AMADA;2;1151
+Morton, Timothy D.;vespa;111;5401
+Staley, T. D.;chimenea;31;262
+Curran, P. A.;MCSpearman;3;1458
+Wainwright, Carroll L.;CosmoTransitions;14;6439
+Akeret, Joël;abcpmc;22;1971
+Meiksin, Avery;igmtransmission;1;930
+aamEdinburgh@gmail.com;igmtransmission;3;930
+Wolfgang, Angie;MRrelation;3;9293
+Faria, J. P.;bgls;5;2435
+Gabriel;ASteCA;197;1195
+Gabriel-p;ASteCA;434;1195
+Miles Lucas;Starfish;78;2701
+Czekala, Ian;Starfish;239;2701
+Jose Enrique Ruiz;LSSGALPY;3;29
+Argudo-Fernández, M.;LSSGALPY;11;29
+Ishida, E. E. O.;CosmoABC;64;2900
+emille;CosmoABC;6;2900
+Ishida, E. E. O.;cosmoabc;64;2900
+emille;cosmoabc;6;2900
+Alonso, David;CUTE;5;1600
+Edmond;CUTE;1;1600
+damonge;CUTE;7;1600
+dmonge;CUTE;2;1600
+sjap;halogen;1;1603
+Avila, Santiago;halogen;8;1603
+Murray, Steven G.;halogen;5;1603
+Burns, Christopher R.;snpy;152;15211
+Parviainen, Hannu;PyTransit;225;4149
+federica;pyMCZ;68;1335
+fedhere;pyMCZ;19;1335
+Modjaz, M.;pyMCZ;9;1335
+smanoh;pyMCZ;17;1335
+Tessore, Nicolas;lensed;96;784
+Bellagamba, Fabio;lensed;17;784
+Junklewitz, H.;resolve;22;1391
+henrikju;resolve;21;1391
+What3ver;resolve;9;1391
+Price, D. C.;fits2hdf;25;76
+Mérand, A.;CANDID;8;1500
+amerand;CANDID;44;1500
+Blecic, Jasmina;TEA;26;1913
+dzesmin;TEA;4;1913
+pcubillos;TEA;5;1913
+Patricio Cubillos;TEA;7;1913
+VanderPlas, Jacob T.;gatspy;39;10395
+Brett Naul;gatspy;4;10395
+Ricardo Vieira;pymc;128;415
+Thomas Wiecki;pymc;379;415
+Chris Fonnesbeck;pymc;672;415
+Junpeng Lao;pymc;118;415
+Michael Osthege;pymc;129;415
+Maxim Kochurov;pymc;110;415
+Ricardo;pymc;118;415
+Adrian Seyboldt;pymc;76;415
+Brandon T. Willard;pymc;98;415
+Osvaldo Martin;pymc;108;415
+Colin;pymc;101;415
+John Salvatier;pymc;138;415
+Anand Patil;pymc;87;415
+anand.prabhakar.patil;pymc;251;415
+david.huard;pymc;136;415
+Bell, M. R.;fsclean;8;562
+Di Teodoro, E. M.;Bbarolo;133;7543
+Howlett, C.;l-picola;13;2969
+Cullan Howlet;l-picola;4;2969
+Tsang, David;slimplectic;8;418
+Stein, Leo C.;slimplectic;4;418
+Ian Hawke;slimplectic;1;418
+Galley, Chad R.;slimplectic;2;418
+Moolekamp, F.;toyz;12;186
+fred3m;toyz;54;186
+Moolekamp, F.;astro-toyz;8;186
+fred3m;astro-toyz;20;186
+Barklem, P. S.;abo-cross;15;4392
+Kamphuis, P.;FAT;109;1529
+Sellentin, Elena;DALI;1;1670
+Ln(a) Sellentin;DALI;1;1670
+Lust, Nate B.;least_asymmetry;11;648
+Ryan Challener;least_asymmetry;1;648
+Fraine, Jonathan;least_asymmetry;1;648
+Mead, A. J.;HMcode;30;29397
+Socas-Navarro, H.;NICOLE;65;2667
+hsocas.iac@gmail.com;NICOLE;37;2667
+Smitka, Michael T.;truvot;1;409
+martin-millon;PyCS;22;6151
+vbonvin;PyCS;68;6151
+Tewes, M.;PyCS;36;6151
+Hoffman, John;ggadt;68;508
+Kreidberg, Laura;batman;51;18764
+Michael Zhang;batman;7;18764
+Parviainen, H.;ldtk;64;5145
+Starlink Software Librarian;aspic;1;71
+Tim Jenness;aspic;1;71
+aholinch;JSPAM;2;39
+private;JSPAM;1;39
+Anthony;JSPAM;3;39
+John F Wallin;JSPAM;1;39
+Wallin, J. F.;JSPAM;1;39
+Marshall, Philip J.;Pangloss;35;5806
+Charlotte Mason;Pangloss;14;5806
+Charlotte A. Mason;Pangloss;30;5806
+Collett, Thomas E.;Pangloss;70;5806
+Carrasco Kind, Matias;SparsePz;7;407
+sarah;milkywayproject_triggering;3;2978
+Chris Beaumont;milkywayproject_triggering;2;2978
+Kendrew, S.;milkywayproject_triggering;1;2978
+Foreman-Mackey, Daniel;george;133;11092
+Melchior, P.;des-exp-checker;57;408
+Alex Drlica-Wagner;des-exp-checker;12;408
+Kipping, David M.;LDC3;3;278
+Dan Foreman-Mackey;LDC3;1;278
+Marulli, F.;CosmoBolognaLib;57;942
+Veropalumbo, A.;CosmoBolognaLib;19;942
+Marulli, F.;CosmoBolognaLib;57;942
+Veropalumbo, A.;CosmoBolognaLib;19;942
+Autiwa;mercury-90;13;1912
+Christophe Cossou;mercury-90;54;1912
+ccossou@gmail.com;mercury-90;80;1912
+cossou;mercury-90;15;1912
+jaycedowell;EPIC;20;307
+Beardsley, Adam P.;EPIC;34;307
+KentJames;EPIC;15;307
+Thyagarajan, Nithyanandan;EPIC;129;307
+Esplin, T. L.;IRACpm;5;347
+Wesson, R.;ALFA;216;421
+Tempel, E.;Bisous;5;1229
+Ishida, E. E. O.;DRACULA;9;472
+Naminoshi;DRACULA;8;472
+Camacho, H.;DRACULA;1;472
+Busti, V. C.;DRACULA;1;472
+Varley, Ryan;exodata;87;29
+Deen, Casey P.;CounterPoint;8;507
+McMillan, Paul J.;Torus;27;2037
+Shields, Deanna;Spirality;2;316
+White, Martin;ZeldovichRecon;21;4906
+Kim, Dae-Won;upsilon;61;1839
+Sanders, Jason L.;tact;31;3504
+Borsato, L.;trades;67;1210
+Robotham, A. S. G.;hyper.fit;29;2834
+Henshaw, J. D.;SCOUSE;15;5303
+Pu, Hung-Yi;Odyssey;13;1211
+hungyipu;Odyssey;7;1211
+Croton, Darren J.;sage;62;9139
+Hodkinson, Luke;sage;13;9139
+Siemiginowska, A.;LIRA;5;29
+infinitron;LIRA;5;29
+Kashyap, V.;LIRA;18;29
+Connors, A.;LIRA;9;29
+Riedel, Adric R.;lacewing;29;2929
+Scott, P.;nulike;69;1941
+Jones, David E.;BASCS;4;108
+Dotter, Aaron;iso;110;26991
+Conseil, Simon;zap;61;6777
+Soto, Kurt T.;zap;22;6777
+Price, Daniel J.;denoise;8;2024
+Mantz, Adam B.;lrgs;22;480
+annayqho;TheCannon;61;15597
+Ho, Anna. Y. Q.;TheCannon;99;15597
+Connolly, S D;DELightcurveSimulation;21;609
+Granett, B. R.;tailz.git;13;96
+Perrin, Marshall D.;poppy;296;1341
+dependabot[bot];poppy;31;1341
+Kian Milani;poppy;49;1341
+Shannon Osborne;poppy;51;1341
+douglase;poppy;39;1341
+Long, Joseph D.;poppy;80;1341
+Thomas Robitaille;poppy;35;1341
+Perrin, Marshall D.;poppy;206;1341
+douglase;poppy;39;1341
+Long, Joseph D.;poppy;80;1341
+Thomas Robitaille;poppy;35;1341
+Fumagalli, Michele;cluster-cloc;1;76
+rdasilva.astro;cluster-cloc;1;76
+Brakensiek, Joshua;CORBITS;23;1524
+Eric Ford;CORBITS;6;1524
+Million, Chase;gPhoton;214;1042
+Fleming, Scott W.;gPhoton;75;1042
+Ashkbiz Danehkar;equib;8;2694
+Blazek, Jonathan A.;FAST-PT;24;4918
+Joe;FAST-PT;6;4918
+Sandford, Emily;ExoPriors;1;963
+Czekala, I.;DiskJockey;177;2825
+Sundar Srinivasan;2-DUST;6;1906
+Ueta, Toshiya;2-DUST;2;1906
+Brewer, Brendon J.;DNest3;92;11011
+Bill;CCSNMultivar;1;641
+bwengals;CCSNMultivar;2;641
+Bill Engels;CCSNMultivar;9;641
+honmaguro;FDPS;13;545
+FDPS official;FDPS;29;545
+行方 大輔;FDPS;3;545
+Muranushi, Takayuki;FDPS;5;545
+atrtnkw;FDPS;8;545
+Hinton, S. R.;Marz;141;2867
+Samuel;Marz;27;2867
+Ford, Jes;cluster-lensing;41;120
+Vandenbroucke, B.;shadowfax;26;749
+Kim, Dae-Won;pdtrend;12;540
+Fraser, Wesley;TRIPPy;82;624
+Alexandersen, Mike;TRIPPy;23;624
+Duffell, Paul C.;Disco;25;1372
+Geoff Ryan;Disco;8;1372
+Pope, B. J. S.;k2sc;24;6383
+Parviainen, H.;k2sc;44;6383
+Dexter, Jason;grtrans;131;3622
+Yurchenko, Sergei N.;Duo;172;1711
+diatomicDisaster;Duo;34;1711
+Trovemaster;Duo;36;1711
+Graham Bell;pal;7;15306
+Jenness, T.;pal;65;15306
+Berry, D. S.;pal;9;15306
+Winkel, B.;cygrid;40;1087
+Lenz, D.;cygrid;7;1087
+Daniel;cygrid;5;1087
+jtlz2;hibayes;6;4920
+Price, D.;hibayes;2;4920
+Oleg Smirnov;hibayes;1;4920
+Buchner, J.;PyMultiNest;73;31203
+Bussmann, R. S.;uvmcmcfit;48;3528
+McEwen, Jason D.;comb;21;1024
+Pennucci, Timothy T.;PulsePortraiture;249;4001
+Arthur Loureiro;flask;14;3534
+jb-collab;flask;12;3534
+Xavier, Henrique S.;flask;116;3534
+Calistro Rivera, Gabriela;AGNfitter;49;2528
+LauraMR112;AGNfitter;6;2528
+Laura Martinez;AGNfitter;9;2528
+Wendy L. Williams;AGNfitter;3;2528
+Schneider, Evan E.;cholla;260;1780
+helenarichie;cholla;66;1780
+Bob Caddy;cholla;137;1780
+ojwg;cholla;44;1780
+Alwin;cholla;52;1780
+Trey White;cholla;34;1780
+bruno villasenor;cholla;35;1780
+Reuben D. Budiardja;cholla;31;1780
+bruno;cholla;137;1780
+Bruno;cholla;33;1780
+Murthy, J.;JUDE;39;97
+astromb;PICsar2D;3;889
+Brahm, Rafael;zaspe;10;1721
+Andres Jordan;zaspe;1;1721
+nespinoza;zaspe;1;1721
+Duffell, Paul C.;RT1D;17;3467
+Akeret, J.;seek;5;389
+cosmo-ethz;seek;2;389
+Bachetti, Matteo;stingray;383;2671
+Huppenkothen, Daniela;stingray;150;2671
+Mishra, Himanshu;stingray;42;2671
+Davenport, James R. A.;appaloosa;103;5213
+Ekaterina Ilin;appaloosa;13;5213
+Robinson, Elliot;base;212;465
+Mosè Giordano;Cuba.jl;76;4643
+Koch, Eric W.;FilFinder;202;3412
+Robitaille, T.;pvextractor;34;161
+Ginsburg, A.;pvextractor;71;161
+Greig, Bradley;21CMMC;9;6537
+Schirmer, Mischa;nebular;3;1183
+Merlin, E.;t-phot-v2.0;3;8932
+Emiliano;t-phot-v2.0;1;8932
+Adam McMaster;starpy;4;2813
+Becky Smethurst;starpy;5;2813
+Smethurst, R. J.;starpy;15;2813
+Hinder, Ian;Kranc;133;4090
+Erik Schnetter;Kranc;80;4090
+Barry Wardell;Kranc;29;4090
+ianhin;Kranc;26;4090
+Husa, Sascha;Kranc;48;4090
+lord_elon;SCIMES;34;1515
+Ginsburg, A.;SCIMES;9;1515
+Bailey, Stephen;empca;12;1218
+Jon Grumer;grasp;19;8288
+Morten Piibeleht;grasp;16;8288
+Pober, Jonathan C.;21cmSense;16;14657
+McQuinn, Matthew;21cmSense;3;14657
+Eric Koch;spectral-cube;41;161
+Ginsburg, A.;spectral-cube;565;161
+e-koch;spectral-cube;90;161
+Robitaille, T.;spectral-cube;93;161
+Angus, Ruth;SIPK2;6;2005
+Foreman-Mackey, Daniel;SIPK2;1;2005
+Sanders, J. S.;contbin;23;5131
+Brahm, Rafael;ceres;29;2355
+Andres Jordan;ceres;6;2355
+Sanders, J. S.;dsdeproj;1;12607
+Elliott Sales de Andrade;matplotlib;1067;10852
+Tim Hoffmann;matplotlib;992;10852
+Kyle Sunden;matplotlib;204;10852
+Antony Lee;matplotlib;1285;10852
+Thomas A Caswell;matplotlib;1507;10852
+hannah;matplotlib;258;10852
+David Stansby;matplotlib;594;10852
+Jody Klymak;matplotlib;776;10852
+Oscar Gustafsson;matplotlib;258;10852
+Ben Root;matplotlib;321;10852
+Eric Firing;matplotlib;853;10852
+Jae-Joon Lee;matplotlib;206;10852
+Ryan May;matplotlib;285;10852
+Jouni K. Seppänen;matplotlib;193;10852
+Nelle Varoquaux;matplotlib;241;10852
+Phil Elson;matplotlib;211;10852
+Michael Droettboom;matplotlib;875;10852
+Jens Hedegaard Nielsen;matplotlib;265;10852
+John Hunter;matplotlib;673;10852
+Darren Dale;matplotlib;177;10852
+Kristensen, Lars E.;cluster-in-a-box;13;52
+Bob Myhill;burnman;246;523
+Cottaar, Sanne;burnman;143;523
+Heister, Timo;burnman;150;523
+Rose, Ian;burnman;98;523
+Public BASP Github repos;SARA-dimensionality-reduction;2;271
+Vijay Kartik, S.;SARA-dimensionality-reduction;8;271
+Cubillos, Patricio;mc3;197;2178
+Malanchev, K. L.;freddi;177;250
+Akeret, Joel;tf_unet;5;358
+Akeret, J.;tf_unet;50;358
+Bacon, R.;mpdaf;89;669
+Piqueras, L.;mpdaf;383;669
+Conseil, S.;mpdaf;348;669
+Shepherd, M.;mpdaf;54;669
+Gerosa, Davide;precession;156;3788
+MDM988;precession;18;3788
+Kempton, Eliza M. -R.;Exo_Transmit;5;3001
+Chris;Clairvoyance;1;828
+Lam, Christopher;Clairvoyance;4;828
+cl3425;Clairvoyance;1;828
+ADThomas-astro;oxaf;3;933
+Melchior, P.;pyGMMis;94;450
+Steven Hale;aims;1;1008
+Reese, Daniel;aims;4;1008
+Rendle, Ben M.;AIMS;42;1008
+Scott, Pat;pippi;45;1304
+Breton, R. P.;Icarus;46;3759
+Punzo, D.;SlicerAstro;211;283
+Davide;SlicerAstro;40;283
+Tobar, R.;libprofit;169;2210
+Robotham, A. S. G.;ProFit;195;2210
+Tobar, R.;ProFit;105;2210
+Taranu, D. S.;ProFit;60;2210
+Tobar, R.;pyprofit;60;2210
+Andrews, Brett H.;flexCE;12;3849
+Malavolta, L.;PyORBIT;406;2613
+Calderone, G.;qsfit;36;2056
+Fowlie, Andrew;superplot;31;229
+Bardsley, Michael Hugh;superplot;43;229
+Hummels, Cameron B.;trident;179;2719
+Smith, Britton D.;trident;171;2719
+Silvia, Devin W.;trident;35;2719
+Nathan Goldbaum;trident;21;2719
+Matthew Turk;trident;21;2719
+Matthew Abruzzo;grackle;33;6485
+Smith, Britton D.;grackle;245;6485
+Ewan Jones;grackle;38;6485
+Emerick, Andrew;grackle;30;6485
+Adrian Price-Whelan;thejoker;169;4772
+Yu, W.;vizic;67;15
+Sylvain Corlay;vizic;15;15
+Brian E. Granger;vizic;10;15
+Chen, Jingjing;forecaster;11;11255
+Brett M. Morris;forecaster;1;11255
+Boyle, Michael;GWFrames;132;3363
+Dan Hemberger;GWFrames;17;3363
+Pettinari, Guido W.;song;87;2059
+joannedafna;validation;12;2137
+jdcphysics;validation;6;2137
+Cohn, J. D.;validation;7;2137
+Martin White;validation;3;2137
+Zhang, Hantian;GalaxyGAN;6;2234
+Seth Ariel Green;GalaxyGAN;1;2234
+Yiru Chen;GalaxyGAN;1;2234
+Santhanam, Gokula Krishnan;GalaxyGAN;1;2234
+Gokul Krishnan;GalaxyGAN;1;2234
+Gokul;GalaxyGAN;1;2234
+Ubuntu;GalaxyGAN;2;2234
+Rybizki, Jan;Chempy;70;1586
+Chandra, Mani;grim;103;947
+Foucart, Francois;grim;59;947
+Newville, Matthew;xraylarch;1798;29
+M. Koker;xraylarch;182;29
+abs2k12;COCOA;3;201
+Sinha, Manodeep;Corrfunc;216;2157
+Garrison, Lehman H.;Corrfunc;40;2157
+Mommert, M.;photometrypipeline;175;566
+Leahy, D. A.;SNRmodels;7;391
+Christoph Deil;SNRmodels;1;391
+Zuluaga, Jorge I.;exorings;2;736
+FACom Developers;exorings;1;736
+Espinoza, Néstor;mc-spam;3;5394
+Vohl, D.;shwirl;9;171
+macrocosme;shwirl;15;171
+Alvaro Sanchez-Monge;statcont;3;972
+Ginsburg, A.;statcont;9;972
+Alvaro Sanchez;statcont;19;972
+Sokolovsky, K. V.;vast;430;124
+Thorne, B.;PySM_public;24;6470
+Andrea Zonca;PySM_public;11;6470
+Yu Feng;PySM_public;3;6470
+Tsai, Shang-Min;VULCAN;43;3336
+shami;VULCAN;29;3336
+shami-EEG;VULCAN;12;3336
+Hurley, P. D.;XID_plus;82;2581
+pdh21;XID_plus;112;2581
+Cassan, Arnaud;microlensing;21;191
+Ter Braak, Cajo J. F.;demc2;5;11794
+unknown;demc2;6;11794
+Daylan, Tansu;pcat;337;445
+Montet, Benjamin T.;f3;12;1794
+Geert Barentsen;f3;2;1794
+Sanders, J. S.;mbproj2;63;661
+Collett, Thomas E.;LensPop;4;8463
+jiwoncpark;LensPop;1;8463
+Phil Marshall;LensPop;2;8463
+Bryce Kalmbach;LensPop;1;8463
+ttemp;LensPop;3;8463
+Ciambur, Bogdan C.;PROFILER;3;701
+CBogdanC;PROFILER;1;701
+Mishra-Sharma, Siddharth;NPTFit;28;902
+Rodd, Nicholas L.;NPTFit;27;902
+Baron, Dalya;WeirdestGalaxies;2;1775
+Jennings, E.;astroABC;32;571
+elise;astroABC;4;571
+Moss, Adam;supernovae;4;2117
+Charnock, Tom;supernovae;2;2117
+Emken, Timon;DaMaSCUS;24;2126
+Stevens, Adam R. H.;DarkSage;212;2787
+Croton, Darren J.;DarkSage;28;2787
+Morrison, C. B.;The-wiZZ;90;3208
+Christopher Morrrison;The-wiZZ;11;3208
+morriscb;The-wiZZ;30;3208
+Casey, Andrew R.;sick;84;453
+Oscar Barragan;pyaneti;238;1505
+Malavolta, L.;CCFpams;5;543
+Luca on Goblin;CCFpams;3;543
+Sipőcz, Brigitta M.;astroquery;583;5314
+Brasseur, C. E.;astroquery;120;5314
+Ginsburg, Adam;astroquery;564;5314
+Woillez, Julien;astroquery;65;5314
+Juan Carlos Segovia;astroquery;60;5314
+Heald, G.;rmclean;1;8998
+Birnstiel, T.;two-pop-py;38;24820
+Zabalza, V.;naima;187;873
+Mede, Kyle;ExoSOFT;58;608
+Chiu, I.;ComEst;16;48
+Liu, J.;ComEst;1;48
+jfoster17;extinction-distances;8;1253
+Foster, Jonathan B.;extinction-distances;12;1253
+Holoien, Thomas W. -S.;XDGMM;19;295
+Aishwarya Bhave;XDGMM;2;295
+Marshall, Philip J.;XDGMM;2;295
+Holoien, Thomas W. -S.;empiriciSN;19;295
+Marshall, Philip J.;empiriciSN;3;295
+Scott, Pat;gambit_1.0;558;2269
+Kvellestad, Anders;gambit_1.0;122;2269
+McKay, James;gambit_1.0;74;2269
+Martinez, Gregory D.;gambit_1.0;104;2269
+Farmer, Ben;gambit_1.0;296;2269
+Cornell, Jonathan M.;gambit_1.0;128;2269
+Buckley, Andy;gambit_1.0;101;2269
+Weniger, Christoph;gambit_1.0;242;2269
+Athron, Peter;gambit_1.0;101;2269
+Krislock, Abram;gambit_1.0;163;2269
+gmartine;gambit_1.0;67;2269
+Price, Daniel J.;phantom;601;6018
+Mike Lau;phantom;181;6018
+Lionel Siess;phantom;165;6018
+Wurster, James;phantom;188;6018
+Chan, Conrad;phantom;133;6018
+Liptai, David;phantom;174;6018
+Mentiplay, Daniel;phantom;79;6018
+Arnaud Vericel;phantom;68;6018
+Radcliffe, J. F.;multi_self_cal;4;345
+jradcliffe5;multi_self_cal;3;345
+dependabot[bot];celerite;48;11512
+Foreman-Mackey, Daniel;celerite;161;11512
+Agol, Eric;celerite;65;11512
+Agol, Eric;celerite.jl;36;11512
+Mosè Giordano;celerite.jl;6;11512
+Foreman-Mackey, Daniel;celerite.jl;5;11512
+Sharma, Sanjib;bmcmc;7;4504
+Sharma, Sanjib;bmcmc;7;4504
+Lenain, J. -P.;flaapluc;27;52
+Law, C. J.;rfpipe;393;2691
+amerand;SPIPS;10;912
+Antoine Merand;SPIPS;1;912
+Mockler, Brenna;MOSFiT;69;5631
+Nicholl, Matt;MOSFiT;74;5631
+Guillochon, James;MOSFiT;313;5631
+Leistedt, Boris;flag-archive;25;545
+McEwen, Jason D.;flag-archive;5;545
+Tazzari, M.;binary;2;413
+ds283;CppTransport;428;1249
+Dias, Mafalda;mTransport;2;1293
+Bird, Simeon;fake_spectra;371;2469
+Keller, Benjamin W.;gasoline;190;54162
+Wadsley, J. W.;gasoline;109;54162
+Quinn, Thomas R.;gasoline;248;54162
+Stadel, J.;gasoline;44;54162
+Do, Tuan;OsirisDRP;64;222
+jlyke-keck;OsirisDRP;9;222
+Lyke, Jim E.;OsirisDRP;10;222
+Fitzgerald, Michael P.;OsirisDRP;9;222
+Rudy, Alexander R.;OsirisDRP;10;222
+osiris;OsirisDRP;74;222
+Tazzari, Marco;galario;62;3361
+Beaujean, Frederik;galario;61;3361
+Gieles, Mark;limepy;57;2932
+Eduardo Balbinot;limepy;4;2932
+mg0033;limepy;8;2932
+keckert7;codes;5;739
+Liang, Cameron;BayesVP;51;94
+galkintool;galkin;1;1175
+YuChia Chen;megaman;19;11
+Meila, Marina;megaman;10;11
+McQueen, James;megaman;43;11
+Jerry Zhang;megaman;5;11
+VanderPlas, Jacob;megaman;25;11
+Jerry;megaman;5;11
+mmp2;megaman;6;11
+YuChia Chen;megaman;19;11
+Meila, Marina;megaman;10;11
+McQueen, James;megaman;43;11
+Jerry Zhang;megaman;5;11
+VanderPlas, Jacob;megaman;25;11
+Jerry;megaman;5;11
+mmp2;megaman;6;11
+Terrier, R.;gammapy;623;7614
+Quentin Remy;gammapy;348;7614
+Donath, A.;gammapy;878;7614
+Sinha, A.;gammapy;258;7614
+Bruno Khélifi;gammapy;109;7614
+Fabio Pintore;gammapy;123;7614
+José Enrique Ruiz;gammapy;216;7614
+Jouvin, L.;gammapy;125;7614
+Deil, C.;gammapy;692;7614
+King, J.;gammapy;292;7614
+Du, Fujun;rac-2d;173;1976
+Nun, Isadora;FATS;9;1045
+jmartine;FATS;1;1045
+Ryan McCall;FATS;1;1045
+danielk605;FATS;1;1045
+Jorge Martinez Palomera;FATS;1;1045
+Kreidberg, Laura;spiderman;8;1582
+Louden, Tom;spiderman;85;1582
+Kreidberg, Laura;SPIDERMAN;8;1582
+Louden, Tom;SPIDERMAN;85;1582
+Günther, Hans Moritz;marxs;285;7335
+Dowell, Jayce;bifrost;177;96
+Christopher League;bifrost;34;96
+Price, Danny C.;bifrost;19;96
+Cranmer, Miles D.;bifrost;64;96
+Barsdell, Benjamin R.;bifrost;60;96
+mdtmc;bifrost;43;96
+Han, Jiaxin;HBT;1;5275
+jxhan;HBT;3;5275
+Han, Jiaxin;HBTplus;88;2280
+jxhan;HBTplus;87;2280
+Wenger, Trey V.;kd;16;726
+Trey W;kd;6;726
+Danehkar, Ashkbiz;mpi_xstar;21;42
+Shaw, J. R.;bitshuffle;6;217
+Masui, K.;bitshuffle;56;217
+Davenport, James R. A.;FBEYE;30;6007
+Daniele Massaro;maddm;65;1443
+olivier-mattelaer;maddm;62;1443
+Federico Ambrogi fambrogi@cern.ch;maddm;35;1443
+olivier Mattelaer;maddm;28;1443
+Backović, Mihailo;maddm;37;1443
+Dan F-M;photodynam;1;16686
+Ubuntu;iWander;4;599
+iWander Urania;iWander;18;599
+Zuluaga, Jorge I.;iWander;6;599
+Feeney, Stephen M.;hh0;11;27010
+Sousbie, Thierry;dice;26;664
+Fulton, Benjamin J.;radvel;195;5948
+Spencer Hurt;radvel;32;5948
+Blunt, Sarah;radvel;44;5948
+Petigura, Erik A.;radvel;41;5948
+bjfultn;radvel;38;5948
+Ming Feng Gu;fac;300;3882
+M. F. Gu;fac;49;3882
+Gu, M. F.;fac;302;3882
+Coupon, Jean;venice;23;4207
+Vandenbroucke, B.;CMacIonize;383;487
+Loomis, Ryan A.;VISIBLE;10;2324
+Morris, Brett M.;astroplan;203;8111
+Tollerud, Erik;astroplan;24;8111
+Sipőcz, Brigitta;astroplan;58;8111
+Littlefair, Stuart;astroplan;28;8111
+Adrian Price-Whelan;astroplan;15;8111
+kvyh;astroplan;35;8111
+Deil, Christoph;astroplan;18;8111
+Berlanga Medina, Jazmin;astroplan;29;8111
+Lanusse, F.;Glimpse;8;676
+EiffL;Glimpse;3;676
+Austin;Glimpse;1;676
+Mosè Giordano;Glimpse;2;676
+Francois;Glimpse;5;676
+Kavanagh, Bradley J.;runDM;5;2687
+bradkav;runDM;11;2687
+Hippke, Michael;PyOSE;6;369
+Mead, A. J.;collapse;3;834
+moad212;collapse;4;834
+Murray, S. G.;mrpy;33;30
+A.K. Hutter;grid-model;12;1197
+Hutter, Anne;grid-model;48;1197
+Melchior, P.;scarlet;206;1517
+Moolekamp, F.;scarlet;32;1517
+fred3m;scarlet;149;1517
+herjy;scarlet;59;1517
+Poleski, R.;MulensModel;648;481
+jenniferyee;MulensModel;168;481
+Yee, J. C.;MulensModel;57;481
+Aird, J.;FAST;6;60790
+Hosek, Matthew W., Jr.;extlaw_H18;4;909
+Yurchenko, Sergei N.;exocross;70;2713
+Trovemaster;exocross;59;2713
+Davelaar, J.;raptor;3;4282
+Bronzwaer, T.;raptor;7;4282
+Thomas;raptor;3;4282
+Jordy;raptor;4;4282
+moscibrodzka;ipole;25;6276
+Gammie, C. F.;ipole;3;6276
+Charles F. Gammie;ipole;3;6276
+Roberto Gonzalez;astroCV;8;256
+cristianhdez;astroCV;8;256
+Hernández, C. A.;astroCV;1;256
+Roberto P. Muñoz;astroCV;5;256
+Roberto Munoz;astroCV;3;256
+regonzar;astroCV;3;256
+Robotham, A. S. G.;ProFound;249;2063
+jmeyers314;chroma;129;4834
+jmeyers314;chroma;129;4834
+Schreiber, C.;egg;18;1270
+cschreib;egg;49;1270
+=;egg;16;1270
+Mackereth, J. Ted;orbit-estimation;9;3639
+Bovy, Jo;orbit-estimation;2;3639
+Creasey, Peter E.;smerfs;9;19
+Mao, Yao-Yuan;descqa;160;447
+Kovacs, Eve;descqa;83;447
+fjaviersanchez;descqa;21;447
+Zhou, Rongpu;descqa;16;447
+Birrer, Simon;lenstronomy;933;6619
+Daniel Gilman;lenstronomy;81;6619
+Aymeric Galan;lenstronomy;95;6619
+Anowar Jaman Shajib;lenstronomy;64;6619
+Liu, Jiajia;cat-puma;9;443
+ColdThunder;NR-code;5;362
+Gerosa, Davide;surrkick;33;2497
+Feng, F.;agatha;27;912
+fabo;agatha;3;912
+minzastro;unidam;13;758
+Mints, Alexey;unidam;86;758
+Paul, Debdutta;luminosity_function_of_sGRBs;5;454
+Paul, Debdutta;luminosity_function_of_lGRBs;5;94
+Kitzmann, Daniel;FastChem;49;2525
+Obreschkow, D.;dftools;32;324
+cmoestl;3DCORE;2;776
+ajefweiss;3DCORE;5;776
+Andreas J. Weiss;3DCORE;2;776
+Gabor Racz;steps;3;92
+ragraat;steps;5;92
+Rácz, Gábor;steps;24;92
+Farr, Will M.;exocartographer;18;509
+Farr, Ben;exocartographer;14;509
+Jeff Forcier;alabaster;74;5052
+Vasiliev, Eugene;Agama;103;5751
+Francesco Radica;starsmasher;19;5021
+James C. Lombardi Jr;starsmasher;10;5021
+jalombar;starsmasher;11;5021
+Francyrad;starsmasher;6;5021
+seitanakiss;starsmasher;5;5021
+Sarah;starsmasher;2;5021
+Feng, Justin;PoMiN;18;471
+Justin Roberts-Pierel;snsed;38;841
+Justin Roberts-Pierel;SNSED_Repository;12;841
+Yu, Hao-Ran;CUBE;3;465
+Casagrande, L.;bolometric-corrections;10;7286
+casaluca;bolometric-corrections;2;7286
+Carrasco, D.;GLACiAR;5;328
+Spreeuw, H.;pyse;47;170
+Molenaar, G.;pyse;4;170
+Brinckmann, Thejs;montepython_public;102;14621
+Lesgourgues, Julien;montepython_public;93;14621
+Benjamin Audren;montepython_public;202;14621
+Nitz, Alexander H.;pycbc;911;61108
+Gareth S Cabourn Davies;pycbc;72;61108
+Dal Canton, Tito;pycbc;305;61108
+Harry, Ian W.;pycbc;427;61108
+Dent, Thomas;pycbc;169;61108
+Capano, Collin D.;pycbc;225;61108
+Soumi De;pycbc;58;61108
+Willis, Joshua L.;pycbc;106;61108
+Brown, Duncan A.;pycbc;169;61108
+Biwer, Christopher M.;pycbc;181;61108
+Lundgren, Andrew;pycbc;69;61108
+spxiwh;pycbc;76;61108
+Pekowsky, Larne P.;pycbc;71;61108
+Wiesner, Karsten;pycbc;70;61108
+Nitz, Alexander H.;PyCBC-Tutorials;48;61108
+Capano, Collin D.;PyCBC-Tutorials;9;61108
+Smirnov, O. M.;CubiCal;166;981
+Kenyon, J. S.;CubiCal;174;981
+Benjamin Hugo;CubiCal;24;981
+ulricharmel;CubiCal;17;981
+Ulrich Armel Mbou Sob;CubiCal;31;981
+Juan B Cabral;feets;75;1259
+Juan BC;feets;13;1259
+juanbc;feets;13;1259
+Juan B Cabral;feets;75;1259
+Juan BC;feets;13;1259
+juanbc;feets;13;1259
+bradkav;BlackHolesDarkDress;6;5723
+Kavanagh, Bradley J.;BlackHolesDarkDress;1;5723
+Gaggero, Daniele;BlackHolesDarkDress;2;5723
+Cieślar, Marek;Indri;6;161
+Giannozzi, Paolo;q-e;3253;4805
+Delugas, P.;q-e;279;4805
+fabrizio22;q-e;279;4805
+Pietro Bonfa;q-e;265;4805
+degironc;q-e;268;4805
+Dal Corso, Andrea;q-e;624;4805
+Cavazzoni, Carlo;q-e;347;4805
+Sbraccia, Carlo;q-e;291;4805
+Obreja, Aura;gsf;1;708
+Coles, Jonathan P.;glass;88;897
+Küng, Rafael;SpaghettiLens;51;10
+RafiKueng;SpaghettiLens;96;10
+kim554;wdec;16;148
+Michilli, D.;SpS;5;2164
+Michilli, D.;LSPs;160;2164
+Bishara, Fady;directdm-mma;17;483
+Brod, Joachim;directdm-mma;2;483
+Brod, Joachim;directdm-py;79;483
+Côté, Benoit;NuPyCEE;133;696
+Andrés Yagüe López;NuPyCEE;18;696
+critter1;NuPyCEE;77;696
+Ritter, Christian;NuPyCEE;15;696
+adampaul;NuPyCEE;15;696
+Kipping, David;exoinformatics;2;650
+Ahlers, John P.;LASR;2;82
+Mike Owen;spheral;1641;771
+jmpearl;spheral;176;771
+mdavis36;spheral;236;771
+Paul H. Tsuji;spheral;172;771
+Cody Raskin;spheral;171;771
+Vagnozzi, Sunny;Braneworld-extra-dimensions;2;4131
+Vogt, F. P. A.;fcmaker;16;12
+Pessa, Ismael;PyMUSE;125;428
+Tejos, Nicolas;PyMUSE;40;428
+umbralcalc;foxi;33;45
+Hardwick, Robert J.;foxi;7;45
+chris;aspic;171;30030
+mlietzow;POLARIS;84;1891
+Robert Brunngraeber;POLARIS;40;1891
+Brauer, R.;POLARIS;151;1891
+Elsner, F.;arkcos;1;74
+Borja Pérez-Díaz;HII-CHI-Mistry;10;7482
+Borja-Perez-Diaz;HII-CHI-Mistry;4;7482
+Borja Pérez Díaz;HII-CHI-Mistry;1;7482
+Malik, Matej;HELIOS;45;3210
+deitrr;THOR;96;2174
+Deitrick, Russell;THOR;246;2174
+P. Noti;THOR;71;2174
+nab;THOR;96;2174
+nabajour;THOR;28;2174
+Schroffenegger, Urs;THOR;64;2174
+Hardwick, Robert J.;nfield;5;344
+umbralcalc;nfield;11;344
+Pang, Di;SPEGID;4;483
+Riggi, S.;caesar;166;110
+René Tronsgaard;barycorr;3;3049
+Víctor Terrón;barycorr;2;3049
+René Tronsgaard Rasmussen;barycorr;2;3049
+Zechmeister, M.;GLS;34;37376
+Katz, Max P.;wdmerger;461;330
+Zingale, Michael;wdmerger;81;330
+Line, J. L. B.;PUMA;40;1171
+rwesson;damocles;10;1335
+Bevan, Antonia;damocles;33;1335
+damocles-code;damocles;6;1335
+nivha;three_body_integration;14;253
+Etienne, Zachariah B.;nrpytutorial;553;468
+Leonardo Werneck;nrpytutorial;53;468
+Steven R. Brandt;nrpytutorial;75;468
+Ken Sible;nrpytutorial;111;468
+Leo Werneck;nrpytutorial;46;468
+Philip Chang;nrpytutorial;47;468
+Patrick Nelson;nrpytutorial;244;468
+penelson16;nrpytutorial;74;468
+Tyler Knowles;nrpytutorial;112;468
+Luger, Rodrigo;everest;153;7519
+Alexandrov, Oleg;StereoPipeline;1229;2479
+Scott;StereoPipeline;326;2479
+Moratto, Z. M.;StereoPipeline;426;2479
+SevenStarKnight;SSMM;6;15
+Johnston, K. B.;SSMM;4;15
+Juan BC;corral;11;1212
+Beroiz, M.;corral;8;1212
+Juan B Cabral;corral;71;1212
+brunosanchez;corral;15;1212
+Sivaramakrishnan, Anand;ImPlaneIA;9;373
+Greenbaum, Alexandra Z.;ImPlaneIA;46;373
+Rob De Rosa;ImPlaneIA;4;373
+Johannes Sahlmann;ImPlaneIA;5;373
+Creasey, P.;hfof;31;221
+Rossi, Loïc;pymiedap;71;54
+Dougal J. Sutherland;py-sdm;9;1333
+Sutherland, Danica J.;py-sdm;84;1333
+Dougal J. Sutherland;skl-groups;13;1333
+Sutherland, Danica J.;skl-groups;12;1333
+Zumalacárregui, Miguel;hi_class_public;35;7873
+Bellini, Emilio;hi_class_public;37;7873
+Thomas Tram;hi_class_public;65;7873
+Lesgourgues, Julien;hi_class_public;339;7873
+Benjamin Audren;hi_class_public;138;7873
+Hancock, P. J.;Robbie;110;53
+cjproud;Robbie;24;53
+Nick Swainston;Robbie;10;53
+Bozza, Valerio;VBBinaryLensing;30;585
+Bachelet, Etienne;VBBinaryLensing;21;585
+Bartolić, Fran;VBBinaryLensing;17;585
+valboz;VBBinaryLensing;3;585
+Varma, Vijay;surfinBH;58;4544
+Stein, Leo C.;surfinBH;7;4544
+Neil Lewis;Isca;27;190
+Thomson, Stephen I.;Isca;58;190
+sit23;Isca;172;190
+Geen, Ruth;Isca;61;190
+Maher, Penelope;Isca;49;190
+Qun Liu;Isca;47;190
+Penn, James;Isca;78;190
+Malz, A. I.;qp;104;500
+Marshall, P. J.;qp;21;500
+Sergey Koposov;dynesty;58;32386
+Sergey E. Koposov;dynesty;129;32386
+Speagle, Joshua S.;dynesty;116;32386
+Kyle Barbary;dynesty;26;32386
+Drouart, G.;MrMoose;14;140
+Taylor, Peter L.;RequiSim;2;1199
+Juric, Mario;galfast;122;177
+E. G. Patrick Bos;barcode;13;308
+Bos, E. G. Patrick;barcode;4;308
+Breddels, Maarten A.;vaex;731;3605
+Veljanoski, Jovan;vaex;183;3605
+Luger, Rodrigo;starry;398;3830
+Stolker, T.;ARTES;20;967
+Kendall, Emily;PyUltraLight;4;1494
+Nathan Musoke;PyUltraLight;3;1494
+Soumagnac, Maayane T.;catsHTM;39;1697
+de la Cruz Rodríguez, J.;stic;164;1194
+sarrvesh;cuFFS;38;117
+Sarrvesh Seethapuram Sridhar;cuFFS;6;117
+Julian;SOPHISM;5;76
+Simpson, Chris;DRAGONS;779;39
+Labrie, Kathleen;DRAGONS;409;39
+Olesja Smirnova;DRAGONS;51;39
+Turner, James;DRAGONS;98;39
+Daniel Berke;DRAGONS;108;39
+Oliver Oberdorf;DRAGONS;78;39
+Oliver;DRAGONS;97;39
+Bruno Quint;DRAGONS;259;39
+Simon Conseil;DRAGONS;177;39
+bquint;DRAGONS;97;39
+kanderso;DRAGONS;177;39
+Cardenes, Ricardo;DRAGONS;97;39
+Anderson, Kenneth;DRAGONS;104;39
+Paul Hirst;DRAGONS;122;39
+Emma Hogan;DRAGONS;111;39
+Craig Allen;DRAGONS;252;39
+Melanie Clarke;DRAGONS;136;39
+Kaniela Dement;DRAGONS;96;39
+Kyle Mede;DRAGONS;115;39
+Varma, Vijay;binaryBHexp;48;51
+Stein, Leo C.;binaryBHexp;10;51
+Barbary, Kyle;sep;110;4001
+Tobar, Rodrigo J.;shark;150;4049
+Lagos, Claudia del P.;shark;214;4049
+Leistedt, B.;QuickSip;3;4277
+Belli, Sirio;flame;152;283
+Nir, Guy;radon;12;1310
+Krogager, Jens-Kristian;VoigtFit;128;440
+Barnes, Rory;vplanet;507;2824
+Deitrick, Russell;vplanet;182;2824
+deitrr;vplanet;59;2824
+Luger, Rodrigo;vplanet;111;2824
+Barth, Patrick;vplanet;55;2824
+Fleming, David P.;vplanet;169;2824
+Oshino, Shoichi;PENTACLE;5;258
+Trevisan, J.;PFANT;226;205
+Lomax, O.;spamcart-dev;22;175
+Charles, E.;fermipy;116;1751
+Magill, J.;fermipy;28;1751
+Wood, M.;fermipy;190;1751
+Matthew Dunseth Wood;fermipy;230;1751
+Zingales, Tiziano;ExoGAN_public;4;744
+Yuan, Sihan;GRAND-HOD;15;983
+Garrison, Lehman H.;GRAND-HOD;1;983
+Espinoza, Néstor;juliet;122;4373
+Jayshil;juliet;12;4373
+Kossakowski, Diana;juliet;11;4373
+Gajdoš, P.;OCFit;64;69
+Alonso, David;CCL;193;3268
+Tröster, Tilman;CCL;48;3268
+Hsin Fan;CCL;21;3268
+carlosggarcia;CCL;20;3268
+Chisari, Nora Elisa;CCL;278;3268
+Nick Koukoufilippas;CCL;37;3268
+Kirby, Matthew;CCL;34;3268
+Leonard, C. Danielle;CCL;154;3268
+Ishak, Mustapha;CCL;24;3268
+McClintock, Thomas;CCL;25;3268
+Ellison, John;CCL;25;3268
+Bull, Philip;CCL;71;3268
+Mead, Alexander;CCL;30;3268
+Villarreal, Antonia Sierra;CCL;40;3268
+Krause, Elisabeth;CCL;31;3268
+damonge;CCL;50;3268
+Vrastil, Michal;CCL;20;3268
+Mahlke, M.;ssos;42;28
+Safdi, Benjamin R.;stellarWakes;7;1113
+Buschmann, Malte;stellarWakes;2;1113
+Justin R. Pierel;sntd;10;620
+Justin Roberts-Pierel;sntd;99;620
+Erler, Jens;pymf;6;107
+Cristian Maureira-Fredes;gravidy;57;37
+Maureira-Fredes, Cristián;gravidy;49;37
+Armstrong, John A.;Radynversion;6;213
+cmo;Radynversion;3;213
+rhero12;Radynversion;3;213
+Goobley;Radynversion;5;213
+Louis, C. K.;ExPRES;24;196
+Cecconi, B.;ExPRES;55;196
+SERPE User;ExPRES;32;196
+MASER SERPE User;ExPRES;11;196
+Higson, Edward;dyPolyChord;72;3800
+Dauser, T.;sixte;120;858
+Peille, P.;sixte;53;858
+Kirsch, Christian;sixte;431;858
+Günther, Maximilian N.;allesfitter;8;887
+mx;allesfitter;55;887
+Daylan, Tansu;allesfitter;12;887
+MNGuenther;allesfitter;27;887
+Rodrigues, Luiz Felippe S.;galmag;115;430
+Harborne, Katherine E.;SimSpin;283;165
+Harborne, Katherine E.;create_SimSpinFile;8;165
+Reis, Itamar;PRF;23;421
+Ivanov, Mikhail M.;AsPy;3;573
+Mullally, Fergal;dave;64;783
+Mullally, Susan E.;dave;6;783
+Coughlin, Jeffrey L.;dave;27;783
+mustaric;dave;35;783
+smullall;dave;11;783
+fmullall;dave;7;783
+Barclay, Thomas;dave;11;783
+Zhang, Michael;platon;123;2365
+Teuben, Peter;nemo;2417;1997
+Walter Dehnen;nemo;264;1997
+Chael, Andrew A.;eht-imaging;276;11067
+Johnson, Michael D.;eht-imaging;120;11067
+Chi-kwan Chan;eht-imaging;34;11067
+Bouman, Katherine L.;eht-imaging;42;11067
+Cubillos, Patricio E.;repack;28;739
+Penoyre, Zephyr;CausticFrog;4;76
+Kunal Marwaha;CausticFrog;1;76
+Sandford, Emily;EightBitTransit;49;90
+Cubillos, Patricio E.;rate;12;215
+Teuben, Peter;distribute;2;428
+Plunkett, Adele;distribute;1;428
+Koda, Jin;distribute;7;428
+tp2vis;distribute;1;428
+Montet, Benjamin T.;eleanor;104;2624
+Ethan Kruse;eleanor;18;2624
+Feinstein, Adina D.;eleanor;155;2624
+Foreman-Mackey, Daniel;eleanor;16;2624
+afeinstein20;eleanor;21;2624
+Penoyre, Zephyr;OoT;12;104
+Bruno SANCHEZ;ProperImage;60;105
+Sánchez, B.;ProperImage;14;105
+Beroiz, M.;ProperImage;12;105
+brunosanchez;ProperImage;83;105
+Hand, Nick;pyRSD;270;3073
+Feng, Yu;nbodykit;188;5511
+Hand, Nick;nbodykit;106;5511
+Andrew Pontzen;pynbody;517;5511
+Rok Roskar;pynbody;147;5511
+Greg Stinson;pynbody;77;5511
+Li, Yin;covdisc;2;1217
+Escudero, Miguel;nudec_BSM;7;2903
+Chilingarian, Igor;mmirs-pipeline.git;45;758
+mmirs;mmirs-pipeline.git;15;758
+Chilingarian, Igor;mmirs-pipeline;45;758
+mmirs;mmirs-pipeline;15;758
+Sergey E. Koposov;q3c;32;3789
+Koposov, S.;q3c;99;3789
+Adrian Bayer;fastpm;59;3626
+Feng, Yu;fastpm;340;3626
+Davies, Andrew;LensCNN;2;491
+Batalha, Natasha E.;picaso;177;749
+Sagnick Mukherjee;picaso;16;749
+caoimherooney11;picaso;96;749
+Amato, Davide;NAPLES;13;41
+Alden, B.;ClusterPyXT;26;47
+Brian;ClusterPyXT;8;47
+Van Oort, Colin M.;casi-2d;11;192
+Asensio Ramos, A.;sicon;5;287
+tarrla;sicon;1;287
+Carlos José Díaz Baso;sicon;2;287
+Johnson, Benjamin D.;prospector;453;13130
+Leja, Joel;prospector;55;13130
+Beroiz, M.;astroalign;80;1500
+Juan B Cabral;astroalign;10;1500
+Beroiz, M.;astroalign-legacy;65;1500
+Juan B Cabral;astroalign-legacy;10;1500
+Richard Elkins;turbo_seti;120;1081
+Luigi Cruz;turbo_seti;21;1081
+Price, Danny C.;turbo_seti;38;1081
+Enriquez, J. Emilio;turbo_seti;43;1081
+Espinoza, Néstor;limb-darkening;16;5394
+Patricio Cubillos;limb-darkening;1;5394
+pcubillos;limb-darkening;4;5394
+Bonaldi, Anna;TRECS;36;1425
+Tommaso Ronconi;TRECS;10;1425
+Kenyon, J. S.;PyMORESANE;46;1167
+Travis CI;morpheus;5;718
+Hausen, Ryan;morpheus;37;718
+Cárcamo, M.;gpuvmem;115;602
+Miguel Carcamo;gpuvmem;48;602
+Nicolás Zarricueta;gpuvmem;12;602
+miguelcarcamov;gpuvmem;21;602
+Public BASP Github repos;Optical-Interferometry-Trilinear;2;27
+Birdi, Jasleen;Optical-Interferometry-Trilinear;1;27
+Batalha, Natasha E.;PandExo;114;6298
+Mees Fix;PandExo;9;6298
+Zoglauer, A.;neodym;10;1116
+Zoglauer, A.;megalib;625;1116
+Ren, Bin;centerRadon;10;159
+Jason Wang;centerRadon;1;159
+Bachelet, E.;pyLIMA;265;542
+Garrett 'Karto' Keating;pyuvdata;108;626
+Hazelton, Bryna J.;pyuvdata;609;626
+Matthew Kolopanis;pyuvdata;124;626
+pyxieloustar;pyuvdata;76;626
+Paul La Plante;pyuvdata;156;626
+Beardsley, Adam P.;pyuvdata;89;626
+Public BASP Github repos;SARA-PPD;2;268
+Dabbech, Arwa;SARA-PPD;1;268
+pthouvenin;SARA-PPD;1;268
+Onose, Alexandru;SARA-PPD;1;268
+Public BASP Github repos;ppd-for-ri;2;268
+Dabbech, Arwa;ppd-for-ri;1;268
+pthouvenin;ppd-for-ri;1;268
+Onose, Alexandru;ppd-for-ri;1;268
+Naik, Aneesh P.;spam;11;420
+AdriJD;beamconv;26;262
+Duivenvoorden, Adriaan J.;beamconv;25;262
+AERAdler;beamconv;76;262
+Gudmundsson, Jon E.;beamconv;72;262
+Konstantina Dachlythra;beamconv;9;262
+Adri J Duivenvoorden;beamconv;51;262
+Koch, Eric W.;TurbuStat;500;304
+Murray, Claire E.;gausspy;11;841
+Dany Vohl;gausspy;2;841
+gausspy;gausspy;7;841
+cmurray-astro;gausspy;8;841
+Riener, M.;gausspyplus;43;503
+Nadathur, Seshadri;Revolver;76;1317
+Bittner, A.;gist-development;22;876
+Ma, Zhixian;mcrgnet;5;904
+Jason Ma;mcrgnet;5;904
+Blake, Chris;intensitypower;4;504
+Marchal, Antoine;ROHSA;59;507
+Smith, Michael J.;XDF-GAN;1;272
+Hippke, Michael;wotan;60;1407
+Simon Conseil;astroscrappy;20;63255
+Curtis McCully;astroscrappy;37;63255
+Pey Lian Lim;astroscrappy;8;63255
+Brigitta Sipocz;astroscrappy;37;63255
+Erik Tollerud;astroscrappy;17;63255
+Larry Bradley;astroscrappy;12;63255
+Thomas Robitaille;astroscrappy;67;63255
+cmccully;astroscrappy;7;63255
+Michael Droettboom;astroscrappy;14;63255
+Curtis McCully;astroscrappy;20;63255
+Brigitta Sipocz;astroscrappy;36;63255
+Larry Bradley;astroscrappy;12;63255
+Pey Lian Lim;astroscrappy;7;63255
+Thomas Robitaille;astroscrappy;67;63255
+Erik Tollerud;astroscrappy;15;63255
+cmccully;astroscrappy;7;63255
+Michael Droettboom;astroscrappy;14;63255
+Ishida, E. E. O.;ActSNClass;45;1972
+Prša, Andrej;dips;9;44
+Bekiaris, G.;gbkfit;87;662
+Bekiaris, G.;gbkfit-legacy;26;662
+George;gbkfit-legacy;4;662
+bekos;gbkfit-legacy;4;662
+bek0s;gbkfit-legacy;11;662
+Patrick Crumley;Iseult;148;9921
+ntoles;tristan-mp-pitp;3;9921
+Saurav Maheshkar;tristan-mp-pitp;1;9921
+Spitkovsky, Anatoly;tristan-mp-pitp;3;9921
+Koll, Daniel D. B.;PyRADS;19;339
+Andrew Williams;PyRADS;3;339
+Hunt, Jason A. S.;Snapdragons;18;1161
+Kawata, Daisuke;Snapdragons;3;1161
+Glaser, C.;NuRadioMC;393;1065
+Felix Schlüter;NuRadioMC;101;1065
+sjoerd-bouma;NuRadioMC;72;1065
+Sjoerd Bouma;NuRadioMC;63;1065
+jakobhenrichs;NuRadioMC;42;1065
+Welling, C.;NuRadioMC;198;1065
+Christoph;NuRadioMC;34;1065
+lpyras;NuRadioMC;73;1065
+Nelles, A.;NuRadioMC;102;1065
+Steffen Hallmann;NuRadioMC;56;1065
+Bob Oeyen;NuRadioMC;63;1065
+Felix Schlueter;NuRadioMC;33;1065
+Plaisier, I.;NuRadioMC;32;1065
+daniel-zid;NuRadioMC;133;1065
+christoph;NuRadioMC;72;1065
+Gordon, Karl D.;beast;312;684
+Choi, Yumi;beast;47;684
+Lea Hagen;beast;140;684
+Dries Van De Putte;beast;51;684
+Fouesneau, Morgan;beast;73;684
+Battarbee, Markus;vlasiator;169;1393
+Pfau-Kempf, Yann;vlasiator;102;1393
+Ganse, Urs;vlasiator;399;1393
+lkotipal;vlasiator;57;1393
+Kempf, Y.;vlasiator;427;1393
+Leo Kotipalo;vlasiator;80;1393
+kstppd;vlasiator;47;1393
+tkoskela;vlasiator;98;1393
+von Alfthan, S.;vlasiator;404;1393
+Sandroos, A.;vlasiator;158;1393
+ohannuks;vlasiator;61;1393
+iljah;vlasiator;73;1393
+jcibanezm;DustCharge;10;73
+Andrej Prsa;ebai;2;2840
+McClintock, Thomas;bias_emulator;13;617
+Alhassan, Wathela;FIRST-CLASSIFIER;9;981
+Klenzing, J.;pysat;420;58
+Burrell, A. G.;pysat;220;58
+Angeline G. Burrell;pysat;72;58
+Stoneback, R. A.;pysat;477;58
+rstone;pysat;58;58
+McEwen, Jason D.;fastcswt;4;750
+Kepley, Amanda A.;autobox;29;1049
+Hamers, Adrian S.;secularmultiple;28;2358
+Hamers, Adrian S.;tpi;2;1214
+Philcox, Oliver H. E.;HADES;27;134
+Philcox, Oliver H. E.;ChempyMulti;69;37
+Rybizki, Jan;ChempyMulti;47;37
+George Wong;ebhlight;5;3952
+George N. Wong;ebhlight;1;3952
+Ryan, B. R.;ebhlight;10;3952
+Ben Prather;ebhlight;1;3952
+Jonah Miller;ebhlight;3;3952
+Jonah Maxwell Miller;ebhlight;3;3952
+Michael Rashkovetskyi;RascalC;69;482
+Philcox, Oliver H. E.;RascalC;96;482
+Keown, Jared;astroclover;13;58
+Donnert, Julius;WVTICs;12;57
+Steinwandel, Ulrich;WVTICs;15;57
+YominCarr;WVTICs;48;57
+Halbesma, Timo;WVTICs;12;57
+Healy, J.;HISS;2;249
+Julia H;HISS;14;249
+Mulders, Gijs D.;epos;98;4151
+Handley, Will;fgivenx;50;4892
+ejhigson;fgivenx;8;4892
+Bernd Doser;PINK;236;466
+Castagna, Fabio;preprofit;57;21
+Moster, Benjamin P.;emerge;3;12646
+Hippke, Michael;tls;77;2304
+Debras, F.;ECLIPS3D;12;146
+Goffrey, T.;ECLIPS3D;4;146
+Blunt, Sarah;orbitize;212;1401
+Wang, Jason J.;orbitize;87;1401
+tirthsurti;orbitize;17;1401
+Nagpal, Vighnesh;orbitize;19;1401
+Rob685;orbitize;44;1401
+Ngo, Henry;orbitize;46;1401
+Angelo, Isabel;orbitize;28;1401
+Max Timberhill;pexo;16;150
+Feng, Fabo;pexo;21;150
+Feldmann, R.;leopy;11;224
+Steinbring, E.;AOTOOLS;1;31
+Sadeh, I.;ANNZ;52;4439
+Hinton, Samuel R.;ChainConsumer;93;9433
+samreay;ChainConsumer;15;9433
+Hinton, Samuel R.;chainconsumer;93;9433
+samreay;chainconsumer;15;9433
+Lewis, Antony;getdist;156;27899
+Lewis, Antony;cobaya;196;4604
+Torrado, Jesús;cobaya;181;4604
+Townson, M. J.;aotools;72;34
+Reeves, A. P.;aotools;55;34
+Farley, O. J. D.;aotools;19;34
+Orban de Xivry, G.;aotools;12;34
+Leo C. Stein;qnm;61;1880
+Li, Rixin;PLAN;34;1602
+pavel;sph;330;102
+Hanke, Michael;athos;10;261
+Luger, Rodrigo;planetplanet;88;1507
+Lustig-Yaeger, Jacob;planetplanet;18;1507
+Hotokezaka, Kenta;HeatingRate;10;2387
+Veenboer, Bram;idg;674;576
+van der Tol, Sebastiaan;idg;120;576
+Matthias Petschow;idg;91;576
+Cerutti, B.;Zeltron-code;2;6643
+Elahi, Pascal J.;VELOCIraptor-STF;473;1302
+Willis, James S.;VELOCIraptor-STF;35;1302
+Elahi, Pascal J.;TreeFrog;95;576
+Poulton, Rhys J. J.;TreeFrog;17;576
+Fang, Xiao;FFTLog-and-beyond;9;2524
+xfangcosmo;FFTLog-and-beyond;14;2524
+Christoph Schaefer;miluphcuda;16;505
+Christoph Burger;miluphcuda;79;505
+Schäfer, C.;miluphcuda;45;505
+Hutter, Anne;polyspectrum;7;686
+A.K. Hutter;polyspectrum;8;686
+Wicenec, A.;daliuge;338;38
+Tobar, R.;daliuge;301;38
+james-strauss-uwa;daliuge;107;38
+Nicholas Pritchard;daliuge;60;38
+pritchardn;daliuge;129;38
+Callan Gray;daliuge;42;38
+Wu, C.;daliuge;191;38
+pereirasantaella;HSIM;44;197
+Miguel Pereira Santaella;HSIM;29;197
+routledge;HSIM;9;197
+Laurence Routledge;HSIM;10;197
+Zieleniewski, S.;HSIM;11;197
+Adam Ormondroyd;anesthetic;26;2530
+Handley, Will;anesthetic;88;2530
+Lukas Hergt;anesthetic;43;2530
+nsabrams;PopSyCLE;72;393
+Lu, Jessica R.;PopSyCLE;19;393
+Lam, Casey Y.;PopSyCLE;22;393
+Sam Rose;PopSyCLE;26;393
+Michael Medford;PopSyCLE;70;393
+samrose30;PopSyCLE;12;393
+Adamek, Karel;astro-accelerate;150;269
+Jan Novotny;astro-accelerate;32;269
+Carels, C.;astro-accelerate;108;269
+jan2nov;astro-accelerate;74;269
+Armour, Wesley;astro-accelerate;37;269
+NassimOuannoughi;astro-accelerate;27;269
+Nassim Ouannoughi;astro-accelerate;10;269
+Stefano Fogarollo;game;8;496
+sirfoga;game;5;496
+Martin Masevski;game;1;496
+Ucci, G.;game;4;496
+Pallottini, A.;game;3;496
+Macleod, Duncan M.;gwpy;920;577
+Pontzen, Andrew;tangos;381;2131
+Tremmel, Michael;tangos;94;2131
+Lindroos, L.;stacker;51;1014
+Kanodia, Shubham;mrexo;120;599
+He, Matthias Y.;mrexo;23;599
+shbhuk;mrexo;112;599
+shbhuk@gmail.com;mrexo;34;599
+August Muench;Tutorials;27;599
+andizq;sf3dmodels;229;685
+ims;sf3dmodels;105;685
+allegroLeiden;sf3dmodels;41;685
+Sebastien Maret;sf3dmodels;33;685
+Christian Brinch;sf3dmodels;33;685
+Clarke, S. D.;FragMent;11;398
+Clarke, S. D.;BTS;13;1317
+Ren, Bin;DebrisDiskFM;48;537
+Martin, T.;orcs;80;375
+Thomas;orcs;25;375
+thomas;orcs;23;375
+Prince, Heather;cosmoped;10;283
+Bonfanti, A.;MCMCI;6;173
+Qian, Lei;RPPPS;3;104
+Wang, Long;SDAR;146;306
+Tine Colman;ramses;88;922
+Romain Teyssier;ramses;308;922
+Eric Moseley;ramses;61;922
+rteyssie;ramses;57;922
+Mladen Ivkovic;ramses;50;922
+Joakim Rosdahl;ramses;83;922
+Michael Kretschmer;ramses;150;922
+Pawel Biernacki;ramses;176;922
+Michael Rieder;ramses;49;922
+Valentin Perret;ramses;125;922
+Andreas Bleuler;ramses;74;922
+teyssier;ramses;108;922
+ableuler;ramses;46;922
+Conseil, Simon;origin;88;395
+Bacon, Roland;origin;36;395
+Yannick Roehlly;origin;24;395
+Piqueras, Laure;origin;77;395
+Schutz, Antony;origin;27;395
+Giacalone, Steven;triceratops;35;680
+Antoniadis-Karnavas, A.;ODUSSEAS;41;434
+Ronconi, Tommaso;scampy;50;31
+Robotham, A. S. G.;ProSpect;151;1439
+Muthukrishna, Daniel;astrodash;80;633
+danmuth;astrodash;50;633
+broulston;PyHammer;17;762
+zephyr5050;PyHammer;42;762
+Kesseli, Aurora Y.;PyHammer;30;762
+Veyette, Mark;PyHammer;6;762
+Kavanagh, Bradley J.;DMRadon;3;447
+bradkav;DMRadon;1;447
+Susobhanan, Abhimanyu;GWecc;59;227
+Lentati, L.;Cobra;2;77
+Bursa, M.;disk-models;5;2740
+Soler, J. D.;magnetar;35;5961
+Henshaw, J. D.;acorns;21;989
+Henshaw, J. D.;scousepy;93;989
+Ginsburg, A.;scousepy;13;989
+Clark, S. E.;RHT;41;4692
+Schudel888;RHT;33;4692
+Muthukrishna, Daniel;astrorapid;70;1967
+Lazarus, P.;coast_guard;105;4153
+Lazarus, P.;TOASTER;112;4153
+Alexander Samoilov;TOASTER;12;4153
+Soler, J. D.;astroHOG;55;457
+Juan Diego Soler;astroHOG;7;457
+Creaner, Oisń;locus;6;24
+orkunozdarcan;pywd2015-qt5;25;19
+varnani;pywd2015-qt5;6;19
+Hutter, Anne;astraeus;9;2237
+Manodeep Sinha;astraeus;1;2237
+ahoward-cf;ppmap;13;1146
+Alexander Howard;ppmap;4;1146
+Marsh, K. A.;ppmap;2;1146
+van Holstein, R. G.;IRDAP;62;1575
+Milli, J.;IRDAP;10;1575
+van Holstein, R. G.;IRDAP;62;1575
+Milli, J.;IRDAP;10;1575
+Scicluna, P.;precision;19;22
+Leahy, Denis A.;roche-radius-calculator;3;133
+Cameron, A. D.;ffancy;4;649
+Errmann, Ronny;HiFLEx;124;70
+Yuan, Sihan;s3PCF;2;285
+Oh, Se-Heon;2dbat;1;575
+Agarwal, Devansh;fetch;30;1873
+Aggarwal, Kshitij;fetch;5;1873
+Huang, Weirong;RAPP;3;14
+Xie, Zhou;RAPP;5;14
+Biprateep Dey;cdetools;1;185
+Dalmasso, N.;cdetools;7;185
+Izbicki, R.;cdetools;2;185
+Pospisil, T.;cdetools;3;185
+Nic Dalmasso;RFCDE;8;15
+Pospisil, Taylor;RFCDE;26;15
+Philcox, Oliver H. E.;HIPSTER;22;748
+Oliver H. Philcox;HIPSTER;14;748
+texify[bot];HIPSTER;9;748
+Nakazato, Takeshi;priism;148;136
+xfangcosmo;2DFFTLog;4;1984
+Fang, Xiao;2DFFTLog;6;1984
+JCGoran;2DFFTLog;1;1984
+Defferrard, M.;deepsphere-cosmo-tf1;36;944
+Perraudin, N.;deepsphere-cosmo-tf1;51;944
+nperraud;deepsphere-cosmo-tf1;14;944
+Chianese, Marco;AxionNS_RayTracing;1;1535
+Leroy, Mikaël;AxionNS_RayTracing;1;1535
+Zechmeister, M.;serval;168;6304
+Athanaseus Javas Ramaila;caracal;103;246
+Makhathini, S.;caracal;132;246
+sphemakh;caracal;107;246
+Serra, P.;caracal;195;246
+Smirnov, O. M.;caracal;82;246
+Thorat, K.;caracal;89;246
+Maccagni, F. M.;caracal;24;246
+Fil8;caracal;39;246
+gigjozsa;caracal;20;246
+Kamphuis, P.;caracal;100;246
+KshitijT;caracal;45;246
+Francesca Loi;caracal;26;246
+Gyula Jozsa (Josh);caracal;55;246
+White, S. V.;caracal;28;246
+Hugo, B. V.;caracal;42;246
+Gyula I. G. Jozsa;caracal;49;246
+kat;caracal;40;246
+Serra, P.;caracal-docs;59;246
+Gallet, F.;TATOO;37;83
+Corsaro, E.;FAMED;51;81
+Jean;FAMED;8;81
+Bowman, William P.;MCSED;7;175
+Belles, Alexander;MCSED;7;175
+wpb-astro;MCSED;41;175
+Astropianist;MCSED;17;175
+Zeimann, Gregory R.;MCSED;31;175
+Stahl, Benjamin E.;deepSIP;9;1159
+dependabot[bot];deepSIP;1;1159
+Angus, Ruth;gprotation;133;3640
+Morton, Timothy;gprotation;34;3640
+Shajib, A. J.;hierArc;9;11181
+williyamshoe;hierArc;10;11181
+Birrer, S.;hierArc;96;11181
+Peter Behroozi;rockstar;33;2137
+Yao-Yuan Mao;rockstar;7;2137
+Sanders, J. S.;spex_to_xspec;6;418
+Wang, Long;PeTar;497;397
+lwang-astro;PeTar;68;397
+Farahi, Arya;PoPE;9;38
+Leonardo Robol;MPSolve.git;427;15
+Leonardo Robol;MPSolve;427;15
+Oliveira, Renan A.;polyMV;6;15
+Yitian Sun;DarkHistory;29;948
+Liu, Hongwan;DarkHistory;169;948
+Ridgway, Gregory W.;DarkHistory;97;948
+c3141592;DarkHistory;17;948
+Greg;DarkHistory;18;948
+Jolly, Jean-Baptiste;LineStacker;14;44
+Lipatov, Mikhail;paint_atmospheres;102;19
+Yurchenko, Sergei N.;TROVE;100;2638
+Trovemaster;TROVE;98;2638
+AvrahamBinn;SPARTA;6;69
+saharsh1;SPARTA;7;69
+Shahaf, S.;SPARTA;12;69
+dependabot[bot];SPARTA;2;69
+AvrahamBinni;SPARTA;1;69
+Fowlie, Andrew;PhaseTracer;7;360
+Athron, Peter;PhaseTracer;5;360
+Zhang, Yang;PhaseTracer;19;360
+Farahi, Arya;kllr;17;957
+Anbajagane, Dhayaa;kllr;23;957
+Kawahara, Hajime;sot;79;32
+Chaithya, G. R.;pysap;8;56
+Farrens, S.;pysap;56;56
+Ramzi, Z.;pysap;7;56
+Grigis, A.;pysap;52;56
+Starck, S.;pysap;15;56
+lelguedd;pysap;9;56
+El Gueddari, L.;pysap;7;56
+Sarthou, B.;pysap;15;56
+Cherkaoui, H.;pysap;8;56
+Howlett, Cullan;Barry;188;616
+Hinton, Samuel R.;Barry;88;616
+Möller, A.;SuperNNova;19;1618
+anaismoller;SuperNNova;91;1618
+Anais Moller;SuperNNova;19;1618
+Karamanis, Minas;zeus;57;235
+Mike S Wang;HorizonGRound;7;432
+Mike Shengbo Wang;HorizonGRound;36;432
+Wang, Mike (Shengbo);HorizonGRound;53;432
+Xu, Duo;casi-3d;5;187
+Jaffa, S. E.;Jplots;23;191
+Sandick, Pearl;MADHAT;10;277
+Adam, R.;minot;31;77
+Fryer, Daniel;rcosmo;95;10
+Olenko, Andriy;rcosmo;25;10
+VidaliLama;rcosmo;15;10
+Gomez, Sebastian;FLEET;26;214
+Hosseinzadeh, Griffin;FLEET;2;214
+Mishra-Sharma, Siddharth;mining-for-substructure-lens;30;1106
+Brehmer, Johann;mining-for-substructure-lens;116;1106
+Le Sueur, C. Ruth;molscat;12;24
+RuthLS;molscat;9;24
+Hutson, Jeremy M.;molscat;4;24
+Forgan, Duncan;tache;15;41
+Forgan, Duncan;grapus;24;4285
+Carron, J.;plancklens;186;35612
+louisl3grand;plancklens;16;35612
+de los Rios, Martín;ROGER;10;39
+martin;ROGER;20;39
+Claes, Niels;legolas;339;65
+De Jonghe, Jordi;legolas;69;65
+Dauser, T.;relxill;209;12624
+Green, Adam;DarkCapPy;17;1845
+Prashin Jethwa;dynamite;61;17796
+Thomas I. Maindl;dynamite;94;17796
+Thomas Maindl;dynamite;16;17796
+prashjet;dynamite;13;17796
+maindlt;dynamite;10;17796
+Schaan, Emmanuel;HaloGen;11;1062
+Mirocha, Jordan;ares;813;3389
+Bedell, Megan;wobble;134;483
+Filippazzo, Joseph C.;SEDkit;171;8233
+Campos Estrada, Beatriz;EvapMass;8;1331
+Owen, James E.;EvapMass;9;1331
+Karako-Argaman, C.;RRATtrap;1;3371
+Chen Karako-Argaman;RRATtrap;1;3371
+Tamayo, Daniel;reboundx;286;938
+Rein, Hanno;reboundx;27;938
+Tiger Lu;reboundx;28;938
+Stanley A. Baronett;reboundx;31;938
+Meingast, Stefan;PNICER;71;173
+Tanoglidis, D.;DeepShadows;11;202
+dbosul;CWITools;69;131
+Chen, Yuguang;CWITools;19;131
+O'Sullivan, Donal;CWITools;71;131
+Tomas Gonzalo;gambit_1.5;215;3144
+Patrick Stöcker;gambit_1.5;160;3144
+Scott, Pat;gambit_1.5;763;3144
+Andy Buckley;gambit_1.5;152;3144
+Kvellestad, Anders;gambit_1.5;282;3144
+Ankit Beniwal;gambit_1.5;94;3144
+Cornell, Jonathan M.;gambit_1.5;161;3144
+janinarenk;gambit_1.5;86;3144
+Farmer, Ben;gambit_1.5;376;3144
+Peter Athron;gambit_1.5;132;3144
+Weniger, Christoph;gambit_1.5;272;3144
+Gregory Martinez;gambit_1.5;111;3144
+James McKay;gambit_1.5;90;3144
+Abram Krislock;gambit_1.5;169;3144
+Kahlhoefer, Felix;DDCalc;37;3843
+Knut Dundas Moraa;DDCalc;4;3843
+Scott, Pat;DDCalc;4;3843
+Wild, Sebastian;DDCalc;14;3843
+Kahlhoefer, Felix;ddcalc;37;3843
+Knut Dundas Moraa;ddcalc;4;3843
+Scott, Pat;ddcalc;4;3843
+Wild, Sebastian;ddcalc;14;3843
+Nidever, David L.;noaosourcecatalog;293;998
+Lovell, C. C.;sengi;28;91
+Milson, Nicholas;BinaryStarSolver;16;21
+Zhang, Kai;MLC_ELGs;6;1060
+Coughlin, Jeffrey L.;kepler-robovetter;9;9179
+Ashar;kepler-robovetter;1;9179
+Ford, Eric B.;kepler-robovetter;1;9179
+Ronnie P;kepler-robovetter;1;9179
+Coughlin, Jeffrey L.;skye;5;9179
+Mirocha, Jordan;sedop;3;1866
+Schreiber, Jacob;pomegranate;231;162
+jmschrei;pomegranate;28;162
+herjy;SLIT;5;496
+Joseph, R.;SLIT;1;496
+Kieran;SimCADO;18;194
+Czoske, O.;SimCADO;96;194
+miguelverdugo;SimCADO;34;194
+Leschinski, K.;SimCADO;59;194
+astronomyk;SimCADO;11;194
+gastronomyk;SimCADO;37;194
+Ogrean, Georgiana;PyXel;55;59
+Wette, Karl;SOFTX_2020_119;156;555
+Andre-Nicolas Chene;DRAGRACES;21;49
+github-actions[bot];Magritte;65;155
+De Ceuster, Frederik;Magritte;105;155
+Thomas Ceulemans;Magritte;106;155
+ThomasCeulemans;Magritte;14;155
+Shivottam, Jyotirmaya;einsteinpy;42;220
+Bapat, Shreyas;einsteinpy;110;220
+Saha, Ritwik;einsteinpy;74;220
+Singh, Varun;einsteinpy;13;220
+sofia_ov;einsteinpy;17;220
+Boone, Kyle;avocado;49;1059
+Vousden, W. D.;ptemcee;19;5511
+Farias, H.;mask_galaxy;3;82
+Coughlin, Jeffrey L.;EphemMatch;3;14883
+Bovy, Jo;apogee;188;5724
+Ted Mackereth;apogee;22;5724
+Barnes, Rory;EqTide;16;1898
+Suissa, Gabrielle;hardCORE;2;152
+cool worlds;hardCORE;1;152
+Conseil, S.;muse-psfr;35;407
+Bacon, R.;muse-psfr;8;407
+Buchner, J.;nway;60;5391
+Andreas Noack;ForwardDiff.jl;19;356
+Kristoffer Carlsson;ForwardDiff.jl;25;356
+Revels, Jarrett;ForwardDiff.jl;123;356
+Papamarkou, Theodore;ForwardDiff.jl;36;356
+Coles, Jonathan P.;mosaic;1;91
+Pagano, G.;lensinggw;36;904
+Cretignier, M.;Rassine_public;23;231
+Bellomo, Nicola;Multi_CLASS;3;445
+Jarvis, M.;Piff;183;2115
+PFLeget;Piff;59;2115
+Meyers, J.;Piff;21;2115
+Davis, C.;Piff;35;2115
+Boone, K.;binaryoffset;2;821
+Vitral, Eduardo;balrogo;78;477
+Stroe, Andra;gleam;43;12
+Savu, Victor-Nicolae;gleam;6;12
+Quarles, Billy;satcand;3;83
+Multiversario;satcand;1;83
+Nishimichi, Takahiro;dark_emulator_public;13;3408
+git-sunao;dark_emulator_public;3;3408
+Miyatake, Hironao;dark_emulator_public;8;3408
+sunaosugiyama;dark_emulator_public;5;3408
+杉山素直;dark_emulator_public;2;3408
+Yu, Liang;AstroNet-Vetting;8;514
+Yu, Liang;AstroNet-Triage;36;514
+Alonso, David;schNell;18;1185
+Turner, Ross J.;RAiSERed;3;31
+damonge;CRIME;2;1866
+dmonge;CRIME;3;1866
+Alonso, David;CRIME;1;1866
+Anze Slosar;CRIME;1;1866
+Zhu, Xing-Jiang;GalacticDNSMass;2;9437
+Farrow, Nicholas;GalacticDNSMass;8;9437
+Luke Shingles;artis;520;9172
+Brewer, Brendon J.;RJObject;94;382
+Marmo, Chiara;freeture;7;183
+Asubayo;freeture;58;183
+Asubayah;freeture;25;183
+Audureau, Yoan;freeture;19;183
+Feeney, Stephen M.;ddspectra;65;97
+Iyer, Kartheik G.;dense_basis;24;2950
+protopotato;dense_basis;3;2950
+Carnall, A. C.;bagpipes;76;9653
+pw31;GGchem;20;3596
+Woitke, P.;GGchem;129;3596
+Turner, G. E.;GGchem;19;3596
+Carnall, A. C.;SpectRes;13;1669
+Peter Scicluna;SpectRes;3;1669
+Namikawa, Toshiya;cmblensplus;25;3344
+Your Name;cmblensplus;39;3344
+Bull, Philip;RadioFisher;37;9995
+Zhang, Pierre;pybird;63;5396
+D'Amico, Guido;pybird;14;5396
+Jermyn, Adam S.;Skye;6;477
+Placco, Vinicius M.;linemake;43;374
+Pearce, Logan A.;lofti_gaia;39;688
+Blanco-Cuaresma, Sergi;posidonius;89;112
+Bolmont, Emeline;posidonius;14;112
+Lang, Meagan;TesseRACt;14;60
+Baron, Dalya;Sequencer;12;65
+profxj;Sequencer;2;65
+jah1994;PyTorchDIA;13;17
+Brandon C. Kelly;CUDAHM;42;10
+Tamas Budavari;CUDAHM;5;10
+Wu, Chen;rgz_rcnn;39;982
+Bull, Philip;random-quintessence;4;2683
+leroy.42;phangs_imaging_scripts;41;1602
+Leroy, Adam K.;phangs_imaging_scripts;190;1602
+1054;phangs_imaging_scripts;32;1602
+Williams, Thomas G.;phangs_imaging_scripts;31;1602
+Rosolowsky, Erik;phangs_imaging_scripts;42;1602
+Schlafly, E. F.;crowdsource;50;5116
+andrew-saydjari;crowdsource;34;5116
+Andrew Saydjari;crowdsource;9;5116
+Cherinka, Brian;marvin;412;3165
+Sánchez-Gallego, José;marvin;176;3165
+Andrews, Brett H.;marvin;200;3165
+bac29;marvin;111;3165
+chrysante87;pyterpol;57;150
+gperezs;StarcNet;1;176
+guspe98;StarcNet;9;176
+Pérez, Gustavo;StarcNet;1;176
+Maji, Subhransu;StarcNet;1;176
+Caldiroli, Andrea;ATES-Code;45;111
+Busca, Nicolas;QuasarNET;32;1712
+Pérez-Ràfols, Ignasi;picca;258;8514
+cesar ramirez;picca;32;8514
+Cuceu, Andrei;picca;56;8514
+Blomqvist, Michael;picca;160;8514
+Ravoux, Corentin;picca;31;8514
+alxogm;picca;20;8514
+du Mas des Bourboux, Hélion;picca;112;8514
+londumas;picca;177;8514
+de Sainte Agathe, Victoria;picca;32;8514
+Nicolas Busca;picca;107;8514
+Cyeche;picca;40;8514
+ngbusca;picca;91;8514
+SimonCan;BlenDaViz;34;144
+Iomsn;BlenDaViz;19;144
+Chris Smiet;BlenDaViz;5;144
+smiet;BlenDaViz;4;144
+Iomsn;glemur;13;144
+Simon Candeleresi;glemur;5;144
+iomsn;glemur;11;144
+Alejandro Aguayo-Ortiz;aztekas-main;117;58
+aztekas-code;aztekas-main;22;58
+Chang, Seok-Jun;STaRS;4;33
+Dobbs, Matt;so_noise_models;8;22948
+Toshiya Namikawa;so_noise_models;2;22948
+Dicker, Simon;so_noise_models;1;22948
+Madhavacheril, Mathew;so_noise_models;1;22948
+Hill, Charles A.;so_noise_models;1;22948
+Andrea Zonca;so_noise_models;1;22948
+Jiménez Fernández, Bruno;katu;63;31
+Jiménez Fernández, Bruno;Katu;63;31
+Price, Layne C.;MultiModeCode;1;1485
+Anik Halder;bihalofit_cpp;2;842
+Maggiore, Michele;DarkSirensStat;36;2969
+Finke, Andreas;DarkSirensStat;28;2969
+Matwey V. Kornilov;zwad;18;297
+Malanchev, K. L.;zwad;38;297
+Korolev, V. S.;zwad;9;297
+Patrick D. Aleo;zwad;13;297
+Malanchev, K. L.;ztf-viewer;168;297
+dependabot[bot];ztf-viewer;36;297
+pre-commit-ci[bot];ztf-viewer;23;297
+Marra, Valerio;CalPriorSNIa;18;6881
+Angel de Vicente;PORTA;9;908
+Mondal, R.;N-body;3;3527
+Abinash Kumar Shaw;N-body;2;3527
+Mondal, R.;FoF-Halo-finder;4;1429
+Abinash Kumar Shaw;FoF-Halo-finder;1;1429
+Mondal, Rajesh;ReionYuga;5;895
+Abinash Kumar Shaw;ReionYuga;1;895
+Professor Wayne B. Hayes, UC Irvine;SpArcFiRe;61;1015
+Hayes, Wayne B.;SpArcFiRe;29;1015
+Matthew Portman;SpArcFiRe;98;1015
+Daniel Cheng;SpArcFiRe;23;1015
+Guillaume Noiset;gubas;2;158
+hagrusa;gubas;2;158
+meyeralexj;gubas;4;158
+Davis, Alex B.;gubas;6;158
+McClintock, Thomas;AReconstructionTool;10;197
+Sandford, Nathan R.;Chem-I-Calc;44;200
+Kastaun, Wolfgang;RePrimAnd;20;292
+Roland Haas;RePrimAnd;2;292
+Heyl, Jeremy S.;kd-match;6;244
+G. Ucci;cosmic_variance;6;666
+Ucci, Graziano;cosmic_variance;3;666
+Wang, Dun;K2-CPM;23;505
+Radek Poleski;K2-CPM;38;505
+Clément Ranc;K2-CPM;9;505
+jvc2688;K2-CPM;14;505
+Poleski, R.;MCPM;168;104
+Haowen Zhang;TRINITY;30;18625
+HaowenZhang;TRINITY;5;18625
+Mondal, Rajesh;MAPS;1;619
+thegeorg;catboost;441;109
+robot-contrib;catboost;198;109
+robot-piglet;catboost;258;109
+akhropov;catboost;498;109
+svidyuk;catboost;224;109
+snermolaev;catboost;382;109
+shadchin;catboost;224;109
+arcadia-devtools;catboost;1162;109
+spreis;catboost;179;109
+robot-srch-releaser;catboost;631;109
+Evgueni Petrov;catboost;276;109
+Ekaterina Ermishkina;catboost;174;109
+Vorobev, Aleksandr;catboost;252;109
+heretic;catboost;247;109
+Stanislav Kirillov;catboost;277;109
+zomb-sandbox-rw;catboost;569;109
+orivej;catboost;172;109
+Nikita Dmitriev;catboost;147;109
+Vasily Ershov;catboost;133;109
+Yandex commit bot;catboost;122;109
+Dmitry Baksheev;catboost;139;109
+Justus Neumann;firefly_release;15;5918
+Goddard, Daniel;firefly_release;8;5918
+viogp;firefly_release;15;5918
+Violeta Gonzalez-Perez;firefly_release;12;5918
+JohanComparat;firefly_release;2;5918
+Violeta;firefly_release;6;5918
+Maraston, Claudia;firefly_release;2;5918
+Sofia Meneses-Goytia;firefly_release;2;5918
+NRDD-constraints;NRDD;7;48
+mike;elisa;238;32
+fredy402;elisa;112;32
+miro;elisa;356;32
+Stone, Connor J.;AutoProf;95;156
+SterlingYM;astroPIPS;38;31
+Murakami, Yukei S.;astroPIPS;15;31
+Arjun Savel;astroPIPS;13;31
+Maureen Cohen;ExoPlaSim;24;36
+Paradise, Adiv;ExoPlaSim;147;36
+maureenjcohen;ExoPlaSim;17;36
+Edilbert Kirk;ExoPlaSim;19;36
+Edilbert;ExoPlaSim;29;36
+Maureen Cohen;ExoPlaSim;24;36
+Paradise, Adiv;ExoPlaSim;147;36
+maureenjcohen;ExoPlaSim;17;36
+Edilbert Kirk;ExoPlaSim;19;36
+Edilbert;ExoPlaSim;29;36
+Breivik, Katelyn;COSMIC;253;4467
+Zevin, Michael;COSMIC;66;4467
+Coughlin, Scott;COSMIC;195;4467
+me-manu;gammaALPs;36;223
+Meyer, M.;gammaALPs;20;223
+Davies, J.;gammaALPs;11;223
+specktakel;gammaALPs;7;223
+lyf222;alpconv;3;246
+SoFiA (inactive);SoFiA-2;1;265
+SoFiA;SoFiA-2;1;265
+Jennings, Jeff;frank;101;903
+Booth, Richard A.;frank;83;903
+Tazzari, Marco;frank;9;903
+Batman (by day, Jeff Jennings);frank;24;903
+Li, Rixin;Rubble;7;108
+Campbell-White, Justyn;STAR_MELT;25;141
+Kirkby, David P.;WeakLensingDeblending;95;92
+Mendoza, Ismael;WeakLensingDeblending;42;92
+Sanchez, Javier;WeakLensingDeblending;18;92
+Laplace, E.;tulips;78;242
+Eva;tulips;8;242
+ilsedelangen;tulips;24;242
+Robert Farmer;mesaplot;154;242
+Safa, Ibrahim;TauRunner;76;716
+jlazar17;TauRunner;45;716
+Pizzuto, Alex;TauRunner;34;716
+arguelles;TauRunner;5;716
+Konstantin Malanchev;parsnip;10;132
+Boone, Kyle;parsnip;48;132
+Wibking, Benjamin D.;quokka;360;19
+dependabot[bot];quokka;29;19
+Amalie Stokholm;BASTA;5;11203
+Jakob Lysgaard Rørsted;BASTA;33;11203
+Mark Lykke Winther;BASTA;11;11203
+Edwards, Thomas D. P.;swordfish;2;400
+Weniger, Christoph;swordfish;7;400
+tedwards2412;swordfish;13;400
+Carlo Lucibello;model-zoo;31;22
+Innes, Michael;model-zoo;10;22
+Brian Chen;model-zoo;11;22
+lilianabs;model-zoo;9;22
+Jake Taylor;model-zoo;10;22
+Gandhi, Dhairya;model-zoo;59;22
+Aditya Tewary;model-zoo;7;22
+Adarshkumar712;model-zoo;12;22
+Innes, Mike;model-zoo;74;22
+Karmali, Tejan;model-zoo;20;22
+Yerdos Ordabayev;pyro;46;142
+Obermeyer, Fritz;pyro;419;142
+Du Phan;pyro;121;142
+eb8680;pyro;76;142
+Jankowiak, Martin;pyro;140;142
+Pradhan, Neeraj;pyro;183;142
+JP;pyro;50;142
+Challener, Ryan C.;ThERESA;94;101
+López-Cobá, Carlos;XookSuut-code;12;10
+Smith, Michael J.;astroddpm;6;137
+Phil Wang;astroddpm;13;137
+Tabernero, H. M.;SteParSyn;5;207
+Your Name;SteParSyn;1;207
+Emken, Timon;DarkARC;19;1911
+Emken, Timon;Dirac_vs_Majorana;3;185
+Quera-Bofarull, Arnau;qwind;64;77
+Quera-Bofarull, Arnau;Qwind.jl;188;47
+Ridden-Harper, R.;tessreduce;14;44
+Ryan Ridden-Harper;tessreduce;24;44
+CheerfulUser;tessreduce;36;44
+Hirose, Shigenobu;optab;17;31
+Kester, Do;BayesicFitting;79;40
+Chen, Renyi;GRIT;5;37
+Li, Gongjie;GRIT;5;37
+GRIT-RBSim;GRIT;1;37
+babacry;GRIT;1;37
+Karamanis, Minas;hankl;9;66
+Hara, Nathan C.;l1periodogram;15;854
+user1;JexoSim;2;153
+Sarkar, Subhajit;JexoSim;21;153
+Mishra-Sharma, Siddharth;dark-photons-perturbations;7;1043
+Newton, Elisabeth R.;tellrv;12;6963
+Rodriguez-Gomez, Vicente;statmorph;54;7337
+vrodgom;statmorph;61;7337
+Rice, David R.;Magrathea;21;23
+Huang, Chenliang;Magrathea;24;23
+RozanskiT;suppnet;15;11
+Różański, T.;suppnet;3;11
+Petigura, Erik A.;terra;210;3396
+Zink, Jon K.;EDI-Vetter;5;383
+Zink, Jon K.;EDI_Vetter_unplugged;10;383
+Mantha, Kameswara Bharadwaj;residual_feature_extraction;4;239
+km4n6@mail.umkc.edu;residual_feature_extraction;3;239
+parkus;fiducial_flare;1;1541
+Loyd, R. O. Parke;fiducial_flare;15;1541
+R. O. Parke Loyd;fiducial_flare;1;1541
+Barragán, Oscar;citlalicue;17;356
+Sabti, Nashwan;gallumi_public;6;1072
+Ellsworth-Bowers, Timothy P.;distance-omnibus;15;2724
+Timothy Ellsworth-Bowers;distance-omnibus;35;2724
+Rehemtulla, Nabeel;NIMBLE;31;116
+Westfall, Kyle B.;mangadap;373;4701
+Andrews, Brett H.;mangadap;78;4701
+Mamon, Gary A.;MAMPOSSt;14;4412
+Hedges, Christina;vetting;14;45
+Zhu, Guangtun;SetCoverPy;3;218
+Benjamin;SetCoverPy;6;218
+Ra-yne;axionCAMB;2;21243
+Grin, Daniel;axionCAMB;1;21243
+dgrin1;axionCAMB;6;21243
+Marsh, David J. E.;axionCAMB;2;21243
+Hlozek, Renée;axionCAMB;2;21243
+Federrath, C.;turbulence_generator;24;31023
+Higgins, Michael E.;TESS-Localize;30;28
+Bell, Keaton J.;TESS-Localize;11;28
+unknown;mayo_hci;2;196
+Pairet, Benoît;mayo_hci;10;196
+Childs, Anna C.;rebound_fragmentation;11;14
+Khorshid, N.;simab;4;159
+Niloo;simab;11;159
+Deppe, Nils;spectre;1810;1431
+wthrowe;spectre;264;1431
+Kyle Nelli;spectre;311;1431
+Kidder, Lawrence E.;spectre;846;1431
+William Throwe;spectre;523;1431
+Geoffrey Lovelace;spectre;142;1431
+Yoonsoo Kim;spectre;121;1431
+Scheel, Mark A.;spectre;236;1431
+Jordan Moxon;spectre;214;1431
+Foucart, Francois;spectre;215;1431
+Temple, Matthew J.;qsogen;12;275
+bradkav;EarthScatterLikelihood;14;278
+Kavanagh, Bradley J.;EarthScatterLikelihood;10;278
+Herpich, J.;pyICs;13;327
+Espinoza, Néstor;ld-exosim;7;1834
+Barry, N.;FHD;258;6805
+Byrne, R.;FHD;173;6805
+Hazelton, B. J.;FHD;136;6805
+Sullivan, I. S.;FHD;719;6805
+aelanman;FHD;62;6805
+Adam Beardley;FHD;113;6805
+valles;asohf;93;2779
+valles;vortex;36;17
+Yash Gondhalekar;Periodogram-Comparison-Optimize-Planet-Detection;69;292
+Yash-10;Periodogram-Comparison-Optimize-Planet-Detection;9;292
+Kawahara, Hajime;exojax;371;59
+Tako;exojax;69;59
+Zhu, Guangtun;NonnegMFPy;3;287
+Benjamin;NonnegMFPy;4;287
+Espinosa-Ponce, C.;pyHIIexplorerV2;18;553
+Ruschel-Dutra, D.;ifscube;190;210
+danielrd6;ifscube;47;210
+druscheld;ifscube;79;210
+Daniel;ifscube;43;210
+Holcomb, Rae J.;SpinSpotter;10;71
+PeriPapaya;SpinSpotter;2;71
+Postma, Joseph E.;CCDLAB;16;750
+Bottrell, Connor;realsim_ifs;5;44
+Freundlich, Jonathan;CuspCore;1;862
+Hervías-Caimapo, Carlos;DustFilaments;10;190
+chervias;DustFilaments;10;190
+Lebouteiller, V.;mgris;152;49
+martin;MeSsI;7;217
+de Los Rios, Martín;MeSsI;15;217
+Pamos Ortega, David;MultiModes;9;32
+Ervin, Tamar;SolAster;21;56
+Dani;Helios-r2;2;1492
+Exoclimes Simulation Platform;Helios-r2;2;1492
+BuildTools;Helios-r2;1;1492
+Evert Nasedkin;petitRADTRANS;77;4636
+mauricemolli;petitRADTRANS;82;4636
+Mollière, P.;petitRADTRANS;63;4636
+Nicholas Evert Nasedkin;petitRADTRANS;49;4636
+Tomas Stolker;petitRADTRANS;10;4636
+Méndez, Mariano;vkompth;4;111
+García, Federico;vkompth;19;111
+figante;vkompth;3;111
+Oh, Se-Heon;baygaud;4;54
+Oh, Se-Heon;baygaud-PI;10;54
+Minsu Kim;baygaud-PI;4;54
+AstroMandu;baygaud-PI;1;54
+Pinte, C.;mcfost;852;16090
+Benjamin Tessore;mcfost;392;16090
+Sheehan, Patrick D.;pdspy;420;542
+Hu, Chia-Yu;ParticleGridMapper.jl;12;160
+github-actions[bot];ParticleGridMapper.jl;2;160
+Matt Daily;banzai;184;1513
+McCully, Curtis;banzai;299;1513
+David Collom;banzai;33;1513
+Turner, Monica L.;banzai;69;1513
+Thomas Robitaille;banzai;67;1513
+Brigitta Sipocz;banzai;32;1513
+Abdurro'uf;piXedfit;38;385
+Abdurrouf;piXedfit;8;385
+ABDURROUF;piXedfit;43;385
+Mayeul d'Avezac;ssht;55;478
+Martin Reinecke;ssht;11;478
+McEwen, Jason D.;ssht;74;478
+Christopher Wallis;ssht;25;478
+paddyroddy;ssht;20;478
+Wallis, Christopher G. R.;massmappy;20;556
+McEwen, Jason D.;massmappy;4;556
+Plouviez, Antoine;massmappy;3;556
+Loyd, R. O. Parke;ffd;23;1541
+Buscher, David F.;pois;7;92
+Abdul-Masih, Michael;SPAMMS;27;230
+Jiao, Sihan;j-comb;4;12
+Merten, Lukas;CRPropa3;131;4540
+Dörner, Julien;CRPropa3;30;4540
+Alves Batista, Rafael;CRPropa3;63;4540
+Reichherzer, Patrick;CRPropa3;40;4540
+Dundovic, Andrej;CRPropa3;106;4540
+Frie, Antonius;CRPropa3;32;4540
+Winchen, Tobias;CRPropa3;139;4540
+Walz, David;CRPropa3;285;4540
+Müller, Gero;CRPropa3;94;4540
+彭琛;yonder;10;10
+Chen, Peng;yonder;6;10
+de Souza, Rafael S.;yonder;2;10
+Jeffrey, Niall;DeepMass;70;540
+Fiedorowicz, Pier;karmma;5;124
+Sclocco, A.;AMBER;131;141
+Kravtsov, Andrey;grumpy;7;401
+Manwadkar, Viraj;grumpy;1;401
+dartoon;galight;98;181
+Ding, Xuheng;galight;11;181
+Ahmed Al-Refaie;TauREx3_public;211;1539
+Changeat, Q.;TauREx3_public;25;1539
+Fumana, M.;SpectraPy;160;19
+el2718;FastQSL;37;32
+Zhang, PeiJin;FastQSL;44;32
+el2718;FastQSL;7;32
+Irwin, P. G. J.;radtrancode;145;12630
+nemesiscode;radtrancode;36;12630
+Fletcher, L. N.;radtrancode;24;12630
+Perf. Patrick Irwin;radtrancode;196;12630
+Prather, Ben;iharm3d;150;683
+White, Christopher J.;blacklight;90;35
+Baldini, Luca;ixpeobssim;46;685
+Silvestri, Stefano;ixpeobssim;7;685
+Manfreda, Alberto;ixpeobssim;8;685
+simone_castellano;ixpeobssim;5;685
+Cunha, P. A. C.;SHEEP;9;24
+Liaudat, T.;mccd;40;30
+Jeffrey, Niall;BornRaytrace;23;1289
+Shajib, Anowar J.;LensingETC;14;40
+Teinturier, Lucas;Cloud-Killer-;4;20
+Bernardo, Reginald Christian;PTAfast;12;102
+Trac, Hy;amber;9;202
+Park, Ji Won;baobab;70;486
+Wagner-Carena, Sebastian;baobab;9;486
+Kilbinger, Martin;pmclib;9;3633
+test user;pmclib;1;3633
+Wagner-Carena, Sebastian;ovejero;37;577
+Wheeler, Adam J.;korg.jl;311;10
+Abruzzo, Matthew W.;korg.jl;52;10
+Grasso, Michele;bigonlight;7;24
+Cook, N.;apero-drs;854;1052
+njcuk9999;apero-drs;216;1052
+Iacovelli, Francesco;gwfast;46;261
+Mancarella, Michele;gwfast;15;261
+Maier, G.;Eventdisplay;208;290
+Elbers, Willem;fastdf;26;88
+wullm;fastdf;4;88
+javicarron;mtneedlet;1;30
+Javier Carron;mtneedlet;1;30
+Carrón Duque, J.;mtneedlet;7;30
+Morrison, Logan;Hazma;144;582
+Coogan, Adam;Hazma;92;582
+Farrens, S.;sf_deconvolve;28;47
+G. Mirek Brandt;xwavecal;6;11
+Brandt, G. Mirek;xwavecal;38;11
+Daily, Matthew;banzai-nres;47;14
+McCully, Curtis;banzai-nres;125;14
+Brandt, G. Mirek;banzai-nres;168;14
+Johnson, Marshall C.;banzai-nres;18;14
+captain-exoplanet;banzai-nres;29;14
+Krissansen-Totton, Joshua;Oxygen-False-Positives;1;284
+Schefer, M.;sourcextractorplusplus;342;305
+Martin Kuemmel;sourcextractorplusplus;52;305
+Alejandro Alvarez Ayllon;sourcextractorplusplus;188;305
+Álvarez-Ayllón, A.;sourcextractorplusplus;214;305
+“Martin;sourcextractorplusplus;47;305
+Apostolakos, N.;sourcextractorplusplus;41;305
+Sreejith, A. G.;CONTROL;24;12
+Iacovelli, Francesco;WF4Py;10;261
+Tristram, M.;lollipop;17;74432
+Xavier Garrido;lollipop;10;74432
+Peel, Mike W.;fastcc;23;17
+Turner, D. J.;XGA;43;28
+DavidT3;XGA;214;28
+David;XGA;90;28
+dt237;XGA;69;28
+Cook, Neil J.;lbl;130;149
+Artigau, Étienne;lbl;17;149
+YinanZhao21;SOAP_GPU;4;20
+Allende-Prieto, Carlos;ferre;54;83
+Myers, Adam D.;desitarget;625;1072
+Bailey, Stephen;desitarget;158;1072
+Moustakas, John;desitarget;182;1072
+Cooper, Andrew P.;desitarget;76;1072
+Lucchini, Scott;MGwave;7;29
+Christiaens, Valentin;special;36;20
+Konz, N. C.;robust-outlier-rejection;34;17
+nickk124;robust-outlier-rejection;15;17
+Konz, N. C.;RCR;34;17
+nickk124;RCR;15;17
+Zellem, Robert T.;EXOTIC;345;286
+Engelke, John;EXOTIC;71;286
+Tamim Fatahi;EXOTIC;144;286
+Pearson, Kyle A.;EXOTIC;89;286
+mjs2369;EXOTIC;37;286
+Hearin, Andrew P.;diffstar;36;97
+Alarcon, Alex;diffstar;9;97
+Faria, J. P.;kima;47;464
+Thomas Baycroft;kima;15;464
+Zhao, Cheng;FCFC;4;41
+Soulain, A.;AMICAL;82;77
+Clément Robert;AMICAL;71;77
+pre-commit-ci[bot];AMICAL;23;77
+Anthony;AMICAL;15;77
+Thomas Vandal;AMICAL;16;77
+Hearin, Andrew P.;diffmah;103;145
+Rodd, Nicholas L.;HDMSpectra;10;681
+Varidel, Mathew R.;Blobby3D;32;280
+mvar0005;Blobby3D;24;280
+Hippke, Michael;communication;7;71
+Hippke, Michael;pandora;40;17
+Selvaggi, M.;delphes;234;5638
+Franco BEDESCHI;delphes;24;5638
+Demin, P.;delphes;131;5638
+Ulrike Schnoor;delphes;24;5638
+pavel;delphes;54;5638
+Green, Sheridan B.;SatGen;9;887
+folsomde;SatGen;1;887
+Syrtis Major;SatGen;1;887
+Jiang, Fangzhou;SatGen;3;887
+Breschi, Matteo;bajes;72;486
+Gregorio Carullo;bajes;25;486
+Swainston, N. A.;pulsar_spectra;75;20
+Yu Ting;pulsar_spectra;10;20
+cplee1;pulsar_spectra;36;20
+Lee, C. P.;pulsar_spectra;10;20
+Nick;pulsar_spectra;35;20
+Villanueva-Domingo, Pablo;HaloGraphNet;13;358
+Bonse, Markus J.;applefy;5;16
+majobodo;applefy;25;16
+Riggs, A. J. Eldorado;falco-matlab;210;65
+Jorge;falco-matlab;25;65
+Ruane, Garreth;falco-matlab;69;65
+A.J. Riggs;falco-matlab;69;65
+hcit;falco-matlab;22;65
+Riggs, A. J. Eldorado;falco-python;58;65
+A.J. Riggs;falco-python;26;65
+lmarchen;falco-python;10;65
+Santos F Fregoso;falco-python;12;65
+leonidp;falco-python;6;65
+sdwill;falco-python;6;65
+Fortenbach, Charles D.;JET;12;81
+Steinbring, E.;virtual_telescope;1;31
+Makhathini, Sphesihle;Stimela-classic;259;79
+Athanaseus Javas Ramaila;Stimela-classic;117;79
+sphemakh;Stimela-classic;253;79
+Oleg Smirnov;Stimela-classic;31;79
+Benjamin Hugo;Stimela-classic;69;79
+bennahugo;Stimela-classic;27;79
+Benna Hugo;Stimela-classic;31;79
+athanaseus;Stimela-classic;31;79
+SpheMakh;Stimela-classic;40;79
+Hugo, B.;DDFacet;245;4047
+Tasse, C.;DDFacet;438;4047
+Smirnov, O.;DDFacet;204;4047
+Hardcastle, M. J.;DDFacet;45;4047
+Bester, L.;DDFacet;122;4047
+Leistedt, Boris;flaglet-archive;13;185
+McEwen, Jason D.;flaglet-archive;4;185
+CosmoMatt;DarkMappy;5;358
+Price, M. A.;DarkMappy;2;358
+McEwen, J. D.;DarkMappy;1;358
+Hugo, B.;eidos;5;971
+Makhathini, S.;eidos;6;971
+sphemakh;eidos;4;971
+Asad, K. M. B.;eidos;10;971
+Khan M. B. Asad;eidos;12;971
+SpheMakh;eidos;3;971
+Taylor, Stephen R.;gw_pta_emulator;6;4262
+Bovy, Jo;simple-m2m;31;273
+Kawata, Daisuke;simple-m2m;12;273
+Field, Scott E.;gwsurrogate;147;8656
+Vijay Varma;gwsurrogate;59;8656
+Venumadhav, Tejaswi;sterile-dm;1;5265
+Subhonmesh Bose;sterile-dm;1;5265
+ntveem;sterile-dm;1;5265
+Mason, James Paul;James-s-EVE-Dimming-Index-JEDI;91;70
+Deistler, Michael;sbi;133;343
+Boelts, Jan;sbi;18;343
+janfb;sbi;137;343
+Lueckmann, Jan-Matthis;sbi;54;343
+Tejero-Cantero, Alvaro;sbi;27;343
+Leistedt, Boris;Delight;63;1731
+salomanders;photoParallax;18;3594
+Hogg, David W.;photoParallax;9;3594
+andersdot;photoParallax;3;3594
+Leistedt, Boris;photoParallax;3;3594
+Giacobbo, Nicola;source-code;16;17792
+San, M.;zodipy;110;35
+Schulik, Matthäus;aiolos;92;33
+Booth, Richard A.;aiolos;24;33
+Jespersen, Christian Kragh;Mangrove;31;132
+Muñoz, Julian B.;Zeus21;13;72
+Julian Munoz;Zeus21;11;72
+Law, C. J.;realfast;441;2691
+Breton, S. N.;apollinaire;249;17
+Robinson, Tyler D.;rfast;2;48
+Claytor, Zachary R.;butterpy;63;139
+Miles Lucas;butterpy;5;139
+CosmoTool;ECLIPSE;10;49
+Villanueva-Domingo, Pablo;CosmoGraphNet;4;234
+natalidesanti;CosmoGraphNet;1;234
+Jensen, Hannes;lasso_spectra;14;574
+Dakin, Jeppe;concept;395;60
+Clough, Katy;GRChombo;71;3269
+te307;GRChombo;11;3269
+Radia, Miren;GRChombo;106;3269
+TaigoFr;GRChombo;36;3269
+Kunesch, Markus;GRChombo;17;3269
+Jelic-Cizmek, Goran;coffe;136;352
+Reustle, A.;nuSpaceSim;74;101
+Reustle, A.;nupyprop;15;105
+Patel, S.;nupyprop;43;105
+Patel, Sameer;nupyprop;8;105
+Tsuna, Daichi;CHIPS;92;99
+Takei, Yuki;CHIPS;81;99
+Kuriyama, Naoto;CHIPS;21;99
+Winther, Hans A.;MG-PICOLA-PUBLIC;22;1595
+topolski;MG-PICOLA-PUBLIC;2;1595
+Bianco, Michele;SubgridClumping;5;144
+Sugiyama, Naonori S.;hitomi;15;17
+Setzer, Christian N.;kilopop;53;107
+Linke, Laila;threepoint;25;63
+Heydenreich, Sven;threepoint;26;63
+llinke1;threepoint;63;63
+Tsukui, Takafumi;ESSENCE;10;21
+Martinez-Palomera, Jorge;psfmachine;69;29
+Hedges, Christina;psfmachine;31;29
+van Eerten, Hendrik;boxfit;9;6647
+Valcin, David;BE_HaPPy;24;542
+Julian Munoz;RelicFast;6;1350
+wlxu;RelicFast;1;1350
+Dvorkin, Cora;RelicFast;1;1350
+Muñoz, Julian B.;RelicFast;1;1350
+Conroy, Charlie;alf;136;2879
+Villaume, Alexa;alf;24;2879
+Vogt, Sophie M. L.;axionHMcode;7;33
+Rein, Edan;pyPplusS;9;39
+Dirk van Dam;pyPplusS;1;39
+Hagen, Scott;AGNvar;37;18
+Julian Munoz;21cmvFAST;2;1734
+Muñoz, Julian B.;21cmvFAST;3;1734
+Vallisneri, Michele;synthlisa;95;2494
+mikekatz04;BOWIE;4;345
+Katz, Michael L.;BOWIE;36;345
+Teuben, Peter;DataComb;4;23
+Plunkett, Adele;DataComb;9;23
+emerge-erc;DataComb;1;23
+Hacar, Alvaro;DataComb;1;23
+Philcox, Oliver H. E.;PolyBin;20;29
+Oliver H. Philcox;PolyBin;8;29
+Vallucci-Goy, Valentin;shark;2;42
+Lebreuilly, Ugo;shark;7;42
+Bouma, Luke G.;gyro-interp;45;33
+Raveri, Marco;CosmicFish;26;2331
+Martinelli, Matteo;CosmicFish;9;2331
+Taylor, Aster G.;SAMUS;22;42
+Esquivel, A.;guacho;32;186
+vsieyra;guacho;5;186
+~/.gitconfig;guacho;10;186
+Izzard, R.;binary_c-python;53;21
+Hendriks, D.;binary_c-python;233;21
+dh00601;binary_c-python;37;21
+Stücker, Jens;adiabatic-tides;14;88
+jstuecker;adiabatic-tides;3;88
+Rodrigues, Davi C.;NAVanalysis;43;73
+Alonso, David;NaMaster;106;4648
+Surrao, Kristen M.;reMASTERed;30;86
+Villanueva-Domingo, Pablo;nuHawkHunter;21;76
+Himes, Michael D.;plan-net;1;459
+h21k;plan-net;1;459
+Soboczenski, Frank;plan-net;1;459
+Cobb, Adam D.;plan-net;3;459
+Fisher, Chloe;HELA;7;992
+Márquez-Neila, Pablo;HELA;10;992
+Exoclimes Simulation Platform;HELA;1;992
+Stolker, T.;species;263;727
+Howe, Alex R.;APOLLO;14;1560
+Arthur Adams;APOLLO;2;1560
+adadams;APOLLO;3;1560
+Nygaard, Andreas;connect_public;21;95
+Sánchez-Alarcón, Pablo M.;fabada;17;10
+Hilton, M.;nemo;475;2751
+Kritos, Konstantinos;Rapster;37;141
+Giri, Sambit K.;BCemu;14;479
+Bosco, F.;KeplerFit;7;288
+White, Martin;velocileptors;25;2346
+Chen, Shi-Fan;velocileptors;39;2346
+Sailer, Noah;FishLSS;43;1588
+Toonen, Silvia;TRES;97;3854
+floriskummer;TRES;10;3854
+Cromer, Dylan;maszcal;169;132
+Hilton, Matt;fitScalingRelation;15;51115
+Foreman, Simon;bskit;4;1288
+Bhardwaj, Uddipta;peregrine;5;56
+Alvey, James;peregrine;2;56
+dependabot[bot];celerite2;9;11854
+pre-commit-ci[bot];celerite2;38;11854
+Foreman-Mackey, Daniel;celerite2;53;11854
+Hilton, Matt;zCluster;96;5303
+Morello, V.;clfd;14;728
+Kaustubh;iqrm_apollo;8;224
+Rajwade, K. M.;iqrm_apollo;12;224
+Morello, V.;riptide;78;667
+Silviu Marian Udrescu;AI-Feynman;26;502
+Tan, Andrew;AI-Feynman;3;502
+Lister, T. A.;neoexchange;736;66
+Gomez, E.;neoexchange;171;66
+Chatelain, J.;neoexchange;427;66
+Greenstreet, S.;neoexchange;75;66
+Raveri, Marco;tensiometer;15;1299
+Doux, Cyrille;tensiometer;3;1299
+Morello, V.;iqrm;9;224
+Sen Gupta, Ashim;Hi-COLA;20;33
+Wright, Bill S.;Hi-COLA;7;33
+Hans A. Winther;Hi-COLA;30;33
+Li, Xiangchong;FPFS;169;137
+superonion1993;FPFS;16;137
+jorgebaezaballesteros;cosmolattice;6;597
+cosmolattice;cosmolattice;8;597
+Nicolás Loayza;cosmolattice;6;597
+Florio, Adrien;cosmolattice;10;597
+jfarr03;LyaCoLoRe;90;1232
+Farr, James;LyaCoLoRe;173;1232
+Font-Ribera, Andreu;LyaCoLoRe;22;1232
+Hoof, Sebastian;SolarAxionFlux;87;453
+Thormaehlen, Lennert J.;SolarAxionFlux;45;453
+Song, Ningqiang;CosmoLED;4;56
+Friedlander, Avi;CosmoLED;7;56
+Read, J. I.;gravsphere;39;4402
+Paillas, Enrique;sunbird;37;12
+Cuesta-Lazaro, Carolina;sunbird;39;12
+Weaver, J. R.;the_farmer;191;13
+ArisTr;PyRaTE;9;72
+Mellema, Garrelt;C2-Ray1D;13;12295
+Kai Yan Lee;C2-Ray1D;1;12295
+Mellema, Garrelt;C2-Ray3Dm1D_Helium;28;1734
+Bovy, Jo;gaia_tools;52;7858
+NicolasEM2C;radis;28;162
+Pannier, Erwan;radis;413;162
+van den Bekerom, D. C. M.;radis;50;162
+minou;radis;26;162
+anandxkumar;radis;53;162
+CorentinGrimaldi;radis;27;162
+Maxted, P. F. L.;pycheops;230;398
+Wilson, T. G.;pycheops;21;398
+Han, Jiaxin;SubGen;4;3596
+jxhan;SubGen;5;3596
+Alicja Polanska;harmonic;10;16
+alicjapolanska;harmonic;46;16
+Price, Matthew A.;harmonic;8;16
+CosmoMatt;harmonic;24;16
+McEwen, Jason D.;harmonic;50;16
+Matthew Docherty;harmonic;17;16
+mdochertyastro;harmonic;14;16
+Cosmomatt;harmonic;29;16
+Wallis, Christopher G. R.;harmonic;12;16
+Rezaie, Mehdi;SYSNet;38;574
+Cromer, Dylan;ostrich;8;132
+emilymmoser;ostrich;1;132
+Astro-Sean;escatter;4;12
+Brian Healy;nmma;60;198
+Pang, Peter T. H.;nmma;21;198
+Peter T. H. Pang;nmma;38;198
+sahiljhawar;nmma;24;198
+Sahil Jhawar;nmma;17;198
+Coughlin, Michael W.;nmma;125;198
+Rodrigues, Davi C.;CCBH-Numerics;25;41
+cosmoinin;MGPT;6;221
+Aviles, Alejandro;MGPT;9;221
+Rodriguez-Meza, Mario Alberto;MGPT;21;221
+luc_wl;eclipsr;39;250
+IJspeert, L. W.;eclipsr;16;250
+Kokron, Nickolas;skyLine;25;23
+Bernal, José Luis;skyLine;72;23
+gsatopo1;skyLine;11;23
+Sato-Polito, Gabriela;skyLine;26;23
+Ole Streicher;iraf;303;70692
+Mike Fitzpatrick;iraf;31;70692
+Alei, E.;exo-mercat-gui;6;108
+teutoburg;ScopeSim;86;15
+Buddelmeijer, H.;ScopeSim;68;15
+Leschinski, K.;ScopeSim;66;15
+Czoske, O.;ScopeSim;113;15
+Kieran;ScopeSim;172;15
+Kosenkov, Ilia A.;DIPOL-UF;242;172
+cam92473;fastrometry;2;96
+Cameron;fastrometry;8;96
+Postma, Joseph E.;fastrometry;1;96
+user29A;fastrometry;5;96
