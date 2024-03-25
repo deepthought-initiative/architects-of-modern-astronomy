@@ -3,12 +3,15 @@ all: outputs/weighted-flamegraph-days_active-institutes.txt.png
 all: outputs/weighted-flamegraph-days_active.txt_withouttiny.png
 all: outputs/weighted-flamegraph-days_active-institutes.txt_withouttiny.png
 all: outputs/weighted-flamegraph-days_active.txt_withoutmajor.png
-all: outputs/weighted-flamegraph-days_active-institutes.txt_withoutmajor.png
+all: outputs/weighted-flamegraph-days_active-institutes.txt_institutes.png
 
 #all: outputs/flamegraph-days_active.txt.png 
 
 outputs/flamegraph-%.txt: fetchgit.py
 	QUANTIFIER=$* python3 $^
+
+%-institutes.txt_institutes.png %-institutes.txt_institutes.pdf:  treemapviz.py %-institutes.txt
+	python3 $^ --cut-tiny --countries
 
 %_withouttiny.png %_withouttiny.pdf: treemapviz.py %
 	python3 $^ --cut-tiny

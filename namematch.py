@@ -4,6 +4,8 @@ def same_author(author, author2, verbose=False):
     """Check if a ADS author is the same as a github name"""
     # author: git log email name
     # author2: ADS publishing name
+    if author in ('dfm', 'Dan F-M', 'Dan Foreman-Mackey') and author2 == 'Foreman-Mackey, Daniel':
+        return True
     name_parts = author2.lower().replace('.', '').strip().split(', ', maxsplit=1)
     if len(name_parts) == 1:
         lastnames, firstnames = name_parts[0], ''
@@ -45,6 +47,8 @@ def same_author(author, author2, verbose=False):
                     return True
             # Johannes Buchner == Buchner, J
             # Buchner Johannes == Buchner, J
+            # Berry, David S == Berry, D S
+            # Green, Gregory M == Gregory M Green == Gregory Green
             parts = author2L.split(' ')
             if len(parts) >= 2 and len(firstname) > 0:
                 if verbose: print('  ', 'case B', parts, firstname[0], lastname)
@@ -97,10 +101,15 @@ if __name__ == '__main__':
     assert same_author("astertaylor", "Taylor, Aster G.")
     assert same_author("Dave Grote", "Grote, D. P.")
     assert same_author("Dave Grote", "Grote, D. P.")
+    assert same_author('David Berry', 'Berry, D. S.', verbose=True)
+    #assert same_author('Berry, David S', 'Berry, D. S.', verbose=True)
     assert same_author("dfm", "Foreman-Mackey, Dan")
     assert same_author("Dan F-M", "Foreman Mackey, Dan")
+    assert same_author("Dan Foreman Mackey", "Foreman Mackey, Dan")
     assert same_author("dfm", "Foreman-Mackey, Dan", verbose=True)
+    assert same_author("Dan Foreman-Mackey", "Foreman-Mackey, Daniel", verbose=True)
     assert same_author("Dan Foreman-Mackey", "Foreman-Mackey, Dan", verbose=True)
+    assert same_author("Dan F-M", "Foreman-Mackey, Daniel", verbose=True)
     assert same_author('VincentStimper', 'Vincent, Stimper', verbose=True)
     assert same_author('Bobby-Huggins', 'Huggins, Bobby', verbose=True)
 

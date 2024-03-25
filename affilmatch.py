@@ -5,33 +5,105 @@ import locale
 
 countries = [c.name for c in pycountry.countries] + ['USA', 'UK']
 countries_abbr = {c.name:c.alpha_2 for c in pycountry.countries}
+countries_map = {'UK':'GB'}
+countries_map.update({sd.code.split('-')[-1]:(sd.code.split('-')[0] + ', US') for sd in pycountry.subdivisions.get(country_code='US')})
+countries_map.update({c.alpha_3:c.alpha_2 for c in pycountry.countries})
+countries_map.update({c.alpha_2:c.alpha_2 for c in pycountry.countries})
+countries_map.update({c.name.split(',')[0].upper():c.alpha_2 for c in pycountry.countries})
+countries_map.update({c.official_name.split(',')[0].upper():c.alpha_2 for c in pycountry.countries})
 
 def has_numbers(inputString):
     return any(char.isdigit() for char in inputString)
 
 def shorten_affil(s):
-    s = s.replace('Max Planck Institute', 'MPE')
+    s = s.replace("People's Republic of China", 'China')
+    s = s.replace('United Kingdom', 'UK')
+    s = s.replace('The Netherlands', 'NL')
+    s = s.replace('the Netherlands', 'NL')
+    s = s.replace('Germany, DE', 'DE')
+    s = s.replace('U.S.A.', 'USA')
+    s = s.replace('Inc.', 'USA')
+    s = s.replace('United States', 'USA')
+    s = s.replace('(United States)', ', USA')
+    s = s.replace('United States of America', 'USA')
+    s = s.replace(' g.bruzual@crya.unam.mx', '')
+    s = s.replace('U.K.', 'UK')
+    s = s.replace('UK.', 'UK')
+    s = s.replace('Max Planck Institute', 'MPI')
+    s = s.replace('Max Planck Institut', 'MPI')
+    s = s.replace('Max Planck Inst.', 'MPI')
+    s = s.replace('Max-Planck-Institute', 'MPI')
+    s = s.replace('Max-Planck-Institut', 'MPI')
+    s = s.replace('MPI for Astronomy', 'MPIA')
+    s = s.replace('MPI fuer Astronomie', 'MPIA')
+    s = s.replace('MPI für Astronomie', 'MPIA')
+    s = s.replace('MPI fuer Astrophysik', 'MPIA')
+    s = s.replace('MPIA-Heidelberg', 'MPIA')
+    s = s.replace('Observatory of the Carnegie Institute', 'Carnegie Observatory')
     s = s.replace('Technical University', 'TU')
-    s = s.replace('University', '')
-    s = s.replace('Department', '')
-    s = s.replace('Faculty', '')
-    s = s.replace('Institute', '')
-    s = s.replace(' of ', '')
+    s = s.replace('UC, Pontificia', 'PUC')
+    s = s.replace('Pontifical Catholic University', 'PUC')
+    s = s.replace('Pontificia Universidad Católica', 'PUC')
+    s = s.replace('AEI Hannover (Hannover', 'Albert-Einstein-Institut, Hannover,')
+    s = s.replace('MPI für Gravitationsphysik (Albert Einstein Institut)', 'Albert-Einstein-Institut, Hannover,')
+    s = s.replace('MPI für Gravitationsphysik (Albert-Einstein-Institut)', 'Albert-Einstein-Institut, Hannover,')
+    s = s.replace('MPI for Gravitational Physics (Albert Einstein Institute)', 'Albert-Einstein-Institut, Hannover,')
+    s = s.replace('Albert-Einstein-Institut, MPI für Gravitationsphysik', 'Albert-Einstein-Institut, Hannover,')
+    s = s.replace('California Institute of Technology', 'Caltech')
+    s = s.replace('Center for Computational Astrophysics', 'CCA')
+
+    s = s.replace('University of ', 'U ')
+    s = s.replace('Center for Astrophysics', 'CfA')
+    s = s.replace('University', 'U ')
+    s = s.replace('Universite', 'U ')
+    s = s.replace('Universitad de', 'U ')
+    s = s.replace('Universitad', 'U ')
+    s = s.replace('Universidad', 'U ')
+    s = s.replace('Universität', 'U ')
+    s = s.replace('U. ', 'U ')
+    s = s.replace('Department for ', '')
+    s = s.replace('Department of ', '')
+    s = s.replace('Institute for ', '')
+    #s = s.replace('Department', 'Dep')
+    s = s.replace('Faculty', 'Fac')
+    s = s.replace('Facultad', 'Fac')
+    s = s.replace('Institute', 'Inst')
+    s = s.replace('Instituto', 'Inst')
+    s = s.replace('Observatory', 'Obs.')
+    s = s.replace('Observatories', 'Obs.')
+    s = s.replace('Departamento de', 'D')
+    s = s.replace('Departamento', 'D')
+    #s = s.replace(' of ', ' ')
     s = s.replace(' and ', '&')
+    #s = s.replace(' for ', ' ')
+    #s = s.replace(' fuer ', ' ')
+    s = s.replace('&amp;', '&')
     s = s.replace('Sciences', 'Sci')
     s = s.replace('Science', 'Sci')
     s = s.replace('Mathematics', 'Math')
     s = s.replace('Medical', 'Med')
     s = s.replace('Physics', 'Phys')
     s = s.replace('Astronomy', 'Astro')
+    s = s.replace('Harvard-Smitsonian', 'Harvard-Smithsonian')
+    s = s.replace('Astrophysics', 'Astro')
+    s = s.replace('Astrophysical Sci', 'Astro')
+    s = s.replace('Astrophysik', 'Astro')
     s = s.replace('Biology', 'Bio')
-    s = s.replace('  ', ' ').replace(' , ', ', ')
-    parts = s.split(', ')
+    s = s.replace('&gt,Present address:', '')
+    s = s.replace('&gt;Present address:', '')
+    s = s.replace('Muenchen', 'München')
+    s = s.replace('Munchen', 'München')
+    s = s.replace('Garching bei München', 'Garching')
+    s = s.replace('  ', ' ').replace(' , ', ', ').strip(" .)")
+    parts = [p.strip() for p in s.split(',') if not has_numbers(p.strip())]
+    if len(parts) == 0:
+        return ''
     interesting_parts = []
     for p in parts:
-        if p not in interesting_parts and not has_numbers(p):
+        if p not in interesting_parts:
             interesting_parts.append(p)
-    return ', '.join(interesting_parts[:2]) + ', ' + countries_abbr.get(interesting_parts[-1], interesting_parts[-1])
+    country = countries_map.get(interesting_parts[-1].upper(), interesting_parts[-1])
+    return ', '.join(interesting_parts[:-1][:2]) + ', ' + country
 
 def split_by_countries(s):
     for c in countries:
@@ -106,6 +178,15 @@ def is_affil_same(a, b, verbose=True):
     if verbose:
         print("comparing full affil::", anorm2, bnorm2)
     if compare(anorm2, bnorm2, verbose=verbose):
+        return True
+    # custom rules
+    if shorten_affil(a).startswith('Albert-Einstein-Institut') and shorten_affil(b).startswith('Albert-Einstein-Institut'):
+        return True
+    if shorten_affil(a) == 'Astro, ' + shorten_affil(b) or shorten_affil(b) == 'Astro, ' + shorten_affil(a):
+        return True
+    if bnorm2.endswith(anorm2) and a.startswith('Astro, '):
+        return True
+    if anorm2.endswith(bnorm2) and b.startswith('Astro, '):
         return True
     if ', ' in a and ', ' in b:
         return compare(shorten_affil(a), shorten_affil(b), verbose=verbose)

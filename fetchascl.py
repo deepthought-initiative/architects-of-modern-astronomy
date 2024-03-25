@@ -12,16 +12,13 @@ from namematch import same_author
 from affilmatch import is_affil_same, split_affil_string, shorten_affil
 import kvstore
 
-#import fetchgit
-#fetchgit.requests = requests.Session(timeout=5, )
-
-requests_cache.install_cache('demo_cache', allowable_methods=('GET', 'POST'), expire_after=3600 * 24 * 7)
+requests_cache.install_cache('demo_cache', allowable_methods=('GET', 'POST'), expire_after=3600 * 24 * 30)
 
 @mem.cache
 def get_ascl_list():
     """Get list of astronomy software packages"""
     urls = []
-    response = requests.get('https://ascl.net/code/all/limit/3294/listmode/compact')
+    response = requests.get('https://ascl.net/code/all/limit/10000/listmode/compact')
     soup = BeautifulSoup(response.content, "html.parser")
     for title_span in soup.find_all('span', class_='title'):
         urls.append('https://ascl.net/' + title_span.find('a')['href'])
@@ -32,14 +29,14 @@ def get_code_info(url):
     """Get code website and list of papers"""
     response = requests.get(url)
     soup = BeautifulSoup(response.content, "html.parser")
-
+    title = soup.find('title').string.strip()[len('ASCL.net'):].strip().strip('-').strip()
     # Extract Code site
-    code_site_element = soup.find('dt', text='Code site:')
+    code_site_element = soup.find('dt', string='Code site:')
     code_sites = [a.get('href') for a in code_site_element.find_next('dd').find_all('a', href=True)] if code_site_element else []
 
     # Extract Described in
-    described_in_element = soup.find('dt', text='Described in:')
-    return code_sites, [a.get('href') for a in described_in_element.find_next('dd').find_all('a')] if described_in_element else []
+    described_in_element = soup.find('dt', string='Described in:')
+    return title, code_sites, [a.get('href') for a in described_in_element.find_next('dd').find_all('a')] if described_in_element else []
 
 
 def iterate_ascl():
@@ -64,7 +61,7 @@ def iterate_joss_list():
     for p in tqdm.tqdm(results, desc='fetching JOSS repository URLs'):
         repo_urls = get_joss_repo_urls(url='https://ui.adsabs.harvard.edu/link_gateway/%s/PUB_HTML' % p.bibcode)
         # print(p.bibcode, p.author, repo_urls, p.id)
-        yield repo_urls, ['https://ui.adsabs.harvard.edu/abs/%s' % p.bibcode]
+        yield p.title[0], repo_urls, ['https://ui.adsabs.harvard.edu/abs/%s' % p.bibcode]
 
 
 @mem.cache
@@ -162,7 +159,7 @@ def get_authors(bib_urls):
                         authors[author] = orcid
     return authors
 
-#@mem.cache
+@mem.cache
 def get_person_affil_history(orcid, author, verbose=False):
     """Get affiliation of a person over time"""
     fields = ['author', 'aff', 'year', 'orcid_user', 'orcid_pub', 'orcid_other']
@@ -210,13 +207,13 @@ def translate_to_institutional_contributors(contributors, authors):
 
     full_affil_set = set()
     for contributor, orcid, ncontributions, startdate, enddate in contributors_with_orcid:
-        # print("history of ", contributor, orcid, "::", startdate, enddate)
+        print("    history of %s [%s] (%d-%d)" % (contributor, orcid, startdate, enddate))
         years = get_person_affil_history(orcid, contributor)
         # print(years)
         for year in range(startdate - 1, enddate + 1):
             full_affil_set = full_affil_set.union(years[str(year)])
             # print('  ', year, years.get(str(year), []), full_affil_set)
-    print("    all relevant affils:", full_affil_set)
+    # print("    all relevant affils:", full_affil_set)
 
     # deduplicate affiliations, keep longest name
     dedup_affil_set = []
@@ -227,7 +224,8 @@ def translate_to_institutional_contributors(contributors, authors):
 
     # get all affiliations falling between years of startdate and enddate+1 years
     for affil_k in dedup_affil_set:
-        print("affil", affil_k)
+        # print("affil", affil_k)
+        if affil_k.startswith('Now at'): continue
         ncontributions_k = 0
         startdates = []
         enddates = []
@@ -251,10 +249,10 @@ def get_impact(bib_urls):
     """Get project impact (citations of papers using it)"""
     fields = ['bibcode', 'author', 'year', 'citation_count', 'doi', 'title', 'eid', 'identifier']
     query = ' OR '.join(['citations(%s)' % bibcode_query(bib_url) for bib_url in bib_urls if 'adsabs.harvard.edu' in bib_url])
-    print('    ', query)
+    # print('   ', query)
     if query == '':
         return 0
-    papers = [p for p in ads.SearchQuery(q=query, fl=fields, sort="date", max_pages=100)]
+    papers = [p for p in ads.SearchQuery(q=query + ' collection:astronomy', fl=fields, sort="date", max_pages=100)]
     # print('      ', len(papers))
     total_citations = sum((p.citation_count for p in papers if p.citation_count))
     return total_citations
@@ -262,7 +260,18 @@ def get_impact(bib_urls):
 
 def deduplicate_authors(authors, contributors):
     """Reduce authors."""
-    author_map = {}
+    author_map = {
+        'Berry, D. S.': 'Berry, David S.',
+        'Rob Farmer': 'Robert Farmer',
+        'evbauer': 'Evan Bauer',
+        'Peter Teuben': 'Teuben, Peter',
+        'Teuben, P.': 'Teuben, Peter',
+        'Sergey, Koposov': 'Sergey, E. Koposov',
+        'gregory.ashton': 'Gregory Ashton',
+        'Rodrigo-Tenorio': 'Rodrigo Tenorio',
+        'sibirrer': 'Simon Birrer',
+        #'Dan F-M': 'Dan Foreman-Mackey',
+    }
     values = {}
     startdates = {}
     enddates = {}
@@ -298,8 +307,8 @@ def deduplicate_authors(authors, contributors):
 
 def get_software_list(parent_sample):
     repos = dict()
-    for i, (code_sites, bib_urls) in enumerate(parent_sample):
-        print("[%d/%d] ###" % (i+1, len(parent_sample)), code_sites, bib_urls)
+    for i, (title, code_sites, bib_urls) in enumerate(parent_sample):
+        print("[%d/%d] ###" % (i+1, len(parent_sample)), code_sites, bib_urls, title)
         if len(bib_urls) == 0:
             print("  no papers found for", code_sites)
             continue
@@ -333,8 +342,8 @@ def get_software_list(parent_sample):
             if repo_url is None:
                 print("    no repo found for", code_sites)
                 continue
-            other_code_sites, other_bib_urls = repos.get(repo_url, ([], []))
-            repos[repo_url] = sorted(set(code_sites).union(other_code_sites)), sorted(set(bib_urls).union(other_bib_urls))
+            _, other_code_sites, other_bib_urls = repos.get(repo_url, (None, [], []))
+            repos[repo_url] = title, sorted(set(code_sites).union(other_code_sites)), sorted(set(bib_urls).union(other_bib_urls))
 
     return repos
 
@@ -346,10 +355,12 @@ if __name__ == '__main__':
     fout = open('outputs/weighted-flamegraph-%s%s.txt' % (parameter, '-institutes' if use_institutes else ''), 'w')
     parent_sample = list(iterate_joss_list()) + list(iterate_ascl())
     repos = get_software_list(parent_sample)
+    fout2 = open('outputs/scientific-software.txt', 'w')
+    fout3 = open('outputs/scientific-software-contributions-%s%s.txt' % (parameter, '-institutes' if use_institutes else ''), 'w')
     print()
     print("checking impact...")
-    for i, (repo_url, (code_sites, bib_urls)) in enumerate(repos.items()):
-        print("[%d/%d] ***" % (i+1, len(repos)), repo_url, bib_urls)
+    for i, (repo_url, (title, code_sites, bib_urls)) in enumerate(repos.items()):
+        print("[%d/%d] ***" % (i+1, len(repos)), repo_url, [bibcode_query(b).replace('bibcode:','') for b in bib_urls])
         try:
             project_impact = get_impact(bib_urls)
         except IndexError as e:
@@ -358,6 +369,8 @@ if __name__ == '__main__':
         except ads.exceptions.APIResponseError as e:
             print("    APIResponseError:", e)
             break
+        fout2.write("%s;%s;%d;%s\n" % (repo_url, bib_urls[0], project_impact, title))
+        fout2.flush()
         if project_impact == 0:
             print("    no impact found for", bib_urls)
             continue
@@ -365,9 +378,9 @@ if __name__ == '__main__':
             print("    low impact, skipping")
             continue
         # get people's names & ORCID
-        print("  getting authors for ", bib_urls)
+        print("  getting authors for %s" % ([bibcode_query(b).replace('bibcode:','') for b in bib_urls]))
         authors = get_authors(bib_urls)
-        print("    ", repo_url, "impact", project_impact, "by", authors.keys())
+        print("    %s impact %d by %s" % (repo_url, project_impact, list(authors.keys())))
         # print(url, "authors", authors)
 
         project_name = repo_url.strip('/').split('/')[-1]
@@ -382,7 +395,9 @@ if __name__ == '__main__':
                     significant_contributors_deduplicated = translate_to_institutional_contributors(
                         significant_contributors_deduplicated, authors)
                 for contributor, ncontributions, _, _ in significant_contributors_deduplicated:
-                    fout.write('%s;%s %d\n' % (contributor, project_name, ncontributions * project_impact))
+                    fout.write('%s;%s %d\n' % (contributor.replace(';', ','), project_name.replace(';', ','), ncontributions * project_impact))
+                    fout3.write('%s;%s;%d;%d\n' % (contributor.replace(';', ','), project_name.replace(';', ','), ncontributions, project_impact))
                 fout.flush()
+                fout3.flush()
         except subprocess.CalledProcessError as e:
             print("    failure:", repo_url, e)
