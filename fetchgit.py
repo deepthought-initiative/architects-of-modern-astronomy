@@ -4,7 +4,7 @@ import joblib
 import requests
 import subprocess
 from bs4 import BeautifulSoup
-from collections import defaultdict
+from collections import defaultdict, Counter
 
 
 mem = joblib.Memory('.', verbose=False)
@@ -50,6 +50,24 @@ def _get_github_significant_contributors(repository_url):
     return significant_contributors, top_contributor_contributions
 
 @mem.cache
+def get_git_first_commit_log(repo_url, logargs, full=False):
+    """Fetch a commit log"""
+    # Clone the repository locally
+    subprocess.check_call(["rm", "-rf", "temp-git-repo"])
+    subprocess.check_call(["git", "clone", "--bare"] + ([] if full else ["--filter=blob:none"]) + [repo_url, "temp-git-repo"])
+
+    # Get the commit authors and their statistics
+    git_log_command = ["git", "--git-dir=temp-git-repo/", "rev-list", "--max-parents=0", "HEAD"]
+    result = subprocess.run(git_log_command, stdout=subprocess.PIPE, text=True, errors='ignore')
+    log_output = ''
+    for commit_id in result.stdout.strip().split('\n'):
+        # Get the commit authors and their statistics
+        git_log_command = ["git", "--git-dir=temp-git-repo/", "log"] + list(logargs) + [commit_id]
+        result = subprocess.run(git_log_command, stdout=subprocess.PIPE, text=True, errors='ignore')
+        log_output += result.stdout
+    return log_output
+
+@mem.cache
 def get_git_commit_log(repo_url, logargs, full=False):
     """Fetch a commit log"""
     # Clone the repository locally
@@ -81,10 +99,8 @@ def count_active_days(commit_dates):
     return active_days
 
 #@mem.cache
-def get_git_commit_authors(repo_url, full):
+def get_git_commit_authors(log_output):
     """Get statistics of contributing authors to git repositories"""
-    log_output = get_git_commit_log(repo_url, ["--format=%aN | %ad", "--date=iso8601-strict"], full=full)
-
     commit_authors = defaultdict(lambda : dict(commits=0, lines_changed=0, days_active=set()))
 
     # Process the log output to extract commit authors and statistics
@@ -112,10 +128,91 @@ def get_git_commit_authors(repo_url, full):
     return dict(commit_authors)
 
 
+@mem.cache
+def get_git_filelist(repo_url):
+    """Get list of current files in git repository"""
+    # set bits grouped by year, day of year, and email address
+    """Fetch a commit log"""
+    # Clone the repository locally
+    subprocess.check_call(["rm", "-rf", "temp-git-repo"])
+    subprocess.check_call(["git", "clone", "--depth", "1", "--bare"] + [repo_url, "temp-git-repo"])
+
+    # Get the commit authors and their statistics
+    git_ls_command = ["git", "--git-dir=temp-git-repo/", "ls-tree", "-r", "HEAD"]
+    result = subprocess.run(git_ls_command, stdout=subprocess.PIPE, text=True, errors='ignore')
+    ls_output = result.stdout
+    return ls_output
+
+
+def get_git_commit_by_year(repository_url, parameter):
+    """Get statistics of contributing authors to git repositories"""
+    # set bits grouped by year, day of year, and email address
+    log_output = get_git_commit_log(repository_url, ["--format=%ae | %aI"], full=parameter == 'lines_changed')
+
+    current_year = None
+    # split log by calendar year
+    year_logs = defaultdict(list)
+    for line in log_output.splitlines():
+        if line.startswith(' '):
+            year_logs[current_year].append(line)
+        elif line.strip() != '':
+            parts = line.strip().split(' | ')
+            current_author, current_date_string = parts[0], parts[-1]
+            current_year = datetime.fromisoformat(current_date_string).year
+            year_logs[current_year].append(line)
+
+    year_stats = Counter()
+    # count total number of active days, summing over all authors
+    for year, year_log in year_logs.items():
+        for author, stats in get_git_commit_authors('\n'.join(year_log)).items():
+            year_stats[year] += int(stats["days_active"])
+    return year_stats
+
+def get_git_startdate(repository_url):
+    """Get statistics of contributing authors to git repositories"""
+    # set bits grouped by year, day of year, and email address
+    log_output = get_git_commit_log(repository_url, ["--format=%ae | %aI"], full=False)
+
+    for line in log_output.splitlines()[::-1]:
+        if line.startswith(' '):
+            pass
+        elif line.strip() != '':
+            parts = line.strip().split(' | ')
+            current_author, current_date_string = parts[0], parts[-1]
+            return datetime.fromisoformat(current_date_string).date()
+    return None
+
+def get_git_startsize(repository_url):
+    """Get statistics of contributing authors to git repositories"""
+    # set bits grouped by year, day of year, and email address
+    log_output = get_git_first_commit_log(repository_url, ["--format=[X] %H | %aI | %ae", "--numstat", "--shortstat"], full=False)
+    #log_output = get_git_commit_log(repository_url, ["--format=[X] %H | %aI | %ae", "--numstat", "--shortstat", "--reverse", "-n1"], full=False)
+    current_date_string = None
+
+    nfiles = 0
+    for line in log_output.splitlines():
+        if line.startswith('[X] ') and ' | ' in line:
+            parts = line[4:].strip().split(' | ')
+            if len(parts) >= 3:
+                current_commit, current_date_string, current_author = parts[0], parts[1], parts[2]
+        elif ' changed,' in line:
+            numbers = [int(part.strip().split()[0]) for part in line.split(',')]
+            nchanged = numbers[0]
+            nadded = numbers[1] if len(numbers) > 1 else 0
+            ndel = numbers[2] if len(numbers) > 2 else 0
+            print("-->", nchanged, nadded, ndel, nfiles)
+            return datetime.fromisoformat(current_date_string).date(), nchanged, nadded, ndel, nfiles
+        elif line.startswith(' ') or line.strip() == '':
+            pass
+        else:
+            nfiles += 1
+    return datetime.fromisoformat(current_date_string).date() if current_date_string is not None else current_date_string, None, None, None, None
+
 #@mem.cache
 def get_significant_contributors(repository_url, parameter):
     """Get author statistics for a git repository"""
-    commit_authors = get_git_commit_authors(repository_url, full=parameter == 'lines_changed')
+    log_output = get_git_commit_log(repository_url, ["--format=%aN | %aI"], full=parameter == 'lines_changed')
+    commit_authors = get_git_commit_authors(log_output)
     # print('  ', commit_authors)
     top_contributor_commits = max((v[parameter] for v in commit_authors.values()))
 

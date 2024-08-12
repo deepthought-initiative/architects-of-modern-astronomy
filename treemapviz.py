@@ -70,32 +70,14 @@ if '--cut-major' in sys.argv:
     print("%d entries after cut" % len(df))
     suffix += '_withoutmajor'
 
-colors = plt.cm.get_cmap('tab10', df['projects'].nunique()).colors
+colors = plt.cm.tab10.colors
 cmap = dict(zip(df['projects'].unique(), itertools.cycle(colors)))
 cmap['yt'] = 'k'
 cmap['astropy'] = 'darkgrey'
 cmap['starlink'] = 'navy'
 
 if viz_countries:
-    fig, ax = plt.subplots(figsize=(20,20), dpi=100, subplot_kw=dict(aspect=1.0))
-    """
-    trc = tr.treemap(
-        ax, df[~df['countries'].isna()], area='weights', fill='names', labels='projects',
-        levels=['countries', 'names', 'projects'],
-        textprops={'c':'w', 'reflow':True,
-                  'place':'bottom left', 'max_fontsize':10, 'min_fontsize':8},
-        rectprops={'ec':'w'},
-        subgroup_rectprops={
-            'countries':{'ec':'lightblue', 'lw':4, 'fill':False, 'zorder':5},
-            'names':{'ec':'k', 'lw':2, 'alpha':0.5, 'fill':False, 'zorder':5},
-            'projects':{'ec':'k', 'lw':2, 'alpha':0.5, 'fill':False, 'zorder':5},
-        },
-        subgroup_textprops={
-            'countries':{'c':'white', 'alpha':0.5, 'fontweight':'bold', 'max_fontsize':40, 'place':'top center', 'zorder':5},
-            'projects':{'c':'brown', 'fontstyle':'italic', 'max_fontsize':14, 'place':'top left'},
-            'names':{'c':'white', 'fontstyle':'italic', 'max_fontsize':14, 'place':'bottom left'},
-        },
-    )"""
+    fig, ax = plt.subplots(figsize=(20,20), dpi=100, subplot_kw=dict(aspect=1.2))
     trc = tr.treemap(
         ax, df[~df['countries'].isna()], area='weights', fill='projects', labels='projects',
         levels=['countries', 'names', 'projects'], cmap=cmap,
@@ -107,7 +89,7 @@ if viz_countries:
                            'names':dict(ec='w', lw=2, fill=False, zorder=4)}
     )
 else:
-    fig, ax = plt.subplots(figsize=(20,16), dpi=100, subplot_kw=dict(aspect=2.0))
+    fig, ax = plt.subplots(figsize=(20,20), dpi=100, subplot_kw=dict(aspect=1.3))
     trc = tr.treemap(
         ax, df, area='weights', fill='projects', labels='names',
         levels=['projects', 'names'], cmap=cmap,

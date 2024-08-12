@@ -4,6 +4,14 @@ all: outputs/weighted-flamegraph-days_active.txt_withouttiny.png
 all: outputs/weighted-flamegraph-days_active-institutes.txt_withouttiny.png
 all: outputs/weighted-flamegraph-days_active.txt_withoutmajor.png
 all: outputs/weighted-flamegraph-days_active-institutes.txt_institutes.png
+all: countries_withouttiny.pdf withoutmajor.pdf withouttiny.pdf
+
+countries_withouttiny.pdf: outputs/weighted-flamegraph-days_active-institutes.txt_countries_withouttiny.pdf
+	cp $^ $@
+withoutmajor.pdf: outputs/weighted-flamegraph-days_active.txt_withoutmajor.pdf
+	cp $^ $@
+withouttiny.pdf: outputs/weighted-flamegraph-days_active.txt_withouttiny.pdf
+	cp $^ $@
 
 #all: outputs/flamegraph-days_active.txt.png 
 

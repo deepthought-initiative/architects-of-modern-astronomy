@@ -1,17 +1,23 @@
+import json
 import requests_cache
 import requests
 from bs4 import BeautifulSoup
-from fetchgit import mem, get_significant_contributors, extract_github_url_from_pypi
+import fetchgit
 import subprocess
 import tqdm
 import os
-from collections import defaultdict
+from collections import defaultdict, Counter
 import ads
 from urllib.parse import unquote
 from namematch import same_author
 from affilmatch import is_affil_same, split_affil_string, shorten_affil
 import kvstore
+from datetime import date
+import matplotlib.pyplot as plt
 
+
+# reuse same cache
+mem = fetchgit.mem
 requests_cache.install_cache('demo_cache', allowable_methods=('GET', 'POST'), expire_after=3600 * 24 * 30)
 
 @mem.cache
@@ -145,18 +151,34 @@ def get_best_orcid(p):
         yield orcid
 
 @mem.cache
+def get_pubdate(bib_urls):
+    """Get paper authors and ORCID"""
+    #fields = ['pubdate']
+    fields = ['pubdate']
+    pubdates = []
+    for bib_url in bib_urls:
+        if 'adsabs.harvard.edu' in bib_url:
+            query = bibcode_query(bib_url)
+            for p in ads.SearchQuery(q=query, fl=fields):
+                if p.pubdate is not None:
+                    pubdates.append(date.fromisoformat(p.pubdate.replace('-00', '-01')))
+    if len(pubdates) == 0:
+        return None
+    return min(pubdates)
+
+@mem.cache
 def get_authors(bib_urls):
     """Get paper authors and ORCID"""
-    fields = ['bibcode', 'author', 'orcid_user', 'orcid_pub', 'orcid_other', 'title', 'eid', 'identifier']
+    fields = ['bibcode', 'author', 'orcid_user', 'orcid_pub', 'orcid_other', 'title', 'eid', 'identifier', 'aff']
     authors = {}
     for bib_url in bib_urls:
         if 'adsabs.harvard.edu' in bib_url:
             query = bibcode_query(bib_url)
             for p in ads.SearchQuery(q=query, fl=fields, sort="date"):
                 # print(p.author, p.orcid_user, p.orcid_pub, p.orcid_other)
-                for author, orcid in zip(p.author, get_best_orcid(p)):
-                    if authors.get(author) is None:
-                        authors[author] = orcid
+                for author, orcid, affil in zip(p.author, get_best_orcid(p), p.aff):
+                    if author not in authors or authors.get(author, ('-', None))[0] == '-':
+                        authors[author] = orcid, affil
     return authors
 
 @mem.cache
@@ -168,7 +190,7 @@ def get_person_affil_history(orcid, author, verbose=False):
     known_affils = []
     years = defaultdict(list)
     for p in (tqdm.tqdm(results, desc='fetching affil history') if verbose else results):
-        for author_i, affils_i, orcid_i in zip(p.author, p.aff, get_best_orcid(p)):
+        for author_i, orcid_i, affils_i in zip(p.author, get_best_orcid(p), p.aff):
             for affil_i in split_affil_string(affils_i):
                 if ',' not in affil_i:
                     continue
@@ -201,9 +223,16 @@ def get_affil_set(startyear, endyear, years):
 def translate_to_institutional_contributors(contributors, authors):
     contributors_with_orcid = []
     for contributor, ncontributions, startdate, enddate in contributors:
-        orcid = authors.get(contributor, '-')
+        orcid, affils = authors.get(contributor, ('-', None))
         if orcid != '-':
             contributors_with_orcid.append((contributor, orcid, ncontributions, startdate, enddate))
+        elif affils is not None:
+            for affil_i in split_affil_string(affils):
+                if ',' not in affil_i:
+                    continue
+                affil_i = affil_i.split('<ORCID>')[0]
+                if affil_i != '-':
+                    yield shorten_affil(affil_i.strip()), ncontributions, startdate, enddate
 
     full_affil_set = set()
     for contributor, orcid, ncontributions, startdate, enddate in contributors_with_orcid:
@@ -320,7 +349,7 @@ def get_software_list(parent_sample):
             if 'github.com/' in code_site or 'gitlab.com/' in code_site or 'bitbucket.com/' in code_site:
                 repo_url = code_site
             elif 'pypi.org/' in code_site:
-                repo_url = extract_github_url_from_pypi(code_site)
+                repo_url = fetchgit.extract_github_url_from_pypi(code_site)
             elif code_site.startswith('https://dx.doi.org'):
                 pass
             elif code_site.startswith('https://doi.org'):
@@ -355,11 +384,22 @@ if __name__ == '__main__':
     fout = open('outputs/weighted-flamegraph-%s%s.txt' % (parameter, '-institutes' if use_institutes else ''), 'w')
     parent_sample = list(iterate_joss_list()) + list(iterate_ascl())
     repos = get_software_list(parent_sample)
+
+    years_stats = Counter()
+    num_with_citation_file = 0
+    num_repos = 0
+    
+    bib_urls_seen = set()
+    all_results = []
+    project_durations = []
     fout2 = open('outputs/scientific-software.txt', 'w')
     fout3 = open('outputs/scientific-software-contributions-%s%s.txt' % (parameter, '-institutes' if use_institutes else ''), 'w')
     print()
     print("checking impact...")
     for i, (repo_url, (title, code_sites, bib_urls)) in enumerate(repos.items()):
+        if ' '.join(bib_urls) in bib_urls_seen:
+            continue
+        bib_urls_seen.add(' '.join(bib_urls))
         print("[%d/%d] ***" % (i+1, len(repos)), repo_url, [bibcode_query(b).replace('bibcode:','') for b in bib_urls])
         try:
             project_impact = get_impact(bib_urls)
@@ -381,23 +421,98 @@ if __name__ == '__main__':
         print("  getting authors for %s" % ([bibcode_query(b).replace('bibcode:','') for b in bib_urls]))
         authors = get_authors(bib_urls)
         print("    %s impact %d by %s" % (repo_url, project_impact, list(authors.keys())))
-        # print(url, "authors", authors)
+        print("  authors:", authors)
 
         project_name = repo_url.strip('/').split('/')[-1]
         significant_contributors, top_contributor_contributions = [], None
+        results_here = {}
         try:
-            significant_contributors, top_contributor_contributions = get_significant_contributors(repo_url, parameter)
+            filelist = fetchgit.get_git_filelist(repo_url).split()
+            if 'CITATION.cff' in filelist:
+                num_with_citation_file += 1
+            results_here['has_CITATION.cff'] = 'CITATION.cff' in filelist
+            results_here['has_github_tests'] = any(f.startswith('.github/workflows/') and f.endswith('.yml') for f in filelist)
+            results_here['has_circleci_tests'] = '.circleci/workflows/config.yml' in filelist
+            results_here['has_travis_tests'] = '.travis.yml' in filelist
+            results_here['has_gitlab_tests'] = '.gitlab-ci.yml' in filelist
+            results_here['has_jenkins_tests'] = 'Jenkinsfile' in filelist
+            num_repos += 1
+            significant_contributors, top_contributor_contributions = fetchgit.get_significant_contributors(repo_url, parameter)
             if top_contributor_contributions is not None:
                 significant_contributors_deduplicated = deduplicate_authors(authors, significant_contributors)
+                results_here['contributors'] = significant_contributors_deduplicated
                 #significant_contributors_deduplicated = significant_contributors
                 # write out person's contribution proportional to impact of the software and days invested
+                significant_insitutes_deduplicated = list(translate_to_institutional_contributors(
+                    significant_contributors_deduplicated, authors))
+                results_here['institutes'] = significant_insitutes_deduplicated
                 if use_institutes:
-                    significant_contributors_deduplicated = translate_to_institutional_contributors(
-                        significant_contributors_deduplicated, authors)
+                    significant_contributors_deduplicated = significant_insitutes_deduplicated
                 for contributor, ncontributions, _, _ in significant_contributors_deduplicated:
                     fout.write('%s;%s %d\n' % (contributor.replace(';', ','), project_name.replace(';', ','), ncontributions * project_impact))
                     fout3.write('%s;%s;%d;%d\n' % (contributor.replace(';', ','), project_name.replace(';', ','), ncontributions, project_impact))
                 fout.flush()
                 fout3.flush()
+                
+                commit_activity = fetchgit.get_git_commit_by_year(repo_url, 'days_active')
+                years_stats.update(commit_activity)
+
+                pubdate = get_pubdate(bib_urls)
+                project_start_date = fetchgit.get_git_startdate(repo_url)
+                _, nchanged, nadded, ndel, nfiles = fetchgit.get_git_startsize(repo_url)
+                results_here['commit_activity'] = dict(commit_activity)
+                results_here['bib_urls'] = bib_urls
+                results_here['pubdate'] = (pubdate.year, pubdate.month, pubdate.day)
+                results_here['repo_start_date'] = (project_start_date.year, project_start_date.month, project_start_date.day)
+                results_here['repo_start_commit_stats'] = (nchanged, nadded, ndel, nfiles)
+                results_here['repo_url'] = repo_url
+                results_here['code_sites'] = code_sites
+                results_here['paper_title'] = title
+                results_here['paper_authors'] = authors
+                results_here['project_impact'] = project_impact
+                results_here['project_name'] = project_name
+                
+                # add to project duration
+                if project_start_date is not None and pubdate is not None:
+                    results_here['project_duration'] = (pubdate - project_start_date).days
+                    project_durations.append((pubdate.year, project_impact, (pubdate - project_start_date).days))
+                all_results.append(results_here)
+
         except subprocess.CalledProcessError as e:
             print("    failure:", repo_url, e)
+    print()
+    print("completed:", num_repos, num_with_citation_file, '%.2f%%' % (num_with_citation_file * 100 / num_repos))
+    print(all_results[0])
+    print("writing result database")
+    with open('outputs/scientific-software-contributions-%s.json' % (parameter), 'w') as jsonout:
+        json.dump(all_results, jsonout, indent=2)
+
+"""
+    with open('outputs/scientific-software-year.txt', 'w') as fout:
+        for year, year_stat in years_stats.items():
+            fout.write('%d %d\n' % (year, year_stat))
+    years = sorted(years_stats.keys())
+    plt.plot(years, [years_stats[current_year] / 300 for current_year in years], 'o-')
+    plt.xlabel('Year')
+    plt.ylabel('# of developer person-years')
+    plt.savefig('outputs/active_number.pdf')
+    plt.close()
+
+    # plot mean project durations over time
+    avg_durations = []
+    for current_year in sorted({year for year, impact, duration in project_durations}):
+        impacts_here, durations_here = zip(*[(impact, duration) for year, impact, duration in project_durations if year == current_year])
+        number_of_projects_published = len(impacts_here)
+        mean_duration = np.average(durations_here, weights=impacts_here)
+        avg_durations.append((current_year, mean_duration))
+        plt.scatter(durations_here, impacts_here, label=current_year)
+    plt.savefig('outputs/project_impact_duration.pdf')
+    plt.close()
+    plt.plot(
+        [year for year, duration in avg_durations],
+        [duration for year, duration in avg_durations],
+        'o-', color='k')
+    plt.savefig('outputs/project_durations.pdf')
+    plt.close()
+"""
+

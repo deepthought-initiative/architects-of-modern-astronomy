@@ -10,7 +10,7 @@ countries_map.update({sd.code.split('-')[-1]:(sd.code.split('-')[0] + ', US') fo
 countries_map.update({c.alpha_3:c.alpha_2 for c in pycountry.countries})
 countries_map.update({c.alpha_2:c.alpha_2 for c in pycountry.countries})
 countries_map.update({c.name.split(',')[0].upper():c.alpha_2 for c in pycountry.countries})
-countries_map.update({c.official_name.split(',')[0].upper():c.alpha_2 for c in pycountry.countries})
+countries_map.update({c.official_name.split(',')[0].upper():c.alpha_2 for c in pycountry.countries if hasattr(c, 'official_name')})
 
 def has_numbers(inputString):
     return any(char.isdigit() for char in inputString)
@@ -95,7 +95,7 @@ def shorten_affil(s):
     s = s.replace('Munchen', 'München')
     s = s.replace('Garching bei München', 'Garching')
     s = s.replace('  ', ' ').replace(' , ', ', ').strip(" .)")
-    parts = [p.strip() for p in s.split(',') if not has_numbers(p.strip())]
+    parts = [p.strip() for p in s.strip(',').split(',') if not has_numbers(p.strip())]
     if len(parts) == 0:
         return ''
     interesting_parts = []
@@ -103,6 +103,10 @@ def shorten_affil(s):
         if p not in interesting_parts:
             interesting_parts.append(p)
     country = countries_map.get(interesting_parts[-1].upper(), interesting_parts[-1])
+    if 'Baltimore' in p and country == 'MD':
+        country = 'US'
+    if 'Cambridge' in p and country == 'MA':
+        country = 'US'
     return ', '.join(interesting_parts[:-1][:2]) + ', ' + country
 
 def split_by_countries(s):
@@ -181,6 +185,12 @@ def is_affil_same(a, b, verbose=True):
         return True
     # custom rules
     if shorten_affil(a).startswith('Albert-Einstein-Institut') and shorten_affil(b).startswith('Albert-Einstein-Institut'):
+        return True
+    if shorten_affil(a).startswith('MPIA, ') and shorten_affil(b).startswith('MPIA, '):
+        return True
+    if shorten_affil(a).startswith('Harvard-Smithsonian CfA, ') and shorten_affil(b).startswith('CfA, Harvard'):
+        return True
+    if shorten_affil(b).startswith('Harvard-Smithsonian CfA, ') and shorten_affil(a).startswith('CfA, Harvard'):
         return True
     if shorten_affil(a) == 'Astro, ' + shorten_affil(b) or shorten_affil(b) == 'Astro, ' + shorten_affil(a):
         return True
