@@ -4,7 +4,7 @@ all: outputs/weighted-flamegraph-days_active.txt_withouttiny.png
 all: outputs/weighted-flamegraph-days_active-institutes.txt_withouttiny.png
 all: outputs/weighted-flamegraph-days_active.txt_withoutmajor.png
 all: outputs/weighted-flamegraph-days_active-institutes.txt_institutes.png
-all: countries_withouttiny.pdf withoutmajor.pdf withouttiny.pdf
+all: countries_withouttiny.pdf withoutmajor.pdf withouttiny.pdf abstractumap1.pdf
 
 countries_withouttiny.pdf: outputs/weighted-flamegraph-days_active-institutes.txt_countries_withouttiny.pdf
 	cp $^ $@
@@ -13,6 +13,8 @@ withoutmajor.pdf: outputs/weighted-flamegraph-days_active.txt_withoutmajor.pdf
 withouttiny.pdf: outputs/weighted-flamegraph-days_active.txt_withouttiny.pdf
 	cp $^ $@
 
+abstractumap%.pdf: abstractumap.py outputs/scientific-software-contributions-days_active.json
+	python3 $< $*
 #all: outputs/flamegraph-days_active.txt.png 
 
 outputs/flamegraph-%.txt: fetchgit.py
