@@ -168,6 +168,19 @@ def get_git_commit_by_year(repository_url, parameter):
             year_stats[year] += int(stats["days_active"])
     return year_stats
 
+def add_git_activity(repository_url, reference_date, activities):
+    """Get statistics of contributing authors to git repositories"""
+    # set bits grouped by year, day of year, and email address
+    log_output = get_git_commit_log(repository_url, ["--format=%ae | %aI"], full=False)
+
+    for line in log_output.splitlines():
+        if not line.startswith(' ') and line.strip() != '' and ' | ' in line:
+            parts = line.strip().split(' | ')
+            current_author, current_date_string = parts[0], parts[-1]
+            current_date = datetime.fromisoformat(current_date_string)
+            activities.add(((current_date - reference_date).days, current_author))
+
+
 def get_git_startdate(repository_url):
     """Get statistics of contributing authors to git repositories"""
     # set bits grouped by year, day of year, and email address

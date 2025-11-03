@@ -12,8 +12,7 @@ from urllib.parse import unquote
 from namematch import same_author
 from affilmatch import is_affil_same, split_affil_string, shorten_affil
 import kvstore
-from datetime import date
-import matplotlib.pyplot as plt
+from datetime import date, datetime, timedelta
 
 
 # reuse same cache
@@ -389,6 +388,8 @@ if __name__ == '__main__':
     num_with_citation_file = 0
     num_repos = 0
     
+    reference_date = datetime.fromisoformat('2025-01-01T00:00:00+00:00')
+    activities = set()
     bib_urls_seen = set()
     all_results = []
     project_durations = []
@@ -437,6 +438,7 @@ if __name__ == '__main__':
             results_here['has_gitlab_tests'] = '.gitlab-ci.yml' in filelist
             results_here['has_jenkins_tests'] = 'Jenkinsfile' in filelist
             num_repos += 1
+            fetchgit.add_git_activity(repo_url, reference_date, activities)
             significant_contributors, top_contributor_contributions = fetchgit.get_significant_contributors(repo_url, parameter)
             if top_contributor_contributions is not None:
                 significant_contributors_deduplicated = deduplicate_authors(authors, significant_contributors)
@@ -486,6 +488,19 @@ if __name__ == '__main__':
     print("writing result database")
     with open('outputs/scientific-software-contributions-%s.json' % (parameter), 'w') as jsonout:
         json.dump(all_results, jsonout, indent=2)
+
+    # iterate through days
+    #active_days = {day for day, _ in activities}
+    developers_active = set()
+    num_developers_active = defaultdict(set)
+    for day, email in activities:
+        num_developers_active[day].add(email)
+        developers_active.add(email)
+    print(f"# of developers tracked: {len(developers_active)}")
+    with open('outputs/active_developers.txt', 'w') as fdevout:
+        for day_i in tqdm.trange(min(num_developers_active.keys()), max(num_developers_active.keys()) + 1):
+            fdevout.write('%d\t%d\t%s\n' % (
+                day_i, len(num_developers_active[day_i]), (reference_date + timedelta(days=day_i)).date().isoformat()))
 
 """
     with open('outputs/scientific-software-year.txt', 'w') as fout:

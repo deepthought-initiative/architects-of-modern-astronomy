@@ -2,6 +2,21 @@ from adjustText import adjust_text
 from collections import Counter
 import numpy as np
 import matplotlib.pyplot as plt
+import scipy.ndimage
+
+days, num_developers_active = np.loadtxt('outputs/active_developers.txt', usecols=(0,1), unpack=True, delimiter='\t', dtype=(int, int))
+print(days)
+days = np.array([np.timedelta64(d, 'D') for d in days])
+days = np.datetime64('2025-01-01T00:00:00') + days
+plt.plot(days, num_developers_active, ls=':', color='lightgrey')
+plt.plot(days, scipy.ndimage.median_filter(num_developers_active, 120), color='k', lw=3)
+print(scipy.ndimage.median_filter(num_developers_active, 120).max())
+plt.xlim(np.datetime64('1995-01-01T00:00:00'), None)
+plt.ylim(0, 250)
+plt.ylabel('Number of developers')
+plt.xlabel('Year')
+plt.savefig('developers_active.pdf')
+plt.close()
 
 hosts = [line.split(';')[0].replace('https://','').replace('http://','').replace('www.', '').split('/')[0]
 	for line in open('outputs/scientific-software.txt')]
