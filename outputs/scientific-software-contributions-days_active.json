@@ -1747,16 +1747,16 @@
         2020
       ],
       [
-        "School of Phys&Astro, Monash U, AU",
-        59,
-        2021,
-        2024
-      ],
-      [
         "STAR Inst, Universit\u00e9 de Li\u00e8ge, BE",
         270,
         2015,
         2020
+      ],
+      [
+        "School of Phys&Astro, Monash U, AU",
+        59,
+        2021,
+        2024
       ],
       [
         "Universit\u00e9 Grenoble Alpes, IPAG, FR",
@@ -2222,15 +2222,15 @@
         2022
       ],
       [
-        "Planetary Sci, Johns Hopkins U, US",
-        181,
-        2020,
-        2024
-      ],
-      [
         "BAER Inst, NASA Ames Research Center, US",
         375,
         2021,
+        2024
+      ],
+      [
+        "Planetary Sci, Johns Hopkins U, US",
+        181,
+        2020,
         2024
       ],
       [
@@ -5283,16 +5283,16 @@
         2024
       ],
       [
+        "Astro Centre, U Sussex, GB",
+        40,
+        2020,
+        2023
+      ],
+      [
         "Astro, U Edinburgh, GB",
         86,
         2019,
         2024
-      ],
-      [
-        "Astro, U College London, GB",
-        97,
-        2020,
-        2023
       ]
     ],
     "commit_activity": {
@@ -6212,13 +6212,13 @@
     ],
     "institutes": [
       [
-        "Phys&Astro, U Potsdam, DE",
+        "U Potsdam, Phys&Astro, DE",
         143,
         2018,
         2023
       ],
       [
-        "U Potsdam, Phys&Astro, DE",
+        "Phys&Astro, U Potsdam, DE",
         143,
         2018,
         2023
@@ -7114,14 +7114,14 @@
         2021
       ],
       [
-        "Universit\u00e9 Paris-Saclay, IJCLab, FR",
-        77,
+        "Astro, U Sussex, GB",
+        90,
         2017,
         2021
       ],
       [
-        "Astro, U Sussex, GB",
-        90,
+        "Universit\u00e9 Paris-Saclay, IJCLab, FR",
+        77,
         2017,
         2021
       ],
@@ -7408,13 +7408,13 @@
         2024
       ],
       [
-        "Inst of Cosmology&Gravitation, U Portsmouth, GB",
+        "U Portsmouth, Inst of Cosmology&Gravitation, GB",
         231,
         2017,
         2024
       ],
       [
-        "U Portsmouth, Inst of Cosmology&Gravitation, GB",
+        "Inst of Cosmology&Gravitation, U Portsmouth, GB",
         231,
         2017,
         2024
@@ -8074,13 +8074,13 @@
         2024
       ],
       [
-        "MPI f\u00fcr Physik, Munich, DE",
+        "TU of Munich, Munich, DE",
         92,
         2018,
         2024
       ],
       [
-        "TU of Munich, Munich, DE",
+        "MPI f\u00fcr Physik, Munich, DE",
         92,
         2018,
         2024
@@ -8320,16 +8320,16 @@
         2024
       ],
       [
-        "ReSoLVE Centre of Excellence, Computer Sci, FI",
-        532,
-        2003,
-        2023
-      ],
-      [
         "Nordita, KTH Royal Inst of Technology&Stockholm U, SE",
         2418,
         2001,
         2024
+      ],
+      [
+        "ReSoLVE Centre of Excellence, Computer Sci, FI",
+        532,
+        2003,
+        2023
       ],
       [
         "Kavli Theoretical Phys, Kohn Hall, USA ;;",
@@ -8368,13 +8368,19 @@
         2023
       ],
       [
+        "Centre for Star&Planet Formation, Globe Inst, DK",
+        957,
+        2003,
+        2024
+      ],
+      [
         "Max-Planck-Intitute for Solar System Research, DE",
         1000,
         2003,
         2023
       ],
       [
-        "Centre for Star&Planet Formation, Globe Inst, DK",
+        "Work partially done at MPIA, DE",
         957,
         2003,
         2024
@@ -8388,12 +8394,6 @@
       [
         "Astro Division, Physical Sci, FI",
         1007,
-        2003,
-        2024
-      ],
-      [
-        "Work partially done at MPIA, DE",
-        957,
         2003,
         2024
       ],
@@ -8416,16 +8416,16 @@
         2023
       ],
       [
-        "Institut f\u00fcr Weltraumforschung, \u00d6sterreichische Akademie der Wissenschaften, AT",
-        728,
-        2009,
-        2023
-      ],
-      [
         "Energy Engineering, Div. Energy Sci, Sweden;",
         407,
         2002,
         2024
+      ],
+      [
+        "Institut f\u00fcr Weltraumforschung, \u00d6sterreichische Akademie der Wissenschaften, AT",
+        728,
+        2009,
+        2023
       ],
       [
         "The Oskar Klein Centre, Astro, SE",
@@ -10657,14 +10657,14 @@
         2024
       ],
       [
-        "Stony Brook U, Phys&Astro, US",
-        1328,
+        "Phys&Astro, Stony Brook U, US",
+        2097,
         2010,
         2024
       ],
       [
-        "Phys&Astro, Stony Brook U, US",
-        2097,
+        "Stony Brook U, Phys&Astro, US",
+        1328,
         2010,
         2024
       ],
@@ -13673,14 +13673,14 @@
         2024
       ],
       [
-        "School of Phys, Trinity College Dublin, IE",
-        644,
+        "Lockheed Martin Solar&Astro Laboratory, Palo Alto, US",
+        906,
         2012,
         2024
       ],
       [
-        "Lockheed Martin Solar&Astro Laboratory, Palo Alto, US",
-        906,
+        "School of Phys, Trinity College Dublin, IE",
+        644,
         2012,
         2024
       ],
@@ -13727,16 +13727,16 @@
         2024
       ],
       [
-        "U College London, London, GB",
-        644,
-        2012,
-        2024
-      ],
-      [
         "SPL, NASA Goddard Space Flight Center",
         312,
         2011,
         2023
+      ],
+      [
+        "U College London, London, GB",
+        644,
+        2012,
+        2024
       ],
       [
         "NASA GSFC, Greenbelt, US",
@@ -15909,16 +15909,16 @@
         2023
       ],
       [
-        "School of Information Sci&Astro, U Illinois, US",
-        232,
-        2009,
-        2023
-      ],
-      [
         "Cahill Center for Astro&Astro, Caltech, US",
         129,
         2010,
         2019
+      ],
+      [
+        "School of Information Sci&Astro, U Illinois, US",
+        232,
+        2009,
+        2023
       ],
       [
         "CASA, Astrophysical&Planetary Sci, US",
@@ -15969,16 +15969,16 @@
         2023
       ],
       [
-        "Astro, U Edinburgh, GB",
-        247,
-        2009,
-        2021
-      ],
-      [
         "National Superconducting Cyclotron Laboratory, Michigan State, US",
         127,
         2011,
         2024
+      ],
+      [
+        "Astro, U Edinburgh, GB",
+        247,
+        2009,
+        2021
       ],
       [
         "Joint Nuclear Astro-Center for the Evolution of the Elements, US",
@@ -15993,16 +15993,16 @@
         2023
       ],
       [
-        "KIPAC, SLAC, US",
-        137,
-        2009,
-        2018
-      ],
-      [
         "Seoul National U Astro Research Center, Republic of Korea",
         166,
         2009,
         2019
+      ],
+      [
+        "KIPAC, SLAC, US",
+        137,
+        2009,
+        2018
       ],
       [
         "Lyman Briggs College, Michigan State U, US",
@@ -16916,13 +16916,13 @@
         2020
       ],
       [
-        "Astro Department, U Washington, US",
+        "NASA Astrobiology Inst, Virtual Planetary Laboratory Team, Washington",
         73,
         2016,
         2020
       ],
       [
-        "NASA Astrobiology Inst, Virtual Planetary Laboratory Team, Washington",
+        "Astro Department, U Washington, US",
         73,
         2016,
         2020
@@ -17018,8 +17018,8 @@
         2024
       ],
       [
-        "Astrochemistry Laboratory, NASA Goddard Space Flight Center, US",
-        37,
+        "NASA Goddard Space Flight Center, Astrochemistry Laboratory, US",
+        68,
         2017,
         2021
       ],
@@ -17030,8 +17030,8 @@
         2024
       ],
       [
-        "NASA Goddard Space Flight Center, Astrochemistry Laboratory, US",
-        68,
+        "Astrochemistry Laboratory, NASA Goddard Space Flight Center, US",
+        37,
         2017,
         2021
       ],
@@ -18108,7 +18108,7 @@
         2024
       ],
       [
-        "Center for Computational Sci&Engineering, Lawrence Berkeley National Laboratory, USA;",
+        "Center for Computational Sci&Engineering (CCSE), Lawrence Berkeley National Laboratory, US",
         4005,
         1997,
         2024
@@ -19486,13 +19486,13 @@
         2020
       ],
       [
-        "Stony Brook U, Phys&Astro, US",
+        "Phys&Astro, Stony Brook U, US",
         292,
         2012,
         2024
       ],
       [
-        "Phys&Astro, Stony Brook U, US",
+        "Stony Brook U, Phys&Astro, US",
         292,
         2012,
         2024
@@ -19824,16 +19824,16 @@
         2024
       ],
       [
-        "Freebird USA, US",
-        89,
-        2018,
-        2024
-      ],
-      [
         "Carbon IT LLC, US",
         98,
         2018,
         2023
+      ],
+      [
+        "Freebird USA, US",
+        89,
+        2018,
+        2024
       ]
     ],
     "commit_activity": {
@@ -22465,15 +22465,15 @@
         2023
       ],
       [
-        "Research School of Phys&Engineering, Australian National U, AU",
-        401,
-        2010,
-        2023
-      ],
-      [
         "Albert-Einstein-Institut, Hannover, DE",
         608,
         2006,
+        2023
+      ],
+      [
+        "Research School of Phys&Engineering, Australian National U, AU",
+        401,
+        2010,
         2023
       ],
       [
@@ -22513,13 +22513,13 @@
         2023
       ],
       [
-        "Louisiana State U, Baton Rouge, US",
+        "Australian National U, Canberra, AU",
         401,
         2010,
         2023
       ],
       [
-        "Australian National U, Canberra, AU",
+        "Louisiana State U, Baton Rouge, US",
         401,
         2010,
         2023
@@ -23139,14 +23139,14 @@
         2021
       ],
       [
-        "Stony Brook U, Phys&Astro, US",
-        211,
+        "Phys&Astro, Stony Brook U, US",
+        298,
         2015,
         2024
       ],
       [
-        "Phys&Astro, Stony Brook U, US",
-        298,
+        "Stony Brook U, Phys&Astro, US",
+        211,
         2015,
         2024
       ],
@@ -26602,13 +26602,13 @@
     ],
     "institutes": [
       [
-        "Stony Brook U, Phys&Astro, US",
+        "Phys&Astro, Stony Brook U, US",
         900,
         2006,
         2019
       ],
       [
-        "Phys&Astro, Stony Brook U, US",
+        "Stony Brook U, Phys&Astro, US",
         900,
         2006,
         2019
@@ -27248,13 +27248,13 @@
         2024
       ],
       [
-        "Institut d'Astrophysique de Paris, Sorbonne Universit\u00e9s, FR",
+        "Sorbonne Universit\u00e9s, Institut d'Astrophysique de Paris, FR",
         49,
         2009,
         2024
       ],
       [
-        "Sorbonne Universit\u00e9s, Institut d'Astrophysique de Paris, FR",
+        "Institut d'Astrophysique de Paris, Sorbonne Universit\u00e9s, FR",
         49,
         2009,
         2024
@@ -27455,14 +27455,14 @@
         2014
       ],
       [
-        "GEOPS - G\u00e9osciences, CNRS, FR",
-        2,
+        "CNRS, Institut d'Astrophysique de Paris, FR",
+        12,
         2009,
         2014
       ],
       [
-        "CNRS, Institut d'Astrophysique de Paris, FR",
-        12,
+        "GEOPS - G\u00e9osciences, CNRS, FR",
+        2,
         2009,
         2014
       ],
@@ -28309,13 +28309,13 @@
         2022
       ],
       [
-        "NExSS Virtual Planetary Laboratory, U Washington, US",
+        "Phys&Astro, U Washington at Seattle, US",
         14,
         2015,
         2022
       ],
       [
-        "Phys&Astro, U Washington at Seattle, US",
+        "NExSS Virtual Planetary Laboratory, U Washington, US",
         14,
         2015,
         2022
@@ -29087,13 +29087,13 @@
     ],
     "institutes": [
       [
-        "Albert-Einstein-Institut, Hannover, DE",
+        "National Center for Supercomputing Applications, U Illinois at Urbana-Champaign, USA;",
         2,
         2019,
         2020
       ],
       [
-        "National Center for Supercomputing Applications, U Illinois at Urbana-Champaign, USA;",
+        "Albert-Einstein-Institut, Hannover, DE",
         2,
         2019,
         2020
@@ -29942,13 +29942,13 @@
     ],
     "institutes": [
       [
-        "Stony Brook U, Phys&Astro, US",
+        "Phys&Astro, Stony Brook U, US",
         1328,
         2010,
         2024
       ],
       [
-        "Phys&Astro, Stony Brook U, US",
+        "Stony Brook U, Phys&Astro, US",
         1328,
         2010,
         2024
@@ -31881,13 +31881,13 @@
         2024
       ],
       [
-        "Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, FR",
+        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, FR",
         475,
         2014,
         2024
       ],
       [
-        "Laboratoire Lagrange, Universit\u00e9 C\u00f4te d'Azur, FR",
+        "Universit\u00e9 C\u00f4te d'Azur, Observatoire de la C\u00f4te d'Azur, FR",
         475,
         2014,
         2024
@@ -34753,13 +34753,13 @@
         2022
       ],
       [
-        "Astro, U Edinburgh, GB",
+        "Astro Research Inst, Liverpool John Moores U, GB",
         31,
         2012,
         2022
       ],
       [
-        "Astro Research Inst, Liverpool John Moores U, GB",
+        "Astro, U Edinburgh, GB",
         31,
         2012,
         2022
@@ -38013,16 +38013,16 @@
         2023
       ],
       [
-        "Aperio Software, Insight House, GB",
-        1010,
-        2011,
-        2024
-      ],
-      [
         "Centre for Astro Research, U Hertfordshire, GB",
         555,
         2014,
         2023
+      ],
+      [
+        "Aperio Software, Insight House, GB",
+        1010,
+        2011,
+        2024
       ],
       [
         "D Ciencias F\u00edsicas, U Andres Bello, CL",
@@ -38085,15 +38085,15 @@
         2024
       ],
       [
-        "Garching, DE",
-        132,
-        2012,
-        2023
-      ],
-      [
         "Yale U, Astro Department, USA;",
         740,
         2011,
+        2023
+      ],
+      [
+        "Garching, DE",
+        132,
+        2012,
         2023
       ],
       [
@@ -38193,15 +38193,15 @@
         2024
       ],
       [
-        "Freelance, Leeds, GB",
-        1010,
-        2011,
-        2024
-      ],
-      [
         "STScI, Baltimore, MD",
         280,
         2013,
+        2024
+      ],
+      [
+        "Freelance, Leeds, GB",
+        1010,
+        2011,
         2024
       ],
       [
@@ -41431,13 +41431,13 @@
         2016
       ],
       [
-        "Phys&Astro, U Manchester",
+        "Centre for Astro, U Central Lancashire, Preston",
         1086,
         1995,
         2009
       ],
       [
-        "Centre for Astro, U Central Lancashire, Preston",
+        "Phys&Astro, U Manchester",
         1086,
         1995,
         2009
@@ -43253,14 +43253,14 @@
         2017
       ],
       [
-        "Research School of Astro&Astro, Mount Stromlo Obs., AU",
-        523,
+        "Computational Math, Sci, US",
+        471,
         2011,
         2024
       ],
       [
-        "Computational Math, Sci, US",
-        471,
+        "Research School of Astro&Astro, Mount Stromlo Obs., AU",
+        523,
         2011,
         2024
       ],
@@ -43427,13 +43427,13 @@
         2024
       ],
       [
-        "ESO, Garching, DE",
+        "Co KG, Munich, DE",
         471,
         2011,
         2024
       ],
       [
-        "Co KG, Munich, DE",
+        "ESO, Garching, DE",
         471,
         2011,
         2024
@@ -44021,13 +44021,13 @@
         2017
       ],
       [
-        "NExSS Virtual Planetary Laboratory, U Washington, US",
+        "Phys&Astro, U Washington at Seattle, US",
         6,
         2015,
         2017
       ],
       [
-        "Phys&Astro, U Washington at Seattle, US",
+        "NExSS Virtual Planetary Laboratory, U Washington, US",
         6,
         2015,
         2017
@@ -46400,13 +46400,13 @@
         2024
       ],
       [
-        "Caltech, TAPIR, US",
+        "TAPIR, Caltech, US",
         25,
         2019,
         2024
       ],
       [
-        "TAPIR, Caltech, US",
+        "Caltech, TAPIR, US",
         25,
         2019,
         2024
@@ -48914,13 +48914,13 @@
         2024
       ],
       [
-        "Phys, Center for Cosmology&Astro-Particle Phys, US",
+        "LAPP, Univ. Grenoble Alpes, FR",
         143,
         2011,
         2024
       ],
       [
-        "LAPP, Univ. Grenoble Alpes, FR",
+        "Phys, Center for Cosmology&Astro-Particle Phys, US",
         143,
         2011,
         2024
@@ -53182,13 +53182,13 @@
         2024
       ],
       [
-        "Phys&Astro, Johns Hopkins U, US",
+        ", AU",
         138,
         2015,
         2024
       ],
       [
-        ", AU",
+        "Phys&Astro, Johns Hopkins U, US",
         138,
         2015,
         2024
@@ -53200,13 +53200,13 @@
         2024
       ],
       [
-        "INAF - Osservatorio Astrofisico di Arcetri, Firenze, IT",
+        "Astro, U Florence, IT",
         138,
         2015,
         2024
       ],
       [
-        "Astro, U Florence, IT",
+        "INAF - Osservatorio Astrofisico di Arcetri, Firenze, IT",
         138,
         2015,
         2024
@@ -53443,13 +53443,13 @@
         2017
       ],
       [
-        "Phys, U Bath, GB",
+        "Astro, U Maryland, US",
         8,
         2015,
         2017
       ],
       [
-        "Astro, U Maryland, US",
+        "Phys, U Bath, GB",
         8,
         2015,
         2017
@@ -55192,13 +55192,13 @@
         2018
       ],
       [
-        "Columbia Astro Laboratory, Pupin Hall, US",
+        "Carnegie Obs., Pasadena, US",
         57,
         2013,
         2018
       ],
       [
-        "Carnegie Obs., Pasadena, US",
+        "Columbia Astro Laboratory, Pupin Hall, US",
         57,
         2013,
         2018
@@ -55554,14 +55554,14 @@
         2022
       ],
       [
-        "Dipartimento di Fisica e Astronomia - Universit\u00e0 di Bologna, Bologna, IT",
-        76,
+        "INAF-Astro&Space Sci Obs. of Bologna, IT",
+        57,
         2015,
         2022
       ],
       [
-        "INAF-Astro&Space Sci Obs. of Bologna, IT",
-        57,
+        "Dipartimento di Fisica e Astronomia - Universit\u00e0 di Bologna, Bologna, IT",
+        76,
         2015,
         2022
       ],
@@ -56404,13 +56404,13 @@
     ],
     "institutes": [
       [
-        "Astro, U California at Berkeley, US",
+        "Departments of Phys&Astro, U California Berkeley, US",
         21,
         2015,
         2020
       ],
       [
-        "Departments of Phys&Astro, U California Berkeley, US",
+        "Astro, U California at Berkeley, US",
         21,
         2015,
         2020
@@ -59950,13 +59950,13 @@
         2021
       ],
       [
-        "Planetary Sci, JILA, US",
+        "MPI for Extraterrestrial Phys, Giessenbachstr., DE",
         131,
         2014,
         2021
       ],
       [
-        "MPI for Extraterrestrial Phys, Giessenbachstr., DE",
+        "Planetary Sci, JILA, US",
         131,
         2014,
         2021
@@ -64169,13 +64169,13 @@
         2024
       ],
       [
-        "INAF-Osservatorio Astrofisico di Torino, IT",
+        "INAF Osservatorio Astronomico di Padova, Padova, IT",
         201,
         2014,
         2024
       ],
       [
-        "INAF Osservatorio Astronomico di Padova, Padova, IT",
+        "INAF-Osservatorio Astrofisico di Torino, IT",
         201,
         2014,
         2024
@@ -65520,6 +65520,12 @@
         2020
       ],
       [
+        "U Pittsburgh, PITT PACC, US",
+        12,
+        2016,
+        2020
+      ],
+      [
         "PITT PACC, Phys&Astro, US",
         12,
         2016,
@@ -65527,12 +65533,6 @@
       ],
       [
         "Center for Cosmology&Astro-Particle Phys, The Ohio State U, US",
-        12,
-        2016,
-        2020
-      ],
-      [
-        "U Pittsburgh, PITT PACC, US",
         12,
         2016,
         2020
@@ -66323,13 +66323,13 @@
     ],
     "institutes": [
       [
-        "Drexel U, Phys, US",
+        "Phys, Drexel U, US",
         67,
         2016,
         2022
       ],
       [
-        "Phys, Drexel U, US",
+        "Drexel U, Phys, US",
         67,
         2016,
         2022
@@ -67754,13 +67754,13 @@
         2019
       ],
       [
-        "SUPA, School of Phys&Astro, GB",
+        "Oxford Astro, Denys Wilkinson Building, GB",
         24,
         2017,
         2019
       ],
       [
-        "Oxford Astro, Denys Wilkinson Building, GB",
+        "SUPA, School of Phys&Astro, GB",
         24,
         2017,
         2019
@@ -69866,13 +69866,13 @@
         2024
       ],
       [
-        "SUPA, School of Phys&Astro, GB",
+        "Space Telescope Sci Inst, Baltimore, US",
         120,
         2017,
         2024
       ],
       [
-        "Space Telescope Sci Inst, Baltimore, US",
+        "SUPA, School of Phys&Astro, GB",
         120,
         2017,
         2024
@@ -69890,15 +69890,15 @@
         2024
       ],
       [
-        "CASA, U Colorado at Boulder, US",
-        571,
-        2012,
-        2024
-      ],
-      [
         "Mullard Space Sci Laboratory, U College London, GB",
         603,
         2014,
+        2024
+      ],
+      [
+        "CASA, U Colorado at Boulder, US",
+        571,
+        2012,
         2024
       ],
       [
@@ -72457,13 +72457,13 @@
         2023
       ],
       [
-        "U California, Riverside, US",
+        "Johns Hopkins U, Baltimore, US",
         371,
         2009,
         2023
       ],
       [
-        "Johns Hopkins U, Baltimore, US",
+        "U California, Riverside, US",
         371,
         2009,
         2023
@@ -73575,13 +73575,13 @@
     ],
     "institutes": [
       [
-        "Service d'Astrophysique (SAp), IRFU/DRF/CEA-Saclay, FR",
+        "Astroparticule et Cosmologie, Universit\u00e9 de Paris-Cit\u00e9, FR",
         644,
         2014,
         2024
       ],
       [
-        "Astroparticule et Cosmologie, Universit\u00e9 de Paris-Cit\u00e9, FR",
+        "Service d'Astrophysique (SAp), IRFU/DRF/CEA-Saclay, FR",
         644,
         2014,
         2024
@@ -73617,13 +73617,13 @@
         2024
       ],
       [
-        "rue Alice Domon et L\u00e9onie Duquet, FR",
+        "Unit\u00e9 mixte de recherche Astroparticule et Cosmologie, Paris, FR",
         644,
         2014,
         2024
       ],
       [
-        "Unit\u00e9 mixte de recherche Astroparticule et Cosmologie, Paris, FR",
+        "rue Alice Domon et L\u00e9onie Duquet, FR",
         644,
         2014,
         2024
@@ -75922,15 +75922,15 @@
         2023
       ],
       [
-        "Astro, Caltech, US",
-        280,
-        2015,
-        2023
-      ],
-      [
         "Bay Area Environmental Research Inst (Moffett Field, California, US",
         195,
         2016,
+        2023
+      ],
+      [
+        "Astro, Caltech, US",
+        280,
+        2015,
         2023
       ],
       [
@@ -76552,14 +76552,14 @@
         2024
       ],
       [
-        "Space Telescope Sci Inst, Baltimore, US",
-        228,
+        "Planetary Sci, U Bern, CH",
+        204,
         2015,
         2024
       ],
       [
-        "Planetary Sci, U Bern, CH",
-        204,
+        "Space Telescope Sci Inst, Baltimore, US",
+        228,
         2015,
         2024
       ],
@@ -79963,7 +79963,7 @@
         2019
       ],
       [
-        "DARK, Niels Bohr Inst, DK",
+        "DARK, Niels Bohr Inst, Denmark;",
         32,
         2015,
         2019
@@ -79993,16 +79993,16 @@
         2018
       ],
       [
-        "Astro, U Birmingham, GB",
-        32,
-        2015,
-        2019
-      ],
-      [
         "SUPA, U Glasgow, GB",
         14,
         2015,
         2018
+      ],
+      [
+        "Astro, U Birmingham, GB",
+        32,
+        2015,
+        2019
       ],
       [
         "U Chicago, Chicago, US",
@@ -82706,13 +82706,13 @@
         2022
       ],
       [
-        "ELTE E\u00f6tv\u00f6s Lor\u00e1nd U, Inst of Phys, Hungary;",
+        "National Superconducting Cyclotron Laboratory, Michigan State U, US",
         133,
         2015,
         2022
       ],
       [
-        "National Superconducting Cyclotron Laboratory, Michigan State U, US",
+        "ELTE E\u00f6tv\u00f6s Lor\u00e1nd U, Inst of Phys, Hungary;",
         133,
         2015,
         2022
@@ -84381,16 +84381,16 @@
     ],
     "institutes": [
       [
-        "Stony Brook U, Phys&Astro, US",
-        81,
-        2012,
-        2019
-      ],
-      [
         "Phys&Astro, Stony Brook U, US",
         542,
         2012,
         2023
+      ],
+      [
+        "Stony Brook U, Phys&Astro, US",
+        81,
+        2012,
+        2019
       ],
       [
         "NVIDIA Corporation, US",
@@ -87329,25 +87329,25 @@
         2022
       ],
       [
-        "Division of Phys, Math, US",
-        39,
-        2018,
-        2022
-      ],
-      [
         "Weizmann Inst of Sci, Particle Phys&Astro, IL",
         39,
         2018,
         2022
       ],
       [
-        "Benoziyo CfA, Weizmann Inst of Sci, IL",
+        "Division of Phys, Math, US",
         39,
         2018,
         2022
       ],
       [
         "Lawrence Berkeley National Laboratory, Berkeley, US",
+        39,
+        2018,
+        2022
+      ],
+      [
+        "Benoziyo CfA, Weizmann Inst of Sci, IL",
         39,
         2018,
         2022
@@ -88915,13 +88915,13 @@
         2021
       ],
       [
-        "St. Andrews U, St. Andrews, GB",
+        "Astro, U St Andrews, GB",
         55,
         2018,
         2021
       ],
       [
-        "Astro, U St Andrews, GB",
+        "St. Andrews U, St. Andrews, GB",
         55,
         2018,
         2021
@@ -89912,16 +89912,16 @@
         2024
       ],
       [
-        "Phys Department, Brookhaven National Laboratory, US",
-        25,
-        2017,
-        2019
-      ],
-      [
         "Radio Astro Laboratory, U California Berkeley, US",
         71,
         2017,
         2018
+      ],
+      [
+        "Phys Department, Brookhaven National Laboratory, US",
+        25,
+        2017,
+        2019
       ],
       [
         "U California Berkeley, Astro, US",
@@ -92735,16 +92735,16 @@
         2021
       ],
       [
-        "Astro, U Texas\u2014R\u00edo Grande Valley, US",
-        12,
-        2018,
-        2020
-      ],
-      [
         "U Nacional de C\u00f3rdoba, IATE, AR",
         14,
         2016,
         2021
+      ],
+      [
+        "Astro, U Texas\u2014R\u00edo Grande Valley, US",
+        12,
+        2018,
+        2020
       ],
       [
         "IATE-OAC, U Nacional de C\u00f3rdoba-CONICET, AR",
@@ -93286,13 +93286,13 @@
         2024
       ],
       [
-        "Smithsonian Astrophysical Obs., Cambridge, US",
+        "Harvard-Smithsonian CfA, US",
         45,
         2015,
         2024
       ],
       [
-        "Harvard-Smithsonian CfA, US",
+        "Smithsonian Astrophysical Obs., Cambridge, US",
         45,
         2015,
         2024
@@ -93418,13 +93418,13 @@
         2023
       ],
       [
-        "Kavli Cosmology, U Cambridge, GB",
+        "Sternberg Astronomical Inst, Moscow MV Lomonosov State U, Russia",
         99,
         2005,
         2023
       ],
       [
-        "Sternberg Astronomical Inst, Moscow MV Lomonosov State U, Russia",
+        "Kavli Cosmology, U Cambridge, GB",
         99,
         2005,
         2023
@@ -95375,13 +95375,13 @@
         2024
       ],
       [
-        "Astro, Las Cumbres Obs., US",
+        "Universit\u00e9 de Toulouse, UPS-OMP, FR",
         266,
         2015,
         2024
       ],
       [
-        "Universit\u00e9 de Toulouse, UPS-OMP, FR",
+        "Astro, Las Cumbres Obs., US",
         266,
         2015,
         2024
@@ -97443,13 +97443,13 @@
         2024
       ],
       [
-        "Phys&Astro, Uppsala U, SE",
+        "Astro, U California, US",
         395,
         2018,
         2024
       ],
       [
-        "Astro, U California, US",
+        "Phys&Astro, Uppsala U, SE",
         395,
         2018,
         2024
@@ -97730,16 +97730,16 @@
         2024
       ],
       [
-        "Universit\u00e9 de Strasbourg, Strasbourg, FR",
-        73,
-        2012,
-        2016
-      ],
-      [
         "Steward Obs., U Arizona, US",
         361,
         2012,
         2024
+      ],
+      [
+        "Universit\u00e9 de Strasbourg, Strasbourg, FR",
+        73,
+        2012,
+        2016
       ],
       [
         "CSIRO, Black Mountain Laboratories, AU",
@@ -97802,16 +97802,16 @@
         2022
       ],
       [
-        "MPIA Heidelberg, Heidelberg, DE",
-        73,
-        2012,
-        2016
-      ],
-      [
         "randers@stsci.edu, kgordon@stsci.edu",
         314,
         2012,
         2024
+      ],
+      [
+        "MPIA Heidelberg, Heidelberg, DE",
+        73,
+        2012,
+        2016
       ],
       [
         "STScI, Baltimore, US",
@@ -98581,13 +98581,13 @@
         2024
       ],
       [
-        "U Leicester, Leicester, GB",
+        "U.S. Naval Research Laboratory, Washington, DC USA",
         251,
         2016,
         2024
       ],
       [
-        "U.S. Naval Research Laboratory, Washington, DC USA",
+        "U Leicester, Leicester, GB",
         251,
         2016,
         2024
@@ -104808,13 +104808,13 @@
         2024
       ],
       [
-        "MPI f\u00fcr Sonnensystemforschung, G\u00f6ttingen, DE",
+        "Astro Department, U California, US",
         36,
         2020,
         2024
       ],
       [
-        "Astro Department, U California, US",
+        "MPI f\u00fcr Sonnensystemforschung, G\u00f6ttingen, DE",
         36,
         2020,
         2024
@@ -111568,16 +111568,16 @@
         2024
       ],
       [
-        "Kavli Cosmological Phys, U Chicago, US",
-        23,
-        2020,
-        2022
-      ],
-      [
         "Astro&Astro, U Chicago, US",
         40,
         2020,
         2024
+      ],
+      [
+        "Kavli Cosmological Phys, U Chicago, US",
+        23,
+        2020,
+        2022
       ],
       [
         "The Michigan Data Sci, U Michigan, US",
@@ -114535,13 +114535,13 @@
         2023
       ],
       [
-        "Caltech, Pasadena, US",
+        "Phys&Astro, U California, US",
         813,
         2014,
         2023
       ],
       [
-        "Phys&Astro, U California, US",
+        "Caltech, Pasadena, US",
         813,
         2014,
         2023
@@ -115070,13 +115070,13 @@
         2024
       ],
       [
-        "Centre for Planetary Sci, U Toronto at Scarborough, CA",
+        "Canadian Theoretical Astro, U Toronto, CA",
         295,
         2015,
         2024
       ],
       [
-        "Canadian Theoretical Astro, U Toronto, CA",
+        "Centre for Planetary Sci, U Toronto at Scarborough, CA",
         295,
         2015,
         2024
@@ -122169,13 +122169,13 @@
         2019
       ],
       [
-        "Obs. of Geneva, U Geneva, CH",
+        "IRFU, CEA, FR",
         14,
         2016,
         2019
       ],
       [
-        "IRFU, CEA, FR",
+        "Obs. of Geneva, U Geneva, CH",
         14,
         2016,
         2019
@@ -122800,13 +122800,13 @@
         2024
       ],
       [
-        "Astro, The Ohio State U, US",
+        "Center for Cosmology&Astroparticle Phys, Columbus, US",
         190,
         2016,
         2023
       ],
       [
-        "Center for Cosmology&Astroparticle Phys, Columbus, US",
+        "Astro, The Ohio State U, US",
         190,
         2016,
         2023
@@ -122836,16 +122836,16 @@
         2023
       ],
       [
-        "School of Phys&Astro, Cardiff U, GB",
-        31,
-        2021,
-        2022
-      ],
-      [
         "U Alberta, Phys, CA",
         60,
         2019,
         2024
+      ],
+      [
+        "School of Phys&Astro, Cardiff U, GB",
+        31,
+        2021,
+        2022
       ],
       [
         "MPIA, DE",
@@ -123342,13 +123342,13 @@
         2023
       ],
       [
-        "Lawrence Berkeley National Laboratory One Cyclotron Road Berkeley, USA ;",
+        "Space Telescope Sci Inst, Baltimore, US",
         50,
         2016,
         2023
       ],
       [
-        "Space Telescope Sci Inst, Baltimore, US",
+        "Lawrence Berkeley National Laboratory One Cyclotron Road Berkeley, USA ;",
         50,
         2016,
         2023
@@ -123489,12 +123489,6 @@
         2024
       ],
       [
-        "PITT PACC, Phys&Astro, US",
-        200,
-        2016,
-        2019
-      ],
-      [
         "Center for Cosmology&Astro-Particle Phys, The Ohio State U, US",
         200,
         2016,
@@ -123502,6 +123496,12 @@
       ],
       [
         "U Pittsburgh, PITT PACC, US",
+        200,
+        2016,
+        2019
+      ],
+      [
+        "PITT PACC, Phys&Astro, US",
         200,
         2016,
         2019
@@ -129783,13 +129783,13 @@
         2024
       ],
       [
-        "Phys&Astro, Michigan State U, US",
+        "Research School of Astro&Astro, Australian National U, AU",
         376,
         2020,
         2024
       ],
       [
-        "Research School of Astro&Astro, Australian National U, AU",
+        "Phys&Astro, Michigan State U, US",
         376,
         2020,
         2024
@@ -131691,13 +131691,13 @@
         2024
       ],
       [
-        "Phys&Astro, Johns Hopkins U, US",
+        "Harvard-Smithsonian CfA, Cambridge, US",
         56,
         2018,
         2024
       ],
       [
-        "Harvard-Smithsonian CfA, Cambridge, US",
+        "Phys&Astro, Johns Hopkins U, US",
         56,
         2018,
         2024
@@ -132932,13 +132932,13 @@
         2024
       ],
       [
-        "Inst of Cosmology&Gravitation, U Portsmouth, GB",
+        "U California Santa Cruz, U California Obs., US",
         375,
         2014,
         2024
       ],
       [
-        "U California Santa Cruz, U California Obs., US",
+        "Inst of Cosmology&Gravitation, U Portsmouth, GB",
         375,
         2014,
         2024
@@ -135386,13 +135386,13 @@
     ],
     "institutes": [
       [
-        "U e Federal de Santa Catarina, D F\u00edsica, BR",
+        "D F\u00edsica, U e Federal de Santa Catarina, Brazil;",
         190,
         2015,
         2024
       ],
       [
-        "D F\u00edsica, U e Federal de Santa Catarina, Brazil;",
+        "U e Federal de Santa Catarina, D F\u00edsica, BR",
         190,
         2015,
         2024
@@ -136795,13 +136795,13 @@
     ],
     "institutes": [
       [
-        "MPI f\u00fcr Extraterrestrische Physik, DE",
+        "CCA, Flatiron Inst, US",
         12,
         2020,
         2022
       ],
       [
-        "CCA, Flatiron Inst, US",
+        "MPI f\u00fcr Extraterrestrische Physik, DE",
         12,
         2020,
         2022
@@ -140188,13 +140188,13 @@
         2024
       ],
       [
-        "Universit\u00e9 de Montr\u00e9al, D\u00e9partement de Physique, CA",
+        "Fac of Sci, York U, CA",
         854,
         2017,
         2024
       ],
       [
-        "Fac of Sci, York U, CA",
+        "Universit\u00e9 de Montr\u00e9al, D\u00e9partement de Physique, CA",
         854,
         2017,
         2024
@@ -143988,13 +143988,13 @@
     ],
     "institutes": [
       [
-        "Laboratory of Astro, Inst of Phys, CH",
+        "Inst of Phys, Laboratory of Astro, CH",
         4,
         2022,
         2022
       ],
       [
-        "Inst of Phys, Laboratory of Astro, CH",
+        "Laboratory of Astro, Inst of Phys, CH",
         4,
         2022,
         2022
@@ -146765,7 +146765,7 @@
         2021
       ],
       [
-        "Phys&Astro Department Galileo Galilei, U Padova, IT",
+        "Dipartimento di Fisica e Astronomia 'G. Galilei', U Padova, IT",
         16,
         2020,
         2021
@@ -149452,16 +149452,16 @@
         2023
       ],
       [
-        "Smithsonian, Cambridge, US",
-        136,
-        2013,
-        2023
-      ],
-      [
         "Toyota Technological Inst, Japan;",
         24,
         2016,
         2019
+      ],
+      [
+        "Smithsonian, Cambridge, US",
+        136,
+        2013,
+        2023
       ],
       [
         "CfA, Harvard &amp",
@@ -153431,13 +153431,13 @@
         2020
       ],
       [
-        "Perimeter Theoretical Phys, Waterloo, CA",
+        "Dominion Radio Astrophysical Obs., Herzberg Astro &amp",
         4,
         2019,
         2020
       ],
       [
-        "Dominion Radio Astrophysical Obs., Herzberg Astro &amp",
+        "Perimeter Theoretical Phys, Waterloo, CA",
         4,
         2019,
         2020
@@ -155313,13 +155313,13 @@
         2023
       ],
       [
-        "Institut f\u00fcr Theoretische Teilchenphysik (TTP), Karlsruher Institut f\u00fcr Technologie (KIT), DE",
+        "Theoretical Particle Phys (TTP), Karlsruhe Inst of Technology (KIT), DE",
         87,
         2019,
         2023
       ],
       [
-        "Theoretical Particle Phys (TTP), Karlsruhe Inst of Technology (KIT), DE",
+        "Institut f\u00fcr Theoretische Teilchenphysik (TTP), Karlsruher Institut f\u00fcr Technologie (KIT), DE",
         87,
         2019,
         2023
