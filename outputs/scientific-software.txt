@@ -2583,3 +2583,850 @@ https://github.com/alphaparrot/ExoPlaSim;https://ui.adsabs.harvard.edu/abs/2022M
 https://github.com/COSMIC-PopSynth/COSMIC;https://ui.adsabs.harvard.edu/abs/2020ApJ...898...71B;9573;COSMIC: Compact Object Synthesis and Monte Carlo Investigation Code
 https://github.com/ClusterMonteCarlo/CMC-COSMIC;https://ui.adsabs.harvard.edu/abs/2022ApJS..258...22R;1730;CMC-COSMIC: Cluster Monte Carlo code
 https://github.com/me-manu/gammaALPs;https://ui.adsabs.harvard.edu/abs/2022icrc.confE.557M;521;gammaALPs: Conversion probability between photons and axions/axionlike particles
+https://github.com/lyf222/alpconv;https://ui.adsabs.harvard.edu/abs/2021PhLB..82136611C;495;alpconv: Calculating alp-photon conversion
+https://github.com/liulei/volks2;https://ui.adsabs.harvard.edu/abs/2021AJ....162..159L;0;VOLKS2: VLBI Observation for transient Localization Keen Searcher
+https://github.com/rajeshmondal18/DviSukta;https://ui.adsabs.harvard.edu/abs/2021arXiv210702668M;0;DviSukta: Spherically Averaged Bispectrum calculator
+https://github.com/SoFiA-Admin/SoFiA-2;https://ui.adsabs.harvard.edu/abs/2021MNRAS.506.3962W;1091;SoFiA 2: An automated, parallel HI source finding pipeline
+https://github.com/discsim/frank;https://ui.adsabs.harvard.edu/abs/2020MNRAS.495.3209J;1990;Frankenstein: Flux reconstructor
+https://github.com/astroboylrx/Rubble;https://ui.adsabs.harvard.edu/abs/2022MNRAS.510.5246L;321;Rubble: Simulating dust size distributions in protoplanetary disks
+https://github.com/justyncw/STAR_MELT;https://ui.adsabs.harvard.edu/abs/2021MNRAS.507.3331C;347;STAR-MELT: STellar AccrRetion Mapping with Emission Line Tomography
+https://github.com/sapearson/HSS;https://ui.adsabs.harvard.edu/abs/2021arXiv210700017P;0;HSS: The Hough Stream Spotter
+https://github.com/soichiro-hattori/unpopular;https://ui.adsabs.harvard.edu/abs/2021arXiv210615063H;0;unpopular: Using CPM detrending to obtain TESS light curves
+https://github.com/gmbrandt/HTOF;https://ui.adsabs.harvard.edu/abs/2021arXiv210906761B;0;HTOF: Astrometric solutions for Hipparcos and Gaia intermediate data
+https://github.com/LSSTDESC/WeakLensingDeblending;https://ui.adsabs.harvard.edu/abs/2021JCAP...07..043S;256;WeakLensingDeblending: Weak lensing fast simulations and analysis of blended objects
+https://github.com/matteolucchini1/BHJet;https://ui.adsabs.harvard.edu/abs/2021arXiv210812011L;0;BHJet: Semi-analytical black hole jet model
+https://gitlab.com/menura_plasma/menura;https://ui.adsabs.harvard.edu/abs/2021arXiv210812252B;0;Menura: Multi-GPU numerical model for space plasma simulation
+https://github.com/VarStarDetect/varstardetect;https://ui.adsabs.harvard.edu/abs/2021arXiv210906347P;0;Varstar Detect: Variable star detection in TESS data
+https://github.com/ckay314/OSPREI;https://ui.adsabs.harvard.edu/abs/2021arXiv210906960K;0;OSPREI: Sun-to-Earth (or satellite) CME simulator
+https://github.com/SIOSlab/exodetbox;https://ui.adsabs.harvard.edu/abs/2021JATIS...7c7002K;0;exodetbox: Finding planet-star projected separation extrema and difference in magnitude extrema
+https://bitbucket.org/elaplace/tulips;https://ui.adsabs.harvard.edu/abs/2022A%26C....3800516L;763;TULIPS: Tool for Understanding the Lives, Interiors, and Physics of Stars
+https://github.com/icecube/TauRunner;https://ui.adsabs.harvard.edu/abs/2020JCAP...01..012S;991;TauRunner: Code to propagate tau neutrinos at very high energies
+https://github.com/ArtificialStellarPopulations/ArtPop;https://ui.adsabs.harvard.edu/abs/2021arXiv210913943G;0;ArtPop: Artificial Stellar Populations generator
+https://github.com/temuller/piscola;https://ui.adsabs.harvard.edu/abs/2021arXiv211011340M;0;PISCOLA: Python for Intelligent Supernova-COsmology Light-curve Analysis
+https://github.com/LSSTDESC/parsnip;https://ui.adsabs.harvard.edu/abs/2021AJ....162..275B;503;ParSNIP: Parametrization of SuperNova Intrinsic Properties
+https://github.com/quokka-astro/quokka;https://ui.adsabs.harvard.edu/abs/2022MNRAS.512.1430W;151;Quokka: Two-moment AMR radiation hydrodynamics on GPUs for astrophysics
+https://github.com/BASTAcode/BASTA;https://ui.adsabs.harvard.edu/abs/2015MNRAS.452.2127S;15315;BASTA: BAyesian STellar Algorithm
+https://github.com/palumbom/grass;https://ui.adsabs.harvard.edu/abs/2021arXiv211011839P;0;GRASS: GRanulation and Spectrum Simulator
+https://github.com/JixingGE/GGCHEMPY;https://ui.adsabs.harvard.edu/abs/2021arXiv211011117G;0;GGCHEMPY: Gas-Grain CHEMical code for interstellar medium in Python3
+https://github.com/EliabCanul/nauyaca;https://ui.adsabs.harvard.edu/abs/2021AJ....162..262C and https://ui.adsabs.harvard.edu/abs/2021AJ....162..262C;1;Nauyaca: N-body approach for determining planetary masses and orbital elements
+https://github.com/cweniger/swordfish;https://ui.adsabs.harvard.edu/abs/2017arXiv171205401E;635;swordfish: Information yield of counting experiments
+https://github.com/pyro-ppl/pyro;https://ui.adsabs.harvard.edu/abs/2018arXiv181009538B;703;pyro: Deep universal probabilistic programming with Python and PyTorch
+https://github.com/rychallener/ThERESA;https://ui.adsabs.harvard.edu/abs/2022AJ....163..117C;356;ThERESA: 3D Exoplanet Cartography
+https://github.com/FEniCS;https://doi.org/10.1007/978-3-642-23099-8;0;FEniCS: Computing platform for solving partial differential equations
+https://github.com/C-Briddon/SELCIE;https://ui.adsabs.harvard.edu/abs/2021arXiv211011917B;0;SELCIE: Screening Equations Linearly Constructed and Iteratively Evaluated
+https://github.com/AIgnesti/PT-REX;https://ui.adsabs.harvard.edu/abs/2021arXiv211012720I;0;PT-REX: Point-to-point TRend EXtractor
+https://github.com/CarlosCoba/XookSuut-code;https://ui.adsabs.harvard.edu/abs/2021arXiv211005095L;0;XookSuut: Model circular and noncircular flows on 2D velocity maps
+https://github.com/Smith42/astroddpm;https://ui.adsabs.harvard.edu/abs/2022MNRAS.511.1808S;469;astroDDPM: Realistic galaxy simulation via score-based generative models
+https://github.com/rwcarlsen/pswarm;https://link.springer.com/article/10.1007%2Fs10898-007-9133-5;0;PSwarm: Global optimization solver for bound and linear constrained problems
+https://github.com/lgrcia/prose;https://ui.adsabs.harvard.edu/abs/2022MNRAS.509.4817G;528;prose: FITS images processing pipeline
+https://github.com/mdruett/COCOPLOT;https://ui.adsabs.harvard.edu/abs/2021arXiv211110786D;0;COCOPLOT: COlor COllapsed PLOTting software
+https://github.com/damonge/CoLoRe;https://ui.adsabs.harvard.edu/abs/2021arXiv211105069R;0;CoLoRe: Cosmological Lofty Realization
+https://github.com/shengjin/Nii;https://ui.adsabs.harvard.edu/abs/2022MNRAS.509.4608J;55;Nii: Multidimensional posterior distributions framework
+https://github.com/ladsantos/p-winds;https://ui.adsabs.harvard.edu/abs/2022A%26A...659A..62D;908;p-winds: Python implementation of Parker wind models for planetary atmospheres
+https://github.com/james-m-osborn/astrosat;https://ui.adsabs.harvard.edu/abs/2022MNRAS.509.1848O;14;Astrosat: Satellite transit calculator
+https://github.com/JulianZDing/UniMAP;https://ui.adsabs.harvard.edu/abs/2021arXiv211109465D;0;UniMAP: Unicorn Multi-window Anomaly Detection Pipeline
+https://github.com/ELeeAstro/gCMCRT;https://ui.adsabs.harvard.edu/abs/2022ApJ...929..180L;1327;gCMCRT: 3D Monte Carlo Radiative Transfer for exoplanet atmospheres using GPUs
+https://github.com/hmtabernero/SteParSyn;https://ui.adsabs.harvard.edu/abs/2022A%26A...657A..66T;665;SteParSyn: Stellar atmospheric parameters using the spectral synthesis method
+https://bitbucket.org/radboudradiolab/gwtoolbox;https://ui.adsabs.harvard.edu/abs/2021arXiv210613662Y;0;GWToolbox: Gravitational wave observation simulator
+https://github.com/josegit88/SCORPIO;https://ui.adsabs.harvard.edu/abs/2021arXiv211101260B;0;SCORPIO: Sky COllector of galaxy Pairs and Image Output
+https://github.com/simon-prunet/defringe;https://ui.adsabs.harvard.edu/abs/2021PASP..133k4502P;2;Defringe: Fringe artifact correction
+https://gitlab.in2p3.fr/icare/stdpipe;https://ui.adsabs.harvard.edu/abs/2021arXiv211210280M;0;STDPipe: Simple Transient Detection Pipeline
+https://github.com/cajohare/NeutrinoFog;https://ui.adsabs.harvard.edu/abs/2021arXiv210903116O;0;NeutrinoFog: Neutrino fog and floor for direct dark matter searches
+https://github.com/dirac-institute/asterogap;https://ui.adsabs.harvard.edu/abs/2021arXiv211112596W;41;AsteroGaP: Asteroid Gaussian Processes
+https://github.com/temken/DarkARC;https://ui.adsabs.harvard.edu/abs/2020PhRvR...2c3195C;3446;DarkARC: Dark Matter-induced Atomic Response Code
+https://github.com/temken/Dirac_vs_Majorana;https://ui.adsabs.harvard.edu/abs/2020JCAP...06..056C;308;DiracVsMajorana: Statistical discrimination of sub-GeV Majorana and Dirac dark matter
+https://github.com/arnauqb/qwind;https://ui.adsabs.harvard.edu/abs/2020MNRAS.495..402Q;143;Qwind: Non-hydrodynamical model for AGN line-drive winds
+https://github.com/arnauqb/Qwind.jl;https://ui.adsabs.harvard.edu/abs/2021arXiv211102742Q;0;Qwind3: Modeling UV line-driven winds originating from accretion discs
+https://github.com/cheerfuluser/tessreduce;https://ui.adsabs.harvard.edu/abs/2021arXiv211115006R;197;TESSreduce: Transient focused reduction for TESS data
+https://github.com/nombac/optab;https://ui.adsabs.harvard.edu/abs/2022A%26A...659A..87H;191;Optab: Ideal-gas opacity tables generator
+https://github.com/dokester/BayesicFitting;https://ui.adsabs.harvard.edu/abs/2021arXiv210911976K;109;BayesicFitting: Model fitting and Bayesian evidence calculation package
+https://github.com/GRIT-RBSim/GRIT;https://ui.adsabs.harvard.edu/abs/2021ApJ...919...50C;101;GRIT: Gravitational Rigid-body InTegrators for simulating coupled dynamics
+https://github.com/minaskar/hankl;https://ui.adsabs.harvard.edu/abs/2021arXiv210606331K;148;hankl: Python implementation of the FFTLog algorithm for cosmology
+https://github.com/nathanchara/l1periodogram;https://ui.adsabs.harvard.edu/abs/2017MNRAS.464.1220H;1449;l1p: Python implementation of the l1 periodogram
+https://github.com/PrincetonUniversity/FastTemplatePeriodogram;https://ui.adsabs.harvard.edu/abs/2021arXiv210112348H;0;FTP: Fast Template Periodogram
+https://github.com/McMahonCosmologyGroup/holosim-ml;https://ui.adsabs.harvard.edu/abs/2021ApOpt..60.9029C;2;HoloSim-ML:  Analyzing radio holography measurements of complex optical systems
+https://github.com/subisarkar/JexoSim;https://ui.adsabs.harvard.edu/abs/2021MNRAS.508..433S;534;JexoSim 2.0: JWST Exoplanet Observation Simulator
+https://github.com/ryanhausen/fitsmap;https://ui.adsabs.harvard.edu/abs/2022A%26C....3900586H;1263;FitsMap: Interactive astronomical image and catalog data visualizer
+https://github.com/smsharma/dark-photons-perturbations;https://ui.adsabs.harvard.edu/abs/2020PhRvD.102j3533C;2136;dark-photons-perturbations: Dark photon conversions in our inhomogeneous Universe
+https://github.com/ernewton/tellrv;https://ui.adsabs.harvard.edu/abs/2014AJ....147...20N;9157;tellrv: Radial velocities for low-resolution NIR spectra
+https://github.com/smsharma/fermi-gce-flows;https://ui.adsabs.harvard.edu/abs/2021arXiv211006931M;0;fermi-gce-flows: Infer the Galactic Center gamma-ray excess
+https://github.com/vrodgom/statmorph;https://ui.adsabs.harvard.edu/abs/2019MNRAS.483.4140R;15899;statmorph: Non-parametric morphological diagnostics of galaxy images
+https://github.com/SimonPfeifer/cows;https://ui.adsabs.harvard.edu/abs/2022arXiv220104624P;0;COWS: Cosmic web filament finder
+https://github.com/Huang-CL/Magrathea;https://ui.adsabs.harvard.edu/abs/2022MNRAS.513.5256H;255;MAGRATHEA: Planet interior structure code
+https://github.com/umbramortem/nProFit;https://ui.adsabs.harvard.edu/abs/2022arXiv220102881C;0;nProFit: n-Profile Fitting tool
+https://github.com/sdrastro/NWelch;https://ui.adsabs.harvard.edu/abs/2022AJ....163..169D;126;NWelch: Spectral analysis of time series with nonuniform observing cadence
+https://github.com/RozanskiT/suppnet;https://ui.adsabs.harvard.edu/abs/2022A%26A...659A.199R;82;SUPPNet: Spectrum normalization neural network
+https://github.com/petigura/terra;https://ui.adsabs.harvard.edu/abs/2012PASP..124.1073P;3928;TERRA: Transit detection code
+https://github.com/jonzink/EDI-Vetter;https://ui.adsabs.harvard.edu/abs/2020AJ....159..154Z;637;EDIV: Exoplanet Detection Identifier Vetter
+https://github.com/AgentM-GEG/residual_feature_extraction;https://ui.adsabs.harvard.edu/abs/2019MNRAS.486.2643M;615;RFEP: Residual Feature Extraction Pipeline
+https://github.com/parkus/fiducial_flare;https://ui.adsabs.harvard.edu/abs/2018ApJ...867...71L;3115;fiducial_flare: Spectra and lightcurves of a standardized far ultraviolet flare
+https://github.com/oscaribv/citlalicue;https://ui.adsabs.harvard.edu/abs/2022MNRAS.509..866B;1147;Citlalicue: Create and manipulate stellar light curves
+https://github.com/nnssa/gallumi_public;https://ui.adsabs.harvard.edu/abs/2022ApJ...928L..20S;2807;GALLUMI: GALaxy LUMInosity function pipeline
+https://github.com/christinahedges/contaminante;https://ui.adsabs.harvard.edu/abs/2021RNAAS...5..260H;7;Contaminante: Identify blended targets in Kepler, TESS, and K2 data
+https://github.com/BGPS/distance-omnibus;https://ui.adsabs.harvard.edu/abs/2013ApJ...770...39E;3430;distance-omnibus: Distance estimation method for molecular cloud clumps in the Milky Way
+https://github.com/cylammarco/ASPIRED;https://ui.adsabs.harvard.edu/abs/2020ASPC..527..655L;4;ASPIRED: Automated SpectroPhotometric Image REDuction
+https://github.com/yqiuu/starduster;https://ui.adsabs.harvard.edu/abs/2021arXiv211214434Q;0;Starduster: Radiative transfer and deep learning multi-wavelength SED model
+https://github.com/bruce-chappell/SunnyNet;https://ui.adsabs.harvard.edu/abs/2022A%26A...658A.182C;90;SunnyNet: Neural network framework for solving 3D NLTE radiative transfer in stellar atmospheres
+https://github.com/beastraban/INSANE;https://ui.adsabs.harvard.edu/abs/2021arXiv210316594W;0;INSANE: INflationary potential Simulator and ANalysis Engine
+https://github.com/alexrhowe/ExoVista;https://ui.adsabs.harvard.edu/abs/2022AJ....163..105S;25;exoVista: Planetary systems generator
+https://github.com/nabeelre/NIMBLE;https://ui.adsabs.harvard.edu/abs/2022MNRAS.511.5536R;278;NIMBLE: Non-parametrIc jeans Modeling with B-spLinEs
+https://gitlab.mpcdf.mpg.de/ift/D2O;https://ui.adsabs.harvard.edu/abs/2016arXiv160605385S;0;D2O: Distributed Data Object
+https://github.com/ejsafron/SATCHEL;https://ui.adsabs.harvard.edu/abs/2022MNRAS.tmp..777S;0;SATCHEL: Pipeline to search for long-period exoplanet signals
+https://github.com/pyobs;https://ui.adsabs.harvard.edu/abs/2022arXiv220312642H;0;pyobs: Python framework for autonomous astronomical observatories
+https://github.com/PetroFit/petrofit;https://ui.adsabs.harvard.edu/abs/2022arXiv220213493G;0;PetroFit: Petrosian properties calculator and galaxy light profiles fitter
+https://github.com/FiorenSt/AutoSourceID-Light;https://ui.adsabs.harvard.edu/abs/2022arXiv220200489S;0;AutoSourceID-Light: Source localization in optical images
+https://github.com/sdss/mangadap;https://ui.adsabs.harvard.edu/abs/2019AJ....158..160B;8975;MaNGA-DAP: MaNGA Data Analysis Pipeline
+https://github.com/cosimoNigro/agnpy;https://ui.adsabs.harvard.edu/abs/2021arXiv211214573N;0;agnpy: Modeling jetted Active Galactic Nuclei radiative processes with Python
+https://gitlab.com/gmamon/MAMPOSSt;https://ui.adsabs.harvard.edu/abs/2013MNRAS.429.3079M;5855;MAMPOSSt: Mass/orbit modeling of spherical systems
+https://github.com/SSDataLab/vetting;https://ui.adsabs.harvard.edu/abs/2021RNAAS...5..262H;135;Vetting: Stand-alone tools for vetting transit signals in Kepler, K2 and TESS data
+https://github.com/vreverdy/magrathea;https://hal.archives-ouvertes.fr/tel-02095297/document;0;MAGRATHEA: Multi-processor Adaptive Grid Refinement Analysis for THEoretical Astrophysics
+https://github.com/vreverdy/magrathea-pathfinder;https://ui.adsabs.harvard.edu/abs/2021arXiv211108744B;0;Magrathea-Pathfinder: 3D AMR ray-tracing in simulations
+https://github.com/guangtunbenzhu/SetCoverPy;https://ui.adsabs.harvard.edu/abs/2016arXiv160607156Z;354;SetCoverPy: A heuristic solver for the set cover problem
+https://github.com/dgrin1/axionCAMB;https://ui.adsabs.harvard.edu/abs/2015PhRvD..91j3512H;30571;axionCAMB: Modification of the CAMB Boltzmann code
+https://github.com/calboo/Potential_Field_Calculator;https://ui.adsabs.harvard.edu/abs/2019A%26A...625A..47B;15;Bootsik: Potential field calculator
+https://github.com/calboo/wigglewave;https://ui.adsabs.harvard.edu/abs/2022MNRAS.510.1910B;2;Wigglewave: Linearized governing equations solver
+https://github.com/chfeder/turbulence_generator;https://ui.adsabs.harvard.edu/abs/2010A%26A...512A..81F;38266;TG: Turbulence Generator
+https://github.com/Higgins00/TESS-Localize;https://ui.adsabs.harvard.edu/abs/2023AJ....165..141H;252;TESS-Localize: Localize variable star signatures in TESS Photometry
+https://github.com/bpairet/mayo_hci;https://ui.adsabs.harvard.edu/abs/2021MNRAS.503.3724P;497;MAYONNAISE: ADI data imaging processing pipeline
+https://github.com/annacrnn/rebound_fragmentation;https://ui.adsabs.harvard.edu/abs/2022MNRAS.511.1848C;30;FBCTrack: Fragmentation and bulk composition tracking
+https://github.com/nkhorshid/simab;https://ui.adsabs.harvard.edu/abs/2022A%26A...667A.147K;608;SimAb: Planet formation model
+https://github.com/sxs-collaboration/spectre;https://ui.adsabs.harvard.edu/abs/2017JCoPh.335...84K;2195;SpECTRE: Multi-scale, multi-physics problem solver
+https://gitlab.mpcdf.mpg.de/vrs/gadget4;https://ui.adsabs.harvard.edu/abs/2021MNRAS.506.2871S;6611;GADGET-4: Parallel cosmological N-body and SPH code
+https://github.com/nhcrisp/ADBSat;https://ui.adsabs.harvard.edu/abs/2022CoPhC.27508326S;31;ADBSat: Aerodynamic Database for Satellites
+https://gitlab.lam.fr/mbethermin/sides-public-release;https://ui.adsabs.harvard.edu/abs/2022A%26A...667A.156B;622;pySIDES: Simulated Infrared Dusty Extragalactic Sky in Python
+https://github.com/tjlcbakx/redshift-search-graphs;https://ui.adsabs.harvard.edu/abs/2022arXiv220406011B;0;RSG: Redshift Search Graphs
+https://github.com/asgr/ProFuse;https://ui.adsabs.harvard.edu/abs/2022MNRAS.tmp.1018R;0;ProFuse: Galaxies and components modeler
+https://github.com/carpenterphysics/DarkFlux;https://ui.adsabs.harvard.edu/abs/2022arXiv220203419B;0;DarkFlux: Dark Matter annihilation spectrum computer
+https://github.com/hposborn/MonoTools;https://ui.adsabs.harvard.edu/abs/2022arXiv220303194O;0;MonoTools: Planets of uncertain periods detector and modeler
+https://github.com/MJTemple/qsogen;https://ui.adsabs.harvard.edu/abs/2021MNRAS.508..737T;2229;QSOGEN: Model quasar SEDs
+https://github.com/venkateshgopinath/FAlCon-DNS;https://inria.hal.science/tel-02612607/;0;FAlCon-DNS: Framework of time schemes for direct numerical simulation of annular convection
+https://github.com/bradkav/EarthScatterLikelihood;https://ui.adsabs.harvard.edu/abs/2021PhRvD.104h3023K;428;EarthScatterLikelihood: Event rates and likelihoods for Dark Matter direct detection in the presence of Earth-Scattering
+https://github.com/hyperopt/hyperopt;https://proceedings.mlr.press/v28/bergstra13.html;0;Hyperopt: Distributed asynchronous hyper-parameter optimization
+https://github.com/jakobherpich/pyICs;https://ui.adsabs.harvard.edu/abs/2017MNRAS.470.4941H;449;pyICs: Initial Conditions creator for isolated galaxy formation simulations
+https://github.com/nespinoza/ld-exosim;https://ui.adsabs.harvard.edu/abs/2016MNRAS.457.3573E;2950;ld-exosim: Simulate biases using different limb darkening laws
+https://github.com/EoRImaging/FHD;https://ui.adsabs.harvard.edu/abs/2012ApJ...759...17S;8672;FHD: Fast Holographic Deconvolution
+https://github.com/miguelcarcamov/csromer;https://ui.adsabs.harvard.edu/abs/2022arXiv220501413C;0;CS-ROMER: Compressed Sensing ROtation MEasure Reconstruction
+https://github.com/epfl-radio-astro/LiSA;https://ui.adsabs.harvard.edu/abs/2022A%26C....4100631T;34;LiSA: LIghtweight Source finding Algorithms for analysis of HI spectral data
+https://github.com/dvallesp/asohf;https://ui.adsabs.harvard.edu/abs/2010A%26A...519A..94P;3415;ASOHF: Adaptive Spherical Overdensity Halo Finder
+https://github.com/astromer-science/main-code;https://ui.adsabs.harvard.edu/abs/2022arXiv220501677D;0;ASTROMER: Building light curves embeddings using transfomers
+https://github.com/fabiorigamonti/bang;https://ui.adsabs.harvard.edu/abs/2022MNRAS.tmp.1283R;0;BANG: BAyesian decomposiotioN of Galaxies
+https://github.com/tcassanelli/pywpf;https://ui.adsabs.harvard.edu/abs/2022arXiv220413118C;0;PyWPF: Waterfall Principal Component Analysis (PCA) Folding
+https://github.com/florian-lienhard/MM-LSD;https://ui.adsabs.harvard.edu/abs/2022MNRAS.tmp.1103L;0;MM-LSD: Multi-Mask Least-Squares Deconvolution
+https://github.com/dvallesp/vortex;https://ui.adsabs.harvard.edu/abs/2021CoPhC.26307892V;70;vortex: Helmholtz-Hodge decomposition for an AMR velocity field
+https://github.com/Yash-10/Periodogram-Comparison-Optimize-Planet-Detection;https://ui.adsabs.harvard.edu/abs/2019AJ....158...57C;499;PCOSTPD: Periodogram Comparison for Optimizing Small Transiting Planet Detection
+https://github.com/HajimeKawahara/exojax;https://ui.adsabs.harvard.edu/abs/2022ApJS..258...31K;228;ExoJAX: Spectrum modeling of exoplanets and brown dwarfs
+https://github.com/guangtunbenzhu/NonnegMFPy;https://ui.adsabs.harvard.edu/abs/2016arXiv161206037Z;676;NonnegMFPy: Nonnegative Matrix Factorization with heteroscedastic uncertainties and missing data
+https://github.com/myrafproject/myrafproject;https://ui.adsabs.harvard.edu/abs/2015ASPC..496..299N;2;MYRaf: Aperture photometry GUI for IRAF
+https://github.com/sbraden/circle-craters;https://ui.adsabs.harvard.edu/abs/2015LPI....46.1816B;0;CircleCraters: Crater-counting plugin for QGIS
+https://github.com/ggmichael/craterstats;https://ui.adsabs.harvard.edu/abs/2021LPICo2610.7010M;0;Craterstats3: Analyze and plot crater count data for planetary surface dating
+https://github.com/cespinosa/pyHIIexplorerV2;https://ui.adsabs.harvard.edu/abs/2020MNRAS.494.1622E;1077;pyHIIexplorerV2: Integrated spectra of HII regions extractor
+https://github.com/danielrd6/ifscube;https://ui.adsabs.harvard.edu/abs/2021MNRAS.507...74R;745;IFSCube: Analyze and process integral field spectroscopy data cubes
+https://github.com/cylammarco/WDPhotTools;https://ui.adsabs.harvard.edu/abs/2022arXiv220515321L;0;WDPhotTools: White Dwarf Photometric SED fitter and luminosity function builder
+https://github.com/rae-holcomb/SpinSpotter;https://ui.adsabs.harvard.edu/abs/2022ApJ...936..138H;523;SpinSpotter: Stellar rotation periods from high-cadence photometry calculator
+https://github.com/rkiman/wdwarfdate;https://ui.adsabs.harvard.edu/abs/2022arXiv220605388K;0;wdwarfdate: White dwarfs age calculator
+https://github.com/atomec-project/atoMEC;https://ui.adsabs.harvard.edu/abs/2022arXiv220601074C;0;atoMEC: Average-Atom code for Matter under Extreme Conditions
+https://github.com/vsquicciarini/madys;https://ui.adsabs.harvard.edu/abs/2022arXiv220602446S;0;MADYS: Isochronal parameter determination for young stellar and substellar objects
+https://github.com/user29A/CCDLAB;https://ui.adsabs.harvard.edu/abs/2017PASP..129k5002P;1503;CCDLAB: FITS image viewer and data reducer
+https://github.com/cbottrell/realsim_ifs;https://ui.adsabs.harvard.edu/abs/2022MNRAS.514.2821B;173;RealSim-IFS: Realistic synthetic integral field spectrscopy of galaxies from numerical simulations
+https://gitlab.com/pipe3d/pyPipe3D;https://ui.adsabs.harvard.edu/abs/2022arXiv220208027L;0;pyPipe3D: Spectroscopy analysis pipeline
+https://gitlab.com/iahelio/mosaiics/wavetrack;https://ui.adsabs.harvard.edu/abs/2022JSWSC..12...20S;2;Wavetrack: Arbitrary time-evolving solar object recognition and tracking
+https://github.com/Jonathanfreundlich/CuspCore;https://ui.adsabs.harvard.edu/abs/2020MNRAS.491.4523F;1512;CuspCore: Core formation in dark matter haloes and ultra-diffuse galaxies by outflow episodes
+https://github.com/CosmoStat/shapepipe;https://ui.adsabs.harvard.edu/abs/2022arXiv220614689F;0;ShapePipe: Galaxy shape measurement pipeline
+https://github.com/chervias/DustFilaments;https://ui.adsabs.harvard.edu/abs/2022ApJ...928...65H;427;DustFilaments:  Paint filaments to produce a thermal dust full sky map at mm frequencies
+https://gitlab.com/multigris/mgris;https://ui.adsabs.harvard.edu/abs/2022A%26A...667A..34L;246;MULTIGRIS: Multicomponent probabilistic grid search
+https://github.com/Martindelosrios/MeSsI;https://ui.adsabs.harvard.edu/abs/2016MNRAS.458..226D;349;MeSsI: MErging SystemS Identification
+https://github.com/Martindelosrios/cosmic-kite;https://ui.adsabs.harvard.edu/abs/2022MNRAS.511.5525D;2;cosmic-kite: Auto-encoding the Cosmic Microwave Background
+https://github.com/davidpamos/MultiModes;https://ui.adsabs.harvard.edu/abs/2022MNRAS.513..374P;155;MultiModes: Efficiently analyze pulsating stars
+https://github.com/keatonb/TESS_PRF;https://ui.adsabs.harvard.edu/abs/2022arXiv220406020H;0;TESS_PRF: Display the TESS pixel response function
+https://github.com/tamarervin/SolAster;https://ui.adsabs.harvard.edu/abs/2022AJ....163..272E;189;SolAster: 'Sun-as-a-star' radial velocity variations
+https://github.com/NewStrangeWorlds/BeAR;https://ui.adsabs.harvard.edu/abs/2020ApJ...890..174K;3070;Helios-r2: Bayesian nested-sampling retrieval code
+https://github.com/stammler/dustpy;https://ui.adsabs.harvard.edu/abs/2022ApJ...935...35S;741;DustPy: Simulation of dust evolution in protoplanetary disks
+https://github.com/li-yangyang/lotus;https://ui.adsabs.harvard.edu/abs/2022arXiv220709415L;0;LOTUS: 1D Non-LTE stellar parameter determination via Equivalent Width method
+https://github.com/ltlancas/walter;https://ui.adsabs.harvard.edu/abs/2022arXiv220702208L;0;walter: Predictor for the number of resolved stars in a given observation from RST
+https://github.com/candebellavita/vkompth;https://ui.adsabs.harvard.edu/abs/2022MNRAS.515.2099B;573;vKompth: Time-dependent Comptonization model for black-hole X-ray binaries
+https://github.com/seheonoh/baygaud;https://ui.adsabs.harvard.edu/abs/2019MNRAS.485.5021O;105;BAYGAUD: BAYesian GAUssian Decomposer
+https://github.com/pavanvyn/triple-stability;https://ui.adsabs.harvard.edu/abs/2022arXiv220703151V;0;triple-stability: Triple-star system stability determinator
+https://github.com/cpinte/mcfost;https://ui.adsabs.harvard.edu/abs/2006A%26A...459..797P;19483;MCFOST: Radiative transfer code
+https://github.com/psheehan/pdspy;https://ui.adsabs.harvard.edu/abs/2019ApJ...874..136S;1030;pdspy: MCMC tool for continuum and spectral line radiative transfer modeling
+https://github.com/huchiayu/ParticleGridMapper.jl;https://ui.adsabs.harvard.edu/abs/2022ApJ...931...28H;773;ParticleGridMapper: Particle data interpolator
+https://github.com/LCOGT/banzai;https://ui.adsabs.harvard.edu/abs/2018SPIE10707E..0KM;3198;BANZAI: Beautiful Algorithms to Normalize Zillions of Astronomical Images
+https://github.com/aabdurrouf/piXedfit;https://ui.adsabs.harvard.edu/abs/2021ApJS..254...15A;1288;piXedfit: Analyze spatially resolved SEDs of galaxies
+https://github.com/astro-informatics/ssht;https://ui.adsabs.harvard.edu/abs/2011ITSP...59.5876M;610;SSHT: Fast spin spherical harmonic transforms
+https://github.com/astro-informatics/massmappy;https://ui.adsabs.harvard.edu/abs/2022MNRAS.509.4480W;877;massmappy: Mapping dark matter on the celestial sphere
+https://github.com/tkerscher/blast;https://ui.adsabs.harvard.edu/abs/2022arXiv220703813G;0;BlaST: Synchrotron peak estimator for blazars
+https://github.com/RafaelSdeSouza/qrpca;https://ui.adsabs.harvard.edu/abs/2022A%26C....4100633D;8;qrpca: QR-based Principal Components Analysis
+https://github.com/fjankowsk/scatfit;https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.4275J;467;Scatfit: Scattering fits of time domain radio signals (Fast Radio Bursts or pulsars)
+https://github.com/TOMToolkit;https://ui.adsabs.harvard.edu/abs/2018SPIE10707E..11S;838;TOM Toolkit: Target and Observation Manager Toolkit
+https://github.com/seamusclarke/rjplots;https://ui.adsabs.harvard.edu/abs/2022arXiv220807509C;0;RJ-plots: Automated objective classification of 2D structures
+https://github.com/Pranab-JD/LeXInt;https://ui.adsabs.harvard.edu/abs/2022arXiv220808269D;0;LeXInt: Leja Exponential Integrators
+https://github.com/dbuscher/pois/;https://ui.adsabs.harvard.edu/abs/2015poi..book.....B;154;POIS: Python Optical Interferometry Simulation
+https://github.com/fforster/delight;https://ui.adsabs.harvard.edu/abs/2022arXiv220804310F;0;DELIGHT: Identify host galaxies of transient candidates
+https://github.com/MichaelAbdul-Masih/SPAMMS;https://ui.adsabs.harvard.edu/abs/2020A%26A...636A..59A;541;SPAMMS: Spectroscopic PAtch Model for Massive Stars
+https://github.com/sihanjiao/j-comb;https://ui.adsabs.harvard.edu/abs/2022SCPMA..6599511J;54;J-comb: Combine high-resolution and low-resolution data
+https://github.com/CRPropa/CRPropa3;https://ui.adsabs.harvard.edu/abs/2016JCAP...05..038A;6878;CRPropa3: Simulation framework for propagating extraterrestrial ultra-high energy particles
+https://github.com/marziarivi/RadioLensfit2;https://ui.adsabs.harvard.edu/abs/2022A%26C....3900574R;0;RadioLensfit: Radio weak lensing shear measurement in the visibility domain
+https://github.com/dsheward-astro/pynaple;https://ui.adsabs.harvard.edu/abs/2022MNRAS.514.4320S;3;PyNAPLE: Automated pipeline for detecting changes on the lunar surface
+https://github.com/paumard/cubefit;https://ui.adsabs.harvard.edu/abs/2022A%26A...664A..97P;11;CubeFit: Regularized 3D fitting for spectro-imaging data
+https://github.com/icecube/toise;https://ui.adsabs.harvard.edu/abs/2022arXiv220211120V;0;toise: Performance estimator for high-energy neutrino detectors
+https://github.com/pengchzn/yonder;https://ui.adsabs.harvard.edu/abs/2022RNAAS...6...51C;19;Yonder: Data denoising and reconstruction
+https://github.com/Herculens/herculens;https://ui.adsabs.harvard.edu/abs/2022arXiv220705763G;0;Herculens: Differentiable gravitational lensing
+https://github.com/NiallJeffrey/DeepMass;https://ui.adsabs.harvard.edu/abs/2020MNRAS.492.5023J;1038;DeepMass: Cosmological map inference with deep learning
+https://github.com/CosmoStat/score;https://ui.adsabs.harvard.edu/abs/2021arXiv210110021N;0;SCORE: Shape COnstraint REstoration
+https://github.com/pierfied/karmma;https://ui.adsabs.harvard.edu/abs/2022MNRAS.512...73F;301;KaRMMa: Curved-sky mass map reconstruction
+https://github.com/TRASAL/AMBER;https://ui.adsabs.harvard.edu/abs/2020SoftX..1200549S;208;AMBER: Fast pipeline for detecting single-pulse radio transients
+https://github.com/epfl-radio-astro/PINION;https://ui.adsabs.harvard.edu/abs/2022arXiv220813803K;0;PINION: Accelerating radiative transfer simulations for cosmic reionization
+https://github.com/virajvman/GRUMPY;https://ui.adsabs.harvard.edu/abs/2022MNRAS.514.2667K;1384;GRUMPY: Galaxy formation with RegUlator Model in PYthon
+https://github.com/bhorowitz/HyPhy-public;https://ui.adsabs.harvard.edu/abs/2021arXiv210612675H;0;HyPhy: Hydrodynamical Physics via Deep Generative Painting
+https://github.com/dartoon/galight;https://ui.adsabs.harvard.edu/abs/2021arXiv211108721D;542;GaLight: 2D modeling of galaxy images
+https://github.com/ucl-exoplanets/taurex3;https://ui.adsabs.harvard.edu/abs/2021ApJ...917...37A;3343;TauREx3: Tau Retrieval for Exoplanets
+https://github.com/exobssim/rapoc-public;https://ui.adsabs.harvard.edu/abs/2023ExA....55..521M;46;RAPOC: Rosseland and Planck mean opacities calculator
+https://gitlab.com/mcfuman/SpectraPy;https://ui.adsabs.harvard.edu/abs/2022MNRAS.514.2902G;149;SpectraPy: Extract and reduce astronomical spectral data
+https://github.com/MarcvdSluys/SolTrack-Python;https://ui.adsabs.harvard.edu/abs/2022arXiv220901557V;0;SolTrack: Compute the position of the Sun in topocentric coordinates
+https://github.com/el2718/FastQSL;https://ui.adsabs.harvard.edu/abs/2022ApJ...937...26Z;183;FastQSL: Quasi-separatrix Layers computation method
+https://gitlab.com/aegge/comet-emu;https://ui.adsabs.harvard.edu/abs/2022arXiv220801070E;0;COMET: Emulated predictions of large-scale structure observables
+https://github.com/nemesiscode/radtrancode;https://ui.adsabs.harvard.edu/abs/1997AdSpR..19.1149I;16968;NEMESIS: Non-linear optimal estimator for multivariate spectral analysis
+https://github.com/c-white/blacklight;https://ui.adsabs.harvard.edu/abs/2022ApJS..262...28W;152;Blacklight: GR ray tracing code for post-processing Athena++ simulations
+https://github.com/jgieseler/solarmach/;https://ui.adsabs.harvard.edu/abs/2022arXiv221000819G;0;Solar-MACH: Multi-spacecraft longitudinal configuration plotter
+https://github.com/MingjieJian/SME;https://ui.adsabs.harvard.edu/abs/2023A%26A...671A.171W;231;PySME: Spectroscopy Made Easy reimplemented with Python
+https://github.com/cvbuchem/LavAtmos;https://ui.adsabs.harvard.edu/abs/2022arXiv221010463V;0;LavAtmos: Gas-melt equilibrium calculations for a given temperature and melt composition
+https://github.com/POSYDON-code/POSYDON;https://ui.adsabs.harvard.edu/abs/2022arXiv220205892F;0;POSYDON: Single and binary star population synthesis code
+https://github.com/lucabaldini/ixpeobssim;https://ui.adsabs.harvard.edu/abs/2022SoftX..1901194B;2452;ixpeobssim: Imaging X-ray Polarimetry Explorer simulator and analyzer
+https://github.com/pedro-acunha/SHEEP;https://ui.adsabs.harvard.edu/abs/2022A%26A...666A..87C;169;SHEEP:  Machine Learning pipeline for astronomy classification
+https://github.com/CosmoStat/mccd;https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..27L;136;MCCD: Multi-CCD Point Spread Function Modelling
+https://github.com/NiallJeffrey/BornRaytrace;https://ui.adsabs.harvard.edu/abs/2021MNRAS.501..954J;2952;BornRaytrace: Weak gravitational lensing effects simulator
+https://github.com/facebookresearch/faiss;https://ui.adsabs.harvard.edu/abs/2017arXiv170208734J;13;Faiss: Similarity search and clustering of dense vectors library
+https://github.com/ajshajib/LensingETC;https://ui.adsabs.harvard.edu/abs/2022ApJ...938..141S;137;LensingETC: Lensing Exposure Time Calculator
+https://github.com/LTeinturier/Cloud-Killer-;https://ui.adsabs.harvard.edu/abs/2022MNRAS.511..440T;56;CK: Cloud modeling and removal
+https://github.com/swagnercarena/paltas;https://ui.adsabs.harvard.edu/abs/2022arXiv220300690W;0;paltas: Simulation-based inference on strong gravitational lensing systems
+https://github.com/reggiebernardo/PTAfast;https://ui.adsabs.harvard.edu/abs/2022JCAP...11..046B;624;PTAfast: PTA correlations from stochastic gravitational wave background
+https://github.com/Dylan-Aliberti/Kepler-Collisions;https://doi.org/10.1051/0004-6361/202243754;0;KC: Analytical propagator with collision detection for Keplerian systems
+https://github.com/hytrac/amber;https://ui.adsabs.harvard.edu/abs/2022ApJ...927..186T;654;AMBER: Abundance Matching Box for the Epoch of Reionization
+https://github.com/FergusDonnan/PAHDecomp;https://ui.adsabs.harvard.edu/abs/2022arXiv221109628D;0;PAHDecomp: Decomposing the mid-IR spectra of extremely obscured galaxies
+https://github.com/fkiwy/unTimely_Catalog_explorer;https://ui.adsabs.harvard.edu/abs/2022arXiv220914327M;0;unTimely_Catalog_explorer: A search and visualization tool for the unTimely Catalog
+https://github.com/jiwoncpark/baobab;https://ui.adsabs.harvard.edu/abs/2021ApJ...910...39P;1307;baobab: Training data generator for hierarchically modeling strong lenses with Bayesian neural networks
+https://github.com/cosmostat/pmclib;https://ui.adsabs.harvard.edu/abs/2009PhRvD..80b3507W;4124;pmclib: Population Monte Carlo library
+https://github.com/swagnercarena/ovejero;https://ui.adsabs.harvard.edu/abs/2021ApJ...909..187W;1191;ovejero: Bayesian neural network inference of strong gravitational lenses
+https://github.com/liuhao-cn/fastSHT;https://ui.adsabs.harvard.edu/abs/2022ApJS..263...21T;4;fastSHT: Fast Spherical Harmonic Transforms
+https://github.com/tbisbas/PDFchem;https://ui.adsabs.harvard.edu/abs/2022arXiv221112974B;0;PDFchem: Average abundance of species from Av-PDFs
+https://github.com/sosl/H-FISTA;https://ui.adsabs.harvard.edu/abs/2022arXiv221111129O;0;H-FISTA: Phase retrieval for pulsar spectroscopy
+https://github.com/ajwheeler/korg.jl;https://ui.adsabs.harvard.edu/abs/2023AJ....165...68W;203;Korg: 1D local thermodynamic equilibrium stellar spectral synthesis
+https://github.com/MicGrasso/bigonlight;https://ui.adsabs.harvard.edu/abs/2022CQGra..39a5011G;74;BiGONLight: Bi-local Geodesic Operators framework for Numerical Light propagation
+https://github.com/doriancazeneuve/ODNet;https://ui.adsabs.harvard.edu/abs/2022arXiv221016440C;0;ODNet: Asteroid occultation detection convolutional neural network
+https://github.com/njcuk9999/apero-drs;https://ui.adsabs.harvard.edu/abs/2020MNRAS.498.5684D;2637;APERO: A PipelinE to Reduce Observations
+https://github.com/tanner-trickle/EXCEED-DM;https://ui.adsabs.harvard.edu/abs/2022arXiv221014917T;0;EXCEED-DM: EXtended Calculation of Electronic Excitations for Direct detection of Dark Matter
+https://github.com/CosmoStatGW/gwfast;https://ui.adsabs.harvard.edu/abs/2022ApJS..263....2I;1496;GWFAST: Fisher information matrix python package for gravitational-wave detectors
+https://github.com/Eventdisplay/Eventdisplay;https://ui.adsabs.harvard.edu/abs/2017ICRC...35..747M;457;Eventdisplay: Analysis and reconstruction package for ground-based Gamma-ray astronomy
+https://github.com/wullm/fastdf;https://ui.adsabs.harvard.edu/abs/2022JCAP...11..058E;501;FastDF: Integrating neutrino geodesics in linear theory
+https://github.com/javicarron/mtneedlet;https://ui.adsabs.harvard.edu/abs/2019A%26C....2800310C;66;MTNeedlet: Spherical maps filtering
+https://github.com/jonaselgammal/GPry;https://ui.adsabs.harvard.edu/abs/2022arXiv221102045E;0;GPry: Bayesian inference of expensive likelihoods with Gaussian processes
+https://github.com/fkeruzore/panco2;https://ui.adsabs.harvard.edu/abs/2022EPJWC.25700024K;6;panco2: Pressure profile measurements of galaxy clusters
+https://github.com/LoganAMorrison/Hazma;https://ui.adsabs.harvard.edu/abs/2020JCAP...01..056C;1300;Hazma: Compute indirect detection constraints on sub-GeV dark matter
+https://github.com/sfarrens/sf_deconvolve;https://ui.adsabs.harvard.edu/abs/2017A%26A...601A..66F;77;sf_deconvolve: PSF deconvolution and analysis
+https://github.com/gmbrandt/xwavecal;https://ui.adsabs.harvard.edu/abs/2020AJ....160...25B;21;xwavecal: Wavelength calibrating echelle spectrographs
+https://github.com/LCOGT/banzai-nres;https://ui.adsabs.harvard.edu/abs/2022SPIE12189E..14M;64;BANZAI-NRES: BANZAI data reduction pipeline for NRES
+https://github.com/joshuakt/Oxygen-False-Positives;https://ui.adsabs.harvard.edu/abs/2021AGUA....200294K;1232;PACMAN: Planetary Atmosphere, Crust, and MANtle geochemical evolution
+https://github.com/astrosupriyo/pyTANSPEC;https://ui.adsabs.harvard.edu/abs/2022arXiv221204815G;0;pyTANSPEC:  Python tool for extracting 1D TANSPEC spectra from 2D images
+https://github.com/arjunsavel/SImMER;https://ui.adsabs.harvard.edu/abs/2022PASP..134l4501S;89;SImMER: Stellar Image Maturation via Efficient Reduction
+https://github.com/astrorama/sourcextractorplusplus;https://ui.adsabs.harvard.edu/abs/2020ASPC..527..461B;1877;SourceXtractor++: Extracts sources from astronomical images
+https://github.com/webbjj/m2mcluster;https://ui.adsabs.harvard.edu/abs/2022arXiv221206847W;0;m2mcluster: Star clusters made-to-measure modeling
+https://gitlab.com/leelamichaels/Omega;https://ui.adsabs.harvard.edu/abs/2022A%26A...657A..32K;1;Omega: Photon equations of motion
+https://github.com/agsreejith/CONTROL;https://ui.adsabs.harvard.edu/abs/2022PASP..134k4506S;50;CONTROL: Colorado Ultraviolet Transit Experiment data reduction pipeline
+https://github.com/pmelchior/spender;https://ui.adsabs.harvard.edu/abs/2022arXiv221107890M;0;Spender: Neural spectrum encoder and decoder
+https://github.com/dolaver/calsagos;https://ui.adsabs.harvard.edu/abs/2023MNRAS.519.4171O;32;CALSAGOS: Select cluster members and search, find, and identify substructures
+https://gitlab.com/esa/pyxel;https://ui.adsabs.harvard.edu/abs/2022JATIS...8d8002A;15;Pyxel: Detector and end-to-end instrument simulation
+https://github.com/planck-npipe/lollipop;https://ui.adsabs.harvard.edu/abs/2008PhRvD..77j3013H;94617;LoLLiPoP: Low-L Likelihood Polarized for Planck
+https://github.com/mpeel/fastcc;https://ui.adsabs.harvard.edu/abs/2022RNAAS...6..252P;61;Fastcc: Broadband radio telescope receiver fast color corrections
+https://github.com/DavidT3/XGA/;https://ui.adsabs.harvard.edu/abs/2022arXiv220201236T;46;XGA: Efficient analysis of XMM observations
+https://github.com/francescoa97outlook/pyExoRaMa;https://ui.adsabs.harvard.edu/abs/2022RNAAS...6...28F;0;pyExoRaMa: An interactive tool to investigate the radius-mass diagram for exoplanets
+https://github.com/njcuk9999/lbl;https://ui.adsabs.harvard.edu/abs/2022AJ....164...84A;747;LBL: Line-by-line velocity measurements
+https://github.com/YinanZhao21/SOAP_GPU;https://ui.adsabs.harvard.edu/abs/2023A%26A...671A..11Z;137;SOAP-GPU: Spectral time series simulations with GPU
+https://github.com/callendeprieto/ferre;https://ui.adsabs.harvard.edu/abs/2015AAS...22542207A;148;FERRE: Match physical models to measurements
+https://github.com/nebblu/ReACT/tree/master;https://ui.adsabs.harvard.edu/abs/2020MNRAS.498.4650B;2694;ReACT: Calculation of non-linear power spectra from non-standard physics
+https://github.com/tiberioap/grav_waldo;https://ui.adsabs.harvard.edu/abs/2022arXiv221007299P;0;WALDO: Waveform AnomaLy DetectOr
+https://github.com/egjergo/galcem;https://ui.adsabs.harvard.edu/abs/2023arXiv230102257G;0;GalCEM: GALactic Chemical Evolution Model
+https://github.com/desihub/desitarget;https://ui.adsabs.harvard.edu/abs/2023AJ....165...50M;7642;desitarget: Selecting DESI targets from photometric catalogs
+https://github.com/DOnghiaGroup/MGwave;https://ui.adsabs.harvard.edu/abs/2023MNRAS.519..432L;211;MGwave: Detect kinematic moving groups in astronomical data
+https://github.com/VChristiaens/special;https://ui.adsabs.harvard.edu/abs/2022JOSS....7.4456C;61;special: SPEctral Characterization of directly ImAged Low-mass companions
+https://github.com/danielemelini/ALMA3;https://ui.adsabs.harvard.edu/abs/2022GeoJI.231.1502M;90;ALMA3: plAnetary Love nuMbers cAlculator
+https://github.com/MIT-STARLab/deconfuser;https://ui.adsabs.harvard.edu/abs/2022ApJ...937...66P;16;deconfuser: Fast orbit fitting to directly imaged multi-planetary systems
+https://github.com/tonhingm/PHOTOe-v1;https://ui.adsabs.harvard.edu/abs/2023Icar..39215373G;43;PHOTOe: Monte Carlo model for simulating the slowing down of photoelectrons
+https://github.com/QuantumPlasma/SFQEDtoolkit;https://ui.adsabs.harvard.edu/abs/2023arXiv230107684M;0;SFQEDtoolkit: Strong-field QED processes modeling for PIC and Monte Carlo codes
+https://github.com/shadden/celmech;https://ui.adsabs.harvard.edu/abs/2022AJ....164..179H;66;celmech: Sandbox for celestial mechanics calculations
+https://github.com/nickk124/robust-outlier-rejection;https://ui.adsabs.harvard.edu/abs/2018ApJS..238....2M;21;RCR: Robust Chauvenet Outlier Rejection
+https://github.com/yair111/AnalyticLC;https://ui.adsabs.harvard.edu/abs/2022AJ....163...90J;18;AnalyticLC: Dynamical modeling of planetary systems
+https://github.com/winger/hawking_net;https://ui.adsabs.harvard.edu/abs/2022arXiv220806021B;0;HawkingNet: Finding Hawking points in the Cosmic Microwave Background
+https://github.com/rzellem/EXOTIC;https://ui.adsabs.harvard.edu/abs/2020PASP..132e4401Z;640;EXOTIC: EXOplanet Transit Interpretation Code
+https://github.com/ArgonneCPAC/diffstar;https://ui.adsabs.harvard.edu/abs/2023MNRAS.518..562A;352;Diffstar: Differentiable star formation histories
+https://github.com/cheng-zhao/FCFC;https://ui.adsabs.harvard.edu/abs/2023A%26A...672A..83Z;101;FCFC: C toolkit for computing correlation functions from pair counts
+https://github.com/zheng-lh/UBER;https://ui.adsabs.harvard.edu/abs/2021GMD....14.5825Z;21;UBER: Universal Boltzmann Equation Solver
+https://github.com/SAIL-Labs/AMICAL;https://ui.adsabs.harvard.edu/abs/2020SPIE11446E..11S;193;AMICAL: Aperture Masking Interferometry Calibration and Analysis Library
+https://github.com/iAART/aart;https://ui.adsabs.harvard.edu/abs/2022arXiv221107469C;0;AART: Adaptive Analytical Ray Tracing
+https://github.com/ArgonneCPAC/dsps;https://ui.adsabs.harvard.edu/abs/2021arXiv211206830H;0;DSPS: Differentiable Stellar Population Synthesis
+https://github.com/ArgonneCPAC/diffmah;https://ui.adsabs.harvard.edu/abs/2021OJAp....4E...7H;497;Diffmah: Differentiable models of halo and galaxy formation history
+https://github.com/nickrodd/HDMSpectra;https://ui.adsabs.harvard.edu/abs/2021JHEP...06..121B;1748;HDMSpectra: Dark Matter Spectra from the electroweak to the Planck scale
+https://gitlab.oca.eu/gkordo/line_selections;https://ui.adsabs.harvard.edu/abs/2023arXiv230211907K;0;line_selections: Automatic line detection for large spectroscopic surveys
+https://github.com/BezuidenhoutMC/SeeKAT;https://ui.adsabs.harvard.edu/abs/2023arXiv230209812B;0;SeeKAT: Localizer for transients detected in tied-array beams
+https://github.com/lberaldoesilva/naif;https://ui.adsabs.harvard.edu/abs/2023arXiv230304828B;0;naif: Frequency analysis package
+https://github.com/SpaceOdyssey/Blobby3D;https://ui.adsabs.harvard.edu/abs/2019MNRAS.485.4024V;471;Blobby3D: Bayesian inference for gas kinematics
+https://github.com/hippke/communication/;https://ui.adsabs.harvard.edu/abs/2019IJAsB..18..267H;90;PyCom: Interstellar communication
+https://github.com/hippke/pandora;https://ui.adsabs.harvard.edu/abs/2022A%26A...662A..37H;64;Pandora: Fast exomoon transit detection algorithm
+https://github.com/ycwu1030/EvoEMD;https://ui.adsabs.harvard.edu/abs/2023PDU....4001198D;129;EvoEMD: Cosmic Evolution with an Early Matter-Dominated era
+https://gitlab.com/fastjet/fastjet;https://ui.adsabs.harvard.edu/abs/2006PhLB..641...57C;5117;FastJet: Jet finding in pp and e+e− collisions
+https://github.com/delphes/delphes;https://ui.adsabs.harvard.edu/abs/2014JHEP...02..057D;6519;Delphes: Fast simulation of a generic collider experiment
+https://github.com/JiangFangzhou/SIDM;https://ui.adsabs.harvard.edu/abs/2023MNRAS.tmp..690J;0;SIDM: Density profiles of self-interacting dark-matter halos with inhabitant galaxies
+https://github.com/shergreen/SatGen;https://ui.adsabs.harvard.edu/abs/2021MNRAS.502..621J;1837;SatGen: Semi-analytical satellite galaxy and dark matter halo generator
+https://github.com/matteobreschi/bajes;https://ui.adsabs.harvard.edu/abs/2021PhRvD.104d2001B;1348;bajes: Bayesian Jenaer software
+https://github.com/torluca/morphofit;https://ui.adsabs.harvard.edu/abs/2023FrASS..10.9443T;0;MORPHOFIT: Morphological analysis of galaxies
+https://github.com/NickSwainston/pulsar_spectra;https://ui.adsabs.harvard.edu/abs/2022PASA...39...56S;113;pulsar_spectra: Pulsar flux density measurements, spectral models fitting, and catalog
+https://github.com/PabloVD/HaloGraphNet;https://ui.adsabs.harvard.edu/abs/2022ApJ...935...30V;805;HaloGraphNet: Predict halo masses from simulations
+https://github.com/matthewholman/assist;https://ui.adsabs.harvard.edu/abs/2023arXiv230316246H;0;ASSIST: Solar system test particles trajectories integrator
+https://github.com/markusbonse/applefy;https://ui.adsabs.harvard.edu/abs/2023AJ....166...71B;113;Applefy: Robust detection limits for high-contrast imaging
+https://github.com/parsotat/batanalysis;https://ui.adsabs.harvard.edu/abs/2023ApJ...953..155P;26;BatAnalysis: HEASOFT wrapper for processing Swift-BAT data
+https://github.com/ajeldorado/falco-matlab;https://ui.adsabs.harvard.edu/abs/2018SPIE10698E..2VR;156;FALCO: Fast Linearized Coronagraph Optimizer in MATLAB
+https://github.com/cdfortenbach/JET;https://ui.adsabs.harvard.edu/abs/2020PASP..132e4501F;166;JET: JWST Exoplanet Targeting
+https://github.com/ratt-ru/QuartiCal;https://ui.adsabs.harvard.edu/abs/2022ASPC..532..349K;19;QuartiCal: Fast radio interferometric calibration
+https://github.com/ratt-ru/Stimela-classic;https://ui.adsabs.harvard.edu/abs/2018PhDT.......215M;309;Stimela2: Workflow management framework for data reduction workflows
+https://github.com/saopicc/DDFacet;https://ui.adsabs.harvard.edu/abs/2018A%26A...611A..87T;6843;DDFacet: Facet-based radio imaging package
+https://github.com/astro-informatics/flaglet-archive;https://ui.adsabs.harvard.edu/abs/2015PhRvD..92l3010L;216;FLAGLET: Fast and exact wavelet transform on the ball
+https://github.com/astro-informatics/DarkMappy;https://ui.adsabs.harvard.edu/abs/2021MNRAS.500.5436P;589;DarkMappy: Mapping the dark universe
+https://github.com/kernsuite;https://ui.adsabs.harvard.edu/abs/2018A%26C....24...45M;642;KERN: Radio telescope toolkit
+https://github.com/ratt-ru/eidos;https://ui.adsabs.harvard.edu/abs/2019MNRAS.485.4107I;1825;EIDOS: Modeling primary beams of radio astronomy antennas
+https://github.com/stevertaylor/gw_pta_emulator;https://ui.adsabs.harvard.edu/abs/2017PhRvL.118r1102T;6410;gw_pta_emulator: Gravitational Waves via Pulsar Timing Arrays
+https://github.com/jobovy/simple-m2m;https://ui.adsabs.harvard.edu/abs/2018MNRAS.473.2288B;399;simple-m2m: Extensions to the standard M2M algorithm for full modeling of observational data
+https://github.com/ntveem/sterile-dm;https://ui.adsabs.harvard.edu/abs/2016PhRvD..94d3515V;6818;sterile-dm: Sterile neutrino production
+https://github.com/starfleetjames/James-s-EVE-Dimming-Index-JEDI;https://ui.adsabs.harvard.edu/abs/2018AGUFMIN11B0622M;210;JEDI: James's EVE Dimming Index
+https://github.com/GrGadget;https://ui.adsabs.harvard.edu/abs/2023MNRAS.522.5238Q;19;GrGadget: Evolve metric perturbations in the weak field limit
+https://github.com/glass-dev/glass;https://ui.adsabs.harvard.edu/abs/2023OJAp....6E..11T;289;GLASS: Cosmological simulations on the sphere
+https://github.com/askap-craco/CELEBI;https://ui.adsabs.harvard.edu/abs/2023arXiv230113484S;0;CELEBI: Precision localizations and polarimetric data for fast radio bursts
+https://github.com/saberyoung/haffet;https://ui.adsabs.harvard.edu/abs/2023arXiv230202082Y;0;HAFFET: Supernovae photometric and spectroscopic data analyzer
+https://github.com/tidymess-code/tidymess;https://ui.adsabs.harvard.edu/abs/2023MNRAS.522.2885B;9;TIDYMESS: TIdal DYnamics of Multi-body ExtraSolar Systems
+https://github.com/ixkael/Delight;https://ui.adsabs.harvard.edu/abs/2017ApJ...838....5L;2352;Delight: Photometric redshift via Gaussian processes with physical kernels
+https://github.com/Yash-10/beta-sgp;https://ui.adsabs.harvard.edu/abs/2022arXiv220710973G;0;β-SGP: Scaled Gradient Projection algorithm using β-divergence
+https://github.com/andersdot/photoParallax;https://ui.adsabs.harvard.edu/abs/2018AJ....156..145A;4345;PhotoParallax: Data-driven photometric parallaxes built with Gaia and 2MASS
+https://github.com/undark-lab/sstrax;https://ui.adsabs.harvard.edu/abs/2023arXiv230402032A;0;sstrax: Fast stellar stream modelling in JAX
+https://gitlab.com/mobse/source-code;https://ui.adsabs.harvard.edu/abs/2018MNRAS.474.2959G;26555;MOBSE: Massive Objects in Binary Stellar Evolution
+https://github.com/htjb/margarine;https://ui.adsabs.harvard.edu/abs/2022arXiv220512841B;0;margarine: Posterior sampling and marginal Bayesian statistics
+https://github.com/zhangyk8/sconce-scms;https://ui.adsabs.harvard.edu/abs/2022MNRAS.517.1197Z;11;SCONCE-SCMS: Spherical and conic cosmic web finders with extended SCMS algorithms
+https://github.com/Schulik/aiolos;https://ui.adsabs.harvard.edu/abs/2023MNRAS.523..286S;217;AIOLOS: Planetary atmosphere accretion and escape simulations
+https://github.com/astrockragh/Mangrove;https://ui.adsabs.harvard.edu/abs/2022ApJ...941....7J;597;Mangrove: Infer galaxy properties using dark matter merger trees
+https://github.com/JulianBMunoz/Zeus21;https://ui.adsabs.harvard.edu/abs/2023MNRAS.523.2587M;553;Zeus21: Simulations of 21-cm at cosmic dawn
+https://github.com/JoschaJ/mockFRBhosts;https://ui.adsabs.harvard.edu/abs/2023arXiv230600084J;0;mockFRBhosts: Limiting the visibility and follow-up of FRB host galaxies
+https://github.com/HinLeung622/pipes_vis;https://ui.adsabs.harvard.edu/abs/2021RNAAS...5..171L;19;pipes_vis: Interactive GUI and visualizer tool for SPS spectra
+https://gitlab.com/sybreton/apollinaire;https://ui.adsabs.harvard.edu/abs/2022A%26A...663A.118B;86;apollinaire: Helioseismic and asteroseismic peakbagging frameworks
+https://github.com/scotthgn/relagn;https://ui.adsabs.harvard.edu/abs/2023arXiv230401253H;0;RELAGN: AGN SEDs with full GR ray tracing
+https://github.com/fzagaria/COpops;https://ui.adsabs.harvard.edu/abs/2023A&A...672L..15Z;72;COpops: Compute CO sizes and fluxes
+https://github.com/parthenon-hpc-lab/parthenon;https://ui.adsabs.harvard.edu/abs/2022arXiv220212309G;23;Parthenon: Portable block-structured adaptive mesh refinement framework
+https://github.com/jbattat/pep_core;https://ui.adsabs.harvard.edu/abs/2021AJ....162...78C;4;PEP: Planetary Ephemeris Program
+https://github.com/hablabx/rfast;https://ui.adsabs.harvard.edu/abs/2023PSJ.....4...10R;352;rfast: Planetary spectral forward and inverse modeling tool
+https://github.com/MarioRomeroC/Mixclask;https://ui.adsabs.harvard.edu/abs/2023MNRAS.521.1727R;6;Mixclask: Mixing Cloudy and SKIRT
+https://github.com/zclaytor/butterpy;https://ui.adsabs.harvard.edu/abs/2022ApJ...927..219C;463;Butterpy: Stellar butterfly diagram and rotational light curve simulator
+https://github.com/CosmoTool/ECLIPSE;https://ui.adsabs.harvard.edu/abs/2021JCAP...07..034B;129;ECLIPSE: Efficient Cmb poLarization and Intensity Power Spectra Estimator
+https://github.com/PabloVD/CosmoGraphNet;https://ui.adsabs.harvard.edu/abs/2022ApJ...937..115V;804;CosmoGraphNet: Cosmological parameters and galaxy power spectrum from galaxy catalogs
+https://github.com/hjens/lasso_spectra;https://ui.adsabs.harvard.edu/abs/2016ApJ...827....5J;809;lasso_spectra: Predict properties from galaxy spectra using Lasso regression
+https://github.com/jmd-dk/concept;https://ui.adsabs.harvard.edu/abs/2022MNRAS.513..991D;804;CONCEPT: COsmological N-body CodE in PyThon
+https://github.com/idefix-code/idefix;https://ui.adsabs.harvard.edu/abs/2023arXiv230413746L;0;IDEFIX: Astrophysical fluid dynamics
+https://github.com/tomasplsek/CADET;https://ui.adsabs.harvard.edu/abs/2024MNRAS.527.3315P;93;CADET: X-ray cavity detection tool
+https://github.com/jiangyuts/facetclumps;https://ui.adsabs.harvard.edu/abs/2023arXiv230518709J;0;FacetClumps: Molecular clump detection algorithm based on Facet model
+https://github.com/GRTLCollaboration/GRChombo;https://ui.adsabs.harvard.edu/abs/2015CQGra..32x5011C;5567;GRChombo: Numerical relativity simulator
+https://github.com/JulioHC00/PEPITA;https://ui.adsabs.harvard.edu/abs/2023MNRAS.520.4103H;33;PEPITA: Prediction of Exoplanet Precisions using Information in Transit Analysis
+https://github.com/JCGoran/coffe;https://ui.adsabs.harvard.edu/abs/2018JCAP...10..032T;523;COFFE: COrrelation Function Full-sky Estimator
+https://github.com/NuSpaceSim/nuSpaceSim;https://ui.adsabs.harvard.edu/abs/2019ICRC...36..936K;150;nuSpaceSim: Cosmic neutrino simulation
+https://github.com/NuSpaceSim/nupyprop;https://ui.adsabs.harvard.edu/abs/2023JCAP...01..041G;23;nuPyProp: Propagate neutrinos through the earth
+https://github.com/DTsuna/CHIPS;https://ui.adsabs.harvard.edu/abs/2022ApJ...929..177T;348;CHIPS: Circumstellar matter and light curves of interaction-powered transients simulator
+https://github.com/HAWinther/MG-PICOLA-PUBLIC;https://ui.adsabs.harvard.edu/abs/2017JCAP...08..006W;2516;MG-PICOLA: Simulating cosmological structure formation
+https://github.com/micbia/SubgridClumping;https://ui.adsabs.harvard.edu/abs/2021MNRAS.504.2443B;402;SubgridClumping: Clumping factor for large low-resolution N-body simulations
+https://github.com/naonori/hitomi;https://ui.adsabs.harvard.edu/abs/2023MNRAS.523.3133S;200;Hitomi: Cosmological analysis of anisotropic galaxy distributions
+https://github.com/cnsetzer/kilopop;https://ui.adsabs.harvard.edu/abs/2023MNRAS.520.2829S;371;kilopop: Binary neutron star population of optical kilonovae
+https://github.com/stermzsofi/TiDE;https://ui.adsabs.harvard.edu/abs/2023PASP..135c4102K;13;TiDE: Light curves and spectra of tidal disruption events
+https://github.com/sheydenreich/threepoint;https://ui.adsabs.harvard.edu/abs/2023A%26A...672A..44H;1108;threepoint: Covariance of third-order aperture statistics
+https://github.com/takafumi291/ESSENCE;https://ui.adsabs.harvard.edu/abs/2023JATIS...9a8001T;187;ESSENCE: Evaluate spatially correlated noise in interferometric images
+https://github.com/SSDataLab/psfmachine/;https://ui.adsabs.harvard.edu/abs/2021AJ....162..107H;98;PSFMachine: Toolkit for doing PSF photometry
+https://github.com/hveerten/boxfit;https://ui.adsabs.harvard.edu/abs/2012ApJ...749...44V;8366;BOXFIT: Gamma-ray burst afterglow light curve generator
+https://github.com/nitadori/SCF-FDPS;https://ui.adsabs.harvard.edu/abs/2023ApJ...948...29H;0;SCF-FDPS: Disk-halo systems simulator
+https://github.com/Valcin/BE_HaPPy;https://ui.adsabs.harvard.edu/abs/2019JCAP...12..057V;876;BE-HaPPY: Bias emulator for halo power spectrum
+https://github.com/JulianBMunoz/RelicFast;https://ui.adsabs.harvard.edu/abs/2018PhRvD..98d3503M;1999;RelicFast: Fast scale-dependent halo bias
+https://github.com/cconroy20/alf;https://ui.adsabs.harvard.edu/abs/2018ApJ...854..139C;5620;ALF: Absorption line fitter
+https://github.com/SophieMLV/axionHMcode;https://ui.adsabs.harvard.edu/abs/2023PhRvD.107f3526V;634;axionHMcode: Non-linear power spectrum calculator
+https://github.com/EdanRein/pyPplusS;https://ui.adsabs.harvard.edu/abs/2019MNRAS.490.1111R;116;pyPplusS: Modeling exoplanets with rings
+https://github.com/scotthgn/AGNvar;https://ui.adsabs.harvard.edu/abs/2023MNRAS.521..251H;162;AGNvar: Model spectral timing properties in active galactic nuclei
+https://github.com/JulianBMunoz/21cmvFAST;https://ui.adsabs.harvard.edu/abs/2019PhRvD.100f3538M;3001;21cmvFAST: Adding dark matter-baryon relative velocities to 21cmFAST
+https://github.com/AndreyTavleev/AlphaDiSC;https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.3647T;9;AlphaDiSC: Vertical and radial structure calculator for accretion discs around neutron stars and black holes
+https://github.com/simonsobs/mnms;https://ui.adsabs.harvard.edu/abs/2023arXiv230304180A;0;mnms: Map-based Noise ModelS
+https://github.com/mtceballos/SIRENAdoc;https://ui.adsabs.harvard.edu/abs/2017ASPC..512..605C;1;SIRENA: Energy reconstruction of X-ray photons for Athena X-IFU
+https://github.com/vallis/synthlisa;https://ui.adsabs.harvard.edu/abs/2005PhRvD..71b2001V;4465;Synthetic LISA: Simulator for LISA-like gravitational-wave observatories
+https://github.com/mikekatz04/BOWIE;https://ui.adsabs.harvard.edu/abs/2019MNRAS.483.3108K;638;BOWIE: Gravitational wave binary signal analysis
+https://github.com/teuben/DataComb;https://ui.adsabs.harvard.edu/abs/2023PASP..135c4501P;200;DataComb: Combining data for better images
+https://github.com/eXtremeGravityInstitute/LISA-Massive-Black-Hole/blob/main/IMRPhenomD.c;https://ui.adsabs.harvard.edu/abs/2016PhRvD..93d4006H;116661;IMRPhenomD: Phenomenological waveform model
+https://github.com/oliverphilcox/PolySpec;https://ui.adsabs.harvard.edu/abs/2023PhRvD.107l3516P;238;PolyBin: Binned polyspectrum estimation on the full sky
+https://github.com/ulebreui/shark;https://ui.adsabs.harvard.edu/abs/2023MNRAS.518.3326L;429;SHARK: Gas and dust hydrodynamics with dust coagulation/fragmentation
+https://github.com/alexander-mead/pyhalomodel;https://ui.adsabs.harvard.edu/abs/2023arXiv230308752A;0;pyhalomodel: Halo-model implementation for power spectra
+https://github.com/lgbouma/gyro-interp;https://ui.adsabs.harvard.edu/abs/2023ApJ...947L...3B;426;gyrointerp: Gyrochronology via interpolation of open cluster rotation sequences
+https://github.com/CosmicFish/CosmicFish;https://ui.adsabs.harvard.edu/abs/2016arXiv160606268R;3080;CosmicFish: Cosmology forecasting tool
+https://github.com/mlujnie/simple;https://ui.adsabs.harvard.edu/abs/2023arXiv230708475L;0;SIMPLE: Intensity map generator
+https://github.com/astertaylor/SAMUS;https://ui.adsabs.harvard.edu/abs/2023PSJ.....4...79T;121;SAMUS: Simulator of Asteroid Malformation Under Stress
+https://github.com/esquivas/guacho;https://ui.adsabs.harvard.edu/abs/2009A%26A...507..855E;279;Guacho: 3D uniform mesh parallel HD/MHD code for astrophysics
+https://gitlab.com/binary_c;https://ui.adsabs.harvard.edu/abs/2004MNRAS.350..407I;24306;binary_c: Stellar population synthesis software framework
+https://github.com/BLAST-WarpX/warpx;https://ui.adsabs.harvard.edu/abs/2020JPhCS1596a2059V;6;WarpX: Time-based electromagnetic and electrostatic Particle-In-Cell code
+https://github.com/jstuecker/adiabatic-tides;https://ui.adsabs.harvard.edu/abs/2023MNRAS.521.4432S;315;adiabatic-tides: Tidal stripping of dark matter (sub)haloes
+https://github.com/EFTCAMB;https://ui.adsabs.harvard.edu/abs/2014PhRvD..90d3513R;29503;EFTCAMB: Effective Field Theory with CAMB
+https://github.com/Anirbancosmo/limpy;https://ui.adsabs.harvard.edu/abs/2023arXiv230406748R;0;LIMpy: Line Intensity Mapping in Python
+https://github.com/robdjeff/eagles;https://ui.adsabs.harvard.edu/abs/2023MNRAS.523..802J;250;EAGLES: Estimating AGes from Lithium Equivalent widthS
+https://github.com/pierrehoudayer/RUBIS;https://ui.adsabs.harvard.edu/abs/2023A%26A...675A.181H;4;RUBIS: Fast centrifugal deformation program for stellar and planetary models
+https://github.com/davi-rodrigues/NAVanalysis;https://ui.adsabs.harvard.edu/abs/2023PDU....4101230R;137;NAVanalysis: Normalized Additional Velocity analysis
+https://github.com/PabloVD/HAYASHI;https://ui.adsabs.harvard.edu/abs/2023JCAP...03..017K;43;HAYASHI: Halo-level AnalYsis of the Absorption Signal in HI
+https://github.com/jmsdsouzaPhD/GWDALI/;https://ui.adsabs.harvard.edu/abs/2023arXiv230710154M;0;GWDALI: Gravitational wave parameter estimation
+https://github.com/LSSTDESC/NaMaster;https://ui.adsabs.harvard.edu/abs/2019MNRAS.484.4127A;9985;NaMaster: Unified pseudo-Cl framework
+https://github.com/kmsurrao/reMASTERed;https://ui.adsabs.harvard.edu/abs/2023PhRvD.107h3521S;436;reMASTERed: Calculate contributions to pseudo-Cl for maps with correlated masks
+https://github.com/TheVictorMunoz/nuHawkHunter;https://ui.adsabs.harvard.edu/abs/2022JCAP...10..068B;533;νHawkHunter: Forecasting of PBH neutrinos
+https://github.com/AlexMaraio/WeakLensingQML;https://ui.adsabs.harvard.edu/abs/2023MNRAS.520.4836M;24;WeakLensingQML: Quadratic Maximum Likelihood estimator applied to Weak Lensing
+https://gitlab.mpcdf.mpg.de/leftfield/release/leftfield;https://ui.adsabs.harvard.edu/abs/2021JCAP...04..033S;763;LEFTfield: Forward modeling of cosmological density fields
+https://github.com/exoml/plan-net;https://ui.adsabs.harvard.edu/abs/2019AJ....158...33C;883;plan-net: Bayesian neural networks for exoplanetary atmospheric retrieval
+https://github.com/exoclime/HELA;https://ui.adsabs.harvard.edu/abs/2018NatAs...2..719M;1669;HELA: Random Forest retrieval for exoplanet atmospheres
+https://github.com/tomasstolker/species;https://ui.adsabs.harvard.edu/abs/2020A%26A...635A.182S;1837;species: Atmospheric characterization of directly imaged exoplanets
+https://github.com/alexrhowe/APOLLO;https://ui.adsabs.harvard.edu/abs/2017ApJ...835...96H;2328;APOLLO:  Radiative transfer and atmosphere spectroscopic retrieval for exoplanets
+https://github.com/rezeebe/orbitN;https://ui.adsabs.harvard.edu/abs/2023AJ....166....1Z;29;orbitN: Symplectic integrator for near-Keplerian planetary systems
+https://github.com/Jesper-Karsten/MBASC;https://ui.adsabs.harvard.edu/abs/2023A%26A...675A.159K;19;MBASC: Multi-Band AGN-SFG Classifier
+https://github.com/AarhusCosmology/connect_public;https://ui.adsabs.harvard.edu/abs/2023JCAP...05..025N;915;connect: COsmological Neural Network Emulator of CLASS using TensorFlow
+https://github.com/PabloMSanAla/fabada;https://ui.adsabs.harvard.edu/abs/2023RASTI...2..129S;45;FABADA: Non-parametric noise reduction using Bayesian inference
+https://github.com/Autostronomy/AstroPhot/;https://ui.adsabs.harvard.edu/abs/2023MNRAS.tmp.2330S;0;AstroPhot: Fitting everything everywhere all at once in astronomical images
+https://github.com/simonsobs/nemo;https://ui.adsabs.harvard.edu/abs/2021ApJS..253....3H;7135;Nemo: Millimeter-wave map filtering and Sunyaev-Zel'dovich galaxy cluster and source detection
+https://github.com/dingshandeng/diskmint;https://ui.adsabs.harvard.edu/abs/2023arXiv230702657D;0;DiskMINT: Disk Model For INdividual Targets
+https://github.com/Kkritos/Rapster;https://ui.adsabs.harvard.edu/abs/2022arXiv221010055K;0;Rapster: Rapid population synthesis for binary black hole mergers in dynamical environments
+https://github.com/sambit-giri/BCemu;https://ui.adsabs.harvard.edu/abs/2021JCAP...12..046G;2309;BCemu: Model baryonic effects in cosmological simulations
+https://github.com/felixbosco/KeplerFit;https://ui.adsabs.harvard.edu/abs/2019A%26A...629A..10B;669;KeplerFit: Keplerian velocity distribution model fitter
+https://github.com/sfschen/velocileptors;https://ui.adsabs.harvard.edu/abs/2020JCAP...07..062C;6039;velocileptors: Velocity-based Lagrangian and Eulerian PT expansions of redshift-space distortions
+https://github.com/NoahSailer/FishLSS;https://ui.adsabs.harvard.edu/abs/2021JCAP...12..049S;4312;FishLSS: Fisher forecasting for Large Scale Structure surveys
+https://github.com/amusecode/TRES;https://ui.adsabs.harvard.edu/abs/2016ComAC...3....6T;6385;TRES: TRiple Evolution Simulation package
+https://github.com/yongsukyee/uncertain_blackholemass;https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.3116Y;0;UBHM: Uncertainty quantification of black hole mass estimation
+https://github.com/omboersma/deepglow;https://ui.adsabs.harvard.edu/abs/2023PASA...40...30B;36;DeepGlow: Neural network emulator for BOXFIT
+https://github.com/Guo-Jian-Wang/colfi;https://ui.adsabs.harvard.edu/abs/2023ApJS..268....7W;260;CoLFI: Cosmological Likelihood-Free Inference
+https://github.com/SarveshVGharat/Plages-Identification;https://ui.adsabs.harvard.edu/abs/2023RASTI...2..393G;0;PI: Plages Identification
+https://github.com/dylancromer/maszcal;https://ui.adsabs.harvard.edu/abs/2022JCAP...10..034C;274;maszcal: Mass calibrations for thermal-SZ clusters
+https://github.com/mattyowl/fitScalingRelation;https://ui.adsabs.harvard.edu/abs/2007ApJ...665.1489K;65492;fitScalingRelation: Fit galaxy cluster scaling relations using MCMC
+https://github.com/sjforeman/bskit;https://ui.adsabs.harvard.edu/abs/2020MNRAS.498.2887F;2402;bskit: Bispectra from cosmological simulation snapshots
+https://github.com/PEREGRINE-GW/peregrine;https://ui.adsabs.harvard.edu/abs/2023PhRvD.108d2004B;708;PEREGRINE: Gravitational wave parameter inference with neural ration estimation
+https://github.com/smandal97/Sprout;https://ui.adsabs.harvard.edu/abs/2023arXiv230713785M;0;Sprout: Moving mesh finite volume hydro code
+https://github.com/exoplanet-dev/celerite2;https://ui.adsabs.harvard.edu/abs/2017AJ....154..220F;20369;celerite2: Fast and scalable Gaussian Processes in one dimension
+https://github.com/frescigno/magpy_rv/tree/main;https://ui.adsabs.harvard.edu/abs/2023arXiv231013623R;0;MAGPy-RV: Gaussian Process regression pipeline with MCMC parameter searching
+https://github.com/ACTCollaboration/zCluster;https://ui.adsabs.harvard.edu/abs/2018ApJS..235...20H;8001;zCluster: Measure photometric redshifts for galaxy clusters
+https://github.com/v-morello/clfd;https://ui.adsabs.harvard.edu/abs/2019MNRAS.483.3673M;1659;clfd: Clean folded data
+https://gitlab.com/kmrajwade/iqrm_apollo;https://ui.adsabs.harvard.edu/abs/2022MNRAS.510.1393M;755;IQRM-APOLLO: Clean narrow-band RFI using Inter-Quartile Range Mitigation (IQRM) algorithm
+https://github.com/v-morello/riptide;https://ui.adsabs.harvard.edu/abs/2020MNRAS.497.4654M;1288;riptide: Pulsar searching with the Fast Folding Algorithm
+https://github.com/SJ001/AI-Feynman;https://ui.adsabs.harvard.edu/abs/2020SciA....6.2631U;1046;AI-Feynman: Symbolic regression algorithm
+https://github.com/ericsteinbring/Special-Blurring;https://doi.org/10.3390/galaxies11060115;0;Special-Blurring: Compare quantum-spacetime foam models to GRB localizations
+https://github.com/hdeeg/KvW;https://ui.adsabs.harvard.edu/abs/2020Galax...9....1D;18;KvW: Modified Kwee–Van Woerden method for eclipse minimum timing with reliable error estimates
+https://github.com/LCOGT/neoexchange/;https://ui.adsabs.harvard.edu/abs/2021Icar..36414387L;248;NEOexchange: Target and Observation Manager for the Solar System
+https://github.com/mraveri/tensiometer;https://ui.adsabs.harvard.edu/abs/2021PhRvD.104d3504R;4307;tensiometer: Test a model until it breaks
+https://github.com/Hi-COLACode/Hi-COLA;https://ui.adsabs.harvard.edu/abs/2023JCAP...03..040W;171;Hi-COLA: Cosmological large-scale structure simulator for Horndeski theories
+https://github.com/mr-superonion/FPFS;https://ui.adsabs.harvard.edu/abs/2022MNRAS.511.4850L;403;FPFS: Fourier Power Function Shaplets
+https://github.com/cosmolattice/cosmolattice;https://ui.adsabs.harvard.edu/abs/2020arXiv200615122F;0;CosmoLattice: Lattice simulator of scalar and gauge field dynamics in an expanding universe
+https://gitlab.lam.fr/srendon/rossbi3d;https://ui.adsabs.harvard.edu/abs/2022arXiv220704252R;10;RoSSBi3D: Finite volume code for protoplanetary disk evolution study
+https://github.com/AarhusCosmology/prospect_public;https://ui.adsabs.harvard.edu/abs/2023arXiv231202972B;0;PROSPECT: Profile likelihood for frequentist cosmological inference
+https://github.com/basp-group/BUQO;https://ui.adsabs.harvard.edu/abs/2018arXiv180300889R;0;BUQO: Bayesian Uncertainty Quantification by Optimization
+https://gitlab.mpcdf.mpg.de/ift/public;https://ui.adsabs.harvard.edu/abs/2022PLoSO..1775011G;115;DENSe: Bayesian density estimation for Poisson data
+https://github.com/igmhub/LyaCoLoRe;https://ui.adsabs.harvard.edu/abs/2020JCAP...03..068F;2807;LyaCoLoRe: Generate simulated Lyman alpha forest spectra
+https://github.com/sebhoof/SolarAxionFlux;https://ui.adsabs.harvard.edu/abs/2021JCAP...09..006H;876;SolarAxionFlux: Solar axion flux calculator for different solar models and opacity codes
+https://github.com/songningqiang/CosmoLED;https://ui.adsabs.harvard.edu/abs/2022PhRvD.105j3508F;289;CosmoLED: Cosmo code for Large Extra Dimension (LED) black holes
+https://github.com/wcoulton/CompressedFisher;https://ui.adsabs.harvard.edu/abs/2023arXiv230508994C;108;CompressedFisher: Library for testing Fisher forecasts
+https://github.com/justinread/gravsphere;https://ui.adsabs.harvard.edu/abs/2017MNRAS.471.4541R;7000;GravSphere: Jeans modeling code
+https://github.com/flaminiafortuni/FORECAST;https://ui.adsabs.harvard.edu/abs/2023A%26A...677A.102F;51;FORECAST: Realistic astronomical image and galaxy survey generator
+https://github.com/ypmen/PulsarX;https://ui.adsabs.harvard.edu/abs/2023A%26A...679A..20M;84;PulsarX: Pulsar searching
+https://github.com/21cmfast/21cmEMU;https://ui.adsabs.harvard.edu/abs/2023MNRAS.tmp.3684B;0;21cmEMU: 21cmFAST summaries emulator
+https://github.com/GRTLCollaboration/GRFolres;https://ui.adsabs.harvard.edu/abs/2023arXiv230906225A;0;GRFolres: Extension to GRChombo for modified gravity simulations
+https://github.com/florpi/sunbird;https://ui.adsabs.harvard.edu/abs/2023arXiv230916539C;0;SUNBIRD: Neural-network-based models for galaxy clustering
+https://github.com/astroweaver/the_farmer;https://ui.adsabs.harvard.edu/abs/2023ApJS..269...20W;460;The Farmer: Photometry routines for deep multi-wavelength galaxy surveys
+https://github.com/jaimerzp/limberjack.jl;https://ui.adsabs.harvard.edu/abs/2023arXiv231008306R;0;LimberJack.jl: Auto-differentiable methods for cosmology
+https://github.com/CHES2023/PyMsOfa;https://ui.adsabs.harvard.edu/abs/2023RAA....23l5015J;20;PyMsOfa: Python package for the Standards of Fundamental Astronomy (SOFA) service
+https://github.com/light-curve/light-curve-python;https://ui.adsabs.harvard.edu/abs/2023arXiv231002916R;0;Rainbow: Simultaneous multi-band light curve fitting
+https://github.com/asgr/ProPane;https://ui.adsabs.harvard.edu/abs/2023arXiv231101761R;0;ProPane: Image warping and stacking utilities
+https://github.com/ArisTr/PyRaTE;https://ui.adsabs.harvard.edu/abs/2018MNRAS.478.2056T;118;PyRaTE: Non-LTE spectral lines simulations
+https://github.com/garrelt/C2-Ray1D;https://ui.adsabs.harvard.edu/abs/2006NewA...11..374M;14439;C<sup>2</sup>-Ray: Time-dependent photo-ionization calculations
+https://github.com/garrelt/C2-Ray3Dm1D_Helium;https://ui.adsabs.harvard.edu/abs/2012MNRAS.421.2232F;2154;C<sup>2</sup>-Ray3Dm1D_Helium: Hydrogen + helium version of C<sup>2</sup>-Ray
+https://github.com/phirling/pyc2ray;https://ui.adsabs.harvard.edu/abs/2023arXiv231101492H;0;pyC<sup>2</sup>Ray: Python interface to C<sup>2</sup>Ray with GPU acceleration
+https://github.com/cloudflex-project/cloudflex;https://ui.adsabs.harvard.edu/abs/2023arXiv231105691H;0;CloudFlex: Small-scale structure observational signatures modeling
+https://github.com/jgducoin/galclaim;https://ui.adsabs.harvard.edu/abs/2023SoftX..2401582D;0;galclaim: GALaxy Chance of Local Alignment algorIthM
+https://github.com/chakrah/sage;https://ui.adsabs.harvard.edu/abs/2024A%26A...685A.173C;41;SAGE: Stellar Activity Grid for Exoplanets
+https://github.com/mwanakijiji/rrlfe;https://ui.adsabs.harvard.edu/abs/2024MNRAS.527..828S;0;RRLFE: Metallicity calibrations for RR Lyrae variable stars
+https://github.com/HERA-Team/matvis;https://ui.adsabs.harvard.edu/abs/2023arXiv231209763K;0;matvis: Fast matrix-based visibility simulator
+https://gitlab.desy.de/am3/am3;https://ui.adsabs.harvard.edu/abs/2023arXiv231213371K;0;AM<sup>3</sup>: Astrophysical Multi-Messenger Modeling
+https://github.com/jobovy/gaia_tools;https://ui.adsabs.harvard.edu/abs/2017MNRAS.470.1360B;13193;gaia_tools: Tools for working with Gaia and related data sets
+https://github.com/radis/radis;https://ui.adsabs.harvard.edu/abs/2019JQSRT.222...12P;372;RADIS: Fast line-by-line code for high-resolution infrared molecular spectra
+https://github.com/pmaxted/pycheops;https://ui.adsabs.harvard.edu/abs/2022MNRAS.514...77M;1049;pycheops: Light curve analysis for ESA CHEOPS data
+https://github.com/Kambrian/SubGen;http://adsabs.harvard.edu/abs/2016MNRAS.457.1208H;4958;SubGen: Fast subhalo sampler
+https://github.com/fhtouma/subgen2;https://ui.adsabs.harvard.edu/abs/2023MNRAS.526.3156H;40;SubGen2: Subhalo population generator
+https://github.com/warrickball/tomso;https://ui.adsabs.harvard.edu/abs/2022JOSS....7.4343B;0;tomso: TOols for Models of Stars and their Oscillations
+https://github.com/revoltek/losoto;https://ui.adsabs.harvard.edu/abs/2019A%2526A...622A...5D;0;LoSoTo: LOFAR solutions tool
+https://github.com/dealii/dealii;https://ui.adsabs.harvard.edu/abs/2019arXiv191013247A;0;deal.II: Finite element library
+https://github.com/astro-informatics/harmonic;https://ui.adsabs.harvard.edu/abs/2021arXiv211112720M;306;Harmonic: Learnt harmonic mean estimator
+https://github.com/mehdirezaie/SYSNet;https://ui.adsabs.harvard.edu/abs/2020MNRAS.495.1613R;1283;SYSNet: Neural Network modeling of imaging systematics in galaxy surveys
+https://github.com/aibhleog/baryon-sweep;https://ui.adsabs.harvard.edu/abs/2023arXiv231212518H;0;baryon-sweep: Outlier rejection algorithm for JWST/NIRSpec IFS data
+https://github.com/RainthunderWYL/LoRD;https://ui.adsabs.harvard.edu/abs/2023arXiv231215589W;0;LoRD: Locate Reconnection Distribution
+https://github.com/dokkum/maskfill;https://ui.adsabs.harvard.edu/abs/2023arXiv231203064V;0;maskfill: Fill in masked values in an image
+https://github.com/axgoujon/convex_ridge_regularizers;https://ui.adsabs.harvard.edu/abs/2022arXiv221112461G;0;CRR: Convex Ridge Regularizer
+https://github.com/astro-informatics/QuantifAI;https://ui.adsabs.harvard.edu/abs/2023arXiv231200125L;0;QuantifAI: Radio interferometric imaging reconstruction with scalable Bayesian uncertainty quantification
+https://github.com/andymummeryastro/tidalspin;https://ui.adsabs.harvard.edu/abs/2024MNRAS.527.6233M;99;tidalspin: Constrain black hole spins using relativistic tidal forces properties
+https://github.com/ageorgakakis/StructureFunction;https://ui.adsabs.harvard.edu/abs/2024arXiv240117285G;0;StructureFunction: Bayesian estimation of the AGN structure function for Poisson data
+https://github.com/Astro-Sean/escatter;https://ui.adsabs.harvard.edu/abs/2023arXiv231213280B;0;escatter: Electron scattering in Python
+https://github.com/nuclear-multimessenger-astronomy/nmma;https://ui.adsabs.harvard.edu/abs/2023NatCo..14.8352P;1250;NMMA: Nuclear Multi Messenger Astronomy framework
+https://github.com/asgr/Rfits;https://ui.adsabs.harvard.edu/abs/2024MNRAS.528.5046R;65;Rfits: FITS file manipulation in R
+https://github.com/asgr/Rwcs;https://ui.adsabs.harvard.edu/abs/2024MNRAS.tmp..336R;0;Rwcs: World coordinate system transforms in R
+https://github.com/davi-rodrigues/CCBH-Numerics;https://ui.adsabs.harvard.edu/abs/2024MNRAS.528.2377A;201;CCBH-Numerics: Cosmologically-coupled-black-holes formation mass numerics
+https://github.com/cosmoinin/MGPT;https://ui.adsabs.harvard.edu/abs/2018JCAP...11..013A;386;MGPT: Modified Gravity Perturbation Theory code
+https://github.com/LucIJspeert/eclipsr;https://ui.adsabs.harvard.edu/abs/2021A%26A...652A.120I;859;ECLIPSR: Automatically find individual eclipses in light curves, determine ephemerides, and more
+https://github.com/LucIJspeert/star_shadow;https://ui.adsabs.harvard.edu/abs/2024arXiv240206084I;0;star_shadow: Analyze eclipsing binary light curves, find eccentricity, and more
+https://github.com/kokron/skyLine;https://ui.adsabs.harvard.edu/abs/2023MNRAS.526.5883S;181;SkyLine: Generate mock line-intensity maps
+https://github.com/javicarron/pynkowski;https://ui.adsabs.harvard.edu/abs/2024JCAP...01..039C;32;Pynkowski: Minkowski functionals and other higher order statistics
+https://github.com/sidchaini/DistClassiPy/;https://ui.adsabs.harvard.edu/abs/2024arXiv240312120C;0;DistClassiPy: Distance-based light curve classification
+https://github.com/nabeelre/BTSbot;https://ui.adsabs.harvard.edu/abs/2024arXiv240115167R;0;BTSbot: Automated identification of supernovae with multi-modal deep learning
+https://github.com/Jashcraf/poke;https://ui.adsabs.harvard.edu/abs/2023arXiv230904649A;0;Poke: Polarization ray tracing and Gaussian beamlet module for Python
+https://github.com/alejandroaviles/fkpt;https://ui.adsabs.harvard.edu/abs/2024JCAP...03..049R;343;fkpt: Compute LCDM and modified gravity perturbation theory using fk-kernels
+https://github.com/theonefromnowhere/FitCov;https://ui.adsabs.harvard.edu/abs/2024MNRAS.527.9048T;212;FitCov: Fitted Covariance generation
+https://github.com/maho3/ltu-ili;https://ui.adsabs.harvard.edu/abs/2024arXiv240205137H;0;LtU-ILI: Robust machine learning in astro
+https://github.com/oliverphilcox/OneLoopBispectrum;https://ui.adsabs.harvard.edu/abs/2022PhRvD.106d3530P;1444;OneLoopBispectrum: Computation of the one-loop bispectrum of galaxies in redshift space
+https://github.com/michalychforever/CLASS-PT;https://ui.adsabs.harvard.edu/abs/2020PhRvD.102f3533C;7245;CLASS-PT: Nonlinear perturbation theory extension of the Boltzmann code CLASS
+https://github.com/Chenmi0619/GALMoss/;https://ui.adsabs.harvard.edu/abs/2024arXiv240407780C;0;GalMOSS: GPU-accelerated galaxy surface brightness fitting via gradient descent
+https://github.com/oliverphilcox/PolyBin3D;https://ui.adsabs.harvard.edu/abs/2024arXiv240407249P;0;PolyBin3D: Binned polyspectrum estimation for 3D large-scale structure
+https://github.com/carronj/LensIt;https://ui.adsabs.harvard.edu/abs/2017PhRvD..96f3510C;3123;LensIt: CMB lensing delensing tools
+https://github.com/EliseJ/superabc;https://ui.adsabs.harvard.edu/abs/2016arXiv161103087J;2862;superABC: Cosmological constraints from SN light curves using Approximate Bayesian Computation
+https://github.com/bayesn/bayesn;https://ui.adsabs.harvard.edu/abs/2024arXiv240108755G;0;BayeSN: NumPyro implementation of BayeSN
+https://github.com/oliverphilcox/EffectiveHalos;https://ui.adsabs.harvard.edu/abs/2020PhRvD.101l3520P;1389;EffectiveHalos: Matter power spectrum and cluster counts covariance modeler
+https://github.com/DrJieZheng/meanoffset;https://ui.adsabs.harvard.edu/abs/2024NewA..11002224Z;1;Meanoffset: Photometric image alignment with row and column means
+https://github.com/henrysky/astroNN;https://ui.adsabs.harvard.edu/abs/2019MNRAS.483.3255L;9784;astroNN: Deep learning for astronomers with Tensorflow
+https://github.com/robynlm/ebweyl;https://ui.adsabs.harvard.edu/abs/2023CQGra..40m5010M;33;EBWeyl: Compute the electric and magnetic parts of the Weyl tensor
+https://github.com/benyhh/ml-telescope-pointing-correction;https://ui.adsabs.harvard.edu/abs/2024arXiv240208589N;2;MLTPC: Machine Learning Telescope Pointing Correction
+https://github.com/jcolinhill/pyilc;https://ui.adsabs.harvard.edu/abs/2024PhRvD.109b3528M;322;pyilc: Needlet ILC in Python
+https://github.com/OliverFHD/GPUniverse;https://ui.adsabs.harvard.edu/abs/2022CQGra..39w5012F;1;GPUniverse: Quantum fields in finite dimensional Hilbert spaces modeler
+https://github.com/iain-mcdonald/PySSED;https://ui.adsabs.harvard.edu/abs/2024RASTI...3...89M;19;PySSED: Python Stellar Spectral Energy Distributions
+https://github.com/bradkav/NbodyIMRI;https://ui.adsabs.harvard.edu/abs/2024arXiv240213053K;0;NbodyIMRI: N-body solver for intermediate-mass ratio inspirals of black holes and dark matter spikes
+https://github.com/cuDisc/cuDisc;https://ui.adsabs.harvard.edu/abs/2024MNRAS.529.1524R;33;cudisc: CUDA-accelerated 2D code for protoplanetary disc evolution simulations
+https://github.com/haowang-astro/jetsimpy;https://ui.adsabs.harvard.edu/abs/2024arXiv240219359W;0;jetsimpy: Hydrodynamic model of gamma-ray burst jet and afterglow
+https://gitlab.com/burstcube/mhealpy;https://ui.adsabs.harvard.edu/abs/2022AJ....163..259M;20;mhealpy: Object-oriented healpy wrapper with support for multi-resolution maps
+https://github.com/DariaGangardt/pAGN;https://ui.adsabs.harvard.edu/abs/2024MNRAS.530.3689G;414;pAGN: AGN disk model equations solver
+https://github.com/astro-informatics/stringgen;https://ui.adsabs.harvard.edu/abs/2023OJAp....6E..35P;13;stringgen: Scattering based cosmic string emulation
+https://github.com/astro-informatics/s2fft;https://ui.adsabs.harvard.edu/abs/2023arXiv231114670P;0;s2fft: Differentiable and accelerated spherical transforms
+https://github.com/DTsuna/binary_precursor;https://ui.adsabs.harvard.edu/abs/2024ApJ...966...30T;181;binary_precursor: Light curve model of supernova precursors powered by compact object companions
+https://github.com/CaymanUnterborn/ExoPlex;https://ui.adsabs.harvard.edu/abs/2018MsT.........25L;44;ExoPlex: Thermodynamically self-consistent mass-radius-composition calculator
+https://github.com/spedas;https://ui.adsabs.harvard.edu/abs/2019SSRv..215....9A;5179;SPEDAS: Space Physics Environment Data Analysis System
+https://github.com/mj-will/nessai;https://ui.adsabs.harvard.edu/abs/2021PhRvD.103j3006W;3725;nessai: Nested sampling with artificial intelligence
+https://github.com/FabioRigamonti/pyADfit;https://ui.adsabs.harvard.edu/abs/2024arXiv240503741I;0;pyADfit: Nested sampling approach to quasi-stellar object (QSO) accretion disc fitting
+https://github.com/spedas/pyspedas;https://ui.adsabs.harvard.edu/abs/2022FrASS...920815G;16;pySPEDAS: Python-based Space Physics Environment Data Analysis Software
+https://github.com/robynlm/ICPertFLRW;https://ui.adsabs.harvard.edu/abs/2023PhRvD.107l3536M;36;ICPertFLRW: Cactus Code thorn for initial conditions
+https://github.com/mudit-jain90/i-SPin;https://ui.adsabs.harvard.edu/abs/2023JCAP...04..053J;259;i-SPin: Multicomponent Schrodinger-Poisson systems with self-interactions
+https://github.com/MarkMageeAstro/Riddler;https://ui.adsabs.harvard.edu/abs/2024MNRAS.tmp.1236M;0;riddler: Type Ia supernovae spectral time series fitter
+https://github.com/martinjameswhite/directsht;https://ui.adsabs.harvard.edu/abs/2024JCAP...05..010B;271;DirectSHT: Direct spherical harmonic transform
+https://github.com/t-brandt/fitramp;https://ui.adsabs.harvard.edu/abs/2024PASP..136d5005B;13;fitramp: Likelihood-based jump detection
+https://github.com/ntlucia/BrownDwarf-SpectralIndices;https://ui.adsabs.harvard.edu/abs/2024arXiv240402140O;0;LTdwarfIndices: Variable brown dwarf identifier
+https://github.com/Mik3M4n/EF-TIGRE;https://ui.adsabs.harvard.edu/abs/2024JCAP...05..003C;449;EF-TIGRE: Effective Field Theory of Interacting dark energy with Gravitational REdshift
+https://github.com/antonpannekoek/sunbather;https://ui.adsabs.harvard.edu/abs/2024A%26A...688A..43L;124;sunbather: Escaping exoplanet atmospheres and transit spectra simulator
+https://github.com/tcallister/autoregressive-bbh-inference;https://ui.adsabs.harvard.edu/abs/2024PhRvX..14b1005C;2063;ABBHI: Autoregressive binary black hole inference
+https://github.com/tdrobinson/coronagraph_noise;https://ui.adsabs.harvard.edu/abs/2016PASP..128b5003R;2541;coronagraph_noise: Coronagraph noise modeling routines
+https://github.com/aaryapatil/tapify;https://ui.adsabs.harvard.edu/abs/2024AJ....168..193P;52;tapify: Multitaper spectrum for time-series analysis
+https://github.com/LoganAMorrison/blackthorn;https://ui.adsabs.harvard.edu/abs/2023JHEP...09..163M;38;blackthorn: Spectra from right-handed neutrino decays
+https://github.com/mlafarga/raccoon;https://ui.adsabs.harvard.edu/abs/2023A%26A...670A.139R;638;raccoon: Radial velocities and Activity indicators from Cross-COrrelatiON with masks
+https://github.com/alessiospuriomancini/cosmopower;https://ui.adsabs.harvard.edu/abs/2022MNRAS.511.1771S;3334;CosmoPower: Machine learning-accelerated Bayesian inference
+https://github.com/ch-var/SMART;https://ui.adsabs.harvard.edu/abs/2024MNRAS.531.2304V;18;SMART:  Spectral energy distribution (SED) fitter
+https://github.com/Lbalkenhol/candl;https://ui.adsabs.harvard.edu/abs/2024A%26A...686A..10B;283;candl: Differentiable likelihood framework for analyzing CMB power spectrum measurements
+https://github.com/DrexelLenser/Lenser;https://ui.adsabs.harvard.edu/abs/2021MNRAS.501.4103F;6;Lenser: Measure weak gravitational flexion
+https://github.com/kokron/anzu;https://ui.adsabs.harvard.edu/abs/2021MNRAS.505.1422K;2106;anzu: Measurements and emulation of Lagrangian bias models for clustering and lensing cross-correlations
+https://github.com/abaleato/CARDiAC;https://ui.adsabs.harvard.edu/abs/2023JCAP...07..044B;169;CARDiAC: Anisotropic Redshift Distributions in Angular Clustering
+https://github.com/pierrexyz/cbird;https://ui.adsabs.harvard.edu/abs/2020JCAP...05..005D;23037;CBiRd: Bias tracers In Redshift space
+https://github.com/vallima/PRyMordial;https://ui.adsabs.harvard.edu/abs/2024EPJC...84...86B;2626;PRyMordial: Precise computations of BBN within and beyond the Standard Model
+https://github.com/mperezcarrasco/AnomalyALeRCE;https://ui.adsabs.harvard.edu/abs/2023AJ....166..151P;42;AAD: ALeRCE Anomaly Detector
+https://github.com/madysonb/EVA;https://ui.adsabs.harvard.edu/abs/2023ApJ...953..127B;78;EVA: Excess Variability-based Age
+https://github.com/trivnguyen/florah;https://ui.adsabs.harvard.edu/abs/2023arXiv230805145N;0;FLORAH: Galaxy merger tree generator with machine learning
+https://github.com/BiaPyX/BiaPy;https://ieeexplore.ieee.org/abstract/document/10230593;0;BiaPy: Bioimage analysis pipeline builder
+https://github.com/gururajw/superlite;https://ui.adsabs.harvard.edu/abs/2023ApJ...953..132W;15;SuperLite: Spectral synthesis code for interacting transients
+https://github.com/lukaswenzl/Magnification_bias_estimation_in_galaxy_surveys;https://ui.adsabs.harvard.edu/abs/2024MNRAS.527.1760W;220;MBE: Magnification bias estimation
+https://github.com/mariapetro/LeHaMoC;https://ui.adsabs.harvard.edu/abs/2024A%26A...683A.225S;104;LeHaMoC: Leptonic-Hadronic Modeling Code for high-energy astrophysical sources
+https://github.com/ezquiaga/phazap;https://ui.adsabs.harvard.edu/abs/2023PhRvD.108j3520E;109;phazap: Low-latency identification of strongly lensed signals
+https://github.com/Wang-Ruihui/A-live-homogeneous-database-of-solar-active-regions;https://ui.adsabs.harvard.edu/abs/2023ApJS..268...55W;22;AARD: Automatic detection of solar active regions
+https://github.com/sauddy/GRINN;https://ui.adsabs.harvard.edu/abs/2024MLS%26T...5b5014A;26;GRINN: Gravity Informed Neural Network for studying hydrodynamical systems
+https://github.com/archaeo-pteryx/PowerSpecCovFFT;https://ui.adsabs.harvard.edu/abs/2023PhRvD.108j3512K;74;PowerSpecCovFFT: FFTLog-based computation of non-Gaussian analytic covariance of galaxy power spectrum multipoles
+https://github.com/basp-group/faceted-hypersara;https://ui.adsabs.harvard.edu/abs/2023MNRAS.521...20T;74;Faceted-HyperSARA: Parallel faceted imaging in radio interferometry
+https://github.com/nikhil-sarin/redback;https://ui.adsabs.harvard.edu/abs/2024MNRAS.531.1203S;434;Redback: Bayesian inference package for fitting electromagnetic transients
+https://github.com/nuc-astro/winnet;https://ui.adsabs.harvard.edu/abs/2023ApJS..268...66R;150;WinNet: Flexible, multi-purpose, single-zone nuclear reaction network
+https://github.com/Astro-Sean/autophot;https://ui.adsabs.harvard.edu/abs/2022A%26A...667A..62B;621;AutoPhOT: Rapid publication-quality photometry of transients
+https://github.com/zhangzzk/forklens;https://ui.adsabs.harvard.edu/abs/2024A%26A...683A.209Z;44;Forklens: Deep learning weak lensing shear
+https://github.com/Mik3M4n/BaCoN;https://ui.adsabs.harvard.edu/abs/2022PhRvD.105b3531M;292;BaCoN: BAyesian COsmological Network
+https://github.com/changhoonhahn/provabgs;https://ui.adsabs.harvard.edu/abs/2023ApJ...945...16H;697;provabgs: SED modeling tools for PROVABGS
+https://github.com/GRTLCollaboration/GRDzhadzha;https://ui.adsabs.harvard.edu/abs/2023arXiv230808299A;71;GRDzhadzha: Evolve matter on curved spacetimes
+https://github.com/cbottrell/RealSim;https://ui.adsabs.harvard.edu/abs/2019MNRAS.490.5390B;1987;RealSim: Statistical observational realism for synthetic images from galaxy simulations
+https://github.com/moeyensj/atm;https://ui.adsabs.harvard.edu/abs/2020Icar..34113575M;37;ATM: Asteroid Thermal Modeling
+https://github.com/junkoda/cola_halo;https://ui.adsabs.harvard.edu/abs/2016MNRAS.459.2118K;3395;cola_halo: Parallel cosmological N-body simulator
+https://github.com/mpip/pfft;https://ui.adsabs.harvard.edu/abs/2013SJSC...35C.213P;771;PFFT: Parallel fast Fourier transforms
+https://github.com/PolymathicAI/AstroCLIP;https://ui.adsabs.harvard.edu/abs/2024MNRAS.531.4990P;235;AstroCLIP: Multimodal contrastive pretraining for astronomical data
+https://github.com/juzikong/photGalIMF;https://ui.adsabs.harvard.edu/abs/2024arXiv240505313H;0;photGalIMF: Stellar mass and luminosity evolution calculator
+https://gitlab.lam.fr/hirise/pipeline;https://ui.adsabs.harvard.edu/abs/2024A%26A...682A..16V;239;hipipe: VLT/HiRISE reduction pipeline
+https://gitlab.com/mule-tools/package-x;https://ui.adsabs.harvard.edu/abs/2015CoPhC.197..276P;1871;Package-X: Calculate Feynman loop integrals
+https://github.com/vsulis5357/Sonification;https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4891458;0;SonAD: Sonification of astronomical data
+https://github.com/rahulshah1397/LADDER;https://ui.adsabs.harvard.edu/abs/2024ApJS..273...27S;388;LADDER: Learning Algorithm for Deep Distance Estimation and Reconstruction
+https://github.com/galactic-ai/haloflow;https://ui.adsabs.harvard.edu/abs/2024ApJ...968...90H;5;HaloFlow: Simulation-Based Inference (SBI) using forward modeled galaxy photometry
+https://github.com/yi-jia-li/cue;https://ui.adsabs.harvard.edu/abs/2024arXiv240504598L;0;Cue: Nebular emission modeling
+https://github.com/neslusan/BELTCROSS2;https://ui.adsabs.harvard.edu/abs/2024CoSka..54a...7K;0;BELTCROSS2: Calculate the closest approaches of asteroids to meteoroid streams
+https://github.com/ChemaPalencia/M_SMiLe;https://ui.adsabs.harvard.edu/abs/2024A%26A...687A..81P;186;M_SMiLe: Magnification Statistics of Micro-Lensing
+https://github.com/ekerrison/RadioSED/;https://ui.adsabs.harvard.edu/abs/2024MNRAS.tmp.1764K;0;RadioSED: Radio SED fitting for AGN
+https://github.com/ShaunFell/GRBoondi;https://ui.adsabs.harvard.edu/abs/2024arXiv240501348B;0;GRBoondi: AMR-based code to evolve generalized Proca fields on arbitrary fixed backgrounds
+https://github.com/jordanflitter/21cmFirstCLASS;https://ui.adsabs.harvard.edu/abs/2024PhRvD.109d3512F;111;21cmFirstCLASS: Generate initial conditions at recombination
+https://github.com/PEREGRINE-GW/saqqara;https://ui.adsabs.harvard.edu/abs/2024PhRvD.109h3008A;408;SAQQARA: Stochastic gravitational wave background analysis
+https://github.com/xastprl/darsakx;https://ui.adsabs.harvard.edu/abs/2024A%26C....4700829T;0;DarsakX: X-ray telescope design and imaging performance analyzer
+https://github.com/musoke/ultradark.jl;https://ui.adsabs.harvard.edu/abs/2024JOSS....9.6035M;7;UltraDark: Cosmological scalar fields simulator
+https://github.com/JMLascar/SUSHI;https://ui.adsabs.harvard.edu/abs/2024A%2526A...686A.259L;0;SUSHI: Semi-blind Unmixing with Sparsity for Hyperspectral Images
+https://github.com/giuspugl/fgcluster;https://ui.adsabs.harvard.edu/abs/2022MNRAS.511.2052P;337;FGCluster: ForeGround Clustering
+https://github.com/giuspugl/MCMole3D;https://ui.adsabs.harvard.edu/abs/2017MNRAS.469.2982P;322;MCMole3D: Statistical model for galactic molecular clouds
+https://github.com/giuspugl/picasso;https://ui.adsabs.harvard.edu/abs/2020ApJ...905..143P;319;PICASSO: Inpainter for point-sources for synchrotron and dust polarization
+https://github.com/VasilyKokorev/stardust/;https://ui.adsabs.harvard.edu/abs/2021ApJ...921...40K;1126;Stardust: Composite template fitting software
+https://github.com/smirik/resonances;https://ui.adsabs.harvard.edu/abs/2023A%26C....4300707S;8;resonances: Mean-motion resonances in Solar system and other planetary systems identifier
+https://github.com/dmvandamt/beyonce;https://ui.adsabs.harvard.edu/abs/2024A%2526A...687A..11V;0;BeyonCE: Beyond Common Eclipsers
+https://github.com/deaglanbartlett/symbolic_pofk;https://ui.adsabs.harvard.edu/abs/2024A%2526A...686A.150;0;symbolic_pofk: Precise symbolic emulators of the linear and nonlinear matter power spectrum
+https://github.com/Beryl-Jingxin/PyExoCross;https://ui.adsabs.harvard.edu/abs/2024RASTI...3..257Z;84;PyExoCross: Molecular line lists post-processor
+https://github.com/joacoh/wise2mbh;https://ui.adsabs.harvard.edu/abs/2024MNRAS.531.4503H;99;WISE2MBH: Mass of supermassive black holes estimator
+https://github.com/MilesCranmer/PySR;https://ui.adsabs.harvard.edu/abs/2023arXiv230501582C;228;PySR: High-Performance Symbolic Regression in Python and Julia
+https://github.com/NASA-Planetary-Science/Pade-disk-code;https://ui.adsabs.harvard.edu/abs/2024ApJS..273...37S;2;Padé: Protoplanetary disk turbulence simulator
+https://github.com/davidharvey1986/pyRRG;https://ui.adsabs.harvard.edu/abs/2024MNRAS.529..802H;57;pyRRG: Weak lensing shape measurement code
+https://github.com/purmortal/galcraft;https://ui.adsabs.harvard.edu/abs/2024MNRAS.534.1175W;56;GalCraft: Building integral-field spectrograph data cubes of the Milky Way
+https://github.com/dvallesp/vortex-p;https://ui.adsabs.harvard.edu/abs/2024CoPhC.30409305V;20;vortex-p: Helmholtz-Hodge and Reynolds decomposition algorithm for particle-based simulations
+https://github.com/CmPA/iPic3D;https://doi.org/10.1016/j.matcom.2009.08.038;0;iPIC3D: Multi-scale plasma simulations of plasma
+https://github.com/hanyk/BayeSED3;https://ui.adsabs.harvard.edu/abs/2023ApJS..269...39H;76;BayeSED: Bayesian SED synthesis and analysis of galaxies and AGNs
+https://github.com/Fenyutanchan/solar-vSI;https://ui.adsabs.harvard.edu/abs/2024JCAP...02..037W;32;solar-vSI: Calculate solar antineutrino spectra
+https://github.com/karllark/DIRTY_dustrt;https://ui.adsabs.harvard.edu/abs/2001ApJ...551..269G;19443;DIRTY: 3D dust radiative transfer for dusty astrophysical sources
+https://github.com/sgshulman/DGEM;https://ui.adsabs.harvard.edu/abs/2024arXiv240615632S;0;DGEM: 3D dust continuum radiative transfer code for method comparison
+https://gitlab.obspm.fr/Exoplanet-Atmospheres-LESIA/exorem;https://ui.adsabs.harvard.edu/abs/2015A%26A...582A..83B;5160;Exo-REM: 1D self-consistent radiative-equilibrium model for exoplanetary atmospheres
+https://github.com/andrew-saydjari/CloudCovErr.jl;https://ui.adsabs.harvard.edu/abs/2022ApJ...933..155S;104;CloudCovErr.jl: Debias fluxes and improve error bar estimates for photometry on structured backgrounds
+https://github.com/nasa/Kamodo;https://ui.adsabs.harvard.edu/abs/2023AdSpR..72.5682R;2;Kamodo: Space weather data access, interpolation, and visualization
+https://github.com/exoclam/gaspery;https://ui.adsabs.harvard.edu/abs/2024AJ....168..200L;8;Gaspery: Radial velocity (RV) observing strategies
+https://github.com/christiangil/StellarSpectraObservationFitting.jl;https://ui.adsabs.harvard.edu/abs/2024arXiv240817289G;8;SSOF: Data-driven models for extremely precise radial velocity (EPRV) spectra
+https://github.com/mauropieroni/fastpta;https://ui.adsabs.harvard.edu/abs/2024arXiv240714460D;0;fastPTA: Constraining power of PTA configurations forecaster
+https://github.com/dipto4/falcon_dm;https://ui.adsabs.harvard.edu/abs/2024MNRAS.533.2335M;119;Falcon-DM: N-body code for inspirals in DM spikes
+https://github.com/wchenastro/Mosaic;https://ui.adsabs.harvard.edu/abs/2021JAI....1050013C;315;Mosaic: Multibeamformed Observation Simulation And Interferometry Characterization
+https://github.com/wathela/PyMerger;https://ui.adsabs.harvard.edu/abs/2023arXiv231010409A;0;PyMerger: Einstein Telescope binary black hole merger detector
+https://github.com/kathrinnp/DarkRayNet;https://ui.adsabs.harvard.edu/abs/2024JCAP...11..017H;0;DarkRayNet: Simulation tool for indirect Dark Matter searches
+https://github.com/rbrthogan/GAz;https://ui.adsabs.harvard.edu/abs/2015MNRAS.449.2040H;1363;GAz: Genetic Algorithm for photometric redshift estimation
+https://github.com/rossfadely/star-galaxy-classification/tree/master/code;https://ui.adsabs.harvard.edu/abs/2012ApJ...760...15F;4431;HBSGSep: Hierarchical Bayesian Star-Galaxy Separations
+https://github.com/miche-levi/pncbc-eftofpng;https://ui.adsabs.harvard.edu/abs/2017CQGra..34x4001L;2032;EFTofPNG: Effective Field Theory of Post-Newtonian Gravity
+https://github.com/astrocatalogs/astrocats;https://ui.adsabs.harvard.edu/abs/2017ApJ...835...64G;18094;Astrocats: Construct astronomical catalogs
+https://github.com/duducosmos/pycosmicstar;https://ui.adsabs.harvard.edu/abs/2015NewA...41...48P;0;pycosmicstar: PYthon cosmic STar formAtion Rate
+https://github.com/Valar-hub/MMLPhoto-z;https://ui.adsabs.harvard.edu/abs/2024AJ....168..244Z;2;MMLPhoto-z: Cross-modal contrastive learning method for estimating photo-z of quasars
+https://gitlab.gwdg.de/hoelken/spectroflat;https://ui.adsabs.harvard.edu/abs/2024A%26A...687A..22H;4;spectroflat: Generic Python calibration library for spectro-polarimetric data
+https://github.com/nhurleywalker/fits_warp;https://ui.adsabs.harvard.edu/abs/2018A%26C....25...94H;747;fits_warp: Warp catalogs and images to dedistort the effects of the ionosphere
+https://github.com/Michalychforever/CLASS_LVDM;https://ui.adsabs.harvard.edu/abs/2012JCAP...10..057B;2656;CLASS LVDM: Cosmological model of Lorentz invariance violation in gravity and dark matter
+https://github.com/gbrammer/threedhst;https://ui.adsabs.harvard.edu/abs/2012ApJS..200...13B;53847;threedhst: 3D-HST grism analysis software
+https://github.com/gbrammer/unicorn;https://ui.adsabs.harvard.edu/abs/2012ApJ...758L..17B;56809;unicorn: Full 3D-HST grism pipeline
+https://github.com/grzeimann/Diagnose;https://ui.adsabs.harvard.edu/abs/2024ApJ...966...14Z;35;Diagnose: Spectral classification code
+https://github.com/thomaswilliamsastro/mcfine;https://ui.adsabs.harvard.edu/abs/2024MNRAS.534.1150W;0;McFine: Muli-component hyperfine fitting tool
+https://github.com/Sheng-Qi-Yang/HIILines;https://ui.adsabs.harvard.edu/abs/2023MNRAS.525.5989Y;251;HIILines: Analytical ionized ISM emission line model
+https://github.com/mcataneo/mochi_class_public;https://ui.adsabs.harvard.edu/abs/2024OJAp....7E..76C;52;mochi_class: Modelling Optimization to Compute Horndeski in CLASS
+https://github.com/renecotyfanboy/jaxspec;https://ui.adsabs.harvard.edu/abs/2024A&A...690A.317D;7;jaxspec: X-ray spectra Bayesian analysis
+https://github.com/jaschers/damspi;https://ui.adsabs.harvard.edu/abs/2024JCAP...09..005A;24;DAMSPI: DArk Matter SPIkes in EAGLE simulations
+https://github.com/Hyperthetical/DarkMatters;https://ui.adsabs.harvard.edu/abs/2024arXiv240807053S;0;DarkMatters: Multi-frequency emissions from Dark Matter annihilation and decay
+https://github.com/cpiaulet/smint;https://ui.adsabs.harvard.edu/abs/2021AJ....161...70P;1805;SMINT: Structure Model INTerpolator
+https://github.com/caracal-pipeline/stimela;https://ui.adsabs.harvard.edu/abs/2024arXiv241210080S;0;Stimela2: Workflow management framework for data reduction workflows
+https://github.com/ratt-ru/dask-ms;https://ui.adsabs.harvard.edu/abs/2022ASPC..532..337P;46;dask-ms: xarray datasets from CASA tables
+https://github.com/remingtonsexton/BADASS3;https://ui.adsabs.harvard.edu/abs/2021MNRAS.500.2871S;404;BADASS: Bayesian AGN Decomposition Analysis for SDSS Spectra
+https://github.com/eelregit/pmwd;https://ui.adsabs.harvard.edu/abs/2022arXiv221109958L;166;pmwd: Particle Mesh With Derivatives
+https://github.com/JieweiHuang/Coport;https://ui.adsabs.harvard.edu/abs/2024JCAP...11..054H;44;Coport: Covariant polarized radiative transfer
+https://github.com/flatironinstitute/finufft;https://ui.adsabs.harvard.edu/abs/2019SJSC...41C.479B;387;FINUFFT: Flatiron Institute Nonuniform Fast Fourier Transform
+https://github.com/flatironinstitute/nifty-ls;https://ui.adsabs.harvard.edu/abs/2024RNAAS...8..250G;9;nifty-ls: Fast Lomb-Scargle periodogram
+https://github.com/ratt-ru/codex-africanus;https://ui.adsabs.harvard.edu/abs/2024arXiv241212052P;11;Codex Africanus: Radio astronomy algorithms library
+https://github.com/mjuvela/ISM/tree/master/DIES;https://ui.adsabs.harvard.edu/abs/2024A%26A...689A.180J;0;DIES: Dust radiative transfer with the immediate reemission method
+https://github.com/deniswerth/cosmoflow;https://ui.adsabs.harvard.edu/abs/2023arXiv231206559P;1072;CosmoFlow: A systematic approach to primordial correlators
+https://github.com/yqiuu/spectuner;https://ui.adsabs.harvard.edu/abs/2024arXiv240806004Q;0;Spectuner: Automated line identification of interstellar molecules
+https://github.com/tingyuansen/The_Payne;https://ui.adsabs.harvard.edu/abs/2019ApJ...879...69T;5761;The Payne: Interpolate spectral models with neural networks
+https://github.com/SihaoCheng/WD_models;https://ui.adsabs.harvard.edu/abs/2019ApJ...886..100C;2990;WD_models: WD photometry to physical parameters transformer
+https://github.com/ybillchen/particle_spray;https://ui.adsabs.harvard.edu/abs/2024arXiv240801496C;0;Particle_spray: Modeling globular cluster streams
+https://github.com/pradyunsg/furo;https://ui.adsabs.harvard.edu/abs/2025CQGra..42b5003C;20;gwforge: Mock gravitational wave detector data generator
+https://github.com/combustiontoolbox/combustion_toolbox;https://ui.adsabs.harvard.edu/abs/2024arXiv240915086C;0;Combustion Toolbox: Gaseous combustion problem solver
+https://github.com/LSSTDESC/BlendingToolKit;https://ui.adsabs.harvard.edu/abs/2024arXiv240906986M;0;BlendingToolKit: Tools to create blend catalogs, produce training samples, and implement blending metrics
+https://github.com/igmhub/ForestFlow;https://ui.adsabs.harvard.edu/abs/2024arXiv240905682C;0;ForestFlow: Lyman-alpha cosmology emulator
+https://github.com/LuisGoncalves1/CLOWN;https://ui.adsabs.harvard.edu/abs/2024AJ....168..218G;0;CLOWN: Cloud detection software for observatories with an all-sky camera
+https://github.com/an0wen/MARDIGRAS;https://ui.adsabs.harvard.edu/abs/2024RNAAS...8..216A;15;MARDIGRAS: MAss-Radius DIaGRAm with Sliders
+https://github.com/castro-gzlz/mr-plotter;https://ui.adsabs.harvard.edu/abs/2023A%26A...675A..52C;246;mr-plotter: Mass-radius diagrams plotter
+https://github.com/aneeshnaik/lintsampler;https://ui.adsabs.harvard.edu/abs/2024JOSS....9.6906N;3;lintsampler: Efficient random sampling via linear interpolation
+https://github.com/GammaCascade/GCascade;https://ui.adsabs.harvard.edu/abs/2025CoPhC.30709408C;54;γ-Cascade V4: Gamma-ray propagation package
+https://github.com/SIOSlab/NEXO;https://ui.adsabs.harvard.edu/abs/2024AJ....168...40S;2;NEXO: Nonsingular Estimator for EXoplanet Orbits
+https://github.com/AninaTimmermann/ECCOplanets;https://ui.adsabs.harvard.edu/abs/2023A%26A...676A..52T;34;ECCOplanets: Simulation and analysis of rocky planets
+https://github.com/jruffio/breads;https://ui.adsabs.harvard.edu/abs/2023AJ....166...15A;116;breads: Broad Repository for Exoplanet Analysis, Discovery, and Spectroscopy
+https://github.com/uclchem/SpectralRadex;https://ui.adsabs.harvard.edu/abs/2021A%26A...654A..55H;384;SpectralRadex: Spectral modeling and RADEX
+https://github.com/david-deboer/radiobear;https://ui.adsabs.harvard.edu/abs/2019Icar..322..168D;917;RadioBEAR: BErkeley Atmospheric Radiative transfer
+https://github.com/AaronDavidSchneider/chemcomp;https://ui.adsabs.harvard.edu/abs/2021A%26A...654A..71S;2625;chemcomp: Chemical composition modeling of gas giants by accretion of pebbles, planetesimals and gas
+https://github.com/aasensio/molpop-cep;https://ui.adsabs.harvard.edu/abs/2018A%26A...616A.131A;168;MOLPOP-CEP: Exact solution of radiative transfer problems in multi-level atomic systems
+https://github.com/dewberryjanosz/polyrot;https://ui.adsabs.harvard.edu/abs/2022MNRAS.516..358D;39;polyrot: Polytropic modeling of rapidly rotating planets and stars
+https://github.com/nksaunders/giants;https://ui.adsabs.harvard.edu/abs/2022AJ....163...53S;311;Giants: Pipeline to search for exoplanets around evolved stars
+https://github.com/bsumlin/PyMieScatt;https://ui.adsabs.harvard.edu/abs/2018JQSRT.205..127S;523;PyMieScatt: Forward and inverse Mie solving routines
+https://github.com/samuelyeewl/specmatch-emp;https://ui.adsabs.harvard.edu/abs/2017ApJ...836...77Y;6774;SpecMatch-Emp: Empirical SpecMatch
+https://github.com/spacetelescope/spaceKLIP;https://ui.adsabs.harvard.edu/abs/2022SPIE12180E..3NK;1957;spaceKLIP: JWST coronagraphy data data reduction and analysis pipeline
+https://github.com/AntoineDarveau/jwst/tree/atoca_1.6.0x;https://ui.adsabs.harvard.edu/abs/2022PASP..134i4502D;1339;ATOCA: Decontaminate and extract spectra from image
+https://github.com/gully/blase;https://ui.adsabs.harvard.edu/abs/2022ApJ...941..200G;54;blasé: Interpretable machine learning for high-resolution astronomical spectroscopy
+https://github.com/christinahedges/TESS-SIP;https://ui.adsabs.harvard.edu/abs/2020RNAAS...4..220H;567;TESS-SIP: Long term rotation period finding tool
+https://github.com/igrins/plp;https://ui.adsabs.harvard.edu/abs/2014AdSpR..53.1647S;304;IGRINS_PLP: Immersion Grating Infrared Spectrometer PipeLine Package
+https://github.com/projectcuisines/thai_trilogy_code;https://ui.adsabs.harvard.edu/abs/2022PSJ.....3..211T;885;THAI: Analysis and visualization code for the TRAPPIST Habitable Atmosphere Intercomparison
+https://github.com/legacysurvey/legacypipe;https://ui.adsabs.harvard.edu/abs/2019AJ....157..168D;48960;legacypipe: Image reduction pipeline for DESI Legacy Imaging Surveys
+https://github.com/andycasey/smhr;https://ui.adsabs.harvard.edu/abs/2014PhDT.......394C;3186;smhr: Automatic curve-of-growth analyses of high-resolution stellar spectra
+https://github.com/MSABuschmann/sledgehamr;https://ui.adsabs.harvard.edu/abs/2025ApJ...979..220B;110;Sledgehamr: Dynamics of coupled scalar fields on a 3-dimensional adaptive mesh simulator
+https://github.com/inigozubeldia/cosmocnc;https://ui.adsabs.harvard.edu/abs/2024JCAP...11..018Z;23;cosmocnc: Galaxy cluster number count likelihood computation
+https://github.com/inigozubeldia/szifi;https://ui.adsabs.harvard.edu/abs/2023MNRAS.522.4766Z;314;SZiFi: Sunyaev-Zeldovich iterative finder
+https://github.com/simonsobs/hmvec;https://ui.adsabs.harvard.edu/abs/2018arXiv181013423S;4897;hmvec: Vectorized halo model code
+https://github.com/nadvornikjiri/HiSS-Cube;https://ui.adsabs.harvard.edu/abs/2021A%26C....3600463N;0;HiSS-Cube: Hierarchical Semi-Sparse Cube
+https://github.com/ericagol/NbodyGradient.jl;https://ui.adsabs.harvard.edu/abs/2021MNRAS.507.1582A;125;NbodyGradient: Compute gradients of N-body integrations
+https://github.com/csalyk/spectools_ir;https://ui.adsabs.harvard.edu/abs/2024ApJ...963..158P;567;spectools_ir: Medium/high-resolution IR molecular spectra analysis tools
+https://github.com/DavidSAmundsen/socrates_tools;https://ui.adsabs.harvard.edu/abs/2017ApJS..231...12W;2524;ROCKE-3D: Fully coupled ocean atmosphere 3-D General Circulation Model
+https://github.com/yanliang-astro/aestra;https://ui.adsabs.harvard.edu/abs/2024AJ....167...23L;51;AESTRA: Radial velocity measurements in the presence of stellar activity noise
+https://github.com/radicamc/applesoss;https://ui.adsabs.harvard.edu/abs/2022PASP..134j4502R;1377;APPLESOSS: Empirical profile construction module
+https://github.com/baptklein/ATMOSPHERIX_DATA_RED;https://ui.adsabs.harvard.edu/abs/2024MNRAS.527..544K;154;ATMOSPHERIX: Processing tool for t.fits files
+https://github.com/danielapai/bioverse;https://ui.adsabs.harvard.edu/abs/2021AJ....161..228B;203;Bioverse:  Quantitative framework for assessing diagnostic power of a statistical exoplanet survey
+https://github.com/JHayoz/CROCODILE;https://ui.adsabs.harvard.edu/abs/2023A%26A...678A.178H;66;CROCODILE: Atmospheric retrievals of directly observed gas giant exoplanets
+https://github.com/ryanoelkers/DIA;https://ui.adsabs.harvard.edu/abs/2018AJ....156..132O;1816;DIA: Delta function Difference Imaging Code
+https://github.com/philippbaumeister/ExoMDN;https://ui.adsabs.harvard.edu/abs/2023A%26A...676A.106B;261;ExoMDN: Rapid characterization of exoplanet interiors with Mixture Density Networks
+https://github.com/cjcollin37/IsoFATE;https://ui.adsabs.harvard.edu/abs/2024ApJ...967..139C;300;IsoFATE: Isotopic Fractionation via ATmospheric Escape
+https://github.com/markfortune/luas;https://ui.adsabs.harvard.edu/abs/2024A&A...686A..89F;33;luas: Gaussian processes for analyzing two-dimensional data sets
+https://github.com/ELeeAstro/mini_chem;https://ui.adsabs.harvard.edu/abs/2022A%26A...664A..82T;485;mini-chem: Miniature chemical kinetics model for gas giant GCMs
+https://github.com/Jeremycouturier/NcorpiON;https://ui.adsabs.harvard.edu/abs/2025NewA..11402313C;0;NcorpiON: N-body integration for collisional and fragmenting systems
+https://github.com/aritraghsh09/GaMPEN;https://ui.adsabs.harvard.edu/abs/2022ApJ...935..138G;209;GaMPEN: Galaxy Morphology Posterior Estimation Network
+https://github.com/aritraghsh09/GaMorNet;https://ui.adsabs.harvard.edu/abs/2020ApJ...895..112G;724;GaMorNet: Galaxy Morphology Network
+https://github.com/BrockWW/BubbleFindingAlgorithm;https://ui.adsabs.harvard.edu/abs/2025MNRAS.538.2427W;0;SuFA: Superbubble Finding Algorithm
+https://github.com/enthusi/feline;https://ui.adsabs.harvard.edu/abs/2025JOSS...10.7528W;0;FELINE: Emission lines in galaxies detector
+https://github.com/arielmission-space/ExoSim2-public;https://ui.adsabs.harvard.edu/abs/2025ExA....59....9M;4;ExoSim 2: Exoplanet Observation Simulator 2
+https://github.com/henrysting/blmtree;https://ui.adsabs.harvard.edu/abs/2018ApJ...860..118Y;142;BT: Blooming Tree hierarchical structure analysis
+https://github.com/jan-orkisz/colume;https://ui.adsabs.harvard.edu/abs/2024arXiv241207595O;0;Colume: Estimating volume densities clouds from their column density morphology
+https://github.com/assumpcaothiago/NRPyElliptic;https://ui.adsabs.harvard.edu/abs/2022PhRvD.105j4037A;392;NRPyElliptic: Hyperbolic relaxation solver for elliptic equations
+https://github.com/helenqu/scone;https://ui.adsabs.harvard.edu/abs/2022AJ....163...57Q;235;SCONE: Supernova Classification with a Convolutional Neural Network
+https://github.com/rreischke/OneCovariance;https://ui.adsabs.harvard.edu/abs/2024arXiv241006962R;0;OneCovariance: Compute covariance matrices
+https://github.com/basp-group/R2D2-RI;https://ui.adsabs.harvard.edu/abs/2024ApJ...966L..34D;121;R2D2: Residual-to-Residual DNN series for high-Dynamic range imaging
+https://github.com/hemantaph/ler;https://ui.adsabs.harvard.edu/abs/2024arXiv240707526P;40;LeR: Gravitational waves lensing rate calculator
+https://github.com/lgrcia/nuance;https://ui.adsabs.harvard.edu/abs/2024AJ....167..284G;1;nuance: Transiting planet detector
+https://github.com/PBjam-projects/PBjam;https://ui.adsabs.harvard.edu/abs/2021AJ....161...62N;368;PBjam: Automating asteroseismology of solar-like oscillators
+https://github.com/wordsworthgroup/mars_redox_2021/tree/main/PCM_LBL;https://ui.adsabs.harvard.edu/abs/2021NatGe..14..127W;552;PCM_LBL: Planetary Climate Model Line-By-Line
+https://github.com/jorgefz/photoevolver;https://ui.adsabs.harvard.edu/abs/2023MNRAS.522.4251F;72;photoevolver: Atmospheric escape of extrasolar planets simulator
+https://github.com/joannegger/plaNETic;https://ui.adsabs.harvard.edu/abs/2024A%26A...688A.223E;223;plaNETic: Small exoplanet internal structure modeling framework
+https://github.com/valboz/RTModel;https://ui.adsabs.harvard.edu/abs/2024A%26A...688A..83B;9;RTModel: Microlensing modeling
+https://github.com/hpparvi/spright;https://ui.adsabs.harvard.edu/abs/2024MNRAS.527.5693P;117;Spright: Bayesian mass-radius relation for small planets
+https://github.com/TeHanHunter/TESS_Gaia_Light_Curve;https://ui.adsabs.harvard.edu/abs/2023AJ....165...71H;276;tglc: TESS full-frame image light curves
+https://github.com/ExoArcturus/TriArc;https://ui.adsabs.harvard.edu/abs/2023AJ....166...39C;116;TriArc: Detecting trace gases in exoplanet atmospheres
+https://github.com/bertrandplez/Turbospectrum_NLTE;https://ui.adsabs.harvard.edu/abs/2023A%26A...669A..43G;435;Turbospectrum_NLTE: Turbospectrum 2020 with NLTE capability
+https://github.com/VSPEC-collab/VSPEC;https://ui.adsabs.harvard.edu/abs/2025A%2526C....5000890J;0;VSPEC: Variable Star PhasE Curve
+https://github.com/mrline/CHIMERA;https://ui.adsabs.harvard.edu/abs/2013ApJ...775..137L;17994;CHIMERA: CaltecH Inverse ModEling and Retrieval Algorithms
+https://github.com/JamieDietrich/dynamite;https://ui.adsabs.harvard.edu/abs/2020AJ....160..107D;279;DYNAMITE: DYNAmical Multi-planet Injection TEster
+https://github.com/RobertHTyler/TROPF;https://ui.adsabs.harvard.edu/abs/2019LPI....50.2883T;191;TROPF: Tidal Response Of Planetary Fluids
+https://github.com/astro-seanwhy/ExoInt;https://ui.adsabs.harvard.edu/abs/2019MNRAS.482.2222W;783;ExoInt: Devolatilization and interior modeling package for rocky planets
+https://github.com/sevenian3/ChromaStarPy;https://ui.adsabs.harvard.edu/abs/2018ApJ...854...82S;7;ChromaStarPy: Python stellar atmosphere and spectrum modeling code
+https://github.com/spastras/galclass;https://ui.adsabs.harvard.edu/abs/2025arXiv250321738E;0;GalClass: Visual Galaxy Classification tool
+https://github.com/Smith42/astroPT;https://ui.adsabs.harvard.edu/abs/2024arXiv240514930S;58;AstroPT: Transformer for galaxy images and general astronomy
+https://github.com/ymaan4/rficlean;https://ui.adsabs.harvard.edu/abs/2021A%26A...650A..80M;355;RFIClean: Mitigation of periodic and spiky RFI from filterbank data
+https://github.com/fkeruzore/picasso;https://ui.adsabs.harvard.edu/abs/2024OJAp....7E.116K;12;picasso: Painting intracluster gas on gravity-only simulations
+https://github.com/LindleyLentati/TempoNest;https://ui.adsabs.harvard.edu/abs/2014MNRAS.437.3004L;11602;TempoNest: Bayesian analysis tool for pulsar timing
+https://github.com/kkma89/dmcalc;https://ui.adsabs.harvard.edu/abs/2021A%26A...651A...5K;235;DMCalc: In-band dispersion measure of pulsars calculator
+https://github.com/abhisrkckl/Vela.jl;https://ui.adsabs.harvard.edu/abs/2025ApJ...980..165S;2;Vela.jl: Bayesian pulsar timing and noise analysis
+https://github.com/Juris-M/citeproc-js;https://ui.adsabs.harvard.edu/abs/2003MNRAS.342..337R;918;JOFILUREN: Wavelet code for data analysis and de-noising
+https://github.com/phil-mansfield/shellfish;https://ui.adsabs.harvard.edu/abs/2017ApJ...841...34M;4397;SHELLFISH: SHELL Finding In Spheroidal Halos
+https://github.com/PJ-Watson/pyGCG/issues;https://ui.adsabs.harvard.edu/abs/2025arXiv250400823W;0;pyGCG: Python Grism Classification GUI
+https://github.com/pyro-ppl/numpyro;https://ui.adsabs.harvard.edu/abs/2019arXiv191211554P;3955;NumPyro: Probabilistic programming with NumPy
+https://github.com/kemasuda/jnkepler;https://ui.adsabs.harvard.edu/abs/2024AJ....168..294M;16;jnkepler: Differentiable N-body model for multi-planet systems
+https://github.com/Jieyu126/Jitter;https://ui.adsabs.harvard.edu/abs/2018MNRAS.480L..48Y;732;Jitter: RV jitter prediction code
+https://github.com/soleneulmer/bem;https://ui.adsabs.harvard.edu/abs/2019A%26A...630A.135U;381;BEM: Random forest for exoplanets
+https://github.com/Exo-MerCat/Exo-MerCat;https://ui.adsabs.harvard.edu/abs/2020A%26C....3100370A;178;Exo-MerCat: Exoplanet Merged Catalog with Virtual Observatory connection
+https://github.com/shishirdholakia/eclipsoid;https://ui.adsabs.harvard.edu/abs/2024arXiv241003449D;0;eclipsoid: Transit models for ellipsoidal planets in Jax
+https://github.com/helonghuangastro/exolyn;https://ui.adsabs.harvard.edu/abs/2024A%26A...691A.291H;29;ExoLyn: Multi-species cloud modeling in atmospheric retrieval
+https://github.com/tBilby/tBilby;https://ui.adsabs.harvard.edu/abs/2025ApJS..276...50T;49;tBilby: Transdimensional inference for gravitational-wave astronomy with Bilby
+https://github.com/geoffryan/afterglowpy;https://ui.adsabs.harvard.edu/abs/2020ApJ...896..166R;5171;afterglowpy: Compute and fit GRB afterglows
+https://github.com/leigh2/cetra;https://ui.adsabs.harvard.edu/abs/2025MNRAS.539..297S;0;CETRA: Cambridge Exoplanet Transit Recovery Algorithm
+https://github.com/spexod/iSLAT;https://ui.adsabs.harvard.edu/abs/2024AJ....168...99J;122;iSLAT: Interactive Spectral-Line Analysis Tool
+https://github.com/astrostat/TD-CARMA;https://ui.adsabs.harvard.edu/abs/2023ApJ...950...37M;212;TD-CARMA: Estimates of gravitational lens time delays with flexible CARMA processes
+https://github.com/hjozwiak-umk/bigos_h2he/tree/v0.0.1;https://ui.adsabs.harvard.edu/abs/2024A%26A...685A.113J;6;SCATTERING: Solve the coupled equations for a given scattering system
+https://github.com/basp-group/AIRI;https://ui.adsabs.harvard.edu/abs/2023MNRAS.518..604T;215;AIRI: Algorithms for computational imaging
+https://github.com/hibridon/hibridon;https://ui.adsabs.harvard.edu/abs/2023CoPhC.28908761A;20;Hibridon: Time-independent non-reactive quantum scattering calculations
+https://github.com/haimengzhao/magic-microlensing;https://ui.adsabs.harvard.edu/abs/2022AJ....164..192Z;10;MAGIC: Automatic analysis of realistic microlensing light curves
+https://github.com/chihchunhsu/smart;https://ui.adsabs.harvard.edu/abs/2021ApJS..257...45H;962;SMART: Forward-modeling framework for spectroscopic data
+https://github.com/castro-gzlz/TESS-cont;https://ui.adsabs.harvard.edu/abs/2024A%2526A...691A.233C;0;TESS-cont: TESS contamination tool
+https://github.com/valboz/VBMicroLensing;https://ui.adsabs.harvard.edu/abs/2025A%26A...694A.219B;11;VBMicrolensing: Microlensing computations for single, binary, and multiple lenses
+https://github.com/pcubillos/gen_tso;https://ui.adsabs.harvard.edu/abs/2024PASP..136l4501C;0;Gen TSO: Graphical interface to simulate JWST exoplanet time-series observations
+https://github.com/yapenzhang/excalibuhr;https://ui.adsabs.harvard.edu/abs/2024AJ....168..246Z;57;excalibuhr: High-resolution spectral data reduction
+https://github.com/stefanofisc/dartvetter_apj;https://ui.adsabs.harvard.edu/abs/2025arXiv250605556F;0;DART-Vetter: Convolutional Neural Network to distinguish planetary transits from false positives
+https://github.com/mamartinod/grip-nulling;https://ui.adsabs.harvard.edu/abs/2024SPIE13095E..1AM;0;GRIP: Generic data Reduction for nulling Interferometry Package
+https://github.com/fxcoudert/gfortran-for-macOS;https://ui.adsabs.harvard.edu/abs/2024arXiv241021364L;0;easyCHEM: Chemical abundances in exoplanet atmospheres calculator
+https://github.com/ideasrule/pyTPCI;https://ui.adsabs.harvard.edu/abs/2025ApJ...980...34R;14;pyTPCI: Python version of The Pluto-Cloudy Interface
+https://github.com/awmann/M_-M_K-;https://ui.adsabs.harvard.edu/abs/2019ApJ...871...63M;9139;M_-M_K-: Estimate masses and uncertainties from M_Ks (2MASS Ks + distance)
+https://github.com/sefffal/Octofitter.jl;https://ui.adsabs.harvard.edu/abs/2023AJ....166..164T;57;Octofitter: Bayesian inference against exoplanet and binary star data
+https://github.com/wangbingjie/sbi_pp;https://ui.adsabs.harvard.edu/abs/2023ApJ...952L..10W;373;SBI++: Simulation-based (likelihood-free) inference for astronomical applications
+https://github.com/domeckert/hydromass;https://ui.adsabs.harvard.edu/abs/2022A%26A...662A.123E;360;hydromass: Hydrostatic mass profile reconstruction
+https://github.com/threeML/threeML;https://ui.adsabs.harvard.edu/abs/2015arXiv150708343V;2772;3ML: Framework for multi-wavelength/multi-messenger analysis
+https://github.com/Ohervet/Bjet_MCMC;https://ui.adsabs.harvard.edu/abs/2024ApJ...962..140H;5;Bjet_MCMC: Model multiwavelength spectral energy distributions of blazars
+https://github.com/Ompha/CLUES;https://ui.adsabs.harvard.edu/abs/2025ApJS..276...65L;0;CLUES: Clustering tool for analyzing spectral data
+https://github.com/LauraHerold/pinc;https://ui.adsabs.harvard.edu/abs/2025PhRvD.111h3504H;478;pinc: Compute profile likelihoods in cosmology
+https://gitlab.in2p3.fr/cosmotools/CAMEL;https://ui.adsabs.harvard.edu/abs/2016arXiv160702964H;1262;CAMEL: Cosmological parameters estimator
+https://github.com/tkarwal/procoli;https://ui.adsabs.harvard.edu/abs/2024arXiv240114225K;603;Procoli: 1D profile likelihood extractor
+https://github.com/ExoJulia/ExoplanetsSysSim.jl;https://ui.adsabs.harvard.edu/abs/2019AJ....158..109H;4715;ExoplanetsSysSim: Exoplanet System Simulation
+https://github.com/ExoJulia/SysSimExClusters;https://ui.adsabs.harvard.edu/abs/2019MNRAS.490.4575H;2775;SysSimExClusters: Clustered planetary system model for SysSim
+https://github.com/shengjin/nii-c;https://ui.adsabs.harvard.edu/abs/2024ApJS..274...10J;5;Nii-C: Automatic parallel tempering Markov Chain Monte Carlo framework
+https://github.com/snad-space/coniferest;https://ui.adsabs.harvard.edu/abs/2025A%26C....5200960K;5;Coniferest: Python package for active anomaly detection
+https://github.com/ThomasBakx/cobra;https://ui.adsabs.harvard.edu/abs/2024arXiv240704660B;0;COBRA: Optimal Factorization of Cosmological Observables
+https://github.com/sapphirepp/sapphirepp;https://ui.adsabs.harvard.edu/abs/2025JCoPh.52313690S;0;Sapphire++: Interaction of charged particles with a background plasma simulator
+https://github.com/RafaelSdeSouza/capivara;https://ui.adsabs.harvard.edu/abs/2025MNRAS.539.3166S;0;Capivara: Scalable spectral-based segmentation package
+https://gitlab.com/polmag/P-CORONA;https://ui.adsabs.harvard.edu/abs/2025ApJ...987...39S;1;P-CORONA: Coronal atomic lines intensity and polarizational modeler
+https://github.com/rice-solar-physics/HYDRAD;https://ui.adsabs.harvard.edu/abs/2003A%26A...401..699B;4329;HYDRAD: Field-aligned hydrodynamic equations in coronal loops solver
+https://github.com/yrkhalil/SPIBACK;https://ui.adsabs.harvard.edu/abs/2025A%26A...699A.263K;59;SPIBACK: Backward-integration-based non-axisymmetric models of the Milky Way disk
+https://github.com/aasensio/torchmfbd;https://ui.adsabs.harvard.edu/abs/2025arXiv250510639A;0;torchmfbd: Multi-object multi-frame blind deconvolution of point-like or extended objects
+https://github.com/LucindaLilley/PIRATES;https://ui.adsabs.harvard.edu/abs/2025arXiv250511950L;0;PIRATES: Polarimetric Image Reconstruction AI for Tracing Evolved Structures
+https://github.com/benopp99/DPMhalo;https://ui.adsabs.harvard.edu/abs/2025arXiv250514782O;0;DPMhalo: Descriptive Parametric Model for gaseous halos
+https://github.com/kpenev/AstroWISP;https://ui.adsabs.harvard.edu/abs/2025arXiv250714289P;0;AstroWISP: Astronomical Widefield Images Stellar Photometry
+https://github.com/kpenev/AutoWISP;https://ui.adsabs.harvard.edu/abs/2025arXiv250715830R;0;AutoWISP: High-precision photometry pipeline
+https://github.com/FoxFortino/ABC-SN;https://ui.adsabs.harvard.edu/abs/2025arXiv250722106F;0;ABC-SN: Spectroscopic supernova classifier
+https://github.com/Tomoaki-Ishiyama/mpi-rockstar;https://ui.adsabs.harvard.edu/abs/2024arXiv241218629T;11;MPI-Rockstar: Hybrid MPI and OpenMP parallel implementation of Rockstar
+https://github.com/vitor-de-oliveira/rheovolution;https://ui.adsabs.harvard.edu/abs/2025A%26A...693A...5D;0;RheoVolution: Rheology evolution in the time domain
+https://github.com/mib-unitn/SoFT;https://ui.adsabs.harvard.edu/abs/2025A%26A...693A..71B;0;SoFT: Solar Feature Tracking suite
+https://github.com/AsterLight0626/Twinkle;https://ui.adsabs.harvard.edu/abs/2025ApJS..276...40W;8;Twinkle: GPU-based high-efficiency binary-lens microlensing modeler
+https://github.com/GiMattia/PyPLUTO;https://ui.adsabs.harvard.edu/abs/2025arXiv250109748M;0;pyPLUTO: Tool for analyzing PLUTO code outputs
+https://github.com/hemantaph/gwsnr;https://ui.adsabs.harvard.edu/abs/2024arXiv241209888P;2;gwsnr: Gravitational Wave Signal-to-Noise Ratio computation
+https://github.com/canorve/EllipSect;https://ui.adsabs.harvard.edu/abs/2025arXiv250110079A;0;EllipSect: Analysis tool for GALFIT output
+https://github.com/predsci/OFT;https://ui.adsabs.harvard.edu/abs/2025ApJS..278...24C;9;OFT: Open-source Flux Transport
+https://github.com/ctian282/DeepSSM;https://ui.adsabs.harvard.edu/abs/2025JCAP...08..060T;0;DeepSSM: Cosmological emulator for the GW spectrum from the modified sound-shell model
+https://github.com/FrdCHK/serial-MultiView;https://ui.adsabs.harvard.edu/abs/2025AJ....170....4Z;0;sMV: Serial MultiView phase plane estimation
+https://github.com/jonaselgammal/SIGWAY;https://ui.adsabs.harvard.edu/abs/2025JCAP...05..062G;141;SIGWAY: Compute second-order, scalar induced gravitational wave signals
+https://github.com/CalumHawcroft/Starburst;https://ui.adsabs.harvard.edu/abs/2025ApJS..280....5H;18;pyStarburst99: Python port of Starburst99
+https://github.com/asalda/FiCUS;https://ui.adsabs.harvard.edu/abs/2023MNRAS.522.6295S;1108;FiCUS: FItting the stellar Continuum of Uv Spectra
+https://github.com/timothygebhard/fm4ar;https://ui.adsabs.harvard.edu/abs/2025A%26A...693A..42G;6;fm4ar: Inferring atmospheric properties of exoplanets using flow matching posterior estimation
+https://github.com/felipeelorrieta/IAR_Model;https://ui.adsabs.harvard.edu/abs/2018MNRAS.481.4311E;420;IAR_Model: Autoregressive model to irregularly spaced data
+https://github.com/mcataneo/pyLDT-cosmo;https://ui.adsabs.harvard.edu/abs/2022MNRAS.513.1623C;147;pyLDT-cosmo: Matter PDF predictions in Large Deviation Theory
+https://github.com/ppmim/PAPI4K/;https://ui.adsabs.harvard.edu/abs/2010SPIE.7740E..2EI;3;PAPI: PANIC Pipeline
+https://github.com/LuShenJ/PyEMILI;https://ui.adsabs.harvard.edu/abs/2025ApJS..277...13T;0;PyEMILI: Spectral line identification tool
+https://github.com/nugent-lab/FindPOTATOS-stable;https://ui.adsabs.harvard.edu/abs/2025PSJ.....6...18N;0;FindPOTATOs: Candidate detection set tracklet assembler
+https://github.com/juanaldayparejo/archnemesis-dist;https://ui.adsabs.harvard.edu/abs/2025arXiv250116452A;0;ArchNEMESIS: Python version of the NEMESIS radiative transfer and retrieval tool
+https://github.com/rehamelkholy/NutMaat;https://ui.adsabs.harvard.edu/abs/2025AJ....170..222E;0;NutMaat: Stellar spectra classifier based on MKCLASS
+https://github.com/bhhua/vacuumtunneling;https://ui.adsabs.harvard.edu/abs/2025CoPhC.31609764H;6;VacuumTunneling: Evaluating bubble profile with a renomalization factor
+https://github.com/GRTLCollaboration/GRTresna;https://ui.adsabs.harvard.edu/abs/2025arXiv250113046A;15;GRTresna: Solving the initial data constraints in numerical relativity
+https://github.com/florent-leclercq/pyselfi;https://ui.adsabs.harvard.edu/abs/2019MNRAS.490.4237L;445;pySELFI: Python implmentation of the Simulator Expansion for Likelihood-Free Inference algorithm
+https://github.com/CompiledAtBirth/pyCARPool;https://ui.adsabs.harvard.edu/abs/2021MNRAS.503.1897C;1577;pyCARPool: Convergence Acceleration by Regression and Pooling
+https://github.com/mglodge/MANTA-Ray;https://ui.adsabs.harvard.edu/abs/2024MNRAS.535.1964L;1;MANTA-Ray: Optical properties of fractal aggregates estimator
+https://github.com/manchunyeung/wolensing;https://ui.adsabs.harvard.edu/abs/2024arXiv241019804Y;30;wolensing: Lensed gravitational waves simulator
+https://github.com/mianbreton/pysco;https://ui.adsabs.harvard.edu/abs/2025A&A...695A.170B;6;PySCo: Cosmological N-body code with modified gravity theories
+https://github.com/robin-janssen/CODES-Benchmark;https://ui.adsabs.harvard.edu/abs/2024arXiv241020886J;2;CODES: Benchmarking surrogates for coupled ODE systems
+https://github.com/AdriaJ/polyclean;https://ui.adsabs.harvard.edu/abs/2025A%26A...693A.225J;9;PolyCLEAN: Radio interferometric imaging based on Polyatomic Frank-Wolfe
+https://github.com/fbartolic/volcano;https://ui.adsabs.harvard.edu/abs/2022PSJ.....3...67B;113;volcano: Mapping exoplanet surfaces from one-dimensional time-series data
+https://github.com/MichaelDAlbrow/Dazzle;https://ui.adsabs.harvard.edu/abs/2025AJ....169..297A;0;Dazzle: Detecting and characterizing transient phenomena in crowded fields
+https://github.com/CoastEgo/microlux;https://ui.adsabs.harvard.edu/abs/2025AJ....169..170R;2;microlux: Binary lensing light curve calculator
+https://github.com/grburgess/nazgul;https://ui.adsabs.harvard.edu/abs/2021A%26A...654A..26B;98;nazgul: GRB triangulation via non-stationary time-series models
+https://github.com/esilver01/resnet-model-training;https://ui.adsabs.harvard.edu/abs/2025arXiv250701943S;0;RUN Pipeline: Strong lens classification and detection of small Einstein radius systems
+https://github.com/domeckert/pyproffit;https://ui.adsabs.harvard.edu/abs/2020OJAp....3E..12E;686;pyproffit: Analyze X-ray brightness profiles from clusters of galaxies
+https://github.com/ucsbdeepspace/tripp_pipeline;https://ui.adsabs.harvard.edu/abs/2025arXiv250118142T;0;TRIPP: TRansient Image Processing Pipeline
+https://github.com/MichaelDAlbrow/CMDFitter;https://ui.adsabs.harvard.edu/abs/2022MNRAS.515..730A;43;CMDFitter: Fit a probabilistic generative model to a color-magnitude diagram
+https://github.com/synthpop-galaxy/synthpop;https://ui.adsabs.harvard.edu/abs/2025AJ....169..317K;6;Synthpop: Modular Galactic population synthesis
+https://github.com/rkkuang/triplelens;https://ui.adsabs.harvard.edu/abs/2021MNRAS.503.6143K;56;TripleLens: Calculating light curves for triple microlensing systems
+https://github.com/rjsmethurst/snitch;https://ui.adsabs.harvard.edu/abs/2019MNRAS.484.3590S;14;SNITCH: Bayesian inference of star formation histories
+https://github.com/DHortaD/Lux;https://ui.adsabs.harvard.edu/abs/2025AJ....169..314H;3;Lux: Generative latent-variable modeling of astronomical data
+https://github.com/marcocalza89/GrayHawk;https://ui.adsabs.harvard.edu/abs/2025PDU....4801900C;46;GrayHawk: Gray-body factor calculations for black holes
+https://github.com/SpyDust/SpyDust;https://ui.adsabs.harvard.edu/abs/2025JCAP...03..038Z;0;SpyDust: Improved implementation of SPDust for modeling spinning dust radiation
+https://github.com/maormizrachi/MadVoro;https://ui.adsabs.harvard.edu/abs/2025RASTI...4...39M;0;MadVoro: Massively distributed construction of Voronoi diagrams
+https://github.com/jgoodeve/streaktools;https://ui.adsabs.harvard.edu/abs/2025AJ....169..151G;0;Streaktools: Simulation, measurement, and fitting of satellite-generated streaks
+https://github.com/gmorras/pyEFPE;https://ui.adsabs.harvard.edu/abs/2025PhRvD.111h4052M;326;pyEFPE: Waveform model for inspiralling precessing-eccentric compact binaries
+https://github.com/chrisfinlay/tabascal;https://ui.adsabs.harvard.edu/abs/2023MNRAS.524.3231F;92;TABASCAL: Modeling and subtraction of moving radio-frequency interference in interferometric data
+https://github.com/MathynVanD/GraFIT;https://ui.adsabs.harvard.edu/abs/2025RScI...96j4503V;0;GraFIT: Frequency response function identification in Gravitational Wave detectors
+https://github.com/Razumovskyy/MARFA;https://ui.adsabs.harvard.edu/abs/2025JQSRT.34609599R;0;MARFA: Broad-spectrum high-resolution atmospheric absorption analyzer
+https://github.com/avapolzin/spike;https://ui.adsabs.harvard.edu/abs/2025JOSS...10.8200P;3;spike: All-in-one tool to generate and correctly drizzle HST, JWST, and Roman PSFs
+https://github.com/sirocco-rt/sirocco;https://ui.adsabs.harvard.edu/abs/2025MNRAS.536..879M;11;SIROCCO: Simulating Ionization and Radiation in Outflows Created by Compact Objects
+https://github.com/cosmo-sims/DISCO-DJ;https://ui.adsabs.harvard.edu/abs/2025arXiv251005206L;0;DISCO-DJ: Differentiable Simulations for Cosmology, Done with JAX
+https://gitlab.nublado.org/cloudy/cloudy/-/wikis/home;https://ui.adsabs.harvard.edu/public-libraries/JRuqmRUrSnmRy1U-OR1pRw;0;Cloudy: Numerical simulation of plasmas and their spectra
+https://github.com/iraf-community/iraf;https://ui.adsabs.harvard.edu/abs/1986SPIE..627..733T;93030;IRAF: Image Reduction and Analysis Facility
+https://github.com/AstarVienna/ScopeSim;https://ui.adsabs.harvard.edu/abs/2020SPIE11452E..1ZL;29;ScopeSim
+https://github.com/AstarVienna/AnisoCADO;https://ui.adsabs.harvard.edu/abs/2020arXiv200614572L;5;AnisoCADO
+https://github.com/dipol-uf/DIPOL-UF;https://ui.adsabs.harvard.edu/abs/2021AJ....161...20P;462;DIPol-UF: Remote control software for DIPol-UF polarimeter
+https://github.com/user29A/fastrometry;https://ui.adsabs.harvard.edu/abs/2020PASP..132e4503P;211;fastrometry: Fast world coordinate solution solver
+https://github.com/ericsteinbring/World_Observatory;https://ui.adsabs.harvard.edu/abs/2006IAUS..232..214S;0;World Observatory
+https://github.com/danielegasparri/span-gui;https://ui.adsabs.harvard.edu/abs/2025arXiv250801923G;0;SPAN: A cross-platform Python GUI software for optical and near-infrared spectral analysis

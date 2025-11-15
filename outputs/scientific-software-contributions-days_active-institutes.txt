@@ -4983,3 +4983,1587 @@ David A. Dunlap Astro&Astro, U Toronto, CA;ExoPlaSim;156;139
 Environmental Sci, U Toronto at Scarborough, CA;ExoPlaSim;156;139
 Astro, U Toronto, CA;ExoPlaSim;156;139
 U Toronto, Toronto, CA;ExoPlaSim;156;139
+Center for Interdisciplinary Exploration&Research in Astro (CIERA)&Phys&Astro, Northwestern U, US;COSMIC;526;9573
+Canadian Theoretical Astro, U Toronto, CA;COSMIC;265;9573
+McWilliams Center for Cosmology&Astro, Phys, US;COSMIC;265;9573
+Kavli Cosmological Phys, The U Chicago, US;COSMIC;66;9573
+Phys&Astro, Northwestern U, US;COSMIC;526;9573
+Enrico Fermi Inst, The U Chicago, US;COSMIC;66;9573
+CCA, Flatiron Inst, US;COSMIC;265;9573
+Research in Astro (CIERA), Northwestern U, US;COSMIC;331;9573
+Phys&Astro, Cardiff U, GB;COSMIC;195;9573
+Northwestern U, Evanston, US;COSMIC;331;9573
+U Chicago, Chicago, USA,;COSMIC;66;9573
+Massachusetts Inst of Technology-Kavli Astro&Space Research, Cambridge, US;CMC-COSMIC;95;1730
+Center for Interdisciplinary Exploration&Research in Astro (CIERA), Northwestern U, US;CMC-COSMIC;145;1730
+Astro&Astro, Tata Inst of Fundamental Research, India ,;CMC-COSMIC;130;1730
+McWilliams Center for Cosmology, Phys, US;CMC-COSMIC;95;1730
+Phys&Astro, U North Carolina at Chapel Hill, US;CMC-COSMIC;130;1730
+Kavli Astro&Space Research, Massachusetts Inst of Technology, US;CMC-COSMIC;95;1730
+Harvard Theory&Computation, Cambridge, US;CMC-COSMIC;95;1730
+Astro Department, Harvard U, US;CMC-COSMIC;145;1730
+Research in Astro (CIERA), Northwestern U, US;CMC-COSMIC;145;1730
+U Florida, Florida, US;CMC-COSMIC;35;1730
+Northwestern U, Evanston, US;CMC-COSMIC;145;1730
+Evanston, US;CMC-COSMIC;130;1730
+W.W. Hansen Experimental Phys Laboratory, Kavli Particle Astro&Cosmology, USA,;gammaALPs;20;521
+Friedrich-Alexander-U Erlangen-Nürnberg, Erlangen Centre for Astroparticle Phys, DE;gammaALPs;20;521
+Center for Cosmology&Particle Phys Phenomenology, U Southern Denmark, DK;gammaALPs;20;521
+Kavli Particle Astro&Cosmology, Dpt. of Phys, US;gammaALPs;20;521
+Erlangen Centre for Astroparticle Phys, U Erlangen-Nuremberg, DE;gammaALPs;20;521
+Oskar Klein Centre, Phys, SE;gammaALPs;20;521
+Experimental Phys, U Hamburg, Germany,;gammaALPs;20;521
+Phys&Astro, U Maryland, US;gammaALPs;20;521
+U Hamburg, Institut für Experimentalphysik, DE;gammaALPs;20;521
+The Oskar Klein Centre for Cosmoparticle Phys, AlbaNova, SE;gammaALPs;20;521
+MPI für Kernphysik, Heidelberg, DE;gammaALPs;20;521
+NASA Goddard Space Flight Center, Greenbelt, US;gammaALPs;20;521
+Stanford U, Stanford, US;gammaALPs;20;521
+Stockholm U, SE;gammaALPs;20;521
+NASA Postdoctoral Program Fellow, US;gammaALPs;20;521
+Astro&Astro, The Pennsylvania State U, US;frank;103;1990
+Astro Group, Phys, GB;frank;86;1990
+Phys, U Colorado, US;frank;103;1990
+Inst of Astro, U Cambridge, GB;frank;198;1990
+Imperial College London, Blackett Laboratory, GB;frank;86;1990
+National Inst of Standards&Technology, Boulder, US;frank;103;1990
+School of Phys&Astro, U Leeds, UK,;frank;86;1990
+Astro, Theoretical Astro Center, US;Rubble;7;321
+CfA&Planetary Sci, Astro, US;Rubble;7;321
+Steward Obs., U Arizona, AZ;Rubble;7;321
+U Arizona, Tucson, AZ;Rubble;7;321
+Centre for Astro&Planetary Sci, School of Physical Sci, GB;STAR_MELT;34;347
+SUPA, School of Sci&Engineering, UK,;STAR_MELT;34;347
+European Southern Obs., DE;STAR_MELT;34;347
+Planetary Sci, The U Kent, GB;STAR_MELT;34;347
+U Dundee, GB;STAR_MELT;34;347
+Phys&Astro, U California, US;WeakLensingDeblending;18;256
+Centro de Investigaciones Energéticas, Medioambientales y Tecnológicas (CIEMAT), ES;WeakLensingDeblending;18;256
+U California, Irvine;WeakLensingDeblending;18;256
+Anton Pannekoek Inst of Astro, U Amsterdam, NL,;tulips;78;763
+Astronomical Inst Anton Pannekoek, U Amsterdam, NL;tulips;78;763
+Phys, U California Berkeley, US;parsnip;48;503
+DIRAC Inst, Astro, US;parsnip;48;503
+Phys Division, Lawrence Berkeley National Laboratory, US;parsnip;48;503
+Astro&Center for Cosmology&AstroParticle Phys, Ohio State U, Columbus;quokka;432;151
+Phys&Astro, Michigan State U, USA,;quokka;432;151
+Research School of Astro&Astro, Australian National U, AU;quokka;432;151
+Mount Stromlo Obs., Australian National U, AU;quokka;432;151
+, Australia,;quokka;432;151
+Astro, Mount Stromlo Obs., AU;quokka;432;151
+Ohio State U, US;quokka;432;151
+INAF - Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Bologna, IT;BASTA;7;15315
+Stellar Astro Centre, Aarhus U, Denmark,;BASTA;7;15315
+Dipartimento di Fisica e Astronomia, Università di Bologna, IT;BASTA;7;15315
+School of Phys&Astro, U Birmingham, GB;BASTA;7;15315
+Astro, U Birmingham, GB;BASTA;7;15315
+Astro&Carl Sagan Inst, Cornell U, US;ThERESA;95;356
+Planetary Sci Group, Phys, US;ThERESA;95;356
+Phys, Astro&Math, GB;astroddpm;6;469
+Centre of Data Innovation Research, Phys, GB;astroddpm;6;469
+Computer Sci, U Hertfordshire, GB;astroddpm;6;469
+Centre for Astro Research, Phys, Astro &amp;astroddpm;6;469
+Math, U Hertfordshire, GB;astroddpm;6;469
+U Liège, Institut d'Astrophysique et de Géophysique, BE;prose;170;528
+Astrobiology Research Unit, Université de Liège, BE;prose;170;528
+EXOTIC Lab, UR Astrobiology, BE;prose;170;528
+CCA, Flatiron Inst, US;prose;170;528
+CfA, Harvard &amp;prose;170;528
+U de Liege, Liege, BE;prose;170;528
+Smithsonian, Cambridge, US;prose;170;528
+CAS Key Laboratory of Planetary Sci, Purple Mountain Obs., China,;Nii;5;55
+Division of Geological&Planetary Sci, Caltech, US;p-winds;7;908
+Centro de Astrobiologia (CSIC-INTA), ESAC Campus, ES;p-winds;108;908
+William H. Miller III Phys&Astro, Johns Hopkins U, USA ,;p-winds;108;908
+Observatoire Astronomique de l'Universitè de Genève, CH;p-winds;108;908
+Observatoire de Genève, Université de Genève, CH;p-winds;108;908
+Départment d'astronomie de l'Université de Genève, Versoix, CH;p-winds;108;908
+Geneva Obs., U Geneva, CH;p-winds;108;908
+U Geneva, Fac of Sci, CH;p-winds;108;908
+Space Telescope Sci Inst, Baltimore, USA,;p-winds;108;908
+Smithsonian, Cambridge, US;p-winds;7;908
+Centre for Advanced Instrumentation, Phys, UK,;astrosat;9;14
+Durham U, Phys, GB;astrosat;1;14
+Phys, U Durham, GB;astrosat;1;14
+Atmospheric, Oceanic&Planetary Phys, GB;gCMCRT;3;1327
+Center for Space&Habitability, U Bern, CH;gCMCRT;3;1327
+U Bern, Phys Inst, Division of Space Research &amp;gCMCRT;3;1327
+Phys, U Oxford, GB;gCMCRT;3;1327
+D Física de la Tierra y Astrofísica, Fac de Ciencias Físicas, ES;SteParSyn;6;665
+Dpto de Física, Ingeniería de Sistemas y Teoría de la Señal, ES;SteParSyn;6;665
+IPARCOSUCM (Inst de Física de Partículas y del Cosmos de la UCM), Fac de Ciencias Físicas, Spain,;SteParSyn;6;665
+D Física e Astronomia Faculdade de Ciências, U e do Porto, PT;SteParSyn;6;665
+IPARCOS-UCM (Inst de Física de Partículas y del Cosmos de la UCM), U Complutense de Madrid, ES;SteParSyn;6;665
+Institut de Ciències de l'Espai (ICE, CSIC), ES;SteParSyn;6;665
+Inst de Astrofísica e Ciências do Espaço, U e do Porto, PT;SteParSyn;6;665
+Institut d'Estudis Espacials de Catalunya (IEEC), Edifici RDIT, Spain,;SteParSyn;6;665
+Centro de Astrobiología (CSIC-INTA), Camino Bajo del Castillo s/n, Spain,;SteParSyn;6;665
+Fac de Ciencias Físicas, D Física de la Tierra y Astrofísica &amp;SteParSyn;6;665
+UCM, CAB;SteParSyn;6;665
+Astro, Bloomberg Center for Phys&Astro, US;asterogap;20;41
+Johns Hopkins U, Baltimore, US;asterogap;20;41
+JHU/STScI, Baltimore, US;asterogap;20;41
+U Washington, Seattle, US;asterogap;20;41
+DIRAC Inst, Seattle, US;asterogap;20;41
+Chalmers U Technology, Phys, SE;DarkARC;19;3446
+The Oskar Klein Centre, Phys, SE;DarkARC;19;3446
+Astronomisches Rechen-Institut, Zentrum für Astronomie der U Heidelberg, DE;qwind;64;143
+Computational Cosmology, Phys, GB;qwind;64;143
+Data Sci, Durham U, GB;qwind;64;143
+School of Physical&Chemical Sci–Te Kura Matū, U Canterbury, New Zealand,;tessreduce;57;197
+Astro, Mount Stromlo Obs., AU;tessreduce;57;197
+Phys&Astro, The Johns Hopkins U, US;tessreduce;57;197
+Space Telescope Sci Inst, Baltimore, US;tessreduce;57;197
+U Canterbury, NZ;tessreduce;57;197
+STScI, Baltimore, MD;tessreduce;57;197
+Japan Agency for Marine-Earth Sci&Technology, Yokohama, JP;optab;18;191
+Center for Relativistic Astro, School of Phys, US;GRIT;5;101
+School of Phys, Georgia Inst of Technology, US;GRIT;5;101
+ASD/IMCCE, Observatoire de Paris, FR;l1periodogram;17;1449
+Geneva Obs., U Geneva, CH;l1periodogram;17;1449
+Département d'Astronomie, Université de Genève, CH;l1periodogram;17;1449
+Observatoire de Genève, Université de Genève, CH;l1periodogram;17;1449
+Aix‐Marseille Université, CNRS, France,;l1periodogram;17;1449
+Astronomical Obs. at the U Geneva, Versoix, CH;l1periodogram;17;1449
+Observatoire Astronomique de l'Université de Genève, Versoix, CH;l1periodogram;17;1449
+Université de Genève (Versoix, CH;l1periodogram;17;1449
+NCCR PlanetS CHEOPS Fellow, CH;l1periodogram;17;1449
+School of Phys&Astro, Cardiff U, GB;JexoSim;21;534
+Computer Sci&Engineering, U California, Santa Cruz;fitsmap;95;1263
+Phys&Astro, Johns Hopkins U, US;fitsmap;95;1263
+Astro&Astro, U California, US;fitsmap;95;1263
+Center for Cosmology&Particle Phys, Phys, US;dark-photons-perturbations;7;2136
+New York U, New York;dark-photons-perturbations;7;2136
+Inst de Radioastronomía y Astrofísica, U Nacional Autónoma de México, México,;statmorph;64;15899
+Phys&Astro, Johns Hopkins U, US;statmorph;64;15899
+Harvard-Smithsonian CfA, Cambridge, US;statmorph;64;15899
+Phys&Astro, U Nevada, US;Magrathea;77;255
+Astro Research Center (ARCO), Natural Sci, IL;Magrathea;41;255
+Lunar&Planetary Laboratory, U Arizona, US;Magrathea;36;255
+Shanghai Astronomical Obs., Chinese Academy of Sci, CN;Magrathea;36;255
+Nevada CfA, U Nevada, US;Magrathea;41;255
+Astro, U Nevada Las Vegas, US;Magrathea;77;255
+Astronomical Inst, U Wrocław, Poland,;suppnet;3;82
+U Wroc⪉w, Astronomical Inst, PL;suppnet;3;82
+Mani L. Bhaumik Theoretical Phys, Phys&Astro, US;EDI-Vetter;5;637
+Phys&Astro, U California, US;EDI-Vetter;5;637
+Caltech/IPAC-NASA Exoplanet Sci Inst, Pasadena, US;EDI-Vetter;5;637
+Astrophysical&Planetary Sci, U Colorado, US;fiducial_flare;15;3115
+School of Earth&Space Exploration, Arizona State U, US;fiducial_flare;15;3115
+Laboratory for Atmospheric&Space Phys, Boulder, USA,;fiducial_flare;15;3115
+Wesleyan U (Middletown, Connecticut, US;fiducial_flare;15;3115
+Arizona State U, Tempe, US;fiducial_flare;15;3115
+U Colorado/LASP, Boulder, US;fiducial_flare;15;3115
+LASP, U of Colorado;fiducial_flare;15;3115
+D Astronomía, U de Guanajuato, México;citlalicue;18;1147
+Astro, U Oxford, UK,;citlalicue;18;1147
+Oxford Astro, Denys Wilkinson Building, GB;citlalicue;18;1147
+Dipartimento di Fisica, Universitá di Torino, IT;citlalicue;18;1147
+Phys, U Oxford, GB;citlalicue;18;1147
+William H. Miller III Phys&Astro, Johns Hopkins U, USA,;gallumi_public;11;2807
+Theoretical Particle Phys&Cosmology Group, Phys, GB;gallumi_public;11;2807
+Phys, King's College London, GB;gallumi_public;11;2807
+Inst of Theoretical Astro, U Oslo, NO;SunnyNet;5;90
+Rosseland Centre for Solar Phys, U Oslo, NO;SunnyNet;5;90
+Center for Interdisciplinary Exploration&Research in Astro (CIERA), Evanston, US;NIMBLE;41;278
+Phys&Astro, Northwestern U, US;NIMBLE;41;278
+NSF-Simons AI the Sky (SkAI), Chicago, US;NIMBLE;41;278
+Astro, U Michigan, US;NIMBLE;41;278
+U California Obs., U California, US;mangadap;387;8975
+UCO/Lick Obs., Astro&Astro, US;mangadap;387;8975
+Inst of Cosmology&Gravitation, U Portsmouth, GB;mangadap;387;8975
+Phys&Astro&PITT PACC, U Pittsburgh, USA,;mangadap;465;8975
+U California Santa Cruz, U California Obs., US;mangadap;387;8975
+UC Obs., MS: UCO Lick, US;mangadap;387;8975
+Astro, The Ohio State U, US;mangadap;78;8975
+PITT PACC, Phys &amp;mangadap;78;8975
+Ohio State U, US;mangadap;78;8975
+Institut d'Astrophysique de Paris, CNRS, FR;MAMPOSSt;14;5855
+Sorbonne Université), Paris, FR;MAMPOSSt;14;5855
+UPMC, Sorbonne Université), FR;MAMPOSSt;14;5855
+Astro Branch, Space Sci&Astrobiology Division, US;vetting;14;135
+Bay Area Environmental Research Inst, Moffett Field, US;vetting;14;135
+U Maryland, Baltimore County, US;vetting;14;135
+NASA Goddard Space Flight Center, Greenbelt, US;vetting;14;135
+NASA Ames Research Center, Moffett Field, US;vetting;14;135
+Astro&Astro, CA;axionCAMB;2;30571
+Canberra, Australia,;turbulence_generator;34;38266
+Research School of Astro&Astro, Australian National U, AU;turbulence_generator;34;38266
+, AU;turbulence_generator;34;38266
+NSF Astro&Astro Postdoctoral Fellow&DiRAC Inst Fellow, Astro, US;TESS-Localize;11;252
+Stellar Astro Centre (SAC), Phys&Astro, DK;TESS-Localize;11;252
+Phys, City U New York Graduate Center, US;TESS-Localize;11;252
+DIRAC Inst, Astro, US;TESS-Localize;11;252
+Astro Department, U Washington, US;TESS-Localize;11;252
+Astro, Dirac Inst, US, US;TESS-Localize;11;252
+MPI für Sonnensystemforschung, Göttingen, DE;TESS-Localize;11;252
+U Washington, Seattle, US, US;TESS-Localize;11;252
+Center for Interdisciplinary Exploration&Research in Astro (CIERA)&Phys&Astro, Northwestern U, US;rebound_fragmentation;18;30
+Phys&Astro, U Nevada, US;rebound_fragmentation;18;30
+Nevada CfA, U Nevada, US;rebound_fragmentation;18;30
+Anton Pannekoek Astro, U Amsterdam, NL;simab;7;608
+Space, Earth&Environment, SE;simab;7;608
+SRON Leiden, Leiden, NL;simab;7;608
+Zentrum für Astronomie der U Heidelberg, ARI, DE;gadget4;76;6611
+Heidelberg Theoretical Studies, DE;gadget4;76;6611
+MPI for Astro, Garching, Germany,;gadget4;76;6611
+Ludwig-Maximilians-U München, DE;gadget4;76;6611
+Space Systems Engineering Research Group, Mechanical&Aerospace Engineering, GB;ADBSat;22;31
+The U Manchester, Manchester, GB;ADBSat;33;31
+Inst de Estudios Astrofísicos, Fac de Ingeniería y Ciencias, CL;qsogen;14;2229
+Núcleo de Astronomía de la Fac de Ingeniería, U Diego Portales, CL;qsogen;14;2229
+Centre for Extragalactic Astro, Phys, GB;qsogen;14;2229
+Inst of Astro, U Cambridge, GB;qsogen;14;2229
+Gravitation Astroparticle Phys Amsterdam (GRAPPA), Theoretical Phys Amsterdam&Delta Theoretical Phys, NL;EarthScatterLikelihood;10;428
+Inst de Física de Cantabria, (IFCA, Spain,;EarthScatterLikelihood;10;428
+Inst de Astrofísica, Fac de Física, CL;ld-exosim;7;2950
+Millennium Inst of Astro (MAS), Santiago, CL;ld-exosim;7;2950
+Astro Department, Caltech, US;FHD;174;8672
+Cahill Center for Astro&Astro, Caltech, US;FHD;174;8672
+Bentley, AU;FHD;263;8672
+Phys Department, U Washington, US;FHD;437;8672
+International Centre for Radio Astro Research, Curtin U, AU;FHD;263;8672
+The U Melbourne, School of Phys, AU;FHD;263;8672
+Phys, U Washington, US;FHD;437;8672
+U Washington, Phys, US;FHD;437;8672
+School of Phys, The U New South Wales, AU;FHD;263;8672
+École Polytechnique Fédérale de Lausanne, Inst of Phys, CH;LiSA;10;34
+Laboratoire d'Astrophysique, Ecole Polytechnique Federale de Lausanne (EPFL), CH;LiSA;10;34
+Ohio State U, Columbus OH, USA of America;LiSA;10;34
+Inst of Space&Astronautical Sci, Japan Aerospace Exploration Agency, JP;exojax;595;228
+Astro, Graduate School of Sci, JP;exojax;595;228
+Space Astro&Astro, ISAS/JAXA, JP;exojax;595;228
+Research Center for the Early Universe, School of Sci, JP;exojax;595;228
+Earth&Planetary Sci, The U Tokyo, JP;exojax;595;228
+Inst de Astronomía, U Nacional Autónoma de México, MX;pyHIIexplorerV2;18;1077
+D Física, U e Federal de Santa Catarina, Brazil,;ifscube;191;745
+U e Federal de Santa Catarina, D Física, BR;ifscube;191;745
+Phys&Astro, U California Irvine, US;SpinSpotter;10;523
+Astro, The U California, US;SpinSpotter;10;523
+U California, Irvine;SpinSpotter;10;523
+Kavli IPMU—Kavli the Phys&Math of the Universe, Kashiwa, JP;realsim_ifs;5;173
+Astro, U Victoria, CA;realsim_ifs;5;173
+Phys, U Tokyo, JP;realsim_ifs;5;173
+Observatoire astronomique de Strasbourg, Université de Strasbourg, France,;CuspCore;1;1512
+Centre for Astro&Planetary Sci, Racah Inst of Phys, IL;CuspCore;1;1512
+Université de Strasbourg, CNRS, France,;CuspCore;1;1512
+LERMA, Observatoire de Paris, FR;CuspCore;1;1512
+School of Phys&Astro, Tel Aviv U, IL;CuspCore;1;1512
+Racah Inst of Phys, The Hebrew U, IL;CuspCore;1;1512
+Inst de Astrofísica&Centro de Astro-Ingeniería, Fac de Física, CL;DustFilaments;12;427
+Astro, School of Natural Sci, GB;DustFilaments;12;427
+Phys, Florida State U, US;DustFilaments;12;427
+Jodrell Bank Centre for Astro, Phys &amp;DustFilaments;12;427
+Florida State U, Tallahassee, US;DustFilaments;12;427
+AIM, CEA, FR;mgris;203;246
+Laboratoire AIM, CEA/Service d'Astrophysique, FR;mgris;203;246
+Université Paris-Saclay, Université Paris Cité, FR;mgris;203;246
+D Física Teórica y del Cosmos, U de Granada, ES;MultiModes;9;155
+Jet Propulsion Laboratory, Caltech, US;SolAster;21;189
+Space Sci Laboratory, U California, US;SolAster;21;189
+Phys, U California, US;SolAster;21;189
+U California Berkeley, Berkeley, US;SolAster;21;189
+Predictive Sci USA, San Diego, US;SolAster;21;189
+Weltraumforschung und Planetologie, Physikalisches Institut, CH;BeAR;73;3070
+Space Research&Planetary Sci, Phys Inst, CH;BeAR;73;3070
+ARTORG Center for Biomedical Engineering Research, U Bern, Switzerland,;BeAR;73;3070
+Center for Space&Habitability, U Bern, Switzerland,;BeAR;73;3070
+U Bern, Phys Inst, Division of Space Research &amp;BeAR;73;3070
+Planetary Sci, Bern, CH;BeAR;73;3070
+U Obs., Fac of Phys, DE;dustpy;95;741
+Ludwig Maximilian U Munich, U Obs., DE;dustpy;95;741
+Inst de Astrofísica, PUC de Chile, CL;dustpy;95;741
+Fac de Ciencias Astronómicas y Geofísicas, U Nacional de La Plata, Argentina,;vkompth;24;573
+Rijksuniversiteit Groningen, Fac of Sci&Engineering, NL;vkompth;6;573
+Kapteyn Astronomical Inst, U Groningen, NL;vkompth;30;573
+AIM, CEA, FR;vkompth;24;573
+Université de Paris, CNRS, FR;vkompth;24;573
+Inst Argentino de Radioastronomá CCT La Plata, CONICET;vkompth;24;573
+UNLP, Buenos Aires, AR;vkompth;24;573
+CICPBA), Villa Elisa, AR;vkompth;24;573
+Buenos Airesw, CONICET;vkompth;24;573
+Center for Interdisciplinary Exploration&Research in Astro, Northwestern U, US;pdspy;426;1030
+Phys&Astro, Northwestern U, US;pdspy;426;1030
+Steward Obs., U Arizona, US;pdspy;426;1030
+National Radio Astro Obs., Charlottesville, US;pdspy;426;1030
+Astro, U Oklahoma, US;pdspy;426;1030
+NRAO, Charlottesville, US;pdspy;426;1030
+Northwestern U, Evanston, US;pdspy;426;1030
+CCA, Flatiron Inst, US;ParticleGridMapper.jl;12;773
+MPI für Extraterrestrische Physik, DE;ParticleGridMapper.jl;12;773
+Center for Astro, Phys&Astro, US;piXedfit;54;1288
+Space Telescope Sci Inst (STScI), Baltimore, US;piXedfit;54;1288
+Phys&Astro, Johns Hopkins U, US;piXedfit;54;1288
+Astronomical Inst, Tohoku U, JP;piXedfit;54;1288
+Inst of Astro&Astro, Academia Sinica, TW;piXedfit;54;1288
+Johns Hopkins U, Baltimore, USA,;piXedfit;54;1288
+Smithsonian, Cambridge, US;piXedfit;54;1288
+Mullard Space Sci Laboratory, U College London, GB;massmappy;20;877
+Laboratoire de Physique et Chimie de l'Environnement et de l'Espace— Université d'Orléans/CNRS, FR;scatfit;63;467
+Phys&Astro, Jodrell Bank Centre for Astro, GB;scatfit;63;467
+Jodrell Bank Centre for Astro, U Manchester, Oxford Road;scatfit;63;467
+OSUC, Univ Orleans, France,;scatfit;63;467
+Magdalena Ridge Obs. Interferometer, NMT, GB;pois;7;154
+Harvard-Smithsonian CfA, Cambridge;pois;7;154
+Cavendish Laboratory, U Cambridge, GB;pois;7;154
+Army Research Laboratory, Washington, D.C. USA;pois;7;154
+European Southern Obs., Vitacura, CL;SPAMMS;27;541
+Inst of Astro, KU Leuven, BE;SPAMMS;27;541
+Inst de Astronomia, Geofísica e Ciências Atmosféricas (IAG-USP), Brasil;CRPropa3;66;6878
+U e de São Paulo, Inst de Astronomia, BR;CRPropa3;66;6878
+Institut d'Astrophysique de Paris, Sorbonne Université, FR;CRPropa3;66;6878
+Math, Astro, NL;CRPropa3;66;6878
+II. Institut für Theoretische Physik, U Hamburg, DE;CRPropa3;172;6878
+Phys&Astro, Lehman College, US;CRPropa3;66;6878
+Radboud U Nijmegen, Astro/IMAPP, NL;CRPropa3;66;6878
+Inst de Física Teórica UAM/CSIC, Cantoblanco, ES;CRPropa3;66;6878
+D Física Teórica, U Autónoma de Madrid, ES;CRPropa3;66;6878
+Sorbonne Université, CNRS, FR;CRPropa3;66;6878
+Phys—Astro, U Oxford, GB;CRPropa3;66;6878
+INFN Laboratori Nazionali del Gran Sasso (LNGS), Assergi, IT;CRPropa3;106;6878
+Gran Sasso Sci Inst, L'Aquila, IT;CRPropa3;106;6878
+U Hamburg, II. Institut für Theoretische Physik, DE;CRPropa3;172;6878
+U Oxford, DWB, GB;CRPropa3;66;6878
+Università di Napoli ``Federico II''&Sezione INFN, Napoli, IT;CRPropa3;66;6878
+IMAPP, Radboud U Nijmegen, NL;CRPropa3;66;6878
+U e Estadual de Campinas, IFGW, BR;CRPropa3;172;6878
+U e Federal do Paraná, Setor Palotina, BR;CRPropa3;106;6878
+U São Paulo, São Paulo, BR;CRPropa3;66;6878
+Hamburg, DE;CRPropa3;66;6878
+LIRA, Observatoire de Paris, FR;cubefit;18;11
+Univ. Grenoble Alpes, CNRS, FR;cubefit;18;11
+Key Laboratory for Research in Galaxies&Cosmology, Shanghai Astronomical Obs., CN;yonder;2;19
+Shanghai Astronomical Obs., Chinese Academy of Sci, CN;yonder;2;19
+Laboratoire de Physique de l'Ecole Normale Supérieure, ENS, FR;DeepMass;70;1038
+Phys&Astro, U College London, UK,;DeepMass;70;1038
+ENS, Paris, FR;DeepMass;70;1038
+Astro&Astro, U Chicago, US;GRUMPY;9;1384
+Kavli Cosmological Phys, The U Chicago, US;GRUMPY;7;1384
+Phys, Stanford U, US;GRUMPY;2;1384
+Enrico Fermi Inst, The U Chicago, USA,;GRUMPY;7;1384
+Cosmology, Stanford U, US;GRUMPY;2;1384
+Astro, The U Chicago, USA,;GRUMPY;9;1384
+Kavli the Phys&Math of the Universe (WPI), The U Tokyo Insts for Advanced Study, JP;galight;11;542
+Astro, Graduate School of Sci, JP;galight;11;542
+Center for Data-Driven Discovery, Kavli IPMU (WPI), JP;galight;11;542
+School of Phys&Technology, Wuhan U, CN;galight;11;542
+Phys&Astro Department, U California, US;galight;11;542
+Kavli IPMU (WPI), UTIAS, JP;galight;11;542
+Phys, U California, US;galight;11;542
+Phys&Astro, U College London, UK,;rapoc-public;5;46
+Dipartimento di Fisica, La Sapienza Università di Roma, IT;rapoc-public;5;46
+INAF - Osservatorio Astronomico di Palermo, IT;rapoc-public;5;46
+"Sapienza" Università di Roma, Dipartimento di Fisica, IT;rapoc-public;5;46
+INAF - Istituto di Astrofisica Spaziale e Fisica Cosmica Milano, IT;SpectraPy;160;149
+INAF-IASF Milano, Milano, Italy,;SpectraPy;160;149
+specializing in the exploration of the giant planets via robotic spacecraft&Earth-based observatories. He holds a Royal Society U Research Fellowship&a European Research Council Consolidator Grant to support his planetary atmospheres research team. He is a co-investigator on the Cassini CIRS (thermal-infrared) instrument, &interdisciplinary scientist for ESA's Jupiter Icy Moons Explorer (JUICE) mission;radtrancode;24;16968
+Leigh N. Fletcher is at the Atmospheric, Oceanic&Planetary Phys Department, UK,;radtrancode;24;16968
+Atmospheric, Oceanic&Planetary Phys, GB;radtrancode;24;16968
+Planetary Phys, Phys, GB;radtrancode;24;16968
+School of Phys&Astro, U Leicester, GB;radtrancode;24;16968
+Atmospheric&Planetary Sci, Hampton U, US;radtrancode;24;16968
+Astro, U Leicester, GB;radtrancode;24;16968
+@LeighFletcher is a planetary scientist at the U Leicester, GB;radtrancode;24;16968
+Phys, U Oxford, GB;radtrancode;24;16968
+U Leicester, Leicester, GB;radtrancode;24;16968
+Oxford U, Oxford, GB;radtrancode;24;16968
+Observational Astro, Phys&Astro, SE;SME;214;231
+Phys&Astro, Uppsala U, SE;SME;214;231
+Università di Pisa, Dipartimento di Fisica Enrico Fermi, IT;ixpeobssim;60;2452
+Istituto Nazionale di Fisica Nucleare, Sezione di Pisa, Italy,;ixpeobssim;60;2452
+Dipartimento di Fisica, Università di Pisa, IT;ixpeobssim;60;2452
+INFN - Sezione di Pisa, Pisa (PI), IT;ixpeobssim;60;2452
+Università Mediterranea di Reggio Calabria, Reggio Calabria (RC), IT;ixpeobssim;9;2452
+Pisa U, Phys Department, IT;ixpeobssim;51;2452
+INFN-Pisa, Pisa, IT;ixpeobssim;60;2452
+D Física e Astronomia, Faculdade de Ciências, Portugal,;SHEEP;9;169
+Inst de Astrofísica e Ciências do Espaço, U e do Porto, Portugal,;SHEEP;9;169
+Faculdade de Ciências da U e do Porto, Rua do Campo de Alegre, PT;SHEEP;9;169
+Mullard Space Sci Laboratory (MSSL), U College London (UCL), GB;mccd;42;136
+Université Paris-Saclay, Université Paris Cité, FR;mccd;42;136
+AIM, CEA, FR;mccd;42;136
+Computer Sci, U College London (UCL), GB;mccd;42;136
+IRFU, CEA, France,;mccd;42;136
+Laboratoire de Physique de l'Ecole Normale Supérieure, ENS, FR;BornRaytrace;23;2952
+Phys&Astro, U College London, UK,;BornRaytrace;23;2952
+ENS, Paris, FR;BornRaytrace;23;2952
+Kavli Cosmological Phys, U Chicago, USA,;LensingETC;15;137
+Center for Astro, Space Sci&Astro, BD;LensingETC;15;137
+Astro, U California, US;LensingETC;15;137
+Astro, U Chicago, US;LensingETC;15;137
+, BD;LensingETC;15;137
+LESIA, Observatoire de Paris, FR;Cloud-Killer-;4;56
+Phys, McGill U, CA;Cloud-Killer-;4;56
+Ecole CentraleSupelec, FR;Cloud-Killer-;4;56
+McWilliams Center for Cosmology, Carnegie Mellon U, US;amber;12;654
+NSF AI Planning Phys of the Future, Carnegie Mellon U, US;amber;12;654
+Phys, Carnegie Mellon U, US;amber;12;654
+Kavli Particle Astro&Cosmology, Phys, US;baobab;70;1307
+Phys, Stanford U, US;baobab;79;1307
+SLAC National Accelerator Laboratory, Menlo Park, US;baobab;70;1307
+Institut d'Astrophysique de Paris, Université Pierre&Marie Curie, FR;pmclib;9;4124
+CEA/Irfu/SAp Saclay, Laboratoire AIM, FR;pmclib;9;4124
+Kavli Particle Astro&Cosmology, Phys, USA,;ovejero;37;1191
+Phys, Stanford U, US;ovejero;37;1191
+SLAC National Accelerator Laboratory, Menlo Park, US;ovejero;37;1191
+Astro, Ohio State U, US;korg.jl;522;203
+Astro&Pitt PACC, U Pittsburgh, US;korg.jl;55;203
+Phys&Astro, U Pittsburgh, USA,;korg.jl;55;203
+Columbia U, Astro,;korg.jl;467;203
+Center for Theoretical Phys Polish Academy of Sci, PL;bigonlight;7;74
+Trottier Research on Exoplanets, Département de Physique, CA;apero-drs;956;2637
+Centre for Astro Research, School of Phys, GB;apero-drs;956;2637
+Institut Trottier de recherche sur les exoplanètes, Département de Physique, Canada,;apero-drs;956;2637
+Phys&Trottier Research on Exoplanets, Université de Montréal, CA;apero-drs;956;2637
+Observatoire du Mont-Mégantic, Université de Montréal, CA;apero-drs;956;2637
+Université de Montréal, Département de Physique, Canada,;apero-drs;956;2637
+Département de Physique, Université de Montréal, Canada,;apero-drs;956;2637
+Fac of Sci, York U, CA;apero-drs;956;2637
+Engineering, Toronto, CA;apero-drs;956;2637
+Univ. Grenoble Alpes, CNRS, FR;apero-drs;956;2637
+U Hertfordshire, GB;apero-drs;956;2637
+Astro, Petrie Sci &amp;apero-drs;956;2637
+William H. Miller III Phys&Astro, Johns Hopkins U, USA,;gwfast;50;1496
+Département de Physique Théorique&Center for Astroparticle Phys, Université de Genève, CH;gwfast;65;1496
+Dipartimento di Fisica "G. Occhialini", Universitá degli Studi di Milano-Bicocca, IT;gwfast;50;1496
+Gravitational Wave Sci Center (GWSC), Université de Genève, CH;gwfast;65;1496
+Deutsches Elektronen-Synchrotron (DESY), DE;Eventdisplay;221;457
+DESY, DE;Eventdisplay;221;457
+Computational Cosmology, Phys, UK,;fastdf;27;501
+Dipartimento di Fisica, Università di Roma Tor Vergata, IT;mtneedlet;7;66
+AIM, CEA, FR;sf_deconvolve;28;77
+Laboratoire AIM, Irfu, FR;sf_deconvolve;28;77
+Université Paris-Saclay, Université Paris Cité, France,;sf_deconvolve;28;77
+IRFU, CEA, FR;sf_deconvolve;28;77
+CosmoStat, CEA Paris-Saclay;sf_deconvolve;28;77
+Particle Phys&Astro, Weizmann Inst of Sci, IL;xwavecal;38;21
+Las Cumbres Obs., Goleta, US;xwavecal;38;21
+Phys, U California, US;xwavecal;38;21
+Astro Department, U Maryland, US;SImMER;49;89
+Astro, U Maryland, US;SImMER;49;89
+CCA, Flatiron Inst, US;SImMER;43;89
+U California at Berkeley, Berkeley, US;SImMER;6;89
+Phys, U California, CA;SImMER;43;89
+Flatiron Inst, Simons Foundation, US;SImMER;43;89
+U California, Berkeley;SImMER;6;89
+Geneva Obs., U Geneva, Switzerland,;sourcextractorplusplus;214;1877
+Université de Genéve, Versoix, CH;sourcextractorplusplus;214;1877
+Laboratory for Atmospheric&Space Phys, U Colorado Boulder, US;CONTROL;24;50
+Space Research Inst, Austrian Academy of Sci, AT;CONTROL;24;50
+Austrian Academy of Sci, Space Research Inst, AT;CONTROL;24;50
+Indian Inst of Astro, Bangalore, IN;CONTROL;24;50
+IJCLab, Université Paris-Saclay, France,;lollipop;20;94617
+Université Paris-Sud, LAL, France &amp;lollipop;20;94617
+LAL, Université Paris-Sud, FR;lollipop;20;94617
+Univ. Paris-Saclay, CNRS, IJCLab. (France;lollipop;20;94617
+, FR;lollipop;20;94617
+Jodrell Bank Centre for Astro, Phys&Astro, GB;fastcc;23;61
+D Física Matematica, Inst de Física, BR;fastcc;23;61
+IAU Centre for the Protection of the Dark&Quiet Sky from Satellite Constellation Interference, Paris, FR;fastcc;23;61
+Phys, Imperial College London, GB;fastcc;23;61
+South African Radio Astro Obs., Obs., ZA;fastcc;23;61
+D Astrofísica, U de La Laguna, Spain,;fastcc;23;61
+U de La Laguna, Dept. Astrofísica, ES;fastcc;23;61
+Inst de Astrofísica de Canarias, La Laguna, ES;fastcc;23;61
+Inst de Física, U e de São Paulo, BR;fastcc;23;61
+Imperial College London, Phys Department, GB;fastcc;23;61
+Trottier Research on Exoplanets, Département de Physique, CA;lbl;196;747
+Institut Trottier de Recherche sur les Exoplanètes, Université de Montréal, CA;lbl;196;747
+Phys&Trottier Research on Exoplanets, Université de Montréal, CA;lbl;178;747
+Observatoire du Mont-Mégantic, Université de Montréal, CA;lbl;196;747
+Université de Montréal, Département de Physique, Canada,;lbl;196;747
+Département de Physique, Université de Montréal, Canada,;lbl;196;747
+Univ. Grenoble Alpes, CNRS, FR;lbl;178;747
+Key Laboratory for Computational Astro, The Partner Group of MPI for Astro, CN;desitarget;76;7642
+Inst of Astro&Phys, National Tsing Hua U, Taiwan,;desitarget;76;7642
+Computational Cosmology, Phys, GB;desitarget;76;7642
+National Astronomical Obs., Chinese Academy of Sci, CN;desitarget;76;7642
+Centre for Extragalactic Astro, Phys, GB;desitarget;76;7642
+Center for Informatics&Computation in Astro, NTHU, TW;desitarget;76;7642
+Phys&Astro, Siena College, US;desitarget;259;7642
+Lawrence Berkeley National Laboratory, Berkeley, US;desitarget;166;7642
+National Tsing Hua U, Hsinchu, TW;desitarget;76;7642
+U Crete (Heraklion, GR;desitarget;183;7642
+Ulster Universiity, GB;desitarget;76;7642
+Siena College, Loudonville, US, US;desitarget;183;7642
+Phys, U Wisconsin—Madison, US;MGwave;7;211
+Astro Research (STAR) Inst, Université de Liège, BE;special;36;61
+School of Phys&Astro, Monash U, AU;special;36;61
+STAR Inst, Université de Liège, Belgium,;special;36;61
+Space sciences, Technologies &amp;special;36;61
+INGV, Sezione di Sismologia e Tettonofisica, IT;ALMA3;10;90
+Istituto Nazionale di Geofisica e Vulcanologia, Roma, Italy ,;ALMA3;10;90
+Aeronautics&Astronautics, Massachusetts Inst of Technology, US;deconfuser;4;16
+Massachusetts Inst of Technology, Cambridge, US;deconfuser;4;16
+Canadian Theoretical Astro, U Toronto, CA;celmech;307;66
+Centre for Planetary Sci, U Toronto at Scarborough, CA;celmech;92;66
+Harvard-Smithsonian CfA, The Theory&Computation, US;celmech;215;66
+Astro, Princeton U, US;celmech;92;66
+Center for Interdisciplinary Exploration&Research in Astro (CIERA), US;celmech;215;66
+Phys, Harvey Mudd College, US;celmech;92;66
+Astro, Northwestern U, US;celmech;215;66
+Northwestern U (Evanston, Illinois, US;celmech;215;66
+Smithsonian, Cambridge, US;celmech;215;66
+Weizmann Inst of Sci, IL;AnalyticLC;5;18
+Phys&Astro, Northern Arizona U, US;EXOTIC;116;640
+Jet Propulsion Laboratory, Caltech, US;EXOTIC;471;640
+Lunar&Planetary Laboratory, U Arizona, US;EXOTIC;116;640
+NASA Goddard Space Flight Center, Greenbelt, US;EXOTIC;355;640
+Exoplanet Watch, Thessaloniki;EXOTIC;471;640
+Institut d'Estudis Espacials de Catalunya (IEEC), Edifici RDIT, ES;diffstar;38;352
+Inst of Space Sci (ICE, CSIC), ES;diffstar;38;352
+Leiden Obs., Leiden U, NL;diffstar;38;352
+Kavli Cosmological Phys, U Chicago, US;diffstar;38;352
+Argonne National Laboratory, Lemont, US;diffstar;38;352
+HEP Division, Argonne National Laboratory, US;diffstar;38;352
+Inst of Phys, Laboratory of Astro, CH;FCFC;6;101
+Laboratory of Astro, Inst of Phys, CH;FCFC;6;101
+Laboratoire dástrophysique, Ecole Polytechnique Fédérale de Lausanne Observatoire de Sauverny, CH;FCFC;6;101
+National Astronomical Obs., Chinese Academy of Sci, CN;FCFC;6;101
+Astro, Tsinghua U, CN;FCFC;6;101
+Ecole Polytechnique Fédérale de Lausanne, CH;FCFC;6;101
+William B. Hanson Center for Space Sci, Phys, US;UBER;9;21
+U Texas at Dallas, Richardson, US;UBER;9;21
+Berkeley Center for Theoretical Phys, U California, USA,;HDMSpectra;12;1748
+Theoretical Phys Department, CERN, CH;HDMSpectra;12;1748
+Theory Group, Lawrence Berkeley National Laboratory, US;HDMSpectra;12;1748
+Lawrence Berkeley National Laboratory, Berkeley, US;HDMSpectra;12;1748
+Visiting Scholar, Breakthrough Listen Group, US;pandora;43;64
+Sonneberg Obs., Sonneberg, DE;pandora;43;64
+Phys, Inst of Theoretical Phys&Inst of Phys Frontiers&Interdisciplinary Sci, CN;EvoEMD;47;129
+Ottawa-Carleton Phys, Carleton U, CA;EvoEMD;52;129
+CfA&Planetary Sci, Racah Inst of Phys, IL;SatGen;3;1837
+Racah Inst of Phys, The Hebrew U, IL;SatGen;3;1837
+Phys, Yale U, US;SatGen;9;1837
+Theoretisch-Physikalisches Institut, Friedrich-Schiller-U Jena, Germany,;bajes;73;1348
+Istituto Nazionale di Fisica Nucleare (INFN), Sezione di Trieste, IT;bajes;73;1348
+Scuola Internazionale Superiore di Studi Avanzati (SISSA), IT;bajes;73;1348
+International School for Advanced Studies (SISSA), IT;bajes;73;1348
+INFN Sezione di Trieste, Italy,;bajes;73;1348
+SISSA, IT;bajes;73;1348
+International Centre for Radio Astro Research, Curtin U, Australia,;pulsar_spectra;103;113
+Phys&Astro, Curtin U, AU;pulsar_spectra;15;113
+CSIRO Space&Astro, Bentley, Australia,;pulsar_spectra;88;113
+Inst de Física Corpuscular (IFIC), CSIC-Universitat de València, ES;HaloGraphNet;13;805
+Inst of Corpuscular Phys, U Valencia, ES;HaloGraphNet;13;805
+MPI for Intelligent Systems, DE;applefy;5;113
+Astro, CH;applefy;5;113
+ETH Zurich, Particle Phys &amp;applefy;5;113
+Center for Research&Exploration in Space Sci&Technology, NASA Goddard Space Flight Center, US;batanalysis;158;26
+Center for Space Sci&Technology, U Maryland Baltimore County, US;batanalysis;158;26
+Phys, Oregon State U, US;batanalysis;158;26
+Astro Sci Division, NASA Goddard Space Flight Center, US;batanalysis;158;26
+Phys&Astro, San Francisco State U, US;JET;12;166
+Electronics, Rhodes U, ZA;QuartiCal;126;19
+SARAO, Cape Town, ZA;QuartiCal;126;19
+Centre for Astro Research, Phys, UK,;DDFacet;45;6843
+School of Phys, Astro&Math, GB;DDFacet;45;6843
+U Hertfordshire, School of Phys, GB;DDFacet;45;6843
+Math, U Hertfordshire, UK,;DDFacet;45;6843
+South African Radio Astro Obs. (SARAO), Obs. Road, ZA;eidos;6;1825
+Electronics, Rhodes U, ZA;eidos;6;1825
+SKA SA, Cape Town, ZA;eidos;6;1825
+Laboratory for Atmospheric&Space Phys, U Colorado Boulder;James-s-EVE-Dimming-Index-JEDI;91;210
+Solar Phys Laboratory, NASA Goddard Space Flight Center, MD USA;James-s-EVE-Dimming-Index-JEDI;91;210
+NASA Goddard Space Flight Center, Greenbelt, US;James-s-EVE-Dimming-Index-JEDI;91;210
+U Colorado Boulder, Boulder, US;James-s-EVE-Dimming-Index-JEDI;91;210
+Univ. of Colorado, Boulder (USA;James-s-EVE-Dimming-Index-JEDI;91;210
+Jodrell Bank Centre for Astro, School of Phys&Astro, GB;glass;98;289
+Phys&Astro, U College London, UK,;glass;98;289
+Center for Cosmology&Particle Phys, Phys, US;Delight;63;2352
+Astro, U College London, GB;Delight;63;2352
+New York U, CCPP, US;Delight;63;2352
+Center for Cosmology&Particle Phys, Phys, US;photoParallax;12;4345
+CCA, Flatiron Inst, US;photoParallax;9;4345
+Simons Center for Data Analysis, New York, US;photoParallax;9;4345
+Center for Data Sci, New York U, US;photoParallax;9;4345
+MPIA, DE;photoParallax;9;4345
+Astro, U College London, GB;photoParallax;3;4345
+Flatiron Inst, New York, US;photoParallax;9;4345
+Dipartimento di Fisica e Astronomia 'G. Galilei', Università degli studi di Padova, IT;source-code;16;26555
+School of Phys&Astro&Gravitational Wave Astro, U Birmingham, GB;source-code;16;26555
+Phys&Astro Department Galileo Galilei, U Padova, IT;source-code;16;26555
+Institut für Astro-und Teilchenphysik, U Innsbruck, AT;source-code;16;26555
+Astro&Particle Phys, U Innsbruck, AT;source-code;16;26555
+Gravitational Wave Astro, U Birmingham, GB;source-code;16;26555
+INAF - Osservatorio Astronomico di Padova, IT;source-code;16;26555
+INFN - Padova, IT;source-code;16;26555
+Statistics, U Washington, US;sconce-scms;22;11
+Astro Group, Phys, GB;aiolos;116;217
+Inst of Astro, U Cambridge, GB;aiolos;24;217
+Imperial College London, Blackett Laboratory, GB;aiolos;24;217
+School of Phys&Astro, U Leeds, UK,;aiolos;24;217
+The Cosmic Dawn Center, Niels Bohr Inst, DK;Mangrove;31;597
+Astro, Princeton U, USA,;Mangrove;31;597
+Astro, The U Texas at Austin, USA,;Zeus21;19;553
+The U Texas at Austin, Astro, USA,;Zeus21;19;553
+Smithsonian, Cambridge, US;Zeus21;19;553
+CfA, Harvard &amp;Zeus21;19;553
+SUPA (Scottish Universities Phys Alliance), School of Phys&Astro, GB;pipes_vis;10;19
+Stellar Astro Centre (SAC), Phys&Astro, DK;pipes_vis;10;19
+Astro, U Edinburgh, GB;pipes_vis;10;19
+School of Phys&Astro, U Birmingham, GB;pipes_vis;10;19
+Astro, U St Andrews, GB;pipes_vis;10;19
+AIM, CEA, FR;apollinaire;258;86
+Université Paris Cité, Université Paris-Saclay, France,;apollinaire;258;86
+INAF – Osservatorio Astrofisico di Catania, Via S. Sofia, Italy,;apollinaire;258;86
+Département d'Astrophysique/AIM, CEA/IRFU, Univ. Paris-Saclay &amp;apollinaire;258;86
+Univ. de Paris, Gif-sur-Yvette, FR;apollinaire;258;86
+IRFU, CEA, FR;apollinaire;258;86
+CEA, Université Paris-Saclay;apollinaire;258;86
+European Southern Obs., Garching, DE;COpops;4;72
+Inst of Astro, U Cambridge, UK,;COpops;4;72
+MPIA, Heidelberg, DE;COpops;4;72
+Phys&Astro, Michigan State U, US;parthenon;230;23
+U Hamburg, Hamburger Sternwarte, DE;parthenon;230;23
+Hamburger Sternwarte, U Hamburg, DE;parthenon;230;23
+NASA Nexus for Exoplanet System Sci Virtual Planetary Laboratory, U Washington, US;rfast;3;352
+NASA Astrobiology Inst's Virtual Planetary Laboratory, U Washington, US;rfast;3;352
+Northern Arizona U, Astro&Planetary Sci, US;rfast;3;352
+Habitability, Atmospheres, US;rfast;3;352
+Astro&Planetary Sci, Northern Arizona U, US;rfast;3;352
+Virtual Planetary Laboratory, U Washington, US;rfast;3;352
+Lunar&Planetary Laboratory, U Arizona, US;rfast;3;352
+U Arizona, Lunar &amp;rfast;3;352
+Astro, U Florida, US;butterpy;74;463
+Astro, U Hawai'i at Mānoa, US;butterpy;74;463
+Space Telescope Sci Inst, Baltimore, US;butterpy;74;463
+U Florida, Astro, US;butterpy;74;463
+Computer Vision Center- Universitat Autònoma de Barcelona (UAB), Barcelona, ES;CosmoGraphNet;4;804
+Inst de Física Corpuscular (IFIC), CSIC-Universitat de València, ES;CosmoGraphNet;4;804
+Inst of Corpuscular Phys, U Valencia, ES;CosmoGraphNet;4;804
+Computation Sci, U Zurich, CH;concept;398;804
+Astro – U Zurich, Zürich, Switzerland,;concept;398;804
+Phys&Astro, Aarhus U, DK;concept;398;804
+Theoretical Phys&Astro, Masaryk U, Czech Republic,;CADET;15;93
+Applied Math&Theoretical Phys (DAMTP), U Cambridge, GB;GRChombo;106;5567
+Centre for Theoretical Cosmology, Applied Math&Theoretical Phys, GB;GRChombo;106;5567
+Geometry, Analysis&Gravitation, GB;GRChombo;78;5567
+School of Mathematical Sci, Queen Mary U London, UK,;GRChombo;78;5567
+Institut für Astro, Georg-August U, DE;GRChombo;78;5567
+Astro, U Oxford, GB;GRChombo;78;5567
+Phys&Astro, U College London, GB;PEPITA;12;33
+Mullard Space Sci Laboratory, U College London, UK,;PEPITA;12;33
+Research Center for the Early Universe (RESCEU), School of Sci, JP;CHIPS;95;348
+Phys, Graduate School of Sci, JP;CHIPS;95;348
+TAPIR, Caltech, US;CHIPS;95;348
+Inst of Phys, Laboratory of Astro, CH;SubgridClumping;5;402
+Laboratoire d'Astrophysique, Ecole Polytechnique Federale de Lausanne (EPFL), Switzerland,;SubgridClumping;5;402
+Particle Phys&Astro, ETH Zurich, Switzerland,;SubgridClumping;5;402
+The Oskar Klein Centre, Astro, SE;SubgridClumping;5;402
+Eidgenössische Technische Hochschule Zürich, Zürich, CH;SubgridClumping;5;402
+École Polytechnique Fédérale de Lausanne (EPFL), CH;SubgridClumping;5;402
+Astro Centre, Phys &amp;SubgridClumping;5;402
+The Oskar Klein Centre for Cosmoparticle Phys, Phys, SE;kilopop;53;371
+ELTE Eötvös Loránd U, Inst of Phys&Astro, Budapest;TiDE;7;13
+HUN-REN CSFK, Konkoly Obs., HU;TiDE;7;13
+Argelander-Institut für Astronomie, Rheinische Friedrich-Wilhems U Bonn, DE;threepoint;25;1108
+U Bonn, Argelander-Institut für Astronomie, DE;threepoint;25;1108
+Astro Branch, Space Sci&Astrobiology Division, US;psfmachine;31;98
+Bay Area Environmental Research Inst, Moffett Field, US;psfmachine;100;98
+Astro, U California, US;psfmachine;69;98
+Center for Mathematical Modeling, Santiago, CL;psfmachine;69;98
+NASA Ames Research Center, Moffett Field, US;psfmachine;100;98
+Millennium Inst of Astro, Santiago, Chile,;psfmachine;69;98
+Astro, U California Santa Cruz, US;alf;160;5620
+Astro&Astro, U California, US;alf;160;5620
+Harvard-Smithsonian CfA, Cambridge, USA,;alf;136;5620
+Smithsonian, Cambridge, US;alf;136;5620
+Toyota Technological Inst, Japan,;alf;24;5620
+U Obs., Fac of Phys, DE;axionHMcode;22;634
+MPI for Astro, Germany,;axionHMcode;22;634
+Institut für Astro und Geophysik, U Göttingen, DE;axionHMcode;22;634
+Excellence Cluster Origins, DE;axionHMcode;22;634
+The Davidson Inst of Sci Education, IL;pyPplusS;9;116
+Gymnasia Re'alit High School, IL;pyPplusS;9;116
+Centre for Extragalactic Astro, Phys, UK,;AGNvar;37;162
+Phys, U Durham, GB;AGNvar;37;162
+Phys, Harvard U, US;21cmvFAST;3;3001
+Astro, U Vienna, Austria,;DataComb;1;200
+Astro (IfA), U Vienna, AT;DataComb;1;200
+U Vienna, Astro, AT;DataComb;1;200
+National Radio Astro Obs., Charlottesville, USA,;DataComb;9;200
+U Wien, Institut für Astro, AT;DataComb;1;200
+Leiden Obs., Leiden U, NL;DataComb;1;200
+Astro Department, U Maryland, USA,;DataComb;4;200
+U Maryland, Astro Department, US;DataComb;4;200
+Center for Theoretical Phys, Columbia U, USA,;PolySpec;33;238
+Applied Math&Theoretical Phys, U Cambridge, GB;PolySpec;33;238
+School of Natural Sci, Advanced Study, US;PolySpec;33;238
+Astro, Princeton U, US;PolySpec;33;238
+Simons Society of Fellows, Simons Foundation, US;PolySpec;33;238
+Harvardâ€“Smithsonian CfA, US;PolySpec;33;238
+Phys, Columbia U, US;PolySpec;33;238
+Simons Foundation, New York, US;PolySpec;33;238
+AIM, CEA, FR;shark;12;429
+Univ Lyon, Ens de Lyon, FR;shark;12;429
+Université Paris-Saclay, Université Paris Cité, France,;shark;12;429
+Cahill CfA, Caltech, USA,;gyro-interp;57;426
+Astro, Princeton U, US;gyro-interp;57;426
+Astro, Caltech, US;gyro-interp;57;426
+Obs. of the Carnegie Institution for Sci, Pasadena, USA,;gyro-interp;57;426
+NASA Exoplanet Sci Inst - Caltech/IPAC, Pasadena, US;gyro-interp;57;426
+Institut für Theoretische Physik, Ruprecht-Karls-U Heidelberg, DE;CosmicFish;9;3080
+U Heidelberg, Theoretical Phys, DE;CosmicFish;9;3080
+Inst Lorentz, Leiden U, NL;CosmicFish;9;3080
+Dept. of Astro&Astro, U Chicago, US;SAMUS;22;121
+Astro, U Chicago, US;SAMUS;22;121
+Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET), Inst de Astronomía Teórica y Experimental (IATE), AR;guacho;187;279
+Inst de Ciencias Nucleares, U Nacional Autónoma de México, Mexico,;guacho;187;279
+U Nacional Autónoma de México, Inst de Ciencias Nucleares, México,;guacho;187;279
+Nordita, KTH Royal Inst of Technology&Stockholm U, SE;guacho;187;279
+Inst de Astronomía Teórica y Experimental, CONICET—UNC, AR;guacho;187;279
+DAFM, Univ. de las Américas, México;guacho;187;279
+Donostia International Phys Center, (DIPC), Spain,;adiabatic-tides;14;315
+Núcleo de Astrofísica e Cosmologia, U e Federal do Espírito Santo, BR;NAVanalysis;43;137
+PPGCosmo, U e Federal do Espírito Santo, Brazil,;NAVanalysis;43;137
+D Física, Cosmo-Ufes &amp;NAVanalysis;43;137
+Phys, Columbia U, US;reMASTERed;30;436
+Astro, U Edinburgh, UK,;WeakLensingQML;12;24
+Astro Centre, U Sussex, GB;WeakLensingQML;12;24
+Planetary Sci Group, Phys, US;plan-net;1;883
+Engineering Sci, U Oxford, GB;plan-net;3;883
+King's College London, GB;plan-net;1;883
+Astronomical Inst Anton Pannekoek, U Amsterdam, NL;species;355;1837
+Particle Phys&Astro, ETH Zurich, CH;species;355;1837
+Anton Pannekoek Astro, Amsterdam, NL;species;355;1837
+Leiden Obs., U Leiden, NL;species;355;1837
+U Amsterdam, NL;species;355;1837
+NASA-Goddard Space Flight Center, Greenbelt, US;APOLLO;14;2328
+School of Ocean&Earth Sci&Technology, U Hawaiʻi at Mānoa, USA,;orbitN;2;29
+SOEST, U Hawaii at Manoa, US;orbitN;2;29
+Oceanography, SOEST, USA,;orbitN;2;29
+U Hawaii at Manoa, Honolulu, US;orbitN;2;29
+Kapteyn Astronomical Inst, U Groningen, NL;MBASC;7;19
+Phys&Astro, Aarhus U, DK;connect_public;28;915
+D Astrofísica, U de La Laguna, Spain,;fabada;17;45
+Inst de Astrofísica de Canarias, Vía Láctea, ES;fabada;17;45
+Astro Research Centre, School of Math, ZA;nemo;548;7135
+Wits Centre for Astro, School of Phys, ZA;nemo;548;7135
+Centre for Astro&Particle Theory, School of Phys&Astro, GB;nemo;548;7135
+School of Phys, U the Witwatersrand Johannesburg, South Africa,;nemo;548;7135
+Astro&Cosmology Research Unit, U KwaZulu-Natal, South Africa,;nemo;548;7135
+Quantum Sensors Division, National Inst of Standards&Technology, Boulder;nemo;548;7135
+U KwaZulu-Natal, Astro Research Centre, ZA;nemo;548;7135
+Computer Sci, U KwaZulu-Natal, South Africa,;nemo;548;7135
+NIST Quantum Sensors Group, Boulder, US;nemo;548;7135
+National Inst of Standards&Technology, Boulder, US;nemo;548;7135
+Cosmology Research Unit, School of Math, Statistics &amp;nemo;548;7135
+School of Math, Statistics &amp;nemo;548;7135
+Center for Cosmology&Theoretical Astro, Computational Sci, CH;BCemu;24;2309
+Van Swinderen Particle Phys&Gravity, U Groningen, NL;BCemu;24;2309
+Nordita, KTH Royal Inst of Technology&Stockholm U, Sweden,;BCemu;24;2309
+Computational Sci, U Zurich, CH;BCemu;24;2309
+The Oskar Klein Centre, Astro, Sweden,;BCemu;24;2309
+Astro&Oskar Klein Center, Stockholm U, SE;BCemu;24;2309
+Astro, U Zurich, CH;BCemu;24;2309
+U Zurich, Computational Sci, CH;BCemu;24;2309
+and Stockholm U, SE;BCemu;24;2309
+MPIA, Heidelberg, DE;KeplerFit;7;669
+School of Natural Sci, Inst of Advanced Study, USA,;velocileptors;52;6039
+Phys Division, Lawrence Berkeley National Laboratory, US;velocileptors;52;6039
+Advanced Study, Princeton, US;velocileptors;52;6039
+Phys, U California, US;velocileptors;52;6039
+Anton Pannekoek Astro, U Amsterdam, NL,;deepglow;8;36
+ASTRON, NL Radio Astro, NL;deepglow;8;36
+National Theoretical&Computational Sci (NITheCS), Merensky Building, South Africa,;colfi;8;260
+School of Chemistry&Phys, U KwaZulu-Natal, ZA;colfi;8;260
+NAOC-UKZN Computational Astro Centre (NUCAC), U KwaZulu-Natal, ZA;colfi;8;260
+School of Phys&Astro, Beijing Normal U, CN;colfi;8;260
+Phys, Stellenbosch U, ZA;colfi;8;260
+Astro Research Centre, School of Math, ZA;fitScalingRelation;15;65492
+Centre for Astro&Particle Theory, School of Phys&Astro, GB;fitScalingRelation;15;65492
+Astro&Cosmology Research Unit, U KwaZulu-Natal, South Africa,;fitScalingRelation;15;65492
+U KwaZulu-Natal, Astro Research Centre, ZA;fitScalingRelation;15;65492
+Computer Sci, U KwaZulu-Natal, South Africa,;fitScalingRelation;15;65492
+NIST Quantum Sensors Group, Boulder, US;fitScalingRelation;15;65492
+National Inst of Standards&Technology, Boulder, US;fitScalingRelation;15;65492
+Cosmology Research Unit, School of Math, Statistics &amp;fitScalingRelation;15;65492
+Astro, U Nottingham, GB;fitScalingRelation;15;65492
+Particle Theory, School of Phys &amp;fitScalingRelation;15;65492
+School of Math, Statistics &amp;fitScalingRelation;15;65492
+Canadian Theoretical Astro, U Toronto, CA;bskit;4;2402
+Astro Research Centre, National Research Council Canada, CA;bskit;4;2402
+Perimeter Theoretical Phys, Waterloo, CA;bskit;4;2402
+Dominion Radio Astrophysical Obs., Herzberg Astro &amp;bskit;4;2402
+GRAPPA, Anton Pannekoek Astro&High-Energy Phys, NL;peregrine;8;708
+Nikhef, Netherlands,;peregrine;6;708
+Flatiron Inst CCA, New York City, US;celerite2;54;20369
+Astro, U Washington, USA,;celerite2;54;20369
+CCA, Flatiron Inst, US;celerite2;54;20369
+Astro Research Centre, School of Math, ZA;zCluster;106;8001
+Wits Centre for Astro, School of Phys, ZA;zCluster;106;8001
+Centre for Astro&Particle Theory, School of Phys&Astro, GB;zCluster;106;8001
+School of Phys, U the Witwatersrand Johannesburg, South Africa,;zCluster;106;8001
+Astro&Cosmology Research Unit, U KwaZulu-Natal, South Africa,;zCluster;106;8001
+Quantum Sensors Division, National Inst of Standards&Technology, Boulder;zCluster;106;8001
+U KwaZulu-Natal, Astro Research Centre, ZA;zCluster;106;8001
+Computer Sci, U KwaZulu-Natal, South Africa,;zCluster;106;8001
+NIST Quantum Sensors Group, Boulder, US;zCluster;106;8001
+National Inst of Standards&Technology, Boulder, US;zCluster;106;8001
+Cosmology Research Unit, School of Math, Statistics &amp;zCluster;106;8001
+School of Math, Statistics &amp;zCluster;106;8001
+Phys&Astro, Jodrell Bank Centre for Astro, GB;clfd;21;1659
+Jodrell Bank CfA, U Manchester, UK,;clfd;21;1659
+Centre for Astro&Supercomputing, Swinburne U Technology, AU;clfd;21;1659
+SKA Obs., Jodrell Bank, UK,;clfd;21;1659
+Jodrell Bank Centre for Astro, Phys&Astro, GB;iqrm_apollo;12;755
+Phys&Astro, The U Manchester, GB;iqrm_apollo;12;755
+U Manchester, Oxford Road, GB;iqrm_apollo;12;755
+Phys&Astro, Jodrell Bank Centre for Astro, GB;riptide;79;1288
+Jodrell Bank CfA, U Manchester, UK,;riptide;79;1288
+Centre for Astro&Supercomputing, Swinburne U Technology, AU;riptide;79;1288
+SKA Obs., Jodrell Bank, UK,;riptide;79;1288
+Inst de Estudios Astrofísicos, Fac de Ingeniería y Ciencias, CL;KvW;7;18
+Inst de Astrofísica de Canarias (IAC), C. Via Lactea S/N, ES;KvW;7;18
+U de La Laguna (ULL), D Astrofísica, Spain,;KvW;7;18
+D Astrofísica, U de La Laguna (ULL), ES;KvW;7;18
+Astro&Astro, U Chicago, US;KvW;7;18
+Aix-Marseille U, CNRS, FR;KvW;7;18
+Dpto. Astrofísica U de La Laguna, Tenerife, ES;KvW;7;18
+Las Cumbres Obs. Global Telescope Network, Goleta, USA,;neoexchange;769;248
+Center for Particle Cosmology, Phys&Astro, US;tensiometer;106;4307
+Phys&Astro, U Pennsylvania, US;tensiometer;106;4307
+Kavli Cosmological Phys, U Chicago, US;tensiometer;97;4307
+Astro, Enrico Fermi Inst, US;tensiometer;97;4307
+Université de Paris, CNRS, FR;tensiometer;9;4307
+CNRS, Université Grenoble Alpes, France,;tensiometer;9;4307
+the Phys&Math of the Universe (Kavli IPMU, WPI), JP;FPFS;170;403
+McWilliams Center for Cosmology&Astro, Phys, US;FPFS;170;403
+Astro, Graduate School of Sci, JP;FPFS;170;403
+NSF AI Planning Inst, Carnegie Mellon U, USA,;FPFS;170;403
+Kavli IPMU (WPI), UTIAS, JP;FPFS;170;403
+Phys, Carnegie Mellon U, US;FPFS;170;403
+Gifu Shotoku Gakuen U, JP;FPFS;170;403
+Kavli the Phys&Math of the Universe (WPI), The U Tokyo Insts for Advanced Study, JP;LyaCoLoRe;23;2807
+Institut de Física d'Altes Energies (IFAE), The Barcelona Inst of Sci&Technology, ES;LyaCoLoRe;23;2807
+IFAE, The Barcelona Inst of Sci&Technology, ES;LyaCoLoRe;23;2807
+Phys&Astro, U College London, GB;LyaCoLoRe;196;2807
+Lawrence Berkeley National Laboratory, Berkeley, US;LyaCoLoRe;23;2807
+Kavli IPMU (WPI), UTIAS, JP;LyaCoLoRe;23;2807
+U College London, Gower St, GB;LyaCoLoRe;196;2807
+Dipartimento di Fisica e Astronomia 'Galileo Galilei, ' Università degli Studi di Padova, IT;SolarAxionFlux;87;876
+Institut für Theoretische Teilchenphysik (TTP), Karlsruher Institut für Technologie (KIT), DE;SolarAxionFlux;87;876
+Theoretical Particle Phys (TTP), Karlsruhe Inst of Technology (KIT), DE;SolarAxionFlux;87;876
+Phys, Imperial Centre for Inference&Cosmology, UK,;SolarAxionFlux;87;876
+Istituto Nazionale di Fisica Nucleare - Sezione di Padova, Italy,;SolarAxionFlux;87;876
+Institut für Astro, Georg-August-U Göttingen, DE;SolarAxionFlux;87;876
+The Arthur B. McDonald Canadian Astroparticle Phys Research Inst, Phys, CA;CosmoLED;11;289
+Phys, Engineering Phys&Astro, CA;CosmoLED;11;289
+Mathematical Sci, U Liverpool, UK,;CosmoLED;4;289
+Inst of Theoretical Phys, Chinese Academy of Sci, CN;CosmoLED;4;289
+Engineering Phys Astro Kingston, Ontario, CA;CosmoLED;7;289
+Queen's U, Phys &amp;CosmoLED;7;289
+Kavli the Phys&Math of the Universe (WPI), The U Tokyo Insts for Advanced Study (UTIAS), JP;CompressedFisher;7;108
+CCA, Flatiron Inst, USA,;CompressedFisher;7;108
+Inst of Astro&Kavli Cosmology, Madingley Road, GB;CompressedFisher;7;108
+INAF – Osservatorio Astronomico di Roma, Monteporzio Catone, Italy,;FORECAST;13;51
+School of Phys&Astro, U St Andrews, GB;the_farmer;223;460
+Niels Bohr Inst, U Copenhagen, DK;the_farmer;223;460
+MPIA, Heidelberg, DE;the_farmer;223;460
+Astro, U Massachusetts, US;the_farmer;223;460
+Astro, U St Andrews, GB;the_farmer;223;460
+U Massachusetts, Astro;the_farmer;223;460
+U Copenhagen, Niels Bohr Inst;the_farmer;223;460
+Cosmic Dawn Center (DAWN), DK;the_farmer;223;460
+Nordita, KTH Royal Inst of Technology&Stockholm U, SE;C2-Ray1D;13;14439
+The Oskar Klein Centre, Astro, Sweden,;C2-Ray1D;13;14439
+Astro&Oskar Klein Centre, AlbaNova, Sweden,;C2-Ray1D;13;14439
+Oskar Klein Centre for Cosmoparticle Phys, AlbaNova, Sweden,;C2-Ray1D;13;14439
+Stockholm Obs., AlbaNova U Center, SE;C2-Ray1D;13;14439
+Texas Cosmology Center&the Astro, The U Texas at Austin;C2-Ray1D;13;14439
+Leiden Obs., Leiden U, NL;C2-Ray1D;13;14439
+AlbaNova U Center, Astro, SE;C2-Ray1D;13;14439
+, SE;C2-Ray1D;13;14439
+Stockholm U, SE;C2-Ray1D;13;14439
+Nordita, KTH Royal Inst of Technology&Stockholm U, SE;C2-Ray3Dm1D_Helium;28;2154
+The Oskar Klein Centre, Astro, Sweden,;C2-Ray3Dm1D_Helium;28;2154
+Astro&Oskar Klein Centre, AlbaNova, Sweden,;C2-Ray3Dm1D_Helium;28;2154
+Stockholm Obs., AlbaNova U Center, SE;C2-Ray3Dm1D_Helium;28;2154
+Texas Cosmology Center&the Astro, The U Texas at Austin;C2-Ray3Dm1D_Helium;28;2154
+AlbaNova U Center, Astro, SE;C2-Ray3Dm1D_Helium;28;2154
+Stockholm U, SE;C2-Ray3Dm1D_Helium;28;2154
+CNRS, CentraleSupélec, FR;radis;426;372
+Theoretical Phys&Computational Phys, Graz U Technology, Austria,;pycheops;22;1049
+SUPA School of Phys&Astro, U St Andrews, GB;pycheops;22;1049
+Centre for Exoplanets&Habitability, U Warwick, UK,;pycheops;22;1049
+Phys, U Warwick, UK,;pycheops;22;1049
+Astro, U St Andrews, UK,;pycheops;291;1049
+Astro Group, Keele U, UK,;pycheops;269;1049
+Isaac Newton Group of Telescopes, ES;pycheops;22;1049
+Centre for Exoplanet Sci / SUPA, School of Phys &amp;pycheops;22;1049
+Keele U, Staffordshire, GB;pycheops;269;1049
+Kavli the Phys&Math of the Universe (WPI), U Tokyo, JP;SubGen;4;4958
+Inst of Computational Cosmology, Phys, GB;SubGen;4;4958
+Astro, School of Phys&Astro, CN;SubGen;4;4958
+Shanghai Key Laboratory for Particle Phys&Cosmology, China,;SubGen;4;4958
+Kavli IPMU (WPI), UTIAS, JP;SubGen;4;4958
+Astro, School of Phys&Astro, CN;subgen2;1;40
+Shanghai Key Laboratory for Particle Phys&Cosmology, China,;subgen2;1;40
+Phys, Kansas State U, US;SYSNet;38;1283
+Gravitational&Subatomic Phys (GRASP), Utrecht U, NL;nmma;35;1250
+Division of Phys, Math, US;nmma;135;1250
+Minnesota Astro, U Minnesota, US;nmma;135;1250
+School of Phys&Astro, U Minnesota, USA,;nmma;135;1250
+LIGO, Caltech, US;nmma;135;1250
+Nikhef, NL;nmma;35;1250
+U Minnesota, Minneapolis, US;nmma;135;1250
+International Centre for Radio Astro Research (ICRAR), U Western Australia, Australia,;Rfits;185;65
+Stromlo, Australia,;Rfits;185;65
+IRAP, Université de Toulouse, FR;Rfits;185;65
+ICRAR, The U Western Australia, Australia,;Rfits;185;65
+SUPA School of Phys, Astro, GB;Rfits;185;65
+Astro, U St Andrews, GB;Rfits;185;65
+U St Andrews, St Andrews, GB;Rfits;185;65
+Theoretical Phys, U Heidelberg, Germany,;CCBH-Numerics;26;201
+Núcleo de Astrofísica e Cosmologia, U e Federal do Espírito Santo, BR;CCBH-Numerics;26;201
+PPGCosmo, U e Federal do Espírito Santo, Brazil,;CCBH-Numerics;26;201
+Phys departament, Federal U Espírito Santo, BR;CCBH-Numerics;26;201
+D Física, Cosmo-Ufes &amp;CCBH-Numerics;26;201
+D Física, Inst Nacional de Investigaciones Nucleares, México;MGPT;21;386
+Instituut voor Sterrenkunde (IvS), KU Leuven, BE;eclipsr;16;859
+Astro, KU Leuven, Belgium,;eclipsr;16;859
+Kavli Particle Astro&Cosmology&Phys, Stanford U, US;skyLine;38;181
+Astro, Peyton Hall, US;skyLine;38;181
+School of Natural Sci, Advanced Study, US;skyLine;38;181
+Phys, Stanford U, US;skyLine;38;181
+SLAC National Accelerator Laboratory, Menlo Park, US;skyLine;38;181
+Cosmology, Stanford U, US;skyLine;38;181
+KIPAC, SLAC&Stanford U, US;skyLine;38;181
+Consejo Nacional de Ciencia y Tecnología, Colonia Crédito Constructor, México;fkpt;20;343
+D Física, Inst Nacional de Investigaciones Nucleares, México;fkpt;22;343
+Inst de Ciencias Físicas, U Nacional Autónoma de México, México;fkpt;22;343
+Inst Avanzado de Cosmología A. C., México,;fkpt;20;343
+Centre for Extragalactic Astro, Phys, GB;fkpt;2;343
+Center for Cosmology&Particle Phys, Phys, Russia;CLASS-PT;12;7245
+Inst of Phys, Laboratory of Particle Phys&Cosmology (LPPC), CH;CLASS-PT;12;7245
+Center for Theoretical Phys—a Leinweber Inst, Massachusetts Inst of Technology, US;CLASS-PT;12;7245
+Nuclear Research of the Russian Academy of Sci, Russia;CLASS-PT;15;7245
+The NSF AI Artificial Intelligence&Fundamental Interactions, Cambridge, USA,;CLASS-PT;12;7245
+Phys&Astro, McMaster U, CA;CLASS-PT;3;7245
+School of Natural Sci, Advanced Study, US;CLASS-PT;12;7245
+Moscow Inst of Phys&Technology, Dolgoprudny, Russia;CLASS-PT;3;7245
+FSB/ITP/LPPC, École Polytechnique Fédérale de Lausanne, Lausanne;CLASS-PT;12;7245
+Astro, Princeton U, US;EffectiveHalos;11;1389
+Harvardâ€“Smithsonian CfA, US;EffectiveHalos;11;1389
+Smithsonian, US;EffectiveHalos;11;1389
+David A. Dunlap Astro&Astro, U Toronto, CA;astroNN;494;9784
+Astro, U Toronto;astroNN;494;9784
+U Toronto, CA;astroNN;494;9784
+D Astronomía, U de Chile, CL;ebweyl;2;33
+U Portsmouth, Inst of Cosmology &amp;ebweyl;2;33
+Gravitation, GB;ebweyl;2;33
+Columbia Astro Laboratory, Columbia U, USA,;pyilc;19;322
+CCA, Flatiron Inst, US;pyilc;76;322
+Phys&Astro, U Waterloo, CA;pyilc;76;322
+Center for Theoretical Phys, Columbia U, USA,;pyilc;19;322
+DAMTP, Centre for Mathematical Sci, GB;pyilc;57;322
+Kavli Cosmology Cambridge, Madingley Road, GB;pyilc;57;322
+Perimeter Theoretical Phys, Waterloo, CA;pyilc;57;322
+Flatiron Inst, New York, US;pyilc;19;322
+Jodrell Bank Centre for Astro, Phys&Astro, UK,;PySSED;29;19
+School of Phys&Astro, Open U, GB;PySSED;29;19
+Astro, Alan Turing Building, UK,;PySSED;29;19
+Physical Sci, The Open U, GB;PySSED;29;19
+Phys&Astro, The U Manchester, UK,;PySSED;29;19
+Open U, Walton Hall, GB;PySSED;29;19
+Astro Group, Phys, GB;cuDisc;43;33
+School of Phys&Astro, U Leeds, UK,;cuDisc;17;33
+Center for Research&Exploration in Space Sci&Technology, NASA/GSFC, US;mhealpy;63;20
+Astro Sci Division, NASA Goddard Space Flight Center, US;mhealpy;63;20
+NASA Goddard Space Flight Center, Greenbelt, US;mhealpy;63;20
+Astro, U Maryland, US;mhealpy;63;20
+U Maryland, College Park, US;mhealpy;63;20
+Earth Sci&Astro, College of Arts&Sci, JP;pAGN;3;414
+School of Phys&Astro&Gravitational Wave Astro, U Birmingham, UK,;pAGN;10;414
+Dipartimento di Fisica 'G. Occhialini', Universitá degli Studi di Milano-Bicocca, IT;pAGN;2;414
+Research Center for the Early Universe, School of Sci, JP;pAGN;3;414
+Niels Bohr International Academy, Niels Bohr Inst, DK;pAGN;3;414
+Okinawa Inst of Sci&Technology, Onna-son, Japan,;pAGN;3;414
+Gravitational Wave Astro, U Birmingham, GB;pAGN;10;414
+Niels Bohr Inst, U Copenhagen, DK;pAGN;3;414
+INFN, Sezione di Milano-Bicocca, IT;pAGN;2;414
+U Tokyo, Tokyo, JP;pAGN;3;414
+Research Center for the Early Universe (RESCEU), School of Sci, JP;binary_precursor;9;181
+Phys, Graduate School of Sci, JP;binary_precursor;9;181
+TAPIR, Caltech, US;binary_precursor;9;181
+Gravitational Research, School of Phys&Astro, GB;nessai;386;3725
+Inst of Cosmology&Gravitation, U Portsmouth, UK,;nessai;386;3725
+SUPA, School of Phys&Astro, GB;nessai;386;3725
+U Portsmouth, Portsmouth, GB;nessai;386;3725
+IGR, U Glasgow, GB;nessai;386;3725
+Cardiff U, GB;nessai;386;3725
+Berkeley Center for Cosmological Phys, Phys, US;directsht;34;271
+Phys, U California, US;directsht;34;271
+Astro, U California at Berkeley, US;directsht;34;271
+Lawrence Berkeley National Laboratory, One Cyclotron Road, USA,;directsht;34;271
+U California, Berkeley, USA,;directsht;34;271
+Phys Division, Lawrence Berkeley National Laboratory, US;directsht;34;271
+Space Telescope Sci Inst, Baltimore, US;fitramp;2;13
+Phys, U California, US;fitramp;2;13
+U California, Santa Barbara, US;fitramp;2;13
+Département de Physique Théorique&Center for Astroparticle Phys, Université de Genève, CH;EF-TIGRE;3;449
+Dipartimento di Fisica "G. Occhialini", Università degli Studi di Milano-Bicocca, IT;EF-TIGRE;2;449
+Gravitational Wave Sci Center (GWSC), Université de Genève, CH;EF-TIGRE;2;449
+INFN, Sezione di Milano-Bicocca, IT;EF-TIGRE;2;449
+Anton Pannekoek Astro, U Amsterdam, NL,;sunbather;77;124
+CCA, Flatiron Inst, US;autoregressive-bbh-inference;45;2063
+Kavli Cosmological Phys, The U Chicago, US;autoregressive-bbh-inference;45;2063
+Stony Brook U, Stony Brook, US;autoregressive-bbh-inference;45;2063
+Astro, U Toronto, CA;tapify;8;52
+MPIA, DE;tapify;8;52
+Institut de Ciències de l'Espai (ICE, CSIC), ES;raccoon;42;638
+U Warwick, Institut de Ciències de l'Espai (ICE, Institut d'Estudis Espacials de Catalunya (IEEC;raccoon;42;638
+Monash Centre for Astro, School of Phys&Astro, AU;raccoon;42;638
+Centre for Exoplanets&Habitability, U Warwick, UK,;raccoon;42;638
+Institut d'Estudis Espacials de Catalunya (IEEC), Barcelona, ES;raccoon;42;638
+Phys, U Warwick, GB;raccoon;42;638
+Mullard Space Sci Laboratory, U College London, UK,;cosmopower;13;3334
+Département de Physique Théorique, Université de Genève, CH;cosmopower;5;3334
+Centre Universitaire d'Informatique, Université de Genève, Switzerland,;cosmopower;5;3334
+Phys&Astro, U College London, GB;cosmopower;18;3334
+U Bonn, Argelander-Institut für Astronomie, DE;cosmopower;13;3334
+Astro Group, Cavendish Laboratory, GB;cosmopower;13;3334
+School of Sci, European U Cyprus, Cyprus,;SMART;61;18
+European U Cyprus, CY;SMART;61;18
+Sorbonne Universit'e, CNRS, France,;candl;80;283
+Institut d’Astrophysique de Paris, CNRS, FR;candl;80;283
+School of Phys, U Melbourne, AU;candl;80;283
+U Melbourne, School of Phys, AU;candl;80;283
+Kavli Particle Astro&Cosmology&Phys, Stanford U, US;anzu;13;2106
+Phys, Stanford U, US;anzu;13;2106
+SLAC National Accelerator Laboratory, Menlo Park, US;anzu;13;2106
+Cosmology, Stanford U, US;anzu;13;2106
+KIPAC, SLAC&Stanford U, US;anzu;13;2106
+Lawrence Berkeley National Laboratory, One Cyclotron Road, US;CARDiAC;53;169
+Kavli Cosmology Cambridge, Madingley Road, GB;CARDiAC;53;169
+Phys, U California, US;CARDiAC;53;169
+Berkeley Center for Cosmological Phys, UC Berkeley, US;CARDiAC;53;169
+Inst of Astro, Madingley Road, GB;CARDiAC;53;169
+Millennium Inst of Astro (MAS), Providencia, CL;AnomalyALeRCE;17;42
+Data Sci Unit, U de Concepción, CL;AnomalyALeRCE;17;42
+Computer Sci, U Concepción, CL;AnomalyALeRCE;17;42
+Phys&Astro, The U North Carolina at Chapel Hill, US;EVA;7;78
+Homi Bhabha Centre for Sci Education-Tata Inst of Fundamental Research, Mankhurd, IN;superlite;4;15
+Phys&Astro, Louisiana State U, US;superlite;4;15
+Astro, Cornell U, USA,;Magnification_bias_estimation_in_galaxy_surveys;1;220
+Niels Bohr International Academy, Niels Bohr Inst, USA,;phazap;7;109
+Kavli Cosmological Phys&Enrico Fermi Inst, The U Chicago, US;phazap;10;109
+Center of Gravity, Niels Bohr Inst, Denmark,;phazap;17;109
+LIGO Laboratory, Caltech, USA,;phazap;7;109
+Niels Bohr Inst, U Copenhagen, DK;phazap;7;109
+Key Laboratory of Space Environment Monitoring&Information Processing of MIIT, Beijing, CN;A-live-homogeneous-database-of-solar-active-regions;13;22
+School of Space&Earth Sci, Beihang U, CN;A-live-homogeneous-database-of-solar-active-regions;13;22
+Jet Propulsion Laboratory, Caltech, USA of America;GRINN;11;26
+Phys&Astro, Iowa State U, US;GRINN;11;26
+Kavli the Phys&Math of the Universe (WPI), The U Tokyo Insts for Advanced Study (UTIAS), JP;PowerSpecCovFFT;11;74
+Astro/Steward Obs., The U Arizona, US;PowerSpecCovFFT;11;74
+Departament d'Astronomia i Astrofísica, Universitat de València, ES;winnet;3;150
+Institut für Kernphysik, Technische U Darmstadt, DE;winnet;3;150
+Astro&Astro, U València, ES;winnet;3;150
+The Oskar Klein Centre, Astro, Sweden,;autophot;24;621
+School of Phys, OBrien Centre for Sci North, IE;autophot;24;621
+Astro, The Oskar Klein Center, SE;autophot;24;621
+Center for Cosmology&Particle Phys, Phys, US;provabgs;133;697
+Astro, The Ohio State U, US;provabgs;133;697
+Astro, Princeton U, USA,;provabgs;133;697
+Berkeley Center for Cosmological Phys, U California, US;provabgs;133;697
+Lawrence Berkeley National Laboratory, One Cyclotron Road, USA,;provabgs;133;697
+Phys, U California, US;provabgs;133;697
+Kavli IPMU—Kavli the Phys&Math of the Universe, Kashiwa, JP;RealSim;13;1987
+Astro, U Victoria, CA;RealSim;13;1987
+Phys, U Tokyo, JP;RealSim;13;1987
+Astro&the DIRAC Inst, U Washington, US;atm;16;37
+DiRAC Inst&the Astro, U Washington, US;atm;16;37
+U Washington, Dept. of Astro, US;atm;16;37
+Vera C. Rubin Obs., U Washington, USA ,;atm;16;37
+Berkeley Center for Cosmological Phys, U California, US;AstroCLIP;6;235
+Phys, U California, US;AstroCLIP;6;235
+Astro, Princeton U, US;AstroCLIP;6;235
+U California, Berkeley, US;AstroCLIP;6;235
+Flatiron Inst, US;AstroCLIP;6;235
+Aix Marseille Univ, CNRS, FR;pipeline;137;239
+Phys&Applied Math Unit, Indian Statistical Inst, India,;LADDER;6;388
+Computer Vision&Pattern Recognition Unit, Indian Statistical Inst, India,;LADDER;1;388
+Phys Department, Ben-Gurion U the Negev, Israel,;21cmFirstCLASS;6;111
+GRAPPA Inst, Theoretical Phys Amsterdam, NL,;saqqara;3;408
+Kavli Particle Astro&Cosmology, SLAC National Accelerator Laboratory, US;fgcluster;18;337
+Computational Cosmology Center, Lawrence Berkeley National Laboratory, US;fgcluster;18;337
+Space Sci Laboratory, U California, US;fgcluster;18;337
+Roma, IT;fgcluster;18;337
+Phys, U California, US;fgcluster;18;337
+INFN-Sezione di Trieste, IT;fgcluster;18;337
+SISSA, IT;fgcluster;18;337
+Stanford U, Stanford, US;fgcluster;18;337
+Kavli Particle Astro&Cosmology, SLAC National Accelerator Laboratory, US;MCMole3D;6;322
+INFN-National Nuclear Phys, Italy,;MCMole3D;6;322
+Phys, U California, US;MCMole3D;6;322
+International School for Advanced Studies (SISSA), Trieste, IT;MCMole3D;6;322
+INFN-Sezione di Trieste, IT;MCMole3D;6;322
+SISSA, IT;MCMole3D;6;322
+Stanford U, Stanford, US;MCMole3D;6;322
+Kapteyn Astronomical Inst, U Groningen, NL;stardust;45;1126
+Astro Centre, Phys&Astro, GB;stardust;45;1126
+Phys Department, Ben-Gurion U the Negev, Israel,;stardust;45;1126
+The U Texas at Austin, Austin, US;stardust;45;1126
+Niels Bohr Inst, U Copenhagen, DK;stardust;45;1126
+Astro, The U Texas at Austin, US;stardust;45;1126
+Cosmic Dawn Center (DAWN), DK;stardust;45;1126
+Phys&Astro, U College London, UK,;PyExoCross;65;84
+D Astronomía, U de Concepción, CL;wise2mbh;4;99
+Astro Department, U de Concepcion, CL;wise2mbh;4;99
+Flatiron Inst CCA, New York, USA of America;PySR;520;228
+Applied Math&Theoretical Phys, U Cambridge, GB;PySR;520;228
+Inst of Astro, U Cambridge, GB;PySR;520;228
+Astro, Princeton U, US;PySR;520;228
+Princeton U, Princeton, US;PySR;520;228
+Institut de Physique, Laboratoire d'Astrophysique, CH;pyRRG;83;57
+Instituut-Lorentz for Theoretical Phys, U it Leiden, NL;pyRRG;83;57
+Lorentz Inst, Leiden U, NL;pyRRG;83;57
+Laboratoire d'Astrophysique, EPFL, Switzerland,;pyRRG;83;57
+Key Laboratory for the Structure&Evolution of Celestial Objects, Chinese Academy of Sci, CN;BayeSED3;36;76
+Center for Astronomical Mega-Sci, Chinese Academy of Sci, CN;BayeSED3;36;76
+Yunnan Obs., Chinese Academy of Sci, CN;BayeSED3;36;76
+International Centre of Supernovae, Yunnan Key Laboratory, CN;BayeSED3;36;76
+Physical Sci, Osaka Prefecture U, Naka-ku;DIRTY_dustrt;51;19443
+CSIRO, Black Mountain Laboratories, AU;DIRTY_dustrt;51;19443
+Space Telescope Sci Inst, Baltimore, US;DIRTY_dustrt;51;19443
+Steward Obs., U Arizona, US;DIRTY_dustrt;51;19443
+Sterrenkundig Observatorium, U it Gent, BE;DIRTY_dustrt;51;19443
+Johns Hopkins U, Baltimore, USA.,;DIRTY_dustrt;51;19443
+Baltimore, US;DIRTY_dustrt;51;19443
+Harvard-Smithsonian CfA, Cambridge, USA,;CloudCovErr.jl;55;104
+Astro, Princeton U, US;CloudCovErr.jl;55;104
+Phys, Harvard U, US;CloudCovErr.jl;55;104
+Smithsonian, Cambridge, US;CloudCovErr.jl;55;104
+CfA, | Harvard &amp;CloudCovErr.jl;55;104
+Niels Bohr International Academy, Niels Bohr Inst, DK;pncbc-eftofpng;6;2032
+CNRS, Université Paris-Saclay, FR;pncbc-eftofpng;6;2032
+Institut de Physique Théorique, CEA &amp;pncbc-eftofpng;6;2032
+Harvard-Smithsonian CfA, The Theory&Computation, US;astrocats;323;18094
+James Guillochon is at the Harvard-Smithsonian CfA, Cambridge, USA.,;astrocats;284;18094
+Astro&Astro, U California, US;astrocats;284;18094
+Theory&Computation, Harvard U, US;astrocats;284;18094
+Astro Department, Harvard U, Cambridge;astrocats;284;18094
+Harvard U, Cambridge, US;astrocats;39;18094
+Australian Research Council Centre of Excellence for All-Sky Astro (CAASTRO), Curtin U, AU;fits_warp;4;747
+International Centre for Radio Astro Research, Curtin U, AU;fits_warp;9;747
+Sydney Astro, School of Phys, AU;fits_warp;4;747
+Curtin Inst of Radio Astro, Curtin U, Western Australia Australia;fits_warp;5;747
+ARC Centre of Excellence for All-sky Astro (CAASTRO), AU;fits_warp;4;747
+ICRAR-Curtin, Curtin U, AU;fits_warp;5;747
+Inst of Phys, Laboratory of Particle Phys&Cosmology (LPPC), CH;CLASS_LVDM;3;2656
+Nuclear Research of the Russian Academy of Sci, Russia;CLASS_LVDM;3;2656
+Particle Phys&Cosmology, Phys Fac, Russia,;CLASS_LVDM;3;2656
+School of Natural Sci, Advanced Study, US;CLASS_LVDM;3;2656
+FSB/ITP/LPPC, École Polytechnique Fédérale de Lausanne, Lausanne;CLASS_LVDM;3;2656
+Fac of Phys, Moscow State U, Russia;CLASS_LVDM;3;2656
+McDonald Obs., The U Texas at Austin, US;Diagnose;13;35
+Hobby-Eberly Telescope, U Texas at Austin, US;Diagnose;13;35
+Astro, U Texas, US;Diagnose;13;35
+Bernoulli Math, Computer Sci&Artificial Intelligence, NL;damspi;25;24
+Kapteyn Astronomical Inst, U Groningen, NL,;damspi;25;24
+Argelander Astro, U Bonn, DE;damspi;25;24
+Trottier Research on Exoplanets&Phys, Université de Montréal, CA;smint;15;1805
+Institut Trottier de recherche sur les exoplanètes, Montréal, CA;smint;15;1805
+Département de Physique, Université de Montréal, CA;smint;15;1805
+Astrophysical&Planetary Sci, U Colorado Boulder, US;smint;15;1805
+Phys, Université de Montréal, CA;smint;15;1805
+Astro, U Chicago, US;smint;15;1805
+South African radio astronomy Obs. (SARAO), Cape Town, South Africa,;dask-ms;140;46
+SARAO, Cape Town, ZA;dask-ms;140;46
+George Mason U, Phys&Astro, US;BADASS3;124;404
+Phys&Astro, U California, US;BADASS3;124;404
+U.S. Naval Obs., Washington, US;BADASS3;124;404
+Astro Group, Cavendish Laboratory, GB;cosmoflow;24;1072
+Institut d'astrophysique de Paris, Sorbonne Université, FR;cosmoflow;24;1072
+École Normale Supérieure Paris-Saclay, Avenue des Sci, FR;cosmoflow;24;1072
+CNRS, Institut d'Astrophysique de Paris, FR;cosmoflow;24;1072
+Kavli Cosmology, Madingley Road, GB;cosmoflow;24;1072
+Research School of Astro&Astro, Australian National U, AU;The_Payne;5;5761
+Center for Cosmology&AstroParticle Phys (CCAPP), The Ohio State U, USA,;The_Payne;5;5761
+Canberra, Australian Capital Territory, AU;The_Payne;5;5761
+Obs. of the Carnegie Institution of Washington, Pasadena, US;The_Payne;5;5761
+Phys, Fac of Sci, Malaysia,;The_Payne;5;5761
+Fac of Sci, Phys, MY;The_Payne;5;5761
+Harvard–Smithsonian CfA, Cambridge, USA ,;The_Payne;5;5761
+, AU;The_Payne;5;5761
+Astro, Australian National U, AU;The_Payne;5;5761
+Astro, Princeton U, US;The_Payne;5;5761
+MPIA, DE;The_Payne;5;5761
+School of Computing, Australian National U, AU;The_Payne;5;5761
+Astro, The Ohio State U, US;The_Payne;5;5761
+Galaxies&Cosmology, Advanced Study, US, US;The_Payne;5;5761
+Advanced Study, Princeton, US;The_Payne;5;5761
+Phys&Astro, The Johns Hopkins U, US;WD_models;23;2990
+Center for Astro, Johns Hopkins U, US;WD_models;23;2990
+Astro&Astro, U California, US;MARDIGRAS;17;15
+Aix-Marseille Université, CNRS, France,;MARDIGRAS;17;15
+Inst Universitario de Ciencias y Tecnologías Espaciales de Asturias (ICTEA), ES;mr-plotter;11;246
+Depto. de Astrofísica, Centro de Astrobiología (CSIC-INTA), ES;mr-plotter;11;246
+Centro de Astrobiología, CSIC-INTA, Spain,;mr-plotter;11;246
+D Física, Pontifícia U e Católica do Rio de Janeiro, Brazil,;GCascade;5;54
+Stanford U, Kavli Particle Astro&Cosmology, US;breads;52;116
+U California San Diego, Astro&Astro, US;breads;52;116
+Kavli Particle Astro&Cosmology, Stanford U, US;breads;52;116
+Caltech, Astro, US;breads;52;116
+Phys&Astro, U Pennsylvania, US;breads;43;116
+Astro, Caltech, US;breads;52;116
+CfA&Space Sci, U California, San Diego;breads;52;116
+Astro, U California San Diego, US;breads;52;116
+La Jolla, US;breads;52;116
+Phys&Astro, U College London, GB;SpectralRadex;20;384
+Leiden Obs., Leiden U, NL;SpectralRadex;20;384
+U College London, Gower St, GB;SpectralRadex;20;384
+Berkeley SETI Research Center, U California, US;radiobear;37;917
+Breakthrough Listen, U California Berkeley, US;radiobear;37;917
+SETI Inst, US;radiobear;37;917
+U California, Berkeley, US;radiobear;37;917
+Radio Astro Lab, U California, US;radiobear;37;917
+Astro, UC Berkeley, US;radiobear;37;917
+Astro Department, U California, Berkeley;radiobear;37;917
+Berkeley CA, US;radiobear;37;917
+Centre for ExoLife Sci, Niels Bohr Inst, DK;chemcomp;4;2625
+Niels Bohr Instt, Københavns U t, DK;chemcomp;4;2625
+Astro, KU Leuven, BE;chemcomp;4;2625
+MPIA, Heidelberg, DE;chemcomp;4;2625
+Inst de Astrofísica de Canarias (IAC), Avda Vía Láctea S/N, ES;molpop-cep;44;168
+D Astrofísica, U de La Laguna, Spain,;molpop-cep;44;168
+NASA Goddard Space Flight Center, Greenbelt, US;molpop-cep;44;168
+U de la Laguna, ES;molpop-cep;44;168
+IAC (Inst Astrofísico de Canarias), ES;molpop-cep;44;168
+TAPIR, Walter Burke Theoretical Phys, US;polyrot;2;39
+Division of Phys, Math&Astro, US;polyrot;2;39
+Canadian Theoretical Astro, Toronto, CA;polyrot;2;39
+Astro, U Hawai'i, US;giants;83;311
+Bay Area Environmental Research Inst, Petaluma, US;giants;83;311
+American Museum of Natural History, Manhattan, US;giants;83;311
+NASA Ames Research Center, Moffett Field, US;giants;83;311
+Astro, Princeton U, US;specmatch-emp;80;6774
+Inst of Astro, U Cambridge, GB;specmatch-emp;80;6774
+Caltech, Pasadena, US;specmatch-emp;80;6774
+Smithsonian, Cambridge, US;specmatch-emp;80;6774
+William H. Miller III Phys&Astro, Johns Hopkins U, USA,;spaceKLIP;39;1957
+Amherst College Phys&Astro, Amherst, US;spaceKLIP;39;1957
+Astro, U California, US;spaceKLIP;119;1957
+Astro, Johns Hopkins U, US;spaceKLIP;39;1957
+Space Telescope Sci Inst, Baltimore, US;spaceKLIP;158;1957
+Phys&Astro, U Exeter, GB;spaceKLIP;158;1957
+U California Santa Cruz, Santa Cruz, US;spaceKLIP;119;1957
+Univ. of California, Santa Cruz (USA;spaceKLIP;119;1957
+Johns Hopkins U, Baltimore, US;spaceKLIP;39;1957
+Bay Area Environmental Research Inst, Moffett Field, USA,;blase;94;54
+Astro, The U Texas at Austin, US;blase;94;54
+The U Texas at Austin | Astro, Austin, US;blase;94;54
+NASA Ames Research Center, Moffett Blvd, US;blase;94;54
+Bay Area Environmental Research Inst, Moffett Field, US;TESS-SIP;8;567
+NASA Ames Research Center, Moffett Field, US;TESS-SIP;8;567
+Goddard Earth Sci Technology&Research (GESTAR), Universities Space Research Association (USRA), US;thai_trilogy_code;8;885
+Math College of Engineering, Math, GB;thai_trilogy_code;46;885
+Sellers Exoplanet Environment Collaboration (SEEC), NASA Goddard Space Flight Center, US;thai_trilogy_code;8;885
+College of Engineering, Math&Physical Sci, GB;thai_trilogy_code;46;885
+Physical Sci, Phys, Wales;thai_trilogy_code;46;885
+NASA Goddard Space Flight Center, Greenbelt, US;thai_trilogy_code;8;885
+Phys&Astro, U Exeter, GB;thai_trilogy_code;46;885
+Universities Space Research Association (USRA), Columbia, US;thai_trilogy_code;8;885
+U Exeter, Phys &amp;thai_trilogy_code;46;885
+McWilliams Center for Cosmology, Phys, US;legacypipe;929;48960
+Astro&Astro, U Toronto, CA;legacypipe;929;48960
+Astro&Dunlap Inst, U Toronto, Canada ,;legacypipe;929;48960
+Phys&Astro, U Waterloo, CA;legacypipe;1112;48960
+Perimeter Inst of Theoretical Phys, Waterloo, CA;legacypipe;929;48960
+Dunlap Inst, U Toronto, CA;legacypipe;929;48960
+U Crete (Heraklion, GR;legacypipe;183;48960
+Siena College, Loudonville, US, US;legacypipe;183;48960
+Research School of Astro&Astro, Australian National U, AU;smhr;51;3186
+OzGrav: The ARC Centre of Excellence for Gravitational Wave Discovery, AU;smhr;51;3186
+, AU;smhr;51;3186
+Fac of Information Technology, Monash U, AU;smhr;51;3186
+Inst of Astro, U Cambridge, GB;smhr;51;3186
+U Cambridge, Inst of Astro, GB;smhr;51;3186
+School of Phys&Astro, Monash U, AU;smhr;51;3186
+Astro, Australian National U, AU;smhr;51;3186
+Monash U, Wellington Rd, AU;smhr;51;3186
+Monash Centre for Astro, School of Phys &amp;smhr;51;3186
+Astro, Monash U, AU;smhr;51;3186
+Wellington Road, Clayton, AU;smhr;51;3186
+GRAPPA Inst, Theoretical Phys Amsterdam, NL,;sledgehamr;22;110
+Phys, Princeton U, US;sledgehamr;22;110
+Inst of Astro, U Cambridge, GB;cosmocnc;47;23
+Astro Group, Cavendish Laboratory, GB;cosmocnc;25;23
+Kavli Cosmology Cambridge, Madingley Road, GB;cosmocnc;25;23
+DAMTP, Centre for Mathematical Sci, GB;cosmocnc;25;23
+Phys, Madingley Road, GB;cosmocnc;25;23
+NASA Nexus for Exoplanet System Sci, Virtual Planetary Laboratory Team, US;NbodyGradient.jl;93;125
+Astro Department&Virtual Planetary Laboratory, U Washington, USA,;NbodyGradient.jl;165;125
+Astrobiology Program, U Washington, US;NbodyGradient.jl;93;125
+Kavli Theoretical Phys, U California, US;NbodyGradient.jl;93;125
+Phys&Astro, U Pennsylvania, US;NbodyGradient.jl;72;125
+DiRAC Inst&the Astro, U Washington, US;NbodyGradient.jl;165;125
+NASA Astrobiology Inst, Virtual Planetary Laboratory Team, US;NbodyGradient.jl;93;125
+Institut d'Astrophysique de Paris, FR;NbodyGradient.jl;93;125
+The Virtual Planetary Laboratory, Seattle, US;NbodyGradient.jl;93;125
+U Washington, Seattle;NbodyGradient.jl;93;125
+Phys&Astro, Vassar College, US;spectools_ir;17;567
+Vassar College, Poughkeepsie, US;spectools_ir;17;567
+Applied Phys&Applied Math, Columbia U, US;socrates_tools;30;2524
+NASA Goddard Space Studies, New York, US;socrates_tools;30;2524
+Astro Group, U Exeter, GB;socrates_tools;30;2524
+Astro, Princeton U, US;aestra;2;51
+Institut Trottier de Recherche sur les Exoplanètes&Département de Physique, Université de Montréal, CA;applesoss;15;1377
+Trottier Institut de Recherche sur les Exoplanètes (iREx), Université de Montréal, Canada,;applesoss;15;1377
+Trottier Research on Exoplanets&Phys, Université de Montréal, CA;applesoss;15;1377
+Département de Physique, Université de Montréal, CA;applesoss;15;1377
+Phys, Université de Montréal, CA;applesoss;15;1377
+Université de Toulouse, UPS-OMP, FR;ATMOSPHERIX_DATA_RED;14;154
+IRAP, Université de Toulouse, FR;ATMOSPHERIX_DATA_RED;14;154
+Steward Obs.&Astro, The U Arizona, US;bioverse;9;203
+NASA Nexus For Exoplanetary System Sci: Earths in Other Solar Systems Team, US;bioverse;9;203
+Earths in Other Solar Systems Team, NASA Nexus for Exoplanet System Sci, US;bioverse;9;203
+ETH Zurich, Particle Phys&Astro, Switzerland,;CROCODILE;18;66
+, National Center of Competence in Research Planets;CROCODILE;18;66
+Astro, CH;CROCODILE;18;66
+George P.&Cynthia Woods Mitchell Fundamental Phys&Astro, Texas A&M U, US;DIA;7;1816
+Vanderbilt Initiative in Data-intensive Astro (VIDA), Nashville, USA ,;DIA;7;1816
+Phys&Astro, The U Texas, US;DIA;7;1816
+Astro, Texas A&M U, US;DIA;7;1816
+Vanderbilt U, Phys &amp;DIA;7;1816
+Astro&Astro, Technische U Berlin, DE;ExoMDN;12;261
+Inst of Geological Sci, Freie U Berlin, Germany,;ExoMDN;12;261
+Technische U Berlin, Center for Astro&Astro, Germany,;ExoMDN;12;261
+Institut für Geologische Wissenschaften, Freie U Berlin, DE;ExoMDN;12;261
+German Aerospace Center (DLR), Inst of Planetary Research, DE;ExoMDN;12;261
+Inst of Space Research, German Aerospace Center (DLR), DE;ExoMDN;12;261
+Earth Sci, Free U Berlin, DE;ExoMDN;12;261
+DLR Berlin, Technische U Berlin;ExoMDN;12;261
+Earth&Planetary Sci, Harvard U, US;IsoFATE;6;300
+Smithsonian, Cambridge, US;IsoFATE;6;300
+CfA, Harvard &amp;IsoFATE;6;300
+School of Phys, Trinity College Dublin, IE;luas;21;33
+Atmospheric, Oceanic&Planetary Phys, GB;mini_chem;4;485
+Center for Space&Habitability, U Bern, CH;mini_chem;4;485
+U Bern, Phys Inst, Division of Space Research &amp;mini_chem;4;485
+Planetary Sci, Bern, CH;mini_chem;4;485
+Phys, U Oxford, GB;mini_chem;4;485
+Phys, Presidency U, IN;GaMPEN;85;209
+DiRAC Inst&the Astro, U Washington, US;GaMPEN;85;209
+Yale Center for Astro&Astro, New Haven, US;GaMPEN;85;209
+eSci Inst, U Washington, USA,;GaMPEN;85;209
+Astro, Yale U, US;GaMPEN;85;209
+ale U, Astro Student Council (ASC) at Yale;GaMPEN;85;209
+Phys, Presidency U, IN;GaMorNet;34;724
+Yale Center for Astro&Astro, New Haven, US;GaMorNet;34;724
+Astro, Yale U, US;GaMorNet;34;724
+ale U, Astro Student Council (ASC) at Yale;GaMorNet;34;724
+Center for Gravitation, Cosmology&Astro, USA of America;NRPyElliptic;16;392
+Phys&Astro, West Virginia U, USA of America;NRPyElliptic;16;392
+Inst de Física, U e de São Paulo, Brazil,;NRPyElliptic;11;392
+Phys&Astro, U Pennsylvania, US;scone;48;235
+U Pennsylvania, US;scone;48;235
+Inst of Sensors, Signals&Systems, GB;R2D2-RI;12;121
+Stellar Astro Centre (SAC), Phys&Astro, DK;PBjam;170;368
+Center for Space Sci, NYUAD Inst, AE;PBjam;126;368
+NYUAD Inst, Center for Space Sci, UAE;PBjam;126;368
+School of Phys&Astro, U Birmingham, UK,;PBjam;170;368
+Royal Astronomical Society, Burlington House, UK,;PBjam;126;368
+Astro, U Birmingham, UK,;PBjam;170;368
+Centre for Exoplanets&Habitability, U Warwick, GB;photoevolver;56;72
+Phys, U Warwick, GB;photoevolver;56;72
+Weltraumforschung und Planetologie, Physikalisches Institut, Switzerland,;plaNETic;7;223
+Space Research&Planetary Sci, Phys Inst, Switzerland,;plaNETic;7;223
+ELTE Eötvös Loránd U, Doctoral School of Phys, Hungary,;plaNETic;7;223
+Center for Space&Habitability, U Bern, CH;plaNETic;7;223
+Physikalisches Institut, U Bern, CH;plaNETic;7;223
+Inst de Astrofísica de Canarias (IAC), Calle Vía Láctea s/n, Spain,;spright;44;117
+D Astrofísica, U de La Laguna (ULL), ES;spright;44;117
+Astro, The U California, US;TESS_Gaia_Light_Curve;181;276
+U California, Irvine,;TESS_Gaia_Light_Curve;181;276
+Centre for Exoplanets&Habitability, U Warwick, GB;TriArc;5;116
+Inst of Astro, U Cambridge, GB;TriArc;5;116
+Phys, U Warwick, UK,;TriArc;5;116
+Laboratoire Univers et Particules de Montpellier, CNRS, FR;Turbospectrum_NLTE;75;435
+LUPM, Université Montpellier&CNRS, France,;Turbospectrum_NLTE;75;435
+CNRS, Montpellier, FR;Turbospectrum_NLTE;75;435
+Steward Obs., The U Arizona, US;dynamite;43;279
+School of Earth&Space Exploration, Arizona State U, US;dynamite;43;279
+Astro, The U Arizona, US;dynamite;43;279
+Smithsonian, Cambridge, US;dynamite;43;279
+National Centre for Radio Astro, Tata Inst of Fundamental Research, IN;rficlean;9;355
+ASTRON, NL Radio Astro, NL,;rficlean;9;355
+Anton Pannekoek Inst, U Amsterdam, NL;rficlean;9;355
+High Energy Phys Division, Argonne National Laboratory, USA,;picasso;92;12
+Univ. Grenoble Alpes, CNRS, FR;picasso;92;12
+Argonne National Laboratory, Argonne, US;picasso;92;12
+Kavli Cosmological Phys, The U Chicago, US;shellfish;132;4397
+Astro&Astro, U Chicago, US;shellfish;132;4397
+Earth&Space Sci, Osaka U, JP;jnkepler;69;16
+Stellar Astro Centre, Phys&Astro, DK;Jitter;5;732
+School of Phys, Sydney Astro (SIfA), AU;Jitter;5;732
+Sydney Astro (SIfA), School of Phys, AU;Jitter;5;732
+Phys, Particle Phys&Astro, CH;Exo-MerCat;27;178
+National Center of Competence in Research PlanetS, Bern, CH;Exo-MerCat;27;178
+NASA Goddard Space Flight Center, Greenbelt, US;Exo-MerCat;27;178
+NPP Fellow, NASA Goddard Space Flight Center, USA,;Exo-MerCat;27;178
+Astro, Zurich, CH;Exo-MerCat;27;178
+ETH Zurich, Particle Phys &amp;Exo-MerCat;27;178
+Astro, Tsinghua U, CN;exolyn;58;29
+School of Phys&Astro, Monash U, AU;tBilby;11;49
+Astro, Monash U, AU;tBilby;11;49
+OzGrav, School of Phys &amp;tBilby;11;49
+Center for Research&Exploration in Space Sci&Technology, NASA Goddard Space Flight Center, US;afterglowpy;87;5171
+Astro Sci Division, NASA Goddard Space Flight Center, US;afterglowpy;87;5171
+Center for Cosmology&Particle Phys, Phys Department, US;afterglowpy;87;5171
+Astroparticle Phys Laboratory, NASA Goddard Space Flight Center, US;afterglowpy;87;5171
+Joint Space-Sci Inst, U Maryland, US;afterglowpy;87;5171
+Astro, U Maryland, US;afterglowpy;87;5171
+Perimeter Theoretical Phys, Waterloo, Canada,;afterglowpy;87;5171
+New York U, US;afterglowpy;87;5171
+Phys, Texas State U, US;iSLAT;57;122
+Statistics Section, Math, GB;TD-CARMA;1;212
+Smithsonian, Cambridge, US;TD-CARMA;2;212
+CfA, Harvard &amp;TD-CARMA;1;212
+Inst of Sensors, Signals&Systems, GB;AIRI;13;215
+Astro, Tsinghua U, CN;magic-microlensing;87;10
+Quantum Information&Matter, Caltech, US;magic-microlensing;87;10
+Tsinghua U, China,;magic-microlensing;87;10
+Center for Interdisciplinary Exploration&Research in Astro (CIERA), Northwestern U, USA,;smart;61;962
+CfA&Space Sci, Phys, US;smart;74;962
+Phys, U California San Diego, US;smart;74;962
+UC San Diego, La Jolla, US;smart;74;962
+Astro, U California, US;smart;74;962
+Phys, UC San Diego (San Diego, US;smart;13;962
+U California San Diego, San Diego, CA;smart;74;962
+Northwestern U, Evanston, US;smart;61;962
+CIERA, Northwestern U;smart;61;962
+UCSD, San Diego, CA;smart;74;962
+INFN – Gruppo Collegato di Salerno - Sezione di Napoli, Dipartimento di Fisica "E.R. Caianiello", Italy,;VBMicroLensing;80;11
+Università di Salerno, Dipartimento di Fisica "E.R. Caianiello", IT;VBMicroLensing;57;11
+Dipartimento di Fisica "E.R. Caianiello", Università di Salerno, IT;VBMicroLensing;80;11
+Istituto Nazionale di Fisica Nucleare, Sezione di Napoli, Italy,;VBMicroLensing;80;11
+INAF – Osservatorio Astronomico di Capodimonte, Napoli, IT;VBMicroLensing;57;11
+Leiden Obs., Leiden U, NL,;excalibuhr;62;57
+Astro, Caltech, US;excalibuhr;62;57
+Caltech, Pasadena, USA ,;excalibuhr;62;57
+Astro&Astro, U Chicago, US;pyTPCI;15;14
+Division of Geological&Planetary Sci, Caltech, US;pyTPCI;10;14
+McDonald Obs.&Astro, U Texas at Austin, US;M_-M_K-;17;9139
+Phys&Astro, The U North Carolina at Chapel Hill, USA,;M_-M_K-;15;9139
+Astro, Columbia U, US;M_-M_K-;17;9139
+U Texas at Austin, Columbia U in the City of New York;M_-M_K-;15;9139
+U North Carolina at Chapel Hill, Chapel Hill, US;M_-M_K-;15;9139
+Astro Research Centre&Phys&Astro, U Victoria, Canada,;Octofitter.jl;292;57
+U Victoria, Phys&Astro, CA;Octofitter.jl;292;57
+Phys&Astro, U Victoria, Canada ,;Octofitter.jl;292;57
+NRC Herzberg Astro&Astro, Victoria, CA;Octofitter.jl;292;57
+National Research Council, Herzberg Astro&Astro, CA;Octofitter.jl;292;57
+Gravitation&the Cosmos, The Pennsylvania State U, US;sbi_pp;3;373
+Astro, The Pennsylvania State U, US;sbi_pp;3;373
+Center for Astro, Phys &amp;sbi_pp;3;373
+Astro, Johns Hopkins U, US;sbi_pp;3;373
+INAF – Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Bologna, IT;hydromass;69;360
+Phys, Kyoto U, JP;hydromass;69;360
+Département d'Astronomie, Université de Genève, CH;hydromass;69;360
+MPI für extraterrestrische Physik, Garching, DE;hydromass;69;360
+Astro Department, Versoix, CH;hydromass;69;360
+Observatoire de Genève, Chemin des Maillettes, CH;hydromass;69;360
+Astro, U Geneva, CH;hydromass;69;360
+INFN, Sezione di Bologna, Italy,;hydromass;69;360
+MPE, Garching, DE;hydromass;69;360
+INAF - IASF Milano, Milano, IT;hydromass;69;360
+CSPAR&Phys Department, U Alabama in Huntsville, US;threeML;208;2772
+Max-Planck Institut für Extraterrestrische Physik, DE;threeML;208;2772
+Phys, KTH Royal Inst of Technology, SE;threeML;208;2772
+KTH, Phys, SE;threeML;208;2772
+U Alabama in Huntsville, NSSTC, US;threeML;208;2772
+Excellence Cluster Universe, Technische U München, DE;threeML;208;2772
+The Oskar Klein Centre for Cosmoparticle Phys, SE;threeML;208;2772
+Royal Inst of Technology, Stockholm, SE;threeML;208;2772
+SKA South Africa, Pinelands, ZA;threeML;208;2772
+William H. Miller III Phys&Astro, Johns Hopkins U, USA,;pinc;9;478
+MPI für Astro, DE;pinc;9;478
+Département de Physique Théorique, Université de Genève, CH;CAMEL;62;1262
+IJCLab, Université Paris-Saclay, France,;CAMEL;62;1262
+Université Paris-Sud, LAL, France &amp;CAMEL;62;1262
+LAL, Université Paris-Sud, FR;CAMEL;62;1262
+, FR;CAMEL;62;1262
+Center for Exoplanets&Habitable Worlds, Penn State U, US;ExoplanetsSysSim.jl;31;4715
+Astro&Astro, The Pennsylvania State U, US;ExoplanetsSysSim.jl;31;4715
+Center for Astrostatistics, The Pennsylvania State U, US;ExoplanetsSysSim.jl;31;4715
+Astro, Penn State, US;ExoplanetsSysSim.jl;31;4715
+Computational&Data Sci, Penn State, US;ExoplanetsSysSim.jl;31;4715
+CCA, Flatiron Inst, US;ExoplanetsSysSim.jl;31;4715
+Data Sci, The Pennsylvania State U, US;ExoplanetsSysSim.jl;31;4715
+Penn State Astrobiology Research Center, U Park, US;ExoplanetsSysSim.jl;31;4715
+Habitable Worlds, U Park, US;ExoplanetsSysSim.jl;31;4715
+Advanced Study, US;ExoplanetsSysSim.jl;31;4715
+Habitable Worlds, The Pennsylvania State U, US;SysSimExClusters;74;2775
+Phys, U Notre Dame, US;SysSimExClusters;74;2775
+Astro, The Pennsylvania State U, US;SysSimExClusters;74;2775
+Astro, The U Notre Dame, USA,;SysSimExClusters;74;2775
+Canadian Theoretical Astro, U Toronto, CA;SysSimExClusters;74;2775
+Université de Strasbourg, Observatoire astronomique de Strasbourg, France,;SPIBACK;5;59
+Como Lake CfA, Sci&High Technology, Italy,;SIGWAY;2;141
+Dipartimento di Fisica, Sapienza Università di Roma, IT;SIGWAY;2;141
+CERN, Theoretical Phys Department, Switzerland,;SIGWAY;5;141
+Math&Phys, U Stavanger, NO;SIGWAY;2;141
+Theoretical Phys Department, CERN, CH;SIGWAY;5;141
+INFN, Sezione di Roma, IT;SIGWAY;2;141
+Inst of Astro, KU Leuven, BE;Starburst;13;18
+Space Telescope Sci Inst, Baltimore, US;Starburst;13;18
+Departmento de Matematicas, Fac de Ciencia, CL;IAR_Model;4;420
+Statistics, Fac of Math, CL;IAR_Model;4;420
+Millennium Inst of Astro, Providencia, CL;IAR_Model;4;420
+PUC of Chile, CL;IAR_Model;4;420
+Imperial Centre for Inference&Cosmology, Imperial College London, GB;pyselfi;6;445
+Sorbonne Université, Institut d'Astrophysique de Paris, France,;pyselfi;6;445
+Astro Group, Imperial College, GB;pyselfi;6;445
+Max-Planck Institut für Extraterrestrische Physik, DE;nazgul;5;98
+Phys, KTH Royal Inst of Technology, SE;nazgul;5;98
+Excellence Cluster Universe, Technische U München, DE;nazgul;5;98
+The Oskar Klein Centre for Cosmoparticle Phys, SE;nazgul;5;98
+INAF – Osservatorio di Astrofisica e Scienza dello Spazio di Bologna, Bologna, IT;pyproffit;86;686
+Dipartimento di Fisica e Astronomia Università di Bologna, Via Piero Gobetti, IT;pyproffit;7;686
+Phys, Kyoto U, JP;pyproffit;79;686
+Département d'Astronomie, Université de Genève, CH;pyproffit;79;686
+MPI für extraterrestrische Physik, Garching, DE;pyproffit;79;686
+Harvard-Smithsonian CfA, Cambridge, US;pyproffit;7;686
+Astro Department, Versoix, CH;pyproffit;79;686
+Observatoire de Genève, Chemin des Maillettes, CH;pyproffit;79;686
+Astro, U Geneva, CH;pyproffit;79;686
+INFN, Sezione di Bologna, Italy,;pyproffit;79;686
+MPE, Garching, DE;pyproffit;79;686
+INAF - IASF Milano, Milano, IT;pyproffit;86;686
+U Canterbury, Phys&Astro, New Zealand,;CMDFitter;25;43
+U Sci&Technology, Korea, Republic of Korea;CMDFitter;25;43
+Korea Astro&Space Sci Inst, Yuseong-Gu, Republic of Korea;CMDFitter;25;43
+Phys&Astro, U Canterbury, NZ;CMDFitter;25;43
+Astro, NZ;CMDFitter;25;43
+Astro, Tsinghua U, CN;triplelens;3;56
+Engineering Phys, Tsinghua U, China.,;triplelens;3;56
+Univ Coimbra, Faculdade de Ciências e Tecnologia da U e de Coimbra&CFisUC, PT;GrayHawk;4;46
+Trento Fundamental Phys&Applications (TIFPA)-INFN, Italy,;GrayHawk;4;46
+Phys, U Trento, Italy,;GrayHawk;4;46
+TIFPA-INFN, Trento, Italy,;GrayHawk;4;46
+School of Phys&Astro&Gravitational Wave Astro, U Birmingham, UK,;pyEFPE;4;326
+Inst de Fisica Teorica UAM-CSIC, U Autonoma de Madrid, ES;pyEFPE;4;326
+Département de Physique Théorique&Center for Astroparticle Phys, Université de Genève, Switzerland,;tabascal;70;92
+South African Radio Astro Obs. (SARAO), Obs., South Africa,;tabascal;70;92
+African Mathematical Sci, Muizenberg, ZA;tabascal;70;92
+Pure&Applied Math, U Cape Town, ZA;tabascal;70;92
+Université de Genève, Département de Physique Théorique, CH;tabascal;70;92
+Visiting astronomer, Kitt Peak National Obs., US;sirocco;499;11
+U Oxford, Phys, UK,;sirocco;469;11
+Phys, Astro, UK,;sirocco;469;11
+School of Phys&Astro, U Southampton, GB;sirocco;777;11
+Inst of Astro, U Cambridge, GB;sirocco;469;11
+Harvard-Smithsonian CfA, Cambridge, US;sirocco;469;11
+Eureka Scientific, USA, USA,;sirocco;499;11
+Space Telescope Sci Inst, Baltimore, US;sirocco;499;11
+Astro, The U Oxford, UK,;sirocco;469;11
+Astro, U Southampton, GB;sirocco;535;11
+U Vienna, Astro, AT;ScopeSim;67;29
+Astro, St. Petersburg State U, Russia;DIPOL-UF;243;462
+Tuorla Obs., Phys&Astro, FI;DIPOL-UF;243;462
+Nordita, KTH Royal Inst of Technology&Stockholm U, SE;DIPOL-UF;243;462
+Phys&Astro, U Turku, FI;DIPOL-UF;243;462
+Independent researcher, FI;DIPOL-UF;243;462

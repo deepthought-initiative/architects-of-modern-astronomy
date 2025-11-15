@@ -90,3 +90,64 @@ For each github repo, identify paper:
 * if already identified on ASCL, link to that
 * paper linked in the start page (arxiv or ads)
 * otherwise, give up.
+
+GDPR-related privacy notice
+===========================
+Please open an issue or pull request to contact me.
+Please find the data protection contact information at https://www.mpe.mpg.de/data-protection-d
+
+What this project does
+- Purpose: We study public software development in astronomy and related fields by analyzing public git repositories and publication metadata to produce aggregate statistics and figures about projects, contributors, institutions, countries, and topics.
+- Outputs: We publish aggregate/anonymized findings in papers and in this repository. We do not publish raw personal data.
+
+Personal data we process
+- Identifiers and commit metadata from public git logs: names, email addresses, usernames/handles, commit timestamps, commit counts and derived statistics.
+- Publication/registry metadata used to map affiliations: author names, ORCID iDs, affiliations, institution names, countries, and paper identifiers (e.g., from ADS/DOI metadata).
+- We do not intentionally process special-category data and do not perform profiling for decisions affecting individuals.
+
+Sources
+- Public version-control hosting services and mirrors (e.g., GitHub, GitLab, Bitbucket, institutional GitLab instances).
+- Public bibliographic/identifier services (e.g., ADS, Crossref/DOI metadata, ORCID records, publisher sites).
+- Project websites and READMEs that link to the above.
+
+How we process and minimize personal data
+- We read public git logs to compute project- and institution-level statistics.
+- Email addresses from git logs may be used transiently as unique keys for deduplication and linkage, then are discarded. They are not published or shared. The exceptions are rare cases where commits lack author name, in which case the email addresses are used as names.
+- We do not attempt to re-identify individuals beyond what is necessary to link public author identities across sources.
+- Public outputs contain only aggregated or anonymized data. We do not release person-level datasets.
+
+Lawful basis for processing:
+- Legitimate interests (GDPR Art. 6(1)(f)): Our interest is to advance scientific understanding of research software and its ecosystem using data that individuals have made public. We apply data minimization, do not use data for marketing, and publish only aggregated results. Individuals can object and opt out (see below).
+
+Transparency and Article 14
+- We obtain personal data indirectly from public sources. Direct notification of every affected developer would involve disproportionate effort given the large scale. We rely on Art. 14(5)(b) GDPR and provide this public notice, accept objections/opt-outs, and apply strong safeguards.
+
+Recipients and sharing
+- We do not share raw personal data with third parties.
+- We publish aggregated/anonymized statistics, figures, and code in scientific venues and this repository.
+- If you open an issue or pull request to opt out, your GitHub username and any information you include will be visible publicly per GitHub’s terms.
+
+International transfers
+- Processing is performed locally on a MPE institute laptop in Germany. If any service providers outside the EEA are used (e.g., GitHub issues), transfers occur under the applicable mechanism (e.g., adequacy decision, EU–US Data Privacy Framework, or Standard Contractual Clauses).
+
+Retention
+- Transient identifiers from git logs (e.g., raw email strings) are not retained beyond the processing needed for linkage.
+- Working datasets with person-level rows (without raw emails) are retained only for as long as necessary to complete analysis and peer review and are then deleted or irreversibly anonymized.
+- Aggregated/anonymized outputs may be retained indefinitely for research transparency.
+
+Security
+- Access-controlled storage, least-privilege access, encrypted storage/transit where applicable, and separation of identifiers from analytical variables. Public outputs exclude personal identifiers.
+
+Your rights
+- You can request access, rectification, erasure, restriction, or object to processing of your personal data. Where applicable, you can exercise data portability. We do not use your data for automated decision-making producing legal or similarly significant effects.
+- How to object/opt out:
+  - Preferred: open an issue or pull request in this repository with the repository URL(s) to exclude and the scope (e.g., exclude my person-level record, exclude my project, or both).
+  - Alternatively: email jbuchner@mpe.mpg.de with “Opt-out: [Project name]” in the subject and include the repository URL(s) and the email/name/handle that appears in the git log so we can locate the records. The project will be removed from the analysis. This project will then list the project repository URL as a URL to skip in analysis.
+- We will honor reasonable requests prospectively and, where feasible, remove your records from future analyses and from working datasets not yet published.
+
+Children
+- This research is not directed at children.
+
+Changes to this notice
+- We may update this notice and will timestamp changes. Material changes will be reflected in the repository README.
+
