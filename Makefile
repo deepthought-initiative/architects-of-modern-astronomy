@@ -36,10 +36,18 @@ outputs/flamegraph-%.txt: fetchgit.py
 	python3 $^
 
 outputs/weighted-flamegraph-days_active.txt: fetchascl.py
-	QUANTIFIER=days_active python3 $^
+	QUANTIFIER=days_active python3 $^ > outputs/weighted-flamegraph-days_active.log
 
 outputs/weighted-flamegraph-days_active-institutes.txt: fetchascl.py
-	INSTITUTES=1 QUANTIFIER=days_active python3 $^
+	INSTITUTES=1 QUANTIFIER=days_active python3 $^ > outputs/weighted-flamegraph-days_active-institutes.log
+
+impact_contributions.pdf: plotsample.py outputs/active_developers.txt outputs/scientific-software.txt outputs/scientific-software-contributions-days_active.txt
+	python3 $^
+
+developers_active.pdf: impact_contributions.pdf
+	echo
+impact.pdf: impact_contributions.pdf
+	echo
 
 .PHONY: all # rules that do not correspond to a output file
 .SUFFIXES: # disable built-in rules

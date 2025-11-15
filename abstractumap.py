@@ -11,9 +11,8 @@ import requests_cache
 import ads
 import spacy
 import sys
-from sklearn.decomposition import NMF #, LatentDirichletAllocation
-from sklearn.feature_extraction.text import TfidfVectorizer #, TfidfTransformer
-from sklearn.cluster import KMeans
+from sklearn.decomposition import NMF
+from sklearn.feature_extraction.text import TfidfVectorizer
 
 def bibcode_query(bib_url):
     if bib_url.startswith('http://'):
@@ -59,7 +58,9 @@ def get_title(bib_urls):
 seed = int(sys.argv[1])
 
 corpus = []
+print("loading data...")
 data_full = json.load(open("outputs/scientific-software-contributions-days_active.json"))
+print("loading data... done")
 #data = [e for e in data_full if e['project_impact'] >= 5]
 data = data_full
 for e in tqdm.tqdm(data):
@@ -98,10 +99,45 @@ nmf = NMF(
 )
 tfidf_reduced = nmf.fit_transform(tfidf)
 
+plt.rcParams.update({
+    "text.usetex": True,
+    "font.family": "Helvetica"
+})
+
+chosen_names_mapping = {
+    'cosmological':'cosmology', 
+    'reduction':'data reduction pipelines',
+    'exoplanets':'exoplanets',
+    'hydrodynamics':'hydrodynamic simulations',
+    'radiative':'radiative transfer spectra simulation',
+    'transfer':'radiative transfer spectra simulation',
+    'inference':'statistical inference',
+    'galaxies':'galaxies'}
+pos_override = {
+    (1, 'exoplanets'): (0.9, 0.9),
+    (1, 'radiative transfer spectra simulation'): (0.8, 0.8),
+    (1, 'galaxies'): (0.2, 0.7),
+    (1, 'cosmology'): (0.1, 0.4),
+    (1, 'statistical inference'): (0.8, 0.15),
+    
+    (3, 'exoplanets'): (0.8, 0.9),
+    (3, 'radiative transfer spectra simulation'): (0.15, 0.9),
+    (3, 'galaxies'): (0.1, 0.5),
+    (3, 'cosmology'): (0.4, 0.2),
+    (3, 'statistical inference'): (0.8, 0.15),
+}
+cluster_names = []
+
 for topic_idx, topic in enumerate(nmf.components_):
     top_features_ind = topic.argsort()[-n_top_words:]
     top_features = feature_names[top_features_ind]
     component_words.append(top_features)
+    cluster_name = ''
+    for k, v in chosen_names_mapping.items():
+        if k in top_features:
+            cluster_name = v
+            break
+    cluster_names.append(cluster_name)
     print(' - ' + ' '.join(top_features))
 
 cluster_ids = np.arange(len(nmf.components_))
@@ -162,14 +198,16 @@ for topic_idx, topic in enumerate(nmf.components_):
 #    print(word)
 """
 
+print("running umap...")
 u = umap.UMAP(metric='cosine', random_state=seed + 1, min_dist=0.1).fit_transform(tfidf)
+print("running umap... done")
 u1lo = np.nanmin(u[:,0])
 u1hi = np.nanmax(u[:,0])
 u2lo = np.nanmin(u[:,1])
 u2hi = np.nanmax(u[:,1])
 #nbins = 10
 u1 = np.linspace(u1lo, u1hi, 12)
-u2 = np.linspace(u2lo, u2hi, 60)
+u2 = np.linspace(u2lo, u2hi, 70)
 
 #nmf_class = np.argmax(nmf.transform(tfidf), axis=1)
 classes_colors = plt.cm.tab10.colors
@@ -198,15 +236,26 @@ for i in range(1):
                 mec=color, mew=0.5, mfc='none', ms=4, alpha=0.3)
         
         if i == 0:
+            text_here = ""
+            max_length_per_line = len(' '.join(component_words[class_i])) // 4
+            current_line = ""
+            for nextword in component_words[class_i]:
+                if len(current_line) > max_length_per_line:
+                    text_here += current_line + "\n"
+                    current_line = nextword
+                else:
+                    current_line += " " + nextword
+            text_here = text_here.strip() + "\n" + current_line
+            posx = np.median(member0)
+            posy = np.median(member1)
+            if (seed, cluster_names[class_i]) in pos_override:
+                posx, posy = pos_override[(seed, cluster_names[class_i])]
+                posx = u1lo + posx * (u1hi - u1lo)
+                posy = u2lo + posy * (u2hi - u2lo)
             texts.append(plt.text(
-                np.median(member0),
-                np.median(member1),
-                "\n".join([
-                    ' '.join(component_words[class_i][:5]),
-                    ' '.join(component_words[class_i][5:10]),
-                    ' '.join(component_words[class_i][10:15]),
-                    ' '.join(component_words[class_i][15:]),
-                    ]),
+                posx,
+                posy,
+                r'\textbf{``' + cluster_names[class_i] + "''}\n" + text_here,
                 va='center', ha='center', size=8,
                 color=color, zorder=6, bbox=dict(facecolor='white', alpha=0.8, edgecolor=color)))
 
@@ -216,13 +265,16 @@ for i in range(1):
     plt.subplots_adjust(hspace=0, wspace=0)
 
     if i == 0:
-        adjustText.adjust_text(texts, objects=texts)
+        print("running adjustText...")
+        # adjustText.adjust_text(texts, objects=texts)
+        print("running adjustText... done")
 
 #u1lo = u[u[:,0] > 0,0].min()
 for k in np.where(~np.isfinite(u[:,0]))[0]:
     print("bad:", data[k]['project_name'], data[k]['bib_urls'])
+print("printing most important project name...")
 texts = []
-for i, (u1ilo, u1ihi) in enumerate(zip(u1[:-1], u1[1:])):
+for i, (u1ilo, u1ihi) in enumerate(zip(tqdm.tqdm(u1[:-1]), u1[1:])):
     for j, (u2ilo, u2ihi) in enumerate(zip(u2[:-1], u2[1:])):
         #print(u1ilo, u1ihi, u2ilo, u2ihi)
         mask_members = np.logical_and(
@@ -238,7 +290,7 @@ for i, (u1ilo, u1ihi) in enumerate(zip(u1[:-1], u1[1:])):
         k = member_indices[np.argmax(weights)]
         #k = rng.choice(member_indices, p=np.array(weights)/np.sum(weights))
         #k = member_indices[np.argsort(weights)[-2:][0]]
-        #print(nmf_class[k], data[k]['project_name'])
+        #print(data[k]['project_name'])
         texts.append(plt.text(
             #u[k,0],
             #u[k,1],
@@ -252,5 +304,6 @@ for i, (u1ilo, u1ihi) in enumerate(zip(u1[:-1], u1[1:])):
 
 #adjustText.adjust_text(texts, max_move=(100, 100), time_lim=10)
 #plt.xlim(u[u[:,0] > 0,0].min(), u[:,0].max())
+print("saving plot...")
 plt.savefig('abstractumap%d.pdf' % seed)
 plt.savefig('abstractumap%d.png' % seed)

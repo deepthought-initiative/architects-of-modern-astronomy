@@ -10,7 +10,8 @@ days = np.array([np.timedelta64(d, 'D') for d in days])
 days = np.datetime64('2025-01-01T00:00:00') + days
 plt.plot(days, num_developers_active, ls=':', color='lightgrey')
 plt.plot(days, scipy.ndimage.median_filter(num_developers_active, 120), color='k', lw=3)
-print(scipy.ndimage.median_filter(num_developers_active, 120).max())
+medians = scipy.ndimage.median_filter(num_developers_active, 120)
+print(medians.max(), days[np.argmax(medians)])
 plt.xlim(np.datetime64('1995-01-01T00:00:00'), None)
 plt.ylim(0, 250)
 plt.ylabel('Number of developers')
@@ -21,8 +22,22 @@ plt.close()
 hosts = [line.split(';')[0].replace('https://','').replace('http://','').replace('www.', '').split('/')[0]
 	for line in open('outputs/scientific-software.txt')]
 is_github = [h == 'github.com' for h in hosts]
-print('Github: %.2f%%' % (sum(is_github)*100 / len(is_github)))
-print(Counter(hosts))
+print('Github: %.2f%%' % (sum(is_github)*100 / len(hosts)))
+is_gitlabsubdomain = [h.startswith('gitlab.') and h != 'gitlab.com' for h in hosts]
+print('Gitlab subdomain:', sum(is_gitlabsubdomain))
+host_counter = Counter(hosts)
+print(host_counter)
+
+with open('outputs/morestats.tex', 'w') as fstatsout:
+	fstatsout.write(f'''
+	\\newcommand{{\\numgithub}}[0]{{{host_counter['github.com']}}}
+	\\newcommand{{\\numgitlab}}[0]{{{host_counter['gitlab.com']}}}
+	\\newcommand{{\\numgitlabsubdomains}}[0]{{{sum(is_gitlabsubdomain)}}}
+	\\newcommand{{\\numbitbucket}}[0]{{{host_counter['bitbucket.com']}}}
+	\\newcommand{{\\percgithub}}[0]{{{int(sum(is_github)*100 / len(hosts))}}}
+
+	\\newcommand{{\\ndevsactive}}[0]{{{medians.max()}}}
+	''')
 
 impact_map = np.array([int(line.split(';')[2]) for line in open('outputs/scientific-software.txt')])
 impact = np.array([int(line.split(';')[2]) for line in open('outputs/scientific-software.txt')])

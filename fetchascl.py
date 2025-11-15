@@ -1,6 +1,7 @@
 import json
 import requests_cache
 import requests
+import urllib3
 from bs4 import BeautifulSoup
 import fetchgit
 import subprocess
@@ -17,7 +18,7 @@ from datetime import date, datetime, timedelta
 
 # reuse same cache
 mem = fetchgit.mem
-requests_cache.install_cache('demo_cache', allowable_methods=('GET', 'POST'), expire_after=3600 * 24 * 30)
+requests_cache.install_cache('demo_cache', allowable_methods=('GET', 'POST'))
 
 @mem.cache
 def get_ascl_list():
@@ -114,6 +115,8 @@ def get_git_url2(code_site):
             if link_url.startswith('http://bitbucket.org/'):
                 return link_url.replace('http://bitbucket.org/', 'https://bitbucket.org/')
             if link_url.startswith('https://bitbucket.org/'):
+                return link_url
+            if link_url.startswith('https://gitlab.'):
                 return link_url
             #if 'install' in link.text.lower() or 'start' in link.text.lower():
             #    deep_link_url = get_git_url(link_url)
@@ -335,8 +338,8 @@ def deduplicate_authors(authors, contributors):
 
 def get_software_list(parent_sample):
     repos = dict()
-    for i, (title, code_sites, bib_urls) in enumerate(parent_sample):
-        print("[%d/%d] ###" % (i+1, len(parent_sample)), code_sites, bib_urls, title)
+    for i, ((title, code_sites, bib_urls), parent_db) in enumerate(parent_sample):
+        print("[%d/%d] ###" % (i+1, len(parent_sample)), parent_db, code_sites, bib_urls, title)
         if len(bib_urls) == 0:
             print("  no papers found for", code_sites)
             continue
@@ -345,7 +348,25 @@ def get_software_list(parent_sample):
             # print(url, "info", code_site, bib_urls)
             print("  identifying repo url for ", code_site)
             repo_url = None
-            if 'github.com/' in code_site or 'gitlab.com/' in code_site or 'bitbucket.com/' in code_site:
+            if code_site == 'https://www.star.bristol.ac.uk/mbt/topcat/':
+                repo_url = 'https://github.com/Starlink/starjava/'
+            elif 'github.com/' in code_site:
+                # remove /issues, /releases/, /tree subpointers
+                parts = code_site.split('github.com/')[1].replace('//', '/').replace('//', '/').split()
+                if len(parts) >= 2:
+                    repo_url = 'https://github.com/' + parts[0] + '/' + parts[1] + '/'
+                else:
+                    repo_url = code_site
+            elif 'gitlab.com/' in code_site:
+                # remove /issues, /releases/, /tree subpointers
+                parts = code_site.split('gitlab.com/')[1].replace('//', '/').replace('//', '/').split()
+                if len(parts) >= 2:
+                    repo_url = 'https://gitlab.com/' + parts[0] + '/' + parts[1] + '/'
+                else:
+                    repo_url = code_site
+            elif 'github.com/' in code_site or 'gitlab.com/' in code_site or 'bitbucket.com/' in code_site:
+                repo_url = code_site
+            elif 'https://gitlab.' in code_site:
                 repo_url = code_site
             elif 'pypi.org/' in code_site:
                 repo_url = fetchgit.extract_github_url_from_pypi(code_site)
@@ -364,14 +385,16 @@ def get_software_list(parent_sample):
                         kvstore.store('badurls', domain)
                     except requests.exceptions.ReadTimeout:
                         kvstore.store('badurls', domain)
+                    except (urllib3.exceptions.DecodeError, requests.exceptions.ContentDecodingError):
+                        kvstore.store('badurls', domain)
                     except AssertionError:
                         kvstore.store('badurls', domain)
             # print(url, "repo", repo_url, len(bib_urls))
             if repo_url is None:
                 print("    no repo found for", code_sites)
                 continue
-            _, other_code_sites, other_bib_urls = repos.get(repo_url, (None, [], []))
-            repos[repo_url] = title, sorted(set(code_sites).union(other_code_sites)), sorted(set(bib_urls).union(other_bib_urls))
+            _, other_code_sites, other_bib_urls, _ = repos.get(repo_url, (None, [], [], ''))
+            repos[repo_url] = title, sorted(set(code_sites).union(other_code_sites)), sorted(set(bib_urls).union(other_bib_urls)), parent_db
 
     return repos
 
@@ -381,7 +404,7 @@ if __name__ == '__main__':
     parameter = os.environ['QUANTIFIER']  # "commits", "lines_changed" or "days_active"
     use_institutes = os.environ.get('INSTITUTES', '') != ''
     fout = open('outputs/weighted-flamegraph-%s%s.txt' % (parameter, '-institutes' if use_institutes else ''), 'w')
-    parent_sample = list(iterate_joss_list()) + list(iterate_ascl())
+    parent_sample = [(i, 'JOSS') for i in iterate_joss_list()] + [(i, 'ASCL') for i in iterate_ascl()]
     repos = get_software_list(parent_sample)
 
     years_stats = Counter()
@@ -397,26 +420,43 @@ if __name__ == '__main__':
     fout3 = open('outputs/scientific-software-contributions-%s%s.txt' % (parameter, '-institutes' if use_institutes else ''), 'w')
     print()
     print("checking impact...")
-    for i, (repo_url, (title, code_sites, bib_urls)) in enumerate(repos.items()):
+    ndismissed_dups = 0
+    ndismissed_impact_error = 0
+    ndismissed_impact_low = 0
+    ndismissed_impact_zero = 0
+    ndismissed_git_nocontrib = 0
+    ndismissed_git_error = 0
+    njoss = 0
+    nascl = 0
+    for i, (repo_url, (title, code_sites, bib_urls, parent_db)) in enumerate(repos.items()):
         if ' '.join(bib_urls) in bib_urls_seen:
+            ndismissed_dups += 0
             continue
         bib_urls_seen.add(' '.join(bib_urls))
-        print("[%d/%d] ***" % (i+1, len(repos)), repo_url, [bibcode_query(b).replace('bibcode:','') for b in bib_urls])
+        print("[%d/%d] ***" % (i+1, len(repos)), parent_db, repo_url, [bibcode_query(b).replace('bibcode:','') for b in bib_urls])
         try:
             project_impact = get_impact(bib_urls)
         except IndexError as e:
             print("    IndexError:", e)
+            ndismissed_impact_error += 1
             continue
         except ads.exceptions.APIResponseError as e:
             print("    APIResponseError:", e)
+            ndismissed_impact_error += 1
             break
+        if parent_db == 'JOSS':
+            njoss += 1
+        if parent_db == 'ASCL':
+            nascl += 1
         fout2.write("%s;%s;%d;%s\n" % (repo_url, bib_urls[0], project_impact, title))
         fout2.flush()
         if project_impact == 0:
             print("    no impact found for", bib_urls)
+            ndismissed_impact_low += 1
             continue
         if project_impact < 10:
             print("    low impact, skipping")
+            ndismissed_impact_zero += 1
             continue
         # get people's names & ORCID
         print("  getting authors for %s" % ([bibcode_query(b).replace('bibcode:','') for b in bib_urls]))
@@ -437,6 +477,7 @@ if __name__ == '__main__':
             results_here['has_travis_tests'] = '.travis.yml' in filelist
             results_here['has_gitlab_tests'] = '.gitlab-ci.yml' in filelist
             results_here['has_jenkins_tests'] = 'Jenkinsfile' in filelist
+            results_here['parent_db'] = parent_db
             num_repos += 1
             fetchgit.add_git_activity(repo_url, reference_date, activities)
             significant_contributors, top_contributor_contributions = fetchgit.get_significant_contributors(repo_url, parameter)
@@ -479,13 +520,17 @@ if __name__ == '__main__':
                     results_here['project_duration'] = (pubdate - project_start_date).days
                     project_durations.append((pubdate.year, project_impact, (pubdate - project_start_date).days))
                 all_results.append(results_here)
+            else:
+                ndismissed_git_nocontrib += 1
 
         except subprocess.CalledProcessError as e:
             print("    failure:", repo_url, e)
+            ndismissed_git_error += 1
     print()
     print("completed:", num_repos, num_with_citation_file, '%.2f%%' % (num_with_citation_file * 100 / num_repos))
     print(all_results[0])
     print("writing result database")
+    
     with open('outputs/scientific-software-contributions-%s.json' % (parameter), 'w') as jsonout:
         json.dump(all_results, jsonout, indent=2)
 
@@ -502,6 +547,22 @@ if __name__ == '__main__':
             fdevout.write('%d\t%d\t%s\n' % (
                 day_i, len(num_developers_active[day_i]), (reference_date + timedelta(days=day_i)).date().isoformat()))
 
+    with open('outputs/basicstats.tex', 'w') as fstatsout:
+        fstatsout.write(f'''
+        \\newcommand{{\\ndismisseddups}}[0]{{{ndismissed_dups}}}
+        \\newcommand{{\\ndismissedimpacterr}}[0]{{{ndismissed_impact_error}}}
+        \\newcommand{{\\numASCL}}[0]{{{nascl}}}
+        \\newcommand{{\\numJOSS}}[0]{{{njoss}}}
+        \\newcommand{{\\nsample}}[0]{{{nascl+njoss}}}
+        \\newcommand{{\\ndismissedimpactlow}}[0]{{{ndismissed_impact_low}}}
+        \\newcommand{{\\ndismissedimpactzero}}[0]{{{ndismissed_impact_zero}}}
+        \\newcommand{{\\nrepos}}[0]{{{num_repos}}}
+        \\newcommand{{\\ndismissedgiterror}}[0]{{{ndismissed_git_error}}}
+        \\newcommand{{\\ndismissedgitnocontrib}}[0]{{{ndismissed_git_nocontrib}}}
+        \\newcommand{{\\nreposcontrib}}[0]{{{len(all_results)}}}
+        \\newcommand{{\\ndevs}}[0]{{{len(developers_active)}}}
+        ''')
+    
 """
     with open('outputs/scientific-software-year.txt', 'w') as fout:
         for year, year_stat in years_stats.items():
