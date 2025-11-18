@@ -1,6 +1,9 @@
 Key Architects of modern astrophysics
 =====================================
 
+**See the paper**: http://arxiv.org/abs/2511.12195
+
+
 Software is concrete scientific methodology
 
 Open source software is reproducible scientific methodology.
