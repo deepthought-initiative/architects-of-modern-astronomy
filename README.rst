@@ -144,8 +144,10 @@ Security
 Your rights
 - You can request access, rectification, erasure, restriction, or object to processing of your personal data. Where applicable, you can exercise data portability. We do not use your data for automated decision-making producing legal or similarly significant effects.
 - How to object/opt out:
+
   - Preferred: open an issue or pull request in this repository with the repository URL(s) to exclude and the scope (e.g., exclude my person-level record, exclude my project, or both).
   - Alternatively: email jbuchner@mpe.mpg.de with “Opt-out: [Project name]” in the subject and include the repository URL(s) and the email/name/handle that appears in the git log so we can locate the records. The project will be removed from the analysis. This project will then list the project repository URL as a URL to skip in analysis.
+
 - We will honor reasonable requests prospectively and, where feasible, remove your records from future analyses and from working datasets not yet published.
 
 Children
