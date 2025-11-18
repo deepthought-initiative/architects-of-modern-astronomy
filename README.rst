@@ -1,7 +1,7 @@
 Key Architects of modern astrophysics
 =====================================
 
-**See the paper**: http://arxiv.org/abs/2511.12195
+**See the paper**: https://arxiv.org/abs/2511.12195
 
 
 Software is concrete scientific methodology
