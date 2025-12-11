@@ -1,6 +1,23 @@
 Key Architects of modern astrophysics
 =====================================
 
+.. image:: https://img.shields.io/badge/Paper-BAAS-blue
+   :target: https://doi.org/10.3847/25c2cfeb.fe9c1f84
+   :alt: Publication (Bulletin of the As
+
+.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.17896524.svg
+   :target: https://doi.org/10.5281/zenodo.17896524
+   :alt: Data (Zenodo)
+
+.. image:: https://img.shields.io/badge/GitHub-repo?logo=github
+   :target: https://github.com/deepthought-initiative/architects-of-modern-astronomy/
+   :alt: GitHub repository
+
+.. image:: https://img.shields.io/badge/Cite-this%20work-blue
+   :target: https://doi.org/10.3847/25c2cfeb.fe9c1f84
+   :alt: Cite this work
+
+
 **See the paper**: https://arxiv.org/abs/2511.12195
 
 
@@ -156,3 +173,20 @@ Children
 Changes to this notice
 - We may update this notice and will timestamp changes. Material changes will be reflected in the repository README.
 
+
+
+How to cite
+-----------
+Bibtex::
+
+   @article{Buchner2025,
+    	author = {Buchner, Johannes},
+    	journal = {Bulletin of the AAS},
+    	number = {1},
+    	year = {2025},
+    	month = {dec 11},
+    	note = {https://baas.aas.org/pub/2025i029},
+    	publisher = {},
+    	title = {High-impact {Scientific} {Software} in {Astronomy} and its creators},
+    	volume = {57},
+    }
